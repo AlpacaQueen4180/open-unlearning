@@ -1,0 +1,61 @@
+diff --git a/src/data/collators.py b/src/data/collators.py
+index 2acbe74..cad93e1 100644
+--- a/src/data/collators.py
++++ b/src/data/collators.py
+@@ -51,2 +51,29 @@ class DataCollatorForSupervisedDataset(object):
+                     raise Warning(f"{self.index} not found in dataset")
+         return return_dct
++
++
++class DuplicateRetainDataCollator(DataCollatorForSupervisedDataset):
++    """Emulate the released two-rank synchronized-retain sampling bug.
++
++    With per-rank batch four, both ranks draw the same four retain examples.
++    A single-device batch of eight therefore duplicates the first four collated
++    retain rows into the second four while leaving all forget rows distinct.
++    This is a diagnostic control, not a substitute for a two-GPU run.
++    """
++
++    def __call__(self, instances: Sequence[Dict]) -> Dict[str, torch.Tensor]:
++        batch = super().__call__(instances)
++        if "retain" not in batch:
++            return batch
++
++        retain_batch = batch["retain"]
++        batch_size = retain_batch["input_ids"].shape[0]
++        if batch_size % 2 != 0:
++            raise ValueError(
++                "DuplicateRetainDataCollator requires an even per-device batch size"
++            )
++        half = batch_size // 2
++        for key, value in retain_batch.items():
++            if torch.is_tensor(value) and value.shape[0] == batch_size:
++                value[half:] = value[:half].clone()
++        return batch
+diff --git a/src/data/__init__.py b/src/data/__init__.py
+index c2d90be..47a36be 100644
+--- a/src/data/__init__.py
++++ b/src/data/__init__.py
+@@ -3,6 +3,7 @@ from omegaconf import DictConfig
+ 
+ from data.qa import QADataset, QAwithIdkDataset, QAwithAlternateDataset
+ from data.collators import (
++    DuplicateRetainDataCollator,
+     DataCollatorForSupervisedDataset,
+ )
+ from data.unlearn import ForgetRetainDataset
+@@ -103,3 +104,4 @@ _register_data(ForgetRetainDataset)
+ 
+ # Register collators
+ _register_collator(DataCollatorForSupervisedDataset)
++_register_collator(DuplicateRetainDataCollator)
+diff --git a/configs/collator/DuplicateRetainDataCollator.yaml b/configs/collator/DuplicateRetainDataCollator.yaml
+new file mode 100644
+index 0000000..0a10554
+--- /dev/null
++++ b/configs/collator/DuplicateRetainDataCollator.yaml
+@@ -0,0 +1,4 @@
++DuplicateRetainDataCollator:
++  handler: DuplicateRetainDataCollator
++  args:
++    padding_side: right

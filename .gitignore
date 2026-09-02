@@ -181,3 +181,17 @@ cython_debug/
 .idea/
 
 .vscode/
+
+# Local reproduction environments and machine state
+.venv*/
+.python-overlay*/
+.*_environment_ready
+/.migration-backups/
+
+# Reproduction outputs are stored outside Git. Curated summaries and
+# path/size inventories live under results/reproduction/.
+*.safetensors
+/checkpoints/
+/tofu_*.status*.json
+/tofu_*.trainer_state.json
+/openunlearning_*.status.json
