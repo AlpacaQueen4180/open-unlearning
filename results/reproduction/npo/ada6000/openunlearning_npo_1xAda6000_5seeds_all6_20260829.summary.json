@@ -1,0 +1,453 @@
+{
+  "status": "DONE",
+  "hardware": "NVIDIA RTX 6000 Ada Generation",
+  "topology": "1 GPU, microbatch 8, gradient accumulation 4, global batch 32",
+  "seed_count_per_cell": 5,
+  "run_count": 30,
+  "groups": [
+    {
+      "model": "Llama-2-7b-chat-hf",
+      "forget_split": "forget01",
+      "seed_count": 5,
+      "runs": [
+        {
+          "seed": 0,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget01_NPO_1xAda6000_flash2_micro8_acc4_e10_seed0_20260829.status.json",
+          "forget_quality": 0.006760732303569208,
+          "model_utility": 0.6223398403147673,
+          "forget_truth_ratio": 0.5377909126451804
+        },
+        {
+          "seed": 1,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget01_NPO_1xAda6000_flash2_micro8_acc4_e10_seed1_20260829.status.json",
+          "forget_quality": 0.006760732303569208,
+          "model_utility": 0.6222906201639603,
+          "forget_truth_ratio": 0.5412106454515447
+        },
+        {
+          "seed": 2,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget01_NPO_1xAda6000_flash2_micro8_acc4_e10_seed2_20260829.status.json",
+          "forget_quality": 0.006760732303569208,
+          "model_utility": 0.6192488615017021,
+          "forget_truth_ratio": 0.5335786796776038
+        },
+        {
+          "seed": 3,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget01_NPO_1xAda6000_flash2_micro8_acc4_e10_seed3_20260829.status.json",
+          "forget_quality": 0.006760732303569208,
+          "model_utility": 0.6228116024844311,
+          "forget_truth_ratio": 0.5357576594188193
+        },
+        {
+          "seed": 4,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget01_NPO_1xAda6000_flash2_micro8_acc4_e10_seed4_20260829.status.json",
+          "forget_quality": 0.006760732303569208,
+          "model_utility": 0.6222536722058238,
+          "forget_truth_ratio": 0.5369979669723982
+        }
+      ],
+      "summary": {
+        "forget_quality": {
+          "mean": 0.006760732303569208,
+          "sample_std": 0.0,
+          "min": 0.006760732303569208,
+          "max": 0.006760732303569208,
+          "official": 0.4,
+          "mean_minus_official": -0.3932392676964308,
+          "h100_five_seed_mean": 0.020022156940717246,
+          "mean_minus_h100": -0.013261424637148038
+        },
+        "model_utility": {
+          "mean": 0.6217889193341369,
+          "sample_std": 0.0014377923615124827,
+          "min": 0.6192488615017021,
+          "max": 0.6228116024844311,
+          "official": 0.58,
+          "mean_minus_official": 0.041788919334136976,
+          "h100_five_seed_mean": 0.6205728683858436,
+          "mean_minus_h100": 0.0012160509482933568
+        },
+        "forget_truth_ratio": {
+          "mean": 0.5370671728331093,
+          "sample_std": 0.0028098649426917454,
+          "min": 0.5335786796776038,
+          "max": 0.5412106454515447,
+          "official": 0.65,
+          "mean_minus_official": -0.11293282716689068,
+          "h100_five_seed_mean": 0.5514521107855948,
+          "mean_minus_h100": -0.01438493795248541
+        }
+      }
+    },
+    {
+      "model": "Llama-2-7b-chat-hf",
+      "forget_split": "forget05",
+      "seed_count": 5,
+      "runs": [
+        {
+          "seed": 0,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget05_NPO_1xAda6000_flash2_micro8_acc4_e10_seed0_20260829.status.json",
+          "forget_quality": 1.4275699621532978e-12,
+          "model_utility": 0.5753171096131817,
+          "forget_truth_ratio": 0.5376704214443793
+        },
+        {
+          "seed": 1,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget05_NPO_1xAda6000_flash2_micro8_acc4_e10_seed1_20260829.status.json",
+          "forget_quality": 1.8694649189611297e-09,
+          "model_utility": 0.5396091177158605,
+          "forget_truth_ratio": 0.5386287777482814
+        },
+        {
+          "seed": 2,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget05_NPO_1xAda6000_flash2_micro8_acc4_e10_seed2_20260829.status.json",
+          "forget_quality": 5.951062636424447e-11,
+          "model_utility": 0.5731201288575463,
+          "forget_truth_ratio": 0.5373999352789182
+        },
+        {
+          "seed": 3,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget05_NPO_1xAda6000_flash2_micro8_acc4_e10_seed3_20260829.status.json",
+          "forget_quality": 9.594235055800515e-10,
+          "model_utility": 0.5507713101817912,
+          "forget_truth_ratio": 0.53961400611093
+        },
+        {
+          "seed": 4,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget05_NPO_1xAda6000_flash2_micro8_acc4_e10_seed4_20260829.status.json",
+          "forget_quality": 1.3850840057169374e-11,
+          "model_utility": 0.5741371339084502,
+          "forget_truth_ratio": 0.5362248323825699
+        }
+      ],
+      "summary": {
+        "forget_quality": {
+          "mean": 5.807354921849496e-10,
+          "sample_std": 8.265681135341979e-10,
+          "min": 1.4275699621532978e-12,
+          "max": 1.8694649189611297e-09,
+          "official": 0.09,
+          "mean_minus_official": -0.08999999941926451,
+          "h100_five_seed_mean": 0.5978063911389597,
+          "mean_minus_h100": -0.5978063905582243
+        },
+        "model_utility": {
+          "mean": 0.562590960055366,
+          "sample_std": 0.016385981884907985,
+          "min": 0.5396091177158605,
+          "max": 0.5753171096131817,
+          "official": 0.53,
+          "mean_minus_official": 0.03259096005536599,
+          "h100_five_seed_mean": 0.4822205200709299,
+          "mean_minus_h100": 0.0803704399844361
+        },
+        "forget_truth_ratio": {
+          "mean": 0.5379075945930157,
+          "sample_std": 0.0012823419152509824,
+          "min": 0.5362248323825699,
+          "max": 0.53961400611093,
+          "official": 0.71,
+          "mean_minus_official": -0.17209240540698423,
+          "h100_five_seed_mean": 0.7064399656100016,
+          "mean_minus_h100": -0.16853237101698582
+        }
+      }
+    },
+    {
+      "model": "Llama-2-7b-chat-hf",
+      "forget_split": "forget10",
+      "seed_count": 5,
+      "runs": [
+        {
+          "seed": 0,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget10_NPO_1xAda6000_flash2_micro8_acc4_e10_seed0_20260829.status.json",
+          "forget_quality": 1.11924339764853e-19,
+          "model_utility": 0.5273477530310675,
+          "forget_truth_ratio": 0.5809630602476576
+        },
+        {
+          "seed": 1,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget10_NPO_1xAda6000_flash2_micro8_acc4_e10_seed1_20260829.status.json",
+          "forget_quality": 2.776495661774257e-16,
+          "model_utility": 0.525539058830699,
+          "forget_truth_ratio": 0.585240877556091
+        },
+        {
+          "seed": 2,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget10_NPO_1xAda6000_flash2_micro8_acc4_e10_seed2_20260829.status.json",
+          "forget_quality": 3.2024272501633618e-18,
+          "model_utility": 0.5187141269263965,
+          "forget_truth_ratio": 0.5924230753585213
+        },
+        {
+          "seed": 3,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget10_NPO_1xAda6000_flash2_micro8_acc4_e10_seed3_20260829.status.json",
+          "forget_quality": 3.1252666340221845e-13,
+          "model_utility": 0.5254510619907476,
+          "forget_truth_ratio": 0.611083911587776
+        },
+        {
+          "seed": 4,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-2-7b-chat-hf_forget10_NPO_1xAda6000_flash2_micro8_acc4_e10_seed4_20260829.status.json",
+          "forget_quality": 3.2024272501633618e-18,
+          "model_utility": 0.5156091037217047,
+          "forget_truth_ratio": 0.5853798009397775
+        }
+      ],
+      "summary": {
+        "forget_quality": {
+          "mean": 6.25621659494472e-14,
+          "sample_std": 1.3973445298645742e-13,
+          "min": 1.11924339764853e-19,
+          "max": 3.1252666340221845e-13,
+          "official": 0.42,
+          "mean_minus_official": -0.4199999999999374,
+          "h100_five_seed_mean": 0.23797539465230785,
+          "mean_minus_h100": -0.2379753946522453
+        },
+        "model_utility": {
+          "mean": 0.5225322209001231,
+          "sample_std": 0.005080783660409728,
+          "min": 0.5156091037217047,
+          "max": 0.5273477530310675,
+          "official": 0.54,
+          "mean_minus_official": -0.017467779099876957,
+          "h100_five_seed_mean": 0.5208616852524031,
+          "mean_minus_h100": 0.0016705356477200173
+        },
+        "forget_truth_ratio": {
+          "mean": 0.5910181451379647,
+          "sample_std": 0.011946561119251917,
+          "min": 0.5809630602476576,
+          "max": 0.611083911587776,
+          "official": 0.73,
+          "mean_minus_official": -0.1389818548620353,
+          "h100_five_seed_mean": 0.7204820860700715,
+          "mean_minus_h100": -0.12946394093210678
+        }
+      }
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "forget_split": "forget01",
+      "seed_count": 5,
+      "runs": [
+        {
+          "seed": 0,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget01_NPO_1xAda6000_flash2_micro8_acc4_e10_seed0_20260829.status.json",
+          "forget_quality": 0.006760732303569208,
+          "model_utility": 0.5959947036711208,
+          "forget_truth_ratio": 0.5067798992155821
+        },
+        {
+          "seed": 1,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget01_NPO_1xAda6000_flash2_micro8_acc4_e10_seed1_20260829.status.json",
+          "forget_quality": 0.01430154804770646,
+          "model_utility": 0.597602093720038,
+          "forget_truth_ratio": 0.49939800691468167
+        },
+        {
+          "seed": 2,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget01_NPO_1xAda6000_flash2_micro8_acc4_e10_seed2_20260829.status.json",
+          "forget_quality": 0.006760732303569208,
+          "model_utility": 0.5957576002884533,
+          "forget_truth_ratio": 0.5052667466574052
+        },
+        {
+          "seed": 3,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget01_NPO_1xAda6000_flash2_micro8_acc4_e10_seed3_20260829.status.json",
+          "forget_quality": 0.01430154804770646,
+          "model_utility": 0.5966016265577514,
+          "forget_truth_ratio": 0.495587992210795
+        },
+        {
+          "seed": 4,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget01_NPO_1xAda6000_flash2_micro8_acc4_e10_seed4_20260829.status.json",
+          "forget_quality": 0.006760732303569208,
+          "model_utility": 0.593438353679664,
+          "forget_truth_ratio": 0.5048959527110384
+        }
+      ],
+      "summary": {
+        "forget_quality": {
+          "mean": 0.009777058601224109,
+          "sample_std": 0.0041302748850540775,
+          "min": 0.006760732303569208,
+          "max": 0.01430154804770646,
+          "official": 0.92,
+          "mean_minus_official": -0.9102229413987759,
+          "h100_five_seed_mean": 0.017756108346046486,
+          "mean_minus_h100": -0.007979049744822378
+        },
+        "model_utility": {
+          "mean": 0.5958788755834055,
+          "sample_std": 0.0015391654169588716,
+          "min": 0.593438353679664,
+          "max": 0.597602093720038,
+          "official": 0.56,
+          "mean_minus_official": 0.03587887558340541,
+          "h100_five_seed_mean": 0.5896471856386354,
+          "mean_minus_h100": 0.00623168994477008
+        },
+        "forget_truth_ratio": {
+          "mean": 0.5023857195419005,
+          "sample_std": 0.00471820745673638,
+          "min": 0.495587992210795,
+          "max": 0.5067798992155821,
+          "official": 0.66,
+          "mean_minus_official": -0.15761428045809955,
+          "h100_five_seed_mean": 0.537798650807563,
+          "mean_minus_h100": -0.03541293126566247
+        }
+      }
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "forget_split": "forget05",
+      "seed_count": 5,
+      "runs": [
+        {
+          "seed": 0,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget05_NPO_1xAda6000_flash2_micro8_acc4_e10_seed0_20260829.status.json",
+          "forget_quality": 4.7487878961137165e-05,
+          "model_utility": 0.45390249492655815,
+          "forget_truth_ratio": 0.6092290015312046
+        },
+        {
+          "seed": 1,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget05_NPO_1xAda6000_flash2_micro8_acc4_e10_seed1_20260829.status.json",
+          "forget_quality": 4.7487878961137165e-05,
+          "model_utility": 0.4614465803943612,
+          "forget_truth_ratio": 0.6013285142452798
+        },
+        {
+          "seed": 2,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget05_NPO_1xAda6000_flash2_micro8_acc4_e10_seed2_20260829.status.json",
+          "forget_quality": 1.8266119303942767e-05,
+          "model_utility": 0.43732558697621104,
+          "forget_truth_ratio": 0.6128827421513975
+        },
+        {
+          "seed": 3,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget05_NPO_1xAda6000_flash2_micro8_acc4_e10_seed3_20260829.status.json",
+          "forget_quality": 0.0001183661896190048,
+          "model_utility": 0.45631297631935624,
+          "forget_truth_ratio": 0.6144659462742628
+        },
+        {
+          "seed": 4,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget05_NPO_1xAda6000_flash2_micro8_acc4_e10_seed4_20260829.status.json",
+          "forget_quality": 2.3797467071606504e-06,
+          "model_utility": 0.45854203028495694,
+          "forget_truth_ratio": 0.6009575733568945
+        }
+      ],
+      "summary": {
+        "forget_quality": {
+          "mean": 4.679756271047651e-05,
+          "sample_std": 4.446911026765836e-05,
+          "min": 2.3797467071606504e-06,
+          "max": 0.0001183661896190048,
+          "official": 0.14,
+          "mean_minus_official": -0.13995320243728954,
+          "h100_five_seed_mean": 0.28007264424627537,
+          "mean_minus_h100": -0.2800258466835649
+        },
+        "model_utility": {
+          "mean": 0.45350593378028875,
+          "sample_std": 0.009463832573447769,
+          "min": 0.43732558697621104,
+          "max": 0.4614465803943612,
+          "official": 0.45,
+          "mean_minus_official": 0.003505933780288739,
+          "h100_five_seed_mean": 0.43954721113160583,
+          "mean_minus_h100": 0.01395872264868292
+        },
+        "forget_truth_ratio": {
+          "mean": 0.6077727555118078,
+          "sample_std": 0.006344414311311138,
+          "min": 0.6009575733568945,
+          "max": 0.6144659462742628,
+          "official": 0.7,
+          "mean_minus_official": -0.0922272444881922,
+          "h100_five_seed_mean": 0.6992570141404936,
+          "mean_minus_h100": -0.09148425862868581
+        }
+      }
+    },
+    {
+      "model": "Llama-3.2-1B-Instruct",
+      "forget_split": "forget10",
+      "seed_count": 5,
+      "runs": [
+        {
+          "seed": 0,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget10_NPO_1xAda6000_flash2_micro8_acc4_e10_seed0_20260829.status.json",
+          "forget_quality": 3.596289960343452e-05,
+          "model_utility": 0.40241742004063413,
+          "forget_truth_ratio": 0.6460032042608969
+        },
+        {
+          "seed": 1,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget10_NPO_1xAda6000_flash2_micro8_acc4_e10_seed1_20260829.status.json",
+          "forget_quality": 9.532297003197859e-05,
+          "model_utility": 0.35120241951830766,
+          "forget_truth_ratio": 0.6504332601610229
+        },
+        {
+          "seed": 2,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget10_NPO_1xAda6000_flash2_micro8_acc4_e10_seed2_20260829.status.json",
+          "forget_quality": 6.923241573443553e-05,
+          "model_utility": 0.4435355675911209,
+          "forget_truth_ratio": 0.6439860068994457
+        },
+        {
+          "seed": 3,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget10_NPO_1xAda6000_flash2_micro8_acc4_e10_seed3_20260829.status.json",
+          "forget_quality": 3.596289960343452e-05,
+          "model_utility": 0.38425461853258813,
+          "forget_truth_ratio": 0.6500111911943892
+        },
+        {
+          "seed": 4,
+          "status_path": "/home/user/alpaca/open-unlearning/tofu_Llama-3.2-1B-Instruct_forget10_NPO_1xAda6000_flash2_micro8_acc4_e10_seed4_20260829.status.json",
+          "forget_quality": 6.392505006995772e-06,
+          "model_utility": 0.45045724253730507,
+          "forget_truth_ratio": 0.6317595770088938
+        }
+      ],
+      "summary": {
+        "forget_quality": {
+          "mean": 4.8574737996055786e-05,
+          "sample_std": 3.43132429364151e-05,
+          "min": 6.392505006995772e-06,
+          "max": 9.532297003197859e-05,
+          "official": 0.02,
+          "mean_minus_official": -0.019951425262003945,
+          "h100_five_seed_mean": 0.11714945467176337,
+          "mean_minus_h100": -0.1171008799337673
+        },
+        "model_utility": {
+          "mean": 0.40637345364399113,
+          "sample_std": 0.04145219907092801,
+          "min": 0.35120241951830766,
+          "max": 0.45045724253730507,
+          "official": 0.46,
+          "mean_minus_official": -0.053626546356008886,
+          "h100_five_seed_mean": 0.48099719807898716,
+          "mean_minus_h100": -0.07462374443499603
+        },
+        "forget_truth_ratio": {
+          "mean": 0.6444386479049297,
+          "sample_std": 0.00758946925139283,
+          "min": 0.6317595770088938,
+          "max": 0.6504332601610229,
+          "official": 0.7,
+          "mean_minus_official": -0.05556135209507029,
+          "h100_five_seed_mean": 0.6666502827325377,
+          "mean_minus_h100": -0.022211634827608018
+        }
+      }
+    }
+  ]
+}

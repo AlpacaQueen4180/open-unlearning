@@ -1,0 +1,15 @@
+{
+  "epoch": 8.64,
+  "extraction_strength": 0.08313153818849792,
+  "forget_Q_A_Prob": 0.11277667999267578,
+  "forget_Q_A_ROUGE": 0.34763627110870465,
+  "forget_quality": 0.1420746514551761,
+  "forget_truth_ratio": 0.7124040519244846,
+  "global_step": 60,
+  "ks_D_200v200": 0.115,
+  "ks_p_200v200": 0.1420746514551761,
+  "model_utility": 0.5292339410691783,
+  "privleak": 20.32141205174633,
+  "status": "DONE",
+  "summary_path": "/home/ai/alpaca/saves/eval/tofu_Llama-2-7b-chat-hf_forget05_NPO_2xH100_zero3_flash2_micro4_acc4_e10_20260827_eval_retry2/TOFU_SUMMARY.json"
+}
