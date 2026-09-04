@@ -78,7 +78,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--input", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--run-id", required=True)
-    parser.add_argument("--protocol", choices=("legacy-300", "formal-330"), required=True)
+    parser.add_argument("--protocol", choices=("legacy-300", "formal-300"), required=True)
     parser.add_argument("--checkpoint-id", required=True)
     parser.add_argument("--checkpoint-sha256")
     parser.add_argument("--seed", type=int, default=0)

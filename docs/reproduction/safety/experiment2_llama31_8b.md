@@ -54,8 +54,8 @@ seed. For every condition, report:
 - Degeneration rate
 - Harmful-among-nondegenerate rate
 
-Safety generation uses both the legacy 300-prompt protocol and the official
-330-prompt deterministic protocol for every checkpoint. Generation and judging
+Safety generation uses both the legacy 300-prompt sampling protocol and a
+300-prompt deterministic protocol for every checkpoint. Generation and judging
 run on the H100 host before trained checkpoints are archived to the GB10 host.
 The formal GPT judge is `gpt-5.6-terra` with medium reasoning and prompt version
 `hexphi-two-dimensional-v1`. It must return two orthogonal labels per response:
@@ -105,6 +105,9 @@ rows remain visible and retry on the next run.
 
 The legacy prompt file has SHA-256
 `f72785518afa1dde3c1324987e123ef307a6e2ee2b69a8646c738c06e051db2e`.
-The formal dataset is pinned to Hugging Face revision
-`83128b46334b80cc567bd7a2caf7af11c5b0bab7` and requires accepting the
-HEx-PHI dataset access terms.
+The formal dataset metadata is pinned to Hugging Face revision
+`83128b46334b80cc567bd7a2caf7af11c5b0bab7`. The authors removed all 30
+category-2 prompts from the repository, so the currently obtainable benchmark
+contains 300 prompts. Category 2 must be reported as unavailable, not recreated
+or substituted. HEx-PHI prompt text and raw generations must not be committed or
+redistributed.

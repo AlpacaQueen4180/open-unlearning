@@ -22,11 +22,13 @@ protocols:
     do_sample: true
     temperature: 1.0
     top_p: 1.0
-  formal_330:
-    name: formal-330
-    expected_prompts: 330
+  formal_300:
+    name: formal-300
+    expected_prompts: 300
     huggingface_dataset: LLM-Tuning-Safety/HEx-PHI
     revision: 83128b46334b80cc567bd7a2caf7af11c5b0bab7
+    unavailable_category: 2
+    note: Category 2 was removed by the dataset authors; do not reconstruct it.
     seed: 0
     max_new_tokens: 512
     do_sample: false
