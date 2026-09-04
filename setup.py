@@ -20,6 +20,11 @@ setup(
         "lm-eval": [
             "lm-eval==0.4.11",
         ],  # Install using `pip install ".[lm-eval]"`
+        "safety-eval": [
+            "openai>=2.35.0,<3",
+            "pydantic>=2.13.0,<3",
+            "python-dotenv>=1.2.0,<2",
+        ],
         "dev": [
             "pre-commit==4.0.1",
             "ruff==0.6.9",

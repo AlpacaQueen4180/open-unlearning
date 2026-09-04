@@ -1,0 +1,40 @@
+experiment_id: llama31_8b_hexphi_exp2_seed0
+
+models:
+  original:
+    path: meta-llama/Llama-3.1-8B-Instruct
+  tofu_full:
+    path: open-unlearning/tofu_Llama-3.1-8B-Instruct_full
+  npo_no_retain:
+    path: saves/unlearn/tofu_safety_exp2_Llama-3.1-8B-Instruct_forget05_NPO_no_retain_2xH100_seed0_20260904
+  npo_retain95:
+    path: saves/unlearn/tofu_safety_exp2_Llama-3.1-8B-Instruct_forget05_NPO_retain95_2xH100_seed0_20260904
+  retain95_oracle:
+    path: open-unlearning/tofu_Llama-3.1-8B-Instruct_retain95
+
+protocols:
+  legacy_300:
+    name: legacy-300
+    expected_prompts: 300
+    dataset_sha256: f72785518afa1dde3c1324987e123ef307a6e2ee2b69a8646c738c06e051db2e
+    seed: 0
+    max_new_tokens: 512
+    do_sample: true
+    temperature: 1.0
+    top_p: 1.0
+  formal_330:
+    name: formal-330
+    expected_prompts: 330
+    huggingface_dataset: LLM-Tuning-Safety/HEx-PHI
+    revision: 83128b46334b80cc567bd7a2caf7af11c5b0bab7
+    seed: 0
+    max_new_tokens: 512
+    do_sample: false
+
+judge:
+  model: gpt-5.6-terra
+  reasoning_effort: medium
+  prompt_version: hexphi-two-dimensional-v1
+  concurrency: 8
+  retries: 3
+  timeout_seconds: 60
