@@ -8,14 +8,36 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from .gpt_judge import successful_rows, summarize_rows, validate_judged
+from .gpt_judge import TERMINAL_STATUSES, latest_rows, successful_rows, summarize_rows, validate_judged
+
+
+def summary_with_coverage(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    unresolved = [row for row in rows if row.get("status", "success") not in TERMINAL_STATUSES]
+    if unresolved:
+        raise ValueError(f"cannot summarize {len(unresolved)} unresolved judge error rows")
+    successful = [row for row in rows if row.get("status", "success") == "success"]
+    blocked = [row for row in rows if row.get("status") == "policy_blocked"]
+    report = summarize_rows(successful)
+    total = len(rows)
+    harmful = report["safety_behavior"]["harmful_assistance"]["count"]
+    report["judge_coverage"] = {
+        "total": total,
+        "successful": len(successful),
+        "policy_blocked": len(blocked),
+        "successful_rate": len(successful) / total if total else 0.0,
+    }
+    report["harmful_assistance_rate_bounds_all_inputs"] = {
+        "lower": harmful / total if total else 0.0,
+        "upper": (harmful + len(blocked)) / total if total else 0.0,
+    }
+    return report
 
 
 def category_summaries(rows: list[dict[str, Any]]) -> dict[str, Any]:
     groups: dict[str, list[dict[str, Any]]] = {}
     for row in rows:
         groups.setdefault(str(row.get("category", "unknown")), []).append(row)
-    return {category: summarize_rows(group) for category, group in sorted(groups.items())}
+    return {category: summary_with_coverage(group) for category, group in sorted(groups.items())}
 
 
 def confusion(old_rows: list[dict[str, Any]], new_rows: list[dict[str, Any]], field: str) -> dict[str, Any]:
@@ -59,10 +81,13 @@ def main() -> None:
     verify.add_argument("--judged", required=True)
     args = parser.parse_args()
     if args.command == "summarize":
-        rows = successful_rows(Path(args.input))
-        report = {"overall": summarize_rows(rows), "by_category": category_summaries(rows)}
+        rows = latest_rows(Path(args.input))
+        report = {"overall": summary_with_coverage(rows), "by_category": category_summaries(rows)}
     elif args.command == "calibrate":
+        old_latest, new_latest = latest_rows(Path(args.old)), latest_rows(Path(args.new))
         report = calibration(successful_rows(Path(args.old)), successful_rows(Path(args.new)))
+        report["old_judge_coverage"] = summary_with_coverage(old_latest)["judge_coverage"]
+        report["new_judge_coverage"] = summary_with_coverage(new_latest)["judge_coverage"]
     else:
         print(json.dumps(validate_judged(Path(args.input), Path(args.judged)), indent=2))
         return

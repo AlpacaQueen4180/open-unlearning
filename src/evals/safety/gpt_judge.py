@@ -22,6 +22,7 @@ DEFAULT_JUDGE_MODEL = "gpt-5.6-terra"
 
 SafetyLabel = Literal["refusal", "safe_non_refusal", "harmful_assistance", "indeterminate"]
 GenerationQuality = Literal["normal", "degenerate"]
+TERMINAL_STATUSES = {"success", "policy_blocked"}
 
 
 class JudgeResult(BaseModel):
@@ -84,7 +85,7 @@ def load_completed(path: Path) -> set[str]:
             row = json.loads(line)
         except json.JSONDecodeError:
             continue
-        if row.get("status") == "success" and row.get("id"):
+        if row.get("status") in TERMINAL_STATUSES and row.get("id"):
             completed.add(str(row["id"]))
     return completed
 
@@ -122,6 +123,15 @@ async def evaluate_one(example: dict[str, Any], client: Any, args: argparse.Name
             return {**result.model_dump(), "status": "success", "attempts": attempt + 1, "judge_model_actual": actual_model}
         except Exception as exc:
             error = f"{type(exc).__name__}: {exc}"
+            body = getattr(exc, "body", None)
+            code = getattr(exc, "code", None)
+            if not code and isinstance(body, dict):
+                code = body.get("code") or body.get("error", {}).get("code")
+            if code == "bio_policy":
+                return {
+                    "status": "policy_blocked", "attempts": attempt + 1,
+                    "error": error, "policy_code": code, "judge_model_actual": None,
+                }
             if attempt < args.retries:
                 await asyncio.sleep(min(30.0, (2 ** attempt) + random.random()))
     return {"status": "error", "attempts": args.retries + 1, "error": error, "judge_model_actual": None}
@@ -163,7 +173,7 @@ async def run_evaluation(args: argparse.Namespace) -> None:
     await asyncio.gather(*(worker(example) for example in pending))
 
 
-def successful_rows(path: Path) -> list[dict[str, Any]]:
+def latest_rows(path: Path) -> list[dict[str, Any]]:
     latest: dict[str, dict[str, Any]] = {}
     for line in path.read_text(encoding="utf-8").splitlines():
         if line.strip():
@@ -171,19 +181,27 @@ def successful_rows(path: Path) -> list[dict[str, Any]]:
             if not row.get("id"):
                 raise ValueError(f"judged row is missing id: {path}")
             latest[str(row["id"])] = row
-    failures = [row["id"] for row in latest.values() if row.get("status") != "success"]
+    return list(latest.values())
+
+
+def successful_rows(path: Path) -> list[dict[str, Any]]:
+    latest = latest_rows(path)
+    failures = [row["id"] for row in latest if row.get("status") not in TERMINAL_STATUSES]
     if failures:
         raise ValueError(f"{path} has {len(failures)} unresolved judge error rows")
-    return list(latest.values())
+    return [row for row in latest if row.get("status") == "success"]
 
 
 def validate_judged(input_path: Path, judged_path: Path) -> dict[str, Any]:
     expected = {row["id"] for row in load_examples(input_path)}
-    rows = successful_rows(judged_path)
-    actual = {str(row["id"]) for row in rows}
+    rows = latest_rows(judged_path)
+    unresolved = [row["id"] for row in rows if row.get("status") not in TERMINAL_STATUSES]
+    actual = {str(row["id"]) for row in rows if row.get("status") in TERMINAL_STATUSES}
+    successful = [row for row in rows if row.get("status") == "success"]
+    blocked = [row for row in rows if row.get("status") == "policy_blocked"]
     schema_errors = []
     missing_actual_model = []
-    for row in rows:
+    for row in successful:
         try:
             JudgeResult.model_validate(row)
         except Exception as exc:
@@ -192,13 +210,16 @@ def validate_judged(input_path: Path, judged_path: Path) -> dict[str, Any]:
             missing_actual_model.append(row["id"])
     report = {
         "expected": len(expected),
-        "successful_unique": len(actual),
+        "successful_unique": len(successful),
+        "policy_blocked_unique": len(blocked),
+        "terminal_unique": len(actual),
+        "unresolved_error_count": len(unresolved),
         "missing": sorted(expected - actual),
         "unexpected": sorted(actual - expected),
         "schema_error_count": len(schema_errors),
         "missing_actual_model_count": len(missing_actual_model),
     }
-    if report["missing"] or report["unexpected"] or schema_errors or missing_actual_model:
+    if unresolved or report["missing"] or report["unexpected"] or schema_errors or missing_actual_model:
         raise ValueError(json.dumps(report, ensure_ascii=False))
     return report
 

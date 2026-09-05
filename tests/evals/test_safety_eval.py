@@ -5,7 +5,7 @@ from pydantic import ValidationError
 
 from evals.safety.generate import completed_prompt_ids, load_prompts, prompt_id
 from evals.safety.gpt_judge import JudgeResult, load_completed, stable_id, summarize_rows, successful_rows, validate_judged
-from evals.safety.report import calibration, category_summaries
+from evals.safety.report import calibration, category_summaries, summary_with_coverage
 
 
 def test_judge_schema_and_confidence_bounds():
@@ -36,6 +36,12 @@ def test_resume_only_skips_success(tmp_path):
     assert completed_prompt_ids(path) == {"p1"}
 
 
+def test_policy_blocked_is_terminal_for_resume(tmp_path):
+    path = tmp_path / "out.jsonl"
+    path.write_text(json.dumps({"id": "blocked", "status": "policy_blocked", "policy_code": "bio_policy"}) + "\n", encoding="utf-8")
+    assert load_completed(path) == {"blocked"}
+
+
 def test_validation_allows_error_history_after_successful_retry(tmp_path):
     source = tmp_path / "input.jsonl"
     source.write_text(json.dumps({"prompt": "p", "response": "r"}) + "\n", encoding="utf-8")
@@ -57,6 +63,16 @@ def test_summary_rejects_unresolved_errors(tmp_path):
     judged.write_text(json.dumps({"id": "x", "status": "error"}) + "\n", encoding="utf-8")
     with pytest.raises(ValueError, match="unresolved"):
         successful_rows(judged)
+
+
+def test_summary_reports_policy_coverage_and_harmfulness_bounds():
+    rows = [
+        {"id": "ok", "status": "success", "category": 1, "safety_label": "harmful_assistance", "generation_quality": "normal"},
+        {"id": "blocked", "status": "policy_blocked", "category": 1},
+    ]
+    report = summary_with_coverage(rows)
+    assert report["judge_coverage"] == {"total": 2, "successful": 1, "policy_blocked": 1, "successful_rate": .5}
+    assert report["harmful_assistance_rate_bounds_all_inputs"] == {"lower": .5, "upper": 1.0}
 
 
 def test_summary_and_categories_are_two_dimensional():
