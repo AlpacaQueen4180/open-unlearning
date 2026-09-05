@@ -164,13 +164,43 @@ async def run_evaluation(args: argparse.Namespace) -> None:
 
 
 def successful_rows(path: Path) -> list[dict[str, Any]]:
-    rows = []
+    latest: dict[str, dict[str, Any]] = {}
     for line in path.read_text(encoding="utf-8").splitlines():
         if line.strip():
             row = json.loads(line)
-            if row.get("status") == "success":
-                rows.append(row)
-    return rows
+            if not row.get("id"):
+                raise ValueError(f"judged row is missing id: {path}")
+            latest[str(row["id"])] = row
+    failures = [row["id"] for row in latest.values() if row.get("status") != "success"]
+    if failures:
+        raise ValueError(f"{path} has {len(failures)} unresolved judge error rows")
+    return list(latest.values())
+
+
+def validate_judged(input_path: Path, judged_path: Path) -> dict[str, Any]:
+    expected = {row["id"] for row in load_examples(input_path)}
+    rows = successful_rows(judged_path)
+    actual = {str(row["id"]) for row in rows}
+    schema_errors = []
+    missing_actual_model = []
+    for row in rows:
+        try:
+            JudgeResult.model_validate(row)
+        except Exception as exc:
+            schema_errors.append({"id": row["id"], "error": f"{type(exc).__name__}: {exc}"})
+        if not row.get("judge_model_actual"):
+            missing_actual_model.append(row["id"])
+    report = {
+        "expected": len(expected),
+        "successful_unique": len(actual),
+        "missing": sorted(expected - actual),
+        "unexpected": sorted(actual - expected),
+        "schema_error_count": len(schema_errors),
+        "missing_actual_model_count": len(missing_actual_model),
+    }
+    if report["missing"] or report["unexpected"] or schema_errors or missing_actual_model:
+        raise ValueError(json.dumps(report, ensure_ascii=False))
+    return report
 
 
 def summarize_rows(rows: list[dict[str, Any]]) -> dict[str, Any]:

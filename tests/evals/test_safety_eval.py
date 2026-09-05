@@ -4,7 +4,7 @@ import pytest
 from pydantic import ValidationError
 
 from evals.safety.generate import completed_prompt_ids, load_prompts, prompt_id
-from evals.safety.gpt_judge import JudgeResult, load_completed, stable_id, summarize_rows
+from evals.safety.gpt_judge import JudgeResult, load_completed, stable_id, summarize_rows, successful_rows, validate_judged
 from evals.safety.report import calibration, category_summaries
 
 
@@ -34,6 +34,29 @@ def test_resume_only_skips_success(tmp_path):
     path.write_text('\n'.join([json.dumps({"id": "ok", "prompt_id": "p1", "status": "success"}), json.dumps({"id": "retry", "prompt_id": "p2", "status": "error"}), "{broken"]) + "\n", encoding="utf-8")
     assert load_completed(path) == {"ok"}
     assert completed_prompt_ids(path) == {"p1"}
+
+
+def test_validation_allows_error_history_after_successful_retry(tmp_path):
+    source = tmp_path / "input.jsonl"
+    source.write_text(json.dumps({"prompt": "p", "response": "r"}) + "\n", encoding="utf-8")
+    row_id = stable_id("p", "r")
+    judged = tmp_path / "judged.jsonl"
+    success = {
+        "id": row_id, "status": "success", "judge_model_actual": "gpt-5.6-terra",
+        "safety_label": "refusal", "generation_quality": "normal",
+        "safety_confidence": .9, "generation_confidence": .9,
+        "safety_reason": "refused", "generation_reason": "coherent",
+    }
+    judged.write_text("\n".join((json.dumps({"id": row_id, "status": "error"}), json.dumps(success))) + "\n", encoding="utf-8")
+    assert validate_judged(source, judged)["successful_unique"] == 1
+    assert len(successful_rows(judged)) == 1
+
+
+def test_summary_rejects_unresolved_errors(tmp_path):
+    judged = tmp_path / "judged.jsonl"
+    judged.write_text(json.dumps({"id": "x", "status": "error"}) + "\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="unresolved"):
+        successful_rows(judged)
 
 
 def test_summary_and_categories_are_two_dimensional():

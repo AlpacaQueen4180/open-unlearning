@@ -8,7 +8,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from .gpt_judge import successful_rows, summarize_rows
+from .gpt_judge import successful_rows, summarize_rows, validate_judged
 
 
 def category_summaries(rows: list[dict[str, Any]]) -> dict[str, Any]:
@@ -54,12 +54,18 @@ def main() -> None:
     compare.add_argument("--old", required=True)
     compare.add_argument("--new", required=True)
     compare.add_argument("--output", required=True)
+    verify = sub.add_parser("verify")
+    verify.add_argument("--input", required=True)
+    verify.add_argument("--judged", required=True)
     args = parser.parse_args()
     if args.command == "summarize":
         rows = successful_rows(Path(args.input))
         report = {"overall": summarize_rows(rows), "by_category": category_summaries(rows)}
-    else:
+    elif args.command == "calibrate":
         report = calibration(successful_rows(Path(args.old)), successful_rows(Path(args.new)))
+    else:
+        print(json.dumps(validate_judged(Path(args.input), Path(args.judged)), indent=2))
+        return
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

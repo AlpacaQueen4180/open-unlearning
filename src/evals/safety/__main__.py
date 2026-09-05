@@ -8,7 +8,7 @@ from .report import main as report_main
 
 
 def main() -> None:
-    usage = "usage: python -m evals.safety {generate,judge,summarize,calibrate} ..."
+    usage = "usage: python -m evals.safety {generate,judge,summarize,calibrate,verify} ..."
     if len(sys.argv) < 2:
         raise SystemExit(usage)
     if sys.argv[1] in {"-h", "--help"}:
@@ -19,7 +19,7 @@ def main() -> None:
         generate_main()
     elif command == "judge":
         judge_main()
-    elif command in {"summarize", "calibrate"}:
+    elif command in {"summarize", "calibrate", "verify"}:
         sys.argv.insert(1, command)
         report_main()
     else:

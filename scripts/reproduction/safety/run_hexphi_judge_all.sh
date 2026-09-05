@@ -55,6 +55,8 @@ for model_name in "${models[@]}"; do
       --model gpt-5.6-terra --reasoning-effort medium \
       --concurrency 8 --retries 3 --timeout 60 --env-file "$SECRET_ENV" \
       > "$ARTIFACT_ROOT/logs/${model_name}_${protocol}.judge.log" 2>&1
+    "$PYTHON_BIN" -m evals.safety verify --input "$raw" --judged "$judged" \
+      > "$ARTIFACT_ROOT/logs/${model_name}_${protocol}.verify.log" 2>&1
     "$PYTHON_BIN" -m evals.safety summarize --input "$judged" --output "$summary" \
       > "$ARTIFACT_ROOT/logs/${model_name}_${protocol}.summary.log" 2>&1
   done
@@ -68,6 +70,9 @@ if [[ -f "$HISTORICAL_RAW" && -f "$HISTORICAL_MINI" ]]; then
     --reasoning-effort medium --concurrency 8 --retries 3 --timeout 60 \
     --env-file "$SECRET_ENV" \
     > "$ARTIFACT_ROOT/logs/historical_npo_terra.judge.log" 2>&1
+  "$PYTHON_BIN" -m evals.safety verify --input "$HISTORICAL_RAW" \
+    --judged "$historical_terra" \
+    > "$ARTIFACT_ROOT/logs/historical_npo_terra.verify.log" 2>&1
   "$PYTHON_BIN" -m evals.safety calibrate --old "$HISTORICAL_MINI" \
     --new "$historical_terra" \
     --output "$ARTIFACT_ROOT/summaries/gpt5mini_vs_gpt56terra_calibration.json" \
