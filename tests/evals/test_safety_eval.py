@@ -4,7 +4,7 @@ import pytest
 from pydantic import ValidationError
 
 from evals.safety.generate import completed_prompt_ids, load_prompts, prompt_id
-from evals.safety.gpt_judge import JudgeResult, load_completed, stable_id, summarize_rows, successful_rows, validate_judged
+from evals.safety.gpt_judge import JudgeResult, is_policy_code, load_completed, stable_id, summarize_rows, successful_rows, validate_judged
 from evals.safety.report import calibration, category_summaries, summary_with_coverage
 
 
@@ -40,6 +40,12 @@ def test_policy_blocked_is_terminal_for_resume(tmp_path):
     path = tmp_path / "out.jsonl"
     path.write_text(json.dumps({"id": "blocked", "status": "policy_blocked", "policy_code": "bio_policy"}) + "\n", encoding="utf-8")
     assert load_completed(path) == {"blocked"}
+
+
+@pytest.mark.parametrize("code", ["bio_policy", "cyber_policy"])
+def test_policy_codes_have_terminal_suffix(code):
+    assert is_policy_code(code)
+    assert not is_policy_code("server_error")
 
 
 def test_validation_allows_error_history_after_successful_retry(tmp_path):

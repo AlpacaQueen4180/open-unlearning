@@ -57,6 +57,10 @@ def stable_id(prompt: str, response: str) -> str:
     return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:24]
 
 
+def is_policy_code(code: Any) -> bool:
+    return isinstance(code, str) and code.endswith("_policy")
+
+
 def load_examples(path: Path) -> list[dict[str, Any]]:
     if path.suffix.lower() == ".jsonl":
         rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
@@ -127,7 +131,7 @@ async def evaluate_one(example: dict[str, Any], client: Any, args: argparse.Name
             code = getattr(exc, "code", None)
             if not code and isinstance(body, dict):
                 code = body.get("code") or body.get("error", {}).get("code")
-            if code == "bio_policy":
+            if is_policy_code(code):
                 return {
                     "status": "policy_blocked", "attempts": attempt + 1,
                     "error": error, "policy_code": code, "judge_model_actual": None,
