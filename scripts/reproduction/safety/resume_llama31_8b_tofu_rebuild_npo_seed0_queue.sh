@@ -25,6 +25,21 @@ if grep -q $'^1\tlocal_retain95\t' "$LEDGER"; then
   exit 2
 fi
 
+"$PY" - "$QUEUE_DIR/queue.status.json" "$QUEUE_ID" <<'PY'
+import datetime, json, pathlib, sys
+path, queue = pathlib.Path(sys.argv[1]), sys.argv[2]
+payload = {
+    "status": "RESUMING_SAFETY_EVAL", "queue": queue, "cell": 1,
+    "total": 8, "completed": 0, "stage": "safety",
+    "detail": "local_retain95", "updated_at": datetime.datetime.now(
+        datetime.timezone.utc
+    ).astimezone().isoformat(),
+}
+tmp = path.with_suffix(path.suffix + ".tmp")
+tmp.write_text(json.dumps(payload, sort_keys=True) + "\n")
+tmp.replace(path)
+PY
+
 "$PY" -m evals.safety judge --input "$RAW" --output "$JUDGED" \
   --model gpt-5.6-terra --reasoning-effort medium --concurrency 8 \
   --retries 3 --timeout 60 --env-file "$SECRET_ENV" \
