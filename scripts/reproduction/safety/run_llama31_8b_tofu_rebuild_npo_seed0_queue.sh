@@ -18,6 +18,7 @@ HEXPHI="$ROOT/safety_artifacts/datasets/HEx-PHI-legacy-300.json"
 SECRET_ENV=/home/ai/.config/open-unlearning/safety.env
 MIN_FREE_KB=188743680
 EXPECTED_HEXPHI_SHA=f72785518afa1dde3c1324987e123ef307a6e2ee2b69a8646c738c06e051db2e
+RESUME_FROM_CELL="${RESUME_FROM_CELL:-1}"
 
 LOCAL_RETAIN_TASK="${QUEUE_ID}_local_retain95"
 LOCAL_FULL_TASK="${QUEUE_ID}_local_full"
@@ -59,7 +60,7 @@ fail() {
 
 wait_for_idle_gpus() {
   local idle_checks=0 process_count
-  write_status WAITING_FOR_TWO_IDLE_GPUS 0 0 preflight ""
+  write_status WAITING_FOR_TWO_IDLE_GPUS "$RESUME_FROM_CELL" "$completed" preflight ""
   while (( idle_checks < 4 )); do
     process_count="$(nvidia-smi --query-compute-apps=pid --format=csv,noheader,nounits 2>/dev/null | awk 'NF {count++} END {print count+0}')"
     if [[ "$process_count" == 0 ]]; then
@@ -203,8 +204,16 @@ if [[ "${1:-}" == --dry-run ]]; then
   exit 0
 fi
 
-if [[ -e "$ARTIFACT_DIR" ]]; then
+if ! [[ "$RESUME_FROM_CELL" =~ ^[1-8]$ ]]; then
+  printf 'RESUME_FROM_CELL must be an integer from 1 through 8\n' >&2
+  exit 2
+fi
+if [[ "$RESUME_FROM_CELL" == 1 && -e "$ARTIFACT_DIR" ]]; then
   printf 'Refusing existing queue directory: %s\n' "$ARTIFACT_DIR" >&2
+  exit 2
+fi
+if [[ "$RESUME_FROM_CELL" != 1 && ! -s "$LEDGER" ]]; then
+  printf 'Cannot resume without an existing ledger: %s\n' "$LEDGER" >&2
   exit 2
 fi
 mkdir -p "$ARTIFACT_DIR"/{logs,status,manifests,raw,judged,summaries} "$PUBLIC_DIR"
@@ -222,11 +231,16 @@ available_kb="$(df -Pk "$ROOT" | awk 'NR==2 {print $4}')"
 (( available_kb >= MIN_FREE_KB )) || fail FAILED_LOW_DISK 0 0 preflight "$available_kb"
 mkdir "$CLAIM" 2>/dev/null || fail REFUSED_GPU_CLAIMED 0 0 preflight "$CLAIM"
 trap 'rmdir "$CLAIM" 2>/dev/null || true' EXIT
-printf 'cell\tname\tkind\tforget\tretain\talpha\tcheckpoint\ttofu_eval\tsafety_summary\tretain_reference\n' > "$LEDGER"
+if [[ "$RESUME_FROM_CELL" == 1 ]]; then
+  printf 'cell\tname\tkind\tforget\tretain\talpha\tcheckpoint\ttofu_eval\tsafety_summary\tretain_reference\n' > "$LEDGER"
+  completed=0
+else
+  completed="$(awk 'NR > 1 {count++} END {print count+0}' "$LEDGER")"
+  (( completed == RESUME_FROM_CELL - 1 )) || fail FAILED_RESUME_PREFLIGHT "$RESUME_FROM_CELL" "$completed" ledger unexpected_completed_count
+fi
 wait_for_idle_gpus
 
-completed=0
-for cell in $(seq 1 8); do
+for cell in $(seq "$RESUME_FROM_CELL" 8); do
   name="${cell_names[$((cell - 1))]}"
   kind=npo; forget=forget05; holdout=holdout05; retain=retain95; alpha=; base=; retain_log=; task="$name"
   case "$cell" in
@@ -265,4 +279,3 @@ write_status SUMMARIZING 8 8 summary ""
   > "$ARTIFACT_DIR/logs/summarize.log" 2>&1 || fail FAILED_SUMMARY 8 8 summary aggregate
 cp "$LEDGER" "$PUBLIC_DIR/ledger.tsv"
 write_status DONE 8 8 complete "$PUBLIC_DIR/aggregate.json"
-
