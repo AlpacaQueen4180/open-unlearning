@@ -73,17 +73,24 @@ def compare_metrics(candidate: dict, baseline: dict) -> dict:
         if candidate.get(key) is not None and baseline.get(key) is not None
     }
     tolerance = 0.03 + 1e-12
-    return {"absolute_deltas": {k: abs(v) for k, v in deltas.items()}, "passes_0_03": all(abs(v) <= tolerance for v in deltas.values())}
+    complete = len(deltas) == len(keys)
+    return {
+        "absolute_deltas": {k: abs(v) for k, v in deltas.items()},
+        "complete": complete,
+        "passes_0_03": complete and all(abs(v) <= tolerance for v in deltas.values()),
+    }
 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--queue-dir", type=Path, required=True)
+    parser.add_argument("--ledger", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
 
-    rows = list(csv.DictReader((args.queue_dir / "ledger.tsv").open(), delimiter="\t"))
+    ledger = args.ledger or (args.queue_dir / "ledger.tsv")
+    rows = list(csv.DictReader(ledger.open(), delimiter="\t"))
     cells = {}
     for row in rows:
         reference = Path(row["retain_reference"]) if row["retain_reference"] else None

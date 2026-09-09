@@ -24,7 +24,7 @@ LOCAL_RETAIN_TASK="${QUEUE_ID}_local_retain95"
 LOCAL_FULL_TASK="${QUEUE_ID}_local_full"
 LOCAL_RETAIN_DIR="$ROOT/saves/finetune/$LOCAL_RETAIN_TASK"
 LOCAL_FULL_DIR="$ROOT/saves/finetune/$LOCAL_FULL_TASK"
-LOCAL_RETAIN_EVAL="$ROOT/saves/eval/$LOCAL_RETAIN_TASK/TOFU_EVAL.json"
+LOCAL_RETAIN_EVAL="$ROOT/saves/eval/local_retain95/TOFU_EVAL.json"
 
 cell_names=(
   local_retain95
@@ -159,8 +159,19 @@ run_tofu_eval() {
     model.tokenizer_args.pretrained_model_name_or_path="$checkpoint"
     model.model_args.attn_implementation=flash_attention_2 paths.output_dir="$out")
   if [[ -n "$retain_log" ]]; then args+=(retain_logs_path="$retain_log"); fi
-  CUDA_VISIBLE_DEVICES=0 "$PY" "${args[@]}" > "$log" 2>&1
-  [[ -s "$out/TOFU_EVAL.json" ]]
+  CUDA_VISIBLE_DEVICES=0 "$PY" "${args[@]}" > "$log" 2>&1 || return 1
+  "$PY" - "$out/TOFU_EVAL.json" <<'PY'
+import json, pathlib, sys
+path = pathlib.Path(sys.argv[1])
+required = {
+    "forget_quality", "forget_truth_ratio", "forget_Q_A_Prob",
+    "forget_Q_A_ROUGE", "retain_Truth_Ratio", "model_utility",
+}
+data = json.loads(path.read_text())
+missing = sorted(required - data.keys())
+if missing:
+    raise SystemExit(f"partial TOFU evaluation {path}: missing {missing}")
+PY
 }
 
 run_safety() {

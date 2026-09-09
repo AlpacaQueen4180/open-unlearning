@@ -20,3 +20,8 @@ def test_core_metric_reproduction_threshold():
     far = dict(close, model_utility=0.64)
     assert compare_metrics(close, baseline)["passes_0_03"]
     assert not compare_metrics(far, baseline)["passes_0_03"]
+    incomplete = dict(close)
+    incomplete["model_utility"] = None
+    result = compare_metrics(incomplete, baseline)
+    assert not result["complete"]
+    assert not result["passes_0_03"]
