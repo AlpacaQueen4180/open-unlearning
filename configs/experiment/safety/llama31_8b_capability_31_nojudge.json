@@ -1,0 +1,40 @@
+{
+  "schema_version": "llama31-8b-capability-registry.v1",
+  "models": [
+    {"id": "original_instruct", "source": "hf", "path": "meta-llama/Llama-3.1-8B-Instruct"},
+    {"id": "published_full", "source": "hf", "path": "open-unlearning/tofu_Llama-3.1-8B-Instruct_full"},
+    {"id": "local_full", "source": "h100", "path": "/home/ai/alpaca/saves/finetune/llama31_8b_tofu_rebuild_npo_seed0_20260907_local_full"},
+    {"id": "published_retain95", "source": "hf", "path": "open-unlearning/tofu_Llama-3.1-8B-Instruct_retain95"},
+    {"id": "local_retain95", "source": "h100", "path": "/home/ai/alpaca/saves/finetune/llama31_8b_tofu_rebuild_npo_seed0_20260907_local_retain95"},
+    {"id": "published_retain99", "source": "hf", "path": "open-unlearning/tofu_Llama-3.1-8B-Instruct_retain99"},
+    {"id": "published_retain90", "source": "hf", "path": "open-unlearning/tofu_Llama-3.1-8B-Instruct_retain90"},
+
+    {"id": "local_f05_no_seed0", "source": "h100", "path": "/home/ai/alpaca/saves/unlearn/local_full_forget05_npo_no_retain"},
+    {"id": "local_f05_no_seed2", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/local_full_forget05_npo_no_retain_seed2"},
+    {"id": "local_f05_no_seed4", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/local_full_forget05_npo_no_retain_seed4"},
+    {"id": "local_f05_retain_seed0", "source": "h100", "path": "/home/ai/alpaca/saves/unlearn/local_full_forget05_npo_retain95"},
+    {"id": "local_f05_retain_seed2", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/local_full_forget05_npo_retain95_seed2"},
+    {"id": "local_f05_retain_seed4", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/local_full_forget05_npo_retain95_seed4"},
+
+    {"id": "published_f01_no_seed0", "source": "h100", "path": "/home/ai/alpaca/saves/unlearn/published_full_forget01_npo_no_retain"},
+    {"id": "published_f01_no_seed2", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/published_full_forget01_npo_no_retain_seed2"},
+    {"id": "published_f01_no_seed4", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/published_full_forget01_npo_no_retain_seed4"},
+    {"id": "published_f01_retain_seed0", "source": "h100", "path": "/home/ai/alpaca/saves/unlearn/published_full_forget01_npo_retain99"},
+    {"id": "published_f01_retain_seed2", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/published_full_forget01_npo_retain99_seed2"},
+    {"id": "published_f01_retain_seed4", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/published_full_forget01_npo_retain99_seed4"},
+
+    {"id": "published_f05_no_seed0", "source": "h100", "path": "/home/ai/alpaca/saves/unlearn/tofu_safety_exp2_Llama-3.1-8B-Instruct_forget05_NPO_no_retain_2xH100_seed0_20260904"},
+    {"id": "published_f05_no_seed2", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_public_f05_seeds1_4_nojudge_20260911/checkpoints/published_full_forget05_npo_no_retain_seed2"},
+    {"id": "published_f05_no_seed4", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_public_f05_seeds1_4_nojudge_20260911/checkpoints/published_full_forget05_npo_no_retain_seed4"},
+    {"id": "published_f05_retain_seed0", "source": "h100", "path": "/home/ai/alpaca/saves/unlearn/tofu_safety_exp2_Llama-3.1-8B-Instruct_forget05_NPO_retain95_2xH100_seed0_20260904"},
+    {"id": "published_f05_retain_seed2", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_public_f05_seeds1_4_nojudge_20260911/checkpoints/published_full_forget05_npo_retain95_seed2"},
+    {"id": "published_f05_retain_seed4", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_public_f05_seeds1_4_nojudge_20260911/checkpoints/published_full_forget05_npo_retain95_seed4"},
+
+    {"id": "published_f10_no_seed0", "source": "h100", "path": "/home/ai/alpaca/saves/unlearn/published_full_forget10_npo_no_retain"},
+    {"id": "published_f10_no_seed2", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/published_full_forget10_npo_no_retain_seed2"},
+    {"id": "published_f10_no_seed4", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/published_full_forget10_npo_no_retain_seed4"},
+    {"id": "published_f10_retain_seed0", "source": "h100", "path": "/home/ai/alpaca/saves/unlearn/published_full_forget10_npo_retain90"},
+    {"id": "published_f10_retain_seed2", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/published_full_forget10_npo_retain90_seed2"},
+    {"id": "published_f10_retain_seed4", "source": "gb10", "path": "/home/gb10/alpaca/checkpoint_archive/llama31_8b_npo_seeds1_4_20260909/checkpoints/published_full_forget10_npo_retain90_seed4"}
+  ]
+}

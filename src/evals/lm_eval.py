@@ -52,6 +52,18 @@ class LMEvalEvaluator(Evaluator):
                     summary[key] = float(value)
                 except (TypeError, ValueError):
                     summary[key] = value
+            # Preserve the individual task metrics as well as the group aggregate.
+            # This is needed for subject-level MMLU analysis and remains backward
+            # compatible with callers that only read the ``mmlu/*`` keys.
+            for member_name, member_metrics in eval_results.get("results", {}).items():
+                for metric_name, value in member_metrics.items():
+                    key = clean_metric_key(member_name, metric_name)
+                    if key is None:
+                        continue
+                    try:
+                        summary[key] = float(value)
+                    except (TypeError, ValueError):
+                        summary[key] = value
         else:
             task_metrics = eval_results.get("results", {}).get(task_name, {})
             for metric_name, value in task_metrics.items():
