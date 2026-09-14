@@ -4,6 +4,7 @@ from pathlib import Path
 import pytest
 
 from evals.mt_bench_generate import load_questions, successful_turns
+from scripts.reproduction.safety.run_llama31_8b_capability_31_nojudge import mmlu_summary
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -47,3 +48,14 @@ def test_mt_bench_resume_uses_only_success_rows(tmp_path):
     ]
     path.write_text("\n".join(json.dumps(row) for row in rows) + "\n")
     assert successful_turns(path) == {("1", 0): "first"}
+
+
+def test_mmlu_summary_separates_57_subjects_from_four_subgroups(tmp_path):
+    path = tmp_path / "LMEval_SUMMARY.json"
+    payload = {"mmlu/acc": 0.5, "mmlu/acc_stderr": 0.01}
+    payload.update({f"mmlu_subject_{index}/acc": 0.5 for index in range(57)})
+    payload.update({f"{name}/acc": 0.5 for name in ("mmlu_humanities", "mmlu_other", "mmlu_social_sciences", "mmlu_stem")})
+    path.write_text(json.dumps(payload))
+    summary = mmlu_summary(path)
+    assert len(summary["subjects"]) == 57
+    assert len(summary["subgroups"]) == 4

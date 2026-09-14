@@ -21,6 +21,7 @@ MT_BENCH_SHA256 = "119565adbab82227089cefdb44c8d7e2cf04dc0a0ec233634c82e7d4e2a94
 GB10 = "gb10@140.113.13.133"
 GB10_PORT = "22026"
 GB10_KEY = "/home/ai/.ssh/open_unlearning_to_gb10"
+MMLU_SUBGROUPS = {"mmlu_humanities", "mmlu_other", "mmlu_social_sciences", "mmlu_stem"}
 
 
 def atomic_json(path: Path, payload: Any) -> None:
@@ -53,10 +54,26 @@ def validate_registry(registry: dict[str, Any]) -> list[dict[str, str]]:
 
 def mmlu_summary(path: Path) -> dict[str, Any]:
     data = json.loads(path.read_text())
-    subject_acc = {key: value for key, value in data.items() if key.startswith("mmlu_") and key.endswith("/acc")}
+    subject_acc = {
+        key: value
+        for key, value in data.items()
+        if key.startswith("mmlu_")
+        and key.endswith("/acc")
+        and key.split("/", 1)[0] not in MMLU_SUBGROUPS
+    }
+    subgroup_acc = {
+        key: value
+        for key, value in data.items()
+        if key.split("/", 1)[0] in MMLU_SUBGROUPS and key.endswith("/acc")
+    }
     if "mmlu/acc" not in data or len(subject_acc) != 57:
         raise ValueError(f"incomplete MMLU summary: group={data.get('mmlu/acc')}, subjects={len(subject_acc)}")
-    return {"accuracy": data["mmlu/acc"], "accuracy_stderr": data.get("mmlu/acc_stderr"), "subjects": subject_acc}
+    return {
+        "accuracy": data["mmlu/acc"],
+        "accuracy_stderr": data.get("mmlu/acc_stderr"),
+        "subgroups": subgroup_acc,
+        "subjects": subject_acc,
+    }
 
 
 def mt_bench_count(path: Path) -> int:
