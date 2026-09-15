@@ -38,12 +38,24 @@ download_verified() {
 
 cd "$ROOT"
 mkdir -p "$LOG_DIR" "$(dirname "$QUESTIONS")"
+export PYTHONPATH="$ROOT/src"
 [[ -x "$PY" ]] || { printf 'Missing Python runtime\n' >&2; exit 2; }
 [[ -f "$SECRET_ENV" && "$(stat -c '%a' "$SECRET_ENV")" == 600 ]] || { printf 'Invalid secret env file\n' >&2; exit 2; }
 [[ -s "$QUESTIONS" ]] || { printf 'Missing pinned MT-Bench questions\n' >&2; exit 2; }
 download_verified "https://raw.githubusercontent.com/lm-sys/FastChat/$FASTCHAT_COMMIT/fastchat/llm_judge/data/judge_prompts.jsonl" "$JUDGE_PROMPTS" "$PROMPTS_SHA"
 download_verified "https://raw.githubusercontent.com/lm-sys/FastChat/$FASTCHAT_COMMIT/fastchat/llm_judge/data/mt_bench/reference_answer/gpt-4.jsonl" "$REFERENCES" "$REFERENCES_SHA"
-[[ ! -e "$STATUS" ]] || { printf 'Refusing existing status: %s\n' "$STATUS" >&2; exit 2; }
+if [[ -e "$STATUS" && "${RESUME:-0}" != 1 ]]; then
+  printf 'Refusing existing status without RESUME=1: %s\n' "$STATUS" >&2
+  exit 2
+fi
+
+on_error() {
+  local rc=$?
+  trap - ERR
+  write_status FAILED "exit_code=$rc"
+  exit "$rc"
+}
+trap on_error ERR
 
 write_status RUNNING capability_and_hexphi
 ENABLE_API_JUDGE=0 "$PY" scripts/reproduction/safety/run_llama31_8b_capability_31_nojudge.py \
@@ -75,3 +87,4 @@ ENABLE_API_JUDGE=1 "$PY" -m evals.mt_bench_judge \
   --fastchat-commit "$FASTCHAT_COMMIT" > "$LOG_DIR/mtbench_judge.log" 2>&1
 
 write_status DONE complete
+trap - ERR
