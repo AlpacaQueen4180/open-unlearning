@@ -2,6 +2,8 @@
 
 Date: 2026-09-15. Status: proposed protocol; no OLMo runs reported here.
 
+> Updated planning reference (2026-09-16): [安全保留微調與開放模型的機器遺忘實驗規劃 v2](safety_preserving_finetuning_unlearning_plan_v2.md) integrates SPF + TOFU and OLMo, and updates experiment priorities. This document is retained as the original OLMo proposal.
+
 ## Motivation and checkpoint selection
 
 **Question:** Does removing known benign training examples damage an already aligned model, after accounting for utility loss and degeneration? The [Llama five-seed report](llama31_npo_5seed_report_20260911.md) motivates avoiding another custom target/full fine-tuning stage.
@@ -72,4 +74,5 @@ If main results warrant the cost, first retrain **one 10K oracle** from the corr
 For a DPO/Instruct target, an SFT-only oracle is stage-mismatched: replay the corresponding downstream DPO/RLVR stages with audited data (and regenerate model-dependent data where the recipe requires it), or explicitly label the result an approximate SFT-stage diagnostic. The 10K oracle cannot stand in for 1K/5K or prove universal removal of facts shared with pretraining.
 
 Execution order: baseline/provenance audit → 5K pilot and frozen manifest → six seed-0 conditions + 5K nonmember control → five-seed scalability/control matrix → optional 10K oracle. Commit configs, ID/hash manifests, selection decisions, checkpoint checksums, and aggregate tables; keep weights and raw safety generations in the existing artifact storage. This proposal requires new OLMo data/model/evaluation configuration before execution; it does not claim the TOFU pipeline already implements this protocol.
+
 
