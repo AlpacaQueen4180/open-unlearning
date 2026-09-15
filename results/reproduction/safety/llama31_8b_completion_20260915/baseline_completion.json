@@ -1,0 +1,33 @@
+{
+  "api_judge_enabled": false,
+  "created_at": "2026-09-12T07:39:44.863511+08:00",
+  "hexphi_generations": {
+    "retain90": {
+      "judge_status": "pending_judge",
+      "successful": 300
+    },
+    "retain99": {
+      "judge_status": "pending_judge",
+      "successful": 300
+    }
+  },
+  "published_full_tofu_views": {
+    "forget01": {
+      "forget_Q_A_Prob": 0.99521484375,
+      "forget_Q_A_ROUGE": 0.9983333333333334,
+      "forget_quality": 0.01430154804770646,
+      "forget_truth_ratio": 0.48536568718854,
+      "model_utility": 0.6265715913443813,
+      "retain_Truth_Ratio": 0.5299218078553903
+    },
+    "forget10": {
+      "forget_Q_A_Prob": 0.991591796875,
+      "forget_Q_A_ROUGE": 0.9920895073336249,
+      "forget_quality": 6.944662821810594e-28,
+      "forget_truth_ratio": 0.47448143895482586,
+      "model_utility": 0.6265715913443813,
+      "retain_Truth_Ratio": 0.5299218078553903
+    }
+  },
+  "schema_version": "llama31-8b-nojudge-baselines.v1"
+}

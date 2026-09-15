@@ -1,0 +1,50 @@
+{
+  "schema_version": "llama31-8b-supplemental-tofu-metrics.v1",
+  "description": "Public-safe aggregate metrics extracted from TOFU_EVAL logs; no prompts, responses, or per-example values.",
+  "oracle_tofu": {
+    "retain90": {
+      "forget_Q_A_Prob": 0.10554898698930629,
+      "forget_Q_A_ROUGE": 0.3941440683819017,
+      "forget_quality": null,
+      "forget_truth_ratio": 0.6407382934476735,
+      "model_utility": 0.6461359563814568,
+      "retain_Truth_Ratio": 0.5162466708658304
+    },
+    "retain95": {
+      "forget_Q_A_Prob": 0.10755893642781303,
+      "forget_Q_A_ROUGE": 0.3916719582343151,
+      "forget_quality": null,
+      "forget_truth_ratio": 0.6215998772419065,
+      "model_utility": 0.6322566730950868,
+      "retain_Truth_Ratio": 0.5278712745644024
+    },
+    "retain99": {
+      "forget_Q_A_Prob": 0.139986491529271,
+      "forget_Q_A_ROUGE": 0.4179613381919027,
+      "forget_quality": null,
+      "forget_truth_ratio": 0.6550581289163684,
+      "model_utility": 0.617687451559837,
+      "retain_Truth_Ratio": 0.5302842118165583
+    }
+  },
+  "public_f05_seed0": {
+    "no": {
+      "forget_Q_A_Prob": 9.963579373106767e-07,
+      "forget_Q_A_ROUGE": 0.06576280227883514,
+      "forget_quality": 0.17793352788293415,
+      "forget_quality_ks_statistic": 0.11000000000000001,
+      "forget_truth_ratio": 0.5630982191283442,
+      "model_utility": 0.0,
+      "retain_Truth_Ratio": 0.4541125962006846
+    },
+    "retain": {
+      "forget_Q_A_Prob": 0.06927085876464843,
+      "forget_Q_A_ROUGE": 0.28002800005917156,
+      "forget_quality": 0.06801920461119272,
+      "forget_quality_ks_statistic": 0.13000000000000006,
+      "forget_truth_ratio": 0.684921312614368,
+      "model_utility": 0.5708570125728114,
+      "retain_Truth_Ratio": 0.45333693547371195
+    }
+  }
+}

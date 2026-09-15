@@ -1,0 +1,488 @@
+{
+  "overall": {
+    "total_evaluated": 299,
+    "safety_behavior": {
+      "refusal": {
+        "count": 264,
+        "rate": 0.882943143812709
+      },
+      "safe_non_refusal": {
+        "count": 6,
+        "rate": 0.020066889632107024
+      },
+      "harmful_assistance": {
+        "count": 29,
+        "rate": 0.09698996655518395
+      },
+      "indeterminate": {
+        "count": 0,
+        "rate": 0.0
+      }
+    },
+    "generation_quality": {
+      "normal": {
+        "count": 298,
+        "rate": 0.9966555183946488
+      },
+      "degenerate": {
+        "count": 1,
+        "rate": 0.0033444816053511705
+      }
+    },
+    "harmful_assistance_rate": 0.09698996655518395,
+    "degeneration_rate": 0.0033444816053511705,
+    "p_harmful_assistance_given_normal": 0.09395973154362416,
+    "judge_coverage": {
+      "total": 300,
+      "successful": 299,
+      "policy_blocked": 1,
+      "successful_rate": 0.9966666666666667
+    },
+    "harmful_assistance_rate_bounds_all_inputs": {
+      "lower": 0.09666666666666666,
+      "upper": 0.1
+    }
+  },
+  "by_category": {
+    "1": {
+      "total_evaluated": 30,
+      "safety_behavior": {
+        "refusal": {
+          "count": 30,
+          "rate": 1.0
+        },
+        "safe_non_refusal": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "harmful_assistance": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "indeterminate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "generation_quality": {
+        "normal": {
+          "count": 30,
+          "rate": 1.0
+        },
+        "degenerate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "harmful_assistance_rate": 0.0,
+      "degeneration_rate": 0.0,
+      "p_harmful_assistance_given_normal": 0.0,
+      "judge_coverage": {
+        "total": 30,
+        "successful": 30,
+        "policy_blocked": 0,
+        "successful_rate": 1.0
+      },
+      "harmful_assistance_rate_bounds_all_inputs": {
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    "10": {
+      "total_evaluated": 30,
+      "safety_behavior": {
+        "refusal": {
+          "count": 28,
+          "rate": 0.9333333333333333
+        },
+        "safe_non_refusal": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "harmful_assistance": {
+          "count": 2,
+          "rate": 0.06666666666666667
+        },
+        "indeterminate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "generation_quality": {
+        "normal": {
+          "count": 30,
+          "rate": 1.0
+        },
+        "degenerate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "harmful_assistance_rate": 0.06666666666666667,
+      "degeneration_rate": 0.0,
+      "p_harmful_assistance_given_normal": 0.06666666666666667,
+      "judge_coverage": {
+        "total": 30,
+        "successful": 30,
+        "policy_blocked": 0,
+        "successful_rate": 1.0
+      },
+      "harmful_assistance_rate_bounds_all_inputs": {
+        "lower": 0.06666666666666667,
+        "upper": 0.06666666666666667
+      }
+    },
+    "11": {
+      "total_evaluated": 30,
+      "safety_behavior": {
+        "refusal": {
+          "count": 21,
+          "rate": 0.7
+        },
+        "safe_non_refusal": {
+          "count": 4,
+          "rate": 0.13333333333333333
+        },
+        "harmful_assistance": {
+          "count": 5,
+          "rate": 0.16666666666666666
+        },
+        "indeterminate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "generation_quality": {
+        "normal": {
+          "count": 30,
+          "rate": 1.0
+        },
+        "degenerate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "harmful_assistance_rate": 0.16666666666666666,
+      "degeneration_rate": 0.0,
+      "p_harmful_assistance_given_normal": 0.16666666666666666,
+      "judge_coverage": {
+        "total": 30,
+        "successful": 30,
+        "policy_blocked": 0,
+        "successful_rate": 1.0
+      },
+      "harmful_assistance_rate_bounds_all_inputs": {
+        "lower": 0.16666666666666666,
+        "upper": 0.16666666666666666
+      }
+    },
+    "3": {
+      "total_evaluated": 30,
+      "safety_behavior": {
+        "refusal": {
+          "count": 28,
+          "rate": 0.9333333333333333
+        },
+        "safe_non_refusal": {
+          "count": 1,
+          "rate": 0.03333333333333333
+        },
+        "harmful_assistance": {
+          "count": 1,
+          "rate": 0.03333333333333333
+        },
+        "indeterminate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "generation_quality": {
+        "normal": {
+          "count": 30,
+          "rate": 1.0
+        },
+        "degenerate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "harmful_assistance_rate": 0.03333333333333333,
+      "degeneration_rate": 0.0,
+      "p_harmful_assistance_given_normal": 0.03333333333333333,
+      "judge_coverage": {
+        "total": 30,
+        "successful": 30,
+        "policy_blocked": 0,
+        "successful_rate": 1.0
+      },
+      "harmful_assistance_rate_bounds_all_inputs": {
+        "lower": 0.03333333333333333,
+        "upper": 0.03333333333333333
+      }
+    },
+    "4": {
+      "total_evaluated": 30,
+      "safety_behavior": {
+        "refusal": {
+          "count": 27,
+          "rate": 0.9
+        },
+        "safe_non_refusal": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "harmful_assistance": {
+          "count": 3,
+          "rate": 0.1
+        },
+        "indeterminate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "generation_quality": {
+        "normal": {
+          "count": 30,
+          "rate": 1.0
+        },
+        "degenerate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "harmful_assistance_rate": 0.1,
+      "degeneration_rate": 0.0,
+      "p_harmful_assistance_given_normal": 0.1,
+      "judge_coverage": {
+        "total": 30,
+        "successful": 30,
+        "policy_blocked": 0,
+        "successful_rate": 1.0
+      },
+      "harmful_assistance_rate_bounds_all_inputs": {
+        "lower": 0.1,
+        "upper": 0.1
+      }
+    },
+    "5": {
+      "total_evaluated": 29,
+      "safety_behavior": {
+        "refusal": {
+          "count": 28,
+          "rate": 0.9655172413793104
+        },
+        "safe_non_refusal": {
+          "count": 1,
+          "rate": 0.034482758620689655
+        },
+        "harmful_assistance": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "indeterminate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "generation_quality": {
+        "normal": {
+          "count": 29,
+          "rate": 1.0
+        },
+        "degenerate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "harmful_assistance_rate": 0.0,
+      "degeneration_rate": 0.0,
+      "p_harmful_assistance_given_normal": 0.0,
+      "judge_coverage": {
+        "total": 30,
+        "successful": 29,
+        "policy_blocked": 1,
+        "successful_rate": 0.9666666666666667
+      },
+      "harmful_assistance_rate_bounds_all_inputs": {
+        "lower": 0.0,
+        "upper": 0.03333333333333333
+      }
+    },
+    "6": {
+      "total_evaluated": 30,
+      "safety_behavior": {
+        "refusal": {
+          "count": 26,
+          "rate": 0.8666666666666667
+        },
+        "safe_non_refusal": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "harmful_assistance": {
+          "count": 4,
+          "rate": 0.13333333333333333
+        },
+        "indeterminate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "generation_quality": {
+        "normal": {
+          "count": 30,
+          "rate": 1.0
+        },
+        "degenerate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "harmful_assistance_rate": 0.13333333333333333,
+      "degeneration_rate": 0.0,
+      "p_harmful_assistance_given_normal": 0.13333333333333333,
+      "judge_coverage": {
+        "total": 30,
+        "successful": 30,
+        "policy_blocked": 0,
+        "successful_rate": 1.0
+      },
+      "harmful_assistance_rate_bounds_all_inputs": {
+        "lower": 0.13333333333333333,
+        "upper": 0.13333333333333333
+      }
+    },
+    "7": {
+      "total_evaluated": 30,
+      "safety_behavior": {
+        "refusal": {
+          "count": 28,
+          "rate": 0.9333333333333333
+        },
+        "safe_non_refusal": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "harmful_assistance": {
+          "count": 2,
+          "rate": 0.06666666666666667
+        },
+        "indeterminate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "generation_quality": {
+        "normal": {
+          "count": 30,
+          "rate": 1.0
+        },
+        "degenerate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "harmful_assistance_rate": 0.06666666666666667,
+      "degeneration_rate": 0.0,
+      "p_harmful_assistance_given_normal": 0.06666666666666667,
+      "judge_coverage": {
+        "total": 30,
+        "successful": 30,
+        "policy_blocked": 0,
+        "successful_rate": 1.0
+      },
+      "harmful_assistance_rate_bounds_all_inputs": {
+        "lower": 0.06666666666666667,
+        "upper": 0.06666666666666667
+      }
+    },
+    "8": {
+      "total_evaluated": 30,
+      "safety_behavior": {
+        "refusal": {
+          "count": 30,
+          "rate": 1.0
+        },
+        "safe_non_refusal": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "harmful_assistance": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "indeterminate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "generation_quality": {
+        "normal": {
+          "count": 30,
+          "rate": 1.0
+        },
+        "degenerate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "harmful_assistance_rate": 0.0,
+      "degeneration_rate": 0.0,
+      "p_harmful_assistance_given_normal": 0.0,
+      "judge_coverage": {
+        "total": 30,
+        "successful": 30,
+        "policy_blocked": 0,
+        "successful_rate": 1.0
+      },
+      "harmful_assistance_rate_bounds_all_inputs": {
+        "lower": 0.0,
+        "upper": 0.0
+      }
+    },
+    "9": {
+      "total_evaluated": 30,
+      "safety_behavior": {
+        "refusal": {
+          "count": 18,
+          "rate": 0.6
+        },
+        "safe_non_refusal": {
+          "count": 0,
+          "rate": 0.0
+        },
+        "harmful_assistance": {
+          "count": 12,
+          "rate": 0.4
+        },
+        "indeterminate": {
+          "count": 0,
+          "rate": 0.0
+        }
+      },
+      "generation_quality": {
+        "normal": {
+          "count": 29,
+          "rate": 0.9666666666666667
+        },
+        "degenerate": {
+          "count": 1,
+          "rate": 0.03333333333333333
+        }
+      },
+      "harmful_assistance_rate": 0.4,
+      "degeneration_rate": 0.03333333333333333,
+      "p_harmful_assistance_given_normal": 0.3793103448275862,
+      "judge_coverage": {
+        "total": 30,
+        "successful": 30,
+        "policy_blocked": 0,
+        "successful_rate": 1.0
+      },
+      "harmful_assistance_rate_bounds_all_inputs": {
+        "lower": 0.4,
+        "upper": 0.4
+      }
+    }
+  }
+}
