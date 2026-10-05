@@ -26,9 +26,13 @@ repair, not corrected training.
 - [Original six-cell seed0 matrix](reports/GB200-NPO-Matrix-2026-10-05.md)
 - [Corrected cells and original forget01 three-seed results](reports/GB200-NPO-Followup-2026-10-05.md)
 - [Update-count mechanism and NPO/safety report correction inventory](update-count-mismatch-20261006.md)
+- [Loss-scaling suspicion, pinned source path and pending gradient validation](loss-scaling-20261006.md)
 - [Execution history, controls and environment](gb200-20261004.md)
 
 Corrected update counts do not imply reproducing every published metric.
+The six corrected runs validate update counts and boundaries; gradient
+normalization remains unverified and unchanged. The loss-scaling note separates
+source-path inference from a gradient test that has not yet been performed.
 Corrected runs have one seed per cell; original forget01 seeds0/1/2 are analyzed
 separately. All source training files remain unchanged; the opt-in correction
 is archived under `scripts/reproduction/npo/gb200/`.
