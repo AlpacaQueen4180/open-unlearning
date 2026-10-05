@@ -27,6 +27,7 @@ repair, not corrected training.
 - [Corrected cells and original forget01 three-seed results](reports/GB200-NPO-Followup-2026-10-05.md)
 - [Update-count mechanism and NPO/safety report correction inventory](update-count-mismatch-20261006.md)
 - [Loss-scaling suspicion, pinned source path and pending gradient validation](loss-scaling-20261006.md)
+- [Current upstream fixes, original-paper evidence limits, related papers and upgrade validation](upstream-status-20261006.md)
 - [Execution history, controls and environment](gb200-20261004.md)
 
 Corrected update counts do not imply reproducing every published metric.
@@ -36,6 +37,14 @@ source-path inference from a gradient test that has not yet been performed.
 Corrected runs have one seed per cell; original forget01 seeds0/1/2 are analyzed
 separately. All source training files remain unchanged; the opt-in correction
 is archived under `scripts/reproduction/npo/gb200/`.
+
+As checked on 2026-10-06, upstream `17cbbc8` defaults to Transformers 5.5.4
+and Accelerate 1.13.0. Their source paths provide ceil update planning,
+Trainer/DeepSpeed boundary synchronization and accumulation normalization for
+the standard nested NPO inputs. This is a source audit, not a GB200 runtime
+validation. It does not change the archived 4.51.3 runs or prove that the
+original paper used the same problematic recipe. See the upstream note for
+version provenance, related papers and the checks required before switching.
 
 ## Layout
 

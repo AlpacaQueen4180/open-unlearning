@@ -2,6 +2,8 @@
 
 核對日期：2026-10-06。這份文件以本 repository 保存的啟動腳本、Trainer state 與 GB200 runtime audit 為依據，區分「訓練更新次數修正」和「評估修正」。
 
+> **最新版本範圍：** upstream `17cbbc8` 的 Transformers5.5.4已採ceil步數規劃，Accelerate1.13.0會將更新邊界同步給DS；標準NPO路徑也已有對應accumulation除法。本文仍記錄4.51.3固定環境的實測，不代表新版尚有完全相同問題，也不能把本次數字直接套到原paper的4.45.1時期。新版尚未在本次GB200驗收，詳見[upstream查核與相關論文](upstream-status-20261006.md)。
+
 > **Loss scaling補充：** 本次六格corrected seed0是「更新次數／DS邊界已驗證、梯度正規化尚未驗證」。固定版本與自訂NPO的呼叫路徑有累積梯度未平均的疑點；這是源碼推論，尚未量測實際倍率，也沒有loss normalization修正。機制、尾端短組及待執行驗證見[loss-scaling專文](loss-scaling-20261006.md)。
 
 **截至本次核對，已完成且有 runtime 證據使用 `ceil_epoch_and_sync_ds_boundary_v1` 的正式實驗，只有 2026-10-05 GB200 上兩模型 × 三 splits 的六格 corrected seed0。既有 H100／Ada NPO reproduction 和 safety 的 Llama-3.1-8B NPO 報告都沒有套用這項訓練修正。Safety 文件中的 `aggregate.corrected.json` 是評估修復，不是更新次數修正。**

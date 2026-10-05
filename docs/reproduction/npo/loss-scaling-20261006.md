@@ -2,6 +2,8 @@
 
 核對日期：2026-10-06。範圍為本次 GB200 的 Transformers 4.51.3／Accelerate 0.34.2／DeepSpeed 0.15.4，以及 repo 自訂 NPO loss。
 
+> **同日 upstream 查核補充：** 最新 `main`（`17cbbc8`）預設已升到 Transformers5.5.4／Accelerate1.13.0；標準NPO巢狀輸入得到 `num_items_in_batch=None`，新版Trainer會按當次實際microbatch數除loss。因此本文的漏除疑點限於本次固定舊環境，不能稱為最新版或原paper已證實的共同缺陷。新版源碼處理仍未在本次GB200實測梯度等價性；完整來源、歷史版本、相關論文與切換驗收見[upstream查核](upstream-status-20261006.md)。既有六格corrected未改loss的分類不變。
+
 **目前的證據支持「累積梯度可能沒有按預期平均」的源碼推論，但尚未完成實際梯度等價性測試，也沒有發布 loss normalization 修正。October 六格 corrected seed0 只驗證更新次數與 DS 邊界，不能稱為梯度正規化已驗證。**
 
 ## 1. 這裡的 loss scaling 是什麼
