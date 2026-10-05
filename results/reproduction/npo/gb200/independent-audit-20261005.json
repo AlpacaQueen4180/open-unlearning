@@ -1,0 +1,151 @@
+{
+  "captured_utc": "2026-10-04T18:32:33.563888+00:00",
+  "assets": {
+    "model_revision": "cc5b31c69127d5da881608e640f2b453c446435b",
+    "eval_revision": "f31717fe522c2a6725ca0024980f51169a084ca1",
+    "dataset_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+    "retain_sha256": "a0cee3b92374430ec432c15d0f9373bebadcda6d2cbdf4051407602c7bbbba8e"
+  },
+  "controls": [
+    {
+      "run": "gb200_1gpu_zero3_flash_attention_2_s0_main",
+      "summary": {
+        "extraction_strength": 0.07885073605881569,
+        "forget_Q_A_Prob": 0.11420116424560547,
+        "forget_Q_A_ROUGE": 0.34568774412589975,
+        "forget_quality": 0.1420746514551761,
+        "forget_truth_ratio": 0.705761882782588,
+        "model_utility": 0.53016763132471,
+        "privleak": 18.521658699164224
+      },
+      "independent_recomputed": {
+        "forget_quality": 0.1420746514551761,
+        "model_utility": 0.53016763132471,
+        "forget_truth_ratio": 0.705761882782588
+      },
+      "absolute_deltas": {
+        "forget_quality": 0.0,
+        "model_utility": 0.0,
+        "forget_truth_ratio": 0.0
+      },
+      "ks_D": 0.115,
+      "samples": [
+        200,
+        200
+      ],
+      "runtime_final": {
+        "trainer_global_step": 60,
+        "microsteps": 432,
+        "epoch": 8.64,
+        "engine_global_steps": 54,
+        "engine_micro_steps": 432
+      },
+      "utility_components": {
+        "retain_Q_A_Prob": 0.598802490234375,
+        "retain_Q_A_ROUGE": 0.5440453345324676,
+        "retain_Truth_Ratio": 0.43422416171595235,
+        "ra_Q_A_Prob_normalised": 0.40198681636012223,
+        "ra_Q_A_ROUGE": 0.7443333333333334,
+        "ra_Truth_Ratio": 0.5104872774938713,
+        "wf_Q_A_Prob_normalised": 0.4205448117224443,
+        "wf_Q_A_ROUGE": 0.8988603988603988,
+        "wf_Truth_Ratio": 0.5307025178312309
+      },
+      "training_last_log": {
+        "epoch": 8.64,
+        "step": 60,
+        "total_flos": 0.0,
+        "train_loss": 21.093478965759278,
+        "train_runtime": 769.6382,
+        "train_samples_per_second": 2.599,
+        "train_steps_per_second": 0.078
+      },
+      "start_utc": "2026-10-04T12:12:56.567168+00:00",
+      "finish_utc": "2026-10-04T12:31:54.412257+00:00"
+    },
+    {
+      "run": "gb200_1gpu_zeronone_flash_attention_2_s0_main",
+      "summary": {
+        "extraction_strength": 0.42187257712309617,
+        "forget_Q_A_Prob": 0.3782086181640625,
+        "forget_Q_A_ROUGE": 0.6045500887473074,
+        "forget_quality": 6.5689645859369454e-12,
+        "forget_truth_ratio": 0.5385220438314637,
+        "model_utility": 0.5754775690342697,
+        "privleak": -97.88422998336917
+      },
+      "independent_recomputed": {
+        "forget_quality": 6.5689645859369454e-12,
+        "model_utility": 0.5754775690342697,
+        "forget_truth_ratio": 0.5385220438314637
+      },
+      "absolute_deltas": {
+        "forget_quality": 0.0,
+        "model_utility": 0.0,
+        "forget_truth_ratio": 0.0
+      },
+      "ks_D": 0.36,
+      "samples": [
+        200,
+        200
+      ],
+      "runtime_final": {
+        "trainer_global_step": 60,
+        "microsteps": 432,
+        "epoch": 8.64
+      },
+      "utility_components": {
+        "retain_Q_A_Prob": 0.5638262939453125,
+        "retain_Q_A_ROUGE": 0.8004880214924595,
+        "retain_Truth_Ratio": 0.46262448563834996,
+        "ra_Q_A_Prob_normalised": 0.456968253061085,
+        "ra_Q_A_ROUGE": 0.8741666666666665,
+        "ra_Truth_Ratio": 0.5997077639663619,
+        "wf_Q_A_Prob_normalised": 0.4063449287169694,
+        "wf_Q_A_ROUGE": 0.8860398860398859,
+        "wf_Truth_Ratio": 0.536069865655777
+      },
+      "training_last_log": {
+        "epoch": 8.64,
+        "step": 60,
+        "total_flos": 0.0,
+        "train_loss": 42.58263632456462,
+        "train_runtime": 245.0672,
+        "train_samples_per_second": 8.161,
+        "train_steps_per_second": 0.245
+      },
+      "start_utc": "2026-10-04T12:31:54.416206+00:00",
+      "finish_utc": "2026-10-04T12:39:22.005170+00:00"
+    }
+  ],
+  "weight_manifests": {
+    "gb200_1gpu_zero3_flash_attention_2_s0_main": [
+      {
+        "path": "/data/npo-gb200-20261004/runs/gb200_1gpu_zero3_flash_attention_2_s0_main/checkpoint/model-00001-of-00003.safetensors",
+        "bytes": 4938985352
+      },
+      {
+        "path": "/data/npo-gb200-20261004/runs/gb200_1gpu_zero3_flash_attention_2_s0_main/checkpoint/model-00002-of-00003.safetensors",
+        "bytes": 4947390880
+      },
+      {
+        "path": "/data/npo-gb200-20261004/runs/gb200_1gpu_zero3_flash_attention_2_s0_main/checkpoint/model-00003-of-00003.safetensors",
+        "bytes": 3590488816
+      }
+    ],
+    "gb200_1gpu_zeronone_flash_attention_2_s0_main": [
+      {
+        "path": "/data/npo-gb200-20261004/runs/gb200_1gpu_zeronone_flash_attention_2_s0_main/checkpoint/model-00001-of-00003.safetensors",
+        "bytes": 4938985352
+      },
+      {
+        "path": "/data/npo-gb200-20261004/runs/gb200_1gpu_zeronone_flash_attention_2_s0_main/checkpoint/model-00002-of-00003.safetensors",
+        "bytes": 4947390880
+      },
+      {
+        "path": "/data/npo-gb200-20261004/runs/gb200_1gpu_zeronone_flash_attention_2_s0_main/checkpoint/model-00003-of-00003.safetensors",
+        "bytes": 3590488816
+      }
+    ]
+  }
+}

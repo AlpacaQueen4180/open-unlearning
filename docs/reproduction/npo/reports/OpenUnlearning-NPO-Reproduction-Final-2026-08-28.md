@@ -1,5 +1,7 @@
 # OpenUnlearning NPO reproduction: final two-H100 evidence report
 
+> **2026-10-06 follow-up:** A single GB200 with ZeRO-3 closely matches the historical Llama-2 forget05 result, so the August topology conclusion does not establish a requirement for two physical GPUs. Historical seed0 Trainer states record 5/8.64/9.24 actual epochs for forget01/05/10 despite ten configured epochs. These runs used the original training behavior; the bf16-to-NumPy repair was evaluation-only. See the [GB200 comparison](GB200-NPO-Comparison-2026-10-06.md) and [correction inventory](../update-count-mismatch-20261006.md). The original August evidence below is retained.
+
 Date: 2026-08-28 (America/Chicago)
 
 ## Scope and conclusion

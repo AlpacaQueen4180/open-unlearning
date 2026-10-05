@@ -1,0 +1,136 @@
+[
+  {
+    "model": "Llama-2-7b-chat-hf",
+    "seeds": [
+      {
+        "seed": 0,
+        "summary": {
+          "forget_quality": 0.01430154804770646,
+          "model_utility": 0.6219079750348727,
+          "forget_truth_ratio": 0.5492767621392268
+        }
+      },
+      {
+        "seed": 1,
+        "summary": {
+          "forget_quality": 0.01430154804770646,
+          "model_utility": 0.6184758966915582,
+          "forget_truth_ratio": 0.5472893519271842
+        },
+        "ks_D": 0.35,
+        "runtime": {
+          "trainer_global_step": 10,
+          "microsteps": 50,
+          "epoch": 5,
+          "engine_global_steps": 6,
+          "engine_micro_steps": 50
+        }
+      },
+      {
+        "seed": 2,
+        "summary": {
+          "forget_quality": 0.02860307028023343,
+          "model_utility": 0.6229348870165727,
+          "forget_truth_ratio": 0.5525012374446883
+        },
+        "ks_D": 0.325,
+        "runtime": {
+          "trainer_global_step": 10,
+          "microsteps": 50,
+          "epoch": 5,
+          "engine_global_steps": 6,
+          "engine_micro_steps": 50
+        }
+      }
+    ],
+    "metrics": {
+      "forget_quality": {
+        "mean": 0.01906872212521545,
+        "sample_std": 0.008256987710770866,
+        "min": 0.01430154804770646,
+        "max": 0.02860307028023343
+      },
+      "model_utility": {
+        "mean": 0.6211062529143346,
+        "sample_std": 0.0023351054469902223,
+        "min": 0.6184758966915582,
+        "max": 0.6229348870165727
+      },
+      "forget_truth_ratio": {
+        "mean": 0.5496891171703665,
+        "sample_std": 0.0026302975431824753,
+        "min": 0.5472893519271842,
+        "max": 0.5525012374446883
+      }
+    },
+    "n": 3,
+    "policy": "original pinned behavior"
+  },
+  {
+    "model": "Llama-3.2-1B-Instruct",
+    "seeds": [
+      {
+        "seed": 0,
+        "summary": {
+          "forget_quality": 0.006760732303569208,
+          "model_utility": 0.5880107159335248,
+          "forget_truth_ratio": 0.5439338687803537
+        }
+      },
+      {
+        "seed": 1,
+        "summary": {
+          "forget_quality": 0.003018184077228396,
+          "model_utility": 0.5880671433733053,
+          "forget_truth_ratio": 0.5381373177434932
+        },
+        "ks_D": 0.4,
+        "runtime": {
+          "trainer_global_step": 10,
+          "microsteps": 50,
+          "epoch": 5,
+          "engine_global_steps": 6,
+          "engine_micro_steps": 50
+        }
+      },
+      {
+        "seed": 2,
+        "summary": {
+          "forget_quality": 0.054141077480362725,
+          "model_utility": 0.5879119062560216,
+          "forget_truth_ratio": 0.5446806753792812
+        },
+        "ks_D": 0.3,
+        "runtime": {
+          "trainer_global_step": 10,
+          "microsteps": 50,
+          "epoch": 5,
+          "engine_global_steps": 6,
+          "engine_micro_steps": 50
+        }
+      }
+    ],
+    "metrics": {
+      "forget_quality": {
+        "mean": 0.021306664620386776,
+        "sample_std": 0.028496941374490298,
+        "min": 0.003018184077228396,
+        "max": 0.054141077480362725
+      },
+      "model_utility": {
+        "mean": 0.5879965885209506,
+        "sample_std": 0.00007857689536480267,
+        "min": 0.5879119062560216,
+        "max": 0.5880671433733053
+      },
+      "forget_truth_ratio": {
+        "mean": 0.542250620634376,
+        "sample_std": 0.0035817419683946195,
+        "min": 0.5381373177434932,
+        "max": 0.5446806753792812
+      }
+    },
+    "n": 3,
+    "policy": "original pinned behavior"
+  }
+]

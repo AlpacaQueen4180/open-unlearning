@@ -1,5 +1,7 @@
 # Llama-3.1-8B：TOFU NPO 單一 Seed、三個 Forget Split 階段報告
 
+> **2026-10-06 訓練來源註記：** 本報告的 Llama-3.1 NPO checkpoints 使用原版訓練，未套用 October GB200 更新次數／DS 邊界修正。「10 epochs」為配置，不能直接視為實際完成值。`seed0 修正版`／`aggregate.corrected.json` 只指既有 checkpoint 的 TOFU 評估與 retain reference 修復，沒有重訓。詳見[更新次數問題與逐報告分類](../npo/update-count-mismatch-20261006.md)。
+
 資料核對日期：2026-09-10。訓練 seed：0。研究階段：描述性初步結果。
 
 ## 一、摘要

@@ -1,5 +1,7 @@
 # Llama-3.1-8B TOFU NPO：TOFU、Safety 與一般能力聯合分析
 
+> **2026-10-06 訓練來源註記：** 本報告的 Llama-3.1 NPO checkpoints 使用原版訓練，未套用 October GB200 更新次數／DS 邊界修正。「10 epochs」為配置，不能直接視為實際完成值。`seed0 修正版`／`aggregate.corrected.json` 只指既有 checkpoint 的 TOFU 評估與 retain reference 修復，沒有重訓。詳見[更新次數問題與逐報告分類](../npo/update-count-mismatch-20261006.md)。
+
 > 產生時間：2026-09-15T19:20:59.147157+08:00<br>
 > 分支：`repro/npo-h100-ada-5seed`<br>
 > 本報告只包含 aggregate statistics；不包含 HEx-PHI 原文、raw model responses、Judge rationale、API key 或 checkpoint 權重。

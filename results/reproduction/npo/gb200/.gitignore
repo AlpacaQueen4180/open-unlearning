@@ -1,0 +1,3 @@
+# Full raw evaluator evidence is retained locally; curated audits remain tracked.
+evidence-*/
+evidence-*.zip

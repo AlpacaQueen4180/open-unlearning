@@ -1,5 +1,7 @@
 # OLMo fully-open benign unlearning proposal
 
+> **2026-10-06 執行狀態註記：** 本文件為研究計畫，沒有已完成 October GB200 更新次數修正的實驗證據。SPF gradient projection 與此更新邊界 policy 是不同修正；完整 epoch／實際 steps要求仍須在執行時驗收。詳見[更新次數問題與逐報告分類](../npo/update-count-mismatch-20261006.md)。
+
 Date: 2026-09-15. Status: proposed protocol; no OLMo runs reported here.
 
 > Updated planning reference (2026-09-16): [安全保留微調與開放模型的機器遺忘實驗規劃 v2](safety_preserving_finetuning_unlearning_plan_v2.md) integrates SPF + TOFU and OLMo, and updates experiment priorities. This document is retained as the original OLMo proposal.

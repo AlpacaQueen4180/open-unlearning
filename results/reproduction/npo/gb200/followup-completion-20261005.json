@@ -1,0 +1,10 @@
+{
+  "verified_evidence_files": 419,
+  "report": "followup-report-20261005.md",
+  "zip_sha256": "6c3b5119929e89669c22de0791c0b838a2cdccaed793c87d479464b7c554e9ae",
+  "phase": "DONE",
+  "full_followup_runs": 10,
+  "zip_bytes": 32548127,
+  "baseline_runs": 6,
+  "finished_utc": "2026-10-05T20:39:53.799948+08:00"
+}
