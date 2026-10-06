@@ -212,7 +212,7 @@
   "acceptance": "r4 world1 ZeRO3 tiny comparisons, production conflict and production smokes passed; original autograd failures preserved",
   "full_target": "TRAINING_COMPLETE_AUDIT_RELOAD_PASS",
   "target_gate": "not_evaluated",
-  "matching_retain95": "RUNNING_AT_20261007_0414_SNAPSHOT",
+  "matching_retain95": "ACTUAL_UNKNOWN_AFTER_20261007_0432_ROUTE_FAILURE; last verified RUNNING at 04:14",
   "npo_pilot": "not_started",
   "autograd_prior_failures_preserved": true,
   "automation": {
@@ -273,5 +273,12 @@
     "native_executor_prepared": false,
     "smoke_executed": false,
     "pilot_candidates_frozen": false
+  },
+  "latest_monitoring_attempt_evidence": "monitoring-probe-preparation-20261007-0432.json",
+  "npo_probe_source_preparation": {
+    "status": "SOURCE_PREPARED_LAUNCH_CONFIG_AND_GPU_NOT_RUN",
+    "static_evidence": "spf-npo-probe-static-20261007.json",
+    "native_runtime_validated": false,
+    "fresh_reload_verified": false
   }
 }

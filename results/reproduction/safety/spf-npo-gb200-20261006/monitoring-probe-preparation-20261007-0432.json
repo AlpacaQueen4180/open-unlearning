@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "classification": "MONITORING_NETWORK_ROUTE_FAILURE_ACTUAL_REFERENCE_PROGRESS_UNKNOWN",
+  "heartbeat_trigger_utc": "2026-10-06T20:32:38.956Z",
+  "local_failed_output_saved_utc": "2026-10-06T20:33:21.213603+00:00",
+  "remote_snapshot_obtained": false,
+  "cli_exit_code": 1,
+  "logical_snapshot_requests": 1,
+  "helper_attempts": 1,
+  "outer_retry_performed": false,
+  "private_raw_cli_sha256": "7ce1a46bbc6c56fb45b88cb0e3bbdf28263453f6cc8d049272befc0c145c1113",
+  "private_raw_cli_bytes": 1368,
+  "failure_reason": "no route to host",
+  "authentication_expired_evidence": false,
+  "task": "/data/spf-npo-20261006-r4",
+  "queue_pid": 45219,
+  "last_verified_reference": {
+    "snapshot_utc": "2026-10-06T20:14:07.026248+00:00",
+    "status": "RUNNING_AT_SNAPSHOT",
+    "stage": "spf-retain95-s0-train",
+    "gpu_compute_pid": 46358,
+    "actual_current_update": null,
+    "audit_complete": false
+  },
+  "no_remote_mutation_requested": true,
+  "new_gpu_work_submitted": false,
+  "external_judge_calls": 0,
+  "full_target": "TRAINING_COMPLETE_AUDIT_RELOAD_PASS",
+  "target_gate": "not_evaluated",
+  "npo_pilot": "not_started",
+  "probe_support": {
+    "status": "SOURCE_PREPARED_LAUNCH_CONFIG_AND_GPU_NOT_RUN",
+    "sources": {
+      "spf_npo_runtime.py": "974c6eef65ff74df7084c543e96cc4f82adfcb3996a2ad90d7295952f495ed5c",
+      "spf_npo_native_probe.py": "f0244d4141c784d83393cffb7b39861cfa4ec4046d54ff8fe49e19e8db7298c4",
+      "verify_spf_npo_probe_static.py": "a667b67cc8b400e320fcb5436b8c1abea841f14a3732de80a70c746d95d495a1"
+    },
+    "static_evidence": {
+      "file": "spf-npo-probe-static-20261007.json",
+      "sha256": "f25c5ee603cfbe0fd19135bb8bc833d0042affbae508274f269f382a68d7f671"
+    },
+    "local_failures_preserved": [
+      {
+        "source_sha256": "e8239d50110fb3de7a5b8d3e90f37f36c5c2c90406f0832c3f5e488a9b4c0626",
+        "exception_summary": "AssertionError: src/trainer/unlearn/base.py; local legacy source rejected before mask/trace tests."
+      },
+      {
+        "source_sha256": "c7ba69e1952feca17a8ce86f4f8273effc66a140c60937ee79957773d73c2954",
+        "exception_summary": "AttributeError: types.SimpleNamespace had no Tensor attribute used by native class annotations; no Torch/GPU imported."
+      }
+    ],
+    "upstream_revision": "17cbbc87192e6934deb92875c359c91bbd837fb4",
+    "pinned_sources": [
+      {
+        "path": "src/trainer/unlearn/base.py",
+        "sha256": "fbd938156f4bd86a33582d18e2363de0fb53a72788904a6c6a4bc803486a07a6",
+        "url": "https://github.com/locuslab/open-unlearning/blob/17cbbc87192e6934deb92875c359c91bbd837fb4/src/trainer/unlearn/base.py"
+      },
+      {
+        "path": "src/data/utils.py",
+        "sha256": "e908bcd6d7be19f3287d146fbe9834ed67b2bd97e4fbecac1c074bbd04005619",
+        "url": "https://github.com/locuslab/open-unlearning/blob/17cbbc87192e6934deb92875c359c91bbd837fb4/src/data/utils.py"
+      }
+    ],
+    "adapter_change": "Original QA attention masks are padded with zero; native input/label/index padding is unchanged.",
+    "observer_change": "Calls original NPO compute_loss/training_step/backward unchanged; records actual full/tail scalars and complete reference fingerprints.",
+    "fresh_reload_executor_prepared": false,
+    "torch_runtime_validated": false,
+    "initial_reference_identity_and_immutability_validated": false,
+    "pilot_candidates_frozen": false
+  },
+  "limits": [
+    "The failed monitor is not evidence that training failed or finished.",
+    "Local static checks use stdlib tensor stubs and synthetic vectors; not Torch/DS, actual reference or gradient acceptance.",
+    "Launch contract/config integration and real SPF load/reference/scaling/fresh reload remain required."
+  ]
+}

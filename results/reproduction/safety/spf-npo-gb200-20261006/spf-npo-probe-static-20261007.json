@@ -1,0 +1,155 @@
+{
+  "status": "PASS_STATIC_SOURCE_STUB_MASK_AND_SYNTHETIC_TRACE_ONLY",
+  "frozen_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+  "native_source_files": [
+    {
+      "path": "src/train.py",
+      "expected_sha256": "d5a69cd715409406eeb027daa9c02bf36243a20e0a790c5b7571c541c5573de6",
+      "local_bytes_sha256": "58f78ee54b641734dfe00e9a965ab7f4129a490bc44eb296d4b5590327c1f62d",
+      "LF_normalization_only": true,
+      "source": "existing local file"
+    },
+    {
+      "path": "src/model/__init__.py",
+      "expected_sha256": "894e36a8471b3346ef672db896f51f40000270167ed70b955cec80351534a252",
+      "local_bytes_sha256": "fcc54ca6aadeb1c2b10adc39238ee6236e393130326ac974331289202cbe8cec",
+      "LF_normalization_only": true,
+      "source": "existing local file"
+    },
+    {
+      "path": "src/trainer/__init__.py",
+      "expected_sha256": "714b61fea7afc2248739800baf9e2c76feee5111797ed83f49517a70187e1a5a",
+      "local_bytes_sha256": "baebde6b17c5a8de6bc3f58f4a9c3b98eb3a05aae56b9625c6ea9d3d51da7431",
+      "LF_normalization_only": true,
+      "source": "existing local file"
+    },
+    {
+      "path": "src/trainer/base.py",
+      "expected_sha256": "7ad1b4631069d6689ed7c32fca843d45467dd3273fe32976c6ea1a951c7122c9",
+      "local_bytes_sha256": "b50927fa1e5b0b8d3faf9e7cb556b9f9e427215e0e64c7cc2d4fdf4ac11f20b6",
+      "LF_normalization_only": true,
+      "source": "existing local file"
+    },
+    {
+      "path": "src/trainer/utils.py",
+      "expected_sha256": "55ac9337111ffe1be0be0b4ab4529ae1471dc19ecda2dee366ac9e10748bf776",
+      "local_bytes_sha256": "f384f77c29f2dbfce1c46d29e417eeaa3e1c3965dd1fe1ee201a0629970d4063",
+      "LF_normalization_only": true,
+      "source": "existing local file"
+    },
+    {
+      "path": "src/trainer/unlearn/npo.py",
+      "expected_sha256": "9115e1af39b1992b72855cbcf69f1f49eb83a03f00182d12143e392abe37040e",
+      "local_bytes_sha256": "5f5362617f8c5f37da7d21e9c455dd33b9fd513c72c7f2533a2d654eed41fce3",
+      "LF_normalization_only": true,
+      "source": "existing local file"
+    },
+    {
+      "path": "src/trainer/unlearn/grad_diff.py",
+      "expected_sha256": "6fe2ae02f62664a5a43a270c7b30e758daba5d703e4408adb67c3c5323f872ea",
+      "local_bytes_sha256": "e0f44321d136ff52729f85b9d1e8ca629197709e21d82838ae6478efe520ffee",
+      "LF_normalization_only": true,
+      "source": "existing local file"
+    },
+    {
+      "path": "src/trainer/unlearn/base.py",
+      "expected_sha256": "fbd938156f4bd86a33582d18e2363de0fb53a72788904a6c6a4bc803486a07a6",
+      "local_bytes_sha256": "fbd938156f4bd86a33582d18e2363de0fb53a72788904a6c6a4bc803486a07a6",
+      "LF_normalization_only": false,
+      "source": "pinned upstream GET, exact frozen bytes"
+    },
+    {
+      "path": "src/data/__init__.py",
+      "expected_sha256": "66af74ae813f7ae5ec3888232f5db75d69ba7a1f5cdacce181609939e5e2520b",
+      "local_bytes_sha256": "743dc05796b3ad06b179369a532bae2cdc649ed0fcae5bdef856136f00153b50",
+      "LF_normalization_only": true,
+      "source": "existing local file"
+    },
+    {
+      "path": "src/data/utils.py",
+      "expected_sha256": "e908bcd6d7be19f3287d146fbe9834ed67b2bd97e4fbecac1c074bbd04005619",
+      "local_bytes_sha256": "e908bcd6d7be19f3287d146fbe9834ed67b2bd97e4fbecac1c074bbd04005619",
+      "LF_normalization_only": false,
+      "source": "pinned upstream GET, exact frozen bytes"
+    },
+    {
+      "path": "src/data/qa.py",
+      "expected_sha256": "001ce815fa43887cd2a75cda615fdff74af75eca9b90ddd8f9ab2a251b75a2cb",
+      "local_bytes_sha256": "f224f693eb7f6cba3f2fd1ebfde3f5a18f6e87f06cc11184b3dce491f2f7a1e3",
+      "LF_normalization_only": true,
+      "source": "existing local file"
+    },
+    {
+      "path": "src/data/unlearn.py",
+      "expected_sha256": "8e9da5e10fdb8ba5df7372b43d9aad299e4bb2d0e907d5466b75ad5f4391a821",
+      "local_bytes_sha256": "f3e5f3358eff75eb40fe75fa2e783384dc81cb1f00ec52fd1706fd6eb551c1b0",
+      "LF_normalization_only": true,
+      "source": "existing local file"
+    },
+    {
+      "path": "src/data/collators.py",
+      "expected_sha256": "b7e821c8175e31387c06729a60ff5287a512b681b10379ea21ac72fbff3e786c",
+      "local_bytes_sha256": "d164bf746d5ce915954bfb36b9397f785983ee0e41aafc98bd161f1b1706a8fb",
+      "LF_normalization_only": true,
+      "source": "existing local file"
+    },
+    {
+      "path": "configs/model/Llama-3.1-8B-Instruct.yaml",
+      "expected_sha256": "7d3e75bbebc8ca06f05579ff90e1730db88e7982d6c4ff524c55c736b21a10a0",
+      "local_bytes_sha256": "7d3e75bbebc8ca06f05579ff90e1730db88e7982d6c4ff524c55c736b21a10a0",
+      "LF_normalization_only": false,
+      "source": "existing local file"
+    }
+  ],
+  "mask_cases": [
+    {
+      "padding_side": "right",
+      "valid_EOS_retained": true,
+      "native_input_label_index_padding_unchanged": true,
+      "nested_pair_supported": true
+    },
+    {
+      "padding_side": "left",
+      "valid_EOS_retained": true,
+      "native_input_label_index_padding_unchanged": true,
+      "nested_pair_supported": true
+    }
+  ],
+  "invalid_masks_rejected": [
+    "above512",
+    "wrong_source_mask_length",
+    "masked_unpadded_source_token"
+  ],
+  "synthetic_trace_cases_rejected": [
+    "wrong_actual_updates",
+    "wrong_epoch",
+    "alpha1",
+    "reference_mutated",
+    "wrong_initial_reference",
+    "duplicate_forget_exposure",
+    "double_full_window_division",
+    "tail_divided_by8",
+    "ds_second_division_enabled",
+    "wrong_boundary",
+    "masked_assistant_token",
+    "nonfinite_loss"
+  ],
+  "synthetic_reference_flags_are_actual_model_evidence": false,
+  "source_sha256": {
+    "spf_npo_runtime.py": "974c6eef65ff74df7084c543e96cc4f82adfcb3996a2ad90d7295952f495ed5c",
+    "spf_npo_native_probe.py": "f0244d4141c784d83393cffb7b39861cfa4ec4046d54ff8fe49e19e8db7298c4",
+    "verify_spf_npo_probe_static.py": "a667b67cc8b400e320fcb5436b8c1abea841f14a3732de80a70c746d95d495a1"
+  },
+  "torch_runtime_validation": "not_run",
+  "gpu_runtime_validation": "not_run",
+  "launch_contract_prepared": false,
+  "npo_smoke_executed": false,
+  "fresh_process_reload_verified": false,
+  "pilot_candidates_frozen": false,
+  "external_judge_calls": 0,
+  "limits": [
+    "Native collator class was AST-extracted and exercised with stdlib tensor stubs; no real Torch tensors or model.",
+    "Counter/reference/scaling vectors are synthetic, not actual NPO or gradient evidence.",
+    "Launch/config integration, real Torch/DS, all-parameter reference checks and fresh reload remain required."
+  ]
+}
