@@ -212,7 +212,7 @@
   "acceptance": "r4 world1 ZeRO3 tiny comparisons, production conflict and production smokes passed; original autograd failures preserved",
   "full_target": "TRAINING_COMPLETE_AUDIT_RELOAD_PASS",
   "target_gate": "not_evaluated",
-  "matching_retain95": "RUNNING_AT_20261007_0455_SNAPSHOT; checkpoint298 saved, actual current update unknown",
+  "matching_retain95": "RUNNING_AT_20261007_0510_SNAPSHOT; checkpoint298 saved, actual current update unknown",
   "npo_pilot": "not_started",
   "autograd_prior_failures_preserved": true,
   "automation": {
@@ -262,25 +262,27 @@
     "raw_sha256": "8a8dabc5b71acaee8e60263e7e87ad459273fe834f3e0b9a2443f6faaf372d97",
     "scope": "projection arithmetic and state isolation only; not all training gradient comparisons"
   },
-  "latest_snapshot_utc": "2026-10-06T20:55:07.436759+00:00",
-  "private_snapshot_sha256": "449752261eaabcc094448bef73b0090a6279d96d818ee0fd10db1fd31842d747",
+  "latest_snapshot_utc": "2026-10-06T21:10:16.276132+00:00",
+  "private_snapshot_sha256": "df327614d693d4b90b457dbb55bbdc3e80f302c9f174bb20087c74f5a6256a0f",
   "full_completion_evidence": "r4-completed-evidence-20261007.json",
   "development_cpu_preparation_evidence": "ifbench-cpu-completed-20261007.json",
   "development_cpu_fixture_evidence": "ifbench-cpu-fixtures-20261007.json",
   "npo_input_preparation": {
-    "status": "INPUTS_PREPARED_EXECUTOR_AND_GPU_RUNTIME_NOT_RUN",
+    "status": "INPUTS_PREPARED_SMOKE_SOURCE_READY_GPU_NOT_RUN",
     "metadata": "spf-npo-inputs-prepared-20261007.json",
-    "native_executor_prepared": false,
+    "native_executor_prepared": true,
     "smoke_executed": false,
-    "pilot_candidates_frozen": false
+    "pilot_candidates_frozen": false,
+    "native_executor_deployed": false,
+    "native_runtime_validated": false
   },
-  "latest_monitoring_attempt_evidence": "spf-npo-smoke-prepared-20261007.json",
+  "latest_monitoring_attempt_evidence": "spf-npo-queue-prepared-20261007.json",
   "npo_probe_source_preparation": {
-    "status": "PACKAGE_PREPARED_NOT_DEPLOYED_OR_LAUNCHED",
+    "status": "QUEUE_SOURCE_PREPARED_NOT_DEPLOYED_OR_LAUNCHED",
     "static_evidence": "spf-npo-probe-static-20261007.json",
     "native_runtime_validated": false,
     "fresh_reload_verified": false,
-    "latest_evidence": "spf-npo-smoke-prepared-20261007.json",
+    "latest_evidence": "spf-npo-queue-prepared-20261007.json",
     "current_source_sha256": "92edf63b14296d591e8e7cae4036e37e635280829e0a358ac873ac0a3e6ab5c1"
   },
   "smoke_package_preparation": {
@@ -292,5 +294,19 @@
     "torch_runtime_validated": false,
     "fresh_process_reload_verified": false,
     "pilot_candidates_frozen": false
+  },
+  "smoke_queue_source_preparation": {
+    "evidence": "spf-npo-queue-prepared-20261007.json",
+    "static_evidence": "spf-npo-queue-static-20261007.json",
+    "source_sha256": {
+      "run_spf_npo_smoke_queue.py": "d33d8b8d24f089112f74c4fe18adbb647c4e78b4e3bfecfd35bf3bce279d1ff6",
+      "verify_spf_npo_queue_static.py": "81f20817930f0a602ed8a2445db5207dc34a25c74761feddcef5c84a46785567"
+    },
+    "deployed": false,
+    "launched": false,
+    "actual_development_cuda_acceptance_verified": false,
+    "linux_lock_runtime_validated": false,
+    "hydra_runtime_composition_validated": false,
+    "gpu_runtime_validated": false
   }
 }

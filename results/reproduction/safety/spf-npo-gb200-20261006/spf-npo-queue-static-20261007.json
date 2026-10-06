@@ -1,0 +1,99 @@
+{
+  "status": "PASS_SYNTHETIC_QUEUE_PRECONDITIONS_AND_STUB_JOURNALS_ONLY",
+  "reference_rejections": [
+    "reference_running",
+    "different_original_pid",
+    "reference_stage_missing",
+    "reference_stage_failed",
+    "reference_stage_unfinished",
+    "epochs_incomplete",
+    "updates_incomplete",
+    "exposure_incomplete",
+    "wrong_split",
+    "wrong_seed",
+    "wrong_freeze",
+    "reload_failed",
+    "partial_tensors",
+    "partial_layers",
+    "wrong_shard_bytes",
+    "partial_trajectory"
+  ],
+  "snapshot_rejections": [
+    "stale_snapshot",
+    "future_snapshot",
+    "naive_snapshot",
+    "absent_audit",
+    "wrong_launch_pid",
+    "original_queue_live",
+    "ambiguous_ps",
+    "gpu_process_alive",
+    "gpu_query_failed",
+    "filesystem_query_failed"
+  ],
+  "development_acceptance_rejections": [
+    "static_only",
+    "wrong_identity",
+    "wrong_adapter",
+    "changed_caps",
+    "changed_tokenizer",
+    "missing_executor",
+    "no_cuda",
+    "executor_failed",
+    "missing_actual_log"
+  ],
+  "stub_stage_sequences": [
+    {
+      "failure": null,
+      "calls": [
+        "hydra-compose",
+        "train",
+        "fresh-reload"
+      ],
+      "completed": [
+        "hydra-compose",
+        "train",
+        "fresh-reload"
+      ]
+    },
+    {
+      "failure": "train",
+      "calls": [
+        "hydra-compose",
+        "train"
+      ],
+      "completed": [
+        "hydra-compose"
+      ]
+    },
+    {
+      "failure": "fresh-reload",
+      "calls": [
+        "hydra-compose",
+        "train",
+        "fresh-reload"
+      ],
+      "completed": [
+        "hydra-compose",
+        "train"
+      ]
+    }
+  ],
+  "sealed_package_sha256": "cbad72d7386ca83904b5a003e3bcf5b378f44d1920b452dd0bc29369bff5fc8a",
+  "source_sha256": {
+    "run_spf_npo_smoke_queue.py": "d33d8b8d24f089112f74c4fe18adbb647c4e78b4e3bfecfd35bf3bce279d1ff6",
+    "verify_spf_npo_queue_static.py": "81f20817930f0a602ed8a2445db5207dc34a25c74761feddcef5c84a46785567"
+  },
+  "subprocesses_launched": 0,
+  "remote_deployment_executed": false,
+  "hydra_runtime_composition_validated": false,
+  "gpu_runtime_validation": "not_run",
+  "npo_training_executed": false,
+  "fresh_process_reload_verified": false,
+  "pilot_candidates_frozen": false,
+  "limits": [
+    "All successful reference, process and CUDA metadata here are synthetic rejection fixtures.",
+    "Existing prepared package was compared with queue commands; completed old static suites were not rerun.",
+    "Subprocess and GPU query functions were stubbed; this is not Linux flock or cluster runtime acceptance.",
+    "Actual completed retain95 and separate development CUDA executor evidence are still required."
+  ]
+}

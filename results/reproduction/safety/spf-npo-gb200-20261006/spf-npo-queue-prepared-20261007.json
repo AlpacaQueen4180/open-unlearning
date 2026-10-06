@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "status": "QUEUE_SOURCE_PREPARED_NOT_DEPLOYED_OR_LAUNCHED",
+  "snapshot": {
+    "snapshot_utc": "2026-10-06T21:10:16.276132+00:00",
+    "private_snapshot_sha256": "df327614d693d4b90b457dbb55bbdc3e80f302c9f174bb20087c74f5a6256a0f",
+    "queue_pid": 45219,
+    "stage": "spf-retain95-s0-train",
+    "queue_process_observed_alive": true,
+    "gpu_compute_pid": 46358,
+    "reference_audit": null,
+    "latest_saved_checkpoint": 298,
+    "actual_current_update": null,
+    "logical_progress_snapshots_this_turn": 1
+  },
+  "controller": "scripts/reproduction/safety/gb200/run_spf_npo_smoke_queue.py",
+  "source_sha256": {
+    "run_spf_npo_smoke_queue.py": "d33d8b8d24f089112f74c4fe18adbb647c4e78b4e3bfecfd35bf3bce279d1ff6",
+    "verify_spf_npo_queue_static.py": "81f20817930f0a602ed8a2445db5207dc34a25c74761feddcef5c84a46785567"
+  },
+  "sealed_package_sha256": "cbad72d7386ca83904b5a003e3bcf5b378f44d1920b452dd0bc29369bff5fc8a",
+  "static_evidence": "spf-npo-queue-static-20261007.json",
+  "static_evidence_sha256": "cabfec301d1db08605b14648ab0faf49f529f18b1607b2506de216a31100ce6b",
+  "new_rejections": {
+    "reference": 16,
+    "snapshot": 10,
+    "development_cuda_acceptance": 9
+  },
+  "new_stub_stage_sequences": [
+    {
+      "failure": null,
+      "calls": [
+        "hydra-compose",
+        "train",
+        "fresh-reload"
+      ],
+      "completed": [
+        "hydra-compose",
+        "train",
+        "fresh-reload"
+      ]
+    },
+    {
+      "failure": "train",
+      "calls": [
+        "hydra-compose",
+        "train"
+      ],
+      "completed": [
+        "hydra-compose"
+      ]
+    },
+    {
+      "failure": "fresh-reload",
+      "calls": [
+        "hydra-compose",
+        "train",
+        "fresh-reload"
+      ],
+      "completed": [
+        "hydra-compose",
+        "train"
+      ]
+    }
+  ],
+  "preconditions": [
+    "Fresh complete original r4 reference audit/reload plus original queue exit and GPU idle snapshot.",
+    "Actual separate four development CUDA executors, exact adapter identities/caps and bound raw log SHA.",
+    "Immutable package, controller, source/config bytes and exact finite commands; native Linux flock still untested."
+  ],
+  "recovery": {
+    "initial_training_retried": false,
+    "training_resume_supported": false,
+    "explicit_new_reload_run_only_after_complete_training": true,
+    "successful_reload_not_repeated": true,
+    "original_failed_run_and_logs_preserved": true
+  },
+  "hydra_cpu_stage": {
+    "cuda_visible_devices": "",
+    "composition_implementation": "Hydra compose + OmegaConf resolved exact model/default merge",
+    "runtime_composition_executed": false,
+    "torch_imported": false
+  },
+  "private_as_run_log_sha256": "d605c0993fbabef37846aede2953111bf897e4bef2e04eb471839c4888d5b909",
+  "remote_deployment_executed": false,
+  "subprocesses_launched_by_static_verifier": 0,
+  "gpu_runtime_validated": false,
+  "npo_smoke_executed": false,
+  "fresh_process_reload_verified": false,
+  "pilot_candidates_frozen": false,
+  "target_gate_status": "not_evaluated",
+  "external_judge_executed": false,
+  "spf_full_training": "TRAINING_COMPLETE_AUDIT_RELOAD_PASS",
+  "limits": [
+    "All successful reference, process and CUDA metadata here are synthetic rejection fixtures.",
+    "Existing prepared package was compared with queue commands; completed old static suites were not rerun.",
+    "Subprocess and GPU query functions were stubbed; this is not Linux flock or cluster runtime acceptance.",
+    "Actual completed retain95 and separate development CUDA executor evidence are still required."
+  ]
+}
