@@ -1,0 +1,15 @@
+{
+  "epoch": 10.0,
+  "extraction_strength": 0.0767072994089507,
+  "forget_Q_A_Prob": 0.1077685546875,
+  "forget_Q_A_ROUGE": 0.264296649361077,
+  "forget_quality": 0.054052912731737235,
+  "forget_truth_ratio": 0.6398316493849326,
+  "global_step": 130,
+  "ks_D_200v200": 0.095,
+  "ks_p_200v200": 0.054052912731737235,
+  "model_utility": 0.5280958391885743,
+  "privleak": 10.078253121406222,
+  "status": "DONE",
+  "summary_path": "/data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r2_1b_forget10/eval/TOFU_SUMMARY.json"
+}

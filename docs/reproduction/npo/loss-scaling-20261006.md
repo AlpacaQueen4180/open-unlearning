@@ -1,10 +1,16 @@
 # NPO 梯度累積的 loss scaling：疑點、證據與待驗證項目
 
+> **10:34最終結論範圍：** 有限驗證完成。舊H100／GB200漏除accumulation已有受控梯度實測；真實1B相同TOFU frozen batch對同DS explicit-mean control，舊完整8批／短組2批為8／2倍、新版原生為1／1倍。新版native三split seed0已完成更新計數、完整checkpoint與評估稽核，未重現全部docs數值。真實1B原autograd reference的16項5% gate仍未通過，沒有宣稱完整autograd／DS等價，也沒有追溯修正歷史實驗。下方保留當時疑點與查核過程；最終實測與限制見[驗證紀錄](environment-gradient-validation-20261006.md)。
+
+> **同日實測進度：** 新增controlled gradient audit已在真實NPO→Trainer→Accelerate→ZeRO-3路徑觀測GB200完整8批FP32梯度約8倍、雙H100完整4批的forget／retain／combined梯度約4倍，bf16 tiny control亦通過。真實Llama-2-7B雙H100、bf16完整四批亦完成：投影倍率3.97807927、cosine0.99992089，消除倍率後relative error1.26%。這證實受控舊環境的漏除，而非已驗證每個歷史run；7B此量測仍使用合成固定tokens。新版與TOFU梯度測試待續接。本文下方保留原疑點查核時的狀態。最新範圍與限制見[環境與梯度驗證紀錄](environment-gradient-validation-20261006.md)。
+
 核對日期：2026-10-06。範圍為本次 GB200 的 Transformers 4.51.3／Accelerate 0.34.2／DeepSpeed 0.15.4，以及 repo 自訂 NPO loss。
+
+> **09:48真實TOFU實測：** 同1B參數及frozen TOFU batch的forget／retain／combined，完整8批與尾端2批，相對同DeepSpeed explicit-mean control，舊版為8／2倍、新版為1／1倍，cosine皆1，初始／最終參數SHA不變。這是scaling分母的實測證據；原autograd／DS bf16 comparison仍超過5% gate，差異保留、未宣稱完全等價。新版forget01正式訓練已核Trainer=DS20、micro100、epoch10，但評估遇bf16→NumPy錯誤，正從原checkpoint恢復。詳細數值、版本偏離與限制見[驗證紀錄](environment-gradient-validation-20261006.md)。
 
 > **同日 upstream 查核補充：** 最新 `main`（`17cbbc8`）預設已升到 Transformers5.5.4／Accelerate1.13.0；標準NPO巢狀輸入得到 `num_items_in_batch=None`，新版Trainer會按當次實際microbatch數除loss。因此本文的漏除疑點限於本次固定舊環境，不能稱為最新版或原paper已證實的共同缺陷。新版源碼處理仍未在本次GB200實測梯度等價性；完整來源、歷史版本、相關論文與切換驗收見[upstream查核](upstream-status-20261006.md)。既有六格corrected未改loss的分類不變。
 
-**目前的證據支持「累積梯度可能沒有按預期平均」的源碼推論，但尚未完成實際梯度等價性測試，也沒有發布 loss normalization 修正。October 六格 corrected seed0 只驗證更新次數與 DS 邊界，不能稱為梯度正規化已驗證。**
+**以下為開始實測前的源碼查核紀錄，保留當時證據層級：** 當時證據支持「累積梯度可能沒有按預期平均」的源碼推論，尚未完成實際梯度等價性測試。October 六格corrected seed0只驗證更新次數與DS邊界，未改loss scaling；後續新版實測是另三個native runs，最終結果見本文開頭與驗證報告。
 
 ## 1. 這裡的 loss scaling 是什麼
 

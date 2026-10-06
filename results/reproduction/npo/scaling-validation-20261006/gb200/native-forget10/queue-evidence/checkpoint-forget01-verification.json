@@ -1,0 +1,14 @@
+{
+  "checkpoint": "/data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint",
+  "weights_bytes": 2471645608,
+  "tensor_count": 146,
+  "weights_sha256": "fe1bb48dcde412d522a2dfbd7d46afd071c7d2aa0f29e9109777766e820cea4a",
+  "counts": {
+    "trainer_global_step": 20,
+    "microsteps": 100,
+    "epoch": 10.0,
+    "engine_global_steps": 20,
+    "engine_micro_steps": 20
+  },
+  "header_and_required_layers_complete": true
+}

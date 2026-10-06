@@ -1,0 +1,6 @@
+{
+  "helper_sha256": "48bfb74f380a8a52efcbd298cbaf51f1b6b6a83029c953a6035fd1be7f4aabbc",
+  "eval_source_sha256": "acd98144cada6f02dea329bb78c77e317bd651d16fabbb576796253ae6c4ec7b",
+  "patch": "float conversion immediately before NumPy serialization only",
+  "training_loss_changed": false
+}

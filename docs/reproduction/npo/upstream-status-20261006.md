@@ -1,8 +1,16 @@
 # OpenUnlearning upstream 查核：更新次數、loss scaling 與相關論文
 
+> **10:34最終實驗範圍：** 有限驗證完成。新版隔離stack完成二十項old／new tiny與十六項真實1B synthetic／TOFU同DS reference對照，舊完整／短組8／2倍、新版1／1倍。新版native三split seed0皆獨立核Trainer=DS20／70／130、micro100／500／1000、epoch10、完整checkpoint／評估。FQ依序.265687／.270474／.054053，未重現全部docs數值。原autograd／DS bf16差異仍未定位；保留容器Torch与兩個eval輸出cast偏離，不能稱為完整upstream預設環境。下方早期「尚未驗證」文字是當時查核狀態；最終證據以[驗證紀錄](environment-gradient-validation-20261006.md)為準。
+
+> **同日使用者授權的驗證進度：** 已開始[獨立環境與梯度驗證](environment-gradient-validation-20261006.md)。舊GB200與雙H100的controlled tiny-model梯度已有漏除accumulation實測；雙H100真實7B的完整四批／尾端一批也已完成，完整四批投影倍率3.97807927，八個受控case的雙rank證據已獨立稽核。此7B測試仍用合成固定tokens。新版尚未完成環境／梯度／正式計數驗收。本文件下方保留源碼查核時的狀態，不能把新版源碼處理視為實驗已通過。
+
 查核日期：2026-10-06。本文補充本次 GB200 reproduction 的版本範圍，不修改既有實驗、分數或訓練環境。
 
-**目前不能將 Transformers 4.51.3／Accelerate 0.34.2 的實測更新 mismatch 和 loss-scaling 疑點，直接描述為最新版或原論文的共同缺陷。最新 upstream 預設依賴已包含兩項問題的對應處理；這是源碼查核，尚未在本次 GB200 上執行新版更新計數與梯度驗證。**
+> **09:48真實模型與TOFU補充：** 十六項同DS explicit-mean control已獨立核對，舊版完整／短組8／2倍、新版1／1倍，所有cosine1；原autograd reference比較仍未通過。新版native forget01正式訓練亦完成Trainer=DS20、micro100、epoch10，checkpoint已保存。評估在bf16→NumPy序列化失敗；隔離evaluator只加兩個輸出cast，從原checkpoint恢復評估再續缺少split。新版三split的最終scores仍未完成，且上述兩個eval cast是固定upstream commit的明確兼容性偏離。[最新證據與限制](environment-gradient-validation-20261006.md)。
+
+> **09:03新版實測補充：** 保留GB200容器Torch的隔離TF5.5.4／Accel1.13.0／DS0.15.4環境已完成imports與十個controlled tiny gradient cases，完整與短組對mean-micro reference均約1倍；舊版十個對照約為窗口批數倍。真實1B舊版bf16的autograd comparison因殘差超門檻停止，已保留失敗並追加同DS explicit-mean control續接。正式新版三split、真實TOFU與真實模型等價性仍未驗收；[最新執行紀錄](environment-gradient-validation-20261006.md)。
+
+**以下保留開始實測前的源碼查核紀錄：** 不能將Transformers4.51.3／Accelerate0.34.2的更新mismatch與loss-scaling問題直接描述為最新版或原論文的共同缺陷。最新upstream預設依賴包含對應處理；當時尚未執行新版實測，現已完成的範圍與未解限制見本文開頭及驗證報告。
 
 ## 1. 核對版本與證據層級
 

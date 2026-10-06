@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/data/npo-gb200-20261004/repo/scripts/reproduction/npo/gb200/validate_new_environment.py", line 96, in <module>
+    run('native_1b_'+split,[str(py),str(helpers/'run_experiment.py'),'--world-size','1','--stages','3','--attention','flash_attention_2','--seed','0','--model','Llama-3.2-1B-Instruct','--forget',split,'--tag','native_554_1130_20261006'+('_r1' if TASK!=BASE else '')],env=newenv)
+  File "/data/npo-gb200-20261004/repo/scripts/reproduction/npo/gb200/validate_new_environment.py", line 34, in run
+    if result.returncode:raise RuntimeError(label+' failed; see saved log')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: native_1b_forget01 failed; see saved log

@@ -1,0 +1,149 @@
+[2026-10-06 01:54:59,294][evaluator][INFO] - Evaluations stored in the experiment directory: /data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval-recovered-r2
+[2026-10-06 01:54:59,296][evaluator][INFO] - ***** Running TOFU evaluation suite *****
+[2026-10-06 01:54:59,297][evaluator][INFO] - Fine-grained evaluations will be saved to: /data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval-recovered-r2/TOFU_EVAL.json
+[2026-10-06 01:54:59,297][evaluator][INFO] - Aggregated evaluations will be summarised in: /data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval-recovered-r2/TOFU_SUMMARY.json
+[2026-10-06 01:54:59,651][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:00,347][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:00,553][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:00,757][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU/revision/324592d84ae4f482ac7249b9285c2ecdb53e3a68 "HTTP/1.1 200 OK"
+[2026-10-06 01:55:00,968][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:00,968][huggingface_hub.utils._http][WARNING] - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[2026-10-06 01:55:01,288][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:01,492][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU/tree/324592d84ae4f482ac7249b9285c2ecdb53e3a68?recursive=false&expand=false "HTTP/1.1 200 OK"
+[2026-10-06 01:55:01,702][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:01,729][metrics][INFO] - Evaluating forget_Q_A_PARA_Prob
+[2026-10-06 01:55:02,627][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:02,846][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:03,042][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:03,251][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:03,461][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:03,663][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:03,678][metrics][INFO] - Evaluating forget_Q_A_PERT_Prob
+[2026-10-06 01:55:05,754][metrics][INFO] - Evaluating forget_truth_ratio
+[2026-10-06 01:55:05,755][evaluator][INFO] - Result for metric forget_truth_ratio:	0.6791958660402588
+[2026-10-06 01:55:05,760][metrics][INFO] - Skipping forget_quality's precompute forget_truth_ratio, already evaluated.
+[2026-10-06 01:55:05,763][metrics][INFO] - Loading evaluations from /data/npo-gb200-20261004/hf/hub/datasets--open-unlearning--eval/snapshots/f31717fe522c2a6725ca0024980f51169a084ca1/tofu_Llama-3.2-1B-Instruct_retain99/TOFU_EVAL.json
+[2026-10-06 01:55:05,768][metrics][INFO] - Evaluating forget_quality
+[2026-10-06 01:55:05,770][evaluator][INFO] - Result for metric forget_quality:	0.2656871402817289
+[2026-10-06 01:55:05,970][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:06,190][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:06,385][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:06,591][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:06,806][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:07,009][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:07,027][metrics][INFO] - Evaluating forget_Q_A_Prob
+[2026-10-06 01:55:07,461][evaluator][INFO] - Result for metric forget_Q_A_Prob:	0.028376388549804687
+[2026-10-06 01:55:07,669][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:07,888][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:08,089][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:08,295][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:08,516][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:08,722][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:08,736][metrics][INFO] - Evaluating forget_Q_A_ROUGE
+[2026-10-06 01:55:14,444][evaluator][INFO] - Result for metric forget_Q_A_ROUGE:	0.26671332883539056
+[2026-10-06 01:55:14,676][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:15,369][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:15,568][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:15,775][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:16,014][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:16,217][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:16,241][metrics][INFO] - Evaluating retain_Q_A_Prob
+[2026-10-06 01:55:19,252][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:19,472][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:19,678][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:19,891][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:20,102][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:20,313][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:20,328][metrics][INFO] - Evaluating retain_Q_A_ROUGE
+[2026-10-06 01:55:45,932][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:46,628][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:46,834][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:47,047][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:47,285][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:47,490][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:47,511][metrics][INFO] - Evaluating retain_Q_A_PARA_Prob
+[2026-10-06 01:55:50,609][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:50,834][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:51,036][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:51,240][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:51,453][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:55:51,658][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:55:51,674][metrics][INFO] - Evaluating retain_Q_A_PERT_Prob
+[2026-10-06 01:56:05,531][metrics][INFO] - Evaluating retain_Truth_Ratio
+[2026-10-06 01:56:05,855][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:06,562][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:06,770][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:06,978][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:07,245][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:07,444][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:07,465][metrics][INFO] - Evaluating ra_Q_A_Prob
+[2026-10-06 01:56:08,326][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:08,594][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:08,795][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:09,000][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:09,214][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:09,414][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:09,432][metrics][INFO] - Evaluating ra_Q_A_PERT_Prob
+[2026-10-06 01:56:11,365][metrics][INFO] - Evaluating ra_Q_A_Prob_normalised
+[2026-10-06 01:56:11,580][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:11,809][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:12,009][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:12,213][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:12,423][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:12,626][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:12,649][metrics][INFO] - Evaluating ra_Q_A_ROUGE
+[2026-10-06 01:56:15,958][metrics][INFO] - Skipping ra_Truth_Ratio's precompute ra_Q_A_Prob, already evaluated.
+[2026-10-06 01:56:15,958][metrics][INFO] - Skipping ra_Truth_Ratio's precompute ra_Q_A_PERT_Prob, already evaluated.
+[2026-10-06 01:56:15,958][metrics][INFO] - Evaluating ra_Truth_Ratio
+[2026-10-06 01:56:16,155][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:16,381][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:16,629][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:16,836][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:17,046][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:17,248][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:17,265][metrics][INFO] - Evaluating wf_Q_A_Prob
+[2026-10-06 01:56:18,032][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:18,259][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:18,463][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:18,669][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:18,880][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:19,084][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:19,112][metrics][INFO] - Evaluating wf_Q_A_PERT_Prob
+[2026-10-06 01:56:20,859][metrics][INFO] - Evaluating wf_Q_A_Prob_normalised
+[2026-10-06 01:56:21,062][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:21,291][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:21,490][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:21,707][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:21,924][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:22,125][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:22,145][metrics][INFO] - Evaluating wf_Q_A_ROUGE
+[2026-10-06 01:56:26,575][metrics][INFO] - Skipping wf_Truth_Ratio's precompute wf_Q_A_Prob, already evaluated.
+[2026-10-06 01:56:26,575][metrics][INFO] - Skipping wf_Truth_Ratio's precompute wf_Q_A_PERT_Prob, already evaluated.
+[2026-10-06 01:56:26,576][metrics][INFO] - Evaluating wf_Truth_Ratio
+[2026-10-06 01:56:26,576][metrics][INFO] - Evaluating model_utility
+[2026-10-06 01:56:26,577][evaluator][INFO] - Result for metric model_utility:	0.5307198781685816
+[2026-10-06 01:56:26,810][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:27,512][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:27,710][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:27,916][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:28,146][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:28,343][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:28,559][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:28,784][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:28,983][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:29,191][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:29,407][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:29,611][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:29,630][metrics][INFO] - Loading evaluations from /data/npo-gb200-20261004/hf/hub/datasets--open-unlearning--eval/snapshots/f31717fe522c2a6725ca0024980f51169a084ca1/tofu_Llama-3.2-1B-Instruct_retain99/TOFU_EVAL.json
+[2026-10-06 01:56:29,636][metrics][INFO] - Evaluating mia_min_k
+[2026-10-06 01:56:29,852][metrics][INFO] - Loading evaluations from /data/npo-gb200-20261004/hf/hub/datasets--open-unlearning--eval/snapshots/f31717fe522c2a6725ca0024980f51169a084ca1/tofu_Llama-3.2-1B-Instruct_retain99/TOFU_EVAL.json
+[2026-10-06 01:56:29,858][metrics][INFO] - Evaluating privleak
+[2026-10-06 01:56:29,858][evaluator][INFO] - Result for metric privleak:	76.03305783687686
+[2026-10-06 01:56:30,084][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:30,311][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:30,511][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:30,714][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:30,932][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:56:31,135][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:56:31,149][metrics][INFO] - Evaluating extraction_strength
+[2026-10-06 01:56:31,314][evaluator][INFO] - Result for metric extraction_strength:	0.04242200329904938

@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "forget_split": "forget01",
+  "expected_examples": 40,
+  "expected_epochs": 10,
+  "expected_updates": 20,
+  "expected_microsteps": 100,
+  "observed_runtime": {
+    "trainer_global_step": 20,
+    "microsteps": 100,
+    "epoch": 10.0,
+    "engine_global_steps": 20,
+    "engine_micro_steps": 20
+  },
+  "evaluation_status": "FAILED_EVALUATING, BFloat16 NumPy conversion; checkpoint retained"
+}

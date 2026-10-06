@@ -1,0 +1,121 @@
+{
+  "phase": "FAILED",
+  "pid": 18685,
+  "stages": [
+    {
+      "label": "old_g8_w8_forget_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "old_g8_w8_retain_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "old_g8_w8_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "old_g8_w2_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "old_g8_w4_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "old_g4_w4_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "old_g4_w1_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "old_g8_w8_combined_bf16",
+      "returncode": 0
+    },
+    {
+      "label": "old_g8_w2_combined_bf16",
+      "returncode": 0
+    },
+    {
+      "label": "old_g8_w8_retain_fp32_variable_tokens",
+      "returncode": 0
+    },
+    {
+      "label": "clone_upstream",
+      "returncode": 0
+    },
+    {
+      "label": "pin_upstream",
+      "returncode": 0
+    },
+    {
+      "label": "create_venv",
+      "returncode": 0
+    },
+    {
+      "label": "install_new",
+      "returncode": 0
+    },
+    {
+      "label": "freeze_new",
+      "returncode": 0
+    },
+    {
+      "label": "imports_new",
+      "returncode": 0
+    },
+    {
+      "label": "new_g8_w8_forget_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "new_g8_w8_retain_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "new_g8_w8_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "new_g8_w2_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "new_g8_w4_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "new_g4_w4_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "new_g4_w1_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "new_g8_w8_combined_bf16",
+      "returncode": 0
+    },
+    {
+      "label": "new_g8_w2_combined_bf16",
+      "returncode": 0
+    },
+    {
+      "label": "new_g8_w8_retain_fp32_variable_tokens",
+      "returncode": 0
+    },
+    {
+      "label": "freeze_real_tofu",
+      "returncode": 0
+    },
+    {
+      "label": "old_real1b_w8_combined_bf16",
+      "returncode": 1
+    }
+  ],
+  "started": "2026-10-06T00:49:41.197836+00:00",
+  "current": "old_real1b_w8_combined_bf16",
+  "error": "RuntimeError('old_real1b_w8_combined_bf16 failed; see saved log')"
+}

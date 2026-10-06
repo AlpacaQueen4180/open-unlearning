@@ -26,14 +26,17 @@ repair, not corrected training.
 - [Original six-cell seed0 matrix](reports/GB200-NPO-Matrix-2026-10-05.md)
 - [Corrected cells and original forget01 three-seed results](reports/GB200-NPO-Followup-2026-10-05.md)
 - [Update-count mechanism and NPO/safety report correction inventory](update-count-mismatch-20261006.md)
-- [Loss-scaling suspicion, pinned source path and pending gradient validation](loss-scaling-20261006.md)
+- [Completed H100/GB200 gradient controls and new-stack three-split seed0 validation](environment-gradient-validation-20261006.md)
+- [Loss-scaling mechanism, measured evidence and unresolved comparisons](loss-scaling-20261006.md)
 - [Current upstream fixes, original-paper evidence limits, related papers and upgrade validation](upstream-status-20261006.md)
 - [Execution history, controls and environment](gb200-20261004.md)
 
 Corrected update counts do not imply reproducing every published metric.
-The six corrected runs validate update counts and boundaries; gradient
-normalization remains unverified and unchanged. The loss-scaling note separates
-source-path inference from a gradient test that has not yet been performed.
+The six corrected runs validate update counts and boundaries and retain the old
+loss scaling. The October 6 controlled audits measured missing accumulation
+normalization in the old H100/GB200 stack. Three separate native new-stack 1B
+runs completed with aligned updates and ten actual epochs. They do not replace
+the six update-only corrected runs or historical checkpoints.
 Corrected runs have one seed per cell; original forget01 seeds0/1/2 are analyzed
 separately. All source training files remain unchanged; the opt-in correction
 is archived under `scripts/reproduction/npo/gb200/`.
@@ -41,10 +44,14 @@ is archived under `scripts/reproduction/npo/gb200/`.
 As checked on 2026-10-06, upstream `17cbbc8` defaults to Transformers 5.5.4
 and Accelerate 1.13.0. Their source paths provide ceil update planning,
 Trainer/DeepSpeed boundary synchronization and accumulation normalization for
-the standard nested NPO inputs. This is a source audit, not a GB200 runtime
-validation. It does not change the archived 4.51.3 runs or prove that the
-original paper used the same problematic recipe. See the upstream note for
-version provenance, related papers and the checks required before switching.
+the standard nested NPO inputs. Subsequent runtime controls measured the old
+full/tail gradient ratios of 8/2 and new ratios of 1/1 against a matched
+DeepSpeed explicit-mean reference. All three native 1B splits independently
+passed counts, checkpoint and metric audits; their scores do not reproduce all
+`docs/repro.md` values. Real-1B bf16 autograd comparisons remain outside the 5%
+gate and unexplained. Container Torch/bitsandbytes and two evaluator serialization
+casts differ from upstream defaults. These observations do not establish the
+same defect in the original-paper environment or upgrade historical safety runs.
 
 ## Layout
 
@@ -66,9 +73,11 @@ after training and does not alter checkpoints or metric definitions.
 
 ## Large artifacts
 
-Checkpoint weights, raw evaluation directories, logs, per-run status files,
-and installed environments are deliberately excluded from Git. At migration
-time they remained in place on the experiment machines:
+At the August migration, checkpoint weights, raw evaluation directories, logs,
+per-run status files and installed environments remained on the experiment
+machines. The October 6 archive additionally publishes curated original small
+evaluation/log/status evidence and verified hashes; large weights, gradient
+vectors and frozen token tensors remain remote.
 
 - H100: `/home/ai/alpaca/saves/`
 - Ada6000: `/home/user/alpaca/open-unlearning/saves/`

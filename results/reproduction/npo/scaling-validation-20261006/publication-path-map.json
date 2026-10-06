@@ -1,0 +1,19 @@
+{
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/evaluating.log": "gb200/attempt1/f01-failure/evaluating.log",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/training.log": "gb200/attempt1/f01-failure/training.log",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/status.json": "gb200/attempt1/f01-failure/status.json",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/evaluating_command.json": "gb200/attempt1/f01-failure/evaluating_command.json",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/training_command.json": "gb200/attempt1/f01-failure/training_command.json",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/deepspeed.json": "gb200/attempt1/f01-failure/deepspeed.json",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/accelerate.yaml": "gb200/attempt1/f01-failure/accelerate.yaml",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval/eval.log": "gb200/attempt1/f01-failure/eval/eval.log",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/trainer_state.json": "gb200/attempt1/f01-failure/checkpoint/trainer_state.json",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/generation_config.json": "gb200/attempt1/f01-failure/checkpoint/generation_config.json",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/runtime_rank0.json": "gb200/attempt1/f01-failure/checkpoint/runtime_rank0.json",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/tokenizer_config.json": "gb200/attempt1/f01-failure/checkpoint/tokenizer_config.json",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/config.json": "gb200/attempt1/f01-failure/checkpoint/config.json",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/runtime_final_rank0.json": "gb200/attempt1/f01-failure/checkpoint/runtime_final_rank0.json",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval/.hydra/overrides.yaml": "gb200/attempt1/f01-failure/eval/.hydra/overrides.yaml",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval/.hydra/config.yaml": "gb200/attempt1/f01-failure/eval/.hydra/config.yaml",
+  "gb200/attempt1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval/.hydra/hydra.yaml": "gb200/attempt1/f01-failure/eval/.hydra/hydra.yaml"
+}

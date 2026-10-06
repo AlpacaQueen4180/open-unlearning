@@ -1,0 +1,39 @@
+{
+  "phase": "DONE",
+  "pid": 4008857,
+  "cells": [
+    {
+      "label": "0_w4_forget_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "1_w4_retain_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "2_w4_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "3_w1_combined_fp32",
+      "returncode": 0
+    },
+    {
+      "label": "4_w4_combined_bf16",
+      "returncode": 0
+    },
+    {
+      "label": "5_w1_combined_bf16",
+      "returncode": 0
+    },
+    {
+      "label": "6_w4_combined_bf16_real7b",
+      "returncode": 0
+    },
+    {
+      "label": "7_w1_combined_bf16_real7b",
+      "returncode": 0
+    }
+  ],
+  "current": "7_w1_combined_bf16_real7b"
+}

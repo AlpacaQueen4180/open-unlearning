@@ -1,0 +1,10 @@
+compute_environment: LOCAL_MACHINE
+deepspeed_config:
+  deepspeed_config_file: /data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r2_1b_forget05/deepspeed.json
+  zero3_init_flag: true
+distributed_type: DEEPSPEED
+machine_rank: 0
+main_training_function: main
+num_machines: 1
+num_processes: 1
+use_cpu: false

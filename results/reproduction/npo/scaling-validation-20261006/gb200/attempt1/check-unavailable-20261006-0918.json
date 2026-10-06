@@ -1,0 +1,12 @@
+{
+  "action": "No relaunch or remote changes; defer necessary snapshot to next scheduled heartbeat",
+  "observation": "unavailable",
+  "attempts": 2,
+  "heartbeat_utc": "2026-10-06T01:18:51.308Z",
+  "last_confirmed_launch_pid": 26227,
+  "remote_task": "/data/npo-gb200-20261004/validation-20261006-r1",
+  "errors": [
+    "cluster-api/status EOF",
+    "cluster-api/status TLS handshake timeout"
+  ]
+}

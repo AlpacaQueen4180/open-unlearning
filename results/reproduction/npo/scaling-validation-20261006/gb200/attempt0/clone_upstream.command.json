@@ -1,0 +1,7 @@
+[
+  "git",
+  "clone",
+  "--no-checkout",
+  "https://github.com/locuslab/open-unlearning.git",
+  "/data/npo-gb200-20261004/validation-20261006/upstream"
+]

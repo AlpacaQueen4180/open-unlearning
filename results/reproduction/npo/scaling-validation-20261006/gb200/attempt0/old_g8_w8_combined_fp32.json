@@ -1,0 +1,139 @@
+{
+  "versions": {
+    "torch": "2.7.0a0+ecf3bae40a.nv25.02",
+    "transformers": "4.51.3",
+    "accelerate": "0.34.2",
+    "deepspeed": "0.15.4"
+  },
+  "gpu": "NVIDIA GB200",
+  "world_size": 1,
+  "gas": 8,
+  "window": 8,
+  "term": "combined",
+  "dtype": "fp32",
+  "unequal_tokens": false,
+  "model": "fixed tiny Llama (2 layers, hidden32)",
+  "model_accepts_loss_kwargs": true,
+  "num_items_in_batch": null,
+  "accelerator_gas": 1,
+  "engine_gas": 8,
+  "engine_override_scale_wrt_gas": null,
+  "legacy_tail_boundary_forced": false,
+  "clipping": 0,
+  "optimizer_lr": 0,
+  "engine_updates": 1,
+  "engine_backward_trace": [
+    {
+      "loss_to_engine": 18.145734786987305,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 18.127338409423828,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 18.112276077270508,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 18.112903594970703,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 18.123695373535156,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 18.132070541381836,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 18.1420841217041,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 18.115692138671875,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": true
+    }
+  ],
+  "vs_mean_microbatch_objective": {
+    "norm_ratio": 8.000000007506017,
+    "projected_scale": 8.000000007505975,
+    "cosine": 0.9999999999999944,
+    "relative_error": 7.000000007506015,
+    "relative_error_after_scale": 5.039713907384549e-07,
+    "reference_norm": 11.283449120064528,
+    "observed_norm": 90.26759304520999
+  },
+  "vs_large_batch_objective": {
+    "norm_ratio": 7.9999999966073565,
+    "projected_scale": 7.999999996607113,
+    "cosine": 0.9999999999999697,
+    "relative_error": 6.999999996607384,
+    "relative_error_after_scale": 1.881269970393747e-06,
+    "reference_norm": 11.28344913543634,
+    "observed_norm": 90.26759304520999
+  },
+  "mean_micro_vs_large": {
+    "norm_ratio": 0.9999999986376672,
+    "projected_scale": 0.9999999986376379,
+    "cosine": 0.9999999999999707,
+    "relative_error": 2.3119021440154e-07,
+    "relative_error_after_scale": 2.311862003148905e-07,
+    "reference_norm": 11.28344913543634,
+    "observed_norm": 11.283449120064528
+  },
+  "gradient_sha256": "5d3ceb31c746397ea69d4d43bd53f6f1a1255c712fc264cf7d153ff51c6d4cff",
+  "parameter_names": [
+    "model.embed_tokens.weight",
+    "model.layers.0.self_attn.q_proj.weight",
+    "model.layers.0.self_attn.k_proj.weight",
+    "model.layers.0.self_attn.v_proj.weight",
+    "model.layers.0.self_attn.o_proj.weight",
+    "model.layers.0.mlp.gate_proj.weight",
+    "model.layers.0.mlp.up_proj.weight",
+    "model.layers.0.mlp.down_proj.weight",
+    "model.layers.0.input_layernorm.weight",
+    "model.layers.0.post_attention_layernorm.weight",
+    "model.layers.1.self_attn.q_proj.weight",
+    "model.layers.1.self_attn.k_proj.weight",
+    "model.layers.1.self_attn.v_proj.weight",
+    "model.layers.1.self_attn.o_proj.weight",
+    "model.layers.1.mlp.gate_proj.weight",
+    "model.layers.1.mlp.up_proj.weight",
+    "model.layers.1.mlp.down_proj.weight",
+    "model.layers.1.input_layernorm.weight",
+    "model.layers.1.post_attention_layernorm.weight",
+    "model.norm.weight",
+    "lm_head.weight"
+  ],
+  "synthetic_input_sha256": "e1aa8afaa388e35d94b7930ddf535cba9bb59d58a0b8bec86e4ab7764970db4a",
+  "frozen_batch_file": null,
+  "batch_offset": 0,
+  "rank": 0,
+  "distributed_input_policy": "identical fixed inputs on each rank; DS averaging compared with identical local reference"
+}

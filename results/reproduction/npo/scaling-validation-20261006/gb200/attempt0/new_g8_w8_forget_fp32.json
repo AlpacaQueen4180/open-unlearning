@@ -1,0 +1,139 @@
+{
+  "versions": {
+    "torch": "2.7.0a0+ecf3bae40a.nv25.02",
+    "transformers": "5.5.4",
+    "accelerate": "1.13.0",
+    "deepspeed": "0.15.4"
+  },
+  "gpu": "NVIDIA GB200",
+  "world_size": 1,
+  "gas": 8,
+  "window": 8,
+  "term": "forget",
+  "dtype": "fp32",
+  "unequal_tokens": false,
+  "model": "fixed tiny Llama (2 layers, hidden32)",
+  "model_accepts_loss_kwargs": true,
+  "num_items_in_batch": null,
+  "accelerator_gas": 1,
+  "engine_gas": 8,
+  "engine_override_scale_wrt_gas": null,
+  "legacy_tail_boundary_forced": false,
+  "clipping": 0,
+  "optimizer_lr": 0,
+  "engine_updates": 1,
+  "engine_backward_trace": [
+    {
+      "loss_to_engine": 1.732867956161499,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.732867956161499,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.732867956161499,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.732867956161499,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.732867956161499,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.732867956161499,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.732867956161499,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.732867956161499,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": true
+    }
+  ],
+  "vs_mean_microbatch_objective": {
+    "norm_ratio": 1.000000001884392,
+    "projected_scale": 1.000000001884392,
+    "cosine": 1.0,
+    "relative_error": 5.44757003342907e-08,
+    "relative_error_after_scale": 5.4443098705546084e-08,
+    "reference_norm": 12.260943182825747,
+    "observed_norm": 12.26094320593017
+  },
+  "vs_large_batch_objective": {
+    "norm_ratio": 1.0000000005438876,
+    "projected_scale": 1.0000000005438647,
+    "cosine": 0.9999999999999769,
+    "relative_error": 2.119671831975135e-07,
+    "relative_error_after_scale": 2.1196648546803414e-07,
+    "reference_norm": 12.260943199261595,
+    "observed_norm": 12.26094320593017
+  },
+  "mean_micro_vs_large": {
+    "norm_ratio": 0.9999999986594956,
+    "projected_scale": 0.999999998659473,
+    "cosine": 0.9999999999999775,
+    "relative_error": 2.0524184674235246e-07,
+    "relative_error_after_scale": 2.0523746891067872e-07,
+    "reference_norm": 12.260943199261595,
+    "observed_norm": 12.260943182825747
+  },
+  "gradient_sha256": "ed80d3e46996bba014f90d024e4daac2291f0290f6706398de0d684cf4b75141",
+  "parameter_names": [
+    "model.embed_tokens.weight",
+    "model.layers.0.self_attn.q_proj.weight",
+    "model.layers.0.self_attn.k_proj.weight",
+    "model.layers.0.self_attn.v_proj.weight",
+    "model.layers.0.self_attn.o_proj.weight",
+    "model.layers.0.mlp.gate_proj.weight",
+    "model.layers.0.mlp.up_proj.weight",
+    "model.layers.0.mlp.down_proj.weight",
+    "model.layers.0.input_layernorm.weight",
+    "model.layers.0.post_attention_layernorm.weight",
+    "model.layers.1.self_attn.q_proj.weight",
+    "model.layers.1.self_attn.k_proj.weight",
+    "model.layers.1.self_attn.v_proj.weight",
+    "model.layers.1.self_attn.o_proj.weight",
+    "model.layers.1.mlp.gate_proj.weight",
+    "model.layers.1.mlp.up_proj.weight",
+    "model.layers.1.mlp.down_proj.weight",
+    "model.layers.1.input_layernorm.weight",
+    "model.layers.1.post_attention_layernorm.weight",
+    "model.norm.weight",
+    "lm_head.weight"
+  ],
+  "synthetic_input_sha256": "e1aa8afaa388e35d94b7930ddf535cba9bb59d58a0b8bec86e4ab7764970db4a",
+  "frozen_batch_file": null,
+  "batch_offset": 0,
+  "rank": 0,
+  "distributed_input_policy": "identical fixed inputs on each rank; DS averaging compared with identical local reference"
+}

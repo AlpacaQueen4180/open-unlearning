@@ -2,9 +2,9 @@
 
 核對日期：2026-10-06。這份文件以本 repository 保存的啟動腳本、Trainer state 與 GB200 runtime audit 為依據，區分「訓練更新次數修正」和「評估修正」。
 
-> **最新版本範圍：** upstream `17cbbc8` 的 Transformers5.5.4已採ceil步數規劃，Accelerate1.13.0會將更新邊界同步給DS；標準NPO路徑也已有對應accumulation除法。本文仍記錄4.51.3固定環境的實測，不代表新版尚有完全相同問題，也不能把本次數字直接套到原paper的4.45.1時期。新版尚未在本次GB200驗收，詳見[upstream查核與相關論文](upstream-status-20261006.md)。
+> **10:34最新版本範圍：** upstream `17cbbc8` 的 Transformers5.5.4採ceil步數規劃，Accelerate1.13.0同步DS更新邊界。GB200新版native 1B forget01／05／10 seed0已實測Trainer=DS20／70／130、micro100／500／1000、epoch10，完整checkpoint與評估獨立稽核完成，沒有疊加本地policy。此為另外三個full runs，與六個legacy corrected分開分類；保留容器Torch及eval cast偏離。詳見[新版環境與梯度驗證](environment-gradient-validation-20261006.md)。本文舊版計數不套到原paper的4.45.1或歷史safety的未保存DS計數。
 
-> **Loss scaling補充：** 本次六格corrected seed0是「更新次數／DS邊界已驗證、梯度正規化尚未驗證」。固定版本與自訂NPO的呼叫路徑有累積梯度未平均的疑點；這是源碼推論，尚未量測實際倍率，也沒有loss normalization修正。機制、尾端短組及待執行驗證見[loss-scaling專文](loss-scaling-20261006.md)。
+> **Loss scaling補充：** 六格corrected seed0只修更新／boundary，未改舊loss scaling。其後受控舊H100／GB200量測已證實漏除accumulation分母；真實1B TOFU對同DS explicit-mean reference舊完整／短組8／2倍、新版1／1倍。原autograd／DS bf16差異仍未解，不能称為所有梯度等價性通過。見[loss-scaling專文](loss-scaling-20261006.md)。
 
 **截至本次核對，已完成且有 runtime 證據使用 `ceil_epoch_and_sync_ds_boundary_v1` 的正式實驗，只有 2026-10-05 GB200 上兩模型 × 三 splits 的六格 corrected seed0。既有 H100／Ada NPO reproduction 和 safety 的 Llama-3.1-8B NPO 報告都沒有套用這項訓練修正。Safety 文件中的 `aggregate.corrected.json` 是評估修復，不是更新次數修正。**
 
@@ -55,6 +55,7 @@ NPO objective、beta／alpha／gamma、既有 loss scaling、套件版本保持�
 | October GB200 原版六格 seed0 | **未套用** | [原版六格報告](reports/GB200-NPO-Matrix-2026-10-05.md)；保留原停止與 accumulation 行為。 |
 | October GB200 原版兩模型 forget01 seeds1／2，合併原 seed0 | **未套用** | [follow-up 報告](reports/GB200-NPO-Followup-2026-10-05.md) 中三 seed 統計僅使用原版，不能混入 corrected seed0。 |
 | October GB200 兩模型 × forget01／05／10，corrected seed0 | **已套用並驗證，共六個 full runs** | `corrected=true`，policy 與實際 Trainer=DS=forced 計數均保存；兩模型為 Llama-2-7b-chat-hf、Llama-3.2-1B-Instruct。 |
+| October 6 GB200 新版native 1B × forget01／05／10，seed0 | **未套本地policy；新版原生修正已實測，共三個full runs** | TF5.5.4／Accel1.13.0／DS0.15.4原生更新與平均；Trainer=DS20／70／130、epoch10。`corrected=false`仅表示沒有legacy probe；不能解讀為舊scaling。完整證據見[新版驗證](environment-gradient-validation-20261006.md)。 |
 | October corrected smoke4 | **已套用；非 full run** | 真實 partial-group 門檻測試，不納入正式指標表。 |
 | 已提交兩 GB200 workload | **沒有可分類的完成結果** | 1 GPU hard quota 阻止執行；Pending 不算 reproduction，也不算修正驗證。 |
 

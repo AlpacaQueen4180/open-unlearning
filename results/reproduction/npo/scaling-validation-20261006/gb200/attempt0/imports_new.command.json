@@ -1,0 +1,5 @@
+[
+  "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+  "-c",
+  "import torch,transformers,accelerate,deepspeed,peft,flash_attn,bitsandbytes; print(torch.__version__,transformers.__version__,accelerate.__version__,deepspeed.__version__,peft.__version__); assert transformers.__version__==\"5.5.4\" and accelerate.__version__==\"1.13.0\""
+]

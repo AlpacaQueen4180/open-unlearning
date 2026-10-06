@@ -1,0 +1,90 @@
+{
+  "versions": {
+    "torch": "2.7.0a0+ecf3bae40a.nv25.02",
+    "transformers": "4.51.3",
+    "accelerate": "0.34.2",
+    "deepspeed": "0.15.4"
+  },
+  "gpu": "NVIDIA GB200",
+  "world_size": 1,
+  "gas": 4,
+  "window": 1,
+  "term": "combined",
+  "dtype": "fp32",
+  "unequal_tokens": false,
+  "model": "fixed tiny Llama (2 layers, hidden32)",
+  "model_accepts_loss_kwargs": true,
+  "num_items_in_batch": null,
+  "accelerator_gas": 1,
+  "engine_gas": 4,
+  "engine_override_scale_wrt_gas": null,
+  "legacy_tail_boundary_forced": true,
+  "clipping": 0,
+  "optimizer_lr": 0,
+  "engine_updates": 1,
+  "engine_backward_trace": [
+    {
+      "loss_to_engine": 18.145734786987305,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": true
+    }
+  ],
+  "vs_mean_microbatch_objective": {
+    "norm_ratio": 0.9999999953048232,
+    "projected_scale": 0.9999999953048179,
+    "cosine": 0.9999999999999947,
+    "relative_error": 9.41004971658794e-08,
+    "relative_error_after_scale": 9.398329019418959e-08,
+    "reference_norm": 14.040058588991277,
+    "observed_norm": 14.040058523070721
+  },
+  "vs_large_batch_objective": {
+    "norm_ratio": 0.9999999953048232,
+    "projected_scale": 0.9999999953048179,
+    "cosine": 0.9999999999999947,
+    "relative_error": 9.41004971658794e-08,
+    "relative_error_after_scale": 9.398329019418959e-08,
+    "reference_norm": 14.040058588991277,
+    "observed_norm": 14.040058523070721
+  },
+  "mean_micro_vs_large": {
+    "norm_ratio": 1.0,
+    "projected_scale": 1.0,
+    "cosine": 1.0,
+    "relative_error": 0.0,
+    "relative_error_after_scale": 0.0,
+    "reference_norm": 14.040058588991277,
+    "observed_norm": 14.040058588991277
+  },
+  "gradient_sha256": "549971733ef94fbb9765dbf45f0005cc584069dac5c4d148c91f6d6810511ca1",
+  "parameter_names": [
+    "model.embed_tokens.weight",
+    "model.layers.0.self_attn.q_proj.weight",
+    "model.layers.0.self_attn.k_proj.weight",
+    "model.layers.0.self_attn.v_proj.weight",
+    "model.layers.0.self_attn.o_proj.weight",
+    "model.layers.0.mlp.gate_proj.weight",
+    "model.layers.0.mlp.up_proj.weight",
+    "model.layers.0.mlp.down_proj.weight",
+    "model.layers.0.input_layernorm.weight",
+    "model.layers.0.post_attention_layernorm.weight",
+    "model.layers.1.self_attn.q_proj.weight",
+    "model.layers.1.self_attn.k_proj.weight",
+    "model.layers.1.self_attn.v_proj.weight",
+    "model.layers.1.self_attn.o_proj.weight",
+    "model.layers.1.mlp.gate_proj.weight",
+    "model.layers.1.mlp.up_proj.weight",
+    "model.layers.1.mlp.down_proj.weight",
+    "model.layers.1.input_layernorm.weight",
+    "model.layers.1.post_attention_layernorm.weight",
+    "model.norm.weight",
+    "lm_head.weight"
+  ],
+  "synthetic_input_sha256": "7ff9d2ccb59d605e6a44a98eff7ffd3b6222929906d3f2b04e17c4b00e65db82",
+  "frozen_batch_file": null,
+  "batch_offset": 0,
+  "rank": 0,
+  "distributed_input_policy": "identical fixed inputs on each rank; DS averaging compared with identical local reference"
+}

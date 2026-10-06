@@ -1,0 +1,14 @@
+{
+  "evidence_download": "unavailable",
+  "phase": "RUNNING",
+  "completed_new_gradient_cases": 15,
+  "action": "No restart or extra snapshot; defer completed numeric evidence retrieval to next heartbeat",
+  "current": "new_real1b_TOFU_w2_combined_bf16",
+  "snapshot_succeeded": true,
+  "errors": [
+    "WebSocket EOF",
+    "cluster-api/status TLS handshake timeout"
+  ],
+  "download_attempts": 2,
+  "heartbeat_utc": "2026-10-06T01:33:51.515Z"
+}

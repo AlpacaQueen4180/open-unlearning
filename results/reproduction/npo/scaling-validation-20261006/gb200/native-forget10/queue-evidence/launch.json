@@ -1,0 +1,8 @@
+{
+  "pid": 34711,
+  "launched_utc": "2026-10-06T01:54:38.998719+00:00",
+  "task": "/data/npo-gb200-20261004/validation-20261006-r2",
+  "source_checkpoint": "/data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint",
+  "helper_sha256": "48bfb74f380a8a52efcbd298cbaf51f1b6b6a83029c953a6035fd1be7f4aabbc",
+  "eval_source_sha256": "acd98144cada6f02dea329bb78c77e317bd651d16fabbb576796253ae6c4ec7b"
+}

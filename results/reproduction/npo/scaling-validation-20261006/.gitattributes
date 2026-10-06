@@ -1,0 +1,2 @@
+# Preserve original downloaded bytes so remote SHA256 survives Git checkout.
+* -text

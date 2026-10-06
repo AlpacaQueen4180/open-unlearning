@@ -1,0 +1,150 @@
+[
+  {
+    "file": "checkpoint-verification.json",
+    "sha256": "1c065d7c403185c553a7f76ebfdc2f496613cda2bb2fcc51dae3392b2eb962cb"
+  },
+  {
+    "file": "accelerate.yaml",
+    "sha256": "46b93ace1eca7c657133ad5775cd3e6e7fa30d4f6dffc73244bbb01d31df47de"
+  },
+  {
+    "file": "deepspeed.json",
+    "sha256": "8479c29a9f76b62ae9380f88a89cd4b810530f4b723daf4dfc25fd01db05163e"
+  },
+  {
+    "file": "evaluating_command.json",
+    "sha256": "1758402d28cbb9ad6d1a3d656c8361980f3c9de031af69ba501068deaceb40ae"
+  },
+  {
+    "file": "training.log",
+    "sha256": "79d94bb52584ad2ef9379ae2239f2a89db923faa44a0ec256c926043cc64e4df"
+  },
+  {
+    "file": "evaluating.log",
+    "sha256": "7113d0064e3606f52c7fb0399d16330ebad5e175409b18bb8309ae563aea37b9"
+  },
+  {
+    "file": "auditing.log",
+    "sha256": "adadfa6f5e1ae164e16b1369bf3cfaf22f5d8924cd070123a9941e430c3061d1"
+  },
+  {
+    "file": "status.json",
+    "sha256": "bf545340b4fd3239d2c59f430bfa193daabfd962f7928f6d26e69cbc7859e0a6"
+  },
+  {
+    "file": "training_command.json",
+    "sha256": "d5c705fcc2dc97c33c1d47d2edbfd5a752e565f0da72c3348e2789695c5009b6"
+  },
+  {
+    "file": "auditing_command.json",
+    "sha256": "1b7b9ee32ca03f0fec94f6453f60aa115ecd41a47b9eabefcafb5015df4e7f3a"
+  },
+  {
+    "file": "checkpoint/runtime_final_rank0.json",
+    "sha256": "9712a3ba982a5f91ad6815a4eb2f20391cae4f43c9fb0f16edb24d11f0bdd2e3"
+  },
+  {
+    "file": "checkpoint/config.json",
+    "sha256": "50a6f6072a506dc5d0e89dd0d6ce44fe937144c80743d612d86039f6d325e8b5"
+  },
+  {
+    "file": "checkpoint/trainer_state.json",
+    "sha256": "9b98766fa0835994eb06dcc4a57f1b30acb110e78495901ffa20c8ae728c5e7d"
+  },
+  {
+    "file": "checkpoint/runtime_rank0.json",
+    "sha256": "78af9aaf350b054af87bebbf5a8911e9fd34d89ba0430e4d8297e6a70469ee94"
+  },
+  {
+    "file": "checkpoint/tokenizer.json",
+    "sha256": "6b9e4e7fb171f92fd137b777cc2714bf87d11576700a1dcd7a399e7bbe39537b"
+  },
+  {
+    "file": "checkpoint/generation_config.json",
+    "sha256": "f3ca7634497fde7c88d1aa0e861cfeb2eed64f547eb60dc763dca6cad2cde3ad"
+  },
+  {
+    "file": "checkpoint/tokenizer_config.json",
+    "sha256": "85795daec85614d3918187e7bd6d3548a0de064dc66e365db30bdea9d7b71dc3"
+  },
+  {
+    "file": "eval/eval.log",
+    "sha256": "af868651f7a9592b57b6dbb64f29d67b1e30bbecc0128b812226bf7846099309"
+  },
+  {
+    "file": "eval/TOFU_EVAL.json",
+    "sha256": "e6da6bd3407d63d4681c73c37bd6f30eb672c2b98cea5a6713060ae13ebfe05d"
+  },
+  {
+    "file": "eval/TOFU_SUMMARY.json",
+    "sha256": "a07dab091a6155afc8b6fa35d1469e6b493ab74ee9e010ed014c9128bc44c075"
+  },
+  {
+    "file": "eval/.hydra/overrides.yaml",
+    "sha256": "926edb5abf3f3a5a2f9fd4603d8e71c4ab7b7d2822305980a1f9fae4780d90a2"
+  },
+  {
+    "file": "eval/.hydra/hydra.yaml",
+    "sha256": "f6f82877046f698af86db1ff54a5f601010fedb0efb6be1b2d51660bde76ebf5"
+  },
+  {
+    "file": "eval/.hydra/config.yaml",
+    "sha256": "686a2fa1a36c1670ff386081c887241393c0d4847c63c0dbd7d99423356bd9e9"
+  },
+  {
+    "file": "retain-reference.json",
+    "sha256": "ed70b06a33be580fa24ed730911aa2fc4213a9516167093fdb4b2786a442cc39"
+  },
+  {
+    "file": "queue-evidence/launch.json",
+    "sha256": "12594bc179f34c9d3aeea4442935d320d03ed13d86dcb25898f096cec9d273ec"
+  },
+  {
+    "file": "queue-evidence/recover_native_1b_forget01_evaluation.log",
+    "sha256": "534b2d72b2636dd9c28494cddb885a3fa00032dba0b5fe33fd28611794f61f59"
+  },
+  {
+    "file": "queue-evidence/native_1b_forget10.log",
+    "sha256": "86ee7b950699f83c9e8eb64bdbbd4635b8515695421538dae0e434e623ef5319"
+  },
+  {
+    "file": "queue-evidence/audit_native_1b_forget01.log",
+    "sha256": "14fe80ac73fe7bacf6a9730a855ace7ccf92d0283bd81e8ef40ab3b2780782b1"
+  },
+  {
+    "file": "queue-evidence/native_1b_forget10.command.json",
+    "sha256": "96affb14aafc74fc2c39ce6251e4549192c1697df6e5f8f201d23063843621fd"
+  },
+  {
+    "file": "queue-evidence/recover_native_1b_forget01_evaluation.command.json",
+    "sha256": "3f6c0095dc74fd9eabd74d787c07aa233a4dc755d6b373442a86ea869912b396"
+  },
+  {
+    "file": "queue-evidence/native_1b_forget05.log",
+    "sha256": "01161e008c3de6ffa646c5c13c1a969e0a6d25281e0a236481c91f923d65992a"
+  },
+  {
+    "file": "queue-evidence/audit_native_1b_forget01.command.json",
+    "sha256": "08cf320e2d1f51dbdf117b84eeb8d3f6b98c19faa61a6b4594bffbc0fcd26cb0"
+  },
+  {
+    "file": "queue-evidence/compatibility.json",
+    "sha256": "62ad707056369e4e0f3ff78d0c6850236a2cd120148000192cd8495cfb930f5c"
+  },
+  {
+    "file": "queue-evidence/checkpoint-forget01-verification.json",
+    "sha256": "2e08e99195b22ec13470938cde7586d985bc0df9af9b3d490e42db15d0f35fcf"
+  },
+  {
+    "file": "queue-evidence/status.json",
+    "sha256": "1b2d9c9e0929455fb4eee9313f991dace8bc610e9d99780c22fa0209bee9b2c3"
+  },
+  {
+    "file": "queue-evidence/queue.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "queue-evidence/native_1b_forget05.command.json",
+    "sha256": "d9090935c305400e17b5604260e19b9f215e4073878f7c1c6b1fc972acd3e744"
+  }
+]

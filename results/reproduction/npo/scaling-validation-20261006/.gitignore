@@ -1,0 +1,11 @@
+# Gradient vectors and frozen tokenized data stay on experiment hosts.
+!*.log
+!/gb200/as-run/upstream-runtime/src/evals/
+!/gb200/as-run/upstream-runtime/src/evals/**
+*.pt
+*.zip
+raw/
+# Duplicate failure evidence is published under a shorter mapped path.
+/gb200/attempt1/experiments/
+# Tokenizer weights/config are available in the pinned model; no large asset copy.
+/gb200/native-forget10/checkpoint/tokenizer.json

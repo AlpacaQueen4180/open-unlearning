@@ -1,0 +1,7 @@
+{
+  "trainer_global_step": 20,
+  "microsteps": 100,
+  "epoch": 10.0,
+  "engine_global_steps": 20,
+  "engine_micro_steps": 20
+}

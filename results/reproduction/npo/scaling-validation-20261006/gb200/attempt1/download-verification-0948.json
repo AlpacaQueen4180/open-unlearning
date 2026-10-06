@@ -1,0 +1,372 @@
+[
+  {
+    "file": "new_real1b_TOFU_w8_retain_bf16.json",
+    "sha256": "284d752c472e470500a64471b1d197a02f3c8160326cc996b256a3356d96b24a",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w2_combined_bf16.log",
+    "sha256": "dcf67ee9c9f98d47dcf7291e4310c043daf4c745c9fbb19481652ec8b293b18c",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w8_retain_bf16.log",
+    "sha256": "f25ee834fbcd06c5d656f26495f34a5ce487c3b7e0909fe100e783c2b2d80062",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "queue.log",
+    "sha256": "b56eaa43a822de88edcbc7e5e2e1cc7f13cd239ee3b86803c890c10d571c3fec",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w8_combined_bf16.command.json",
+    "sha256": "10620dd5d9c0e2ddb645d8198eb7e3ba385dfd4ad9a07d544ca3761b02966b36",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w2_forget_bf16.json",
+    "sha256": "61de15f14d41cadc2b28e570997708e7e71ff7cc7e4849a55964233ccec2961d",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w2_combined_bf16.command.json",
+    "sha256": "3290da630a7f4c7b9bfbeb1a53fe666ead2effaf9ca4d4682372a72bd68b60f5",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_w8_combined_bf16.json",
+    "sha256": "d26db0ba2cc4b5a4c6960b0e345ba22fccc241e5973b4df87dc2b2669e4f6380",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_w8_combined_bf16.json",
+    "sha256": "a73f10bcca228a8ecbfa0d27234327c6500821e10f83e42b7df6da0508665f0f",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_w2_combined_bf16.json",
+    "sha256": "ff2a22d58957bc830d73c63ed4b4b9317a7029c14326ab9f929d345be35e1829",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w2_forget_bf16.log",
+    "sha256": "60889f25af417008abbec5a9198855948031d0a4e4532f825a61f1edf649aa29",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w8_combined_bf16.log",
+    "sha256": "94e8fc0d3122c1895585eb0dad440bdbaa4a55f8d6391572301c16b7068e8ea9",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_w8_combined_bf16.command.json",
+    "sha256": "2591a11acde6a471455441e551edcd9a7615fea2591b1b71d50b132675022959",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w2_combined_bf16.command.json",
+    "sha256": "05752f4196f1a2d272103c00e11a1499ffaba29ca9c453206daa9d138822ec95",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "native_1b_forget01.log",
+    "sha256": "9075484faf7c2104cee7bfb0f968014b9027436c3c71a202b2344ee6b4ab3198",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w8_forget_bf16.log",
+    "sha256": "fd0dbc4c15b083eb48ad0debb1f4258b4e6cf60f482bcf104368b9cc4d26fd89",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w2_retain_bf16.command.json",
+    "sha256": "321998ca4fe2aa1cf533df86d04e6571ae4403b939fd2b7273c7ebf8d623fc94",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "constraints.txt",
+    "sha256": "b7180574a71c75151d9ded69ab2f9083ffd4f7e2d23272e62b733e2a6003dc42",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w8_forget_bf16.log",
+    "sha256": "ec96607df81723cb9fec43e0849c0b62bfb13faeefd32d6debb640fcafcb7d9f",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w8_retain_bf16.json",
+    "sha256": "f9b44b528c04bf11c9b26b1f66719297e9937bf3c72f1cc14c31001c89d8cff5",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w2_combined_bf16.log",
+    "sha256": "5235a8b81c3ec5acd9073da4390f66f55ba68cc2f0a4650e723a0c48dbb3b9dd",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w8_forget_bf16.command.json",
+    "sha256": "6eddf2bde4eb71eec869646cbcb2c43de825cca9eea18aeedaf22ee8b97ba407",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_w2_combined_bf16.json",
+    "sha256": "f4a21e022a5aa47f59ea9ba573f160674379614146c811ec633c0ece9701b103",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w2_forget_bf16.command.json",
+    "sha256": "72bcd9924240cc806e1e0d3af53f8b6d3477f9e5e6e0d1591ebf4e3b23272d4c",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w2_retain_bf16.json",
+    "sha256": "2b317197fb0317311b95d14aae8bc75c9a064fc0a99cb0f55b70e602d15cd5d0",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_w2_combined_bf16.command.json",
+    "sha256": "d1d59f57ba456751daa503093740ae6bbeeb56f3a541bf6d66d15db95215e6bd",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w8_combined_bf16.json",
+    "sha256": "f577b7808e86b0bfb8718ac0f61db2d2759487b9e3b9b45ada0e805fb6188f3f",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w2_forget_bf16.json",
+    "sha256": "042d7a3a8634a485c3f1ab36ac9758e86bbe3228e5809d1286b78c229469fa5e",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w8_retain_bf16.log",
+    "sha256": "39fe6c1d946f35de1f8cd63fc9ace89645a27a5bddf8ea790a39bfdeffc6a382",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w2_retain_bf16.log",
+    "sha256": "df47d51382aeda2c0740f68131e5512794ee74c974799c8a02026687537b4f02",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_w8_combined_bf16.log",
+    "sha256": "09a8481be52b42f2f8d763f50df12e5ecf621adf3106eb9e8fa556052b788898",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_w2_combined_bf16.command.json",
+    "sha256": "5544681c3dd2626c181e1c2a6835fe90d299589146c919f9f66bdb81f6ac4a81",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w2_forget_bf16.command.json",
+    "sha256": "b53f00a2fa4e9249c609a66c9482d94e44c412cc7cca899b464aaa60810e1217",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w2_combined_bf16.json",
+    "sha256": "af30ab89549087e34615a8092637c615cd0918e283121d2199297364930b0b48",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w8_retain_bf16.command.json",
+    "sha256": "67336e9e7f88e50c32622f284bf92d0589b381fc9ff95ea0d6d1094fd94d70e3",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "launch.json",
+    "sha256": "bd895170e712e9d2453f4523fd457a17a1f17625e4da1ec245c2ebf226793e9c",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w2_combined_bf16.json",
+    "sha256": "b6f1adda3c9dff167f129e4982f82de862f3591d45641eae8347a1f07d27fd84",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w2_forget_bf16.log",
+    "sha256": "89ced2555ccceb7dfa75963143ca82fa2d7d6fd68e693686fba683e6bcad61d3",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "status.json",
+    "sha256": "e4fd730d9c12befc25dbddaf6aebd88eee987301dd9293a22bba031a2fae08c3",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_w2_combined_bf16.log",
+    "sha256": "c8a3a2904eb680afddadd75f3beeff62c97734da7b579a65b25cc173f3992094",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_w8_combined_bf16.command.json",
+    "sha256": "0163606bd674ee10b6132415135a9ad4753a401ef42790f012206a66b2080ec3",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w8_combined_bf16.json",
+    "sha256": "117e5f04f943a5958530ae706fee70d0e085d629910e6ec5b0e4446d4f5a5ffb",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w8_combined_bf16.log",
+    "sha256": "4c5e878c57692860c44777d86368939ceb128574fc17c86e441c6ea2cd1ffa56",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w8_forget_bf16.command.json",
+    "sha256": "27cc8784c4fc6c73b47272057fb612c42af6a2791b4caa095ef7fe6f5bc60c23",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_w8_combined_bf16.log",
+    "sha256": "f095c45a1b0f17142eb7e9709fc62d1b7e9fbf1c298d90d5fd21e9efd4ddc63e",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w2_retain_bf16.log",
+    "sha256": "7a615beaadb4a6a19ec30eb4b579c13d9c00dc0e12590eac3c40b1ea0d01708f",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w8_combined_bf16.command.json",
+    "sha256": "03b53182f23509d2ba1c875123d125ab98fd2e8f347afe8b81cf77f27026dec8",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w8_forget_bf16.json",
+    "sha256": "6b5e6d612311aa89a54c88c5085ed8c2cc04f6f9aaff4a1dabb7b0cbda99de90",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w2_retain_bf16.command.json",
+    "sha256": "91d8fe84b76b1cdd83eda547a89db1889e663f7f513596cbe414d0b10884dc3e",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w2_retain_bf16.json",
+    "sha256": "c7b40ad66a2b5522fb7d842b081367039c5f15ce07d3a1ece226b6323d1a3f08",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "native_1b_forget01.command.json",
+    "sha256": "6046aadeb3fc863fabaa3d806c01e8f1917e81a0ba248c519b033ea13752e2ab",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_TOFU_w8_forget_bf16.json",
+    "sha256": "2a65c185dabd904bc06f3a75850ccf3ba304063246ced19d8f23b3bfc66ebb9a",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "old_real1b_w2_combined_bf16.log",
+    "sha256": "9ceef8ae66971a503364d7a296dc420e757c09be4a52649d2c06e97f6b547dcf",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "new_real1b_TOFU_w8_retain_bf16.command.json",
+    "sha256": "4eb8f717d31c46b04fbcb12a55464cb5de129b41516c2b7705af43c9842131cf",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/evaluating.log",
+    "sha256": "f1425ba924986a0f6ffbe39ac6af55efa4ae2b86ddeb5772865cb1433585cc14",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/training.log",
+    "sha256": "d0e1252e4ec9f804a9ae340d0fa7198d7396f1ca7401d2d1bfa6bb05cdac5512",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/status.json",
+    "sha256": "392926e11abe54597371a41fdb556ca159965b17de377ea2abbe46923816bad2",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/evaluating_command.json",
+    "sha256": "3acf6182c2ccae6a92f7eefad5c0e3f322eb1e45fc50338af7f23e21da972ecf",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/training_command.json",
+    "sha256": "9cf7eaa8dc90caf553bdf02a9c595f280b3cf1a44b375844b7ffe941135784a9",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/deepspeed.json",
+    "sha256": "8479c29a9f76b62ae9380f88a89cd4b810530f4b723daf4dfc25fd01db05163e",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/accelerate.yaml",
+    "sha256": "002ea30fbf337959377c4b2221236187e833731c60ad376d884d2cb6fb0a16a0",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval/eval.log",
+    "sha256": "a3e46c260f6c62a3d46908bf127ae7187185c3d94302c74b1d139e16e3dc73f8",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/trainer_state.json",
+    "sha256": "9f1d453faa2c7a74ad2c7165e00aaa9dbcad3863650a64d995b56c48ebb86c8a",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/generation_config.json",
+    "sha256": "f3ca7634497fde7c88d1aa0e861cfeb2eed64f547eb60dc763dca6cad2cde3ad",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/runtime_rank0.json",
+    "sha256": "88086fc8f715d16bb4a93619c611b8b3e440e0b4e15a6e93dcbc890e0ded6a6a",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/tokenizer_config.json",
+    "sha256": "85795daec85614d3918187e7bd6d3548a0de064dc66e365db30bdea9d7b71dc3",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/config.json",
+    "sha256": "50a6f6072a506dc5d0e89dd0d6ce44fe937144c80743d612d86039f6d325e8b5",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/checkpoint/runtime_final_rank0.json",
+    "sha256": "7600b341185453310aabe35045f07ecfa118dacf8ba1816aa91c9f81c38490d0",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval/.hydra/overrides.yaml",
+    "sha256": "a124fab552d46512ab73ee40f4ab290bd3352eb5bf215c9f713b768aeed0002a",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval/.hydra/config.yaml",
+    "sha256": "8f5a37ac8b6ff4f88200fb65d957d5832901433728fd42d27f3895df27e23b58",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval/.hydra/hydra.yaml",
+    "sha256": "834a3267b647bd0e285484a9fdb941891d8f52e9da84bdb20534d04fea8ec50e",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "tofu-frozen-40.json",
+    "sha256": "3d1735dbfebf77c33c62a565e573c4282d78302d87edb14b764d411da59558fe",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "source-eval-utils.py",
+    "sha256": "650f30143228e14cc47b70704b66a4425fe03d8d9cfab0ae315602041bb7d89c",
+    "remote_file_sha_verified": true
+  },
+  {
+    "file": "remote-inspection.json",
+    "sha256": "fb4a3814c76328b5d8b80418c0d0a6fcf439ca98164d3ee50220f4b6f877fb7a",
+    "remote_file_sha_verified": false
+  }
+]

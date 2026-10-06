@@ -1,0 +1,50 @@
+{
+  "model": "Llama-3.2-1B-Instruct",
+  "split": "forget05",
+  "seed": 0,
+  "phase": "DONE",
+  "stack": "native TF5.5.4/Accel1.13.0/DS0.15.4; evaluator serialization casts",
+  "summary": {
+    "forget_quality": 0.2704743832803917,
+    "model_utility": 0.4780954413862153,
+    "forget_truth_ratio": 0.6972605670331073
+  },
+  "ks_D": 0.1,
+  "samples": [
+    200,
+    200
+  ],
+  "independent_deltas": {
+    "forget_quality": 0.0,
+    "model_utility": 5.551115123125783e-17,
+    "forget_truth_ratio": 0.0
+  },
+  "ks_method": "two-sided exact integer lattice-path probability",
+  "runtime": {
+    "trainer_global_step": 70,
+    "microsteps": 500,
+    "epoch": 10.0,
+    "engine_global_steps": 70,
+    "engine_micro_steps": 70
+  },
+  "checkpoint_proof": {
+    "checkpoint": "/data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r2_1b_forget05/checkpoint",
+    "weights_bytes": 2471645608,
+    "tensor_count": 146,
+    "weights_sha256": "71334507c2bd339eb3e7af2e173036edee7b7049a695a810014edc5175de1d62",
+    "counts": {
+      "trainer_global_step": 70,
+      "microsteps": 500,
+      "epoch": 10.0,
+      "engine_global_steps": 70,
+      "engine_micro_steps": 70
+    },
+    "header_and_required_layers_complete": true
+  },
+  "delta_docs": {
+    "forget_quality": 0.13047438328039168,
+    "model_utility": 0.02809544138621528,
+    "forget_truth_ratio": -0.0027394329668926076
+  },
+  "reference_sha256": "88a1ae92c3fa1feecee18154dc1c5c524ab55a711c11a89ab64cd0cb5bac916d"
+}

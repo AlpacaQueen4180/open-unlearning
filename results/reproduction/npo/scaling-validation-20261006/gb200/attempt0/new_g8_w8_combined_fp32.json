@@ -1,0 +1,139 @@
+{
+  "versions": {
+    "torch": "2.7.0a0+ecf3bae40a.nv25.02",
+    "transformers": "5.5.4",
+    "accelerate": "1.13.0",
+    "deepspeed": "0.15.4"
+  },
+  "gpu": "NVIDIA GB200",
+  "world_size": 1,
+  "gas": 8,
+  "window": 8,
+  "term": "combined",
+  "dtype": "fp32",
+  "unequal_tokens": false,
+  "model": "fixed tiny Llama (2 layers, hidden32)",
+  "model_accepts_loss_kwargs": true,
+  "num_items_in_batch": null,
+  "accelerator_gas": 1,
+  "engine_gas": 8,
+  "engine_override_scale_wrt_gas": null,
+  "legacy_tail_boundary_forced": false,
+  "clipping": 0,
+  "optimizer_lr": 0,
+  "engine_updates": 1,
+  "engine_backward_trace": [
+    {
+      "loss_to_engine": 2.268216848373413,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 2.2659173011779785,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 2.2640345096588135,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 2.264112949371338,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 2.2654619216918945,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 2.2665088176727295,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 2.2677605152130127,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 2.2644615173339844,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": true
+    }
+  ],
+  "vs_mean_microbatch_objective": {
+    "norm_ratio": 1.0000000024197222,
+    "projected_scale": 1.0000000024197198,
+    "cosine": 0.9999999999999973,
+    "relative_error": 5.867830778050462e-08,
+    "relative_error_after_scale": 5.862839549088417e-08,
+    "reference_norm": 11.28344915881318,
+    "observed_norm": 11.283449186115995
+  },
+  "vs_large_batch_objective": {
+    "norm_ratio": 0.9999999988364959,
+    "projected_scale": 0.9999999988364622,
+    "cosine": 0.9999999999999662,
+    "relative_error": 2.3652577504319483e-07,
+    "relative_error_after_scale": 2.3652291317708572e-07,
+    "reference_norm": 11.283449199244334,
+    "observed_norm": 11.283449186115995
+  },
+  "mean_micro_vs_large": {
+    "norm_ratio": 0.9999999964167736,
+    "projected_scale": 0.9999999964167422,
+    "cosine": 0.9999999999999686,
+    "relative_error": 2.3385256478283574e-07,
+    "relative_error_after_scale": 2.3382511063726317e-07,
+    "reference_norm": 11.283449199244334,
+    "observed_norm": 11.28344915881318
+  },
+  "gradient_sha256": "8e599f5cc0fe35e60247b5c2197b2f329566c4cfbf8766799840075bde620844",
+  "parameter_names": [
+    "model.embed_tokens.weight",
+    "model.layers.0.self_attn.q_proj.weight",
+    "model.layers.0.self_attn.k_proj.weight",
+    "model.layers.0.self_attn.v_proj.weight",
+    "model.layers.0.self_attn.o_proj.weight",
+    "model.layers.0.mlp.gate_proj.weight",
+    "model.layers.0.mlp.up_proj.weight",
+    "model.layers.0.mlp.down_proj.weight",
+    "model.layers.0.input_layernorm.weight",
+    "model.layers.0.post_attention_layernorm.weight",
+    "model.layers.1.self_attn.q_proj.weight",
+    "model.layers.1.self_attn.k_proj.weight",
+    "model.layers.1.self_attn.v_proj.weight",
+    "model.layers.1.self_attn.o_proj.weight",
+    "model.layers.1.mlp.gate_proj.weight",
+    "model.layers.1.mlp.up_proj.weight",
+    "model.layers.1.mlp.down_proj.weight",
+    "model.layers.1.input_layernorm.weight",
+    "model.layers.1.post_attention_layernorm.weight",
+    "model.norm.weight",
+    "lm_head.weight"
+  ],
+  "synthetic_input_sha256": "e1aa8afaa388e35d94b7930ddf535cba9bb59d58a0b8bec86e4ab7764970db4a",
+  "frozen_batch_file": null,
+  "batch_offset": 0,
+  "rank": 0,
+  "distributed_input_policy": "identical fixed inputs on each rank; DS averaging compared with identical local reference"
+}

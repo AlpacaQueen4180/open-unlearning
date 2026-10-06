@@ -1,0 +1,130 @@
+[
+  {
+    "file": "evaluating.log",
+    "sha256": "f1425ba924986a0f6ffbe39ac6af55efa4ae2b86ddeb5772865cb1433585cc14"
+  },
+  {
+    "file": "training.log",
+    "sha256": "d0e1252e4ec9f804a9ae340d0fa7198d7396f1ca7401d2d1bfa6bb05cdac5512"
+  },
+  {
+    "file": "status.json",
+    "sha256": "fa6eccfd5296176ffa6eab2de9133fc772e4c18e34419da622fa8b293f1dea50"
+  },
+  {
+    "file": "evaluating_command.json",
+    "sha256": "3acf6182c2ccae6a92f7eefad5c0e3f322eb1e45fc50338af7f23e21da972ecf"
+  },
+  {
+    "file": "status.failed-evaluating-r1.json",
+    "sha256": "392926e11abe54597371a41fdb556ca159965b17de377ea2abbe46923816bad2"
+  },
+  {
+    "file": "training_command.json",
+    "sha256": "9cf7eaa8dc90caf553bdf02a9c595f280b3cf1a44b375844b7ffe941135784a9"
+  },
+  {
+    "file": "deepspeed.json",
+    "sha256": "8479c29a9f76b62ae9380f88a89cd4b810530f4b723daf4dfc25fd01db05163e"
+  },
+  {
+    "file": "accelerate.yaml",
+    "sha256": "002ea30fbf337959377c4b2221236187e833731c60ad376d884d2cb6fb0a16a0"
+  },
+  {
+    "file": "eval/eval.log",
+    "sha256": "a3e46c260f6c62a3d46908bf127ae7187185c3d94302c74b1d139e16e3dc73f8"
+  },
+  {
+    "file": "eval-recovered-r2/TOFU_SUMMARY.json",
+    "sha256": "6ff7ea715e502f47d5b3ad91f3f9317f241e64e214313e3c7e1d1ddf4f5906bf"
+  },
+  {
+    "file": "eval-recovered-r2/eval.log",
+    "sha256": "6b692ed92bc6517226045d63f854c6843440bac3c44781a98c6f4c598842338c"
+  },
+  {
+    "file": "eval-recovered-r2/TOFU_EVAL.json",
+    "sha256": "4a9a0652db1d74bc4c2f67822594379236bbc3b21a10f9b9e27de2a78a94709e"
+  },
+  {
+    "file": "checkpoint/trainer_state.json",
+    "sha256": "9f1d453faa2c7a74ad2c7165e00aaa9dbcad3863650a64d995b56c48ebb86c8a"
+  },
+  {
+    "file": "checkpoint/generation_config.json",
+    "sha256": "f3ca7634497fde7c88d1aa0e861cfeb2eed64f547eb60dc763dca6cad2cde3ad"
+  },
+  {
+    "file": "checkpoint/runtime_rank0.json",
+    "sha256": "88086fc8f715d16bb4a93619c611b8b3e440e0b4e15a6e93dcbc890e0ded6a6a"
+  },
+  {
+    "file": "checkpoint/tokenizer_config.json",
+    "sha256": "85795daec85614d3918187e7bd6d3548a0de064dc66e365db30bdea9d7b71dc3"
+  },
+  {
+    "file": "checkpoint/config.json",
+    "sha256": "50a6f6072a506dc5d0e89dd0d6ce44fe937144c80743d612d86039f6d325e8b5"
+  },
+  {
+    "file": "checkpoint/runtime_final_rank0.json",
+    "sha256": "7600b341185453310aabe35045f07ecfa118dacf8ba1816aa91c9f81c38490d0"
+  },
+  {
+    "file": "eval/.hydra/overrides.yaml",
+    "sha256": "a124fab552d46512ab73ee40f4ab290bd3352eb5bf215c9f713b768aeed0002a"
+  },
+  {
+    "file": "eval/.hydra/config.yaml",
+    "sha256": "8f5a37ac8b6ff4f88200fb65d957d5832901433728fd42d27f3895df27e23b58"
+  },
+  {
+    "file": "eval/.hydra/hydra.yaml",
+    "sha256": "834a3267b647bd0e285484a9fdb941891d8f52e9da84bdb20534d04fea8ec50e"
+  },
+  {
+    "file": "eval-recovered-r2/.hydra/overrides.yaml",
+    "sha256": "e9a4f2e602f579798cdf07b54ca86da469e10579b817f4f90f70568c7d8db5c9"
+  },
+  {
+    "file": "eval-recovered-r2/.hydra/hydra.yaml",
+    "sha256": "baa0bc01087e1d265cecfb41de282333608c1c67bb607d6cbe673983c49d30e2"
+  },
+  {
+    "file": "eval-recovered-r2/.hydra/config.yaml",
+    "sha256": "b112f8d1542f6a978c2eaf8194f9cadebad97d23929cc2917732d83055bd5c2b"
+  },
+  {
+    "file": "checkpoint-forget01-verification.json",
+    "sha256": "2e08e99195b22ec13470938cde7586d985bc0df9af9b3d490e42db15d0f35fcf"
+  },
+  {
+    "file": "compatibility.json",
+    "sha256": "62ad707056369e4e0f3ff78d0c6850236a2cd120148000192cd8495cfb930f5c"
+  },
+  {
+    "file": "recover_native_1b_forget01_evaluation.command.json",
+    "sha256": "3f6c0095dc74fd9eabd74d787c07aa233a4dc755d6b373442a86ea869912b396"
+  },
+  {
+    "file": "recover_native_1b_forget01_evaluation.log",
+    "sha256": "534b2d72b2636dd9c28494cddb885a3fa00032dba0b5fe33fd28611794f61f59"
+  },
+  {
+    "file": "audit_native_1b_forget01.command.json",
+    "sha256": "08cf320e2d1f51dbdf117b84eeb8d3f6b98c19faa61a6b4594bffbc0fcd26cb0"
+  },
+  {
+    "file": "audit_native_1b_forget01.log",
+    "sha256": "14fe80ac73fe7bacf6a9730a855ace7ccf92d0283bd81e8ef40ab3b2780782b1"
+  },
+  {
+    "file": "eval-serialization-compatibility.patch",
+    "sha256": "240ed55149e79d146191590a1f51243a8e8fe5b07a720dab1a956b65217c5b40"
+  },
+  {
+    "file": "retain99-reference.json",
+    "sha256": "aa6a504c44487fe5174c1828e4c3bfe997de89856c95cba721dc833bbb37aee3"
+  }
+]

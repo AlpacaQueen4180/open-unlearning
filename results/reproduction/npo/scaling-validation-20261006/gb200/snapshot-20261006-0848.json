@@ -1,0 +1,12 @@
+{
+  "checked_utc": "2026-10-06T08:49:41.131759+08:00",
+  "status": null,
+  "launch": {
+    "pid": 18685,
+    "launched_utc": "2026-10-06T08:49:41.151906+08:00"
+  },
+  "queue_processes": [],
+  "gpu_pids": "",
+  "action": "launched",
+  "preflight_sha256": "72a6ebe80aeacbb7b75c28a3b6c6aeb3b98a343b10b053a26fbf50705997f6c0"
+}

@@ -1,0 +1,7 @@
+{
+  "pid": 26227,
+  "launched_utc": "2026-10-06T01:10:03.735786+00:00",
+  "source_evidence": "/data/npo-gb200-20261004/validation-20261006",
+  "task": "/data/npo-gb200-20261004/validation-20261006-r1",
+  "measurement_revision": "ds_explicit_mean_reference_v2"
+}

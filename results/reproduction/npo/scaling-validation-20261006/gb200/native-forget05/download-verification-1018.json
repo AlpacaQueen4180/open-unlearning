@@ -1,0 +1,94 @@
+[
+  {
+    "file": "checkpoint-verification.json",
+    "sha256": "0c826dfccdd3254a73cc0c9bcfa97a7996a8b8345bb02d4504cfc2c773d83e38"
+  },
+  {
+    "file": "training_command.json",
+    "sha256": "7dff617eb336000f69b6e666c30a4fd2deb3101bf2e2407ca8d476c5f80ccdfe"
+  },
+  {
+    "file": "auditing.log",
+    "sha256": "e0ae85462fb25e391f3bee2657eb6c39d1e414334d9e19a3de09e7294005e948"
+  },
+  {
+    "file": "auditing_command.json",
+    "sha256": "fe327f38c1e120103248354e159d918a0e4105f4ba1552613f207d50bf9f7fa2"
+  },
+  {
+    "file": "evaluating.log",
+    "sha256": "f503c272efbf095d87f84cb7b73921d0004a0c67080988370713cacb7455c0fc"
+  },
+  {
+    "file": "evaluating_command.json",
+    "sha256": "83d1ff0fc2ebdaa633844b860c8854ae3c6a7418f42508b9b7447728e4331bc5"
+  },
+  {
+    "file": "status.json",
+    "sha256": "a310d8696c4990c77832c8162d8cfc38335640d7c1c169adb0e233e32c6d22f3"
+  },
+  {
+    "file": "deepspeed.json",
+    "sha256": "8479c29a9f76b62ae9380f88a89cd4b810530f4b723daf4dfc25fd01db05163e"
+  },
+  {
+    "file": "accelerate.yaml",
+    "sha256": "6ae95cee710a2ca2cf7c26d44a115b1d2fe2367f3a8fed3dc97cad5f61663c66"
+  },
+  {
+    "file": "training.log",
+    "sha256": "2e701bcbd5e08bb0f3993a99d9309ff20d6f643c26d64faad1d9f91d96289898"
+  },
+  {
+    "file": "eval/eval.log",
+    "sha256": "c990ca0bc50d77d163adbb725e39b77a1f3c82d1a6dd154fcb5e58437367fe80"
+  },
+  {
+    "file": "eval/TOFU_SUMMARY.json",
+    "sha256": "ef19c13c7ffd4ea90b0c6a7142ad943b8cbe8f3ed92850b88cdc6f6d13f3552c"
+  },
+  {
+    "file": "eval/TOFU_EVAL.json",
+    "sha256": "1e9ddf411ff286eb4308d3d1f8d28336eef90af862881212ecdb1b302e89da05"
+  },
+  {
+    "file": "checkpoint/config.json",
+    "sha256": "50a6f6072a506dc5d0e89dd0d6ce44fe937144c80743d612d86039f6d325e8b5"
+  },
+  {
+    "file": "checkpoint/runtime_rank0.json",
+    "sha256": "ff9ef7ffb7f3414e44f0d64f33c77a28e87406b8ad0a7e1138234f3c3830375b"
+  },
+  {
+    "file": "checkpoint/generation_config.json",
+    "sha256": "f3ca7634497fde7c88d1aa0e861cfeb2eed64f547eb60dc763dca6cad2cde3ad"
+  },
+  {
+    "file": "checkpoint/tokenizer_config.json",
+    "sha256": "85795daec85614d3918187e7bd6d3548a0de064dc66e365db30bdea9d7b71dc3"
+  },
+  {
+    "file": "checkpoint/runtime_final_rank0.json",
+    "sha256": "8afa32e27e2bdd08f5234d00a035432ae74a038ee7bc947fc5128e73bc7c6cb4"
+  },
+  {
+    "file": "checkpoint/trainer_state.json",
+    "sha256": "ba53bd0f4294d811cb7513cef3772a20087e7a683a3d10812f7ec492f7978cd5"
+  },
+  {
+    "file": "eval/.hydra/config.yaml",
+    "sha256": "eea972c659e2bdd0b943c47d42482fa165ac40f4ce6a39596ef5ef19a3f2b25d"
+  },
+  {
+    "file": "eval/.hydra/overrides.yaml",
+    "sha256": "2aee1c139c66625b781e4f0685ad01ca072b143b6431246826f2d0f0c35ee42f"
+  },
+  {
+    "file": "eval/.hydra/hydra.yaml",
+    "sha256": "ae5f79e944cfd01e929442f1c42c8fea89d085763feb4bc5072530b90096ec42"
+  },
+  {
+    "file": "retain-reference.json",
+    "sha256": "88a1ae92c3fa1feecee18154dc1c5c524ab55a711c11a89ab64cd0cb5bac916d"
+  }
+]

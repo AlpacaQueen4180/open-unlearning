@@ -1,0 +1,109 @@
+{
+  "versions": {
+    "torch": "2.4.1+cu121",
+    "transformers": "4.51.3",
+    "accelerate": "0.34.2",
+    "deepspeed": "0.15.4"
+  },
+  "gpu": "NVIDIA H100 PCIe",
+  "world_size": 2,
+  "gas": 4,
+  "window": 4,
+  "term": "retain",
+  "dtype": "fp32",
+  "unequal_tokens": false,
+  "model": "fixed tiny Llama (2 layers, hidden32)",
+  "model_accepts_loss_kwargs": true,
+  "num_items_in_batch": null,
+  "accelerator_gas": 1,
+  "engine_gas": 4,
+  "engine_override_scale_wrt_gas": null,
+  "legacy_tail_boundary_forced": false,
+  "clipping": 0,
+  "optimizer_lr": 0,
+  "engine_updates": 1,
+  "engine_backward_trace": [
+    {
+      "loss_to_engine": 4.2827911376953125,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 4.2643938064575195,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 4.249331951141357,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 4.249960899353027,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": true
+    }
+  ],
+  "vs_mean_microbatch_objective": {
+    "norm_ratio": 4.000000002737578,
+    "projected_scale": 4.000000002737567,
+    "cosine": 0.999999999999997,
+    "relative_error": 3.0000000027375813,
+    "relative_error_after_scale": 2.605886845682799e-07,
+    "reference_norm": 1.0483625321284944,
+    "observed_norm": 4.193450131383952
+  },
+  "vs_large_batch_objective": {
+    "norm_ratio": 4.000000003898967,
+    "projected_scale": 4.000000003898909,
+    "cosine": 0.999999999999985,
+    "relative_error": 3.000000003898986,
+    "relative_error_after_scale": 6.727271579664171e-07,
+    "reference_norm": 1.048362531824105,
+    "observed_norm": 4.193450131383952
+  },
+  "mean_micro_vs_large": {
+    "norm_ratio": 1.0000000002903473,
+    "projected_scale": 1.0000000002903333,
+    "cosine": 0.999999999999986,
+    "relative_error": 1.5733720553056995e-07,
+    "relative_error_after_scale": 1.573369376539679e-07,
+    "reference_norm": 1.048362531824105,
+    "observed_norm": 1.0483625321284944
+  },
+  "gradient_sha256": "996b0d12bfca26c49568407cd7b342f5b71e01b0263f69f1620451e619c60397",
+  "parameter_names": [
+    "model.embed_tokens.weight",
+    "model.layers.0.self_attn.q_proj.weight",
+    "model.layers.0.self_attn.k_proj.weight",
+    "model.layers.0.self_attn.v_proj.weight",
+    "model.layers.0.self_attn.o_proj.weight",
+    "model.layers.0.mlp.gate_proj.weight",
+    "model.layers.0.mlp.up_proj.weight",
+    "model.layers.0.mlp.down_proj.weight",
+    "model.layers.0.input_layernorm.weight",
+    "model.layers.0.post_attention_layernorm.weight",
+    "model.layers.1.self_attn.q_proj.weight",
+    "model.layers.1.self_attn.k_proj.weight",
+    "model.layers.1.self_attn.v_proj.weight",
+    "model.layers.1.self_attn.o_proj.weight",
+    "model.layers.1.mlp.gate_proj.weight",
+    "model.layers.1.mlp.up_proj.weight",
+    "model.layers.1.mlp.down_proj.weight",
+    "model.layers.1.input_layernorm.weight",
+    "model.layers.1.post_attention_layernorm.weight",
+    "model.norm.weight",
+    "lm_head.weight"
+  ],
+  "synthetic_input_sha256": "bfcbcc5690a9cf5a35004d0b700d7f53cadda6e216c523bbcc1eded54fc14c35",
+  "rank": 1,
+  "distributed_input_policy": "identical fixed inputs on each rank; DS averaging compared with identical local reference"
+}

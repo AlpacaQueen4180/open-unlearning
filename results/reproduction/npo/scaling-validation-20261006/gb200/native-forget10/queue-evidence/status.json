@@ -1,0 +1,25 @@
+{
+  "phase": "DONE",
+  "pid": 34711,
+  "stages": [
+    {
+      "label": "recover_native_1b_forget01_evaluation",
+      "returncode": 0
+    },
+    {
+      "label": "audit_native_1b_forget01",
+      "returncode": 0
+    },
+    {
+      "label": "native_1b_forget05",
+      "returncode": 0
+    },
+    {
+      "label": "native_1b_forget10",
+      "returncode": 0
+    }
+  ],
+  "started": "2026-10-06T01:54:39.069949+00:00",
+  "current": "native_1b_forget10",
+  "finished": "2026-10-06T02:34:11.294606+00:00"
+}

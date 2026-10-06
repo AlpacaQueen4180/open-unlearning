@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/data/npo-gb200-20261004/repo/scripts/reproduction/npo/gb200/validate_new_environment.py", line 67, in <module>
+    run(label,[str(python),str(script),'--repo',str(repo),'--output',str(TASK/(label+'.json')),'--gas','8','--window',str(window),'--term','combined','--dtype','bf16','--model-path',str(modelpath)],env=env)
+  File "/data/npo-gb200-20261004/repo/scripts/reproduction/npo/gb200/validate_new_environment.py", line 29, in run
+    if result.returncode:raise RuntimeError(label+' failed; see saved log')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: old_real1b_w8_combined_bf16 failed; see saved log

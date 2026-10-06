@@ -1,0 +1,23 @@
+[
+  "/data/npo-gb200-20261004/venv/bin/python",
+  "-m",
+  "torch.distributed.run",
+  "--nproc_per_node=1",
+  "--master_port=29661",
+  "/data/npo-gb200-20261004/repo/scripts/reproduction/npo/gb200/gradient_audit.py",
+  "--repo",
+  "/data/npo-gb200-20261004/repo",
+  "--output",
+  "/data/npo-gb200-20261004/validation-20261006-r1/old_real1b_w8_combined_bf16.json",
+  "--gas",
+  "8",
+  "--window",
+  "8",
+  "--term",
+  "combined",
+  "--dtype",
+  "bf16",
+  "--model-path",
+  "/data/npo-gb200-20261004/hf/hub/models--open-unlearning--tofu_Llama-3.2-1B-Instruct_full/snapshots/88e31200b97e4c0c04ae0d2f0b591f427046d192",
+  "--ds-reference"
+]

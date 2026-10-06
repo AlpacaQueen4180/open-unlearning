@@ -1,0 +1,12 @@
+{
+  "input_class": "synthetic fixed tokens, tiny Llama",
+  "sha256": "72a6ebe80aeacbb7b75c28a3b6c6aeb3b98a343b10b053a26fbf50705997f6c0",
+  "projected_scale": 8.000000007505975,
+  "cosine": 0.9999999999999976,
+  "relative_error_after_dividing_projected_scale": 6.299642378320085e-08,
+  "world_size": 1,
+  "gas": 8,
+  "window": 8,
+  "engine_updates": 1,
+  "verified": true
+}

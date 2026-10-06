@@ -1,0 +1,14 @@
+[2026-10-06 01:38:04,759][evaluator][INFO] - Evaluations stored in the experiment directory: /data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval
+[2026-10-06 01:38:04,761][evaluator][INFO] - ***** Running TOFU evaluation suite *****
+[2026-10-06 01:38:04,762][evaluator][INFO] - Fine-grained evaluations will be saved to: /data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval/TOFU_EVAL.json
+[2026-10-06 01:38:04,762][evaluator][INFO] - Aggregated evaluations will be summarised in: /data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1/eval/TOFU_SUMMARY.json
+[2026-10-06 01:38:05,104][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:38:05,846][httpx][INFO] - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/locuslab/TOFU/locuslab/TOFU.py "HTTP/1.1 404 Not Found"
+[2026-10-06 01:38:06,046][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:38:06,246][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU/revision/324592d84ae4f482ac7249b9285c2ecdb53e3a68 "HTTP/1.1 200 OK"
+[2026-10-06 01:38:06,456][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/.huggingface.yaml "HTTP/1.1 404 Not Found"
+[2026-10-06 01:38:06,456][huggingface_hub.utils._http][WARNING] - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[2026-10-06 01:38:07,601][httpx][INFO] - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=locuslab/TOFU "HTTP/1.1 200 OK"
+[2026-10-06 01:38:07,806][httpx][INFO] - HTTP Request: GET https://huggingface.co/api/datasets/locuslab/TOFU/tree/324592d84ae4f482ac7249b9285c2ecdb53e3a68?recursive=false&expand=false "HTTP/1.1 200 OK"
+[2026-10-06 01:38:08,013][httpx][INFO] - HTTP Request: HEAD https://huggingface.co/datasets/locuslab/TOFU/resolve/324592d84ae4f482ac7249b9285c2ecdb53e3a68/dataset_infos.json "HTTP/1.1 404 Not Found"
+[2026-10-06 01:38:08,036][metrics][INFO] - Evaluating forget_Q_A_PARA_Prob

@@ -1,0 +1,9 @@
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 1661.86it/s]
+Traceback (most recent call last):
+  File "/data/npo-gb200-20261004/validation-20261006/upstream/scripts/reproduction/npo/gb200/run_experiment.py", line 138, in <module>
+    main()
+  File "/data/npo-gb200-20261004/validation-20261006/upstream/scripts/reproduction/npo/gb200/run_experiment.py", line 127, in main
+    execute(evaluation, "EVALUATING")
+  File "/data/npo-gb200-20261004/validation-20261006/upstream/scripts/reproduction/npo/gb200/run_experiment.py", line 83, in execute
+    raise RuntimeError(f"{name}: {phase} failed ({rc}); see {run}")
+RuntimeError: gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1: EVALUATING failed (1); see /data/npo-gb200-20261004/validation-20261006-r1/experiments/runs/gb200_1gpu_zero3_flash_attention_2_s0_native_554_1130_20261006_r1

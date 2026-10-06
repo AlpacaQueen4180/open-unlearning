@@ -1,0 +1,20 @@
+[
+  "/data/npo-gb200-20261004/venv/bin/python",
+  "-m",
+  "torch.distributed.run",
+  "--nproc_per_node=1",
+  "--master_port=29661",
+  "/data/npo-gb200-20261004/repo/scripts/reproduction/npo/gb200/gradient_audit.py",
+  "--repo",
+  "/data/npo-gb200-20261004/repo",
+  "--output",
+  "/data/npo-gb200-20261004/validation-20261006/old_g8_w8_combined_fp32.json",
+  "--gas",
+  "8",
+  "--window",
+  "8",
+  "--term",
+  "combined",
+  "--dtype",
+  "fp32"
+]

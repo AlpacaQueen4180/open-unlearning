@@ -1,0 +1,347 @@
+{
+  "versions": {
+    "torch": "2.7.0a0+ecf3bae40a.nv25.02",
+    "transformers": "4.51.3",
+    "accelerate": "0.34.2",
+    "deepspeed": "0.15.4"
+  },
+  "gpu": "NVIDIA GB200",
+  "world_size": 1,
+  "gas": 8,
+  "window": 8,
+  "term": "combined",
+  "dtype": "bf16",
+  "unequal_tokens": false,
+  "model": "/data/npo-gb200-20261004/hf/hub/models--open-unlearning--tofu_Llama-3.2-1B-Instruct_full/snapshots/88e31200b97e4c0c04ae0d2f0b591f427046d192",
+  "model_accepts_loss_kwargs": true,
+  "num_items_in_batch": null,
+  "accelerator_gas": 1,
+  "engine_gas": 8,
+  "engine_override_scale_wrt_gas": null,
+  "legacy_tail_boundary_forced": false,
+  "clipping": 0,
+  "optimizer_lr": 0,
+  "engine_updates": 1,
+  "engine_backward_trace": [
+    {
+      "loss_to_engine": 13.900544166564941,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 14.012190818786621,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 13.993744850158691,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 13.851824760437012,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 13.84505558013916,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 13.939391136169434,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 13.948456764221191,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 13.936856269836426,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": true
+    }
+  ],
+  "vs_mean_microbatch_objective": {
+    "norm_ratio": 8.022563356413313,
+    "projected_scale": 7.997389632330045,
+    "cosine": 0.996862134586554,
+    "relative_error": 7.026147133600776,
+    "relative_error_after_scale": 0.6350447829608634,
+    "reference_norm": 199.39053393882762,
+    "observed_norm": 1599.6231911933237
+  },
+  "vs_large_batch_objective": {
+    "norm_ratio": 8.022082937736599,
+    "projected_scale": 7.996924713606212,
+    "cosine": 0.9968638788297688,
+    "relative_error": 7.025664753794693,
+    "relative_error_after_scale": 0.6348305166264628,
+    "reference_norm": 199.40247484460082,
+    "observed_norm": 1599.6231911933237
+  },
+  "mean_micro_vs_large": {
+    "norm_ratio": 0.9999401165618305,
+    "projected_scale": 0.9999276835641701,
+    "cosine": 0.9999875662577643,
+    "relative_error": 0.004986941083890889,
+    "relative_error_after_scale": 0.004986416720181353,
+    "reference_norm": 199.40247484460082,
+    "observed_norm": 199.39053393882762
+  },
+  "gradient_sha256": "93b9ed7484d44ca12a8181c78968befebac2bd7a71f98a7c567054bf0b9cc8a4",
+  "parameter_names": [
+    "model.embed_tokens.weight",
+    "model.layers.0.self_attn.q_proj.weight",
+    "model.layers.0.self_attn.k_proj.weight",
+    "model.layers.0.self_attn.v_proj.weight",
+    "model.layers.0.self_attn.o_proj.weight",
+    "model.layers.0.mlp.gate_proj.weight",
+    "model.layers.0.mlp.up_proj.weight",
+    "model.layers.0.mlp.down_proj.weight",
+    "model.layers.0.input_layernorm.weight",
+    "model.layers.0.post_attention_layernorm.weight",
+    "model.layers.1.self_attn.q_proj.weight",
+    "model.layers.1.self_attn.k_proj.weight",
+    "model.layers.1.self_attn.v_proj.weight",
+    "model.layers.1.self_attn.o_proj.weight",
+    "model.layers.1.mlp.gate_proj.weight",
+    "model.layers.1.mlp.up_proj.weight",
+    "model.layers.1.mlp.down_proj.weight",
+    "model.layers.1.input_layernorm.weight",
+    "model.layers.1.post_attention_layernorm.weight",
+    "model.layers.2.self_attn.q_proj.weight",
+    "model.layers.2.self_attn.k_proj.weight",
+    "model.layers.2.self_attn.v_proj.weight",
+    "model.layers.2.self_attn.o_proj.weight",
+    "model.layers.2.mlp.gate_proj.weight",
+    "model.layers.2.mlp.up_proj.weight",
+    "model.layers.2.mlp.down_proj.weight",
+    "model.layers.2.input_layernorm.weight",
+    "model.layers.2.post_attention_layernorm.weight",
+    "model.layers.3.self_attn.q_proj.weight",
+    "model.layers.3.self_attn.k_proj.weight",
+    "model.layers.3.self_attn.v_proj.weight",
+    "model.layers.3.self_attn.o_proj.weight",
+    "model.layers.3.mlp.gate_proj.weight",
+    "model.layers.3.mlp.up_proj.weight",
+    "model.layers.3.mlp.down_proj.weight",
+    "model.layers.3.input_layernorm.weight",
+    "model.layers.3.post_attention_layernorm.weight",
+    "model.layers.4.self_attn.q_proj.weight",
+    "model.layers.4.self_attn.k_proj.weight",
+    "model.layers.4.self_attn.v_proj.weight",
+    "model.layers.4.self_attn.o_proj.weight",
+    "model.layers.4.mlp.gate_proj.weight",
+    "model.layers.4.mlp.up_proj.weight",
+    "model.layers.4.mlp.down_proj.weight",
+    "model.layers.4.input_layernorm.weight",
+    "model.layers.4.post_attention_layernorm.weight",
+    "model.layers.5.self_attn.q_proj.weight",
+    "model.layers.5.self_attn.k_proj.weight",
+    "model.layers.5.self_attn.v_proj.weight",
+    "model.layers.5.self_attn.o_proj.weight",
+    "model.layers.5.mlp.gate_proj.weight",
+    "model.layers.5.mlp.up_proj.weight",
+    "model.layers.5.mlp.down_proj.weight",
+    "model.layers.5.input_layernorm.weight",
+    "model.layers.5.post_attention_layernorm.weight",
+    "model.layers.6.self_attn.q_proj.weight",
+    "model.layers.6.self_attn.k_proj.weight",
+    "model.layers.6.self_attn.v_proj.weight",
+    "model.layers.6.self_attn.o_proj.weight",
+    "model.layers.6.mlp.gate_proj.weight",
+    "model.layers.6.mlp.up_proj.weight",
+    "model.layers.6.mlp.down_proj.weight",
+    "model.layers.6.input_layernorm.weight",
+    "model.layers.6.post_attention_layernorm.weight",
+    "model.layers.7.self_attn.q_proj.weight",
+    "model.layers.7.self_attn.k_proj.weight",
+    "model.layers.7.self_attn.v_proj.weight",
+    "model.layers.7.self_attn.o_proj.weight",
+    "model.layers.7.mlp.gate_proj.weight",
+    "model.layers.7.mlp.up_proj.weight",
+    "model.layers.7.mlp.down_proj.weight",
+    "model.layers.7.input_layernorm.weight",
+    "model.layers.7.post_attention_layernorm.weight",
+    "model.layers.8.self_attn.q_proj.weight",
+    "model.layers.8.self_attn.k_proj.weight",
+    "model.layers.8.self_attn.v_proj.weight",
+    "model.layers.8.self_attn.o_proj.weight",
+    "model.layers.8.mlp.gate_proj.weight",
+    "model.layers.8.mlp.up_proj.weight",
+    "model.layers.8.mlp.down_proj.weight",
+    "model.layers.8.input_layernorm.weight",
+    "model.layers.8.post_attention_layernorm.weight",
+    "model.layers.9.self_attn.q_proj.weight",
+    "model.layers.9.self_attn.k_proj.weight",
+    "model.layers.9.self_attn.v_proj.weight",
+    "model.layers.9.self_attn.o_proj.weight",
+    "model.layers.9.mlp.gate_proj.weight",
+    "model.layers.9.mlp.up_proj.weight",
+    "model.layers.9.mlp.down_proj.weight",
+    "model.layers.9.input_layernorm.weight",
+    "model.layers.9.post_attention_layernorm.weight",
+    "model.layers.10.self_attn.q_proj.weight",
+    "model.layers.10.self_attn.k_proj.weight",
+    "model.layers.10.self_attn.v_proj.weight",
+    "model.layers.10.self_attn.o_proj.weight",
+    "model.layers.10.mlp.gate_proj.weight",
+    "model.layers.10.mlp.up_proj.weight",
+    "model.layers.10.mlp.down_proj.weight",
+    "model.layers.10.input_layernorm.weight",
+    "model.layers.10.post_attention_layernorm.weight",
+    "model.layers.11.self_attn.q_proj.weight",
+    "model.layers.11.self_attn.k_proj.weight",
+    "model.layers.11.self_attn.v_proj.weight",
+    "model.layers.11.self_attn.o_proj.weight",
+    "model.layers.11.mlp.gate_proj.weight",
+    "model.layers.11.mlp.up_proj.weight",
+    "model.layers.11.mlp.down_proj.weight",
+    "model.layers.11.input_layernorm.weight",
+    "model.layers.11.post_attention_layernorm.weight",
+    "model.layers.12.self_attn.q_proj.weight",
+    "model.layers.12.self_attn.k_proj.weight",
+    "model.layers.12.self_attn.v_proj.weight",
+    "model.layers.12.self_attn.o_proj.weight",
+    "model.layers.12.mlp.gate_proj.weight",
+    "model.layers.12.mlp.up_proj.weight",
+    "model.layers.12.mlp.down_proj.weight",
+    "model.layers.12.input_layernorm.weight",
+    "model.layers.12.post_attention_layernorm.weight",
+    "model.layers.13.self_attn.q_proj.weight",
+    "model.layers.13.self_attn.k_proj.weight",
+    "model.layers.13.self_attn.v_proj.weight",
+    "model.layers.13.self_attn.o_proj.weight",
+    "model.layers.13.mlp.gate_proj.weight",
+    "model.layers.13.mlp.up_proj.weight",
+    "model.layers.13.mlp.down_proj.weight",
+    "model.layers.13.input_layernorm.weight",
+    "model.layers.13.post_attention_layernorm.weight",
+    "model.layers.14.self_attn.q_proj.weight",
+    "model.layers.14.self_attn.k_proj.weight",
+    "model.layers.14.self_attn.v_proj.weight",
+    "model.layers.14.self_attn.o_proj.weight",
+    "model.layers.14.mlp.gate_proj.weight",
+    "model.layers.14.mlp.up_proj.weight",
+    "model.layers.14.mlp.down_proj.weight",
+    "model.layers.14.input_layernorm.weight",
+    "model.layers.14.post_attention_layernorm.weight",
+    "model.layers.15.self_attn.q_proj.weight",
+    "model.layers.15.self_attn.k_proj.weight",
+    "model.layers.15.self_attn.v_proj.weight",
+    "model.layers.15.self_attn.o_proj.weight",
+    "model.layers.15.mlp.gate_proj.weight",
+    "model.layers.15.mlp.up_proj.weight",
+    "model.layers.15.mlp.down_proj.weight",
+    "model.layers.15.input_layernorm.weight",
+    "model.layers.15.post_attention_layernorm.weight",
+    "model.norm.weight"
+  ],
+  "synthetic_input_sha256": "09b658c49f3eb6a887211e3030465f762b66ab7b4aab143b3b607ef7214d6025",
+  "measurement_revision": "ds_explicit_mean_reference_v2",
+  "vs_ds_explicit_mean_reference": {
+    "norm_ratio": 8.0,
+    "projected_scale": 8.0,
+    "cosine": 1.0,
+    "relative_error": 7.000000000000057,
+    "relative_error_after_scale": 0.0,
+    "reference_norm": 199.95289889916546,
+    "observed_norm": 1599.6231911933237
+  },
+  "ds_reference_vs_autograd_mean": {
+    "norm_ratio": 1.0028204195516641,
+    "projected_scale": 0.9996737040412557,
+    "cosine": 0.996862134586554,
+    "relative_error": 0.07938126849117785,
+    "relative_error_after_scale": 0.07938059787010793,
+    "reference_norm": 199.39053393882762,
+    "observed_norm": 199.95289889916546
+  },
+  "ds_reference_backward_trace": [
+    {
+      "loss_to_engine": 1.7375680208206177,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.7515238523483276,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.7492181062698364,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.7314780950546265,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.730631947517395,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.7424238920211792,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.743557095527649,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": false
+    },
+    {
+      "loss_to_engine": 1.7421070337295532,
+      "kwargs": {
+        "scale_wrt_gas": false
+      },
+      "boundary": true
+    }
+  ],
+  "ds_reference_updates": 1,
+  "engine_total_updates": 2,
+  "initial_parameter_sha256": "ac605cace7b954c10c3403277986431fad5bcf3206eff0dac125a7cc9fa9e338",
+  "final_parameter_sha256": "ac605cace7b954c10c3403277986431fad5bcf3206eff0dac125a7cc9fa9e338",
+  "frozen_batch_file": "/data/npo-gb200-20261004/validation-20261006/tofu-frozen-40.pt",
+  "batch_offset": 0,
+  "rank": 0,
+  "distributed_input_policy": "identical fixed inputs on each rank; DS averaging compared with identical local reference",
+  "autograd_reference_gate_passed": false,
+  "autograd_micro_vs_large_gate_passed": true
+}
