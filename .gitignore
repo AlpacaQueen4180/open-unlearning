@@ -196,3 +196,4 @@ cython_debug/
 /tofu_*.trainer_state.json
 /openunlearning_*.status.json
 /safety_artifacts/
+/work/spf-npo-gb200-20261006/

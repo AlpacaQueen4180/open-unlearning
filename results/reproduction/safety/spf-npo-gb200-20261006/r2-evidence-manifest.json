@@ -1,0 +1,103 @@
+{
+  "archive_sha256": "5ce135700f41b83801c26a9c746b17258bbb3bb0bb8f46f4dfe84fe9b26dbbf2",
+  "raw_entries": [
+    {
+      "name": "launch.json",
+      "size": 463,
+      "sha256": "b4d048d48af5d5766e26888360b7db24f035a7a3c8a2746a0d684d48a2123942",
+      "published_name": "r2/launch.json"
+    },
+    {
+      "name": "status.json",
+      "size": 3119,
+      "sha256": "61b17eec25d4a820c09e7705adfc9aa105966cb4da9583f66a0a54dbdfc0169d",
+      "published_name": "r2/status.json"
+    },
+    {
+      "name": "setup.log",
+      "size": 2335,
+      "sha256": "d13f6388903ce74778fd49af9074666df379f9bde38a9da3207e74bd90fc689a",
+      "published_name": "r2/setup.log.txt"
+    },
+    {
+      "name": "setup-evidence.json",
+      "size": 28686,
+      "sha256": "bfcdfac56a53f7c8c132735e869d1df92caefca8cb104d7cf8056d9ac13e6d52",
+      "published_name": "r2/setup-evidence.json"
+    },
+    {
+      "name": "environment-freeze.txt",
+      "size": 17134,
+      "sha256": "34c27f4e5c3a48e13c26f2d8a3c94bba3267264809a81c4515a370089767a4e5",
+      "published_name": "r2/environment-freeze.txt"
+    },
+    {
+      "name": "verify_m0_assets.log",
+      "size": 63,
+      "sha256": "046d8ccf2d96c0317e81bbfb867bf2ccd0140299a0c8e75d49eebae0ab5cb9ed",
+      "published_name": "r2/verify_m0_assets.log.txt"
+    },
+    {
+      "name": "cpu_tests.log",
+      "size": 1532,
+      "sha256": "a96b941c8261288ea7c034bfbe01da394b0bcb3ccba9b0e4d018d49d078555ed",
+      "published_name": "r2/cpu_tests.log.txt"
+    },
+    {
+      "name": "tiny_reference.log",
+      "size": 734,
+      "sha256": "d237494a9d1c3cca197869e654eaa0ccc0e12bd7065020909adb7513c1939396",
+      "published_name": "r2/tiny_reference.log.txt"
+    },
+    {
+      "name": "tiny_zero3_world1.log",
+      "size": 21869,
+      "sha256": "781f8b798d8dcc7b61883ee7fff717acebd082077e5ae86c20395b83b7c98e02",
+      "published_name": "r2/tiny_zero3_world1.log.txt"
+    },
+    {
+      "name": "queue.log",
+      "size": 829,
+      "sha256": "6440b0b9d3e3c7252bfa6206e6346926b8738e9542d8db25e93f394fdb5bf0b3",
+      "published_name": "r2/queue.log.txt"
+    },
+    {
+      "name": "tiny-reference/acceptance.json",
+      "size": 429,
+      "sha256": "f926cf98cd6d2ca7b5f1c351a6b2025e0ac503a5cc3dd5f958da5955f19831b8",
+      "published_name": "r2/tiny-reference/acceptance.json"
+    },
+    {
+      "name": "tiny-reference/spf-32-single-1.0/trajectory.jsonl",
+      "size": 2775,
+      "sha256": "db52c80abd709bcfc4447c3f479b80cfe8edd8889c73cb9182927679fd4722af",
+      "published_name": "r2/tiny-reference/spf-32-single-1.0/trajectory.jsonl"
+    },
+    {
+      "name": "tiny-reference/spf-32-single-1.0/resolved_training.json",
+      "size": 4444,
+      "sha256": "bc1fd9c721c33e2a650f8ed72cb05dc13d73f13f706c83a5560ee63fd5dc903d",
+      "published_name": "r2/tiny-reference/spf-32-single-1.0/resolved_training.json"
+    },
+    {
+      "name": "tiny-reference/spf-32-single-1.0/trainer_state.json",
+      "size": 519,
+      "sha256": "2422c0ae886c18a1e5f9a90f8deb2bda99d6e2cba4ef5ef9002bd88b669a4281",
+      "published_name": "r2/tiny-reference/spf-32-single-1.0/trainer_state.json"
+    },
+    {
+      "name": "repo/src/construction/runner.py",
+      "size": 17944,
+      "sha256": "f33ce3bd5baeac86b264364b3663cf6fed72984e6bc5de1be88081f915236e02",
+      "published_name": "r2/repo/src/construction/runner.py"
+    },
+    {
+      "name": "repo/scripts/reproduction/safety/check_construction_zero3.py",
+      "size": 5535,
+      "sha256": "a33a884f19e32f64e90f68d08b2698cae0f37074c8019ca959cb029bb5970579",
+      "published_name": "r2/repo/scripts/reproduction/safety/check_construction_zero3.py"
+    }
+  ],
+  "private_original_m0_assets_sha256": "d17399a99206aff13f7555978437ec2ef5df944a3a717c9e3052c1da80ba05bf",
+  "sanitized_m0_assets_note": "Only source paths removed; original raw bytes retained in private storage."
+}

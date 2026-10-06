@@ -1,0 +1,43 @@
+{
+  "status": "FAILED",
+  "pid": 44594,
+  "started_at": 1791285453.672352,
+  "completed": [
+    "setup",
+    "verify_m0_assets",
+    "cpu_tests",
+    "tiny_reference"
+  ],
+  "stages": [
+    {
+      "name": "tiny_zero3_world1",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=1",
+        "scripts/reproduction/safety/check_construction_zero3.py",
+        "--output",
+        "/data/spf-npo-20261006-r3/tiny-zero3",
+        "--reference",
+        "/data/spf-npo-20261006-r3/tiny-reference/parameters.pt"
+      ],
+      "cwd": "/data/spf-npo-20261006-r3/repo",
+      "log": "/data/spf-npo-20261006-r3/tiny_zero3_world1.log",
+      "started_at": 1791285453.6783626,
+      "returncode": 1,
+      "finished_at": 1791285476.3799117
+    }
+  ],
+  "reused_stages": [
+    "setup",
+    "verify_m0_assets",
+    "cpu_tests",
+    "tiny_reference"
+  ],
+  "stage": "tiny_zero3_world1",
+  "stage_started_at": 1791285453.6766176,
+  "error": "tiny_zero3_world1 failed (1); preserve evidence",
+  "finished_at": 1791285476.3826268
+}

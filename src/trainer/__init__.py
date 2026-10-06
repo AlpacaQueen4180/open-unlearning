@@ -4,6 +4,7 @@ from omegaconf import DictConfig
 from transformers import Trainer, TrainingArguments
 
 from trainer.base import FinetuneTrainer
+from construction.runner import ConstructionTrainer, SafetyMixingTrainer, SPFTrainer
 from trainer.unlearn.grad_ascent import GradAscent
 from trainer.unlearn.grad_diff import GradDiff
 from trainer.unlearn.npo import NPO
@@ -86,6 +87,9 @@ def load_trainer(
 # Register Finetuning Trainer
 _register_trainer(Trainer)
 _register_trainer(FinetuneTrainer)
+_register_trainer(ConstructionTrainer)
+_register_trainer(SafetyMixingTrainer)
+_register_trainer(SPFTrainer)
 
 # Register Unlearning Trainer
 _register_trainer(GradAscent)

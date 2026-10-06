@@ -1,0 +1,6 @@
+{
+  "sources": [],
+  "required_roles": ["tofu_full", "formal_hexphi", "safety_development", "utility_development", "mmlu", "mtbench", "ifeval"],
+  "source_format": {"role": "formal_hexphi", "source": "original source identifier", "revision": "immutable upstream revision", "path": "/private/artifacts/normalized-prompts.jsonl", "sha256": "sha256 of this exact file"},
+  "note": "Empty sources deliberately produce insufficient_evidence. No formal evaluation prompts may be development inputs."
+}

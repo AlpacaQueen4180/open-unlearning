@@ -2,6 +2,10 @@
 
 核對日期：2026-10-06。這份文件以本 repository 保存的啟動腳本、Trainer state 與 GB200 runtime audit 為依據，區分「訓練更新次數修正」和「評估修正」。
 
+> **SPF 續行分類：** [單GB200 SPF queue](../safety/spf-npo-gb200-20261006.md)已提交移植驗收／construction full／匹配retain95，尚無完成runtime證據。其custom-loop assistant-token mean CE、projection及明確engine.step是construction方法，不能改標為本篇NPO native scaling或用已完成公開TOFU 8B smoke代替驗收。從SPF target出發的seed0 NPO pilot仍待建立target及新load驗收；歷史分類、未通過autograd comparisons與target gate判定保留。
+
+> **SPF numerical profile續行：** r3在原projection正交性門檻失敗；r4僅construction明確strict CUDA FP32 matmul，保留CPU reference／原算術與門檻，仍須重新完成未通過的ZeRO-3／8B驗收。此修復不是NPO loss normalization／更新邊界修正，也不追溯改標既有NPO或autograd結果。
+
 > **10:34最新版本範圍：** upstream `17cbbc8` 的 Transformers5.5.4採ceil步數規劃，Accelerate1.13.0同步DS更新邊界。GB200新版native 1B forget01／05／10 seed0已實測Trainer=DS20／70／130、micro100／500／1000、epoch10，完整checkpoint與評估獨立稽核完成，沒有疊加本地policy。此為另外三個full runs，與六個legacy corrected分開分類；保留容器Torch及eval cast偏離。詳見[新版環境與梯度驗證](environment-gradient-validation-20261006.md)。本文舊版計數不套到原paper的4.45.1或歷史safety的未保存DS計數。
 
 > **Loss scaling補充：** 六格corrected seed0只修更新／boundary，未改舊loss scaling。其後受控舊H100／GB200量測已證實漏除accumulation分母；真實1B TOFU對同DS explicit-mean reference舊完整／短組8／2倍、新版1／1倍。原autograd／DS bf16差異仍未解，不能称為所有梯度等價性通過。見[loss-scaling專文](loss-scaling-20261006.md)。

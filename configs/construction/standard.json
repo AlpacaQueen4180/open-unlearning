@@ -1,0 +1,27 @@
+{
+  "handler": "ConstructionTrainer",
+  "args": {
+    "per_device_train_batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "learning_rate": 0.00001,
+    "weight_decay": 0.01,
+    "num_train_epochs": 5,
+    "seed": 0,
+    "bf16": true,
+    "optim": "paged_adamw_32bit",
+    "lr_scheduler_type": "linear",
+    "max_grad_norm": 1.0,
+    "gradient_checkpointing": true,
+    "report_to": [],
+    "do_eval": false
+  },
+  "method_args": {
+    "backend": "zero3",
+    "warmup_epochs": 1.0,
+    "rank": 20,
+    "svd_method": "lowrank",
+    "oversample": 5,
+    "niter": 2,
+    "mixing_coefficient": 1.0
+  }
+}

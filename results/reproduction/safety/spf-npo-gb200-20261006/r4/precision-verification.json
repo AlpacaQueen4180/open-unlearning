@@ -1,0 +1,43 @@
+{
+  "status": "pass",
+  "cases": [
+    {
+      "device": "cpu",
+      "method": "exact",
+      "original_math_bitwise_equal": true,
+      "max_abs_orthogonality": 1.4731879673490766e-05,
+      "original_atol": 0.0002,
+      "rng_and_precision_restored": true,
+      "output_sha256": "0ac79986155e3da8e0eb61958802e172f11724b8b91064084cb15c38b8cec674"
+    },
+    {
+      "device": "cpu",
+      "method": "lowrank",
+      "original_math_bitwise_equal": true,
+      "max_abs_orthogonality": 3.157618948534946e-06,
+      "original_atol": 0.0002,
+      "rng_and_precision_restored": true,
+      "output_sha256": "eb15544d4e1321fe2ba89bad306c655d8fc8511fd0b43bd60a3f59a2f91042bd"
+    },
+    {
+      "device": "cuda",
+      "method": "exact",
+      "original_math_bitwise_equal": true,
+      "max_abs_orthogonality": 4.6934783313190565e-05,
+      "original_atol": 0.0002,
+      "rng_and_precision_restored": true,
+      "output_sha256": "a77953e22cd3e38ca4220e5b0ee4e78fd33e048cd5c61e58266697d28d12683d"
+    },
+    {
+      "device": "cuda",
+      "method": "lowrank",
+      "original_math_bitwise_equal": true,
+      "max_abs_orthogonality": 4.385862212075153e-06,
+      "original_atol": 0.0002,
+      "rng_and_precision_restored": true,
+      "output_sha256": "ab4a854deb27b9d8a3dd685a5b085c3498939e28092a5e893e68980011c8d418"
+    }
+  ],
+  "completed_training_repeated": false,
+  "previous_projection_sha256": "c48bf41604dec522701b637090a32d34a09ae7c2a1d235ab8891c50487e0797f"
+}

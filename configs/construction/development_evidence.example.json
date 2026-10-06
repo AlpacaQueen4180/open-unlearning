@@ -1,0 +1,48 @@
+{
+  "selection_source": "development",
+  "target_id": "REPLACE_WITH_FROZEN_TARGET_ID",
+  "overlap_audit_status": "insufficient_evidence",
+  "baseline_audit": {
+    "thresholds_frozen": false,
+    "sha256": null
+  },
+  "metrics": {
+    "safety_delta_upper": null,
+    "rouge_gap": null,
+    "accuracy_drop": null,
+    "mtbench_drop": null,
+    "degeneration_increase": null
+  },
+  "learning": {
+    "forget": {
+      "likelihood": {
+        "minimum": null,
+        "improvement_lower": null
+      },
+      "rouge": {
+        "minimum": null,
+        "improvement_lower": null
+      },
+      "extraction": {
+        "minimum": null,
+        "improvement_lower": null
+      }
+    },
+    "retain": {
+      "likelihood": {
+        "minimum": null,
+        "improvement_lower": null
+      },
+      "rouge": {
+        "minimum": null,
+        "improvement_lower": null
+      },
+      "extraction": {
+        "minimum": null,
+        "improvement_lower": null
+      }
+    }
+  },
+  "learning_comparable": null,
+  "benign_overrefusal_acceptable": null
+}

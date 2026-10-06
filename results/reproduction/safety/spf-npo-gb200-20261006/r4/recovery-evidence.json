@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "fix_scope": "strict CUDA FP32 matmul",
+  "previous_task": "/data/spf-npo-20261006-r3",
+  "reused_stages": [
+    "setup",
+    "verify_m0_assets",
+    "cpu_tests",
+    "tiny_reference"
+  ],
+  "previous_recovery_sha256": "56890b6694b58ba8ef3aaa2705cdbba3a7d2aae13a9be3f73d425a85fda03ee3",
+  "previous_status_sha256": "03b90d56f1214d873b13cc73a91ced0fb04e8a25b3653a390624c7b3150ffa3d",
+  "previous_prepared_sha256": "f3733b808c15512e8b011636caa2353b0b5a90251671229cecbb8902be7e2066",
+  "previous_runner_sha256": "4689d4eb1dc416a4b012411aefbe1c2dc0bef16f9b9983b6c4c04e935d5115cd",
+  "updated_runner_sha256": "c076cbca1c44a7d9e35705e01cb014dbef0661f7dc9eebe4c68b026ab97618a8",
+  "diagnosis_sha256": "8505d43d307cf87a84affbaa925c06415823590152e24de38cc380aa49765175",
+  "verification_sha256": "8a8dabc5b71acaee8e60263e7e87ad459273fe834f3e0b9a2443f6faaf372d97",
+  "original_projection_math_preserved": true,
+  "original_acceptance_thresholds_preserved": true,
+  "cpu_reference_hashes": {
+    "anchor.jsonl": "dc0173ae175bd39d9ef337c30624d5a42f7c2519db89cf8bd8d16cfc67d11af9",
+    "parameters.pt": "e8909c6e98c41d00953cfb1cb5577f06ecf48048157775a44ec12a6286dbbeb0",
+    "acceptance.json": "f926cf98cd6d2ca7b5f1c351a6b2025e0ac503a5cc3dd5f958da5955f19831b8",
+    "gradients.pt": "1a2fb3e84777c811a58ae7aa66e939e020c7fda32bb85cbb21536adbb42c474e",
+    "spf-32-single-1.0/resolved_training.json": "bc1fd9c721c33e2a650f8ed72cb05dc13d73f13f706c83a5560ee63fd5dc903d",
+    "spf-32-single-1.0/trainer_state.json": "2422c0ae886c18a1e5f9a90f8deb2bda99d6e2cba4ef5ef9002bd88b669a4281",
+    "spf-32-single-1.0/trajectory.jsonl": "db52c80abd709bcfc4447c3f479b80cfe8edd8889c73cb9182927679fd4722af",
+    "spf-32-single-1.0/generation_config.json": "c3221338acc60013e1c3fba5ad1dded0cbd5f352f6f76025593ec660603edd47",
+    "spf-32-single-1.0/config.json": "0614a557e4066e66b0808700e01629f41720844307baac50c1c0f409338a9789",
+    "spf-32-single-1.0/model.safetensors": "02ea1ba5294f605c80f82fb345d8133db30da380e1c0677d73b71394a72304e8"
+  },
+  "prepared_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
+  "verification_command": [
+    "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+    "/data/spf-npo-20261006-r4/repo/scripts/reproduction/safety/gb200/verify_precision_recovery.py",
+    "--previous-source",
+    "/data/spf-npo-20261006-r3/repo/src/construction/projection.py",
+    "--output",
+    "/data/spf-npo-20261006-r4/precision-verification.json"
+  ]
+}

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/data/spf-npo-20261006-r2/overlay/scripts/reproduction/safety/gb200/run_spf_queue.py", line 47, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/data/spf-npo-20261006-r2/overlay/scripts/reproduction/safety/gb200/run_spf_queue.py", line 33, in main
+    stage('tiny_zero3_world1',launch+[check,'--output',str(task/'tiny-zero3'),'--reference',str(task/'tiny-reference/parameters.pt')])
+  File "/data/spf-npo-20261006-r2/overlay/scripts/reproduction/safety/gb200/run_spf_queue.py", line 23, in stage
+    if r.returncode:raise RuntimeError(f'{name} failed ({r.returncode}); preserve evidence')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: tiny_zero3_world1 failed (1); preserve evidence

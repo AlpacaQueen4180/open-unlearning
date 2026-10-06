@@ -49,7 +49,9 @@ for ($taskAttempt = 1; $taskAttempt -le $MaxAttempts; $taskAttempt++) {
     }
     $taskText = ($taskRaw | ForEach-Object { $_.ToString() }) -join "`n"
     $taskStart = $taskText.IndexOf($taskBegin, [StringComparison]::Ordinal)
-    $taskStop = $taskText.IndexOf($taskEnd, [StringComparison]::Ordinal)
+    # A process snapshot can include this command and its marker in ps output.
+    # The emitted closing frame is the final occurrence, not the embedded one.
+    $taskStop = $taskText.LastIndexOf($taskEnd, [StringComparison]::Ordinal)
     $taskComplete = $taskExit -eq 0 -and $taskStart -ge 0 -and $taskStop -gt $taskStart
     if ($taskComplete) {
         $taskJson = $taskText.Substring($taskStart + $taskBegin.Length, $taskStop - $taskStart - $taskBegin.Length).Trim()

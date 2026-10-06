@@ -1,0 +1,74 @@
+{
+  "archive_sha256": "79c9ea179ffe96706360003b7a1d60ec3903f3a5a64ff334ca0caaef68ca3822",
+  "raw_entries": [
+    {
+      "name": "launch.json",
+      "size": 466,
+      "sha256": "e3355aa1b7d2bbac49bb02a6d723a576ed14a4d98c47616910805d9ae14173c2",
+      "published_name": "r3/launch.json"
+    },
+    {
+      "name": "status.json",
+      "size": 1150,
+      "sha256": "03b90d56f1214d873b13cc73a91ced0fb04e8a25b3653a390624c7b3150ffa3d",
+      "published_name": "r3/status.json"
+    },
+    {
+      "name": "tiny_zero3_world1.log",
+      "size": 21942,
+      "sha256": "3609229df239ac92e658269f1cfb5a3c7a5fbfade8039b6c73b7936ec9205ea0",
+      "published_name": "r3/tiny_zero3_world1.log.txt"
+    },
+    {
+      "name": "queue.log",
+      "size": 820,
+      "sha256": "9483f7ebc87edfaf4e64f6c01a49470d779329ac1cad3934a6f426157fe073a0",
+      "published_name": "r3/queue.log.txt"
+    },
+    {
+      "name": "recovery-evidence.json",
+      "size": 1688,
+      "sha256": "56890b6694b58ba8ef3aaa2705cdbba3a7d2aae13a9be3f73d425a85fda03ee3",
+      "published_name": "r3/recovery-evidence.json"
+    },
+    {
+      "name": "tiny-zero3/spf-4-zero3-1.0/trajectory.jsonl",
+      "size": 2851,
+      "sha256": "014e0004a5236fd26e795b0c57022d5d231fd6065f67b889f34cef7f0a55249c",
+      "published_name": "r3/tiny-zero3/spf-4-zero3-1.0/trajectory.jsonl"
+    },
+    {
+      "name": "tiny-zero3/spf-4-zero3-1.0/resolved_training.json",
+      "size": 5397,
+      "sha256": "71a52f98cf60e918779fbc9ff2bb40d6671ebe7ac8537fd563e7ea161602643c",
+      "published_name": "r3/tiny-zero3/spf-4-zero3-1.0/resolved_training.json"
+    },
+    {
+      "name": "repo/src/construction/runner.py",
+      "size": 18212,
+      "sha256": "4689d4eb1dc416a4b012411aefbe1c2dc0bef16f9b9983b6c4c04e935d5115cd",
+      "published_name": "r3/repo/src/construction/runner.py"
+    },
+    {
+      "name": "repo/src/construction/projection.py",
+      "size": 3017,
+      "sha256": "c48bf41604dec522701b637090a32d34a09ae7c2a1d235ab8891c50487e0797f",
+      "published_name": "r3/repo/src/construction/projection.py"
+    },
+    {
+      "name": "repo/scripts/reproduction/safety/check_construction_zero3.py",
+      "size": 5535,
+      "sha256": "a33a884f19e32f64e90f68d08b2698cae0f37074c8019ca959cb029bb5970579",
+      "published_name": "r3/repo/scripts/reproduction/safety/check_construction_zero3.py"
+    },
+    {
+      "name": "repo/scripts/reproduction/safety/gb200/run_spf_queue.py",
+      "size": 4641,
+      "sha256": "46e889c60684985efe9a16d8feac8a6731519e4f910fae5fae203bb4c2597857",
+      "published_name": "r3/repo/scripts/reproduction/safety/gb200/run_spf_queue.py"
+    }
+  ],
+  "private_only": [
+    "prepared.json"
+  ]
+}

@@ -1,0 +1,21 @@
+Running 44 items in this shard
+............................................                             [100%]
+=============================== warnings summary ===============================
+../../../usr/local/lib/python3.12/dist-packages/requests/__init__.py:113
+  /usr/local/lib/python3.12/dist-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.0.7) or chardet (6.0.0.post1)/charset_normalizer (3.4.1) doesn't match a supported version!
+    warnings.warn(
+
+tests/construction/test_training.py::test_save_reload
+  /usr/local/lib/python3.12/dist-packages/pydantic/fields.py:1042: PydanticDeprecatedSince20: Using extra keyword arguments on `Field` is deprecated and will be removed. Use `json_schema_extra` instead. (Extra keys: 'new_param'). Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.10/migration/
+    warn(
+
+tests/construction/test_npo_regression.py::test_npo_objective_and_frozen_reference_unchanged
+  /data/spf-npo-20261006-r2/repo/src/trainer/unlearn/rmu.py:12: SyntaxWarning: invalid escape sequence '\.'
+    module_regex="model\.layers\.7",
+
+tests/construction/test_npo_regression.py::test_npo_objective_and_frozen_reference_unchanged
+  /data/spf-npo-20261006-r2/repo/src/trainer/unlearn/rmu.py:13: SyntaxWarning: invalid escape sequence '\.'
+    trainable_params_regex=["model\.layers\.(5|6|7)\.mlp\.down_proj\.weight"],
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+44 passed, 4 warnings in 16.53s

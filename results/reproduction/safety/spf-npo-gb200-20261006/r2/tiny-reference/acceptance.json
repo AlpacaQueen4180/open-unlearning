@@ -1,0 +1,23 @@
+{
+  "method": "spf",
+  "backend": "single",
+  "steps": 3,
+  "world_size": 1,
+  "global_batch": 32,
+  "actual_windows": [
+    32,
+    24,
+    32
+  ],
+  "token_denominators": [
+    80,
+    60,
+    79
+  ],
+  "scheduler_steps": 3,
+  "reference_comparison": "reference_created",
+  "gradient_comparison": "reference_created",
+  "serialized_reload": "pass",
+  "randomized_svd_rng_and_orthogonality": "pass",
+  "conflicting_updates": 3
+}

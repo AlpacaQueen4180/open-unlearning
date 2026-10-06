@@ -1,0 +1,13 @@
+{
+  "pid": 45219,
+  "command": [
+    "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+    "/data/spf-npo-20261006-r4/repo/scripts/reproduction/safety/gb200/run_spf_queue.py",
+    "--task",
+    "/data/spf-npo-20261006-r4"
+  ],
+  "started_at": 1791286704.8177786,
+  "queue_sha256": "4c165eda68de8ff74b5b88ea6c7ac758a461d6794004fe4c71bb0cea277f0540",
+  "recovery_sha256": "fb2df0e79845c0fc9b44574f86557ffa43a69e605e31e51866280ce9c35163fb",
+  "previous_task": "/data/spf-npo-20261006-r3"
+}

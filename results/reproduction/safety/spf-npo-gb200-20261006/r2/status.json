@@ -1,0 +1,98 @@
+{
+  "status": "FAILED",
+  "pid": 43381,
+  "started_at": 1791284095.320149,
+  "completed": [
+    "setup",
+    "verify_m0_assets",
+    "cpu_tests",
+    "tiny_reference"
+  ],
+  "stages": [
+    {
+      "name": "setup",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "/data/spf-npo-20261006-r2/overlay/scripts/reproduction/safety/gb200/setup_spf_task.py",
+        "--task",
+        "/data/spf-npo-20261006-r2"
+      ],
+      "cwd": "/data/spf-npo-20261006-r2",
+      "log": "/data/spf-npo-20261006-r2/setup.log",
+      "started_at": 1791284095.3378487,
+      "returncode": 0,
+      "finished_at": 1791284115.363139
+    },
+    {
+      "name": "verify_m0_assets",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "scripts/reproduction/safety/gb200/verify_m0_assets.py"
+      ],
+      "cwd": "/data/spf-npo-20261006-r2/repo",
+      "log": "/data/spf-npo-20261006-r2/verify_m0_assets.log",
+      "started_at": 1791284115.3691866,
+      "returncode": 0,
+      "finished_at": 1791284125.4730785
+    },
+    {
+      "name": "cpu_tests",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/construction/test_projection.py",
+        "tests/construction/test_training.py",
+        "tests/construction/test_protocol.py",
+        "tests/construction/test_profile.py",
+        "tests/construction/test_npo_regression.py"
+      ],
+      "cwd": "/data/spf-npo-20261006-r2/repo",
+      "log": "/data/spf-npo-20261006-r2/cpu_tests.log",
+      "started_at": 1791284125.4787896,
+      "returncode": 0,
+      "finished_at": 1791284146.895672
+    },
+    {
+      "name": "tiny_reference",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "scripts/reproduction/safety/check_construction_zero3.py",
+        "--backend",
+        "single",
+        "--output",
+        "/data/spf-npo-20261006-r2/tiny-reference"
+      ],
+      "cwd": "/data/spf-npo-20261006-r2/repo",
+      "log": "/data/spf-npo-20261006-r2/tiny_reference.log",
+      "started_at": 1791284146.9013221,
+      "returncode": 0,
+      "finished_at": 1791284161.937196
+    },
+    {
+      "name": "tiny_zero3_world1",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=1",
+        "scripts/reproduction/safety/check_construction_zero3.py",
+        "--output",
+        "/data/spf-npo-20261006-r2/tiny-zero3",
+        "--reference",
+        "/data/spf-npo-20261006-r2/tiny-reference/parameters.pt"
+      ],
+      "cwd": "/data/spf-npo-20261006-r2/repo",
+      "log": "/data/spf-npo-20261006-r2/tiny_zero3_world1.log",
+      "started_at": 1791284161.9434674,
+      "returncode": 1,
+      "finished_at": 1791284183.1399384
+    }
+  ],
+  "stage": "tiny_zero3_world1",
+  "stage_started_at": 1791284161.9416153,
+  "error": "tiny_zero3_world1 failed (1); preserve evidence",
+  "finished_at": 1791284183.142842
+}

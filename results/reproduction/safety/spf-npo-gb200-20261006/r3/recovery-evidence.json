@@ -1,0 +1,44 @@
+{
+  "status": "pass",
+  "fix_scope": "optimizer metadata only",
+  "previous_task": "/data/spf-npo-20261006-r2",
+  "reused_stages": [
+    "setup",
+    "verify_m0_assets",
+    "cpu_tests",
+    "tiny_reference"
+  ],
+  "reused_artifact_hashes": {
+    "setup-evidence.json": {
+      "source_task": "spf-npo-20261006-r2",
+      "sha256": "bfcdfac56a53f7c8c132735e869d1df92caefca8cb104d7cf8056d9ac13e6d52"
+    },
+    "environment-freeze.txt": {
+      "source_task": "spf-npo-20261006-r2",
+      "sha256": "34c27f4e5c3a48e13c26f2d8a3c94bba3267264809a81c4515a370089767a4e5"
+    },
+    "m0-assets.json": {
+      "source_task": "spf-npo-20261006-r2",
+      "sha256": "d17399a99206aff13f7555978437ec2ef5df944a3a717c9e3052c1da80ba05bf"
+    },
+    "cpu_tests.log": {
+      "source_task": "spf-npo-20261006-r2",
+      "sha256": "a96b941c8261288ea7c034bfbe01da394b0bcb3ccba9b0e4d018d49d078555ed"
+    },
+    "tiny-reference/acceptance.json": {
+      "source_task": "spf-npo-20261006-r2",
+      "sha256": "f926cf98cd6d2ca7b5f1c351a6b2025e0ac503a5cc3dd5f958da5955f19831b8"
+    },
+    "tiny-reference/gradients.pt": {
+      "source_task": "spf-npo-20261006-r2",
+      "sha256": "1a2fb3e84777c811a58ae7aa66e939e020c7fda32bb85cbb21536adbb42c474e"
+    },
+    "tiny-reference/parameters.pt": {
+      "source_task": "spf-npo-20261006-r2",
+      "sha256": "e8909c6e98c41d00953cfb1cb5577f06ecf48048157775a44ec12a6286dbbeb0"
+    }
+  },
+  "previous_runner_sha256": "f33ce3bd5baeac86b264364b3663cf6fed72984e6bc5de1be88081f915236e02",
+  "updated_runner_sha256": "4689d4eb1dc416a4b012411aefbe1c2dc0bef16f9b9983b6c4c04e935d5115cd",
+  "prepared_sha256": "f3733b808c15512e8b011636caa2353b0b5a90251671229cecbb8902be7e2066"
+}

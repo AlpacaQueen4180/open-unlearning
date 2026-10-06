@@ -1,0 +1,84 @@
+{
+  "torch_version": "2.7.0a0+ecf3bae40a.nv25.02",
+  "device": "NVIDIA GB200",
+  "source_sha256": "c48bf41604dec522701b637090a32d34a09ae7c2a1d235ab8891c50487e0797f",
+  "initial_precision": {
+    "allow_tf32": true,
+    "cudnn_allow_tf32": true,
+    "float32_matmul_precision": "high"
+  },
+  "environment_overrides": {
+    "NVIDIA_TF32_OVERRIDE": null,
+    "TORCH_ALLOW_TF32_CUBLAS_OVERRIDE": "1"
+  },
+  "cases": [
+    {
+      "seed": 12,
+      "input_sha256": "36e067ffd20500e7b331a1426a6c42efb5a81333b9295c9de3ef13d1d1a242ad",
+      "projection_mode": "container_default",
+      "native_check_max_abs": 0.002789318561553955,
+      "ieee_check_max_abs": 0.002156414557248354,
+      "original_atol": 0.0002,
+      "rng_preserved": true,
+      "norm_nonincreasing": true,
+      "projected_sha256": "ce66b334c792202d3a14480ac583d5fbba3d863e41f6e5b232b13ab9aa229f0e"
+    },
+    {
+      "seed": 12,
+      "input_sha256": "36e067ffd20500e7b331a1426a6c42efb5a81333b9295c9de3ef13d1d1a242ad",
+      "projection_mode": "strict",
+      "native_check_max_abs": 3.273490619903896e-06,
+      "ieee_check_max_abs": 3.273490619903896e-06,
+      "original_atol": 0.0002,
+      "rng_preserved": true,
+      "norm_nonincreasing": true,
+      "projected_sha256": "e12953552ca14272e8eee774bd526791fce4baffc92dcbc116bac62cbd7b39f7"
+    },
+    {
+      "seed": 42,
+      "input_sha256": "f8b0f22f58b4eeebc6230589e6329a6dc43eca681426a1295e574c6236f93d2f",
+      "projection_mode": "container_default",
+      "native_check_max_abs": 0.0033370256423950195,
+      "ieee_check_max_abs": 0.002964757150039077,
+      "original_atol": 0.0002,
+      "rng_preserved": true,
+      "norm_nonincreasing": true,
+      "projected_sha256": "0abfa4bb38c530eb25c36b19cfbb29ffb725bc4e6443dd81acaf8fc0b3e0cd12"
+    },
+    {
+      "seed": 42,
+      "input_sha256": "f8b0f22f58b4eeebc6230589e6329a6dc43eca681426a1295e574c6236f93d2f",
+      "projection_mode": "strict",
+      "native_check_max_abs": 4.385862212075153e-06,
+      "ieee_check_max_abs": 4.385862212075153e-06,
+      "original_atol": 0.0002,
+      "rng_preserved": true,
+      "norm_nonincreasing": true,
+      "projected_sha256": "ab4a854deb27b9d8a3dd685a5b085c3498939e28092a5e893e68980011c8d418"
+    },
+    {
+      "seed": 0,
+      "input_sha256": "5fb9ae7f9ec272fadc108ae546b52dec63ce9d5586a0c9200c47ff58c912ca92",
+      "projection_mode": "container_default",
+      "native_check_max_abs": 0.004179865121841431,
+      "ieee_check_max_abs": 0.003971845377236605,
+      "original_atol": 0.0002,
+      "rng_preserved": true,
+      "norm_nonincreasing": true,
+      "projected_sha256": "270521bfdcf171fcae4809e78a01e9de7edb0062f55aec93804012ee73fc4a59"
+    },
+    {
+      "seed": 0,
+      "input_sha256": "5fb9ae7f9ec272fadc108ae546b52dec63ce9d5586a0c9200c47ff58c912ca92",
+      "projection_mode": "strict",
+      "native_check_max_abs": 5.2415221034607384e-06,
+      "ieee_check_max_abs": 5.2415221034607384e-06,
+      "original_atol": 0.0002,
+      "rng_preserved": true,
+      "norm_nonincreasing": true,
+      "projected_sha256": "15da9fa83cf7f99a65d8b20b5014071246a773ebaf2b38ef29d8860c59b40800"
+    }
+  ],
+  "threshold_changed": false,
+  "strict_all_pass": true
+}

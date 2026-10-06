@@ -1,0 +1,77 @@
+{
+  "archive_sha256": "ef47a95935ece2b1d541c00e26547149641a8d026febdc7cda801a2c18fd291e",
+  "raw_entries": [
+    {
+      "name": "launch.json",
+      "size": 500,
+      "sha256": "8a3cb2932ab3ad0482bd2d77fba128a65c9bcbd439911dcfefdf9d7d8d105338",
+      "published_name": "r4/launch.json"
+    },
+    {
+      "name": "recovery-evidence.json",
+      "size": 2497,
+      "sha256": "fb2df0e79845c0fc9b44574f86557ffa43a69e605e31e51866280ce9c35163fb",
+      "published_name": "r4/recovery-evidence.json"
+    },
+    {
+      "name": "projection-precision-diagnosis.json",
+      "size": 3186,
+      "sha256": "8505d43d307cf87a84affbaa925c06415823590152e24de38cc380aa49765175",
+      "published_name": "r4/projection-precision-diagnosis.json"
+    },
+    {
+      "name": "precision-verification.json",
+      "size": 1472,
+      "sha256": "8a8dabc5b71acaee8e60263e7e87ad459273fe834f3e0b9a2443f6faaf372d97",
+      "published_name": "r4/precision-verification.json"
+    },
+    {
+      "name": "precision-verification.log",
+      "size": 1250,
+      "sha256": "4ff813e8774ee047d37435de3936e4bd61752ac3fd1630580731f61383807311",
+      "published_name": "r4/precision-verification.log.txt"
+    },
+    {
+      "name": "repo/src/construction/runner.py",
+      "size": 18570,
+      "sha256": "c076cbca1c44a7d9e35705e01cb014dbef0661f7dc9eebe4c68b026ab97618a8",
+      "published_name": "r4/repo/src/construction/runner.py"
+    },
+    {
+      "name": "repo/src/construction/projection.py",
+      "size": 3291,
+      "sha256": "7776c68373ef7edc19bc2f9b7d4a6900f154c97be0c215517b71202c98ea643a",
+      "published_name": "r4/repo/src/construction/projection.py"
+    },
+    {
+      "name": "repo/src/construction/numerics.py",
+      "size": 1063,
+      "sha256": "6fdbb14da03eddc0371203003cef24e2c2c29b873c27827f9677bf1dae9cd164",
+      "published_name": "r4/repo/src/construction/numerics.py"
+    },
+    {
+      "name": "repo/scripts/reproduction/safety/check_construction_zero3.py",
+      "size": 5764,
+      "sha256": "ad918959a2e1639fdec067e030ae497def6aebaa2e489482101cb99d543119f3",
+      "published_name": "r4/repo/scripts/reproduction/safety/check_construction_zero3.py"
+    },
+    {
+      "name": "repo/scripts/reproduction/safety/gb200/run_spf_queue.py",
+      "size": 4672,
+      "sha256": "4c165eda68de8ff74b5b88ea6c7ac758a461d6794004fe4c71bb0cea277f0540",
+      "published_name": "r4/repo/scripts/reproduction/safety/gb200/run_spf_queue.py"
+    },
+    {
+      "name": "repo/scripts/reproduction/safety/gb200/prepare_precision_recovery.py",
+      "size": 7162,
+      "sha256": "c76f1cbeb99200418d8d6ee1119085347202960750b2c52cd5af8a65ef24d022",
+      "published_name": "r4/repo/scripts/reproduction/safety/gb200/prepare_precision_recovery.py"
+    },
+    {
+      "name": "repo/scripts/reproduction/safety/gb200/verify_precision_recovery.py",
+      "size": 2712,
+      "sha256": "ea1b8539bffa2a990ef3f978120eb11edbc6f13aae05fdea92043be8f17973d8",
+      "published_name": "r4/repo/scripts/reproduction/safety/gb200/verify_precision_recovery.py"
+    }
+  ]
+}
