@@ -1,0 +1,140 @@
+{
+  "classification": "Private fixed development assets retrieved; SPF evaluation not executed",
+  "source_archive_sha256": "5109b40492d19c35827053eae5901ce60072f557249c3b1c72959563bc328ab6",
+  "source_files_verified": 31,
+  "development_archive_sha256": "7d89357196e2bc439537daf0f1266ffef7d89d362598d2fdd13d7b5a7d66e475",
+  "files_verified": 264,
+  "uncompressed_bytes": 45127721,
+  "fixed_inputs": {
+    "safety": {
+      "count": 650,
+      "unique_ids": 650,
+      "sha256": "2b5696ae06a816b9497559b9702fcd9a0f14eac11f13a37d2621e6470fffcb1d"
+    },
+    "ifbench": {
+      "count": 300,
+      "unique_ids": 300,
+      "sha256": "119782fe7a3d78f9276765b9c047dd722d2d61669c9d8076dbf5bf0f7dbd757c"
+    },
+    "wildchat": {
+      "count": 71,
+      "unique_ids": 71,
+      "sha256": "e392bbb41d5c98f9b25e204e379253a341fd1bd6813c1118da269b5edcdb621e"
+    },
+    "mmlu_aux": {
+      "count": 1024,
+      "unique_ids": 1024,
+      "sha256": "8f6c4551cf8686515b80cb530c141928a0a39e89029179e722eff544cbbd4720"
+    }
+  },
+  "policy_sha256": "ca47ef6f3c7f7d76d1096736ac41e5f82e492fa63885d9955a4aeadf36535011",
+  "existing_judge_source": {
+    "name": "work/spf-p0p1-20260916/run_standard_judge_full.py",
+    "size": 8857,
+    "sha256": "9eab312a06adc27c09974dd315b20cf587c8a64e4158b8876c1c273269cfe4c9"
+  },
+  "existing_judge_requested_model": "gpt-5.6-terra",
+  "existing_judge_reasoning_effort": "medium",
+  "baseline_and_standard_prompt_hashes_match": true,
+  "existing_judge_plans": {
+    "standard": {
+      "total": 792,
+      "new_calls": 792,
+      "reused": 0,
+      "max_output_tokens": 4096,
+      "retries": 0,
+      "prompt_hashes": {
+        "harmful": "2847ea07bc69b611ba63950a3dcb11970905b8b1f57754c73067e41675a568fa",
+        "benign": "e800dfa717051d573b5c0b6fcf72544e8e22c8171dbf3652b3563ab1907fc02e",
+        "conversation": "eb3b38410a545e4e9a683e5687a38fe325dc53ea6a1a4885aa1402faa79fa8d0"
+      },
+      "adjudication_policy": "Only prompt eligibility transfers across models; M0 response labels never transfer",
+      "sha256": "c30d560339b7ae4b7bef6bf3daaba5ddf54286ab381a68c7139e6347860e0faa"
+    },
+    "m0": {
+      "total": 792,
+      "new_calls": 742,
+      "reused": 50,
+      "max_output_tokens": 4096,
+      "retries": 0,
+      "prompt_hashes": {
+        "harmful": "2847ea07bc69b611ba63950a3dcb11970905b8b1f57754c73067e41675a568fa",
+        "benign": "e800dfa717051d573b5c0b6fcf72544e8e22c8171dbf3652b3563ab1907fc02e",
+        "conversation": "eb3b38410a545e4e9a683e5687a38fe325dc53ea6a1a4885aa1402faa79fa8d0"
+      },
+      "adjudication_policy": null,
+      "sha256": "75fb3a519f339d3e70a30e164b460603b23c4efb4e1695e05896fc21875cdd45"
+    }
+  },
+  "credentials_copied": false,
+  "external_judge_executed": false,
+  "new_paid_calls_authorized_by_this_preparation": false,
+  "human_response_labels_transfer_to_spf": false,
+  "standard_gate_failure_preserved": true,
+  "mixing_insufficient_evidence_preserved": true,
+  "gb200_destination_sha_verified": false,
+  "private_payload_published": false,
+  "runai_query_performed_this_heartbeat": false,
+  "evaluation_or_target_gate_completed": false,
+  "pending": [
+    "RunAI user reauthentication and one existing-r4 snapshot",
+    "Verified complete SPF target",
+    "GB200 private transfer SHA and IFBench runtime validation",
+    "Paired author/component cluster mapping and CI",
+    "Existing external judge authorization and necessary SPF-specific adjudication"
+  ],
+  "ifbench_resource_archive_sha256": "2bed879bb588f5d79d082390684dc9f9c311ce851fa0fbf88f0c41a51f00c875",
+  "ifbench_resource_files_verified": 81,
+  "ifbench_resource_uncompressed_bytes": 57156375,
+  "combined_files_verified": 345,
+  "combined_uncompressed_bytes": 102284096,
+  "combined_private_index_sha256": "6ac92278cfe46ff7d6f43e2a1725c3b5531813ff3f51c7f2a6907e62cb93df01",
+  "local_ifbench_resources_complete": true,
+  "local_ifbench_audit_hashes_match": true,
+  "ifbench_runtime_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+  "ifbench_runtime_audit_sha256": "0dafaa7e87cb2d2cfc62f02a15716c52da66656d446b88137574c83aca0fe86f",
+  "ifbench_runtime_execution_validated": false,
+  "opaque_resources_deserialized": false,
+  "h100_runtime_dependencies_snapshot_only": {
+    "absl": true,
+    "langdetect": false,
+    "nltk": true,
+    "immutabledict": false,
+    "emoji": false,
+    "syllapy": false,
+    "httpx": true,
+    "pydantic_settings": false
+  },
+  "execution_sources": [
+    {
+      "name": "scripts/reproduction/safety/evaluate_construction_baseline.py",
+      "size": 8441,
+      "sha256": "4197f8b323b146d643119195f1e5a1f623a4fa87a5d69a7f066c33d14e25d4ec"
+    },
+    {
+      "name": "scripts/reproduction/safety/evaluate_development_knowledge.py",
+      "size": 2831,
+      "sha256": "22796a344c14db1f3cf275c7d82d3e639d40a71eff4e92dd2049076ddee4a847"
+    },
+    {
+      "name": "scripts/reproduction/safety/generate_development.py",
+      "size": 3924,
+      "sha256": "9a99410fb62985d124a19772d621628728fa20334efc36aa4d441cdf2a59dfe2"
+    },
+    {
+      "name": "scripts/reproduction/safety/generate_development_conversation.py",
+      "size": 4260,
+      "sha256": "95db77e44ea26e010e380cd9abf5b21ea9b94eee734f03f64da4d3887f9216fc"
+    },
+    {
+      "name": "scripts/reproduction/safety/score_development_ifbench.py",
+      "size": 2812,
+      "sha256": "c590e30aff720c6e747dc3c7fee946b76f83470c6e82078057ef7d69e2517c1d"
+    }
+  ],
+  "initial_resource_omission": {
+    "files": 81,
+    "reason": "Initial text suffix filter; later fetched from the exact SHA inventory. Pickle and zip files were not executed.",
+    "resolved_by": "2bed879bb588f5d79d082390684dc9f9c311ce851fa0fbf88f0c41a51f00c875"
+  }
+}
