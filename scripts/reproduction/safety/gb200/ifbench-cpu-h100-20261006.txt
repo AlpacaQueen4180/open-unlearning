@@ -1,0 +1,16 @@
+# Historical H100 CPU scorer versions; GB200 installation/runtime not validated.
+# Source metadata SHA256: 513ad3b74eb68cce932f74d5a328e5cb00309962f09870f1ac69c14ce5bf355c
+# Provision in a separate CPU scoring venv; preserve the construction/NPO env.
+# No wheel hashes or Python/architecture equivalence are asserted.
+absl-py==2.5.0
+click==8.5.0
+defusedxml==0.7.1
+emoji==2.14.1
+immutabledict==4.2.1
+joblib==1.5.3
+langdetect==1.0.9
+nltk==3.10.3
+regex==2026.7.19
+six==1.17.0
+syllapy==0.8.0
+tqdm==4.70.0
