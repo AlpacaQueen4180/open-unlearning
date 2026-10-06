@@ -1,0 +1,248 @@
+{
+  "status": "IMPORT_PASS_PENDING_SCORE_EQUIVALENCE",
+  "snapshot_at": "2026-10-06T19:58:57.298349+00:00",
+  "task": "/data/spf-development-20261007-r1",
+  "pid": 46538,
+  "archive_sha256": "3497523a3e6eb9c767434de69e5711d72127fc966b71c3927b939ae5ae171e50",
+  "raw_entries": [
+    {
+      "name": "ifbench-cpu-launch.json",
+      "size": 301,
+      "sha256": "a148e43195788b69f2234020331c976a7732aa8ad95845fa4933ff2aa26f0fe5",
+      "published_name": "ifbench-cpu-completed/ifbench-cpu-launch.json"
+    },
+    {
+      "name": "ifbench-cpu-status.json",
+      "size": 2155,
+      "sha256": "a20f73876497628ec41dcc329cc9e58875b3f125fec27ce8b3f96772cca2c797",
+      "published_name": "ifbench-cpu-completed/ifbench-cpu-status.json"
+    },
+    {
+      "name": "ifbench-cpu-pip-report.json",
+      "size": 177539,
+      "sha256": "7675fbae39746b9193d0db6417ad6deaa38874252ef5467e599e2e31cf7e4579",
+      "published_name": "ifbench-cpu-completed/ifbench-cpu-pip-report.json"
+    },
+    {
+      "name": "ifbench-cpu-imports.json",
+      "size": 853,
+      "sha256": "ed56114811d847c1ca89492dd9ce8df1c5a91232aedeaf3f6a6b2c98dd198e8e",
+      "published_name": "ifbench-cpu-completed/ifbench-cpu-imports.json"
+    },
+    {
+      "name": "ifbench-cpu-import-query.py",
+      "size": 1493,
+      "sha256": "617ea3d648f0e7335a94b12e5ee2d0a5105f7b601e7c1d26aa7e493a20fb632c",
+      "published_name": "ifbench-cpu-completed/ifbench-cpu-import-query.py"
+    },
+    {
+      "name": "ifbench-cpu-create.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_name": "ifbench-cpu-completed/ifbench-cpu-create.log"
+    },
+    {
+      "name": "ifbench-cpu-install.log",
+      "size": 24043,
+      "sha256": "9a6c5873b01e07d8d07552b2362bf1130d72745717a7f8dd7aa706eb5b59c56c",
+      "published_name": "ifbench-cpu-completed/ifbench-cpu-install.log"
+    },
+    {
+      "name": "ifbench-cpu-check.log",
+      "size": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+      "published_name": "ifbench-cpu-completed/ifbench-cpu-check.log"
+    },
+    {
+      "name": "ifbench-cpu-imports.log",
+      "size": 746,
+      "sha256": "ef976ecd7fc4c9542931942f68f364240f31a5fd9d330d4ba0df20577d459afe",
+      "published_name": "ifbench-cpu-completed/ifbench-cpu-imports.log"
+    },
+    {
+      "name": "ifbench-cpu-queue.log",
+      "size": 86,
+      "sha256": "c3a215ab958179b83ad9d94c334328fc7eb19eb76268ccf66e0d568baacd819f",
+      "published_name": "ifbench-cpu-completed/ifbench-cpu-queue.log"
+    },
+    {
+      "name": "repo/scripts/reproduction/safety/gb200/prepare_ifbench_cpu.py",
+      "size": 4537,
+      "sha256": "0e6e2e15db8bb055887c885f51adbea4f18c763f4f2a2da42c9eeac89e236308",
+      "published_name": "ifbench-cpu-completed/repo/scripts/reproduction/safety/gb200/prepare_ifbench_cpu.py"
+    }
+  ],
+  "source_sha256": "0e6e2e15db8bb055887c885f51adbea4f18c763f4f2a2da42c9eeac89e236308",
+  "pins_sha256": "4dc9bcac4eb9f169c9f4ad1fe1e4f436dbd32de41e8d4c6d10fa2fadc2eea9ec",
+  "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+  "architecture": "aarch64",
+  "installed_versions": {
+    "absl-py": "2.5.0",
+    "click": "8.5.0",
+    "defusedxml": "0.7.1",
+    "emoji": "2.14.1",
+    "immutabledict": "4.2.1",
+    "joblib": "1.5.3",
+    "langdetect": "1.0.9",
+    "nltk": "3.10.3",
+    "regex": "2026.7.19",
+    "six": "1.17.0",
+    "syllapy": "0.8.0",
+    "tqdm": "4.70.0"
+  },
+  "distribution_artifacts": [
+    {
+      "name": "absl-py",
+      "version": "2.5.0",
+      "archive_sha256": "0f17b89f2a4eaaedc4f28c622998aa690564b3012a396a4ffad0821007fe03ba",
+      "artifact_name": "absl_py-2.5.0-py3-none-any.whl"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "archive_sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+      "artifact_name": "click-8.5.0-py3-none-any.whl"
+    },
+    {
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "archive_sha256": "a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61",
+      "artifact_name": "defusedxml-0.7.1-py2.py3-none-any.whl"
+    },
+    {
+      "name": "emoji",
+      "version": "2.14.1",
+      "archive_sha256": "35a8a486c1460addb1499e3bf7929d3889b2e2841a57401903699fef595e942b",
+      "artifact_name": "emoji-2.14.1-py3-none-any.whl"
+    },
+    {
+      "name": "immutabledict",
+      "version": "4.2.1",
+      "archive_sha256": "c56a26ced38c236f79e74af3ccce53772827cef5c3bce7cab33ff2060f756373",
+      "artifact_name": "immutabledict-4.2.1-py3-none-any.whl"
+    },
+    {
+      "name": "joblib",
+      "version": "1.5.3",
+      "archive_sha256": "5fc3c5039fc5ca8c0276333a188bbd59d6b7ab37fe6632daa76bc7f9ec18e713",
+      "artifact_name": "joblib-1.5.3-py3-none-any.whl"
+    },
+    {
+      "name": "langdetect",
+      "version": "1.0.9",
+      "archive_sha256": "cbc1fef89f8d062739774bd51eda3da3274006b3661d199c2655f6b3f6d605a0",
+      "artifact_name": "langdetect-1.0.9.tar.gz"
+    },
+    {
+      "name": "nltk",
+      "version": "3.10.3",
+      "archive_sha256": "ff9598a8e20518ee0d557745890cc4435b9578489e2dcbc69c4f81fa060caf7c",
+      "artifact_name": "nltk-3.10.3-py3-none-any.whl"
+    },
+    {
+      "name": "regex",
+      "version": "2026.7.19",
+      "archive_sha256": "93db40c8de0815baab96a06e08a984bac71f989d13bab789e382158c5d426797",
+      "artifact_name": "regex-2026.7.19-cp312-cp312-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "archive_sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "artifact_name": "six-1.17.0-py2.py3-none-any.whl"
+    },
+    {
+      "name": "syllapy",
+      "version": "0.8.0",
+      "archive_sha256": "eea0a65665ad6c980686785af3e588cfcc8d359d5975ba67b18dea9cef6b0425",
+      "artifact_name": "syllapy-0.8.0-py3-none-any.whl"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.0",
+      "archive_sha256": "7f585706bfddbdebf89daac705b2dfcc16890130727d3197ca62c732b4310953",
+      "artifact_name": "tqdm-4.70.0-py3-none-any.whl"
+    }
+  ],
+  "source_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+  "import_roots": [
+    "absl",
+    "langdetect",
+    "nltk",
+    "immutabledict",
+    "emoji",
+    "syllapy",
+    "evaluation_lib"
+  ],
+  "commands": [
+    {
+      "stage": "create",
+      "command": [
+        "/usr/bin/python",
+        "-m",
+        "venv",
+        "/data/spf-development-20261007-r1/ifbench-cpu-venv"
+      ],
+      "started_at": 1791316358.8291776,
+      "returncode": 0,
+      "finished_at": 1791316363.4543986
+    },
+    {
+      "stage": "install",
+      "command": [
+        "/data/spf-development-20261007-r1/ifbench-cpu-venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-input",
+        "--requirement",
+        "/data/spf-development-20261007-r1/repo/scripts/reproduction/safety/gb200/ifbench-cpu-h100-20261006.txt",
+        "--report",
+        "/data/spf-development-20261007-r1/ifbench-cpu-pip-report.json"
+      ],
+      "started_at": 1791316363.4580767,
+      "returncode": 0,
+      "finished_at": 1791316473.8629942
+    },
+    {
+      "stage": "check",
+      "command": [
+        "/data/spf-development-20261007-r1/ifbench-cpu-venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "started_at": 1791316473.8656006,
+      "returncode": 0,
+      "finished_at": 1791316474.3330746
+    },
+    {
+      "stage": "imports",
+      "command": [
+        "/data/spf-development-20261007-r1/ifbench-cpu-venv/bin/python",
+        "/data/spf-development-20261007-r1/ifbench-cpu-import-query.py",
+        "/data/spf-development-20261007-r1/bundle/assets/work/spf-p0p1-20260916/artifacts/development-extension-v1/ifbench-runtime",
+        "/data/spf-development-20261007-r1/repo/scripts/reproduction/safety/gb200/ifbench-cpu-h100-20261006.txt",
+        "/data/spf-development-20261007-r1/ifbench-cpu-imports.json"
+      ],
+      "started_at": 1791316474.3373523,
+      "returncode": 0,
+      "finished_at": 1791316474.8549006
+    }
+  ],
+  "started_at": 1791316358.8270347,
+  "finished_at": 1791316474.85705,
+  "scoring_venv": "/data/spf-development-20261007-r1/ifbench-cpu-venv",
+  "historical_scoring_repeated": false,
+  "target_scoring_executed": false,
+  "score_equivalence_verified": false,
+  "gpu_runtime_validated": false,
+  "external_judge_executed": false,
+  "target_gate_executed": false,
+  "limits": [
+    "Installation, pip check, source integrity and imports passed on cp312/aarch64.",
+    "Matching package versions and successful imports do not establish scoring equivalence.",
+    "No historical 300-row scoring, target scoring, GPU evaluation or external judge calls were run."
+  ],
+  "private_snapshot_sha256": "48b8bb6ea1031269535abbe1b2e10207ce90f90e67633958b528a091da393437"
+}

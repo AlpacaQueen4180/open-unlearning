@@ -1,0 +1,68 @@
+{
+  "status": "IMPORT_PASS_PENDING_SCORE_EQUIVALENCE",
+  "pid": 46538,
+  "started_at": 1791316358.8270347,
+  "commands": [
+    {
+      "stage": "create",
+      "command": [
+        "/usr/bin/python",
+        "-m",
+        "venv",
+        "/data/spf-development-20261007-r1/ifbench-cpu-venv"
+      ],
+      "started_at": 1791316358.8291776,
+      "returncode": 0,
+      "finished_at": 1791316363.4543986
+    },
+    {
+      "stage": "install",
+      "command": [
+        "/data/spf-development-20261007-r1/ifbench-cpu-venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-input",
+        "--requirement",
+        "/data/spf-development-20261007-r1/repo/scripts/reproduction/safety/gb200/ifbench-cpu-h100-20261006.txt",
+        "--report",
+        "/data/spf-development-20261007-r1/ifbench-cpu-pip-report.json"
+      ],
+      "started_at": 1791316363.4580767,
+      "returncode": 0,
+      "finished_at": 1791316473.8629942
+    },
+    {
+      "stage": "check",
+      "command": [
+        "/data/spf-development-20261007-r1/ifbench-cpu-venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "started_at": 1791316473.8656006,
+      "returncode": 0,
+      "finished_at": 1791316474.3330746
+    },
+    {
+      "stage": "imports",
+      "command": [
+        "/data/spf-development-20261007-r1/ifbench-cpu-venv/bin/python",
+        "/data/spf-development-20261007-r1/ifbench-cpu-import-query.py",
+        "/data/spf-development-20261007-r1/bundle/assets/work/spf-p0p1-20260916/artifacts/development-extension-v1/ifbench-runtime",
+        "/data/spf-development-20261007-r1/repo/scripts/reproduction/safety/gb200/ifbench-cpu-h100-20261006.txt",
+        "/data/spf-development-20261007-r1/ifbench-cpu-imports.json"
+      ],
+      "started_at": 1791316474.3373523,
+      "returncode": 0,
+      "finished_at": 1791316474.8549006
+    }
+  ],
+  "gpu_evaluation_started": false,
+  "historical_scoring_repeated": false,
+  "external_judge_executed": false,
+  "stage": "imports",
+  "finished_at": 1791316474.85705,
+  "scoring_venv": "/data/spf-development-20261007-r1/ifbench-cpu-venv",
+  "score_equivalence_verified": false
+}

@@ -1,0 +1,71 @@
+{
+  "status": "PASS_ON_FIXED_SYNTHETIC_FIXTURES",
+  "source_sha256": "6f1553694b979cfc999e883ef413ee77c5afa26c0960f6009d9ce5f9a9c9a69b",
+  "source": "scripts/reproduction/safety/gb200/verify_ifbench_cpu_fixtures.py",
+  "raw_entries": [
+    {
+      "platform": "h100",
+      "published_name": "ifbench-cpu-fixtures/h100.json",
+      "size": 10409,
+      "sha256": "8c89d7c8e0a5385c88bcc13337317ad496e0b0cc98ecdf1a51c9e047b73cd22a",
+      "captured_at_utc": "2026-10-06T20:06:13.408889+00:00"
+    },
+    {
+      "platform": "gb200",
+      "published_name": "ifbench-cpu-fixtures/gb200.json",
+      "size": 10381,
+      "sha256": "158435b83faf93d27f726bb3d4b93c327781cd85a63443e4909e1744274b2aed",
+      "captured_at_utc": "2026-10-06T20:06:07.691228+00:00"
+    }
+  ],
+  "source_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+  "source_audit_sha256": "0dafaa7e87cb2d2cfc62f02a15716c52da66656d446b88137574c83aca0fe86f",
+  "fixture_sha256": "632fb81083d8e1d141653cdc8e6a858841144d6d8e80118ef16516bb155b826f",
+  "vector_sha256": "bddd50feda4f91611c56b37b0fd1aa343558f2bc7b69fd0e0539b7d6aa02e465",
+  "fixture_count": 48,
+  "instruction_types": [
+    "count:person_names",
+    "count:word_count_range",
+    "detectable_format:json_format",
+    "format:emoji",
+    "keywords:existence",
+    "language:response_language",
+    "length_constraints:number_sentences",
+    "length_constraints:number_words",
+    "punctuation:no_comma",
+    "ratio:stop_words",
+    "words:odd_even_syllables",
+    "words:start_verb"
+  ],
+  "instruction_decisions_compared": 104,
+  "strict_and_loose_vectors_equal": true,
+  "synthetic_fixture_equivalence_verified": true,
+  "full_score_equivalence_verified": false,
+  "historical_scoring_repeated": false,
+  "target_scoring_executed": false,
+  "gpu_runtime_validated": false,
+  "external_judge_executed": false,
+  "execution": {
+    "h100": {
+      "python": "3.11.16 | packaged by conda-forge | (main, Aug 21 2026, 22:44:51) [GCC 14.4.0]",
+      "architecture": "x86_64",
+      "interpreter": "/home/ai/alpaca/work/spf-p0p1-20260916/ifbench-venv/bin/python",
+      "runtime": "/home/ai/alpaca/work/spf-p0p1-20260916/artifacts/development-extension-v1/ifbench-runtime"
+    },
+    "gb200": {
+      "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+      "architecture": "aarch64",
+      "interpreter": "/data/spf-development-20261007-r1/ifbench-cpu-venv/bin/python",
+      "runtime": "/data/spf-development-20261007-r1/bundle/assets/work/spf-p0p1-20260916/artifacts/development-extension-v1/ifbench-runtime"
+    },
+    "invocation": "python -I -B -c <gzip/base64 of the SHA-bound source> --runtime <runtime>",
+    "cuda_visible_devices": "",
+    "nltk_download_forbidden": true,
+    "remote_file_writes": false
+  },
+  "limits": [
+    "Only 48 newly authored synthetic fixtures covering 12 instruction types were compared.",
+    "Equal fixture vectors are not a proof for all instructions, real benchmark rows or model-generated outputs.",
+    "The original 300 historical rows were not rescored and no target gate or GPU/judge work was performed."
+  ]
+}

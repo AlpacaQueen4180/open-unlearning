@@ -111,7 +111,7 @@
   ],
   "prepare_source_sha256": "0f88b57d1ede615a06aa8d484ea55966e47fe5e8df908e3bbb745ea393e46377",
   "cpu_scoring_preparation": {
-    "status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "status": "IMPORT_PASS_PENDING_SCORE_EQUIVALENCE",
     "pid": 46538,
     "command": [
       "python",
@@ -120,7 +120,13 @@
       "/data/spf-development-20261007-r1"
     ],
     "source_sha256": "0e6e2e15db8bb055887c885f51adbea4f18c763f4f2a2da42c9eeac89e236308",
-    "gpu_evaluation_started": false
+    "gpu_evaluation_started": false,
+    "completion_evidence": "ifbench-cpu-completed-20261007.json",
+    "completed_archive_sha256": "3497523a3e6eb9c767434de69e5711d72127fc966b71c3927b939ae5ae171e50",
+    "finished_at": 1791316474.85705,
+    "synthetic_fixture_evidence": "ifbench-cpu-fixtures-20261007.json",
+    "synthetic_fixture_equivalence_verified": true,
+    "full_score_equivalence_verified": false
   },
   "gpu_evaluation_started": false,
   "target_gate_executed": false,
@@ -129,7 +135,7 @@
   "construction_source_unmodified": true,
   "limits": [
     "Adapter preparation is not a GPU runtime, target gate, or SPF numerical acceptance result.",
-    "CPU scorer installation/import result is pending the next scheduled snapshot.",
+    "CPU installation/imports and 48 paired synthetic fixtures passed; full scoring equivalence is not established.",
     "Existing H100 Standard comparison has cross-platform limits; SPF-specific labels/clusters are pending."
   ]
 }

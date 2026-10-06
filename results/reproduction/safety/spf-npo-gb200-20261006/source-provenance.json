@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "classification": "SPF construction port and submitted finite queue; research results pending",
+  "classification": "SPF full construction complete; target gate, matched reference and pure NPO pilot pending",
   "source_files_verified": 289,
   "source_archive_sha256": "e82e22ef75d9774ac64d8bbe88a68f0bfc3b472ac880edce2dc2ed204b4351b0",
   "parent_frozen_sha256": "b2f48edc1fc9cd95b5fb7c9b6855750796809c21fa02e5e7f8426ac118701d89",
@@ -209,11 +209,11 @@
       "npo_pilot_complete": false
     }
   ],
-  "acceptance": "pending actual runtime evidence",
-  "full_target": "pending",
-  "target_gate": "pending",
-  "matching_retain95": "pending",
-  "npo_pilot": "pending",
+  "acceptance": "r4 world1 ZeRO3 tiny comparisons, production conflict and production smokes passed; original autograd failures preserved",
+  "full_target": "TRAINING_COMPLETE_AUDIT_RELOAD_PASS",
+  "target_gate": "not_evaluated",
+  "matching_retain95": "RUNNING_AT_20261007_0358_SNAPSHOT",
+  "npo_pilot": "not_started",
   "autograd_prior_failures_preserved": true,
   "automation": {
     "id": "spf-full-npo-seed0",
@@ -261,5 +261,10 @@
     "rng_and_precision_restored": true,
     "raw_sha256": "8a8dabc5b71acaee8e60263e7e87ad459273fe834f3e0b9a2443f6faaf372d97",
     "scope": "projection arithmetic and state isolation only; not all training gradient comparisons"
-  }
+  },
+  "latest_snapshot_utc": "2026-10-06T19:58:57.298349+00:00",
+  "private_snapshot_sha256": "48b8bb6ea1031269535abbe1b2e10207ce90f90e67633958b528a091da393437",
+  "full_completion_evidence": "r4-completed-evidence-20261007.json",
+  "development_cpu_preparation_evidence": "ifbench-cpu-completed-20261007.json",
+  "development_cpu_fixture_evidence": "ifbench-cpu-fixtures-20261007.json"
 }
