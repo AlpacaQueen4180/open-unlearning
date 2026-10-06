@@ -212,7 +212,7 @@
   "acceptance": "r4 world1 ZeRO3 tiny comparisons, production conflict and production smokes passed; original autograd failures preserved",
   "full_target": "TRAINING_COMPLETE_AUDIT_RELOAD_PASS",
   "target_gate": "not_evaluated",
-  "matching_retain95": "RUNNING_AT_20261007_0510_SNAPSHOT; checkpoint298 saved, actual current update unknown",
+  "matching_retain95": "CURRENT_UNKNOWN_AFTER_0709_SOCKET_ACCESS_FAILURE; last confirmed training at 05:55 Taipei",
   "npo_pilot": "not_started",
   "autograd_prior_failures_preserved": true,
   "automation": {
@@ -262,8 +262,8 @@
     "raw_sha256": "8a8dabc5b71acaee8e60263e7e87ad459273fe834f3e0b9a2443f6faaf372d97",
     "scope": "projection arithmetic and state isolation only; not all training gradient comparisons"
   },
-  "latest_snapshot_utc": "2026-10-06T21:10:16.276132+00:00",
-  "private_snapshot_sha256": "df327614d693d4b90b457dbb55bbdc3e80f302c9f174bb20087c74f5a6256a0f",
+  "latest_snapshot_utc": "2026-10-06T21:55:03.067898+00:00",
+  "private_snapshot_sha256": "a874bfd828b0f0dd06209f8de21a83b72b2683f60db8c82253702d1e67f3142b",
   "full_completion_evidence": "r4-completed-evidence-20261007.json",
   "development_cpu_preparation_evidence": "ifbench-cpu-completed-20261007.json",
   "development_cpu_fixture_evidence": "ifbench-cpu-fixtures-20261007.json",
@@ -276,7 +276,7 @@
     "native_executor_deployed": false,
     "native_runtime_validated": false
   },
-  "latest_monitoring_attempt_evidence": "spf-npo-queue-prepared-20261007.json",
+  "latest_monitoring_attempt_evidence": "development-queue-prepared-20261007.json",
   "npo_probe_source_preparation": {
     "status": "QUEUE_SOURCE_PREPARED_NOT_DEPLOYED_OR_LAUNCHED",
     "static_evidence": "spf-npo-probe-static-20261007.json",
@@ -308,5 +308,17 @@
     "linux_lock_runtime_validated": false,
     "hydra_runtime_composition_validated": false,
     "gpu_runtime_validated": false
+  },
+  "development_queue_source_preparation": {
+    "evidence": "development-queue-prepared-20261007.json",
+    "source_sha256": {
+      "run_spf_development_queue.py": "5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478",
+      "verify_spf_development_queue_static.py": "a7c6b1162e6dd64ee3fb630c171beac5c77afb95e01f9eb27761565291c94482"
+    },
+    "deployed": false,
+    "launched": false,
+    "gpu_runtime_validated": false,
+    "target_evaluation_executed": false,
+    "target_gate_evaluated": false
   }
 }

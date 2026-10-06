@@ -1,0 +1,108 @@
+{
+  "status": "SOURCE_PREPARED_NOT_DEPLOYED_OR_EXECUTED",
+  "task": "/data/spf-development-20261007-r1",
+  "planned_run": "/data/spf-development-20261007-r1/cuda-development-r1",
+  "source_sha256": {
+    "run_spf_development_queue.py": "5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478",
+    "verify_spf_development_queue_static.py": "a7c6b1162e6dd64ee3fb630c171beac5c77afb95e01f9eb27761565291c94482"
+  },
+  "initial_tested_source": {
+    "published_name": "development-queue-static-source/run_spf_development_queue-r1.py",
+    "sha256": "a672925393e07866583d858ce9daedf0343657c67acffc33efd2e465edec0bac"
+  },
+  "dependency_verifier": {
+    "published_name": "development-queue-static-source/verify-dependencies-as-run.py",
+    "sha256": "252a7d4668b46100ec998cf8d43817c263be4bf2e4a662930a24a4a00daee6bd"
+  },
+  "static_evidence": {
+    "initial": "development-queue-static-20261007.json",
+    "initial_sha256": "472faac0698ffb8b9b09b37f11ab89219f2dbe20cdee26435c67dede57259c05",
+    "dependency": "development-queue-dependencies-static-20261007.json",
+    "dependency_sha256": "709749e53a9e79864fe7e34eb4404ad16c558079aa53e5373e65beb674ffcb38",
+    "initial_wrong_result_cases": 28,
+    "new_dependency_rejection_cases": 7,
+    "initial_cases_reexecuted": false,
+    "unchanged_tested_function_asts": [
+      "plan",
+      "environment",
+      "validate_cuda",
+      "validate_metadata",
+      "validate_rows",
+      "acceptance"
+    ],
+    "initial_stdout_sha256": "df5d7273286401f4b1efe448ea4c2896ef1814eac025a65cc306d00ea3d9c003",
+    "dependency_stdout_original_bytes_captured": false
+  },
+  "adapter_audit_sha256": "ffb402da9ab4e390104f69bf69d060f169dc2cfb6a3978d1dcf0a3bb47a8013c",
+  "checkpoint_audit_sha256": "7a7036b903ced64e18307e90523cc7ada73699ddb3d79498bfd4063f86ed8cf9",
+  "checkpoint_identity_sha256": "c45e87fc69825b75f5d47345fb3c8502a4c1b4524f9d621411068bf3bc64f3a8",
+  "stages": [
+    "tofu4000",
+    "knowledge1024",
+    "ifbench300",
+    "safety650",
+    "conversation71_two_turns142",
+    "ifbench_cpu_score300"
+  ],
+  "tofu_profile": {
+    "teacher_max_length": 512,
+    "generation_max_new_tokens": 200,
+    "batch_size": 8
+  },
+  "generation_caps": {
+    "safety": 512,
+    "ifbench": 2048,
+    "conversation": 1024
+  },
+  "launch_requires": "Completed actual original r4 reference audit/reload, original queue exited, one <=10min complete idle-GPU snapshot",
+  "runtime_provider": "Unchanged adapters in child processes; observational CUDA/PID/allocation receipts, exact command/env/source and full private output hashes",
+  "numerical_settings_mutated": false,
+  "checkpoint_weight_byte_audit_reexecuted": false,
+  "automatic_rerun_or_resume_supported": false,
+  "recovery": "Existing run rejected; preserve all completed output and failure evidence. Prepare explicit recovery of only unfinished stages if needed.",
+  "external_judge_executed": false,
+  "torch_imported": false,
+  "gpu_runtime_validated": false,
+  "target_evaluation_executed": false,
+  "safety_labels_complete": false,
+  "paired_row_cluster_mapping_verified": false,
+  "target_gate_status": "not_evaluated",
+  "npo_smoke_executed": false,
+  "npo_pilot_executed": false,
+  "pilot_candidates_frozen": false,
+  "construction_source_modified": false,
+  "existing_smoke_package_modified": false,
+  "latest_monitoring": {
+    "attempt": "2026-10-07 07:09 Asia/Taipei",
+    "cli_executed": true,
+    "cli_returncode": 1,
+    "helper_attempts": 1,
+    "remote_snapshot_acquired": false,
+    "classification": "LOCAL_SOCKET_ACCESS_FORBIDDEN_BEFORE_REMOTE_EXECUTION",
+    "cli_raw_size": 203,
+    "cli_raw_sha256": "4bf7d041af4cf45b1ab7aee0e23e22c9c5e7ea2d14fb69b4f7bf3f494af065d2",
+    "authentication_expired_observed": false,
+    "last_successful_snapshot_utc": "2026-10-06T21:55:03.067898+00:00",
+    "last_successful_snapshot_sha256": "a874bfd828b0f0dd06209f8de21a83b72b2683f60db8c82253702d1e67f3142b",
+    "last_successful_stage": "spf-retain95-s0-train",
+    "reference_actual_current_status": "unknown",
+    "outer_retry_performed": false,
+    "remote_mutation_performed": false
+  },
+  "prior_approval_review_failure": {
+    "classification": "APPROVAL_REVIEW_USAGE_LIMIT",
+    "attempt": "2026-10-07 06:09 Asia/Taipei",
+    "action_executed": false,
+    "cli_executed": false,
+    "receipt_sha256": "f6e30aea6bb1ce33913f57f4a592995035473c89e43b257052d4ac4e073530a8",
+    "receipt_is_original_tool_or_cli_bytes": false,
+    "approval_bypassed": false
+  },
+  "limitations": [
+    "All new positive CUDA/result fixtures are synthetic, not actual executor or target acceptance",
+    "Socket access failure is monitoring evidence, not reference training failure or expired authentication",
+    "Current reference state unknown; last successful observation was 05:55 Taipei training",
+    "SPF-specific labels, paired clusters/adjudication and gate remain incomplete",
+    "Future insufficient-evidence gate allows only the already authorized exploratory pure NPO scope"
+  ]
+}

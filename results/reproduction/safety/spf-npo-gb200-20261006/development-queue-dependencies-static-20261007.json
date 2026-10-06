@@ -1,0 +1,33 @@
+{
+  "status": "PASS_SYNTHETIC_FROZEN_DEPENDENCY_BYTES_ONLY",
+  "rejected_cases": [
+    "src/construction/baseline.py",
+    "src/construction/data.py",
+    "src/construction/learning_metrics.py",
+    "src/construction/protocol.py",
+    "src/construction/knowledge.py",
+    "configs/model/Llama-3.1-8B-Instruct.yaml",
+    "missing_frozen_dependency_identity"
+  ],
+  "rejected_count": 7,
+  "source_sha256": "5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478",
+  "local_verifier_sha256": "252a7d4668b46100ec998cf8d43817c263be4bf2e4a662930a24a4a00daee6bd",
+  "prior_result_sha256": "472faac0698ffb8b9b09b37f11ab89219f2dbe20cdee26435c67dede57259c05",
+  "prior_tested_source_sha256": "a672925393e07866583d858ce9daedf0343657c67acffc33efd2e465edec0bac",
+  "prior_tested_functions_ast_unchanged": [
+    "plan",
+    "environment",
+    "validate_cuda",
+    "validate_metadata",
+    "validate_rows",
+    "acceptance"
+  ],
+  "previous_28_cases_reexecuted": false,
+  "subprocesses_launched": 0,
+  "torch_imported": false,
+  "gpu_runtime_validated": false,
+  "target_evaluation_executed": false,
+  "limitations": [
+    "All dependency bytes are synthetic; not an actual remote frozen-source or CUDA runtime check"
+  ]
+}
