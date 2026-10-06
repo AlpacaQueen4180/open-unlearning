@@ -1,0 +1,17 @@
+{
+  "heartbeat_time_utc": "2026-10-06T12:58:31.901Z",
+  "task": "/data/spf-npo-20261006-r4",
+  "queue_pid_from_launch": 45219,
+  "monitoring_status": "EXTERNAL_AUTH_REQUIRED",
+  "reason": "RunAI CLI authentication token expired",
+  "cli_exit": 1,
+  "attempts": 1,
+  "remote_snapshot_executed": false,
+  "queue_state": "unconfirmed",
+  "outer_retry": false,
+  "remote_mutation": false,
+  "private_cli_failure_sha256": "7833f4dcbcaf6cd3502526760e4b9be27baeac56cabe466dc6334178365cdc95",
+  "raw_failure_output_published": false,
+  "user_action": "Reauthenticate RunAI CLI locally; then read existing r4 once",
+  "full_gate_reference_npo_complete": false
+}
