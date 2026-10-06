@@ -65,6 +65,12 @@ for ($taskAttempt = 1; $taskAttempt -le $MaxAttempts; $taskAttempt++) {
         }
         return $taskValue
     }
+    if ($SavePath) {
+        # Preserve failed transport/CLI output privately without exposing it in chat.
+        $taskFailurePath = [IO.Path]::GetFullPath($SavePath + ".failed-attempt-$taskAttempt.txt")
+        [IO.Directory]::CreateDirectory([IO.Path]::GetDirectoryName($taskFailurePath)) | Out-Null
+        [IO.File]::WriteAllText($taskFailurePath, $taskText, [Text.UTF8Encoding]::new($false))
+    }
     if ($taskText -match 'Traceback \(most recent call last\)') {
         throw "Remote Python failed (CLI exit $taskExit); no transport retry."
     }
