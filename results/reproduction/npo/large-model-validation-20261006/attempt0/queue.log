@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/data/npo-gb200-20261004/repo/scripts/reproduction/npo/gb200/validate_large_models.py", line 73, in <module>
+    run(short + '_freeze_tofu', [str(OLD_PY), str(SOURCE / 'capture_large_model_batch.py'), '--model', model, '--assets', str(assets_file), '--output', str(batch)])
+  File "/data/npo-gb200-20261004/repo/scripts/reproduction/npo/gb200/validate_large_models.py", line 43, in run
+    raise RuntimeError(label + ' failed; preserve original evidence')
+RuntimeError: llama31_8b_freeze_tofu failed; preserve original evidence

@@ -1,5 +1,9 @@
 # NPO 梯度累積的 loss scaling：疑點、證據與待驗證項目
 
+> **17:03大型模型最終結果：** Llama-3.1-8B與Llama-2-7B新版native短程皆完成：正式訓練raw NPO loss到DS backward實際完整组除8／尾端除2，Trainer=DS4、micro20、epoch2，同DS explicit-mean梯度四項scale1／cos1／殘差0；四項原autograd 5% gates仍未過。這些結果支持實際累積分母正確，沒有證實完整autograd／DS等價，更沒有追溯修正歷史safety。版本、完整checkpoint SHA、原始證據與未解限制見[大型模型驗證](large-model-native-validation-20261006.md)。
+
+> **16:48大型模型追加：** 新版Llama-3.1-8B的forget01 seed0短程訓練已直接記錄20次raw NPO loss→DS backward：完整組除8、尾端組除2，Trainer=DS4／micro20／epoch2、邊界8／10／18／20。同DS explicit-mean梯度control完整／尾端皆scale1、cosine1、殘差0；原autograd comparison兩個5% gates仍未通過。這是另一次原生短程驗證，沒有追溯更改September safety訓練，也不是10-epoch reproduction或所有梯度等價性驗收。詳見[大型模型紀錄與原始證據](large-model-native-validation-20261006.md)。
+
 > **10:34最終結論範圍：** 有限驗證完成。舊H100／GB200漏除accumulation已有受控梯度實測；真實1B相同TOFU frozen batch對同DS explicit-mean control，舊完整8批／短組2批為8／2倍、新版原生為1／1倍。新版native三split seed0已完成更新計數、完整checkpoint與評估稽核，未重現全部docs數值。真實1B原autograd reference的16項5% gate仍未通過，沒有宣稱完整autograd／DS等價，也沒有追溯修正歷史實驗。下方保留當時疑點與查核過程；最終實測與限制見[驗證紀錄](environment-gradient-validation-20261006.md)。
 
 > **同日實測進度：** 新增controlled gradient audit已在真實NPO→Trainer→Accelerate→ZeRO-3路徑觀測GB200完整8批FP32梯度約8倍、雙H100完整4批的forget／retain／combined梯度約4倍，bf16 tiny control亦通過。真實Llama-2-7B雙H100、bf16完整四批亦完成：投影倍率3.97807927、cosine0.99992089，消除倍率後relative error1.26%。這證實受控舊環境的漏除，而非已驗證每個歷史run；7B此量測仍使用合成固定tokens。新版與TOFU梯度測試待續接。本文下方保留原疑點查核時的狀態。最新範圍與限制見[環境與梯度驗證紀錄](environment-gradient-validation-20261006.md)。

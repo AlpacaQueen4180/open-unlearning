@@ -1,0 +1,134 @@
+{
+  "as-run/capture_large_model_batch.py": {
+    "bytes": 3847,
+    "sha256": "ddb261ad660a6b2110c6ca268f6861b36e0049c54dccec51625acbedec7a705f"
+  },
+  "as-run/short_native_probe.py": {
+    "bytes": 3632,
+    "sha256": "31ab3e1a903a1fa6d3918021c0db299c1163c9428a869ee5b283834eccf6e2df"
+  },
+  "as-run/validate_large_models.py": {
+    "bytes": 9058,
+    "sha256": "da3933a1191d595c87c87fed62785a2b00cfd2339f4f492ccaf587810d488ec8"
+  },
+  "assets_Llama-3.1-8B-Instruct.json": {
+    "bytes": 763,
+    "sha256": "75b9bc540cf15eeffdece611ea8ecb4ccd184d6bb6bb044edb5509f14a3d459f"
+  },
+  "llama31_8b-tofu-frozen-40.json": {
+    "bytes": 36946,
+    "sha256": "1d60a3ca057ace4fe11ac97f0738b2c29d927571e9bc070c71032e6e1958dc79"
+  },
+  "llama31_8b_TOFU_w2_combined_bf16.command.json": {
+    "bytes": 814,
+    "sha256": "0836504ced1f90df59a8bd292f9618ffb5e92847bc13e4854d9027b470f8e111"
+  },
+  "llama31_8b_TOFU_w2_combined_bf16.json": {
+    "bytes": 17168,
+    "sha256": "48585ba3541dd15a401bf1af3a1d76a9290389f26e3c9aaf01b2169e43121e8f"
+  },
+  "llama31_8b_TOFU_w2_combined_bf16.log": {
+    "bytes": 34612,
+    "sha256": "da5fe619dd8509448fa8f271f7bd6e2c6e452dbca8526ec73cb5d1023b653060"
+  },
+  "llama31_8b_TOFU_w8_combined_bf16.command.json": {
+    "bytes": 813,
+    "sha256": "4d4dac4e36284528b4780b33fa278dcff1d6bfb61fe4e32c9ade80ae028510df"
+  },
+  "llama31_8b_TOFU_w8_combined_bf16.json": {
+    "bytes": 18848,
+    "sha256": "a8525aa0d45c48be38b7d3d68eafa0f52941790e6c11dadf26403922ffbe3b3c"
+  },
+  "llama31_8b_TOFU_w8_combined_bf16.log": {
+    "bytes": 36962,
+    "sha256": "c8a1ae6c0f7e01a1e4313da44768c3feb6e7aeacb4faf1d3b3e5da39fa7f4890"
+  },
+  "llama31_8b_audit_smoke_evaluation.command.json": {
+    "bytes": 682,
+    "sha256": "672791674892f78734eda46a094b924df3a9fe944cdfea7ebdf1aca438561653"
+  },
+  "llama31_8b_audit_smoke_evaluation.log": {
+    "bytes": 545,
+    "sha256": "fff323ad6833346250db3146a87e702f98e0f6b5a3007b29144f050f93622520"
+  },
+  "llama31_8b_evaluate_smoke4.command.json": {
+    "bytes": 1054,
+    "sha256": "0d12b6c8185736a27cbee47b9f897e8bb407e30aed28a44c1b3e375c302675b7"
+  },
+  "llama31_8b_evaluate_smoke4.log": {
+    "bytes": 37610,
+    "sha256": "47ec53554d7d36e3689db40a94392c782a2dfa9c43a79230a91c11c3f2f3e91d"
+  },
+  "llama31_8b_freeze_tofu.command.json": {
+    "bytes": 525,
+    "sha256": "20d5fe4a91e34ab44745add846a6097392b30e12ef1306f74b0210283b793eb4"
+  },
+  "llama31_8b_freeze_tofu.log": {
+    "bytes": 19344,
+    "sha256": "58a2deaf55b7427db172cb1b385c3644984927da1ca85b5a9518509ad05eddb0"
+  },
+  "llama31_8b_train_smoke4.command.json": {
+    "bytes": 1914,
+    "sha256": "55187d9239178afde3eb0913a090f0dacc04fc91f4f8f54e1646cefce6a08dc3"
+  },
+  "llama31_8b_train_smoke4.log": {
+    "bytes": 27696,
+    "sha256": "39f4c35822ed078daa1e50d836ed43a1039cb1f8f3bac07c2211b5bd90b745d0"
+  },
+  "reference/retain99_TOFU_EVAL.json": {
+    "bytes": 1028758,
+    "sha256": "d307bb83ea3e3409fd01cc50908501ea16aba49e9ed6a779f8ceb75ec2e5503f"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/accelerate.yaml": {
+    "bytes": 334,
+    "sha256": "498e6b4001bee91a794a65f104c45ffd1158a8d3a768ddbfd1e2be26e72b1c0c"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/checkpoint/config.json": {
+    "bytes": 865,
+    "sha256": "c9b2ececc4bfdad43b49faff7c48789b8afd5cbbc386b1ca0e2f43a3e292b475"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/checkpoint/generation_config.json": {
+    "bytes": 221,
+    "sha256": "f3ca7634497fde7c88d1aa0e861cfeb2eed64f547eb60dc763dca6cad2cde3ad"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/checkpoint/runtime_final_rank0.json": {
+    "bytes": 7389,
+    "sha256": "1d32e2b53fdca468bb15c3b14440f36b012b883d9b401ddc52b9a4e3a201f983"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/checkpoint/trainer_state.json": {
+    "bytes": 976,
+    "sha256": "40a1a424a71e057ab95cf0f4a736a915e7e577256cacb77b8e5d65ed4534b220"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/deepspeed.json": {
+    "bytes": 720,
+    "sha256": "8479c29a9f76b62ae9380f88a89cd4b810530f4b723daf4dfc25fd01db05163e"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/eval/.hydra/config.yaml": {
+    "bytes": 21658,
+    "sha256": "bb2e2f53cec93c6bc25ab9e5a5e23be8c3ce4f9eeb2341e9192c44143cfd9df1"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/eval/.hydra/hydra.yaml": {
+    "bytes": 16401,
+    "sha256": "7c9e8f4da8cff1a99ab9724f15ccc6378f50296e75ed3cd9c441d4e16a9f3448"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/eval/.hydra/overrides.yaml": {
+    "bytes": 907,
+    "sha256": "97a4a2efe5e6658a32bf6342362a3b8946617a69b2295e1d7fc06bf6013e1d4b"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/eval/TOFU_EVAL.json": {
+    "bytes": 932035,
+    "sha256": "681ef3d2064ed4dfe11dfc32eeb5124c13fe0c938b2691da6a6797f678f23601"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/eval/TOFU_SUMMARY.json": {
+    "bytes": 298,
+    "sha256": "dcacfc9b07b93233907e8b2604e901295d989b8ce94704571a0003a6accbd8b6"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/eval/eval.log": {
+    "bytes": 21620,
+    "sha256": "11b019d525d7a3d5ea8e0421fea46289a4821bcfd9bc77d3136371045fe5c21a"
+  },
+  "runs/llama31_8b_forget01_s0_native_smoke4/manifest.json": {
+    "bytes": 1106,
+    "sha256": "e9133be03cff40f97cfed9314b6e15c36061e1e50719ad286ad9f9314e07683d"
+  }
+}

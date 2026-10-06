@@ -1,5 +1,7 @@
 # OpenUnlearning upstream 查核：更新次數、loss scaling 與相關論文
 
+> **17:03大型模型追加已完成：** 新版native Llama-3.1-8B與Llama-2-7B各forget01 seed0 smoke4，皆核Trainer=DS4／micro20／epoch2，實際backward完整組除8／尾端除2、完整checkpoint reload評估成功。同DS explicit-mean四項scaling gates通過；四項原autograd comparisons未過5% gates。僅短程驗證，不是10-epoch reproduction或safety驗收，不追溯修改歷史分類。原始證據、SHA及版本偏離見[大型模型驗證](large-model-native-validation-20261006.md)。
+
 > **10:34最終實驗範圍：** 有限驗證完成。新版隔離stack完成二十項old／new tiny與十六項真實1B synthetic／TOFU同DS reference對照，舊完整／短組8／2倍、新版1／1倍。新版native三split seed0皆獨立核Trainer=DS20／70／130、micro100／500／1000、epoch10、完整checkpoint／評估。FQ依序.265687／.270474／.054053，未重現全部docs數值。原autograd／DS bf16差異仍未定位；保留容器Torch与兩個eval輸出cast偏離，不能稱為完整upstream預設環境。下方早期「尚未驗證」文字是當時查核狀態；最終證據以[驗證紀錄](environment-gradient-validation-20261006.md)為準。
 
 > **同日使用者授權的驗證進度：** 已開始[獨立環境與梯度驗證](environment-gradient-validation-20261006.md)。舊GB200與雙H100的controlled tiny-model梯度已有漏除accumulation實測；雙H100真實7B的完整四批／尾端一批也已完成，完整四批投影倍率3.97807927，八個受控case的雙rank證據已獨立稽核。此7B測試仍用合成固定tokens。新版尚未完成環境／梯度／正式計數驗收。本文件下方保留源碼查核時的狀態，不能把新版源碼處理視為實驗已通過。

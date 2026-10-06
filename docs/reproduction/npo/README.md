@@ -27,6 +27,8 @@ repair, not corrected training.
 - [Corrected cells and original forget01 three-seed results](reports/GB200-NPO-Followup-2026-10-05.md)
 - [Update-count mechanism and NPO/safety report correction inventory](update-count-mismatch-20261006.md)
 - [Completed H100/GB200 gradient controls and new-stack three-split seed0 validation](environment-gradient-validation-20261006.md)
+- [Completed native 8B/7B short validation, backward scalars and preserved gradient limits](large-model-native-validation-20261006.md)
+- [RunAI connection diagnostics and bounded read-only retries](runai-connection-reliability-20261006.md)
 - [Loss-scaling mechanism, measured evidence and unresolved comparisons](loss-scaling-20261006.md)
 - [Current upstream fixes, original-paper evidence limits, related papers and upgrade validation](upstream-status-20261006.md)
 - [Execution history, controls and environment](gb200-20261004.md)

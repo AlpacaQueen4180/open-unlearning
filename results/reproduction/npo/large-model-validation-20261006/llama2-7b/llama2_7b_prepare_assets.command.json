@@ -1,0 +1,6 @@
+[
+  "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+  "-c",
+  "\nimport pathlib,json,hashlib,sys,os\nfrom huggingface_hub import HfApi,snapshot_download,hf_hub_download\nroot=pathlib.Path('/data/npo-gb200-20261004');task=pathlib.Path(os.environ.get('NPO_LARGE_VALIDATION_TASK',str(root/'model-validation-20261006')));model=sys.argv[1]\noriginal=json.loads((root/'assets.json').read_text());repo_id='open-unlearning/tofu_'+model+'_full'\nassets={'model_id':repo_id,'model_revision':original['model_revision'] if model=='Llama-2-7b-chat-hf' else HfApi().model_info(repo_id).sha,'dataset_revision':original['dataset_revision'],'eval_revision':original['eval_revision']}\ndest=task/('assets_'+model+'.json');assert not dest.exists()\ndest.write_text(json.dumps(assets,indent=2))\nassets['model_path']=snapshot_download(repo_id,revision=assets['model_revision'],allow_patterns=['*.json','*.safetensors','tokenizer*','*.model'])\nassets['retain_file']='tofu_'+model+'_retain99/TOFU_EVAL.json'\nassets['retain_path']=hf_hub_download('open-unlearning/eval',assets['retain_file'],repo_type='dataset',revision=assets['eval_revision'])\nassets['retain_sha256']=hashlib.sha256(pathlib.Path(assets['retain_path']).read_bytes()).hexdigest()\ndest.write_text(json.dumps(assets,indent=2));print(json.dumps(assets))\n",
+  "Llama-2-7b-chat-hf"
+]

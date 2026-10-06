@@ -1,0 +1,11 @@
+- experiment=eval/tofu/default.yaml
+- model=Llama-3.1-8B-Instruct
+- forget_split=forget01
+- holdout_split=holdout01
+- task_name=llama31_8b_forget01_s0_native_smoke4_eval
+- model.model_args.pretrained_model_name_or_path=/data/npo-gb200-20261004/model-validation-20261006-r1/runs/llama31_8b_forget01_s0_native_smoke4/checkpoint
+- model.tokenizer_args.pretrained_model_name_or_path=/data/npo-gb200-20261004/hf/hub/models--open-unlearning--tofu_Llama-3.1-8B-Instruct_full/snapshots/1a5c5b1a557f8c99bdadecd5168ebd03f640b00e
+- model.model_args.attn_implementation=flash_attention_2
+- retain_logs_path=/data/npo-gb200-20261004/hf/hub/datasets--open-unlearning--eval/snapshots/f31717fe522c2a6725ca0024980f51169a084ca1/tofu_Llama-3.1-8B-Instruct_retain99/TOFU_EVAL.json
+- paths.output_dir=/data/npo-gb200-20261004/model-validation-20261006-r1/runs/llama31_8b_forget01_s0_native_smoke4/eval
+- eval.tofu.batch_size=32

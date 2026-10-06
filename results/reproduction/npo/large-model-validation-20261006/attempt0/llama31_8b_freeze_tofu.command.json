@@ -1,0 +1,10 @@
+[
+  "/data/npo-gb200-20261004/venv/bin/python",
+  "/data/npo-gb200-20261004/repo/scripts/reproduction/npo/gb200/capture_large_model_batch.py",
+  "--model",
+  "Llama-3.1-8B-Instruct",
+  "--assets",
+  "/data/npo-gb200-20261004/model-validation-20261006/assets_Llama-3.1-8B-Instruct.json",
+  "--output",
+  "/data/npo-gb200-20261004/model-validation-20261006/llama31_8b-tofu-frozen-40.pt"
+]

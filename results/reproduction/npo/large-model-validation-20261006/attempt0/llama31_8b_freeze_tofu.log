@@ -1,0 +1,91 @@
+/usr/local/lib/python3.12/dist-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.0.7) or chardet (6.0.0.post1)/charset_normalizer (3.4.1) doesn't match a supported version!
+  warnings.warn(
+Traceback (most recent call last):
+  File "/data/npo-gb200-20261004/repo/scripts/reproduction/npo/gb200/capture_large_model_batch.py", line 54, in <module>
+    'collator_repo': str(repo), 'resolved_config': OmegaConf.to_container(cfg, resolve=True),
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/omegaconf.py", line 573, in to_container
+    return BaseContainer._to_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/basecontainer.py", line 292, in _to_content
+    value = get_node_value(key)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/basecontainer.py", line 247, in get_node_value
+    value = BaseContainer._to_content(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/basecontainer.py", line 292, in _to_content
+    value = get_node_value(key)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/basecontainer.py", line 244, in get_node_value
+    conf._format_and_raise(key=key, value=None, cause=e)
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/base.py", line 231, in _format_and_raise
+    format_and_raise(
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/_utils.py", line 899, in format_and_raise
+    _raise(ex, cause)
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/_utils.py", line 797, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/basecontainer.py", line 242, in get_node_value
+    node = node._dereference_node()
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/base.py", line 246, in _dereference_node
+    node = self._dereference_node_impl(throw_on_resolution_failure=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/base.py", line 277, in _dereference_node_impl
+    return parent._resolve_interpolation_from_parse_tree(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/base.py", line 584, in _resolve_interpolation_from_parse_tree
+    resolved = self.resolve_parse_tree(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/base.py", line 769, in resolve_parse_tree
+    raise InterpolationResolutionError(
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/base.py", line 764, in resolve_parse_tree
+    return visitor.visit(parse_tree)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/antlr4/tree/Tree.py", line 34, in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py", line 206, in accept
+    return visitor.visitConfigValue(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py", line 101, in visitConfigValue
+    return self.visit(ctx.getChild(0))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/antlr4/tree/Tree.py", line 34, in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py", line 342, in accept
+    return visitor.visitText(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py", line 298, in visitText
+    return self.visitInterpolation(c)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py", line 125, in visitInterpolation
+    return self.visit(ctx.getChild(0))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/antlr4/tree/Tree.py", line 34, in visit
+    return tree.accept(self)
+           ^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py", line 1041, in accept
+    return visitor.visitInterpolationResolver(self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/grammar_visitor.py", line 179, in visitInterpolationResolver
+    return self.resolver_interpolation_callback(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/base.py", line 750, in resolver_interpolation_callback
+    return self._evaluate_custom_resolver(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/base.py", line 694, in _evaluate_custom_resolver
+    return resolver(
+           ^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/omegaconf/omegaconf.py", line 445, in resolver_wrapper
+    ret = resolver(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/hydra/core/utils.py", line 220, in <lambda>
+    lambda path: OmegaConf.select(cast(DictConfig, HydraConfig.get()), path),
+                                                   ^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/venv/lib/python3.12/site-packages/hydra/core/hydra_config.py", line 31, in get
+    raise ValueError("HydraConfig was not set")
+omegaconf.errors.InterpolationResolutionError: ValueError raised while resolving interpolation: HydraConfig was not set
+    full_key: paths.work_dir
+    object_type=dict

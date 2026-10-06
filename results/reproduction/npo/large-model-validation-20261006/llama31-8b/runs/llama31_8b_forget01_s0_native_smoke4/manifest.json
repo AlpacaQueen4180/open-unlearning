@@ -1,0 +1,24 @@
+{
+  "model": "Llama-3.1-8B-Instruct",
+  "assets": {
+    "model_id": "open-unlearning/tofu_Llama-3.1-8B-Instruct_full",
+    "model_revision": "1a5c5b1a557f8c99bdadecd5168ebd03f640b00e",
+    "dataset_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+    "eval_revision": "f31717fe522c2a6725ca0024980f51169a084ca1",
+    "model_path": "/data/npo-gb200-20261004/hf/hub/models--open-unlearning--tofu_Llama-3.1-8B-Instruct_full/snapshots/1a5c5b1a557f8c99bdadecd5168ebd03f640b00e",
+    "retain_file": "tofu_Llama-3.1-8B-Instruct_retain99/TOFU_EVAL.json",
+    "retain_path": "/data/npo-gb200-20261004/hf/hub/datasets--open-unlearning--eval/snapshots/f31717fe522c2a6725ca0024980f51169a084ca1/tofu_Llama-3.1-8B-Instruct_retain99/TOFU_EVAL.json",
+    "retain_sha256": "d307bb83ea3e3409fd01cc50908501ea16aba49e9ed6a779f8ceb75ec2e5503f"
+  },
+  "seed": 0,
+  "split": "forget01",
+  "smoke_only": true,
+  "alpha": 1,
+  "gamma": 1,
+  "beta": 0.1,
+  "planned_updates": 4,
+  "expected_epochs": 2,
+  "micro4_gas8_global32": true,
+  "native_no_legacy_patch": true,
+  "upstream": "17cbbc87192e6934deb92875c359c91bbd837fb4"
+}

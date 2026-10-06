@@ -1,0 +1,18 @@
+{
+  "phase": "FAILED",
+  "pid": 37690,
+  "started": "2026-10-06T07:56:45.440402+00:00",
+  "stages": [
+    {
+      "label": "llama31_8b_prepare_assets",
+      "returncode": 0
+    },
+    {
+      "label": "llama31_8b_freeze_tofu",
+      "returncode": 1
+    }
+  ],
+  "models": {},
+  "current": "llama31_8b_freeze_tofu",
+  "error": "RuntimeError('llama31_8b_freeze_tofu failed; preserve original evidence')"
+}

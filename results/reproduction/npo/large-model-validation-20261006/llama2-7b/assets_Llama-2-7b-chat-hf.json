@@ -1,0 +1,10 @@
+{
+  "model_id": "open-unlearning/tofu_Llama-2-7b-chat-hf_full",
+  "model_revision": "cc5b31c69127d5da881608e640f2b453c446435b",
+  "dataset_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+  "eval_revision": "f31717fe522c2a6725ca0024980f51169a084ca1",
+  "model_path": "/data/npo-gb200-20261004/hf/hub/models--open-unlearning--tofu_Llama-2-7b-chat-hf_full/snapshots/cc5b31c69127d5da881608e640f2b453c446435b",
+  "retain_file": "tofu_Llama-2-7b-chat-hf_retain99/TOFU_EVAL.json",
+  "retain_path": "/data/npo-gb200-20261004/hf/hub/datasets--open-unlearning--eval/snapshots/f31717fe522c2a6725ca0024980f51169a084ca1/tofu_Llama-2-7b-chat-hf_retain99/TOFU_EVAL.json",
+  "retain_sha256": "adf8058227db005f1354b1b3c9ef805c80bf1caecff946ec8f814f65911e74c0"
+}

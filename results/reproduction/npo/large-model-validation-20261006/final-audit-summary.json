@@ -1,0 +1,91 @@
+{
+  "phase": "DONE",
+  "raw_manifest_entries_sha_verified": 90,
+  "queue_stage_count": 14,
+  "models": [
+    {
+      "model": "Llama-3.1-8B-Instruct",
+      "scope": "forget01 seed0 four-update smoke, not full reproduction or safety acceptance",
+      "raw_files_sha_verified": 33,
+      "native_updates_boundary_scaling_gate_passed": true,
+      "trainer_updates": 4,
+      "ds_updates": 4,
+      "microbatches": 20,
+      "epoch": 2,
+      "boundaries": [
+        8,
+        10,
+        18,
+        20
+      ],
+      "full_window_divisor": 8,
+      "tail_window_divisor": 2,
+      "all_autograd_gates_passed": false,
+      "summary": {
+        "forget_quality": 0.09707484379785859,
+        "model_utility": 0.6432044798574184,
+        "forget_truth_ratio": 0.5263947704335518
+      },
+      "ks_D": 0.275,
+      "samples": [
+        40,
+        40
+      ],
+      "summary_deltas": {
+        "forget_quality": 2.7755575615628914e-17,
+        "model_utility": 0.0,
+        "forget_truth_ratio": 0.0
+      },
+      "ks_method": "two-sided exact integer lattice paths",
+      "checkpoint_proof_method": "remote CPU streamed file SHA, safetensors headers/index/offsets/shapes/all layers; weights not downloaded",
+      "frozen_batch_sha256": "7182432e7af902dc6d45246fa2dbb9384b230e05cbee83c894d5c7d49e589733"
+    },
+    {
+      "model": "Llama-2-7b-chat-hf",
+      "scope": "forget01 seed0 four-update smoke, not full reproduction or safety acceptance",
+      "raw_files_sha_verified": 44,
+      "native_updates_boundary_scaling_gate_passed": true,
+      "trainer_updates": 4,
+      "ds_updates": 4,
+      "microbatches": 20,
+      "epoch": 2,
+      "boundaries": [
+        8,
+        10,
+        18,
+        20
+      ],
+      "full_window_divisor": 8,
+      "tail_window_divisor": 2,
+      "all_autograd_gates_passed": false,
+      "summary": {
+        "forget_quality": 0.006760732303569206,
+        "model_utility": 0.6231267438307369,
+        "forget_truth_ratio": 0.5382433879138844
+      },
+      "ks_D": 0.375,
+      "samples": [
+        40,
+        40
+      ],
+      "summary_deltas": {
+        "forget_quality": 1.734723475976807e-18,
+        "model_utility": 0.0,
+        "forget_truth_ratio": 0.0
+      },
+      "ks_method": "two-sided exact integer lattice paths",
+      "checkpoint_proof_method": "remote CPU streamed file SHA, safetensors headers/index/offsets/shapes/all layers; weights not downloaded",
+      "frozen_batch_sha256": "fcd6f998521cb1f4996ff24961daa281f9e958129d50d7c31c3f458f3f0a7cb4"
+    }
+  ],
+  "matched_ds_scaling_gates_passed": 4,
+  "original_autograd_gates_failed": 4,
+  "limits": [
+    "Four-update smoke only; no ten-epoch matrix or safety Judge.",
+    "Same DS explicit mean isolates scaling; original autograd comparisons remain failed.",
+    "Measured native full/tail scalar divisors 8/2; no legacy boundary or loss patch.",
+    "Public TOFU full revisions fixed; historical September weight identity not established.",
+    "Container Torch/bitsandbytes and evaluator float casts differ from upstream defaults.",
+    "Remote CPU checkpoint hashes/headers verified; large weights, pt and raw vectors remain remote."
+  ]
+}

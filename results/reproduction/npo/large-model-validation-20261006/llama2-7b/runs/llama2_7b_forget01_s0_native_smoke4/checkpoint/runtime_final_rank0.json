@@ -1,0 +1,288 @@
+{
+  "trainer_global_step": 4,
+  "engine_global_steps": 4,
+  "engine_micro_steps": 4,
+  "microsteps": 20,
+  "epoch": 2.0,
+  "attention": "flash_attention_2",
+  "world_size": 1,
+  "micro_batch": 4,
+  "configured_gas": 8,
+  "optimizer": "paged_adamw_32bit",
+  "resolved_deepspeed": {
+    "zero_optimization": {
+      "stage": 3,
+      "offload_optimizer": {
+        "device": "none",
+        "pin_memory": true
+      },
+      "offload_param": {
+        "device": "none",
+        "pin_memory": true
+      },
+      "overlap_comm": true,
+      "contiguous_gradients": true,
+      "reduce_bucket_size": 16777216,
+      "stage3_prefetch_bucket_size": 15099494,
+      "stage3_param_persistence_threshold": 40960,
+      "sub_group_size": 1000000000.0,
+      "stage3_max_live_parameters": 1000000000.0,
+      "stage3_max_reuse_distance": 1000000000.0,
+      "stage3_gather_16bit_weights_on_model_save": true
+    },
+    "train_batch_size": 32,
+    "train_micro_batch_size_per_gpu": 4,
+    "gradient_accumulation_steps": 8,
+    "bf16": {
+      "enabled": true
+    },
+    "steps_per_print": Infinity,
+    "fp16": {
+      "enabled": false
+    },
+    "zero_allow_untested_optimizer": true
+  },
+  "loss_scaling_trace": [
+    {
+      "microstep": 1,
+      "raw_npo_loss": 13.816828727722168,
+      "loss_entering_ds_backward": 1.727103590965271,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 2,
+      "raw_npo_loss": 13.822171211242676,
+      "loss_entering_ds_backward": 1.7277714014053345,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 3,
+      "raw_npo_loss": 13.815390586853027,
+      "loss_entering_ds_backward": 1.7269238233566284,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 4,
+      "raw_npo_loss": 13.818803787231445,
+      "loss_entering_ds_backward": 1.7273504734039307,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 5,
+      "raw_npo_loss": 13.81688404083252,
+      "loss_entering_ds_backward": 1.727110505104065,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 6,
+      "raw_npo_loss": 13.818117141723633,
+      "loss_entering_ds_backward": 1.727264642715454,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 7,
+      "raw_npo_loss": 13.825241088867188,
+      "loss_entering_ds_backward": 1.7281551361083984,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 8,
+      "raw_npo_loss": 13.818709373474121,
+      "loss_entering_ds_backward": 1.7273386716842651,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": true,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 9,
+      "raw_npo_loss": 13.824150085449219,
+      "loss_entering_ds_backward": 6.912075042724609,
+      "actual_window_microbatches": 2,
+      "ratio": 0.5,
+      "expected_ratio": 0.5,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 10,
+      "raw_npo_loss": 13.822453498840332,
+      "loss_entering_ds_backward": 6.911226749420166,
+      "actual_window_microbatches": 2,
+      "ratio": 0.5,
+      "expected_ratio": 0.5,
+      "boundary": true,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 11,
+      "raw_npo_loss": 9.567795753479004,
+      "loss_entering_ds_backward": 1.1959744691848755,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 12,
+      "raw_npo_loss": 10.57892894744873,
+      "loss_entering_ds_backward": 1.3223661184310913,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 13,
+      "raw_npo_loss": 10.26172161102295,
+      "loss_entering_ds_backward": 1.2827152013778687,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 14,
+      "raw_npo_loss": 13.38607120513916,
+      "loss_entering_ds_backward": 1.673258900642395,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 15,
+      "raw_npo_loss": 13.443794250488281,
+      "loss_entering_ds_backward": 1.6804742813110352,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 16,
+      "raw_npo_loss": 13.272445678710938,
+      "loss_entering_ds_backward": 1.6590557098388672,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 17,
+      "raw_npo_loss": 10.50412368774414,
+      "loss_entering_ds_backward": 1.3130154609680176,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 18,
+      "raw_npo_loss": 10.758624076843262,
+      "loss_entering_ds_backward": 1.3448280096054077,
+      "actual_window_microbatches": 8,
+      "ratio": 0.125,
+      "expected_ratio": 0.125,
+      "boundary": true,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 19,
+      "raw_npo_loss": 10.571592330932617,
+      "loss_entering_ds_backward": 5.285796165466309,
+      "actual_window_microbatches": 2,
+      "ratio": 0.5,
+      "expected_ratio": 0.5,
+      "boundary": false,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    },
+    {
+      "microstep": 20,
+      "raw_npo_loss": 10.567012786865234,
+      "loss_entering_ds_backward": 5.283506393432617,
+      "actual_window_microbatches": 2,
+      "ratio": 0.5,
+      "expected_ratio": 0.5,
+      "boundary": true,
+      "kwargs": {
+        "scale_wrt_gas": false
+      }
+    }
+  ],
+  "probe_policy": "records compute_loss and engine.backward; no boundary/loss mutation"
+}

@@ -1,0 +1,8 @@
+[
+  "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+  "scripts/reproduction/npo/as-run/finalize_h100_reproduction.py",
+  "/data/npo-gb200-20261004/model-validation-20261006-r1/runs/llama31_8b_forget01_s0_native_smoke4/eval/TOFU_SUMMARY.json",
+  "/data/npo-gb200-20261004/model-validation-20261006-r1/runs/llama31_8b_forget01_s0_native_smoke4/eval/TOFU_EVAL.json",
+  "/data/npo-gb200-20261004/hf/hub/datasets--open-unlearning--eval/snapshots/f31717fe522c2a6725ca0024980f51169a084ca1/tofu_Llama-3.1-8B-Instruct_retain99/TOFU_EVAL.json",
+  "/data/npo-gb200-20261004/model-validation-20261006-r1/runs/llama31_8b_forget01_s0_native_smoke4/checkpoint/trainer_state.json"
+]

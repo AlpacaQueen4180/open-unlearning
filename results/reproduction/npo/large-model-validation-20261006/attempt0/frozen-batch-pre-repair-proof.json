@@ -1,0 +1,6 @@
+{
+  "path": "/data/npo-gb200-20261004/model-validation-20261006/llama31_8b-tofu-frozen-40.pt",
+  "bytes": 180924,
+  "sha256": "7182432e7af902dc6d45246fa2dbb9384b230e05cbee83c894d5c7d49e589733",
+  "note": "Original pt persisted before metadata serialization failed; retained without regeneration"
+}

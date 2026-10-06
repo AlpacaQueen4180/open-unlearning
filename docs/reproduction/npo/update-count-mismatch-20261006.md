@@ -56,6 +56,7 @@ NPO objective、beta／alpha／gamma、既有 loss scaling、套件版本保持�
 | October GB200 原版兩模型 forget01 seeds1／2，合併原 seed0 | **未套用** | [follow-up 報告](reports/GB200-NPO-Followup-2026-10-05.md) 中三 seed 統計僅使用原版，不能混入 corrected seed0。 |
 | October GB200 兩模型 × forget01／05／10，corrected seed0 | **已套用並驗證，共六個 full runs** | `corrected=true`，policy 與實際 Trainer=DS=forced 計數均保存；兩模型為 Llama-2-7b-chat-hf、Llama-3.2-1B-Instruct。 |
 | October 6 GB200 新版native 1B × forget01／05／10，seed0 | **未套本地policy；新版原生修正已實測，共三個full runs** | TF5.5.4／Accel1.13.0／DS0.15.4原生更新與平均；Trainer=DS20／70／130、epoch10。`corrected=false`仅表示沒有legacy probe；不能解讀為舊scaling。完整證據見[新版驗證](environment-gradient-validation-20261006.md)。 |
+| October 6 GB200 新版native Llama-3.1-8B及Llama-2-7B，各forget01 seed0 smoke4 | **未套本地policy；兩模型原生更新及backward除數已實測，僅短程** | 皆Trainer=DS4、micro20、epoch2，邊界8／10／18／20；完整組除8、尾端除2。不是September safety checkpoint，也不是full reproduction；四個同DS scaling gates通過、四個原autograd gates未過。兩模型完整checkpoint及評估獨立稽核完成，見[大型模型驗證](large-model-native-validation-20261006.md)。 |
 | October corrected smoke4 | **已套用；非 full run** | 真實 partial-group 門檻測試，不納入正式指標表。 |
 | 已提交兩 GB200 workload | **沒有可分類的完成結果** | 1 GPU hard quota 阻止執行；Pending 不算 reproduction，也不算修正驗證。 |
 

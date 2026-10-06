@@ -1,0 +1,94 @@
+{
+  "phase": "DONE",
+  "pid": 38122,
+  "started": "2026-10-06T08:17:58.891701+00:00",
+  "stages": [
+    {
+      "label": "llama31_8b_prepare_assets",
+      "returncode": 0,
+      "reused_from": "/data/npo-gb200-20261004/model-validation-20261006"
+    },
+    {
+      "label": "llama31_8b_freeze_tofu",
+      "returncode": 0
+    },
+    {
+      "label": "llama31_8b_TOFU_w8_combined_bf16",
+      "returncode": 0
+    },
+    {
+      "label": "llama31_8b_TOFU_w2_combined_bf16",
+      "returncode": 0
+    },
+    {
+      "label": "llama31_8b_train_smoke4",
+      "returncode": 0
+    },
+    {
+      "label": "llama31_8b_evaluate_smoke4",
+      "returncode": 0
+    },
+    {
+      "label": "llama31_8b_audit_smoke_evaluation",
+      "returncode": 0
+    },
+    {
+      "label": "llama2_7b_prepare_assets",
+      "returncode": 0
+    },
+    {
+      "label": "llama2_7b_freeze_tofu",
+      "returncode": 0
+    },
+    {
+      "label": "llama2_7b_TOFU_w8_combined_bf16",
+      "returncode": 0
+    },
+    {
+      "label": "llama2_7b_TOFU_w2_combined_bf16",
+      "returncode": 0
+    },
+    {
+      "label": "llama2_7b_train_smoke4",
+      "returncode": 0
+    },
+    {
+      "label": "llama2_7b_evaluate_smoke4",
+      "returncode": 0
+    },
+    {
+      "label": "llama2_7b_audit_smoke_evaluation",
+      "returncode": 0
+    }
+  ],
+  "models": {
+    "Llama-3.1-8B-Instruct": {
+      "cell": "/data/npo-gb200-20261004/model-validation-20261006-r1/runs/llama31_8b_forget01_s0_native_smoke4",
+      "phase": "VALIDATION_DONE",
+      "summary": {
+        "extraction_strength": 0.26984941447953725,
+        "forget_Q_A_Prob": 0.5176513671875,
+        "forget_Q_A_ROUGE": 0.6350691418165082,
+        "forget_quality": 0.09707484379785862,
+        "forget_truth_ratio": 0.5263947704335518,
+        "model_utility": 0.6432044798574184,
+        "privleak": -89.374999982125
+      }
+    },
+    "Llama-2-7b-chat-hf": {
+      "cell": "/data/npo-gb200-20261004/model-validation-20261006-r1/runs/llama2_7b_forget01_s0_native_smoke4",
+      "phase": "VALIDATION_DONE",
+      "summary": {
+        "extraction_strength": 0.3597034954121704,
+        "forget_Q_A_Prob": 0.66669921875,
+        "forget_Q_A_ROUGE": 0.6126199330931539,
+        "forget_quality": 0.006760732303569208,
+        "forget_truth_ratio": 0.5382433879138844,
+        "model_utility": 0.6231267438307369,
+        "privleak": -92.44332491839933
+      }
+    }
+  },
+  "current": "llama2_7b_audit_smoke_evaluation",
+  "finished": "2026-10-06T08:56:23.394980+00:00"
+}

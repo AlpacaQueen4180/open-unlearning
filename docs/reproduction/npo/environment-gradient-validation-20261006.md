@@ -2,6 +2,8 @@
 
 開始日期：2026-10-06。使用者授權依 [upstream 建議](upstream-status-20261006.md) 驗證新版及舊版 loss scaling。有限實驗於同日10:34臺灣完成；本文保存最終結果及按時間排列的原始執行紀錄。長任務採15分鐘排程，沒有反覆 poll。
 
+同日17:03追加的主要模型Llama-3.1-8B及Llama-2-7B短程驗證亦完成，另存[大型模型報告](large-model-native-validation-20261006.md)與獨立證據。皆Trainer=DS4、micro20、epoch2，正式訓練實際backward完整組除8／尾端除2；四個same-DS scaling gates通過、四個原autograd gates未過。這是另外兩個smoke runs，不混入下方三split 1B full結果，也不是歷史safety修正。
+
 ## 最終結果與驗收範圍
 
 **有限實驗全部完成，舊版漏除accumulation分母已有實測，新版原生更新計畫與平均行為在本次範圍通過。** H100八項、GB200二十項tiny與十六項真實1B synthetic／TOFU梯度量測均完成；新版1B三split seed0亦完成完整訓練、評估、checkpoint與独立數值稽核。[最終機器可讀稽核](../../../results/reproduction/npo/scaling-validation-20261006/final-audit-summary.json)及[證據索引](../../../results/reproduction/npo/scaling-validation-20261006/README.md)保存原始小檔、SHA、版本及失敗。

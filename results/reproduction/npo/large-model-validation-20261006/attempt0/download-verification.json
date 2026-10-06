@@ -1,0 +1,54 @@
+[
+  {
+    "file": "llama31_8b_prepare_assets.command.json",
+    "sha256": "aa5108b07b774f2a4d0f5f291cc25c17e2d2e057eb1644b3892f00cdd88d2632"
+  },
+  {
+    "file": "assets_Llama-3.1-8B-Instruct.json",
+    "sha256": "75b9bc540cf15eeffdece611ea8ecb4ccd184d6bb6bb044edb5509f14a3d459f"
+  },
+  {
+    "file": "llama31_8b_freeze_tofu.command.json",
+    "sha256": "93c73700fb23b1ed009ebabfd1c2cea77d408bf64fc440a25691ee85970fed16"
+  },
+  {
+    "file": "status.json",
+    "sha256": "e838398d0962266be0a24096743e36a61214746e06738120ce5c8f6f62340ffd"
+  },
+  {
+    "file": "launch.json",
+    "sha256": "1dfd4f01dfcfb4b1dd7139ac7915cd1c0c909ff584afb36761e341967c3ee6f3"
+  },
+  {
+    "file": "llama31_8b_freeze_tofu.log",
+    "sha256": "bf0234515e662ab9cd7f4dca4b139312050409dc7b79d15fa8d1dacb351fd4c3"
+  },
+  {
+    "file": "queue.log",
+    "sha256": "dab172891e615a3847521430dec6ba6eb9dc89a1005d83e430c86b5e93ef2fb4"
+  },
+  {
+    "file": "llama31_8b_prepare_assets.log",
+    "sha256": "67250c9a3624283f7a9e20521a48e78309f1b25c5a0458f3c22cc011369d31a7"
+  },
+  {
+    "file": "upload-manifest.json",
+    "sha256": "41ece70a3883d4ac8df93180677701caabac1d690aca2f2603de498d6a79ea46"
+  },
+  {
+    "file": "as-run/short_native_probe.py",
+    "sha256": "31ab3e1a903a1fa6d3918021c0db299c1163c9428a869ee5b283834eccf6e2df"
+  },
+  {
+    "file": "as-run/validate_large_models.py",
+    "sha256": "d6a2394477046899d367bf55d85441fdd287dab0676f52b1a1817dabfc4141a0"
+  },
+  {
+    "file": "as-run/capture_large_model_batch.py",
+    "sha256": "ab0066e55860fa893e37334c84b2a8aae08993b9b63f02070418e74fcb0cc7a4"
+  },
+  {
+    "file": "frozen-batch-pre-repair-proof.json",
+    "sha256": "8915e12b94d6b2a548ed197b4fcc2c172737e5fc71b523bee913e139f3e40c92"
+  }
+]

@@ -1,0 +1,2 @@
+# Preserve downloaded bytes, including CRLF and progress-log whitespace, for SHA checks.
+* -text -whitespace
