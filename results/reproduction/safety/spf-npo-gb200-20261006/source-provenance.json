@@ -264,8 +264,8 @@
     "raw_sha256": "8a8dabc5b71acaee8e60263e7e87ad459273fe834f3e0b9a2443f6faaf372d97",
     "scope": "projection arithmetic and state isolation only; not all training gradient comparisons"
   },
-  "latest_snapshot_utc": "2026-10-06T23:39:55.850174+00:00",
-  "private_snapshot_sha256": "714ee89486fd6edadf8555736d5781a45ebf948092c3981a7c59bfef0fd10d31",
+  "latest_snapshot_utc": "2026-10-06T23:54:56.726146+00:00",
+  "private_snapshot_sha256": "b7ccd9e0b0406deb160909ae636c2d4a7d49ca30a3ae41002ae92e9423eba60c",
   "full_completion_evidence": "r4-completed-evidence-20261007.json",
   "development_cpu_preparation_evidence": "ifbench-cpu-completed-20261007.json",
   "development_cpu_fixture_evidence": "ifbench-cpu-fixtures-20261007.json",
@@ -324,5 +324,7 @@
     "target_gate_evaluated": false
   },
   "reference_completion_evidence": "r4-reference-completed-evidence-20261007.json",
-  "development_deployment_evidence": "development-deployment-20261007-0739.json"
+  "development_deployment_evidence": "development-launch-20261007-0754.json",
+  "development_runtime_status": "SUBMITTED_RESULT_NOT_CHECKED",
+  "development_queue_pid": 46851
 }

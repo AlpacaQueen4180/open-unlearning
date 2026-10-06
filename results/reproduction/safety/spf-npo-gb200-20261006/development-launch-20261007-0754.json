@@ -1,0 +1,173 @@
+{
+  "status": "SUBMITTED_RESULT_NOT_CHECKED",
+  "task": "/data/spf-development-20261007-r1",
+  "run": "/data/spf-development-20261007-r1/cuda-development-r1",
+  "launch": {
+    "status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "pid": 46851,
+    "command": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-development-20261007-r1/validation-code/run_spf_development_queue.py",
+      "--controller-sha256",
+      "5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478",
+      "--snapshot",
+      "/data/spf-development-20261007-r1/validation-code/r4-snapshot-0754.private.json",
+      "--snapshot-sha256",
+      "b7ccd9e0b0406deb160909ae636c2d4a7d49ca30a3ae41002ae92e9423eba60c"
+    ],
+    "cwd": "/data/spf-development-20261007-r1/repo",
+    "log": "/data/spf-development-20261007-r1/validation-code/development-launch-0739.raw.log",
+    "started_at": 1791331077.038869,
+    "controller_sha256": "5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478",
+    "snapshot_sha256": "b7ccd9e0b0406deb160909ae636c2d4a7d49ca30a3ae41002ae92e9423eba60c",
+    "training_executed_by_launcher": false,
+    "external_judge_executed": false
+  },
+  "launch_submitted_utc": "2026-10-06T23:57:57.038869+00:00",
+  "original_r4_snapshot_utc": "2026-10-06T23:54:56.726146+00:00",
+  "original_r4_snapshot_sha256": "b7ccd9e0b0406deb160909ae636c2d4a7d49ca30a3ae41002ae92e9423eba60c",
+  "reused_completed_controller_chunks": 10,
+  "controller_destination_byte_sha_verified": true,
+  "guard_destination_byte_sha_verified": true,
+  "new_snapshot_destination_byte_sha_verified": true,
+  "immutable_completed_models_rerun": false,
+  "assets_retransferred": false,
+  "adapter_modified": false,
+  "initial_0754_failure": {
+    "classification": "CLUSTER_STATUS_EOF_BEFORE_REMOTE_EXECUTION",
+    "returncode": 1,
+    "raw_size": 87,
+    "raw_sha256": "0cd2fe3032548ad52f6a7457b8e6124ba25596c515d1d69459bc76db99776eb2"
+  },
+  "independent_post_failure_artifact_check_sha256": "6680ca32e19df507a870a0aec7036df7f21aea618526866f1cbcceab13476796",
+  "continuation_scope": "Only absent sealing/upload/launch steps after independent artifact check; same original RunAI CLI/workspace, normal escalation, compressed short commands, no retries inside mutation executor.",
+  "deployment_stage_receipts": [
+    {
+      "name": "controller-seal",
+      "returncode": 0,
+      "captured_cli_utf8_size": 150,
+      "captured_cli_utf8_sha256": "639ce38fbf1f8bbda2c290cc91c2d5533ce16344b3ec89dbcb14d1d955623eb0",
+      "as_run_remote_source_sha256": "af0d9026291dca367ace5a09e283321aea1b5ee22481e6eda7979613f2295289",
+      "result": {
+        "file": "run_spf_development_queue.py",
+        "sha256": "5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478"
+      }
+    },
+    {
+      "name": "run_spf_npo_smoke_queue.py-chunk-0",
+      "returncode": 0,
+      "captured_cli_utf8_size": 44,
+      "captured_cli_utf8_sha256": "7a55449fecd6249c67a33c19a2d62790cc7976a4bf3ae42d3655cee202364011",
+      "as_run_remote_source_sha256": "59524e8d90c2c67ffdccc327a150dd30958bf59a50def92e67b8cd58937d0c4c",
+      "result": {
+        "chunk": 0
+      }
+    },
+    {
+      "name": "run_spf_npo_smoke_queue.py-chunk-1",
+      "returncode": 0,
+      "captured_cli_utf8_size": 44,
+      "captured_cli_utf8_sha256": "87f169cd02fea5fa625929091bd1ad2386a1623636649a7f98db3382bca69bab",
+      "as_run_remote_source_sha256": "6c62eef6da2e63479de734498e030e18c0f8b0bbf32faabce3dbc5dc2ea14f38",
+      "result": {
+        "chunk": 1
+      }
+    },
+    {
+      "name": "run_spf_npo_smoke_queue.py-chunk-2",
+      "returncode": 0,
+      "captured_cli_utf8_size": 44,
+      "captured_cli_utf8_sha256": "7affbb1703fd4fcb5bfa6ff2ed9b757c374b2565127b0d52b0520b3ed57972c4",
+      "as_run_remote_source_sha256": "42afe9b80aa64a8edaafe8c551dd472b724196a116a4954971bda5ad790fd0d2",
+      "result": {
+        "chunk": 2
+      }
+    },
+    {
+      "name": "run_spf_npo_smoke_queue.py-sealed",
+      "returncode": 0,
+      "captured_cli_utf8_size": 148,
+      "captured_cli_utf8_sha256": "9781a3ce42d82beb5dabe4ef5697c47d46e2a3f9c84db857e9c1f6be135b2b59",
+      "as_run_remote_source_sha256": "105685551ba1b76a5d77b0028a1ad3ea656692fae49635cdc5fbd5e57ce88b59",
+      "result": {
+        "file": "run_spf_npo_smoke_queue.py",
+        "sha256": "d33d8b8d24f089112f74c4fe18adbb647c4e78b4e3bfecfd35bf3bce279d1ff6"
+      }
+    },
+    {
+      "name": "r4-snapshot-0754.private.json-chunk-0",
+      "returncode": 0,
+      "captured_cli_utf8_size": 44,
+      "captured_cli_utf8_sha256": "7a55449fecd6249c67a33c19a2d62790cc7976a4bf3ae42d3655cee202364011",
+      "as_run_remote_source_sha256": "c595b0b9e0af46549b86c06da72ea8a771366ae8386c0ea7541ffb684fede5ef",
+      "result": {
+        "chunk": 0
+      }
+    },
+    {
+      "name": "r4-snapshot-0754.private.json-chunk-1",
+      "returncode": 0,
+      "captured_cli_utf8_size": 44,
+      "captured_cli_utf8_sha256": "87f169cd02fea5fa625929091bd1ad2386a1623636649a7f98db3382bca69bab",
+      "as_run_remote_source_sha256": "beedd08bda457ed3462490b707ba9087b97f908f00dc80a2704dbe531a923971",
+      "result": {
+        "chunk": 1
+      }
+    },
+    {
+      "name": "r4-snapshot-0754.private.json-sealed",
+      "returncode": 0,
+      "captured_cli_utf8_size": 151,
+      "captured_cli_utf8_sha256": "710e4199b0a31a1a201c6d69cbb732e86e1fe8e35fbaed3ca8dbbf8b462b1c74",
+      "as_run_remote_source_sha256": "63f82055252b14dad30149782a1c5729b588e95a4ad05ca73513e9dbfee1e2aa",
+      "result": {
+        "file": "r4-snapshot-0754.private.json",
+        "sha256": "b7ccd9e0b0406deb160909ae636c2d4a7d49ca30a3ae41002ae92e9423eba60c"
+      }
+    },
+    {
+      "name": "launch-once",
+      "returncode": 0,
+      "captured_cli_utf8_size": 948,
+      "captured_cli_utf8_sha256": "e8eb3f0533d4ce378e879cb03be5386aba5b087b22bc1ec0477b8d4ee49d924f",
+      "as_run_remote_source_sha256": "752f10ae61737220295da223ba7d083a817aa8e63cb5b9099d9463e32089c994",
+      "result": {
+        "status": "SUBMITTED_RESULT_NOT_CHECKED",
+        "pid": 46851,
+        "command": [
+          "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+          "/data/spf-development-20261007-r1/validation-code/run_spf_development_queue.py",
+          "--controller-sha256",
+          "5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478",
+          "--snapshot",
+          "/data/spf-development-20261007-r1/validation-code/r4-snapshot-0754.private.json",
+          "--snapshot-sha256",
+          "b7ccd9e0b0406deb160909ae636c2d4a7d49ca30a3ae41002ae92e9423eba60c"
+        ],
+        "cwd": "/data/spf-development-20261007-r1/repo",
+        "log": "/data/spf-development-20261007-r1/validation-code/development-launch-0739.raw.log",
+        "started_at": 1791331077.038869,
+        "controller_sha256": "5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478",
+        "snapshot_sha256": "b7ccd9e0b0406deb160909ae636c2d4a7d49ca30a3ae41002ae92e9423eba60c",
+        "training_executed_by_launcher": false,
+        "external_judge_executed": false
+      }
+    }
+  ],
+  "successful_cli_capture_format": "PowerShell native output strings joined with LF and saved as UTF-8; not asserted as original stdout/stderr stream bytes.",
+  "runtime_result_checked": false,
+  "actual_cuda_acceptance_available": false,
+  "development_stage_completion_verified": false,
+  "new_spf_scores_verified": false,
+  "target_gate": "not_evaluated",
+  "external_judge_executed": false,
+  "npo_smoke_run": false,
+  "npo_pilot_run": false,
+  "next_snapshot_script_sha256": "04a24b50ffcae423644c50b28f57b20595acd535030dc81e5c73978fc2cecd1e",
+  "next_action": "Single necessary snapshot of original r4, unique development PID/status/current logs/GPU. Do not re-launch submitted queue. Preserve failed source/command/raw and completed outputs before any explicit unfinished-stage recovery.",
+  "limits": [
+    "Full and matched retain95 construction completion do not establish target qualification.",
+    "SPF-specific safety labels, paired row clusters and adjudication remain missing.",
+    "Original large-model autograd failures and single-seed/cross-platform limits remain."
+  ]
+}
