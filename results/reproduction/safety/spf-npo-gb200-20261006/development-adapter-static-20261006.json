@@ -1,0 +1,55 @@
+{
+  "status": "pass",
+  "scope": "new static development adapter verification only",
+  "adapter_source_sha256": "3b21774414ad1b83effca35fc54253b9ae7ac53f0ef1abd98ff0dbbab904db49",
+  "execution_sources": {
+    "evaluate_construction_baseline.py": {
+      "source_sha256": "4197f8b323b146d643119195f1e5a1f623a4fa87a5d69a7f066c33d14e25d4ec",
+      "inverse_source_byte_parity": true,
+      "tokenizer_generation_config_ast_unchanged": true,
+      "local_checkpoint_load_ast_verified": true,
+      "world1_guards_verified": true
+    },
+    "generate_development.py": {
+      "source_sha256": "9a99410fb62985d124a19772d621628728fa20334efc36aa4d441cdf2a59dfe2",
+      "inverse_source_byte_parity": true,
+      "tokenizer_generation_config_ast_unchanged": true,
+      "local_checkpoint_load_ast_verified": true,
+      "world1_guards_verified": true
+    },
+    "generate_development_conversation.py": {
+      "source_sha256": "95db77e44ea26e010e380cd9abf5b21ea9b94eee734f03f64da4d3887f9216fc",
+      "inverse_source_byte_parity": true,
+      "tokenizer_generation_config_ast_unchanged": true,
+      "local_checkpoint_load_ast_verified": true,
+      "world1_guards_verified": true
+    },
+    "evaluate_development_knowledge.py": {
+      "source_sha256": "22796a344c14db1f3cf275c7d82d3e639d40a71eff4e92dd2049076ddee4a847",
+      "inverse_source_byte_parity": true,
+      "tokenizer_generation_config_ast_unchanged": true,
+      "local_checkpoint_load_ast_verified": true,
+      "world1_guards_verified": true
+    },
+    "score_development_ifbench.py": {
+      "source_sha256": "c590e30aff720c6e747dc3c7fee946b76f83470c6e82078057ef7d69e2517c1d",
+      "inverse_source_byte_parity": true,
+      "tokenizer_generation_config_ast_unchanged": true,
+      "local_checkpoint_load_ast_verified": false,
+      "world1_guards_verified": false
+    }
+  },
+  "incomplete_audit_cases_rejected": 16,
+  "checkpoint_fixture": "synthetic metadata only; no checkpoint created or validated",
+  "template_sha256": "7d3e75bbebc8ca06f05579ff90e1730db88e7982d6c4ff524c55c736b21a10a0",
+  "target_evaluation_executed": false,
+  "gpu_runtime_validation": "not_run",
+  "spf_numerical_acceptance": "not_tested_here",
+  "external_judge_executed": false,
+  "original_completed_tests_rerun": false,
+  "limitations": [
+    "Does not validate Transformers5.5.4 GPU generation or SPF target availability",
+    "Single GPU evaluation and post-training scores remain pending"
+  ],
+  "verification_source_sha256": "a9e108eef00da6f591e304547d96887bce1d3ef40c2316c32e9bcb69d7116214"
+}

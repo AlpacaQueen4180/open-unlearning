@@ -1,10 +1,16 @@
 # Preserve the bytes whose hashes identify SPF source and raw evidence.
 src/construction/** -text
 configs/construction/** -text
+configs/model/Llama-3.1-8B-Instruct.yaml -text
 tests/construction/** -text
 scripts/reproduction/safety/gb200/** -text
 scripts/reproduction/safety/check_construction_zero3.py -text
 scripts/reproduction/safety/check_construction_full_conflict.py -text
 scripts/reproduction/safety/run_construction_smoke.py -text
 scripts/reproduction/safety/run_gate_v2.py -text
+scripts/reproduction/safety/evaluate_construction_baseline.py -text
+scripts/reproduction/safety/evaluate_development_knowledge.py -text
+scripts/reproduction/safety/generate_development.py -text
+scripts/reproduction/safety/generate_development_conversation.py -text
+scripts/reproduction/safety/score_development_ifbench.py -text
 results/reproduction/safety/spf-npo-gb200-20261006/** -text

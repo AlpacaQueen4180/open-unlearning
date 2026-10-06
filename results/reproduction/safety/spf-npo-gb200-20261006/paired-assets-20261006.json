@@ -1,0 +1,53 @@
+{
+  "classification": "Paired archived M0/Standard learning data verified; no SPF evaluation",
+  "archive_sha256": "7be1f338477e96be7ff822138ff8038d6803e212ce1454d00cd63e31ed348881",
+  "new_files_verified": 7,
+  "new_uncompressed_bytes": 3467249,
+  "private_learning_index_sha256": "033594a14bf89403ac41181cc6892dd241596b7443d59a24acd8eff194c8ae74",
+  "combined_private_files": 352,
+  "paired_ids": 4000,
+  "split_counts": {
+    "retain95": 3800,
+    "forget05": 200
+  },
+  "row_sha_and_split_match_frozen_full": true,
+  "matching_tokenizer_template_generation": true,
+  "m0_model_id": "meta-llama/Llama-3.1-8B-Instruct",
+  "m0_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+  "standard_checkpoint_identity_sha256": "7ec14260ef148ac4ce25de467ce3e794ed38b1b72b549e114a2955a276fa0843",
+  "m0_summary_sha256": "494dce968135b2ca09fa09ae6a8a7162484d7e97197c1aa7f0d28aac8922df94",
+  "standard_summary_sha256": "387d5575fee9b2d08397af63fd0ae5ff77e0aa5b1eb17ab46906d800f838b3a4",
+  "task_data_sha256": "cf6f9c9bd844b60661f1c923e6b188628f00b92c1834efb8f9f7c552274a9a33",
+  "retain_data_sha256": "e1bfcea25c3237064c11676e9d8f52145032ccb45a0e7f858e7f8446475e8a3e",
+  "tofu_author_map_sha256": "b84ae59be3c755b66321fa08b346ac6743c6fad43cc6a6503074e79e60c81d0b",
+  "author_groups": 200,
+  "rows_per_author_group": 20,
+  "author_split_groups": {
+    "retain95": 190,
+    "forget05": 10
+  },
+  "structural_author_map_status": "verified_structural_author_map",
+  "structural_author_map_limitations": [
+    "Assistant structural audit, not independent human annotation"
+  ],
+  "named_profiles": 199,
+  "anonymous_profile_reviewed": true,
+  "candidate_components_file_sha256": "84503827bb64d568c20a4f63fa49ca990d73bf528aed36c803656af2a7481d56",
+  "candidate_components_file_schema": [
+    "sources"
+  ],
+  "candidate_components_file_is_row_cluster_map": false,
+  "cluster_mapping_verified": false,
+  "adjudication_complete": false,
+  "evaluation_recomputed": false,
+  "old_gates_recomputed": false,
+  "spf_gate_evaluated": false,
+  "private_raw_published": false,
+  "runai_query_performed": false,
+  "limitations": [
+    "Current components.json is a source-specification list, not ID-to-cluster evidence",
+    "Existing structural author audit is retained; no new independent human annotation",
+    "Cross-platform SPF versus H100 Standard is not a fully matched causal control",
+    "No new SPF response labels, judge calls, bootstrap intervals, or learning evaluation"
+  ]
+}
