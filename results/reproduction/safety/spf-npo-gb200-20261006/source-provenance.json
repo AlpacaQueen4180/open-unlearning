@@ -212,7 +212,7 @@
   "acceptance": "r4 world1 ZeRO3 tiny comparisons, production conflict and production smokes passed; original autograd failures preserved",
   "full_target": "TRAINING_COMPLETE_AUDIT_RELOAD_PASS",
   "target_gate": "not_evaluated",
-  "matching_retain95": "ACTUAL_UNKNOWN_AFTER_20261007_0432_ROUTE_FAILURE; last verified RUNNING at 04:14",
+  "matching_retain95": "RUNNING_AT_20261007_0455_SNAPSHOT; checkpoint298 saved, actual current update unknown",
   "npo_pilot": "not_started",
   "autograd_prior_failures_preserved": true,
   "automation": {
@@ -262,8 +262,8 @@
     "raw_sha256": "8a8dabc5b71acaee8e60263e7e87ad459273fe834f3e0b9a2443f6faaf372d97",
     "scope": "projection arithmetic and state isolation only; not all training gradient comparisons"
   },
-  "latest_snapshot_utc": "2026-10-06T20:14:07.026248+00:00",
-  "private_snapshot_sha256": "a6e41149edaf15c3a3fa5f772ecad8c12a48bc4ed3e0c2b09208cda4552a2bec",
+  "latest_snapshot_utc": "2026-10-06T20:55:07.436759+00:00",
+  "private_snapshot_sha256": "449752261eaabcc094448bef73b0090a6279d96d818ee0fd10db1fd31842d747",
   "full_completion_evidence": "r4-completed-evidence-20261007.json",
   "development_cpu_preparation_evidence": "ifbench-cpu-completed-20261007.json",
   "development_cpu_fixture_evidence": "ifbench-cpu-fixtures-20261007.json",
@@ -274,11 +274,23 @@
     "smoke_executed": false,
     "pilot_candidates_frozen": false
   },
-  "latest_monitoring_attempt_evidence": "monitoring-probe-preparation-20261007-0432.json",
+  "latest_monitoring_attempt_evidence": "spf-npo-smoke-prepared-20261007.json",
   "npo_probe_source_preparation": {
-    "status": "SOURCE_PREPARED_LAUNCH_CONFIG_AND_GPU_NOT_RUN",
+    "status": "PACKAGE_PREPARED_NOT_DEPLOYED_OR_LAUNCHED",
     "static_evidence": "spf-npo-probe-static-20261007.json",
     "native_runtime_validated": false,
-    "fresh_reload_verified": false
+    "fresh_reload_verified": false,
+    "latest_evidence": "spf-npo-smoke-prepared-20261007.json",
+    "current_source_sha256": "92edf63b14296d591e8e7cae4036e37e635280829e0a358ac873ac0a3e6ab5c1"
+  },
+  "smoke_package_preparation": {
+    "evidence": "spf-npo-smoke-prepared-20261007.json",
+    "static_evidence": "spf-npo-smoke-static-20261007.json",
+    "deployed": false,
+    "launched": false,
+    "hydra_runtime_composition_validated": false,
+    "torch_runtime_validated": false,
+    "fresh_process_reload_verified": false,
+    "pilot_candidates_frozen": false
   }
 }

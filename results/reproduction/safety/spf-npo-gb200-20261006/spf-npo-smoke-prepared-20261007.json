@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "classification": "PACKAGE_PREPARED_NO_GPU_RUNTIME_ACCEPTANCE",
+  "snapshot_utc": "2026-10-06T20:55:07.436759+00:00",
+  "private_snapshot_sha256": "449752261eaabcc094448bef73b0090a6279d96d818ee0fd10db1fd31842d747",
+  "monitoring_connection_restored": true,
+  "logical_progress_snapshots_this_turn": 1,
+  "construction_task": "/data/spf-npo-20261006-r4",
+  "queue_pid": 45219,
+  "reference_status": "RUNNING_AT_20261007_0455_SNAPSHOT",
+  "reference_gpu_compute_pid": 46358,
+  "reference_audit_complete": false,
+  "actual_current_update": null,
+  "latest_saved_checkpoint": 298,
+  "saved_checkpoint_is_actual_current_update": false,
+  "new_gpu_work_submitted": false,
+  "external_judge_calls": 0,
+  "full_target": "TRAINING_COMPLETE_AUDIT_RELOAD_PASS",
+  "target_gate": "not_evaluated",
+  "npo_pilot": "not_started",
+  "planned_smoke_task": "/data/spf-npo-smoke-20261007-r1",
+  "remote_smoke_task_created": false,
+  "package_status": "PACKAGE_PREPARED_NOT_DEPLOYED_OR_LAUNCHED",
+  "package_manifest_sha256": "cbad72d7386ca83904b5a003e3bcf5b378f44d1920b452dd0bc29369bff5fc8a",
+  "contract_sha256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7",
+  "package_files": {
+    "configs/spf_npo_smoke.yaml": {
+      "size": 2964,
+      "sha256": "2c753b5f656820ec7dffddfc57170845daf02a078462e18d98c793e3d9a1288b"
+    },
+    "deepspeed.json": {
+      "size": 721,
+      "sha256": "1da070212ed44bdc705a4988b9ff500da2178f9881abac7882978b487a8499f8"
+    },
+    "configs/model/Llama-3.1-8B-Instruct.yaml": {
+      "size": 680,
+      "sha256": "7d3e75bbebc8ca06f05579ff90e1730db88e7982d6c4ff524c55c736b21a10a0"
+    },
+    "inputs/forget05-smoke40.json": {
+      "size": 10430,
+      "sha256": "78ec712fc1c1708539d0ba883111293907a562a7eba2a801c86704f6747593de"
+    },
+    "inputs/retain95.json": {
+      "size": 1085252,
+      "sha256": "e1bfcea25c3237064c11676e9d8f52145032ccb45a0e7f858e7f8446475e8a3e"
+    },
+    "contract.private.json": {
+      "size": 3451,
+      "sha256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7"
+    },
+    "commands.private.json": {
+      "size": 1418,
+      "sha256": "b449f6353b67bd6c3693c2284e38c84782dffab3ea25d733a0122749c88df7fc"
+    },
+    "code/spf_npo_native_probe.py": {
+      "size": 12279,
+      "sha256": "92edf63b14296d591e8e7cae4036e37e635280829e0a358ac873ac0a3e6ab5c1"
+    },
+    "code/spf_npo_runtime.py": {
+      "size": 3065,
+      "sha256": "974c6eef65ff74df7084c543e96cc4f82adfcb3996a2ad90d7295952f495ed5c"
+    },
+    "code/prepare_spf_npo_smoke.py": {
+      "size": 10883,
+      "sha256": "13d8ead6b29092b6840896867434cd5debf8a18122775a7c117cc70743cf4f95"
+    },
+    "code/verify_spf_npo_smoke_reload.py": {
+      "size": 5014,
+      "sha256": "9f5886e3226f335f6e6d6a694f8623cf73965e8ed5ec6ef7bb7fb8d39ecf77ee"
+    },
+    "code/audit_spf_target.py": {
+      "size": 5809,
+      "sha256": "6fc5ba538b5b6ee1a8ffd003de62abb6f65a6ddf9b1df590afe20fec7769c283"
+    }
+  },
+  "source_sha256": {
+    "prepare_spf_npo_smoke.py": "13d8ead6b29092b6840896867434cd5debf8a18122775a7c117cc70743cf4f95",
+    "verify_spf_npo_smoke_reload.py": "9f5886e3226f335f6e6d6a694f8623cf73965e8ed5ec6ef7bb7fb8d39ecf77ee",
+    "spf_npo_native_probe.py": "92edf63b14296d591e8e7cae4036e37e635280829e0a358ac873ac0a3e6ab5c1",
+    "verify_spf_npo_smoke_static.py": "70ab1bdb3236e3a3225b87df68dfd2b13e87c509a17f8adc6ad17f0361923fc9"
+  },
+  "static_evidence": {
+    "file": "spf-npo-smoke-static-20261007.json",
+    "sha256": "1c9df8dd93817c9bf18587fbd5379cd5d167900d757a1d8b0979837540b69ee1"
+  },
+  "local_stages": [
+    {
+      "index": 0,
+      "returncode": 0
+    },
+    {
+      "index": 1,
+      "returncode": 0
+    }
+  ],
+  "local_command_raw": [
+    {
+      "index": 0,
+      "sha256": "587ff291eacbafb980840ce8330a6d582263239f5be89dfa854be64f63d74ef1",
+      "size": 277
+    },
+    {
+      "index": 1,
+      "sha256": "56be7e2cd57f9ab963b5ffb9d4e26af0429e3197a37daf44b7546e8da6186e92",
+      "size": 155
+    }
+  ],
+  "prior_probe_source_sha256": "f0244d4141c784d83393cffb7b39861cfa4ec4046d54ff8fe49e19e8db7298c4",
+  "private_prior_probe_preserved": true,
+  "bounded_smoke": {
+    "forget_examples": 40,
+    "retain_pool_examples": 3800,
+    "epochs": 1,
+    "seed": 0,
+    "learning_rate": 1e-07,
+    "alpha": 0.0,
+    "gamma": 1.0,
+    "beta": 0.1,
+    "retain_loss_type": "NLL",
+    "world_size": 1,
+    "micro_batch": 4,
+    "gradient_accumulation_steps": 8,
+    "global_batch": 32,
+    "max_steps": -1,
+    "expected_updates": 2,
+    "expected_microsteps": 10,
+    "no_hydra_overrides": true,
+    "no_resume_or_forced_boundary_patch": true
+  },
+  "fresh_reload_source_prepared": true,
+  "fresh_process_reload_verified": false,
+  "reload_thresholds": {
+    "atol": 0.05,
+    "rtol": 0.01
+  },
+  "numerical_settings_or_rotary_buffers_modified": false,
+  "torch_runtime_validated": false,
+  "hydra_runtime_composition_validated": false,
+  "pilot_candidates_frozen": false,
+  "private_qa_weights_prepared_contracts_published": false,
+  "limits": [
+    "Package/config bytes and synthetic metadata rejection checks are not Torch/DS/model evidence.",
+    "Remote deployment and finite training/reload require a fresh complete reference audit and GPU-idle snapshot.",
+    "Checkpoint 298 is the latest saved checkpoint, not the exact update at the snapshot.",
+    "No actual native training, reference fingerprint, export audit or numerical reload occurred this turn."
+  ]
+}

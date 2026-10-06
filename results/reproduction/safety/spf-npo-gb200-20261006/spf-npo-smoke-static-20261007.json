@@ -1,0 +1,48 @@
+{
+  "status": "PASS_PACKAGE_BYTES_CONFIG_AND_SYNTHETIC_RELOAD_METADATA_ONLY",
+  "package_files_byte_verified": 12,
+  "contract_sha256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7",
+  "bounded_config_rejections": [
+    "alpha1",
+    "multi_epoch",
+    "forced_max_steps",
+    "lr_changed",
+    "gas_changed",
+    "eval_enabled",
+    "model_changed",
+    "tokenizer_revision_changed",
+    "native_id_mask_collator",
+    "retain_pool_changed",
+    "unsafe_task_root",
+    "zero_stage_changed",
+    "global_batch_changed",
+    "missing_code_guard",
+    "missing_template_guard",
+    "spurious_config_guard"
+  ],
+  "synthetic_reload_metadata_rejections": [
+    "same_process",
+    "relaxed_atol",
+    "wrong_epoch",
+    "wrong_steps",
+    "wrong_checkpoint",
+    "numerics_modified"
+  ],
+  "source_sha256": {
+    "prepare_spf_npo_smoke.py": "13d8ead6b29092b6840896867434cd5debf8a18122775a7c117cc70743cf4f95",
+    "verify_spf_npo_smoke_reload.py": "9f5886e3226f335f6e6d6a694f8623cf73965e8ed5ec6ef7bb7fb8d39ecf77ee",
+    "spf_npo_native_probe.py": "92edf63b14296d591e8e7cae4036e37e635280829e0a358ac873ac0a3e6ab5c1",
+    "verify_spf_npo_smoke_static.py": "70ab1bdb3236e3a3225b87df68dfd2b13e87c509a17f8adc6ad17f0361923fc9"
+  },
+  "torch_runtime_validation": "not_run",
+  "hydra_runtime_composition_validated": false,
+  "gpu_runtime_validation": "not_run",
+  "npo_training_executed": false,
+  "fresh_process_reload_verified": false,
+  "pilot_candidates_frozen": false,
+  "limits": [
+    "JSON syntax is valid YAML; actual Hydra/default composition is still required in the remote runtime.",
+    "Synthetic counts/reference flags and process IDs are rejection fixtures, not model/reload evidence.",
+    "No Torch import, weight read, GPU operation, deployment or launch was performed."
+  ]
+}

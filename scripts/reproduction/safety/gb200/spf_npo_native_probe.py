@@ -58,6 +58,20 @@ def main():
         data = Path(spec['path']).read_bytes()
         if digest(data) != spec['sha256'] or spec['sha256'] != INPUT_SHAS[name]:
             raise ValueError('Private fixed input changed: ' + name)
+    from prepare_spf_npo_smoke import validate_contract_config
+    root = Path(contract['task_root'])
+    for name, expected in contract['config_sha256'].items():
+        if digest((root/name).read_bytes()) != expected:
+            raise ValueError('Bound Hydra/DeepSpeed/template bytes changed: '+name)
+    for name, expected in contract['code_sha256'].items():
+        if digest((root/'code'/name).read_bytes()) != expected:
+            raise ValueError('Bound observer/reload source changed: '+name)
+    validate_contract_config(contract,json.loads((root/'configs/spf_npo_smoke.yaml').read_bytes()),
+                             json.loads((root/'deepspeed.json').read_bytes()))
+    if sys.argv[1:] != ['--config-path',contract['config_dir'],'--config-name','spf_npo_smoke']:
+        raise ValueError('Exact immutable smoke config required; no Hydra overrides')
+    if Path(contract['output_dir']).exists():
+        raise FileExistsError('Refuse to restart or replace an existing smoke checkpoint')
     sys.path.insert(0, str(repository/'src'))
     import torch
     import deepspeed
@@ -129,7 +143,8 @@ def main():
             raise ValueError('Expected four forget and four retain rows per microbatch')
         for batch in (forget, retain):
             if (batch['input_ids'].shape[1] > 512
-                    or torch.any((batch['labels'] != -100) & ~batch['attention_mask'].bool())):
+                    or torch.any((batch['labels'] != -100) & ~batch['attention_mask'].bool())
+                    or torch.any((batch['labels'][:,1:] != -100).sum(dim=1) == 0)):
                 raise ValueError('Valid assistant token masked or sequence too long')
         exposures += 4
         forget_indices.extend(forget['index'].detach().cpu().tolist())
@@ -163,6 +178,26 @@ def main():
     (output/'spf-npo-runtime.private.json').write_text(json.dumps(runtime,indent=2)+'\n',encoding='utf8')
     result = audit_trace(runtime)
     (output/'spf-npo-trace-audit.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
+    # Capture only after the native training and save_model have completed.
+    # No buffer precision changes or extra optimizer steps are introduced.
+    engine.eval()
+    batch = trainer.data_collator([trainer.train_dataset.forget[0]])
+    probe_inputs = {k:v.to(trainer.accelerator.device) for k,v in batch.items()
+                    if k in ('input_ids','attention_mask')}
+    with torch.no_grad():
+        expected = engine(**probe_inputs).logits[0,-1].float().cpu()
+    probe_path = output/'reload-probe.private.pt'
+    torch.save(dict(inputs={k:v.cpu() for k,v in probe_inputs.items()},logits=expected),probe_path)
+    context = dict(torch_version=torch.__version__,transformers_version=transformers.__version__,
+        float32_matmul_precision=torch.get_float32_matmul_precision(),
+        allow_tf32=torch.backends.cuda.matmul.allow_tf32,
+        tf32_override=os.environ.get('TORCH_ALLOW_TF32_CUBLAS_OVERRIDE'))
+    capture = dict(contract_sha256=digest(raw),checkpoint=str(output),capture_process_pid=os.getpid(),
+        probe_sha256=digest(probe_path.read_bytes()),comparison=dict(atol=0.05,rtol=0.01),
+        numerical_context=context,buffers={name:dict(shape=list(b.shape),dtype=str(b.dtype))
+                for name,b in engine.module.named_buffers()},
+        numerical_settings_or_rotary_buffers_modified=False,fresh_process_reload_verified=False)
+    (output/'spf-npo-reload-capture.json').write_text(json.dumps(capture,indent=2)+'\n',encoding='utf8')
     print(json.dumps(result),flush=True)
 
 
