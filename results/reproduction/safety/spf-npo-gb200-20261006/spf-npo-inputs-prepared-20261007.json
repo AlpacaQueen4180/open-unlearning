@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "status": "INPUTS_PREPARED_EXECUTOR_AND_GPU_RUNTIME_NOT_RUN",
+  "target_checkpoint": "/data/spf-npo-20261006-r4/spf-full-s0",
+  "initial_npo_reference_checkpoint": "/data/spf-npo-20261006-r4/spf-full-s0",
+  "checkpoint_identity_sha256": "c45e87fc69825b75f5d47345fb3c8502a4c1b4524f9d621411068bf3bc64f3a8",
+  "target_audit_sha256": "7a7036b903ced64e18307e90523cc7ada73699ddb3d79498bfd4063f86ed8cf9",
+  "adapter_audit_sha256": "ffb402da9ab4e390104f69bf69d060f169dc2cfb6a3978d1dcf0a3bb47a8013c",
+  "frozen_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+  "full_input_sha256": "cf6f9c9bd844b60661f1c923e6b188628f00b92c1834efb8f9f7c552274a9a33",
+  "retain95_input_sha256": "e1bfcea25c3237064c11676e9d8f52145032ccb45a0e7f858e7f8446475e8a3e",
+  "model_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+  "tofu_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+  "counts": {
+    "full": 4000,
+    "retain95": 3800,
+    "forget05": 200,
+    "engineering_smoke": 40
+  },
+  "private_artifact_digests": {
+    "forget05.json": {
+      "size": 60005,
+      "sha256": "bb54599aa3668435a34f238ebbbbd812b26b38d9520151b11fcc28fb99327ba7"
+    },
+    "forget05-smoke40.json": {
+      "size": 10430,
+      "sha256": "78ec712fc1c1708539d0ba883111293907a562a7eba2a801c86704f6747593de"
+    },
+    "retain95.json": {
+      "size": 1085252,
+      "sha256": "e1bfcea25c3237064c11676e9d8f52145032ccb45a0e7f858e7f8446475e8a3e"
+    },
+    "membership.json": {
+      "size": 25724,
+      "sha256": "66d4aee2dcee4e51491fc083a9d1671313445c9cecdf35957a394c0d8a4ef92e"
+    }
+  },
+  "private_inputs_metadata_sha256": "22628bd757224b6d49079a946ab3a53e300bc9f89898c3242ea7488e47261e69",
+  "row_pairing": "Unchanged question/answer contents, independently checked by exact QA pair and SHA joins.",
+  "actual_split_ids_match_full_row_hashes": true,
+  "synthetic_reindexed_split_ids_preserve_qa_membership": true,
+  "smoke_input_contract": {
+    "smoke_only": true,
+    "used_for_candidate_selection": false,
+    "subset_rule": "First 40 forget05 rows in frozen full QA order; engineering load/scaling smoke only",
+    "forget_examples": 40,
+    "retain_pool_examples": 3800,
+    "retain_sampling": "1:1 random sampling, seed0",
+    "seed": 0,
+    "alpha": 0.0,
+    "gamma": 1.0,
+    "beta": 0.1,
+    "retain_loss_type": "NLL",
+    "learning_rate": 1e-07,
+    "world_size": 1,
+    "micro_batch": 4,
+    "gradient_accumulation_steps": 8,
+    "global_batch": 32,
+    "planned_epochs": 1,
+    "expected_updates": 2,
+    "expected_microbatches": 10,
+    "expected_window_examples": [
+      32,
+      8
+    ],
+    "expected_window_microbatches": [
+      8,
+      2
+    ],
+    "expected_ds_backward_scalars": [
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.5,
+      0.5
+    ],
+    "spf_projection_in_unlearning": false,
+    "max_length": 512,
+    "counters_exposure_masking_and_scaling_runtime_validated": false
+  },
+  "source_sha256": "2700496950edf4442c0ab2334834ae7564cb8b524261a6606dfee76123574562",
+  "verifier_sha256": "2ac61746f74910115d0fa347e61f80f9a60f0d7b553cc74a56877fa133994c82",
+  "verification": {
+    "file": "spf-npo-inputs-static-20261007.json",
+    "sha256": "305608bbbc049d2a3bd7e231cf99656262d949d653144b699f92e926a98fddef",
+    "status": "PASS_PRIVATE_INPUT_MEMBERSHIP_AND_FAIL_CLOSED_CHECKS",
+    "negative_cases": 12
+  },
+  "local_verifier_failures_preserved": [
+    {
+      "tag": "r2",
+      "source_sha256": "6f73e9805452ed2273e56035f2a0dd740edf88f0fafef8d1401802e4ee892751",
+      "error": "AssertionError: the assertion that split ID subtraction misidentified actual forget membership was false."
+    },
+    {
+      "tag": "r3",
+      "source_sha256": "4a436ae47cccc117371522350ae10c657a8ba3ee9c9c12a66fec81af806af6ac",
+      "error": "TypeError: can only concatenate str (not \"int\") to str; synthetic reindex fixture assumed integer IDs."
+    }
+  ],
+  "correction": "The actual fixed retain IDs all match full row hashes. No observed ID-mismatch bug is claimed.",
+  "reference_monitoring_snapshot": {
+    "timestamp_utc": "2026-10-06T20:14:07.026248+00:00",
+    "private_snapshot_sha256": "a6e41149edaf15c3a3fa5f772ecad8c12a48bc4ed3e0c2b09208cda4552a2bec",
+    "task": "/data/spf-npo-20261006-r4",
+    "queue_pid": 45219,
+    "gpu_compute_pid": 46358,
+    "stage": "spf-retain95-s0-train",
+    "status": "RUNNING_AT_20261007_0414_SNAPSHOT",
+    "actual_current_update": null,
+    "reference_audit_complete": false
+  },
+  "remote_deployed": false,
+  "native_npo_executor_prepared": false,
+  "gpu_runtime_validation": "not_run",
+  "npo_smoke_executed": false,
+  "npo_pilot_executed": false,
+  "pilot_candidates_frozen": false,
+  "target_gate_executed": false,
+  "external_judge_calls": 0,
+  "weights_read": false,
+  "limits": [
+    "Input preparation is not native NPO executor, model load, reference, masking, scaling or checkpoint acceptance.",
+    "No weights were read; weight identity is delegated to the bound completed full audit.",
+    "Native executor preparation and full/tail loss-scaling, frozen reference and fresh-process reload checks remain required.",
+    "The 40-row engineering subset must not replace the 200-row forget05 pilot or select a candidate."
+  ]
+}

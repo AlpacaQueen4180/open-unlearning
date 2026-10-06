@@ -1,0 +1,81 @@
+{
+  "status": "PASS_PRIVATE_INPUT_MEMBERSHIP_AND_FAIL_CLOSED_CHECKS",
+  "preparer_sha256": "2700496950edf4442c0ab2334834ae7564cb8b524261a6606dfee76123574562",
+  "verifier_sha256": "2ac61746f74910115d0fa347e61f80f9a60f0d7b553cc74a56877fa133994c82",
+  "target_audit_sha256": "7a7036b903ced64e18307e90523cc7ada73699ddb3d79498bfd4063f86ed8cf9",
+  "adapter_audit_sha256": "ffb402da9ab4e390104f69bf69d060f169dc2cfb6a3978d1dcf0a3bb47a8013c",
+  "frozen_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+  "private_inputs_metadata_sha256": "22628bd757224b6d49079a946ab3a53e300bc9f89898c3242ea7488e47261e69",
+  "counts": {
+    "full": 4000,
+    "retain95": 3800,
+    "forget05": 200,
+    "engineering_smoke": 40
+  },
+  "exact_qa_pair_join_matches_sha_join": true,
+  "retain_bytes_preserved": true,
+  "actual_split_id_join_verified_by_row_sha": true,
+  "actual_id_difference_matches_qa_membership": true,
+  "synthetic_reindexed_retain_ids_preserve_qa_membership": true,
+  "synthetic_id_variant_is_actual_checkpoint_audit": false,
+  "negative_cases": [
+    {
+      "case": "self_consistent_adapter_with_changed_audited_weight",
+      "rejected": true
+    },
+    {
+      "case": "self_consistent_adapter_missing_audited_weight",
+      "rejected": true
+    },
+    {
+      "case": "self_consistent_adapter_with_unexpected_weight",
+      "rejected": true
+    },
+    {
+      "case": "adapter_bound_to_other_audit",
+      "rejected": true
+    },
+    {
+      "case": "unbound_frozen_manifest",
+      "rejected": true
+    },
+    {
+      "case": "other_tokenizer_revision",
+      "rejected": true
+    },
+    {
+      "case": "reversed_retain_order",
+      "rejected": true
+    },
+    {
+      "case": "duplicate_full_qa",
+      "rejected": true
+    },
+    {
+      "case": "reversed_full_order",
+      "rejected": true
+    },
+    {
+      "case": "unexpected_qa_column",
+      "rejected": true
+    },
+    {
+      "case": "non_world1_profile",
+      "rejected": true
+    },
+    {
+      "case": "wrong_split_count",
+      "rejected": true
+    }
+  ],
+  "gpu_runtime_validation": "not_run",
+  "native_npo_executor_prepared": false,
+  "npo_smoke_executed": false,
+  "npo_pilot_executed": false,
+  "pilot_candidates_frozen": false,
+  "target_gate_executed": false,
+  "limits": [
+    "These checks establish private fixed input membership and identity rejection only.",
+    "No model, gradient, loss-scaling, reference freezing, mask or checkpoint reload was tested."
+  ]
+}

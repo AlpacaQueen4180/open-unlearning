@@ -212,7 +212,7 @@
   "acceptance": "r4 world1 ZeRO3 tiny comparisons, production conflict and production smokes passed; original autograd failures preserved",
   "full_target": "TRAINING_COMPLETE_AUDIT_RELOAD_PASS",
   "target_gate": "not_evaluated",
-  "matching_retain95": "RUNNING_AT_20261007_0358_SNAPSHOT",
+  "matching_retain95": "RUNNING_AT_20261007_0414_SNAPSHOT",
   "npo_pilot": "not_started",
   "autograd_prior_failures_preserved": true,
   "automation": {
@@ -262,9 +262,16 @@
     "raw_sha256": "8a8dabc5b71acaee8e60263e7e87ad459273fe834f3e0b9a2443f6faaf372d97",
     "scope": "projection arithmetic and state isolation only; not all training gradient comparisons"
   },
-  "latest_snapshot_utc": "2026-10-06T19:58:57.298349+00:00",
-  "private_snapshot_sha256": "48b8bb6ea1031269535abbe1b2e10207ce90f90e67633958b528a091da393437",
+  "latest_snapshot_utc": "2026-10-06T20:14:07.026248+00:00",
+  "private_snapshot_sha256": "a6e41149edaf15c3a3fa5f772ecad8c12a48bc4ed3e0c2b09208cda4552a2bec",
   "full_completion_evidence": "r4-completed-evidence-20261007.json",
   "development_cpu_preparation_evidence": "ifbench-cpu-completed-20261007.json",
-  "development_cpu_fixture_evidence": "ifbench-cpu-fixtures-20261007.json"
+  "development_cpu_fixture_evidence": "ifbench-cpu-fixtures-20261007.json",
+  "npo_input_preparation": {
+    "status": "INPUTS_PREPARED_EXECUTOR_AND_GPU_RUNTIME_NOT_RUN",
+    "metadata": "spf-npo-inputs-prepared-20261007.json",
+    "native_executor_prepared": false,
+    "smoke_executed": false,
+    "pilot_candidates_frozen": false
+  }
 }
