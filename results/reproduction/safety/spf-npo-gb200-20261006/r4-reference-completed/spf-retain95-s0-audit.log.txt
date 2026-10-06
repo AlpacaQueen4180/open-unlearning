@@ -1,0 +1,1 @@
+{"status": "pass", "split": "retain95", "actual_epochs": 5.0, "actual_updates": 595, "actual_examples": 19000, "conflicting_updates": 286}

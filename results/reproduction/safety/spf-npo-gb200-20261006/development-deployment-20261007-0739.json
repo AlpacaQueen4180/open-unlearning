@@ -1,0 +1,86 @@
+{
+  "status": "PARTIAL_CONTROLLER_UPLOAD_NO_LAUNCH",
+  "task": "/data/spf-development-20261007-r1",
+  "intended_run": "/data/spf-development-20261007-r1/cuda-development-r1",
+  "controller_sha256": "5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478",
+  "guard_sha256": "d33d8b8d24f089112f74c4fe18adbb647c4e78b4e3bfecfd35bf3bce279d1ff6",
+  "snapshot_sha256": "714ee89486fd6edadf8555736d5781a45ebf948092c3981a7c59bfef0fd10d31",
+  "completed_chunks": 10,
+  "completed_chunk_bytes_verified": true,
+  "independently_observed_before_resume": {
+    "chunk_inventory": {
+      "transfer-0739/5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478/0": {
+        "size": 900,
+        "sha256": "dbbb60d06d8c1dc1d807974cb3b0a0d7f3bdf5bbae25ee4d2dd1a9108d502c67"
+      },
+      "transfer-0739/5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478/1": {
+        "size": 900,
+        "sha256": "44db375589ddc3393369d2e26f2f6705bca9b67f714ee9524a7b06700c2d8a82"
+      },
+      "transfer-0739/5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478/2": {
+        "size": 900,
+        "sha256": "8cdca983b9c5ebc261310601dae266ed63816bfa6b3c98d7af4920586a890f7b"
+      },
+      "transfer-0739/5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478/3": {
+        "size": 900,
+        "sha256": "17f5b04f4608f2eaa2a0be9fbc578fad0bf4b923890a386167889820e0b5a578"
+      },
+      "transfer-0739/5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478/4": {
+        "size": 900,
+        "sha256": "b9b9bac8fb1dca2c2b1060831703c773f886913d0aa10473243aeb2e07a6ef8e"
+      },
+      "transfer-0739/5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478/5": {
+        "size": 900,
+        "sha256": "d66ac6bbd52d73523eb986bc35f6ce6cd300b8bf5bfd196b09318593c941456c"
+      },
+      "transfer-0739/5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478/6": {
+        "size": 900,
+        "sha256": "fd3d74be0b0711c16e2b6fffaf4889eb0d5aaa9754fa4322e87def4818a9c2d5"
+      },
+      "transfer-0739/5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478/7": {
+        "size": 900,
+        "sha256": "d2a3caceafcea1ed914a6f789cfb2a649f4ea886eb818733bea23a55fbac9f40"
+      },
+      "transfer-0739/5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478/8": {
+        "size": 900,
+        "sha256": "14fad89a4de7def82bde32c9c060fc49ccf9cccbbdffa4f619da93c022dd7ce5"
+      },
+      "transfer-0739/5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478/9": {
+        "size": 640,
+        "sha256": "851dcfc0a2fca64ee96d8f3c7c34670239ea494957a751759eec4d67baa73ac3"
+      }
+    },
+    "controller_exists": false,
+    "controller_sha256": null,
+    "launch_exists": false,
+    "run_exists": false
+  },
+  "failures": [
+    {
+      "stage": "controller-seal",
+      "classification": "NETWORK_NO_ROUTE_TO_HOST",
+      "returncode": 1,
+      "raw_size": 1085,
+      "raw_sha256": "cf9f729647c8ee98483f529518099154d60b783b9166d6ac8eedeb0452398eef"
+    },
+    {
+      "stage": "controller-seal-after-confirmed-absence",
+      "classification": "CLUSTER_STATUS_EOF_BEFORE_REMOTE_EXECUTION",
+      "returncode": 1,
+      "raw_size": 87,
+      "raw_sha256": "0cd2fe3032548ad52f6a7457b8e6124ba25596c515d1d69459bc76db99776eb2"
+    }
+  ],
+  "initial_failure_preserved": true,
+  "resume_scope": "Reused independently verified completed chunks; sealing was observed absent before one explicit unfinished-step continuation.",
+  "launch_attempted": false,
+  "gpu_work_submitted": false,
+  "paid_judge_executed": false,
+  "training_executed": false,
+  "changed_adapter": false,
+  "retransferred_development_assets": false,
+  "changed_r4_frozen_sources": false,
+  "next_action": "One complete original r4/deployment snapshot to verify partial artifacts and idle GPU; resume only absent deployment steps after byte checks. No blind relaunch or retransmission.",
+  "actual_cuda_acceptance_available": false,
+  "actual_npo_smoke_run": false
+}

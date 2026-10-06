@@ -1,0 +1,328 @@
+{
+  "status": "SPF_FULL_AND_MATCHED_RETAIN95_CONSTRUCTION_COMPLETE_PENDING_GATE_NPO",
+  "task": "/data/spf-npo-20261006-r4",
+  "snapshot_utc": "2026-10-06T23:39:55.850174+00:00",
+  "private_snapshot_sha256": "714ee89486fd6edadf8555736d5781a45ebf948092c3981a7c59bfef0fd10d31",
+  "original_queue_pid": 45219,
+  "queue_exited_at_snapshot": true,
+  "gpu_idle_at_snapshot": true,
+  "reference_audit_sha256": "758ed12ebcc6ce5d7e65eae689e475b9ce92bbbff34445279c39b7282aa6652e",
+  "reference": {
+    "status": "pass",
+    "method": "spf",
+    "split": "retain95",
+    "construction_seed": 0,
+    "actual_epochs": 5.0,
+    "actual_updates": 595,
+    "actual_examples": 19000,
+    "actual_assistant_tokens": 660700,
+    "unique_examples": 3800,
+    "conflicting_updates": 286,
+    "safety_tokens_computed": 10115,
+    "fresh_reload": {
+      "status": "pass",
+      "max_logit_error": 0.0
+    },
+    "final_checkpoint": {
+      "parameter_tensors": 291,
+      "layers": 32,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size": 16060556616,
+          "sha256": "5ff2795146816bed53921f8fcc0fad2b069d3d6cb4aff5cefa159cf6142ca36d",
+          "tensors": 291
+        }
+      ],
+      "weights_bytes": 16060556616
+    },
+    "trajectory_checkpoints": [
+      {
+        "step": 149,
+        "parameter_tensors": 291,
+        "layers": 32,
+        "files": [
+          {
+            "name": "model.safetensors",
+            "size": 16060556616,
+            "sha256": "60baeb1da2a394d626143970df57f9a88ce4c4293ddf09952fa130f50dc108f2",
+            "tensors": 291
+          }
+        ],
+        "weights_bytes": 16060556616
+      },
+      {
+        "step": 298,
+        "parameter_tensors": 291,
+        "layers": 32,
+        "files": [
+          {
+            "name": "model.safetensors",
+            "size": 16060556616,
+            "sha256": "0241fa450a9bc64974b1c986314124c5f0d5f54968c992e6a49089a1a56f4cb5",
+            "tensors": 291
+          }
+        ],
+        "weights_bytes": 16060556616
+      },
+      {
+        "step": 447,
+        "parameter_tensors": 291,
+        "layers": 32,
+        "files": [
+          {
+            "name": "model.safetensors",
+            "size": 16060556616,
+            "sha256": "dfa79b6235125adc35d466e63a5db037e48ca1146a6b13cc021d8426bc910baa",
+            "tensors": 291
+          }
+        ],
+        "weights_bytes": 16060556616
+      },
+      {
+        "step": 595,
+        "parameter_tensors": 291,
+        "layers": 32,
+        "files": [
+          {
+            "name": "model.safetensors",
+            "size": 16060556616,
+            "sha256": "5ff2795146816bed53921f8fcc0fad2b069d3d6cb4aff5cefa159cf6142ca36d",
+            "tensors": 291
+          }
+        ],
+        "weights_bytes": 16060556616
+      }
+    ],
+    "manifest_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+    "trajectory_sha256": "b4a84c0368d4ff2a2062291909b6d721fd3269c24fa083fd853dd42cd28df10a",
+    "resolved_training_sha256": "eb797d8fd6854230a836f91866198e93ab51750efe9b9b7b1f3167a766d57eab"
+  },
+  "archive_sha256": "8ceff05db6b9261e29c3169f07d35f64cd0ad7f126d524813346a7b31627ccd8",
+  "raw_entries": [
+    {
+      "name": "spf-retain95-s0-audit.json",
+      "size": 2397,
+      "sha256": "758ed12ebcc6ce5d7e65eae689e475b9ce92bbbff34445279c39b7282aa6652e",
+      "published_name": "r4-reference-completed/spf-retain95-s0-audit.json"
+    },
+    {
+      "name": "spf-retain95-s0-train.log",
+      "size": 24716,
+      "sha256": "179ab96bee887eea27d4cc84d718c5f6bbd8dbfb51b498df95f7b24532758652",
+      "published_name": "r4-reference-completed/spf-retain95-s0-train.log.txt"
+    },
+    {
+      "name": "spf-retain95-s0-reload.log",
+      "size": 240,
+      "sha256": "f8d048347917425df2b53adce70d1713b71aa7948c348b31237ffd4c0e426a77",
+      "published_name": "r4-reference-completed/spf-retain95-s0-reload.log.txt"
+    },
+    {
+      "name": "spf-retain95-s0-audit.log",
+      "size": 139,
+      "sha256": "86e61d9cc56fd3f5335b3b48e51174d240997c9141948f3b555dd8dcb4bb9646",
+      "published_name": "r4-reference-completed/spf-retain95-s0-audit.log.txt"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-149/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-149/config.json"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-149/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-149/generation_config.json"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-149/trainer_state.json",
+      "size": 521,
+      "sha256": "a25bfd6c4ae562700ae81f38bd4e481d6ad0830152fefa829fef5c2ad0f92948",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-149/trainer_state.json"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-298/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-298/config.json"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-298/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-298/generation_config.json"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-298/trainer_state.json",
+      "size": 521,
+      "sha256": "2cdf9d959f2c5aa8ace57bd6461f9a30d593daa2c947f35b59eb6b66cfb236a5",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-298/trainer_state.json"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-447/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-447/config.json"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-447/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-447/generation_config.json"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-447/trainer_state.json",
+      "size": 521,
+      "sha256": "940ff92f9aadb7dddefcebc4de9582778a1e1ce9444c9ff78b4d2f13e276ee7e",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-447/trainer_state.json"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-595/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-595/config.json"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-595/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-595/generation_config.json"
+    },
+    {
+      "name": "spf-retain95-s0/checkpoint-595/trainer_state.json",
+      "size": 506,
+      "sha256": "05c9b1f45120ccdae51b2767a2794638503940145b9220fb929eea8d8628c78c",
+      "published_name": "r4-reference-completed/spf-retain95-s0/checkpoint-595/trainer_state.json"
+    },
+    {
+      "name": "spf-retain95-s0/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-reference-completed/spf-retain95-s0/config.json"
+    },
+    {
+      "name": "spf-retain95-s0/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-reference-completed/spf-retain95-s0/generation_config.json"
+    },
+    {
+      "name": "spf-retain95-s0/resolved_training.json",
+      "size": 5407,
+      "sha256": "eb797d8fd6854230a836f91866198e93ab51750efe9b9b7b1f3167a766d57eab",
+      "published_name": "r4-reference-completed/spf-retain95-s0/resolved_training.json"
+    },
+    {
+      "name": "spf-retain95-s0/target.json",
+      "size": 1357,
+      "sha256": "d5013ed1011433059cede4f38442dbd5a8d75aadbd6b8ec84bd5a1f87aa1245d",
+      "published_name": "r4-reference-completed/spf-retain95-s0/target.json"
+    },
+    {
+      "name": "spf-retain95-s0/trainer_state.json",
+      "size": 506,
+      "sha256": "05c9b1f45120ccdae51b2767a2794638503940145b9220fb929eea8d8628c78c",
+      "published_name": "r4-reference-completed/spf-retain95-s0/trainer_state.json"
+    },
+    {
+      "name": "spf-retain95-s0/trajectory.jsonl",
+      "size": 545269,
+      "sha256": "b4a84c0368d4ff2a2062291909b6d721fd3269c24fa083fd853dd42cd28df10a",
+      "published_name": "r4-reference-completed/spf-retain95-s0/trajectory.jsonl"
+    }
+  ],
+  "stage_commands": [
+    {
+      "name": "spf-retain95-s0-train",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=1",
+        "-m",
+        "construction.cli",
+        "run",
+        "--manifest",
+        "/data/spf-npo-20261006-r4/frozen.json",
+        "--method",
+        "spf",
+        "--mode",
+        "full",
+        "--split",
+        "retain95",
+        "--microbatch",
+        "4",
+        "--weights-only",
+        "--output",
+        "/data/spf-npo-20261006-r4/spf-retain95-s0"
+      ],
+      "cwd": "/data/spf-npo-20261006-r4/repo",
+      "log": "/data/spf-npo-20261006-r4/spf-retain95-s0-train.log",
+      "started_at": 1791309533.0948055,
+      "returncode": 0,
+      "finished_at": 1791329683.7967684
+    },
+    {
+      "name": "spf-retain95-s0-reload",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "construction.cli",
+        "verify",
+        "--checkpoint",
+        "/data/spf-npo-20261006-r4/spf-retain95-s0"
+      ],
+      "cwd": "/data/spf-npo-20261006-r4/repo",
+      "log": "/data/spf-npo-20261006-r4/spf-retain95-s0-reload.log",
+      "started_at": 1791329683.8103714,
+      "returncode": 0,
+      "finished_at": 1791329698.2332346
+    },
+    {
+      "name": "spf-retain95-s0-audit",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "scripts/reproduction/safety/gb200/audit_spf_target.py",
+        "--target",
+        "/data/spf-npo-20261006-r4/spf-retain95-s0",
+        "--output",
+        "/data/spf-npo-20261006-r4/spf-retain95-s0-audit.json"
+      ],
+      "cwd": "/data/spf-npo-20261006-r4/repo",
+      "log": "/data/spf-npo-20261006-r4/spf-retain95-s0-audit.log",
+      "started_at": 1791329698.239778,
+      "returncode": 0,
+      "finished_at": 1791329746.7400234
+    }
+  ],
+  "stage_finished_utc": {
+    "spf-retain95-s0-train": "2026-10-06T23:34:43.796768+00:00",
+    "spf-retain95-s0-reload": "2026-10-06T23:34:58.233235+00:00",
+    "spf-retain95-s0-audit": "2026-10-06T23:35:46.740023+00:00"
+  },
+  "independently_checked": {
+    "trajectory_records": 596,
+    "tail_windows": 5,
+    "tail_examples": 24,
+    "tail_microbatches": 6,
+    "trainer_engine_scheduler_equal": true,
+    "assistant_token_weights_sum_one": true,
+    "backward_scale_wrt_gas": false,
+    "final_learning_rate": 0.0,
+    "actual_input_tokens": 1740645,
+    "actual_anchor_tokens": 10115
+  },
+  "validation_scope": "Downloaded completed small evidence bytes and checked trajectory/counters; reused original remote weight and fresh-reload audits without reading weights again.",
+  "target_gate": "not_evaluated",
+  "npo_smoke": "not_run",
+  "npo_pilot": "not_started",
+  "all_training_gradients_equivalent": false,
+  "limitations": [
+    "Original four large-model autograd comparisons remain failed.",
+    "Single seed and cross-platform Standard comparison limits remain.",
+    "SPF labels, paired row clusters and adjudication still missing; target qualification unverified."
+  ]
+}

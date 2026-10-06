@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "classification": "SPF full construction complete; target gate, matched reference and pure NPO pilot pending",
+  "classification": "SPF full and matched retain95 construction complete; independent target gate and pure NPO pilot pending",
   "source_files_verified": 289,
   "source_archive_sha256": "e82e22ef75d9774ac64d8bbe88a68f0bfc3b472ac880edce2dc2ed204b4351b0",
   "parent_frozen_sha256": "b2f48edc1fc9cd95b5fb7c9b6855750796809c21fa02e5e7f8426ac118701d89",
@@ -189,7 +189,7 @@
     {
       "task": "spf-npo-20261006-r4",
       "pid": 45219,
-      "status": "RUNNING_AT_AUTH_RESTORED_SNAPSHOT",
+      "status": "CONSTRUCTION_DONE_PENDING_GATE_NPO",
       "reused_stages": [
         "setup",
         "verify_m0_assets",
@@ -204,15 +204,17 @@
       "started_at": 1791286704.8177786,
       "full_audit_sha256": "7a7036b903ced64e18307e90523cc7ada73699ddb3d79498bfd4063f86ed8cf9",
       "frozen_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
-      "reference_complete": false,
+      "reference_complete": true,
       "target_gate_complete": false,
-      "npo_pilot_complete": false
+      "npo_pilot_complete": false,
+      "reference_audit_sha256": "758ed12ebcc6ce5d7e65eae689e475b9ce92bbbff34445279c39b7282aa6652e",
+      "queue_exited_at_snapshot": true
     }
   ],
   "acceptance": "r4 world1 ZeRO3 tiny comparisons, production conflict and production smokes passed; original autograd failures preserved",
   "full_target": "TRAINING_COMPLETE_AUDIT_RELOAD_PASS",
   "target_gate": "not_evaluated",
-  "matching_retain95": "CURRENT_UNKNOWN_AFTER_0709_SOCKET_ACCESS_FAILURE; last confirmed training at 05:55 Taipei",
+  "matching_retain95": "TRAINING_COMPLETE_AUDIT_RELOAD_PASS",
   "npo_pilot": "not_started",
   "autograd_prior_failures_preserved": true,
   "automation": {
@@ -262,8 +264,8 @@
     "raw_sha256": "8a8dabc5b71acaee8e60263e7e87ad459273fe834f3e0b9a2443f6faaf372d97",
     "scope": "projection arithmetic and state isolation only; not all training gradient comparisons"
   },
-  "latest_snapshot_utc": "2026-10-06T21:55:03.067898+00:00",
-  "private_snapshot_sha256": "a874bfd828b0f0dd06209f8de21a83b72b2683f60db8c82253702d1e67f3142b",
+  "latest_snapshot_utc": "2026-10-06T23:39:55.850174+00:00",
+  "private_snapshot_sha256": "714ee89486fd6edadf8555736d5781a45ebf948092c3981a7c59bfef0fd10d31",
   "full_completion_evidence": "r4-completed-evidence-20261007.json",
   "development_cpu_preparation_evidence": "ifbench-cpu-completed-20261007.json",
   "development_cpu_fixture_evidence": "ifbench-cpu-fixtures-20261007.json",
@@ -276,7 +278,7 @@
     "native_executor_deployed": false,
     "native_runtime_validated": false
   },
-  "latest_monitoring_attempt_evidence": "development-queue-prepared-20261007.json",
+  "latest_monitoring_attempt_evidence": "r4-reference-completed-evidence-20261007.json",
   "npo_probe_source_preparation": {
     "status": "QUEUE_SOURCE_PREPARED_NOT_DEPLOYED_OR_LAUNCHED",
     "static_evidence": "spf-npo-probe-static-20261007.json",
@@ -320,5 +322,7 @@
     "gpu_runtime_validated": false,
     "target_evaluation_executed": false,
     "target_gate_evaluated": false
-  }
+  },
+  "reference_completion_evidence": "r4-reference-completed-evidence-20261007.json",
+  "development_deployment_evidence": "development-deployment-20261007-0739.json"
 }
