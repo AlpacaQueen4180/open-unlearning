@@ -1,0 +1,186 @@
+{
+  "status": "pass",
+  "manifest_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
+  "attempts": [
+    {
+      "method": "standard",
+      "microbatch": 4,
+      "accumulation": 8,
+      "exit_code": 0,
+      "log": "standard-micro4.log",
+      "reload_exit_code": 0,
+      "status": "pass",
+      "target": {
+        "target_id": "standard-micro4",
+        "method": "standard",
+        "split": "full",
+        "construction_seed": 0,
+        "mode": "smoke",
+        "manifest_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
+        "metrics": {
+          "global_dot": 0.0,
+          "conflict": false,
+          "gradient_norm_before": 36.5721709570655,
+          "gradient_norm_after": 36.572170125685176,
+          "optimizer_update_norm": 0.041544367204645556,
+          "step": 10,
+          "examples": 320,
+          "tokens": 11158,
+          "assistant_tokens": 11158,
+          "input_tokens": 29288,
+          "unique_examples": 320,
+          "safety_tokens_computed": 0,
+          "task_loss": 2.3406811505556107,
+          "epoch": 0.08,
+          "window_examples": 32,
+          "window_assistant_tokens": 1191,
+          "task_microbatches_per_rank": 8,
+          "task_normalized_weight_sum": 0.9999999999999999,
+          "backward_scale_wrt_gas": false,
+          "lr_before": 7.2e-07,
+          "lr_after": 8.000000000000001e-07,
+          "engine_global_steps": 10,
+          "scheduler_steps": 10,
+          "elapsed_seconds": 312.0019150804728,
+          "cpu_rss_bytes": 5382995968,
+          "cpu_rss_peak_sampled_bytes": 6237061120,
+          "cpu_rss_peak_bytes": 72090845184,
+          "cuda_peak_allocated_bytes": 84623933952,
+          "cuda_peak_reserved_bytes": 88604672000
+        },
+        "gate": {
+          "status": "insufficient_evidence"
+        },
+        "reload": {
+          "status": "pass",
+          "max_logit_error": 0.0
+        }
+      },
+      "conflict_rate": 0.0,
+      "rank_peak_allocated_bytes": [
+        84623933952
+      ]
+    },
+    {
+      "method": "mixing",
+      "microbatch": 4,
+      "accumulation": 8,
+      "exit_code": 0,
+      "log": "mixing-micro4.log",
+      "reload_exit_code": 0,
+      "status": "pass",
+      "target": {
+        "target_id": "mixing-micro4",
+        "method": "mixing",
+        "split": "full",
+        "construction_seed": 0,
+        "mode": "smoke",
+        "manifest_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
+        "metrics": {
+          "global_dot": 808.6548240003176,
+          "conflict": false,
+          "gradient_norm_before": 47.47863709249223,
+          "gradient_norm_after": 153.1344299542738,
+          "optimizer_update_norm": 0.04970247763612164,
+          "step": 10,
+          "examples": 320,
+          "tokens": 11158,
+          "assistant_tokens": 11158,
+          "input_tokens": 29288,
+          "unique_examples": 320,
+          "safety_tokens_computed": 170,
+          "task_loss": 2.434266120195389,
+          "epoch": 0.08,
+          "window_examples": 32,
+          "window_assistant_tokens": 1191,
+          "task_microbatches_per_rank": 8,
+          "task_normalized_weight_sum": 0.9999999999999999,
+          "backward_scale_wrt_gas": false,
+          "lr_before": 7.2e-07,
+          "lr_after": 8.000000000000001e-07,
+          "engine_global_steps": 10,
+          "scheduler_steps": 10,
+          "elapsed_seconds": 497.1411826200783,
+          "cpu_rss_bytes": 6031212544,
+          "cpu_rss_peak_sampled_bytes": 6031212544,
+          "cpu_rss_peak_bytes": 73204695040,
+          "cuda_peak_allocated_bytes": 84623937024,
+          "cuda_peak_reserved_bytes": 88604672000
+        },
+        "gate": {
+          "status": "insufficient_evidence"
+        },
+        "reload": {
+          "status": "pass",
+          "max_logit_error": 0.0
+        }
+      },
+      "conflict_rate": 0.0,
+      "rank_peak_allocated_bytes": [
+        84623937024
+      ]
+    },
+    {
+      "method": "spf",
+      "microbatch": 4,
+      "accumulation": 8,
+      "exit_code": 0,
+      "log": "spf-micro4.log",
+      "reload_exit_code": 0,
+      "status": "pass",
+      "target": {
+        "target_id": "spf-micro4",
+        "method": "spf",
+        "split": "full",
+        "construction_seed": 0,
+        "mode": "smoke",
+        "manifest_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
+        "metrics": {
+          "global_dot": 2157.4331500699554,
+          "conflict": false,
+          "gradient_norm_before": 36.5721709570655,
+          "gradient_norm_after": 36.572170125685176,
+          "optimizer_update_norm": 0.041544367204645556,
+          "step": 10,
+          "examples": 320,
+          "tokens": 11158,
+          "assistant_tokens": 11158,
+          "input_tokens": 29288,
+          "unique_examples": 320,
+          "safety_tokens_computed": 170,
+          "task_loss": 2.3406811505556107,
+          "epoch": 0.08,
+          "window_examples": 32,
+          "window_assistant_tokens": 1191,
+          "task_microbatches_per_rank": 8,
+          "task_normalized_weight_sum": 0.9999999999999999,
+          "backward_scale_wrt_gas": false,
+          "lr_before": 7.2e-07,
+          "lr_after": 8.000000000000001e-07,
+          "engine_global_steps": 10,
+          "scheduler_steps": 10,
+          "elapsed_seconds": 440.24135105125606,
+          "cpu_rss_bytes": 6048186368,
+          "cpu_rss_peak_sampled_bytes": 6081871872,
+          "cpu_rss_peak_bytes": 72412168192,
+          "cuda_peak_allocated_bytes": 84623937024,
+          "cuda_peak_reserved_bytes": 88604672000
+        },
+        "gate": {
+          "status": "insufficient_evidence"
+        },
+        "reload": {
+          "status": "pass",
+          "max_logit_error": 0.0
+        }
+      },
+      "conflict_rate": 0.0,
+      "rank_peak_allocated_bytes": [
+        84623937024
+      ]
+    }
+  ],
+  "world_size": 1,
+  "chosen_microbatch": 4,
+  "chosen_accumulation": 8
+}

@@ -1,0 +1,135 @@
+{
+  "status": "PREPARED_PENDING_GPU_RUNTIME",
+  "task": "/data/spf-development-20261007-r1",
+  "private_assets_verified": 352,
+  "bundle_entries_verified": 364,
+  "bundle_sha256": "ad80eb4c38b282303c552996df1012fc6df8e2704a9d512665bff83d0c4aa290",
+  "asset_index_sha256": "033594a14bf89403ac41181cc6892dd241596b7443d59a24acd8eff194c8ae74",
+  "archive_sha256": "c8ef3f31488eb19e0650ebef011cccf2c5daeacd48ccdf1ede877e9b3cd650bd",
+  "raw_entries": [
+    {
+      "name": "preparation.json",
+      "size": 1385,
+      "sha256": "c60ca18982bbba3301d856a470e464af98662c5c093f42212f855649cdd39f82"
+    },
+    {
+      "name": "adapter/adapter-audit.json",
+      "size": 7381,
+      "sha256": "ffb402da9ab4e390104f69bf69d060f169dc2cfb6a3978d1dcf0a3bb47a8013c"
+    },
+    {
+      "name": "receiver-launch.json",
+      "size": 262,
+      "sha256": "555b1aef8dbc44528e447aaf2d7341b01e5d8c9dcc0b3e14f1006b29eaf1af91"
+    },
+    {
+      "name": "bundle-received.json",
+      "size": 96,
+      "sha256": "5c285b1ac94a8be9743860b8e529846edff5075d4758920321d6b3e90050b9f1"
+    },
+    {
+      "name": "adapter-prepare.log",
+      "size": 152,
+      "sha256": "86b5d5e653261bf7b5c9604b1b7ab64ca92ccf1e6982c53f9080f7e69a7cb51a"
+    },
+    {
+      "name": "prepare_development.py",
+      "size": 3025,
+      "sha256": "0f88b57d1ede615a06aa8d484ea55966e47fe5e8df908e3bbb745ea393e46377"
+    },
+    {
+      "name": "adapter/code/evaluate_construction_baseline.py",
+      "size": 8892,
+      "sha256": "4cdb8bac8d46c2a01b85e83db2251e6b03ef1c978db18d296307a7363dee584f"
+    },
+    {
+      "name": "adapter/code/evaluate_development_knowledge.py",
+      "size": 3207,
+      "sha256": "3a6399f5a65904a39d93d301ff48dfd02d675d667cb82ddcccafbdd9ea3fc38c"
+    },
+    {
+      "name": "adapter/code/generate_development.py",
+      "size": 4319,
+      "sha256": "1cadfc10021b3df7d89b0f525855fe2119453f746bb334c4ac66e53bf32b9d9a"
+    },
+    {
+      "name": "adapter/code/generate_development_conversation.py",
+      "size": 4655,
+      "sha256": "3f1e0d2336df6572d18ef3660fe9f2ab3b3bcae9184d3958a7bbb10e452b4ac8"
+    },
+    {
+      "name": "adapter/code/score_development_ifbench.py",
+      "size": 2812,
+      "sha256": "c590e30aff720c6e747dc3c7fee946b76f83470c6e82078057ef7d69e2517c1d"
+    }
+  ],
+  "checkpoint_audit_sha256": "7a7036b903ced64e18307e90523cc7ada73699ddb3d79498bfd4063f86ed8cf9",
+  "checkpoint_identity_sha256": "c45e87fc69825b75f5d47345fb3c8502a4c1b4524f9d621411068bf3bc64f3a8",
+  "adapter_audit_sha256": "ffb402da9ab4e390104f69bf69d060f169dc2cfb6a3978d1dcf0a3bb47a8013c",
+  "sources": {
+    "evaluate_construction_baseline.py": {
+      "source_sha256": "4197f8b323b146d643119195f1e5a1f623a4fa87a5d69a7f066c33d14e25d4ec",
+      "adapter_sha256": "4cdb8bac8d46c2a01b85e83db2251e6b03ef1c978db18d296307a7363dee584f",
+      "published_name": "development-prepared-source/evaluate_construction_baseline.py"
+    },
+    "generate_development.py": {
+      "source_sha256": "9a99410fb62985d124a19772d621628728fa20334efc36aa4d441cdf2a59dfe2",
+      "adapter_sha256": "1cadfc10021b3df7d89b0f525855fe2119453f746bb334c4ac66e53bf32b9d9a",
+      "published_name": "development-prepared-source/generate_development.py"
+    },
+    "generate_development_conversation.py": {
+      "source_sha256": "95db77e44ea26e010e380cd9abf5b21ea9b94eee734f03f64da4d3887f9216fc",
+      "adapter_sha256": "3f1e0d2336df6572d18ef3660fe9f2ab3b3bcae9184d3958a7bbb10e452b4ac8",
+      "published_name": "development-prepared-source/generate_development_conversation.py"
+    },
+    "evaluate_development_knowledge.py": {
+      "source_sha256": "22796a344c14db1f3cf275c7d82d3e639d40a71eff4e92dd2049076ddee4a847",
+      "adapter_sha256": "3a6399f5a65904a39d93d301ff48dfd02d675d667cb82ddcccafbdd9ea3fc38c",
+      "published_name": "development-prepared-source/evaluate_development_knowledge.py"
+    },
+    "score_development_ifbench.py": {
+      "source_sha256": "c590e30aff720c6e747dc3c7fee946b76f83470c6e82078057ef7d69e2517c1d",
+      "adapter_sha256": "c590e30aff720c6e747dc3c7fee946b76f83470c6e82078057ef7d69e2517c1d",
+      "published_name": "development-prepared-source/score_development_ifbench.py"
+    }
+  },
+  "preparation_command": [
+    "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+    "/data/spf-development-20261007-r1/repo/scripts/reproduction/safety/gb200/prepare_development_adapter.py",
+    "--repository",
+    "/data/spf-development-20261007-r1/repo",
+    "--manifest",
+    "/data/spf-npo-20261006-r4/frozen.json",
+    "--target",
+    "/data/spf-npo-20261006-r4/spf-full-s0",
+    "--checkpoint-audit",
+    "/data/spf-npo-20261006-r4/spf-full-s0-audit.json",
+    "--checkpoint-audit-sha256",
+    "7a7036b903ced64e18307e90523cc7ada73699ddb3d79498bfd4063f86ed8cf9",
+    "--output",
+    "/data/spf-development-20261007-r1/adapter"
+  ],
+  "prepare_source_sha256": "0f88b57d1ede615a06aa8d484ea55966e47fe5e8df908e3bbb745ea393e46377",
+  "cpu_scoring_preparation": {
+    "status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "pid": 46538,
+    "command": [
+      "python",
+      "/data/spf-development-20261007-r1/repo/scripts/reproduction/safety/gb200/prepare_ifbench_cpu.py",
+      "--task",
+      "/data/spf-development-20261007-r1"
+    ],
+    "source_sha256": "0e6e2e15db8bb055887c885f51adbea4f18c763f4f2a2da42c9eeac89e236308",
+    "gpu_evaluation_started": false
+  },
+  "gpu_evaluation_started": false,
+  "target_gate_executed": false,
+  "external_judge_executed": false,
+  "score_equivalence_verified": false,
+  "construction_source_unmodified": true,
+  "limits": [
+    "Adapter preparation is not a GPU runtime, target gate, or SPF numerical acceptance result.",
+    "CPU scorer installation/import result is pending the next scheduled snapshot.",
+    "Existing H100 Standard comparison has cross-platform limits; SPF-specific labels/clusters are pending."
+  ]
+}

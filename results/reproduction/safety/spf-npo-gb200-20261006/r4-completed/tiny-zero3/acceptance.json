@@ -1,0 +1,27 @@
+{
+  "method": "spf",
+  "backend": "zero3",
+  "steps": 3,
+  "world_size": 1,
+  "numerical_precision": {
+    "cuda_matmul_allow_tf32": false,
+    "float32_matmul_precision": "highest"
+  },
+  "global_batch": 32,
+  "actual_windows": [
+    32,
+    24,
+    32
+  ],
+  "token_denominators": [
+    80,
+    60,
+    79
+  ],
+  "scheduler_steps": 3,
+  "reference_comparison": "pass",
+  "gradient_comparison": "pass",
+  "serialized_reload": "pass",
+  "randomized_svd_rng_and_orthogonality": "pass",
+  "conflicting_updates": 3
+}

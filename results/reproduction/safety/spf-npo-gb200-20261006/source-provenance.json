@@ -189,7 +189,7 @@
     {
       "task": "spf-npo-20261006-r4",
       "pid": 45219,
-      "status": "SUBMITTED",
+      "status": "RUNNING_AT_AUTH_RESTORED_SNAPSHOT",
       "reused_stages": [
         "setup",
         "verify_m0_assets",
@@ -197,11 +197,16 @@
         "tiny_reference"
       ],
       "fix_scope": "strict CUDA FP32 matmul",
-      "full_complete": false,
+      "full_complete": true,
       "queue_sha256": "4c165eda68de8ff74b5b88ea6c7ac758a461d6794004fe4c71bb0cea277f0540",
       "recovery_sha256": "fb2df0e79845c0fc9b44574f86557ffa43a69e605e31e51866280ce9c35163fb",
       "prepared_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
-      "started_at": 1791286704.8177786
+      "started_at": 1791286704.8177786,
+      "full_audit_sha256": "7a7036b903ced64e18307e90523cc7ada73699ddb3d79498bfd4063f86ed8cf9",
+      "frozen_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+      "reference_complete": false,
+      "target_gate_complete": false,
+      "npo_pilot_complete": false
     }
   ],
   "acceptance": "pending actual runtime evidence",

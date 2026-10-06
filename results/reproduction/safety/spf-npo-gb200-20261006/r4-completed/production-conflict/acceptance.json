@@ -1,0 +1,83 @@
+{
+  "status": "pass",
+  "synthetic": true,
+  "research_evidence": false,
+  "manifest_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
+  "checkpoint_written": false,
+  "microbatch": 4,
+  "accumulation": 8,
+  "world_size": 1,
+  "events": [
+    {
+      "global_dot": -7572.930932626361,
+      "conflict": true,
+      "gradient_norm_before": 87.02258863436758,
+      "gradient_norm_after": 14.508327780305503,
+      "step": 1,
+      "optimizer_state_populated": false,
+      "blocks": 291,
+      "largest_block": [
+        "model.embed_tokens.weight",
+        [
+          128256,
+          4096
+        ]
+      ],
+      "projection_seconds": 17.991947408765554
+    },
+    {
+      "global_dot": -4714.544699224527,
+      "conflict": true,
+      "gradient_norm_before": 68.66254218440012,
+      "gradient_norm_after": 12.142783896293981,
+      "step": 2,
+      "optimizer_state_populated": true,
+      "blocks": 291,
+      "largest_block": [
+        "model.embed_tokens.weight",
+        [
+          128256,
+          4096
+        ]
+      ],
+      "projection_seconds": 17.84849272482097
+    }
+  ],
+  "metrics": {
+    "global_dot": -4714.544699224527,
+    "conflict": true,
+    "gradient_norm_before": 68.66254218440012,
+    "gradient_norm_after": 12.142783896293981,
+    "optimizer_update_norm": 0.00506459148695204,
+    "step": 2,
+    "examples": 64,
+    "tokens": 2183,
+    "assistant_tokens": 2183,
+    "input_tokens": 5783,
+    "unique_examples": 64,
+    "safety_tokens_computed": 34,
+    "task_loss": 2.444135844707489,
+    "epoch": 0.016,
+    "window_examples": 32,
+    "window_assistant_tokens": 1198,
+    "task_microbatches_per_rank": 8,
+    "task_normalized_weight_sum": 1.0,
+    "backward_scale_wrt_gas": false,
+    "lr_before": 8e-08,
+    "lr_after": 1.6e-07,
+    "engine_global_steps": 2,
+    "scheduler_steps": 2,
+    "elapsed_seconds": 105.95859253033996,
+    "cpu_rss_bytes": 12691046400,
+    "cpu_rss_peak_sampled_bytes": 12691046400,
+    "cpu_rss_peak_bytes": 103590395904,
+    "cuda_peak_allocated_bytes": 89351958016,
+    "cuda_peak_reserved_bytes": 92819947520
+  },
+  "nvml_sampled_peak_bytes": [
+    159407669248,
+    0
+  ],
+  "nvml_samples": 59,
+  "nvml_interval_seconds": 2
+}

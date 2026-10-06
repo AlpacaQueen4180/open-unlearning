@@ -1,0 +1,46 @@
+{
+  "target_id": "spf-full-s0",
+  "method": "spf",
+  "split": "full",
+  "construction_seed": 0,
+  "mode": "full",
+  "manifest_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+  "metrics": {
+    "global_dot": 3.312879487029022,
+    "conflict": false,
+    "gradient_norm_before": 1.920567488858007,
+    "gradient_norm_after": 1.9205674620132878,
+    "optimizer_update_norm": 0.0004104848797657617,
+    "step": 625,
+    "examples": 20000,
+    "tokens": 696525,
+    "assistant_tokens": 696525,
+    "input_tokens": 1834710,
+    "unique_examples": 4000,
+    "safety_tokens_computed": 10625,
+    "task_loss": 0.010018546570790932,
+    "epoch": 5.0,
+    "window_examples": 32,
+    "window_assistant_tokens": 1000,
+    "task_microbatches_per_rank": 8,
+    "task_normalized_weight_sum": 1.0,
+    "backward_scale_wrt_gas": false,
+    "lr_before": 2e-08,
+    "lr_after": 0.0,
+    "engine_global_steps": 625,
+    "scheduler_steps": 625,
+    "elapsed_seconds": 21073.011355919763,
+    "cpu_rss_bytes": 12339838976,
+    "cpu_rss_peak_sampled_bytes": 24498077696,
+    "cpu_rss_peak_bytes": 89539215360,
+    "cuda_peak_allocated_bytes": 89351962624,
+    "cuda_peak_reserved_bytes": 92819947520
+  },
+  "gate": {
+    "status": "insufficient_evidence"
+  },
+  "reload": {
+    "status": "pass",
+    "max_logit_error": 0.0
+  }
+}

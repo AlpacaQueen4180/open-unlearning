@@ -1,0 +1,936 @@
+{
+  "status": "SPF_FULL_COMPLETE_REFERENCE_RUNNING_PENDING_GATE_NPO",
+  "task": "/data/spf-npo-20261006-r4",
+  "queue_pid": 45219,
+  "snapshot_sha256": "6a86f3a57be2a62150ba7b5a18da2242345bac8d18ea33d98089aae5bd4f8f46",
+  "snapshot_observed_utc": "2026-10-06T19:43:42.079443+00:00",
+  "snapshot_time_note": "Local capture time; stage timestamps are authoritative.",
+  "stage_commands_at_snapshot": [
+    {
+      "name": "tiny_zero3_world1",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=1",
+        "scripts/reproduction/safety/check_construction_zero3.py",
+        "--output",
+        "/data/spf-npo-20261006-r4/tiny-zero3",
+        "--reference",
+        "/data/spf-npo-20261006-r4/tiny-reference/parameters.pt"
+      ],
+      "cwd": "/data/spf-npo-20261006-r4/repo",
+      "log": "/data/spf-npo-20261006-r4/tiny_zero3_world1.log",
+      "started_at": 1791286704.8702748,
+      "returncode": 0,
+      "finished_at": 1791286730.4935162
+    },
+    {
+      "name": "production_conflict",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=1",
+        "scripts/reproduction/safety/check_construction_full_conflict.py",
+        "--manifest",
+        "/data/spf-npo-20261006-r4/prepared.json",
+        "--output",
+        "/data/spf-npo-20261006-r4/production-conflict"
+      ],
+      "cwd": "/data/spf-npo-20261006-r4/repo",
+      "log": "/data/spf-npo-20261006-r4/production_conflict.log",
+      "started_at": 1791286730.4992757,
+      "returncode": 0,
+      "finished_at": 1791286872.359022
+    },
+    {
+      "name": "production_smokes",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "scripts/reproduction/safety/run_construction_smoke.py",
+        "--manifest",
+        "/data/spf-npo-20261006-r4/prepared.json",
+        "--output",
+        "/data/spf-npo-20261006-r4/smoke",
+        "--world-size",
+        "1"
+      ],
+      "cwd": "/data/spf-npo-20261006-r4/repo",
+      "log": "/data/spf-npo-20261006-r4/production_smokes.log",
+      "started_at": 1791286872.364966,
+      "returncode": 0,
+      "finished_at": 1791288324.6367204
+    },
+    {
+      "name": "freeze",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "construction.cli",
+        "freeze",
+        "--manifest",
+        "/data/spf-npo-20261006-r4/prepared.json",
+        "--smoke-summary",
+        "/data/spf-npo-20261006-r4/smoke/summary.json",
+        "--backend-acceptance",
+        "/data/spf-npo-20261006-r4/tiny-zero3/acceptance.json",
+        "--output",
+        "/data/spf-npo-20261006-r4/frozen.json"
+      ],
+      "cwd": "/data/spf-npo-20261006-r4/repo",
+      "log": "/data/spf-npo-20261006-r4/freeze.log",
+      "started_at": 1791288324.6429315,
+      "returncode": 0,
+      "finished_at": 1791288324.8551548
+    },
+    {
+      "name": "spf-full-s0-train",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=1",
+        "-m",
+        "construction.cli",
+        "run",
+        "--manifest",
+        "/data/spf-npo-20261006-r4/frozen.json",
+        "--method",
+        "spf",
+        "--mode",
+        "full",
+        "--split",
+        "full",
+        "--microbatch",
+        "4",
+        "--weights-only",
+        "--output",
+        "/data/spf-npo-20261006-r4/spf-full-s0"
+      ],
+      "cwd": "/data/spf-npo-20261006-r4/repo",
+      "log": "/data/spf-npo-20261006-r4/spf-full-s0-train.log",
+      "started_at": 1791288324.883425,
+      "returncode": 0,
+      "finished_at": 1791309469.909838
+    },
+    {
+      "name": "spf-full-s0-reload",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "construction.cli",
+        "verify",
+        "--checkpoint",
+        "/data/spf-npo-20261006-r4/spf-full-s0"
+      ],
+      "cwd": "/data/spf-npo-20261006-r4/repo",
+      "log": "/data/spf-npo-20261006-r4/spf-full-s0-reload.log",
+      "started_at": 1791309469.9157124,
+      "returncode": 0,
+      "finished_at": 1791309483.977288
+    },
+    {
+      "name": "spf-full-s0-audit",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "scripts/reproduction/safety/gb200/audit_spf_target.py",
+        "--target",
+        "/data/spf-npo-20261006-r4/spf-full-s0",
+        "--output",
+        "/data/spf-npo-20261006-r4/spf-full-s0-audit.json"
+      ],
+      "cwd": "/data/spf-npo-20261006-r4/repo",
+      "log": "/data/spf-npo-20261006-r4/spf-full-s0-audit.log",
+      "started_at": 1791309483.9839368,
+      "returncode": 0,
+      "finished_at": 1791309533.084039
+    },
+    {
+      "name": "spf-retain95-s0-train",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=1",
+        "-m",
+        "construction.cli",
+        "run",
+        "--manifest",
+        "/data/spf-npo-20261006-r4/frozen.json",
+        "--method",
+        "spf",
+        "--mode",
+        "full",
+        "--split",
+        "retain95",
+        "--microbatch",
+        "4",
+        "--weights-only",
+        "--output",
+        "/data/spf-npo-20261006-r4/spf-retain95-s0"
+      ],
+      "cwd": "/data/spf-npo-20261006-r4/repo",
+      "log": "/data/spf-npo-20261006-r4/spf-retain95-s0-train.log",
+      "started_at": 1791309533.0948055
+    }
+  ],
+  "archive_sha256": "e456edffa936ebb76d4bdbcf22ebc75c145b7fdab420717dbc37a6e1502379c4",
+  "raw_entries": [
+    {
+      "name": "frozen.json",
+      "size": 7405944,
+      "sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+      "private_only": true
+    },
+    {
+      "name": "spf-full-s0-audit.json",
+      "size": 2393,
+      "sha256": "7a7036b903ced64e18307e90523cc7ada73699ddb3d79498bfd4063f86ed8cf9",
+      "published_name": "r4-completed/spf-full-s0-audit.json"
+    },
+    {
+      "name": "tiny-zero3/acceptance.json",
+      "size": 513,
+      "sha256": "ee9d334debd20b9a56ef1358f847d00785f2bc73e0160d99d5855247b3c2d8ab",
+      "published_name": "r4-completed/tiny-zero3/acceptance.json"
+    },
+    {
+      "name": "production-conflict/acceptance.json",
+      "size": 2221,
+      "sha256": "2b1121bbc0cfdadda2296fcb31b72764bf117169d2166bb7f94ce16d5637138e",
+      "published_name": "r4-completed/production-conflict/acceptance.json"
+    },
+    {
+      "name": "production-conflict/projection_progress.json",
+      "size": 892,
+      "sha256": "63d8921b7edf5c73bc8ba45d8b15475416be45bf3d516d4edce758891f44b12f",
+      "published_name": "r4-completed/production-conflict/projection_progress.json"
+    },
+    {
+      "name": "smoke/summary.json",
+      "size": 5984,
+      "sha256": "d807de72729153aeef7ae69865c44eeb1cde66830a0c992bb3d87a4668a250d9",
+      "published_name": "r4-completed/smoke/summary.json"
+    },
+    {
+      "name": "repo/scripts/reproduction/safety/gb200/audit_spf_target.py",
+      "size": 5809,
+      "sha256": "6fc5ba538b5b6ee1a8ffd003de62abb6f65a6ddf9b1df590afe20fec7769c283",
+      "published_name": "r4-completed/repo/scripts/reproduction/safety/gb200/audit_spf_target.py"
+    },
+    {
+      "name": "tiny_zero3_world1.log",
+      "size": 20297,
+      "sha256": "2b9fd50bf8ff87c36aeb8ab5a6026712b7b72deb12bebfb4825360faf4e595e3",
+      "published_name": "r4-completed/tiny_zero3_world1.log.txt"
+    },
+    {
+      "name": "production_conflict.log",
+      "size": 19583,
+      "sha256": "a843b4e29aba90d4976c4905e546f4944ed7425f56711d6bfe61de6ca1c917c3",
+      "published_name": "r4-completed/production_conflict.log.txt"
+    },
+    {
+      "name": "production_smokes.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_name": "r4-completed/production_smokes.log.txt"
+    },
+    {
+      "name": "freeze.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "published_name": "r4-completed/freeze.log.txt"
+    },
+    {
+      "name": "spf-full-s0-train.log",
+      "size": 24432,
+      "sha256": "fd54d17ccf1e0b41a1b3561a0c7ce969a79b28559d57dbf0fff2dd6c4f1c50f3",
+      "published_name": "r4-completed/spf-full-s0-train.log.txt"
+    },
+    {
+      "name": "spf-full-s0-reload.log",
+      "size": 240,
+      "sha256": "b9299c7954547c532157a75910aaecd0a2f66feb948c2400ea17de8301962acd",
+      "published_name": "r4-completed/spf-full-s0-reload.log.txt"
+    },
+    {
+      "name": "spf-full-s0-audit.log",
+      "size": 135,
+      "sha256": "e0526254669cafa07429e44fba08cef7676a1a57b85f5d64e3e5aaf1744b2fd4",
+      "published_name": "r4-completed/spf-full-s0-audit.log.txt"
+    },
+    {
+      "name": "tiny-zero3/spf-4-zero3-1.0/config.json",
+      "size": 817,
+      "sha256": "0614a557e4066e66b0808700e01629f41720844307baac50c1c0f409338a9789",
+      "published_name": "r4-completed/tiny-zero3/spf-4-zero3-1.0/config.json"
+    },
+    {
+      "name": "tiny-zero3/spf-4-zero3-1.0/generation_config.json",
+      "size": 203,
+      "sha256": "c3221338acc60013e1c3fba5ad1dded0cbd5f352f6f76025593ec660603edd47",
+      "published_name": "r4-completed/tiny-zero3/spf-4-zero3-1.0/generation_config.json"
+    },
+    {
+      "name": "tiny-zero3/spf-4-zero3-1.0/resolved_training.json",
+      "size": 5508,
+      "sha256": "90fca653aa0736558b78c06c610b832767d82624c75b1f84feaacc53ccec45b4",
+      "published_name": "r4-completed/tiny-zero3/spf-4-zero3-1.0/resolved_training.json"
+    },
+    {
+      "name": "tiny-zero3/spf-4-zero3-1.0/trainer_state.json",
+      "size": 519,
+      "sha256": "2422c0ae886c18a1e5f9a90f8deb2bda99d6e2cba4ef5ef9002bd88b669a4281",
+      "published_name": "r4-completed/tiny-zero3/spf-4-zero3-1.0/trainer_state.json"
+    },
+    {
+      "name": "tiny-zero3/spf-4-zero3-1.0/trajectory.jsonl",
+      "size": 2849,
+      "sha256": "71d691fc833b17de4a044020fa2f10eb649df8caec370b2d119e85957905c901",
+      "published_name": "r4-completed/tiny-zero3/spf-4-zero3-1.0/trajectory.jsonl"
+    },
+    {
+      "name": "production-conflict/resolved_training.json",
+      "size": 5408,
+      "sha256": "bf9f316ac4b76952264911243d4eee3cd79796b1a7a654502729c576a22b84d3",
+      "published_name": "r4-completed/production-conflict/resolved_training.json"
+    },
+    {
+      "name": "production-conflict/trainer_state.json",
+      "size": 506,
+      "sha256": "becfe7add8b83d32d833ba93fcedcebcde9bf1cd1e7b1f94d465be566fa48f79",
+      "published_name": "r4-completed/production-conflict/trainer_state.json"
+    },
+    {
+      "name": "production-conflict/trajectory.jsonl",
+      "size": 1937,
+      "sha256": "22e738973c2c1348331ed6381e4c511c242d711543e9e1a4bc3f7bd89f805deb",
+      "published_name": "r4-completed/production-conflict/trajectory.jsonl"
+    },
+    {
+      "name": "smoke/mixing-micro4/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-completed/smoke/mixing-micro4/config.json"
+    },
+    {
+      "name": "smoke/mixing-micro4/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-completed/smoke/mixing-micro4/generation_config.json"
+    },
+    {
+      "name": "smoke/mixing-micro4/resolved_training.json",
+      "size": 5413,
+      "sha256": "14d013ea527475d17c71addc1bb7287baf37fea78c08f365000b0cba905356b2",
+      "published_name": "r4-completed/smoke/mixing-micro4/resolved_training.json"
+    },
+    {
+      "name": "smoke/mixing-micro4/target.json",
+      "size": 1355,
+      "sha256": "f42d0bece97fd26c18a40a369ea328251482c7249379106949e358527a9b33aa",
+      "published_name": "r4-completed/smoke/mixing-micro4/target.json"
+    },
+    {
+      "name": "smoke/mixing-micro4/trainer_state.json",
+      "size": 506,
+      "sha256": "f7f93316f9ca238fe5eaf4de7a3ed8806c59a42ff6c73aafbfc98a0430095f13",
+      "published_name": "r4-completed/smoke/mixing-micro4/trainer_state.json"
+    },
+    {
+      "name": "smoke/mixing-micro4/trajectory.jsonl",
+      "size": 8909,
+      "sha256": "1a9cdfbd140a3ab5e0df9869450636b9b5598dfd7afdcab1d96f070a8fa84b0a",
+      "published_name": "r4-completed/smoke/mixing-micro4/trajectory.jsonl"
+    },
+    {
+      "name": "smoke/spf-micro4/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-completed/smoke/spf-micro4/config.json"
+    },
+    {
+      "name": "smoke/spf-micro4/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-completed/smoke/spf-micro4/generation_config.json"
+    },
+    {
+      "name": "smoke/spf-micro4/resolved_training.json",
+      "size": 5407,
+      "sha256": "2f09263ad4e0b8a6b6f1857b7d32246b26273d1260ba3bfd79cd13430e5d641b",
+      "published_name": "r4-completed/smoke/spf-micro4/resolved_training.json"
+    },
+    {
+      "name": "smoke/spf-micro4/target.json",
+      "size": 1353,
+      "sha256": "dee1d601b3ad7d79a6617e87aa8e228a564ffaa887ff60b353e7dbe8f2982a9b",
+      "published_name": "r4-completed/smoke/spf-micro4/target.json"
+    },
+    {
+      "name": "smoke/spf-micro4/trainer_state.json",
+      "size": 506,
+      "sha256": "f7f93316f9ca238fe5eaf4de7a3ed8806c59a42ff6c73aafbfc98a0430095f13",
+      "published_name": "r4-completed/smoke/spf-micro4/trainer_state.json"
+    },
+    {
+      "name": "smoke/spf-micro4/trajectory.jsonl",
+      "size": 8907,
+      "sha256": "9a1f6ee7a4e7f512ed540213ce453392d0b7ffc786b81508fbb23bc9d8d7cbcc",
+      "published_name": "r4-completed/smoke/spf-micro4/trajectory.jsonl"
+    },
+    {
+      "name": "smoke/standard-micro4/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-completed/smoke/standard-micro4/config.json"
+    },
+    {
+      "name": "smoke/standard-micro4/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-completed/smoke/standard-micro4/generation_config.json"
+    },
+    {
+      "name": "smoke/standard-micro4/resolved_training.json",
+      "size": 5417,
+      "sha256": "1710626981e620c8a0752be481d729cdc028bbb398a21afee6a5b7c964d11075",
+      "published_name": "r4-completed/smoke/standard-micro4/resolved_training.json"
+    },
+    {
+      "name": "smoke/standard-micro4/target.json",
+      "size": 1345,
+      "sha256": "19b8674bf2b2437fe1575ecee62cd19eadaad40645c4d4f3d2cacae21c522bcb",
+      "published_name": "r4-completed/smoke/standard-micro4/target.json"
+    },
+    {
+      "name": "smoke/standard-micro4/trainer_state.json",
+      "size": 506,
+      "sha256": "f7f93316f9ca238fe5eaf4de7a3ed8806c59a42ff6c73aafbfc98a0430095f13",
+      "published_name": "r4-completed/smoke/standard-micro4/trainer_state.json"
+    },
+    {
+      "name": "smoke/standard-micro4/trajectory.jsonl",
+      "size": 8750,
+      "sha256": "7d15f3b5afc4adf4cea474d147f7c17a182c61ca8b11dfdee52e5d81af674979",
+      "published_name": "r4-completed/smoke/standard-micro4/trajectory.jsonl"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-157/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-157/config.json"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-157/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-157/generation_config.json"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-157/trainer_state.json",
+      "size": 508,
+      "sha256": "98b756d7ed26745cfcea20796668eb21d7509dd09d466a513bbf7edf7ed9a2c7",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-157/trainer_state.json"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-313/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-313/config.json"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-313/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-313/generation_config.json"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-313/trainer_state.json",
+      "size": 508,
+      "sha256": "05d869f96b76db39bb0e42dea5317a33168529c2fd4a421fa724e4f581ee8c16",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-313/trainer_state.json"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-469/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-469/config.json"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-469/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-469/generation_config.json"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-469/trainer_state.json",
+      "size": 508,
+      "sha256": "c694bb0269459359a667823a508bcb0abadfcb0d870c0c046fd148de46e533c5",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-469/trainer_state.json"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-625/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-625/config.json"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-625/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-625/generation_config.json"
+    },
+    {
+      "name": "spf-full-s0/checkpoint-625/trainer_state.json",
+      "size": 506,
+      "sha256": "f8120e377923ba219fdf00bb98574eb409716792f72410a9f78f022ab7f417bb",
+      "published_name": "r4-completed/spf-full-s0/checkpoint-625/trainer_state.json"
+    },
+    {
+      "name": "spf-full-s0/config.json",
+      "size": 897,
+      "sha256": "efdbac6bb067483756559cbb2f75883fbf05f33debcb4206ea8c9e159391d3f5",
+      "published_name": "r4-completed/spf-full-s0/config.json"
+    },
+    {
+      "name": "spf-full-s0/generation_config.json",
+      "size": 183,
+      "sha256": "be35bfa6704fa36cea292b82b19374288645e67f858314469a4a323b23a88ac4",
+      "published_name": "r4-completed/spf-full-s0/generation_config.json"
+    },
+    {
+      "name": "spf-full-s0/resolved_training.json",
+      "size": 5403,
+      "sha256": "d3aeba5342e5102124d7a12096cb4190c56c9617dabb75ed1df5a3b155bc354d",
+      "published_name": "r4-completed/spf-full-s0/resolved_training.json"
+    },
+    {
+      "name": "spf-full-s0/target.json",
+      "size": 1334,
+      "sha256": "33c65636134169b033f40b170745f8cc22d790be47402b5d80693ca06f96c520",
+      "published_name": "r4-completed/spf-full-s0/target.json"
+    },
+    {
+      "name": "spf-full-s0/trainer_state.json",
+      "size": 506,
+      "sha256": "f8120e377923ba219fdf00bb98574eb409716792f72410a9f78f022ab7f417bb",
+      "published_name": "r4-completed/spf-full-s0/trainer_state.json"
+    },
+    {
+      "name": "spf-full-s0/trajectory.jsonl",
+      "size": 557975,
+      "sha256": "cac7a29ba8305e96fc98a31437c25d07ee769d2e4120324f29f9cd2ac0f8ad50",
+      "published_name": "r4-completed/spf-full-s0/trajectory.jsonl"
+    }
+  ],
+  "full": {
+    "status": "pass",
+    "method": "spf",
+    "split": "full",
+    "construction_seed": 0,
+    "actual_epochs": 5.0,
+    "actual_updates": 625,
+    "actual_examples": 20000,
+    "actual_assistant_tokens": 696525,
+    "unique_examples": 4000,
+    "conflicting_updates": 297,
+    "safety_tokens_computed": 10625,
+    "fresh_reload": {
+      "status": "pass",
+      "max_logit_error": 0.0
+    },
+    "final_checkpoint": {
+      "parameter_tensors": 291,
+      "layers": 32,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size": 16060556616,
+          "sha256": "ccd328326d52e864bfc59a776de2b6a51f5b267767238bd584a83627e0a3b968",
+          "tensors": 291
+        }
+      ],
+      "weights_bytes": 16060556616
+    },
+    "trajectory_checkpoints": [
+      {
+        "step": 157,
+        "parameter_tensors": 291,
+        "layers": 32,
+        "files": [
+          {
+            "name": "model.safetensors",
+            "size": 16060556616,
+            "sha256": "d3d4cd759f6eb32778f531c28730856a590f7ba4350724612b5b2c7a63053e5a",
+            "tensors": 291
+          }
+        ],
+        "weights_bytes": 16060556616
+      },
+      {
+        "step": 313,
+        "parameter_tensors": 291,
+        "layers": 32,
+        "files": [
+          {
+            "name": "model.safetensors",
+            "size": 16060556616,
+            "sha256": "a04c1405edf081c677412e04f09579a920b0a4d69d8cd98ffa6ac00cb3b44e87",
+            "tensors": 291
+          }
+        ],
+        "weights_bytes": 16060556616
+      },
+      {
+        "step": 469,
+        "parameter_tensors": 291,
+        "layers": 32,
+        "files": [
+          {
+            "name": "model.safetensors",
+            "size": 16060556616,
+            "sha256": "7a6d9ccb7de4b74178503e9ff0b1ac712207aa47742e2718d6ac98256e97f16c",
+            "tensors": 291
+          }
+        ],
+        "weights_bytes": 16060556616
+      },
+      {
+        "step": 625,
+        "parameter_tensors": 291,
+        "layers": 32,
+        "files": [
+          {
+            "name": "model.safetensors",
+            "size": 16060556616,
+            "sha256": "ccd328326d52e864bfc59a776de2b6a51f5b267767238bd584a83627e0a3b968",
+            "tensors": 291
+          }
+        ],
+        "weights_bytes": 16060556616
+      }
+    ],
+    "manifest_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+    "trajectory_sha256": "cac7a29ba8305e96fc98a31437c25d07ee769d2e4120324f29f9cd2ac0f8ad50",
+    "resolved_training_sha256": "d3aeba5342e5102124d7a12096cb4190c56c9617dabb75ed1df5a3b155bc354d"
+  },
+  "full_audit_sha256": "7a7036b903ced64e18307e90523cc7ada73699ddb3d79498bfd4063f86ed8cf9",
+  "numerical_acceptance": {
+    "method": "spf",
+    "backend": "zero3",
+    "steps": 3,
+    "world_size": 1,
+    "numerical_precision": {
+      "cuda_matmul_allow_tf32": false,
+      "float32_matmul_precision": "highest"
+    },
+    "global_batch": 32,
+    "actual_windows": [
+      32,
+      24,
+      32
+    ],
+    "token_denominators": [
+      80,
+      60,
+      79
+    ],
+    "scheduler_steps": 3,
+    "reference_comparison": "pass",
+    "gradient_comparison": "pass",
+    "serialized_reload": "pass",
+    "randomized_svd_rng_and_orthogonality": "pass",
+    "conflicting_updates": 3
+  },
+  "production_conflict": {
+    "status": "pass",
+    "synthetic": true,
+    "research_evidence": false,
+    "manifest_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
+    "checkpoint_written": false,
+    "microbatch": 4,
+    "accumulation": 8,
+    "world_size": 1,
+    "events": [
+      {
+        "global_dot": -7572.930932626361,
+        "conflict": true,
+        "gradient_norm_before": 87.02258863436758,
+        "gradient_norm_after": 14.508327780305503,
+        "step": 1,
+        "optimizer_state_populated": false,
+        "blocks": 291,
+        "largest_block": [
+          "model.embed_tokens.weight",
+          [
+            128256,
+            4096
+          ]
+        ],
+        "projection_seconds": 17.991947408765554
+      },
+      {
+        "global_dot": -4714.544699224527,
+        "conflict": true,
+        "gradient_norm_before": 68.66254218440012,
+        "gradient_norm_after": 12.142783896293981,
+        "step": 2,
+        "optimizer_state_populated": true,
+        "blocks": 291,
+        "largest_block": [
+          "model.embed_tokens.weight",
+          [
+            128256,
+            4096
+          ]
+        ],
+        "projection_seconds": 17.84849272482097
+      }
+    ],
+    "metrics": {
+      "global_dot": -4714.544699224527,
+      "conflict": true,
+      "gradient_norm_before": 68.66254218440012,
+      "gradient_norm_after": 12.142783896293981,
+      "optimizer_update_norm": 0.00506459148695204,
+      "step": 2,
+      "examples": 64,
+      "tokens": 2183,
+      "assistant_tokens": 2183,
+      "input_tokens": 5783,
+      "unique_examples": 64,
+      "safety_tokens_computed": 34,
+      "task_loss": 2.444135844707489,
+      "epoch": 0.016,
+      "window_examples": 32,
+      "window_assistant_tokens": 1198,
+      "task_microbatches_per_rank": 8,
+      "task_normalized_weight_sum": 1.0,
+      "backward_scale_wrt_gas": false,
+      "lr_before": 8e-08,
+      "lr_after": 1.6e-07,
+      "engine_global_steps": 2,
+      "scheduler_steps": 2,
+      "elapsed_seconds": 105.95859253033996,
+      "cpu_rss_bytes": 12691046400,
+      "cpu_rss_peak_sampled_bytes": 12691046400,
+      "cpu_rss_peak_bytes": 103590395904,
+      "cuda_peak_allocated_bytes": 89351958016,
+      "cuda_peak_reserved_bytes": 92819947520
+    },
+    "nvml_sampled_peak_bytes": [
+      159407669248,
+      0
+    ],
+    "nvml_samples": 59,
+    "nvml_interval_seconds": 2
+  },
+  "smoke_summary": {
+    "status": "pass",
+    "manifest_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
+    "attempts": [
+      {
+        "method": "standard",
+        "microbatch": 4,
+        "accumulation": 8,
+        "exit_code": 0,
+        "log": "standard-micro4.log",
+        "reload_exit_code": 0,
+        "status": "pass",
+        "target": {
+          "target_id": "standard-micro4",
+          "method": "standard",
+          "split": "full",
+          "construction_seed": 0,
+          "mode": "smoke",
+          "manifest_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
+          "metrics": {
+            "global_dot": 0.0,
+            "conflict": false,
+            "gradient_norm_before": 36.5721709570655,
+            "gradient_norm_after": 36.572170125685176,
+            "optimizer_update_norm": 0.041544367204645556,
+            "step": 10,
+            "examples": 320,
+            "tokens": 11158,
+            "assistant_tokens": 11158,
+            "input_tokens": 29288,
+            "unique_examples": 320,
+            "safety_tokens_computed": 0,
+            "task_loss": 2.3406811505556107,
+            "epoch": 0.08,
+            "window_examples": 32,
+            "window_assistant_tokens": 1191,
+            "task_microbatches_per_rank": 8,
+            "task_normalized_weight_sum": 0.9999999999999999,
+            "backward_scale_wrt_gas": false,
+            "lr_before": 7.2e-07,
+            "lr_after": 8.000000000000001e-07,
+            "engine_global_steps": 10,
+            "scheduler_steps": 10,
+            "elapsed_seconds": 312.0019150804728,
+            "cpu_rss_bytes": 5382995968,
+            "cpu_rss_peak_sampled_bytes": 6237061120,
+            "cpu_rss_peak_bytes": 72090845184,
+            "cuda_peak_allocated_bytes": 84623933952,
+            "cuda_peak_reserved_bytes": 88604672000
+          },
+          "gate": {
+            "status": "insufficient_evidence"
+          },
+          "reload": {
+            "status": "pass",
+            "max_logit_error": 0.0
+          }
+        },
+        "conflict_rate": 0.0,
+        "rank_peak_allocated_bytes": [
+          84623933952
+        ]
+      },
+      {
+        "method": "mixing",
+        "microbatch": 4,
+        "accumulation": 8,
+        "exit_code": 0,
+        "log": "mixing-micro4.log",
+        "reload_exit_code": 0,
+        "status": "pass",
+        "target": {
+          "target_id": "mixing-micro4",
+          "method": "mixing",
+          "split": "full",
+          "construction_seed": 0,
+          "mode": "smoke",
+          "manifest_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
+          "metrics": {
+            "global_dot": 808.6548240003176,
+            "conflict": false,
+            "gradient_norm_before": 47.47863709249223,
+            "gradient_norm_after": 153.1344299542738,
+            "optimizer_update_norm": 0.04970247763612164,
+            "step": 10,
+            "examples": 320,
+            "tokens": 11158,
+            "assistant_tokens": 11158,
+            "input_tokens": 29288,
+            "unique_examples": 320,
+            "safety_tokens_computed": 170,
+            "task_loss": 2.434266120195389,
+            "epoch": 0.08,
+            "window_examples": 32,
+            "window_assistant_tokens": 1191,
+            "task_microbatches_per_rank": 8,
+            "task_normalized_weight_sum": 0.9999999999999999,
+            "backward_scale_wrt_gas": false,
+            "lr_before": 7.2e-07,
+            "lr_after": 8.000000000000001e-07,
+            "engine_global_steps": 10,
+            "scheduler_steps": 10,
+            "elapsed_seconds": 497.1411826200783,
+            "cpu_rss_bytes": 6031212544,
+            "cpu_rss_peak_sampled_bytes": 6031212544,
+            "cpu_rss_peak_bytes": 73204695040,
+            "cuda_peak_allocated_bytes": 84623937024,
+            "cuda_peak_reserved_bytes": 88604672000
+          },
+          "gate": {
+            "status": "insufficient_evidence"
+          },
+          "reload": {
+            "status": "pass",
+            "max_logit_error": 0.0
+          }
+        },
+        "conflict_rate": 0.0,
+        "rank_peak_allocated_bytes": [
+          84623937024
+        ]
+      },
+      {
+        "method": "spf",
+        "microbatch": 4,
+        "accumulation": 8,
+        "exit_code": 0,
+        "log": "spf-micro4.log",
+        "reload_exit_code": 0,
+        "status": "pass",
+        "target": {
+          "target_id": "spf-micro4",
+          "method": "spf",
+          "split": "full",
+          "construction_seed": 0,
+          "mode": "smoke",
+          "manifest_sha256": "58b2e25c368a39d4523e369ce5031bf4d84dc2b492bda514a660ae9432c9aa0c",
+          "metrics": {
+            "global_dot": 2157.4331500699554,
+            "conflict": false,
+            "gradient_norm_before": 36.5721709570655,
+            "gradient_norm_after": 36.572170125685176,
+            "optimizer_update_norm": 0.041544367204645556,
+            "step": 10,
+            "examples": 320,
+            "tokens": 11158,
+            "assistant_tokens": 11158,
+            "input_tokens": 29288,
+            "unique_examples": 320,
+            "safety_tokens_computed": 170,
+            "task_loss": 2.3406811505556107,
+            "epoch": 0.08,
+            "window_examples": 32,
+            "window_assistant_tokens": 1191,
+            "task_microbatches_per_rank": 8,
+            "task_normalized_weight_sum": 0.9999999999999999,
+            "backward_scale_wrt_gas": false,
+            "lr_before": 7.2e-07,
+            "lr_after": 8.000000000000001e-07,
+            "engine_global_steps": 10,
+            "scheduler_steps": 10,
+            "elapsed_seconds": 440.24135105125606,
+            "cpu_rss_bytes": 6048186368,
+            "cpu_rss_peak_sampled_bytes": 6081871872,
+            "cpu_rss_peak_bytes": 72412168192,
+            "cuda_peak_allocated_bytes": 84623937024,
+            "cuda_peak_reserved_bytes": 88604672000
+          },
+          "gate": {
+            "status": "insufficient_evidence"
+          },
+          "reload": {
+            "status": "pass",
+            "max_logit_error": 0.0
+          }
+        },
+        "conflict_rate": 0.0,
+        "rank_peak_allocated_bytes": [
+          84623937024
+        ]
+      }
+    ],
+    "world_size": 1,
+    "chosen_microbatch": 4,
+    "chosen_accumulation": 8
+  },
+  "reference": {
+    "status": "RUNNING_AT_SNAPSHOT",
+    "completed": false,
+    "last_logged_saved_checkpoint": 149,
+    "current_update_unknown": true
+  },
+  "target_development_gate": "not_evaluated",
+  "npo_pilot": "not_started",
+  "all_training_gradients_equivalent": false,
+  "limits": [
+    "Original large-model autograd 5% comparisons remain failed.",
+    "Construction seed0 only; cross-platform Standard is not a fully matched causal control.",
+    "Historical Standard fail and Mixing insufficient_evidence remain unchanged.",
+    "Target gate requires SPF-specific adjudication and paired cluster evidence."
+  ]
+}
