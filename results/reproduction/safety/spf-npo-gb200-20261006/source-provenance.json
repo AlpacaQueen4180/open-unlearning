@@ -433,7 +433,18 @@
   "npo_smoke_native_reload_only_failure_evidence": "spf-npo-native-reload-launch-failure-20261007-1936.json",
   "npo_smoke_native_reload_only_verifier_executed": false,
   "npo_smoke_native_reload_command_separator_cpu_verified": true,
-  "npo_smoke_native_reload_command_separator_deployed": false,
+  "npo_smoke_native_reload_command_separator_deployed": true,
   "spf_npo_pilot_frozen": false,
-  "target_development_gate_status": "insufficient_evidence"
+  "target_development_gate_status": "insufficient_evidence",
+  "npo_smoke_native_reload_cli_recovery_status": "SUBMITTED_RESULT_NOT_CHECKED",
+  "npo_smoke_native_reload_cli_recovery_pid": 4074,
+  "npo_smoke_native_reload_cli_recovery_run": "reload-native-cli-1936",
+  "npo_smoke_native_reload_cli_recovery_result_checked": false,
+  "npo_smoke_native_reload_cli_recovery_evidence": "spf-npo-native-reload-cli-launch-20261007-2000.json",
+  "spf_paid_judge_unsent26_prepared": true,
+  "spf_paid_judge_unsent26_run": "spf-judge-local-20261007-r6-unsent26",
+  "spf_paid_judge_unsent26_key_ui_pid": 38808,
+  "spf_paid_judge_unsent26_key_ui_status": "WAITING_FOR_NEW_KEY_LOCAL_MASKED_DIALOG",
+  "spf_paid_judge_unsent26_current_counters": null,
+  "spf_paid_judge_unsent26_evidence": "spf-development-judge-unsent26-prepared-20261007-2000.json"
 }
