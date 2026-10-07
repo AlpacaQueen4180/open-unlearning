@@ -1,0 +1,30 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:  13%|█▎        | 37/291 [00:00<00:00, 367.41it/s]Loading weights:  25%|██▌       | 74/291 [00:00<00:00, 326.17it/s]Loading weights:  37%|███▋      | 107/291 [00:00<00:00, 295.68it/s]Loading weights:  47%|████▋     | 137/291 [00:00<00:00, 282.76it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 620.37it/s]
+/usr/local/lib/python3.12/dist-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.0.7) or chardet (6.0.0.post1)/charset_normalizer (3.4.1) doesn't match a supported version!
+  warnings.warn(
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Passing `generation_config` together with generation-related arguments=({'do_sample'}) is deprecated and will be removed in future versions. Please pass either a `generation_config` object OR all generation parameters explicitly, but not both.
+Traceback (most recent call last):
+  File "/data/spf-development-20261007-r1/validation-code/run_spf_development_queue.py", line 351, in <module>
+    main()
+  File "/data/spf-development-20261007-r1/validation-code/run_spf_development_queue.py", line 288, in main
+    child(a.child_stage, run); return
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/spf-development-20261007-r1/validation-code/run_spf_development_queue.py", line 224, in child
+    runpy.run_path(str(source), run_name='__main__')
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/data/spf-development-20261007-r1/adapter/code/evaluate_construction_baseline.py", line 146, in <module>
+    main()
+  File "/data/spf-development-20261007-r1/adapter/code/evaluate_construction_baseline.py", line 98, in main
+    generated = model.generate(use_model_defaults=False, do_sample=False, **prompts, generation_config=generation)[:, prompts['input_ids'].shape[1]:].cpu()
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/generation/utils.py", line 2360, in generate
+    self._validate_model_kwargs(model_kwargs.copy())
+  File "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/generation/utils.py", line 1557, in _validate_model_kwargs
+    raise ValueError(
+ValueError: The following `model_kwargs` are not used by the model: ['use_model_defaults'] (note: typos in the generate arguments will also show up in this list)
