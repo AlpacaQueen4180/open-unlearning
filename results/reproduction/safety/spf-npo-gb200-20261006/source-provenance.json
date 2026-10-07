@@ -329,7 +329,7 @@
   "development_queue_pid": 47443,
   "development_failure_evidence": "development-failure-20261007-0809.json",
   "development_recovery_evidence": "development-api-recovery-20261007-0809.json",
-  "latest_snapshot_sha256": "3fcf2ddd5f14f56b692e6fd9c767f0523411433fa1ef7dcf1bf2e25a8a60a365",
+  "latest_snapshot_sha256": "e23482a0f0b9d17688e3f1391fe5d76df6990eb45a401aec3b3aa08491c44e6e",
   "development_path_recovery_evidence": "development-path-recovery-20261007-0825.json",
   "development_path_failure_evidence": "development-path-failure-20261007-0825.json",
   "development_actual_cuda_acceptance": "DEVELOPMENT_CUDA_EXECUTORS_PASS",
@@ -379,13 +379,24 @@
   "npo_smoke_actual_fresh_reload_verified": false,
   "npo_smoke_complete_verified": false,
   "npo_smoke_native_reload_only_prepared": true,
-  "npo_smoke_native_reload_only_deployed": false,
-  "npo_smoke_native_reload_only_submitted": false,
+  "npo_smoke_native_reload_only_deployed": true,
+  "npo_smoke_native_reload_only_submitted": true,
   "npo_smoke_native_reload_only_run_id": "reload-native-1312",
   "npo_smoke_native_reload_only_source_sha256": {
     "scripts/reproduction/safety/gb200/verify_spf_npo_smoke_native_reload.py": "5364672a92d23fdc13b25809ae2364973ab8d81195729880988732b06ca2d2e0",
     "scripts/reproduction/safety/gb200/run_spf_npo_smoke_reload_only_queue.py": "9ee71c00d28fba2c998c68e94bf59584587be56a68da9abcb097c4ad20299ab3"
   },
   "npo_smoke_final_export_sha256": "84f3bbaa85abeaf0214d2a9cfe89f407c6a5954072e07b9de99475db47b32f69",
-  "npo_pilot_frozen": false
+  "npo_pilot_frozen": false,
+  "npo_smoke_native_reload_only_queue_pid": 3889,
+  "npo_smoke_native_reload_only_runtime_status": "SUBMITTED_RESULT_NOT_CHECKED",
+  "npo_smoke_native_reload_only_result_checked": false,
+  "npo_smoke_native_reload_only_launch_evidence": "spf-npo-native-reload-launch-20261007-1700.json",
+  "spf_paid_judge_human_authorized": true,
+  "spf_paid_judge_execution_status": "PREPARED_PRIVATE_INPUTS_TRANSFERRED_LAUNCH_BLOCKED_BY_APPROVAL_REVIEW",
+  "spf_paid_judge_credential_and_external_payload_approval_pending": true,
+  "spf_paid_judge_source_sha256": "d7d23e1814b51ccd1b64df67080a751ed381c9c61c183328da86c0c98d632d4e",
+  "spf_paid_judge_plan_sha256": "5172862ca2b34f872e6e802bc33f7939bf990d65fa141da3be472463a8c85efa",
+  "spf_paid_judge_preparation_evidence": "spf-development-judge-prepared-20261007-1700.json",
+  "spf_paid_judge_calls_executed": 0
 }

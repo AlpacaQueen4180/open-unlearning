@@ -1,0 +1,73 @@
+{
+  "status": "NATIVE_RELOAD_ONLY_SUBMITTED_RESULT_NOT_CHECKED",
+  "snapshot_utc": "2026-10-07T09:02:07.903679+00:00",
+  "snapshot_sha256": "e23482a0f0b9d17688e3f1391fe5d76df6990eb45a401aec3b3aa08491c44e6e",
+  "snapshot_source_sha256": "64cf902be2895f006829b1335a39e3494c58df3891fc2402536fd0200eec3085",
+  "launch": {
+    "status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "pid": 3889,
+    "command": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-npo-smoke-20261007-r1/validation-code/run_spf_npo_smoke_reload_only_queue.py",
+      "--controller-sha256",
+      "9ee71c00d28fba2c998c68e94bf59584587be56a68da9abcb097c4ad20299ab3",
+      "--snapshot",
+      "/data/spf-npo-smoke-20261007-r1/validation-code/r4-snapshot-native-reload-1700.private.json",
+      "--snapshot-sha256",
+      "e23482a0f0b9d17688e3f1391fe5d76df6990eb45a401aec3b3aa08491c44e6e",
+      "--run-id",
+      "reload-native-1312"
+    ],
+    "cwd": "/data/spf-development-20261007-r1/repo",
+    "snapshot_sha256": "e23482a0f0b9d17688e3f1391fe5d76df6990eb45a401aec3b3aa08491c44e6e",
+    "started_at": 1791363835.0127065,
+    "log": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-native-reload-launch-1312.raw.log",
+    "original_checkpoint_modified": false,
+    "training_repeated": false,
+    "completed_diagnostics_repeated": false,
+    "pilot_frozen": false
+  },
+  "deploy_bundle": {
+    "bundle_sha256": "2f5ac16a4bf85d716c2977c8c366f9c0dfd90f053f6bfb9bcf4c478b50530072",
+    "records": {
+      "run_spf_npo_smoke_reload_only_queue.py": {
+        "size": 10373,
+        "sha256": "9ee71c00d28fba2c998c68e94bf59584587be56a68da9abcb097c4ad20299ab3"
+      },
+      "verify_spf_npo_smoke_native_reload.py": {
+        "size": 11737,
+        "sha256": "5364672a92d23fdc13b25809ae2364973ab8d81195729880988732b06ca2d2e0"
+      },
+      "r4-snapshot-native-reload-1700.private.json": {
+        "size": 48572,
+        "sha256": "e23482a0f0b9d17688e3f1391fe5d76df6990eb45a401aec3b3aa08491c44e6e"
+      }
+    },
+    "compressed_chunks": 7,
+    "snapshot_sha256": "e23482a0f0b9d17688e3f1391fe5d76df6990eb45a401aec3b3aa08491c44e6e",
+    "snapshot_utc": "2026-10-07T09:02:07.903679+00:00",
+    "commands": 10
+  },
+  "preflight_complete": true,
+  "verified_chunks_before_eof": 6,
+  "failed_stage": "chunk-6",
+  "failed_cli_native_utf8_sha256": "2cb72adf0523e67abf31a9d7f2cc4f131c97b97b397ce6b20d882662ba83126f",
+  "failed_cli_original_stream_bytes": false,
+  "artifact_check_sha256": "246dc96350cb245d30e4c7b7fb1280f658137c4e2ec3d437d51f267ae5b047af",
+  "continuation_stages": [
+    "chunk-6",
+    "seal",
+    "launch-once"
+  ],
+  "destination_file_shas_verified": true,
+  "original_train_complete": true,
+  "original_plain_hf_reload": "FAILED_RELOAD",
+  "training_repeated": false,
+  "completed_diagnostics_repeated": false,
+  "full_or_reference_repeated": false,
+  "assets_retransferred": false,
+  "new_native_reload_actual_result_checked": false,
+  "pilot_frozen": false,
+  "second_progress_query": false,
+  "outer_snapshot_retry": 0
+}

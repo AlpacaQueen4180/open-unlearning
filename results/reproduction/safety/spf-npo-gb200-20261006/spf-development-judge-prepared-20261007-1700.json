@@ -1,0 +1,79 @@
+{
+  "status": "PREPARED_PRIVATE_INPUTS_TRANSFERRED_LAUNCH_BLOCKED_BY_APPROVAL_REVIEW",
+  "requested_paid_judge_authorized_by_human": true,
+  "explicit_credential_use_and_external_payload_permission_pending": true,
+  "paid_calls_executed": 0,
+  "launch_executed": false,
+  "source_sha256": "d7d23e1814b51ccd1b64df67080a751ed381c9c61c183328da86c0c98d632d4e",
+  "plan_sha256": "5172862ca2b34f872e6e802bc33f7939bf990d65fa141da3be472463a8c85efa",
+  "packet_sha256": "7183c481e35b8e8bcc3043c81c106128b1e05ff49786dcbeeca7a59d97673bb6",
+  "total": 792,
+  "profile": {
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "max_output_tokens": 4096,
+    "retries": 0,
+    "new_calls": 792,
+    "reused_response_labels": 0,
+    "kinds": {
+      "benign": 350,
+      "conversation": 142,
+      "harmful": 300
+    },
+    "safety_strata": {
+      "safe": 250,
+      "unsafe": 200,
+      "harmful": 100,
+      "benign": 100
+    },
+    "prompt_hashes": {
+      "harmful": "2847ea07bc69b611ba63950a3dcb11970905b8b1f57754c73067e41675a568fa",
+      "benign": "e800dfa717051d573b5c0b6fcf72544e8e22c8171dbf3652b3563ab1907fc02e",
+      "conversation": "eb3b38410a545e4e9a683e5687a38fe325dc53ea6a1a4885aa1402faa79fa8d0"
+    },
+    "rubric_sources": {
+      "src/evals/safety/gpt_judge.py": {
+        "size": 12631,
+        "sha256": "ddfd529d84ab10b4b3cc8054cecfac8fa8abcc4ef718b77a3b5e5d584eec153a"
+      },
+      "src/construction/development_judge.py": {
+        "size": 2942,
+        "sha256": "beb220e096e8aff1e60c15036fbf3d243b80fab32b28e35c43cea912f55c7d47"
+      },
+      "src/construction/conversation_judge.py": {
+        "size": 2115,
+        "sha256": "f0d34059488cc96c4ce6998d9424342e0488fa6427860e4529120415ca38659c"
+      }
+    },
+    "runtime_versions": {
+      "openai": "2.54.0",
+      "pydantic": "2.13.4",
+      "python-dotenv": "1.2.3"
+    },
+    "baseline_plan_sha256": "75fb3a519f339d3e70a30e164b460603b23c4efb4e1695e05896fc21875cdd45",
+    "checkpoint_identity_sha256": "c45e87fc69825b75f5d47345fb3c8502a4c1b4524f9d621411068bf3bc64f3a8",
+    "safety_output_sha256": "de35ee298164afcf49597e5a10cc5300350ff8cae6dbbf55e8db696bd7aa9f36",
+    "conversation_output_sha256": "86a213877b2dfbbc8b5871381bf020e920ce2e0bcbcd0e97e3815ef100e8d072",
+    "pinned_safety_sha256": "2b5696ae06a816b9497559b9702fcd9a0f14eac11f13a37d2621e6470fffcb1d"
+  },
+  "paired_user_prompts_verified": true,
+  "conversation_uses_spf_own_prior_turns": true,
+  "human_blind_review_rows": 50,
+  "human_adjudication_complete": false,
+  "cluster_mapping_verified": false,
+  "external_api_destination_verified": false,
+  "private_payload_and_credentials_not_published": true,
+  "review_rejections": [
+    {
+      "action": "paid Judge launch",
+      "executed": false,
+      "reason": "Reviewer required explicit permission for private SPF prompts/responses to specific external API/model"
+    },
+    {
+      "action": "endpoint inspection using existing credential loader",
+      "executed": false,
+      "reason": "Reviewer applied old heartbeat no safety.env/token-read constraint"
+    }
+  ],
+  "target_gate": "insufficient_evidence"
+}
