@@ -1,0 +1,108 @@
+{
+  "status": "LOCAL_JUDGE_RUNTIME_PACKET_PROFILE_PREFLIGHT_PASS_WAITING_NEW_KEY",
+  "human_choice": "Local Judge with a new dedicated API key",
+  "destination": "https://api.openai.com/v1",
+  "credential_policy": "new_key_memory_only",
+  "key_input_status": "WAITING_FOR_NEW_KEY_LOCAL_MASKED_DIALOG",
+  "local_dialog_pid": 30460,
+  "api_calls_executed": 0,
+  "key_values_read_by_agent": false,
+  "old_h100_safety_env_read": false,
+  "runner_sha256": "542132dabd065fd0bebb4493374666b87c84ac0659b84111483303b889d09618",
+  "dialog_sha256": "6b8f74860cc513dda207c39a5efb03bf7d9e4f8c884dd32a59e58403c04ebd74",
+  "plan_sha256": "099744fd70300953c31c8c2ee947f7e022382439df2115c979b2edab5a13cedb",
+  "packet_sha256": "7183c481e35b8e8bcc3043c81c106128b1e05ff49786dcbeeca7a59d97673bb6",
+  "baseline_plan_sha256": "75fb3a519f339d3e70a30e164b460603b23c4efb4e1695e05896fc21875cdd45",
+  "runtime_freeze_sha256": "9179387eb52954c611ee058ee807fe8336e6ed165dbf3ba26459fb212ea09020",
+  "preflight_stdout_sha256": "401eb141572d5e44ef3f1daa9d9a91378529d6031ca2129d90c7a925d59a6ea1",
+  "preflight_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "rubric_sources": {
+    "src/evals/safety/gpt_judge.py": {
+      "size": 12631,
+      "sha256": "ddfd529d84ab10b4b3cc8054cecfac8fa8abcc4ef718b77a3b5e5d584eec153a"
+    },
+    "src/construction/development_judge.py": {
+      "size": 2942,
+      "sha256": "beb220e096e8aff1e60c15036fbf3d243b80fab32b28e35c43cea912f55c7d47"
+    },
+    "src/construction/conversation_judge.py": {
+      "size": 2115,
+      "sha256": "f0d34059488cc96c4ce6998d9424342e0488fa6427860e4529120415ca38659c"
+    }
+  },
+  "profile": {
+    "total": 792,
+    "new_calls": 792,
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "max_output_tokens": 4096,
+    "retries": 0,
+    "runtime_versions": {
+      "openai": "2.54.0",
+      "pydantic": "2.13.4",
+      "python-dotenv": "1.2.3"
+    },
+    "prompt_hashes": {
+      "harmful": "2847ea07bc69b611ba63950a3dcb11970905b8b1f57754c73067e41675a568fa",
+      "benign": "e800dfa717051d573b5c0b6fcf72544e8e22c8171dbf3652b3563ab1907fc02e",
+      "conversation": "eb3b38410a545e4e9a683e5687a38fe325dc53ea6a1a4885aa1402faa79fa8d0"
+    },
+    "kinds": {
+      "benign": 350,
+      "conversation": 142,
+      "harmful": 300
+    }
+  },
+  "original_packet_and_rubrics_unchanged": true,
+  "local_checks": {
+    "status": "LOCAL_JUDGE_NEW_GUARDS_AND_ERROR_STOP_MOCK_PASS",
+    "negatives_rejected": [
+      "api_base_url",
+      "retries",
+      "new_calls",
+      "credential_policy",
+      "model",
+      "missing_new_masked_key"
+    ],
+    "mock_requests": 1,
+    "real_api_calls": 0,
+    "credential_reads": 0,
+    "model_generation": 0,
+    "error_message_and_body_not_serialized": true,
+    "second_mock_row_not_attempted": true
+  },
+  "human_blind_review_rows": 50,
+  "human_adjudication_complete": false,
+  "cluster_mapping_verified": false,
+  "target_gate": "insufficient_evidence",
+  "private_prompts_responses_and_judgments_not_published": true,
+  "native_reload_monitoring": {
+    "status": "FULL_SNAPSHOT_NOT_OBTAINED_CLUSTER_STATUS_EOF",
+    "last_successful_snapshot_sha256": "e23482a0f0b9d17688e3f1391fe5d76df6990eb45a401aec3b3aa08491c44e6e",
+    "logical_snapshot_queries": 1,
+    "helper_internal_attempts": 2,
+    "outer_retries": 0,
+    "failed_outputs": [
+      {
+        "attempt": 1,
+        "size": 86,
+        "sha256": "2cb72adf0523e67abf31a9d7f2cc4f131c97b97b397ce6b20d882662ba83126f",
+        "encoding": "PowerShell native strings joined LF UTF8",
+        "original_stream_bytes": false
+      },
+      {
+        "attempt": 2,
+        "size": 86,
+        "sha256": "2cb72adf0523e67abf31a9d7f2cc4f131c97b97b397ce6b20d882662ba83126f",
+        "encoding": "PowerShell native strings joined LF UTF8",
+        "original_stream_bytes": false
+      }
+    ],
+    "native_reload_pid": 3889,
+    "native_reload_actual_result": "UNKNOWN",
+    "remote_mutations": 0,
+    "gpu_submissions": 0,
+    "failed_snapshot_source_sha256": "64cf902be2895f006829b1335a39e3494c58df3891fc2402536fd0200eec3085"
+  },
+  "npo_pilot_frozen": false
+}
