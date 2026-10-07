@@ -1,0 +1,322 @@
+{
+  "status": "FAILED_TOKENIZER_CACHE_LOOKUP_BEFORE_NPO_TRAINING",
+  "snapshot_utc": "2026-10-07T03:56:07.461813+00:00",
+  "snapshot_sha256": "168c8083843dae37bc8844619fc5b9b55eabee83f511fa00b6a0724473fbb2dc",
+  "queue_pid": 193,
+  "queue_exited": true,
+  "gpu_idle": true,
+  "completed": [
+    "hydra-compose"
+  ],
+  "hydra_composition_sha256": "0327ee8e27ad04f1b589765b04c4cff3e6b93b706c9b01369144da8155b99036",
+  "failed_stage": "train",
+  "wrapper_pid": 202,
+  "native_child_pid": 270,
+  "returncode": 1,
+  "loaded_parameter_tensors_observed": 291,
+  "npo_training_step_observed": false,
+  "checkpoint_created": false,
+  "runtime_trace_exists": false,
+  "fresh_reload_executed": false,
+  "archive_sha256": "ba0895a93f4615c9aaab988e62c769d54f311c8afe2fa9971536bed26b49f8bd",
+  "export_files": [
+    {
+      "name": "data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/huggingface_hub/constants.py",
+      "remote_path": "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/huggingface_hub/constants.py",
+      "size": 14103,
+      "sha256": "7b846aeb03e6381c6143fe0026df84ef0465d83f43ea41dcc9ad65cfa09ee67c",
+      "local_name": "00-constants.py"
+    },
+    {
+      "name": "data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/huggingface_hub/file_download.py",
+      "remote_path": "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/huggingface_hub/file_download.py",
+      "size": 94562,
+      "sha256": "2ee4e4898858191f67bbcd3667c4ceb3a699cacfecefc5ab69c07e638ab7ca58",
+      "local_name": "01-file_download.py"
+    },
+    {
+      "name": "data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py",
+      "remote_path": "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py",
+      "size": 45679,
+      "sha256": "bbfe4c497c7fa006fb50321adff83e07770a661b676401dc009da6b1d6757539",
+      "local_name": "02-tokenization_auto.py"
+    },
+    {
+      "name": "data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/utils/hub.py",
+      "remote_path": "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/utils/hub.py",
+      "size": 39387,
+      "sha256": "f9ed705661d670f15a5b88840c1bd10f668c9ada2a510e03e74601768cd7a845",
+      "local_name": "03-hub.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/configs/model/Llama-3.1-8B-Instruct.yaml",
+      "remote_path": "/data/spf-development-20261007-r1/repo/configs/model/Llama-3.1-8B-Instruct.yaml",
+      "size": 680,
+      "sha256": "7d3e75bbebc8ca06f05579ff90e1730db88e7982d6c4ff524c55c736b21a10a0",
+      "local_name": "04-Llama-3.1-8B-Instruct.yaml"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/data/__init__.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/data/__init__.py",
+      "size": 3546,
+      "sha256": "66af74ae813f7ae5ec3888232f5db75d69ba7a1f5cdacce181609939e5e2520b",
+      "local_name": "05-__init__.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/data/collators.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/data/collators.py",
+      "size": 2626,
+      "sha256": "b7e821c8175e31387c06729a60ff5287a512b681b10379ea21ac72fbff3e786c",
+      "local_name": "06-collators.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/data/qa.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/data/qa.py",
+      "size": 5220,
+      "sha256": "001ce815fa43887cd2a75cda615fdff74af75eca9b90ddd8f9ab2a251b75a2cb",
+      "local_name": "07-qa.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/data/unlearn.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/data/unlearn.py",
+      "size": 1810,
+      "sha256": "8e9da5e10fdb8ba5df7372b43d9aad299e4bb2d0e907d5466b75ad5f4391a821",
+      "local_name": "08-unlearn.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/data/utils.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/data/utils.py",
+      "size": 8522,
+      "sha256": "e908bcd6d7be19f3287d146fbe9834ed67b2bd97e4fbecac1c074bbd04005619",
+      "local_name": "09-utils.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/model/__init__.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/model/__init__.py",
+      "size": 4062,
+      "sha256": "894e36a8471b3346ef672db896f51f40000270167ed70b955cec80351534a252",
+      "local_name": "10-__init__.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/train.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/train.py",
+      "size": 1965,
+      "sha256": "d5a69cd715409406eeb027daa9c02bf36243a20e0a790c5b7571c541c5573de6",
+      "local_name": "11-train.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/trainer/__init__.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/trainer/__init__.py",
+      "size": 3224,
+      "sha256": "714b61fea7afc2248739800baf9e2c76feee5111797ed83f49517a70187e1a5a",
+      "local_name": "12-__init__.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/trainer/base.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/trainer/base.py",
+      "size": 2520,
+      "sha256": "7ad1b4631069d6689ed7c32fca843d45467dd3273fe32976c6ea1a951c7122c9",
+      "local_name": "13-base.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/trainer/unlearn/base.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/trainer/unlearn/base.py",
+      "size": 7626,
+      "sha256": "fbd938156f4bd86a33582d18e2363de0fb53a72788904a6c6a4bc803486a07a6",
+      "local_name": "14-base.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/trainer/unlearn/grad_diff.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/trainer/unlearn/grad_diff.py",
+      "size": 2370,
+      "sha256": "6fe2ae02f62664a5a43a270c7b30e758daba5d703e4408adb67c3c5323f872ea",
+      "local_name": "15-grad_diff.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/trainer/unlearn/npo.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/trainer/unlearn/npo.py",
+      "size": 1167,
+      "sha256": "9115e1af39b1992b72855cbcf69f1f49eb83a03f00182d12143e392abe37040e",
+      "local_name": "16-npo.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/trainer/utils.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/trainer/utils.py",
+      "size": 4825,
+      "sha256": "55ac9337111ffe1be0be0b4ab4529ae1471dc19ecda2dee366ac9e10748bf776",
+      "local_name": "17-utils.py"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/code/spf_npo_native_probe.py",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/code/spf_npo_native_probe.py",
+      "size": 12279,
+      "sha256": "92edf63b14296d591e8e7cae4036e37e635280829e0a358ac873ac0a3e6ab5c1",
+      "local_name": "18-spf_npo_native_probe.py"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/code/spf_npo_runtime.py",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/code/spf_npo_runtime.py",
+      "size": 3065,
+      "sha256": "974c6eef65ff74df7084c543e96cc4f82adfcb3996a2ad90d7295952f495ed5c",
+      "local_name": "19-spf_npo_runtime.py"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/code/verify_spf_npo_smoke_reload.py",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/code/verify_spf_npo_smoke_reload.py",
+      "size": 5014,
+      "sha256": "9f5886e3226f335f6e6d6a694f8623cf73965e8ed5ec6ef7bb7fb8d39ecf77ee",
+      "local_name": "20-verify_spf_npo_smoke_reload.py"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/commands.private.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/commands.private.json",
+      "size": 1418,
+      "sha256": "b449f6353b67bd6c3693c2284e38c84782dffab3ea25d733a0122749c88df7fc",
+      "local_name": "21-commands.private.json"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/configs/model/Llama-3.1-8B-Instruct.yaml",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/configs/model/Llama-3.1-8B-Instruct.yaml",
+      "size": 680,
+      "sha256": "7d3e75bbebc8ca06f05579ff90e1730db88e7982d6c4ff524c55c736b21a10a0",
+      "local_name": "22-Llama-3.1-8B-Instruct.yaml"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/configs/spf_npo_smoke.yaml",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/configs/spf_npo_smoke.yaml",
+      "size": 2964,
+      "sha256": "2c753b5f656820ec7dffddfc57170845daf02a078462e18d98c793e3d9a1288b",
+      "local_name": "23-spf_npo_smoke.yaml"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/contract.private.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/contract.private.json",
+      "size": 3451,
+      "sha256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7",
+      "local_name": "24-contract.private.json"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/deepspeed.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/deepspeed.json",
+      "size": 721,
+      "sha256": "1da070212ed44bdc705a4988b9ff500da2178f9881abac7882978b487a8499f8",
+      "local_name": "25-deepspeed.json"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/package.private.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/package.private.json",
+      "size": 2356,
+      "sha256": "cbad72d7386ca83904b5a003e3bcf5b378f44d1920b452dd0bc29369bff5fc8a",
+      "local_name": "26-package.private.json"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/initial/hydra-compose.private.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/initial/hydra-compose.private.json",
+      "size": 3634,
+      "sha256": "0327ee8e27ad04f1b589765b04c4cff3e6b93b706c9b01369144da8155b99036",
+      "local_name": "27-hydra-compose.private.json"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/initial/hydra-compose.raw.log",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/initial/hydra-compose.raw.log",
+      "size": 87,
+      "sha256": "4c910ce244de1997381e6fae1fc733229a313d152a991149e8d30257b776bc92",
+      "local_name": "28-hydra-compose.raw.log"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/initial/status.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/initial/status.json",
+      "size": 4748,
+      "sha256": "e473acc9a792eaaab8655093a0d774d001b131a2be68b6d7a69aced736835349",
+      "local_name": "29-status.json"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/initial/train.raw.log",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/initial/train.raw.log",
+      "size": 14024,
+      "sha256": "fc26363a91a35358a432081d4cf6ec187a45bb140fa271d204a30ea03d0a4497",
+      "local_name": "30-train.raw.log"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/run_spf_npo_smoke_api_r2_queue.py",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/run_spf_npo_smoke_api_r2_queue.py",
+      "size": 22246,
+      "sha256": "eedc4dfd16269db9fa84ef681ae289f86392c85c45ff7d0cedfda24bd6d17735",
+      "local_name": "31-run_spf_npo_smoke_api_r2_queue.py"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/smoke-launch-1140.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-launch-1140.json",
+      "size": 1481,
+      "sha256": "19f2fe0c9b2ff0a4e31f7206e0dcd1d6331953c6af314cf2cabbb95e18265fe9",
+      "local_name": "32-smoke-launch-1140.json"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/smoke-launch-1140.raw.log",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-launch-1140.raw.log",
+      "size": 623,
+      "sha256": "77f77d795ce413851d80071999ddabffd796060bc7025dc609fbc6cf58013b95",
+      "local_name": "33-smoke-launch-1140.raw.log"
+    }
+  ],
+  "raw_log_sha256": "fc26363a91a35358a432081d4cf6ec187a45bb140fa271d204a30ea03d0a4497",
+  "failure_status_sha256": "e473acc9a792eaaab8655093a0d774d001b131a2be68b6d7a69aced736835349",
+  "root_cause": "Native get_tokenizer passes HF_HOME directly as cache_dir; fixed pinned snapshot exists only under HF_HOME/hub.",
+  "cache_path_metadata": [
+    {
+      "cache_dir": "/data/smart-mfg/jimmy-lin/hf_cache",
+      "snapshot_exists": false,
+      "files": []
+    },
+    {
+      "cache_dir": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+      "snapshot_exists": true,
+      "files": [
+        {
+          "name": "config.json",
+          "size": 855
+        },
+        {
+          "name": "generation_config.json",
+          "size": 184
+        },
+        {
+          "name": "model-00001-of-00004.safetensors",
+          "size": 4976698672
+        },
+        {
+          "name": "model-00002-of-00004.safetensors",
+          "size": 4999802720
+        },
+        {
+          "name": "model-00003-of-00004.safetensors",
+          "size": 4915916176
+        },
+        {
+          "name": "model-00004-of-00004.safetensors",
+          "size": 1168138808
+        },
+        {
+          "name": "model.safetensors.index.json",
+          "size": 23950
+        },
+        {
+          "name": "special_tokens_map.json",
+          "size": 296
+        },
+        {
+          "name": "tokenizer.json",
+          "size": 9085657
+        },
+        {
+          "name": "tokenizer_config.json",
+          "size": 55351
+        }
+      ]
+    }
+  ],
+  "immutable_export_weights_read": false,
+  "full_reference_retrained": false,
+  "development_evaluations_repeated": 0,
+  "target_gate_status": "insufficient_evidence"
+}

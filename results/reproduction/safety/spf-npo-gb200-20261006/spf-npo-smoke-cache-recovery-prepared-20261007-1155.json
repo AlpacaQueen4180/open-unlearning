@@ -1,0 +1,71 @@
+{
+  "status": "PASS_PRESERVED_FAILURE_AND_ENVIRONMENT_GUARDS_ONLY",
+  "source_sha256": "8e9ee2c3aebf346664684f8ced0597619969e2f91970ce06ce8434da87bbb75a",
+  "diagnostic_source_sha256": "3b412c8480280a64a42f889eaf081ae4692038e3914cb003b1b0eb3ee383e1a2",
+  "negative_cases": [
+    "wrong-status",
+    "wrong-pid",
+    "wrong-completed",
+    "wrong-stage",
+    "completed-training-command",
+    "wrong-failure-log",
+    "existing-checkpoint",
+    "missing-hydra-pass",
+    "unexpected-original-cache",
+    "online-environment",
+    "unverified-diagnostic"
+  ],
+  "actual_failed_state_sha256": "e473acc9a792eaaab8655093a0d774d001b131a2be68b6d7a69aced736835349",
+  "reused_actual_hydra_sha256": "0327ee8e27ad04f1b589765b04c4cff3e6b93b706c9b01369144da8155b99036",
+  "environment_changes": {
+    "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+    "HF_HUB_CACHE": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+    "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1"
+  },
+  "original_native_commands_unchanged": true,
+  "original_package_unchanged": true,
+  "subprocesses_launched": 0,
+  "weights_read": false,
+  "cuda_executed": false,
+  "npo_executed": false,
+  "actual_cache_diagnostic_result_verified": false,
+  "remote_deployed": false,
+  "training_submitted": false,
+  "completed_old_static_cases_repeated": 0,
+  "diagnostic_transport": {
+    "status": "TRANSPORT_RESPONSE_INCOMPLETE_RESULT_UNKNOWN",
+    "attempts": [
+      {
+        "name": "smoke-tokenizer-cache-diagnostic-1155.json.failed-attempt-1.txt",
+        "size": 49,
+        "sha256": "c3fc41cf8231da3cff4976dfab4f0354b5ae58d45e4dea6edfbd4b36769624a3"
+      },
+      {
+        "name": "smoke-tokenizer-cache-diagnostic-1155.json.failed-attempt-2.txt",
+        "size": 279,
+        "sha256": "318a41536b0963ab164b44fc8a65a6a87779024728cde25583e95e7acc22b682"
+      }
+    ],
+    "remote_cpu_diagnostic_result_verified": false,
+    "weights_read_by_diagnostic": false,
+    "native_smoke_loaded_tensors": 291,
+    "native_smoke_checkpoint_created": false,
+    "original_stderr_stream_bytes": false,
+    "outer_retry": false
+  },
+  "planned_remote_launch": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-cache-recovery-launch-1155.json",
+  "planned_run": "/data/spf-npo-smoke-20261007-r1/runs/cache-recovery-1155",
+  "fresh_snapshot_required": true,
+  "original_failed_run_preserved": true,
+  "hydra_compose_repeated": false,
+  "sequence": [
+    "CPU native cache diagnostic",
+    "unfinished native train",
+    "fresh process reload"
+  ],
+  "new_controller_requires_actual_diagnostic_before_training": true,
+  "checkpoint_present_blocks_training": true,
+  "actual_npo_pass": false,
+  "pilot_candidates_frozen": false,
+  "external_judge_executed": false
+}
