@@ -1,0 +1,161 @@
+{
+  "status": "FAILED_TRAINING_ARGUMENTS_API_BEFORE_NPO_STEPS",
+  "snapshot_utc": "2026-10-07T04:26:02.827826+00:00",
+  "private_snapshot_sha256": "d50c26a9b12ad1c22c386bd36d9ecdbf48254964bdde5b3e750e439ec6a32489",
+  "queue_pid": 824,
+  "process_exited": true,
+  "gpu": {
+    "returncode": 0,
+    "stdout": "3 MiB, 0 %\n",
+    "stderr": ""
+  },
+  "compute_processes": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "completed": [
+    "cache-diagnostic"
+  ],
+  "cache_diagnostic": {
+    "status": "NATIVE_OFFLINE_TOKENIZER_CACHE_MAPPING_PASS",
+    "native_source_sha256": "894e36a8471b3346ef672db896f51f40000270167ed70b955cec80351534a252",
+    "cache_dir": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+    "hf_hub_cache": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+    "model_id": "meta-llama/Llama-3.1-8B-Instruct",
+    "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "vocab_size": 128256,
+    "eos_token_id": 128009,
+    "pad_token_id": 128009,
+    "old_cache_path_rejected": true,
+    "exact_vocab_and_template": true,
+    "cuda_initialized": false,
+    "weights_read": false,
+    "generation_calls": 0,
+    "npo_training_executed": false
+  },
+  "train": {
+    "name": "train",
+    "command": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--standalone",
+      "--nproc_per_node=1",
+      "/data/spf-npo-smoke-20261007-r1/code/spf_npo_native_probe.py",
+      "--config-path",
+      "/data/spf-npo-smoke-20261007-r1/configs",
+      "--config-name",
+      "spf_npo_smoke"
+    ],
+    "cwd": "/data/spf-development-20261007-r1/repo",
+    "environment_overrides": {
+      "SPF_NPO_SMOKE_CONTRACT": "/data/spf-npo-smoke-20261007-r1/contract.private.json",
+      "SPF_NPO_SMOKE_CONTRACT_SHA256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7",
+      "HF_HUB_OFFLINE": "1",
+      "HF_DATASETS_OFFLINE": "1",
+      "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+      "TOKENIZERS_PARALLELISM": "false",
+      "WANDB_MODE": "disabled",
+      "HYDRA_FULL_ERROR": "1",
+      "HF_HUB_CACHE": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+      "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1",
+      "PYTHONPATH": "/data/spf-development-20261007-r1/repo/src"
+    },
+    "log": "/data/spf-npo-smoke-20261007-r1/runs/cache-recovery-1155/train.raw.log",
+    "started_at": 1791346401.7508066,
+    "gpu_before_stage": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "process_pid": 961,
+    "returncode": 1,
+    "finished_at": 1791346419.3798103,
+    "raw_log_sha256": "abc17f22c5fac13848dde91a7fe64b2c3ebd5a5a0019ad1f33e6f2d4a271db8e"
+  },
+  "failed_status_sha256": "f214eb901e4fbfdc7b638ca586463ded21680e41e3e8493d865dae3e07f5ba72",
+  "train_log_sha256": "abc17f22c5fac13848dde91a7fe64b2c3ebd5a5a0019ad1f33e6f2d4a271db8e",
+  "cache_diagnostic_raw_sha256": "360de69cf844afa0807c1b74e904b6533890a0996c386dedf64549ec34097096",
+  "raw_evidence": [
+    "smoke-training-args-failure-1225/train.raw.txt",
+    "smoke-training-args-failure-1225/cache-diagnostic.raw.txt"
+  ],
+  "immutable_archive_sha256": "d2fe07791e594820a10173e913d199e61db520aa0afc8e780a12e8791906d812",
+  "exported_files": [
+    {
+      "name": "data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/modeling_utils.py",
+      "remote_path": "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/modeling_utils.py",
+      "size": 253486,
+      "sha256": "b8467e1ada952862d2e4d76632475ac2f9fa198121d0e1ce64fa393ea3773e16"
+    },
+    {
+      "name": "data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/trainer.py",
+      "remote_path": "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/trainer.py",
+      "size": 215518,
+      "sha256": "e680536f179b7e2000188a671c0317c7fdce72cd4ceaf91dd72c2032f8c828d0"
+    },
+    {
+      "name": "data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/training_args.py",
+      "remote_path": "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/training_args.py",
+      "size": 140158,
+      "sha256": "67e63d9b8a68a1547c0f3d17eac51034592da669d01cf03b4471b0b77f22a756"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/cache-recovery-1155/cache-diagnostic.raw.log",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/cache-recovery-1155/cache-diagnostic.raw.log",
+      "size": 609,
+      "sha256": "360de69cf844afa0807c1b74e904b6533890a0996c386dedf64549ec34097096"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/cache-recovery-1155/status.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/cache-recovery-1155/status.json",
+      "size": 5081,
+      "sha256": "f214eb901e4fbfdc7b638ca586463ded21680e41e3e8493d865dae3e07f5ba72"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/cache-recovery-1155/train.raw.log",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/cache-recovery-1155/train.raw.log",
+      "size": 5614,
+      "sha256": "abc17f22c5fac13848dde91a7fe64b2c3ebd5a5a0019ad1f33e6f2d4a271db8e"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/run_spf_npo_smoke_cache_recovery_queue.py",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/run_spf_npo_smoke_cache_recovery_queue.py",
+      "size": 11946,
+      "sha256": "8e9ee2c3aebf346664684f8ced0597619969e2f91970ce06ce8434da87bbb75a"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/smoke-cache-recovery-launch-1155.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-cache-recovery-launch-1155.json",
+      "size": 1042,
+      "sha256": "a01853a71ec4b8836663d4e5e83fb237dcbfd12455551c2e32d5d7a2f05cb941"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/smoke-cache-recovery-launch-1155.raw.log",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-cache-recovery-launch-1155.raw.log",
+      "size": 647,
+      "sha256": "df40679997f2aeb9ec02083bee111c51683a9381c34314016717a4b810102fef"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_tokenizer_cache.py",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_tokenizer_cache.py",
+      "size": 2296,
+      "sha256": "3b412c8480280a64a42f889eaf081ae4692038e3914cb003b1b0eb3ee383e1a2"
+    }
+  ],
+  "export_weights_read": false,
+  "train_loaded_tensors": 291,
+  "train_loaded_forget_rows": 40,
+  "train_loaded_retain_rows": 3800,
+  "trainer_instantiated": false,
+  "npo_step_observed": false,
+  "checkpoint_exists": false,
+  "fresh_reload_executed": false,
+  "original_hydra_repeated": false,
+  "completed_development_repeated": false,
+  "full_and_reference_retrained": false,
+  "failure": "TrainingArguments.__init__ unexpected save_safetensors keyword",
+  "target_gate": "insufficient_evidence",
+  "pilot_candidates_frozen": false
+}

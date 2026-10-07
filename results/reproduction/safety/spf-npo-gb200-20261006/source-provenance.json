@@ -264,8 +264,8 @@
     "raw_sha256": "8a8dabc5b71acaee8e60263e7e87ad459273fe834f3e0b9a2443f6faaf372d97",
     "scope": "projection arithmetic and state isolation only; not all training gradient comparisons"
   },
-  "latest_snapshot_utc": "2026-10-07T04:11:09.926620+00:00",
-  "private_snapshot_sha256": "50057139817d72bb239d9fd744972d7b198f3c6d069cfabe281493de9024b3c0",
+  "latest_snapshot_utc": "2026-10-07T04:26:02.827826+00:00",
+  "private_snapshot_sha256": "d50c26a9b12ad1c22c386bd36d9ecdbf48254964bdde5b3e750e439ec6a32489",
   "full_completion_evidence": "r4-completed-evidence-20261007.json",
   "development_cpu_preparation_evidence": "ifbench-cpu-completed-20261007.json",
   "development_cpu_fixture_evidence": "ifbench-cpu-fixtures-20261007.json",
@@ -329,7 +329,7 @@
   "development_queue_pid": 47443,
   "development_failure_evidence": "development-failure-20261007-0809.json",
   "development_recovery_evidence": "development-api-recovery-20261007-0809.json",
-  "latest_snapshot_sha256": "a01217963b58d2bd4a112bac38130b0f47d3d26127ab08c3d4cde12824898635",
+  "latest_snapshot_sha256": "d50c26a9b12ad1c22c386bd36d9ecdbf48254964bdde5b3e750e439ec6a32489",
   "development_path_recovery_evidence": "development-path-recovery-20261007-0825.json",
   "development_path_failure_evidence": "development-path-failure-20261007-0825.json",
   "development_actual_cuda_acceptance": "DEVELOPMENT_CUDA_EXECUTORS_PASS",
@@ -348,7 +348,13 @@
   "npo_smoke_cache_recovery_deployed": true,
   "npo_smoke_cache_recovery_submitted": true,
   "npo_smoke_cache_recovery_queue_pid": 824,
-  "npo_smoke_cache_recovery_runtime_status": "SUBMITTED_RESULT_NOT_CHECKED",
+  "npo_smoke_cache_recovery_runtime_status": "FAILED_TRAINING_ARGUMENTS_API_BEFORE_NPO_STEPS",
   "npo_smoke_cache_recovery_controller_sha256": "8e9ee2c3aebf346664684f8ced0597619969e2f91970ce06ce8434da87bbb75a",
-  "npo_smoke_cache_recovery_actual_cpu_result_verified": false
+  "npo_smoke_cache_recovery_actual_cpu_result_verified": true,
+  "npo_smoke_cache_recovery_failure_evidence": "spf-npo-smoke-training-args-failure-20261007-1225.json",
+  "npo_smoke_training_args_recovery_evidence": "spf-npo-smoke-training-args-recovery-prepared-20261007-1225.json",
+  "npo_smoke_training_args_recovery_runtime_status": "SOURCE_PREPARED_NOT_DEPLOYED_OR_LAUNCHED",
+  "npo_smoke_training_args_recovery_deployed": false,
+  "npo_smoke_training_args_recovery_submitted": false,
+  "npo_smoke_training_args_actual_api_diagnostic_verified": false
 }

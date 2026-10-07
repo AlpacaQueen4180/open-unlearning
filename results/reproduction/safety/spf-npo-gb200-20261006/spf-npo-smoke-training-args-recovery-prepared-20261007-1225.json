@@ -1,0 +1,77 @@
+{
+  "status": "SOURCE_PREPARED_UNDEPLOYED",
+  "controller_sha256": "341f2906434f9a7f4203cc99a672482e84d060487c9b1866ad78e1f062a84f97",
+  "diagnostic_sha256": "c840357a27581a11aab3d43af2f00086c213bb460d53dbfc07edee34f250c841",
+  "api_entrypoint_sha256": "430feb8b97a3fb0dea5a9f293b50394300e0a947d5a0e2c0875f5c716e2fae52",
+  "unchanged_function_asts": [
+    "digest",
+    "exited",
+    "recovered_environment",
+    "verify_cache_diagnostic"
+  ],
+  "original_package_changed": false,
+  "hydra_composition_repeated": false,
+  "cache_diagnostic_repeated": false,
+  "actual_api_diagnostic_result": "UNKNOWN_INCOMPLETE_RUNAI_RESPONSE",
+  "subprocesses_launched": 0,
+  "cuda_initialized": false,
+  "npo_training_executed": false,
+  "schema": {
+    "status": "PASS_NEW_RECOVERY_SCHEMA_ONLY",
+    "source_sha256": "341f2906434f9a7f4203cc99a672482e84d060487c9b1866ad78e1f062a84f97",
+    "negative_cases": [
+      "nonfailed",
+      "wrong-pid",
+      "completed-train",
+      "existing-checkpoint",
+      "missing-hydra",
+      "missing-actual-cache-proof",
+      "wrong-mode",
+      "wrong-preserved-failure-log",
+      "missing-new-actual-api-proof"
+    ],
+    "subprocesses_launched": 0,
+    "weights_read": false,
+    "cuda_initialized": false,
+    "npo_training_executed": false,
+    "actual_api_diagnostic_verified": false,
+    "old_completed_cases_repeated": false
+  },
+  "diagnostic_transport_failure": {
+    "status": "ACTUAL_API_DIAGNOSTIC_RESULT_UNKNOWN",
+    "helper_max_attempts": 2,
+    "outer_retry": 0,
+    "cli_exit_code": 0,
+    "incomplete_response": true,
+    "capture": "native strings joined LF and encoded UTF8; not original stream bytes",
+    "npo_training_requested": false,
+    "progress_snapshot": false
+  },
+  "diagnostic_failed_capture_sha256": [
+    "c4545e7d6188b67fc36cc1ad7b444eaab6c7bd95a79012070191ac3acffdc68d",
+    "c4545e7d6188b67fc36cc1ad7b444eaab6c7bd95a79012070191ac3acffdc68d"
+  ],
+  "planned_run": "/data/spf-npo-smoke-20261007-r1/runs/training-args-recovery-1225",
+  "planned_launch": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-training-args-recovery-launch-1225.json",
+  "package_sha256": "cbad72d7386ca83904b5a003e3bcf5b378f44d1920b452dd0bc29369bff5fc8a",
+  "contract_sha256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7",
+  "serialization_source_bound_mandatory_safetensors": true,
+  "installed_training_arguments_ast_unsupported_fields": [
+    "save_safetensors"
+  ],
+  "only_removed_keyword_value": true,
+  "config_changed": false,
+  "native_sources_changed": false,
+  "training_arithmetic_changed": false,
+  "model_precision_changed": false,
+  "weights_read": false,
+  "remote_deployed": false,
+  "remote_launched": false,
+  "actual_npo_training_pass": false,
+  "fresh_reload_verified": false,
+  "repair_diagnostic_required_before_train": true,
+  "successful_cache_stage_reused": true,
+  "successful_hydra_stage_reused": true,
+  "completed_static_cases_repeated": false,
+  "pilot_candidates_frozen": false
+}
