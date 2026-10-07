@@ -1,0 +1,243 @@
+{
+  "status": "API_RECOVERY_SUBMITTED_RESULT_NOT_CHECKED",
+  "pid": 47375,
+  "submitted_at_utc": "2026-10-07T00:19:43.091590+00:00",
+  "launch": {
+    "status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "pid": 47375,
+    "command": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-development-20261007-r1/validation-code/run_spf_development_recovery_queue.py",
+      "--controller-sha256",
+      "46252ad177ae1ef8d77f328700e919094a9df09538037a9e288739e83c0349ad",
+      "--snapshot",
+      "/data/spf-development-20261007-r1/validation-code/r4-snapshot-0809.private.json",
+      "--snapshot-sha256",
+      "50057139817d72bb239d9fd744972d7b198f3c6d069cfabe281493de9024b3c0"
+    ],
+    "cwd": "/data/spf-development-20261007-r1/repo",
+    "started_at": 1791332383.09159,
+    "log": "/data/spf-development-20261007-r1/validation-code/development-recovery-launch-0809.raw.log",
+    "parent_failed_pid": 46851,
+    "completed_stages_repeated": [],
+    "training_executed_by_launcher": false,
+    "external_judge_executed": false
+  },
+  "prior_failure": "development-failure-20261007-0809.json",
+  "prepared_source": {
+    "status": "PREPARED_API_RECOVERY_NOT_DEPLOYED_OR_LAUNCHED",
+    "parent_controller_sha256": "5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478",
+    "parent_guard_sha256": "d33d8b8d24f089112f74c4fe18adbb647c4e78b4e3bfecfd35bf3bce279d1ff6",
+    "parent_adapter_audit_sha256": "ffb402da9ab4e390104f69bf69d060f169dc2cfb6a3978d1dcf0a3bb47a8013c",
+    "adapter_audit_sha256": "71c3c240ab6418a140fb34dca9fb2892ba61f079c9a7f46c0c3806c15dc963de",
+    "controller_sha256": "46252ad177ae1ef8d77f328700e919094a9df09538037a9e288739e83c0349ad",
+    "guard_sha256": "64316b56536b77ee1aa11994c5c3aaf42aa01c61133178c4fcc35e5efe06a41f",
+    "helper_sha256": "7e729af218a2b5ffcc4584acde22fa881f8499e2415a8bdbb33dfd3cfa1b5c77",
+    "failed_evidence_archive_sha256": "bca2ce33d478839c7df27c3a24bf00d4ecb42bb0c5a7b71b578910cd60e5d094",
+    "failed_run_status_sha256": "5f7c3d86378538d5888ddca2a4ac7dd15874e30b61ca9f394ad98f556560b1f3",
+    "completed_stages": [],
+    "restored_adapter_sources_after_inverse_edits": true,
+    "preserved_validator_functions": [
+      "validate_dependencies",
+      "validate_cuda",
+      "validate_metadata",
+      "validate_rows",
+      "plan",
+      "environment"
+    ],
+    "subprocesses_launched": 0,
+    "gpu_evaluation_run": false,
+    "target_gate_evaluated": false
+  },
+  "plan_ast_equal_after_inverse_adapter_directory_edit": true,
+  "snapshot_sha256": "50057139817d72bb239d9fd744972d7b198f3c6d069cfabe281493de9024b3c0",
+  "cpu_resolution": {
+    "status": "ACTUAL_INSTALLED_CPU_CONFIG_RESOLUTION_ONLY",
+    "results": [
+      {
+        "cap": 200,
+        "do_sample": false,
+        "num_beams": 1,
+        "use_cache": true,
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      {
+        "cap": 512,
+        "do_sample": false,
+        "num_beams": 1,
+        "use_cache": true,
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      {
+        "cap": 2048,
+        "do_sample": false,
+        "num_beams": 1,
+        "use_cache": true,
+        "temperature": 1.0,
+        "top_p": 1.0
+      },
+      {
+        "cap": 1024,
+        "do_sample": false,
+        "num_beams": 1,
+        "use_cache": true,
+        "temperature": 1.0,
+        "top_p": 1.0
+      }
+    ],
+    "torch_cuda_initialized": false,
+    "weights_read": false,
+    "generations_executed": 0
+  },
+  "cpu_bound_source_guard": {
+    "status": "ACTUAL_INSTALLED_CPU_SOURCE_GUARD_AND_CONFIG_ONLY",
+    "helper_sha256": "7e729af218a2b5ffcc4584acde22fa881f8499e2415a8bdbb33dfd3cfa1b5c77",
+    "positive_cap": 200,
+    "negative_cases": [
+      {
+        "case": "inherited-forced-eos",
+        "error": "Checkpoint generation defaults would change the explicit profile"
+      },
+      {
+        "case": "sampling-enabled",
+        "error": "Original greedy cached generation profile required"
+      }
+    ],
+    "torch_cuda_initialized": false,
+    "weights_read": false,
+    "generations_executed": 0,
+    "private_receipt_write_intercepted_in_memory": true
+  },
+  "cpu_scope": "Actual installed GenerationConfig resolution only; private receipt write intercepted in memory, no CUDA or weights/generation",
+  "package_files_sha256": {
+    "prepared.private.json": "15f7159be8190a47ab0591fac80001928267fcfce78c0023922c5dc081c4e69e",
+    "run_spf_development_recovery_guards.py": "64316b56536b77ee1aa11994c5c3aaf42aa01c61133178c4fcc35e5efe06a41f",
+    "run_spf_development_recovery_queue.py": "46252ad177ae1ef8d77f328700e919094a9df09538037a9e288739e83c0349ad",
+    "adapter-generation-api-r2\\adapter-audit.json": "71c3c240ab6418a140fb34dca9fb2892ba61f079c9a7f46c0c3806c15dc963de",
+    "adapter-generation-api-r2\\code\\evaluate_construction_baseline.py": "dd41d08f0d8ec0160a85deb8d087b42cbc1d3cea277b3673d340d414ce6b77cb",
+    "adapter-generation-api-r2\\code\\evaluate_development_knowledge.py": "3a6399f5a65904a39d93d301ff48dfd02d675d667cb82ddcccafbdd9ea3fc38c",
+    "adapter-generation-api-r2\\code\\generate_development.py": "cf1c39e2158f7b35a65f2e3a0f2cf3effc9734e6d8a4c6656f4afdb7fe077811",
+    "adapter-generation-api-r2\\code\\generate_development_conversation.py": "474a87199577750dbecaac6706312d34f8766776e51b326d069bbbde505d5d2b",
+    "adapter-generation-api-r2\\code\\score_development_ifbench.py": "c590e30aff720c6e747dc3c7fee946b76f83470c6e82078057ef7d69e2517c1d",
+    "adapter-generation-api-r2\\code\\spf_development_generation.py": "7e729af218a2b5ffcc4584acde22fa881f8499e2415a8bdbb33dfd3cfa1b5c77"
+  },
+  "deployment_bundle_sha256": "8849329d4f480a3cecad6643c0a4874a48a835fd47d626f44b55ee1a0af734bc",
+  "deployment_capture_kind": "PowerShell native strings joined LF and saved UTF8; not original stdout/stderr stream bytes",
+  "failed_chunk": 3,
+  "failed_chunk_returncode": 1,
+  "failed_chunk_capture_sha256": "318a41536b0963ab164b44fc8a65a6a87779024728cde25583e95e7acc22b682",
+  "artifact_check_sha256": "f1b4636d88cfa2ff6137c9e4c6f5d10d6a0e2e4bbb0792b7b3627bdbf2eed21a",
+  "artifact_check_verified_existing_chunks": [
+    0,
+    1,
+    2
+  ],
+  "completed_chunks_repeated": false,
+  "deployment_receipts": [
+    {
+      "tag": "development-recovery-deployment-20261007-0809",
+      "stage": "bundle-chunk-0",
+      "returncode": 0,
+      "capture_sha256": "7a55449fecd6249c67a33c19a2d62790cc7976a4bf3ae42d3655cee202364011"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809",
+      "stage": "bundle-chunk-1",
+      "returncode": 0,
+      "capture_sha256": "87f169cd02fea5fa625929091bd1ad2386a1623636649a7f98db3382bca69bab"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809",
+      "stage": "bundle-chunk-2",
+      "returncode": 0,
+      "capture_sha256": "7affbb1703fd4fcb5bfa6ff2ed9b757c374b2565127b0d52b0520b3ed57972c4"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809",
+      "stage": "bundle-chunk-3",
+      "returncode": 1,
+      "capture_sha256": "318a41536b0963ab164b44fc8a65a6a87779024728cde25583e95e7acc22b682"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809",
+      "stage": "preflight",
+      "returncode": 0,
+      "capture_sha256": "1b875d204cd4cbcd82bfdb07760283d578315da51f84662fce1830945bac7d2d"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809-r2",
+      "stage": "bundle-chunk-3",
+      "returncode": 0,
+      "capture_sha256": "d99056d47eda8dd13a06088c1d1dea1b760983418ecaf148ea233a10010b631f"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809-r2",
+      "stage": "bundle-chunk-4",
+      "returncode": 0,
+      "capture_sha256": "0eb12d4a07ae965424d9c3d233bbe68fe0601183de049596ee62dd63225aec10"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809-r2",
+      "stage": "bundle-chunk-5",
+      "returncode": 0,
+      "capture_sha256": "d32ae89ffae1e2637194008978e3544a83c3cf105af084af08787c11e634efb0"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809-r2",
+      "stage": "bundle-chunk-6",
+      "returncode": 0,
+      "capture_sha256": "248d7e2e935340053c95223cafc6f657bf50e0e4768906b7b29cbc24012cceab"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809-r2",
+      "stage": "bundle-chunk-7",
+      "returncode": 0,
+      "capture_sha256": "20f9eb86757213104ad64d5cf54994f7266cd0b84d734710f1ce049c8d516eb2"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809-r2",
+      "stage": "bundle-chunk-8",
+      "returncode": 0,
+      "capture_sha256": "8085389efe8a6b48578aa0f1f1becb38bc711703b5e62468e4276c9cfe4ba3f3"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809-r2",
+      "stage": "bundle-chunk-9",
+      "returncode": 0,
+      "capture_sha256": "d308e07e8e05a580842e2d5bea8ea44c09301288fedee701f4fc03c97d498ac6"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809-r2",
+      "stage": "bundle-seal",
+      "returncode": 0,
+      "capture_sha256": "f4943141c316e4530008d7e7290f607c535d96f9406e904527faab90628c018a"
+    },
+    {
+      "tag": "development-recovery-deployment-20261007-0809-r2",
+      "stage": "launch-once",
+      "returncode": 0,
+      "capture_sha256": "235f9c696fd5cd23219bc5c427f19e4d88e4eb9a7d97177745137f395458773d"
+    }
+  ],
+  "post_launch_progress_queries": 0,
+  "actual_cuda_acceptance": "not_checked_after_submission",
+  "target_gate_status": "insufficient_evidence",
+  "npo_started": false,
+  "external_judge_calls": 0,
+  "old_failed_run_preserved": true,
+  "cpu_diagnostic_initial_failure": {
+    "error": "Container default Python has no transformers; corrected to original isolated venv",
+    "capture_sha256": "8117efdfeeb59eaa82fee63451c57537a11ec8bfdd9500c36e87bf0652e90ed1",
+    "diagnostic_source_sha256": "e2d42255c0545657234bce49991c131dfabb3ae115d12d4721bae81389624b29"
+  },
+  "local_preparation_failure": {
+    "error": "Exact edit count expected 2, actual 3; no output directory or remote action",
+    "metadata_sha256": "1d43676afaf79274a987a3846dc49f78df137b597114f0f11c9c68fa477099e2",
+    "original_stderr_stream_captured": false
+  },
+  "previous_prepared_source_preserved": true,
+  "smoke_consumer": "Original sealed smoke package preserved. Existing consumer binds original adapter audit; bind the corrected acceptance/audit explicitly after actual CUDA pass before smoke launch.",
+  "next_snapshot_source_sha256": "d6579891067851a152f1b4a5cbc7e7358f750663ca4d85784a6d847119ad7465"
+}

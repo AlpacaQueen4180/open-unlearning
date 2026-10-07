@@ -1,0 +1,141 @@
+{
+  "status": "FAILED",
+  "pid": 46851,
+  "started_at": 1791331077.1735556,
+  "completed": [],
+  "stages": [
+    {
+      "name": "tofu",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "/data/spf-development-20261007-r1/validation-code/run_spf_development_queue.py",
+        "--child-stage",
+        "tofu",
+        "--child-run",
+        "/data/spf-development-20261007-r1/cuda-development-r1"
+      ],
+      "executor_command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "/data/spf-development-20261007-r1/adapter/code/evaluate_construction_baseline.py",
+        "--manifest",
+        "/data/spf-npo-20261006-r4/frozen.json",
+        "--output",
+        "/data/spf-development-20261007-r1/cuda-development-r1/tofu",
+        "--batch-size",
+        "8",
+        "--max-new-tokens",
+        "200"
+      ],
+      "cwd": "/data/spf-development-20261007-r1/repo",
+      "environment_overrides": {
+        "HF_HUB_OFFLINE": "1",
+        "HF_DATASETS_OFFLINE": "1",
+        "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache",
+        "WANDB_MODE": "disabled",
+        "TOKENIZERS_PARALLELISM": "false",
+        "PYTHONPATH": "/data/spf-development-20261007-r1/repo/src",
+        "WORLD_SIZE": "1",
+        "RANK": "0",
+        "LOCAL_RANK": "0"
+      },
+      "source_sha256": "4cdb8bac8d46c2a01b85e83db2251e6b03ef1c978db18d296307a7363dee584f",
+      "log": "/data/spf-development-20261007-r1/cuda-development-r1/tofu.raw.log",
+      "started_at": 1791331077.1901593,
+      "process_pid": 46857,
+      "returncode": 1,
+      "finished_at": 1791331093.0979152,
+      "raw_log_sha256": "efd201d4d9933e31a24540212df1968add821d1e172cbc6abd096c32e63faaea"
+    }
+  ],
+  "commands": {
+    "tofu": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-development-20261007-r1/adapter/code/evaluate_construction_baseline.py",
+      "--manifest",
+      "/data/spf-npo-20261006-r4/frozen.json",
+      "--output",
+      "/data/spf-development-20261007-r1/cuda-development-r1/tofu",
+      "--batch-size",
+      "8",
+      "--max-new-tokens",
+      "200"
+    ],
+    "knowledge": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-development-20261007-r1/adapter/code/evaluate_development_knowledge.py",
+      "--dataset",
+      "/data/spf-development-20261007-r1/bundle/assets/work/spf-p0p1-20260916/artifacts/development-candidates-v1/utility-development.json",
+      "--dataset-sha256",
+      "8f6c4551cf8686515b80cb530c141928a0a39e89029179e722eff544cbbd4720",
+      "--manifest",
+      "/data/spf-npo-20261006-r4/frozen.json",
+      "--output",
+      "/data/spf-development-20261007-r1/cuda-development-r1/knowledge"
+    ],
+    "ifbench": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-development-20261007-r1/adapter/code/generate_development.py",
+      "--dataset",
+      "/data/spf-development-20261007-r1/bundle/assets/work/spf-p0p1-20260916/artifacts/development-extension-v1/pinned-candidates-v2/ifbench.json",
+      "--dataset-sha256",
+      "119782fe7a3d78f9276765b9c047dd722d2d61669c9d8076dbf5bf0f7dbd757c",
+      "--manifest",
+      "/data/spf-npo-20261006-r4/frozen.json",
+      "--output",
+      "/data/spf-development-20261007-r1/cuda-development-r1/ifbench",
+      "--max-new-tokens",
+      "2048"
+    ],
+    "safety": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-development-20261007-r1/adapter/code/generate_development.py",
+      "--dataset",
+      "/data/spf-development-20261007-r1/bundle/assets/work/spf-p0p1-20260916/artifacts/development-extension-v1/pinned-candidates-v2/safety_development.json",
+      "--dataset-sha256",
+      "2b5696ae06a816b9497559b9702fcd9a0f14eac11f13a37d2621e6470fffcb1d",
+      "--manifest",
+      "/data/spf-npo-20261006-r4/frozen.json",
+      "--output",
+      "/data/spf-development-20261007-r1/cuda-development-r1/safety",
+      "--max-new-tokens",
+      "512"
+    ],
+    "conversation": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-development-20261007-r1/adapter/code/generate_development_conversation.py",
+      "--dataset",
+      "/data/spf-development-20261007-r1/bundle/assets/work/spf-p0p1-20260916/artifacts/development-extension-v1/wildchat-candidates-v1/context-eligible-v2.json",
+      "--dataset-sha256",
+      "e392bbb41d5c98f9b25e204e379253a341fd1bd6813c1118da269b5edcdb621e",
+      "--manifest",
+      "/data/spf-npo-20261006-r4/frozen.json",
+      "--output",
+      "/data/spf-development-20261007-r1/cuda-development-r1/conversation",
+      "--max-new-tokens",
+      "1024"
+    ],
+    "ifbench-score": [
+      "/data/spf-development-20261007-r1/ifbench-cpu-venv/bin/python",
+      "/data/spf-development-20261007-r1/adapter/code/score_development_ifbench.py",
+      "--runtime",
+      "/data/spf-development-20261007-r1/bundle/assets/work/spf-p0p1-20260916/artifacts/development-extension-v1/ifbench-runtime",
+      "--dataset",
+      "/data/spf-development-20261007-r1/bundle/assets/work/spf-p0p1-20260916/artifacts/development-extension-v1/pinned-candidates-v2/ifbench.json",
+      "--responses",
+      "/data/spf-development-20261007-r1/cuda-development-r1/ifbench/responses-rank0.jsonl",
+      "--output",
+      "/data/spf-development-20261007-r1/cuda-development-r1/ifbench-scores.private.json"
+    ]
+  },
+  "controller_sha256": "5346d5223b450496b704544b31416e7af9dfbe0853929c3390d387b969345478",
+  "snapshot_sha256": "b7ccd9e0b0406deb160909ae636c2d4a7d49ca30a3ae41002ae92e9423eba60c",
+  "checkpoint_identity_sha256": "c45e87fc69825b75f5d47345fb3c8502a4c1b4524f9d621411068bf3bc64f3a8",
+  "reference_audit_sha256": "758ed12ebcc6ce5d7e65eae689e475b9ce92bbbff34445279c39b7282aa6652e",
+  "external_judge_executed": false,
+  "training_executed": false,
+  "target_gate_evaluated": false,
+  "stage": "tofu",
+  "error": "RuntimeError('Executor failed; preserve checkpoint and raw evidence: tofu')",
+  "finished_at": 1791331093.1008687,
+  "recovery": "Preserve all raw evidence and completed outputs; explicit recovery only, never retrain SPF"
+}

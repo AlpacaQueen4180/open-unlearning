@@ -1,0 +1,29 @@
+{
+  "status": "FAILED_TOFU_GENERATION_API_NO_COMPLETE_EVALUATION",
+  "pid": 46851,
+  "snapshot_utc": "2026-10-07T00:10:01.736724+00:00",
+  "snapshot_sha256": "50057139817d72bb239d9fd744972d7b198f3c6d069cfabe281493de9024b3c0",
+  "queue_exited": true,
+  "gpu_idle_at_snapshot": true,
+  "compute_processes_at_snapshot": [],
+  "executor_pid": 46857,
+  "returncode": 1,
+  "completed_stages": [],
+  "rows_file_bytes": 0,
+  "error": "ValueError: model_kwargs not used by model: ['use_model_defaults']",
+  "archive_sha256": "bca2ce33d478839c7df27c3a24bf00d4ecb42bb0c5a7b71b578910cd60e5d094",
+  "immutable_small_files_verified": 17,
+  "original_status_sha256": "5f7c3d86378538d5888ddca2a4ac7dd15874e30b61ca9f394ad98f556560b1f3",
+  "original_log_sha256": "efd201d4d9933e31a24540212df1968add821d1e172cbc6abd096c32e63faaea",
+  "installed_generation_source_sha256": {
+    "installed-transformers/__init__.py": "9efd2360b4a0b2e1165dceebc90a5c899a1360bf719157bb27512cae4e929ccd",
+    "installed-transformers/generation/configuration_utils.py": "0aaf06e21d844256eee23aac663672d0aa9d06ca1f7f59e9be655c761ccdb0a0",
+    "installed-transformers/generation/utils.py": "dde2df36821c0d724b5af47cb0ff71c3c4c1990c86d81b821911127ae4dc1254"
+  },
+  "weights_downloaded": false,
+  "weights_loaded_for_failed_evaluation": true,
+  "new_checkpoint_audit_claimed": false,
+  "actual_cuda_executor_acceptance": false,
+  "npo_started": false,
+  "external_judge_calls": 0
+}
