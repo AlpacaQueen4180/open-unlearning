@@ -1,0 +1,73 @@
+[2026-10-07 12:05:44,387] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights:   9%|▉         | 26/291 [00:00<00:01, 255.48it/s]Loading weights:  18%|█▊        | 52/291 [00:00<00:00, 256.14it/s]Loading weights:  33%|███▎      | 95/291 [00:00<00:00, 329.80it/s]Loading weights:  46%|████▋     | 135/291 [00:00<00:00, 348.56it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 696.03it/s]
+/usr/local/lib/python3.12/dist-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.0.7) or chardet (6.0.0.post1)/charset_normalizer (3.4.1) doesn't match a supported version!
+  warnings.warn(
+[2026-10-07 12:05:58,746] [INFO] [logging.py:128:log_dist] [Rank -1] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2026-10-07 12:05:58,746] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-10-07 12:05:58,747] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2026-10-07 12:05:58,748] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 1
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload_cli_r2.py", line 207, in <module>
+[rank0]:     main()
+[rank0]:   File "/data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload_cli_r2.py", line 166, in main
+[rank0]:     engine = UnlearnTrainer._prepare_deepspeed(host, model)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/spf-development-20261007-r1/repo/src/trainer/unlearn/base.py", line 63, in _prepare_deepspeed
+[rank0]:     model, *_ = deepspeed.initialize(model=model, config=config_kwargs)
+[rank0]:                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/deepspeed/__init__.py", line 179, in initialize
+[rank0]:     config_class = DeepSpeedConfig(config, mpu, mesh_device=mesh_device)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/deepspeed/runtime/config.py", line 797, in __init__
+[rank0]:     self._initialize_params(copy.copy(self._param_dict))
+[rank0]:   File "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/deepspeed/runtime/config.py", line 817, in _initialize_params
+[rank0]:     self.zero_config = get_zero_config(param_dict)
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/deepspeed/runtime/zero/config.py", line 71, in get_zero_config
+[rank0]:     return DeepSpeedZeroConfig(**zero_config_dict)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/deepspeed/runtime/config_utils.py", line 57, in __init__
+[rank0]:     super().__init__(**data)
+[rank0]:   File "/usr/local/lib/python3.12/dist-packages/pydantic/main.py", line 214, in __init__
+[rank0]:     validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+[rank0]:                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: pydantic_core._pydantic_core.ValidationError: 1 validation error for DeepSpeedZeroConfig
+[rank0]: stage3_prefetch_bucket_size
+[rank0]:   Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=15099494.4, input_type=float]
+[rank0]:     For further information visit https://errors.pydantic.dev/2.10/v/int_from_float
+[rank0]:[W1007 12:05:59.851609745 ProcessGroupNCCL.cpp:1487] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+E1007 12:06:00.604000 4081 torch/distributed/elastic/multiprocessing/api.py:870] failed (exitcode: 1) local_rank: 0 (pid: 4149) of binary: /data/npo-gb200-20261004/validation-20261006/venv/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload_cli_r2.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-07_12:06:00
+  host      : machine-unlearning-pvc-0-2
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 4149)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
