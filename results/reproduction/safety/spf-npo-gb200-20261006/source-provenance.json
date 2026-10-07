@@ -329,7 +329,7 @@
   "development_queue_pid": 47443,
   "development_failure_evidence": "development-failure-20261007-0809.json",
   "development_recovery_evidence": "development-api-recovery-20261007-0809.json",
-  "latest_snapshot_sha256": "d50c26a9b12ad1c22c386bd36d9ecdbf48254964bdde5b3e750e439ec6a32489",
+  "latest_snapshot_sha256": "b991824b79e824d3dd78a74ab445fdd11d7521bf7e80bb7876bc52f726e2ead4",
   "development_path_recovery_evidence": "development-path-recovery-20261007-0825.json",
   "development_path_failure_evidence": "development-path-failure-20261007-0825.json",
   "development_actual_cuda_acceptance": "DEVELOPMENT_CUDA_EXECUTORS_PASS",
@@ -352,9 +352,13 @@
   "npo_smoke_cache_recovery_controller_sha256": "8e9ee2c3aebf346664684f8ced0597619969e2f91970ce06ce8434da87bbb75a",
   "npo_smoke_cache_recovery_actual_cpu_result_verified": true,
   "npo_smoke_cache_recovery_failure_evidence": "spf-npo-smoke-training-args-failure-20261007-1225.json",
-  "npo_smoke_training_args_recovery_evidence": "spf-npo-smoke-training-args-recovery-prepared-20261007-1225.json",
-  "npo_smoke_training_args_recovery_runtime_status": "SOURCE_PREPARED_NOT_DEPLOYED_OR_LAUNCHED",
-  "npo_smoke_training_args_recovery_deployed": false,
-  "npo_smoke_training_args_recovery_submitted": false,
-  "npo_smoke_training_args_actual_api_diagnostic_verified": false
+  "npo_smoke_training_args_recovery_evidence": "spf-npo-smoke-training-args-recovery-launch-20261007-1242.json",
+  "npo_smoke_training_args_recovery_runtime_status": "SUBMITTED_RESULT_NOT_CHECKED",
+  "npo_smoke_training_args_recovery_deployed": true,
+  "npo_smoke_training_args_recovery_submitted": true,
+  "npo_smoke_training_args_actual_api_diagnostic_verified": false,
+  "npo_smoke_training_args_recovery_prepared_evidence": "spf-npo-smoke-training-args-recovery-prepared-20261007-1225.json",
+  "npo_smoke_training_args_recovery_queue_pid": 1977,
+  "npo_smoke_training_args_recovery_controller_sha256": "341f2906434f9a7f4203cc99a672482e84d060487c9b1866ad78e1f062a84f97",
+  "npo_smoke_training_args_recovery_result_checked": false
 }
