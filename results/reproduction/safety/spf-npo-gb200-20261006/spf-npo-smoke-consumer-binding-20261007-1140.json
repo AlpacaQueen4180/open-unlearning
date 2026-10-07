@@ -1,0 +1,28 @@
+{
+  "status": "ACTUAL_ACCEPTANCE_SCHEMA_AND_NEW_BINDING_STATIC_PASS_ONLY",
+  "source_sha256": "eedc4dfd16269db9fa84ef681ae289f86392c85c45ff7d0cedfda24bd6d17735",
+  "original_consumer_sha256": "d33d8b8d24f089112f74c4fe18adbb647c4e78b4e3bfecfd35bf3bce279d1ff6",
+  "actual_acceptance_sha256": "47fce3014faf1944d86d10f778bdbfd64458a84aa79975ae881a720e58a03af3",
+  "unchanged_function_asts": [
+    "digest",
+    "bound_json",
+    "atomic",
+    "completed_reference",
+    "process_exited",
+    "gpu_idle",
+    "validate_snapshot",
+    "command_result",
+    "exact_commands",
+    "hydra_command",
+    "stage"
+  ],
+  "new_negative_cases": 5,
+  "model_imports": 0,
+  "subprocesses_launched": 0,
+  "cuda_initialized": false,
+  "weights_read": false,
+  "hydra_runtime_executed": false,
+  "npo_training_executed": false,
+  "original_package_changed": false,
+  "old_35_cases_repeated": false
+}

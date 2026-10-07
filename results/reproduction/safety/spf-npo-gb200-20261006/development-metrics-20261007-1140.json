@@ -1,0 +1,236 @@
+{
+  "status": "DESCRIPTIVE_COMPLETE_DEVELOPMENT_METRICS_GATE_INSUFFICIENT_EVIDENCE",
+  "tofu": {
+    "status": "pass",
+    "model_id": "/data/spf-npo-20261006-r4/spf-full-s0",
+    "model_revision": null,
+    "checkpoint_identity_sha256": "c45e87fc69825b75f5d47345fb3c8502a4c1b4524f9d621411068bf3bc64f3a8",
+    "tokenizer_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "manifest_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+    "task_data_sha256": "cf6f9c9bd844b60661f1c923e6b188628f00b92c1834efb8f9f7c552274a9a33",
+    "retain_data_sha256": "e1bfcea25c3237064c11676e9d8f52145032ccb45a0e7f858e7f8446475e8a3e",
+    "template_sha256": "7d3e75bbebc8ca06f05579ff90e1730db88e7982d6c4ff524c55c736b21a10a0",
+    "teacher_forcing_max_length": 512,
+    "generation": {
+      "max_length": 20,
+      "max_new_tokens": 200,
+      "min_length": 0,
+      "min_new_tokens": null,
+      "early_stopping": false,
+      "max_time": null,
+      "stop_strings": null,
+      "do_sample": false,
+      "num_beams": 1,
+      "use_cache": true,
+      "cache_implementation": null,
+      "cache_config": null,
+      "temperature": 1.0,
+      "top_k": 50,
+      "top_p": 1.0,
+      "min_p": null,
+      "top_h": null,
+      "typical_p": 1.0,
+      "epsilon_cutoff": 0.0,
+      "eta_cutoff": 0.0,
+      "repetition_penalty": 1.0,
+      "encoder_repetition_penalty": 1.0,
+      "length_penalty": 1.0,
+      "no_repeat_ngram_size": 0,
+      "bad_words_ids": null,
+      "renormalize_logits": null,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "remove_invalid_values": false,
+      "exponential_decay_length_penalty": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "sequence_bias": null,
+      "token_healing": null,
+      "guidance_scale": null,
+      "watermarking_config": null,
+      "num_return_sequences": 1,
+      "output_attentions": null,
+      "output_hidden_states": null,
+      "output_scores": false,
+      "output_logits": null,
+      "return_dict_in_generate": false,
+      "pad_token_id": 128009,
+      "bos_token_id": 128000,
+      "eos_token_id": [
+        128001,
+        128008,
+        128009
+      ],
+      "encoder_no_repeat_ngram_size": 0,
+      "decoder_start_token_id": null,
+      "is_assistant": null,
+      "num_assistant_tokens": 20,
+      "num_assistant_tokens_schedule": "constant",
+      "assistant_confidence_threshold": 0.4,
+      "prompt_lookup_num_tokens": null,
+      "max_matching_ngram_size": null,
+      "assistant_early_exit": null,
+      "assistant_lookbehind": 10,
+      "target_lookbehind": 10,
+      "compile_config": null,
+      "disable_compile": null,
+      "continuous_batching_config": null,
+      "low_memory": null,
+      "penalty_alpha": null,
+      "dola_layers": null,
+      "diversity_penalty": 0.0,
+      "num_beam_groups": 1,
+      "constraints": null,
+      "force_words_ids": null,
+      "prefill_chunk_size": null,
+      "_from_model_config": null,
+      "transformers_version": "5.5.4"
+    },
+    "batch_size_per_rank": 8,
+    "world_size": 1,
+    "aggregates": {
+      "forget05": {
+        "count": 200,
+        "metrics": {
+          "assistant_tokens": {
+            "mean": 35.825,
+            "std": 11.08960194762571
+          },
+          "mean_log_probability": {
+            "mean": -0.0042687753047721344,
+            "std": 0.02133325305719023
+          },
+          "geometric_mean_token_probability": {
+            "mean": 0.9959471505880356,
+            "std": 0.018679135225448285
+          },
+          "teacher_forced_suffix_fraction": {
+            "mean": 0.9951515151515151,
+            "std": 0.06856793029687734
+          },
+          "rouge_l_recall": {
+            "mean": 0.9970370370370369,
+            "std": 0.04190262407031393
+          },
+          "rouge_l_f1": {
+            "mean": 0.9964864864864864,
+            "std": 0.049688584623919556
+          },
+          "normalized_exact_match": {
+            "mean": 0.995,
+            "std": 0.07071067811865477
+          },
+          "generation_tokens": {
+            "mean": 35.94,
+            "std": 11.179054355418755
+          },
+          "generation_hit_cap": {
+            "mean": 0.0,
+            "std": 0.0
+          }
+        }
+      },
+      "retain95": {
+        "count": 3800,
+        "metrics": {
+          "assistant_tokens": {
+            "mean": 34.77368421052632,
+            "std": 12.024098033297955
+          },
+          "mean_log_probability": {
+            "mean": -0.006122217271240515,
+            "std": 0.026612650929873513
+          },
+          "geometric_mean_token_probability": {
+            "mean": 0.9941982495392624,
+            "std": 0.021386370134795257
+          },
+          "teacher_forced_suffix_fraction": {
+            "mean": 0.9879953860930569,
+            "std": 0.08615097948561867
+          },
+          "rouge_l_recall": {
+            "mean": 0.9940829708160678,
+            "std": 0.0512418670541279
+          },
+          "rouge_l_f1": {
+            "mean": 0.993890167140465,
+            "std": 0.05161332578336303
+          },
+          "normalized_exact_match": {
+            "mean": 0.9726315789473684,
+            "std": 0.16317597105099593
+          },
+          "generation_tokens": {
+            "mean": 34.769473684210524,
+            "std": 12.03292468083588
+          },
+          "generation_hit_cap": {
+            "mean": 0.0,
+            "std": 0.0
+          }
+        }
+      }
+    },
+    "resources": [
+      {
+        "elapsed_seconds": 1246.5982565004379,
+        "cuda_peak_allocated_bytes": 16503620096
+      }
+    ],
+    "checkpoint_written": false,
+    "thresholds_frozen": false,
+    "limitations": [
+      "Descriptive baseline, not a target gate result",
+      "Teacher-forced suffix metric is not free-running extraction",
+      "Normalized exact match preserves punctuation; generation is capped at 200 tokens",
+      "Historical full model is a calibration reference, not the new Standard target"
+    ]
+  },
+  "knowledge": {
+    "status": "pass",
+    "count": 1024,
+    "correct": 831,
+    "accuracy": 0.8115234375,
+    "ties": 10,
+    "tie_policy": "first option",
+    "protocol": "auxiliary-zero-shot-ABCD-summed-continuation-logprob-v1",
+    "num_fewshot": 0,
+    "chat_template": false,
+    "model": "/data/spf-npo-20261006-r4/spf-full-s0",
+    "revision": null,
+    "checkpoint_identity_sha256": "c45e87fc69825b75f5d47345fb3c8502a4c1b4524f9d621411068bf3bc64f3a8",
+    "world_size": 1,
+    "tokenizer_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+    "dataset_sha256": "8f6c4551cf8686515b80cb530c141928a0a39e89029179e722eff544cbbd4720",
+    "elapsed_seconds": 151.89442443847656,
+    "research_gate": "insufficient_evidence",
+    "limitations": [
+      "Auxiliary subject labels are empty; no subject-specific5shot prompts",
+      "Not comparable to historical formal MMLU5shot scores"
+    ]
+  },
+  "ifbench": {
+    "status": "pass",
+    "count": 300,
+    "summary": {
+      "strict": {
+        "prompt_accuracy": 0.18,
+        "instruction_accuracy": 0.20930232558139536
+      },
+      "loose": {
+        "prompt_accuracy": 0.2,
+        "instruction_accuracy": 0.23837209302325582
+      }
+    },
+    "source_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "dataset_sha256": "119782fe7a3d78f9276765b9c047dd722d2d61669c9d8076dbf5bf0f7dbd757c",
+    "responses_sha256": "212946abcccdbe662266d266b85b06d7092c7639bb47ca1d3d60e97b6e318768",
+    "research_gate": "insufficient_evidence"
+  },
+  "matched_retain95_evaluation": "pending",
+  "forget_quality_ks": "pending",
+  "safety_labels": "pending",
+  "full_output_score_equivalence_verified": false,
+  "formal_mmlu_5shot": false
+}
