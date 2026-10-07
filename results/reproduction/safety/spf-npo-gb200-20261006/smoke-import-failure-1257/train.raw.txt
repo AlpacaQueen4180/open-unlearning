@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "/data/spf-npo-smoke-20261007-r1/validation-code/spf_npo_training_args_api.py", line 128, in <module>
+    main()
+  File "/data/spf-npo-smoke-20261007-r1/validation-code/spf_npo_training_args_api.py", line 85, in main
+    proof = audit_api(expected)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/data/spf-npo-smoke-20261007-r1/validation-code/spf_npo_training_args_api.py", line 74, in audit_api
+    raise ValueError('Compatibility preflight must not initialize CUDA')
+ValueError: Compatibility preflight must not initialize CUDA
+E1007 04:48:11.400000 2252 torch/distributed/elastic/multiprocessing/api.py:870] failed (exitcode: 1) local_rank: 0 (pid: 2320) of binary: /data/npo-gb200-20261004/validation-20261006/venv/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 922, in <module>
+    main()
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 139, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/distributed/launcher/api.py", line 270, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/data/spf-npo-smoke-20261007-r1/validation-code/spf_npo_training_args_api.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-10-07_04:48:11
+  host      : machine-unlearning-pvc-0-2
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 2320)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

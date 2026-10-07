@@ -1,0 +1,349 @@
+{
+  "status": "SUBMITTED_RESULT_NOT_CHECKED",
+  "snapshot_utc": "2026-10-07T04:58:12.645652+00:00",
+  "snapshot_sha256": "99d43fd13b0eaddd4e8a54c74b9b921fa30fe2647f6564c0dc1cf8793703a10a",
+  "snapshot_as_run_source_sha256": "64c5f7cdcdea9eac67d4abb91b1b53bc986642330e6917e22df0082f26d797b5",
+  "next_snapshot_source_sha256": "e65ed1a8abcaadd03a14e62258aee15948bb943306a6657228f2d9576506f540",
+  "previous_failure": {
+    "pid": 1977,
+    "status": "FAILED_GPU_IMPORT_GUARD_BEFORE_NATIVE_PROBE",
+    "failed_status_sha256": "2b4f88241483b7e2c269052ba643d99ec0420bfb898c76f0fcaa27313a982d30",
+    "completed": [
+      "training-args-diagnostic"
+    ],
+    "train_wrapper_pid": 2252,
+    "native_child_pid": 2320,
+    "train_returncode": 1,
+    "native_probe_executed": false,
+    "weights_read": false,
+    "npo_step_executed": false,
+    "checkpoint_exists": false,
+    "fresh_reload_executed": false,
+    "archive_sha256": "7e469c243b318bd86d83e7f735cf3216bc6694a3a01fa2117fbe273e81ca8e69",
+    "train_raw_sha256": "526d37715c3048cfae36b629d162e95e8e0e7a25e0e94b465b5a30dffd07f43f",
+    "api_diagnostic_raw_sha256": "140365dfab20a5899e8b73ae223162a6c46a08e2b3bf2af91fd5dcb616ac91df"
+  },
+  "actual_cpu_api_diagnostic": {
+    "status": "TRAINING_ARGUMENTS_SIGNATURE_AND_SERIALIZATION_SOURCE_PASS",
+    "installed_api_sha256": {
+      "training_args.py": "67e63d9b8a68a1547c0f3d17eac51034592da669d01cf03b4471b0b77f22a756",
+      "trainer.py": "e680536f179b7e2000188a671c0317c7fdce72cd4ceaf91dd72c2032f8c828d0",
+      "modeling_utils.py": "b8467e1ada952862d2e4d76632475ac2f9fa198121d0e1ce64fa393ea3773e16"
+    },
+    "omitted_keywords": [
+      "save_safetensors"
+    ],
+    "omitted_value": true,
+    "remaining_arguments_exact": true,
+    "config_sha256": "2c753b5f656820ec7dffddfc57170845daf02a078462e18d98c793e3d9a1288b",
+    "signature_bound": true,
+    "training_arguments_instantiated": false,
+    "cuda_initialized": false,
+    "weights_read": false,
+    "generation_calls": 0,
+    "npo_training_executed": false,
+    "compatibility_source_sha256": "430feb8b97a3fb0dea5a9f293b50394300e0a947d5a0e2c0875f5c716e2fae52",
+    "negative_cases": [
+      "false-serialization",
+      "unknown-keyword",
+      "changed-learning-rate",
+      "missing-required-serialization-intent"
+    ],
+    "subprocesses_launched": 0
+  },
+  "independent_visible_gpu_import_trace": {
+    "status": "ACTUAL_VISIBLE_GPU_TRAINING_ARGUMENTS_IMPORT_TRACE",
+    "returncode": 0,
+    "cuda_initialized_before": false,
+    "cuda_initialized_after": true,
+    "peak_allocated_bytes": 0,
+    "observer_restored": true,
+    "weights_read": false,
+    "training_arguments_instantiated": false,
+    "npo_training_executed": false,
+    "raw_response_native_utf8_sha256": "55e417fcb14e26f3093bfbdedcb5a2f048dadccf77458258191ff49eb050726a",
+    "source_path": "results/reproduction/safety/spf-npo-gb200-20261006/smoke-import-failure-1257/import-trace.as-run.py",
+    "source_sha256": "ab0551fe10a586faafb646bb18a5de78c86bd46eb3b5ab645d0dd0138fd10bdb",
+    "source_sha256_records": {
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/utils/import_utils.py": {
+        "size": 114161,
+        "sha256": "c05e6063736902b07d0b48e4a326ae7985b75430bacbee48014c954fd4e6cb05"
+      },
+      "/usr/lib/python3.12/importlib/__init__.py": {
+        "size": 4774,
+        "sha256": "c9e1b3dbc619ac31e7017ac43668a20200872c1c0e79ae379c0dab6ed399b730"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/training_args.py": {
+        "size": 140158,
+        "sha256": "67e63d9b8a68a1547c0f3d17eac51034592da669d01cf03b4471b0b77f22a756"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/transformers/trainer_utils.py": {
+        "size": 49862,
+        "sha256": "951ebe7d0235be1de166ff17e0a5d45e6bcca4ea25be1ef93a4d777b680052d6"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/__init__.py": {
+        "size": 8013,
+        "sha256": "0d75f5e7919bbc0906ba285d5b5309b0d49a16a9cd87524225eae1cd480f79af"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/auto.py": {
+        "size": 9306,
+        "sha256": "cb31d32a9bbb695b09e152bd94f5885428abba0876ce702a46908df5b07acbd6"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/peft_model.py": {
+        "size": 173182,
+        "sha256": "d22a1c50dea7a046ce28e71a79dfc20b1d96a2d238a9b457be6a88b6068e04d5"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/tuners/__init__.py": {
+        "size": 5425,
+        "sha256": "74079426fd0adcc50e5d781f66d71118d2b40e98a712a0a448012040bd74a872"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/tuners/adalora/__init__.py": {
+        "size": 1534,
+        "sha256": "c493f7dbda463eaea6cd1abd093af6b19ee7e3e66bd0ac62995262e5c5e1fa82"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/tuners/adalora/config.py": {
+        "size": 5896,
+        "sha256": "f1b2eea2e36c7c69c5ab3a91cde4b851e6ddf40a4a806726c2ee89af23dcdc88"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/tuners/lora/__init__.py": {
+        "size": 2358,
+        "sha256": "010dabf75b2d4c08e66f91c337be13a50d75b0aecf06ac41f36b308ffc5d37a2"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/tuners/lora/loraga.py": {
+        "size": 7663,
+        "sha256": "9d48cdeb6e07711749aab39428b42b2c96b341c32aaa57ad62f8b08a46e4bb79"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/tuners/lora/model.py": {
+        "size": 66161,
+        "sha256": "321964321e14ca0d9b4d81c4debcb486bae02193a576755b116ce35252e33555"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/tuners/lora/te.py": {
+        "size": 4522,
+        "sha256": "339b2a5d979997d3fb2d18f79b1ff36ea3ded94359dc537fbdb0acee9f453686"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/import_utils.py": {
+        "size": 7866,
+        "sha256": "4f27c2625f2c8d5cd4a32dc3efa7b747e317b9aaf2d405a8a77ae027d7b37fcd"
+      },
+      "/usr/local/lib/python3.12/dist-packages/transformer_engine/__init__.py": {
+        "size": 535,
+        "sha256": "f18cc61b04d4958d5d01bd666ead3ff8e6fc5fa9da41e04798007d6c93f97369"
+      },
+      "/usr/local/lib/python3.12/dist-packages/transformer_engine/pytorch/__init__.py": {
+        "size": 3770,
+        "sha256": "dc437e3d9913e70ebaa4a9db11bf7dc4005d037579365e84fb73902574d28dfe"
+      },
+      "/usr/local/lib/python3.12/dist-packages/transformer_engine/pytorch/attention.py": {
+        "size": 385722,
+        "sha256": "ae489289d1962b997dc42b47e40f5d5accbf636c63454906c614667606946786"
+      },
+      "/usr/local/lib/python3.12/dist-packages/transformer_engine/pytorch/utils.py": {
+        "size": 10842,
+        "sha256": "fd7ec636e0c971e9bc7e9d9a5542c25d3551272432025f690cf1d1aea0ca3226"
+      },
+      "/usr/local/lib/python3.12/dist-packages/torch/cuda/__init__.py": {
+        "size": 58288,
+        "sha256": "4091351b8a96fd8f015f9af160716a4102f4f6aec20d73b35746209912075034"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/peft/helpers.py": {
+        "size": 22216,
+        "sha256": "b8d66e60246cc547122dd798fdf7c814ba1c48c2837e68c751164a54d87ac9dc"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/bitsandbytes/__init__.py": {
+        "size": 2222,
+        "sha256": "a4e3e6bfc4cf9eff68b95eca823c4fa5e8402fe453e3be1eff4d48c4838cefa0"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/bitsandbytes/autograd/_functions.py": {
+        "size": 17700,
+        "sha256": "77ca54c87b69ad470ac73e5d7dde94948f20de9de8b8764957728bc29831f37f"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/bitsandbytes/functional.py": {
+        "size": 65287,
+        "sha256": "520a9e9d3afba11124734df60e48a27e38b6389305df888834405b435e285817"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/bitsandbytes/cextension.py": {
+        "size": 17174,
+        "sha256": "a7ce4d7bcb504bf7d268ce96658dbe832804b6f6ed999f61eaf2beeb9385c9bd"
+      },
+      "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/bitsandbytes/cuda_specs.py": {
+        "size": 3236,
+        "sha256": "6a4153476671439085a452de83940a15b54e678c73dd449ac78dd1c5accfdb69"
+      }
+    },
+    "initialization_callers": [
+      "transformer_engine.pytorch.attention capability queries via PEFT import",
+      "bitsandbytes.cuda_specs.get_compute_capabilities"
+    ],
+    "trace_calls": 9
+  },
+  "recovery": {
+    "launch": {
+      "status": "SUBMITTED_RESULT_NOT_CHECKED",
+      "pid": 2953,
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "/data/spf-npo-smoke-20261007-r1/validation-code/run_spf_npo_smoke_import_recovery_queue.py",
+        "--controller-sha256",
+        "e28f44764c0c9fc3b67005f0c6dcf7132bef67af6c6cc415f3ea770c33a5e60b",
+        "--snapshot",
+        "/data/spf-npo-smoke-20261007-r1/validation-code/r4-snapshot-import-recovery-1257.private.json",
+        "--snapshot-sha256",
+        "99d43fd13b0eaddd4e8a54c74b9b921fa30fe2647f6564c0dc1cf8793703a10a",
+        "--run-id",
+        "import-recovery-1257"
+      ],
+      "cwd": "/data/spf-development-20261007-r1/repo",
+      "snapshot_sha256": "99d43fd13b0eaddd4e8a54c74b9b921fa30fe2647f6564c0dc1cf8793703a10a",
+      "started_at": 1791349569.3507266,
+      "log": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-import-recovery-launch-1257.raw.log",
+      "original_package_changed": false,
+      "hydra_composition_repeated": false,
+      "pilot_frozen": false,
+      "cache_diagnostic_repeated": false,
+      "training_args_diagnostic_repeated": false,
+      "actual_import_preflight_result_checked_by_launcher": false
+    },
+    "submitted_utc": "2026-10-07T05:06:09.350727+00:00",
+    "snapshot_age_at_submission_seconds": 476.705075,
+    "bundle_sha256": "a7e9abc5f69e4137848b0f36002421e27b21a47c1a7648dbcf5216e626406f0a",
+    "compressed_chunks": 7,
+    "sealed_files": {
+      "run_spf_npo_smoke_import_recovery_queue.py": {
+        "size": 16265,
+        "sha256": "e28f44764c0c9fc3b67005f0c6dcf7132bef67af6c6cc415f3ea770c33a5e60b"
+      },
+      "spf_npo_training_args_api_r2.py": {
+        "size": 13513,
+        "sha256": "bba745ba98304b4edb90037c1d24f776b277c00e42df5ac90e5f07ed3d7a90a7"
+      },
+      "r4-snapshot-import-recovery-1257.private.json": {
+        "size": 34772,
+        "sha256": "99d43fd13b0eaddd4e8a54c74b9b921fa30fe2647f6564c0dc1cf8793703a10a"
+      }
+    },
+    "completed_preflight_reused": true,
+    "remaining_stages": [
+      {
+        "name": "chunk-0",
+        "returncode": 0,
+        "source_sha256": "153120accc0b37cc6c8362f9c93eb8b7c7b3c4c15de6903994392ae2eb02b447",
+        "native_utf8_cli_sha256": "7a55449fecd6249c67a33c19a2d62790cc7976a4bf3ae42d3655cee202364011",
+        "parsed_result_sha256": "97630094e264684c2e39e9652086557baccee1d49ee53ac342c87615998d519f"
+      },
+      {
+        "name": "chunk-1",
+        "returncode": 0,
+        "source_sha256": "a0e197e73c34bf1bbc2825e7f62aefe05b46fdb4e1c66c074fe316b87c8d2066",
+        "native_utf8_cli_sha256": "87f169cd02fea5fa625929091bd1ad2386a1623636649a7f98db3382bca69bab",
+        "parsed_result_sha256": "06cde1e72fc49efe66ff0351645ebde201ad7e11af041e2dc80b51e62240f20a"
+      },
+      {
+        "name": "chunk-2",
+        "returncode": 0,
+        "source_sha256": "f7d13d916d60af59bfb4bccf9baa8d73ebc6ad1e031089903fea34e592e421a8",
+        "native_utf8_cli_sha256": "7affbb1703fd4fcb5bfa6ff2ed9b757c374b2565127b0d52b0520b3ed57972c4",
+        "parsed_result_sha256": "15e6913ad1873ce45a901d972f3ff1ccaae99cd1b8bdefaa957791c1d4f69412"
+      },
+      {
+        "name": "chunk-3",
+        "returncode": 0,
+        "source_sha256": "6d413a8c9d87b9ae8dd3826a542f356e0ac90bddd753eb77cda086c971428f60",
+        "native_utf8_cli_sha256": "d99056d47eda8dd13a06088c1d1dea1b760983418ecaf148ea233a10010b631f",
+        "parsed_result_sha256": "ff24d87dee1b1a63c9f8af18499862bb87b8d8f748ce1ade4f9a37a84d1f0170"
+      },
+      {
+        "name": "chunk-4",
+        "returncode": 0,
+        "source_sha256": "b4d7b1d95cd258dd926fea0ed91c0be8b31bd2928451299670db706ead9358d3",
+        "native_utf8_cli_sha256": "0eb12d4a07ae965424d9c3d233bbe68fe0601183de049596ee62dd63225aec10",
+        "parsed_result_sha256": "2173e96816683f0d0e89a26ce4302f53ab1c88c669beb4ebd13a6ed33d6316dd"
+      },
+      {
+        "name": "chunk-5",
+        "returncode": 0,
+        "source_sha256": "e98505bf313f090ba8a486ddf870bbbffb9cebacc8d2f53da1d42e4b5da140af",
+        "native_utf8_cli_sha256": "d32ae89ffae1e2637194008978e3544a83c3cf105af084af08787c11e634efb0",
+        "parsed_result_sha256": "629c862912a5455dd8b7ff362b1c8d4afe9837aed1521a503d3f5a56fb2998c7"
+      },
+      {
+        "name": "chunk-6",
+        "returncode": 0,
+        "source_sha256": "6a865ab22e947168e3cd9366513332ef14150a4ecb228d08beb091eadfb000a0",
+        "native_utf8_cli_sha256": "248d7e2e935340053c95223cafc6f657bf50e0e4768906b7b29cbc24012cceab",
+        "parsed_result_sha256": "f0256ab7e7d8baec70d6466e6f210fef2b049762bfe17b7be465333c30240179"
+      },
+      {
+        "name": "seal",
+        "returncode": 0,
+        "source_sha256": "10df919eb5a2313b03eff2bb4f789a68a70dd1b1963884736863ba641666df4d",
+        "native_utf8_cli_sha256": "32566e26f673cd30f0c2cdc5d40a4f1abe5c3445cd970058897c8c60d8f6fe00",
+        "parsed_result_sha256": "4d03352d7283ba45f0fa2f9ad45ff450d57cf384d07500ac0e3444d92467dac2"
+      },
+      {
+        "name": "launch-once",
+        "returncode": 0,
+        "source_sha256": "0cd97b30a18e4ede13ccece2a6a5993521f99ef635d02e51969036241d101e42",
+        "native_utf8_cli_sha256": "f5c59f980fef68827fb0b6ecd028cad7237d4eb4163120e77b1efee6cea6b231",
+        "parsed_result_sha256": "a118014227bf14c0e202dee8c4aacc6f4d013a2e961ef6fdb8baa731065a79c7"
+      }
+    ],
+    "failed_chunk0_native_cli_sha256": "2cb72adf0523e67abf31a9d7f2cc4f131c97b97b397ce6b20d882662ba83126f",
+    "artifactcheck": {
+      "status": "READONLY_DEPLOYMENT_ARTIFACT_CHECK_NOT_PROGRESS",
+      "chunks": {},
+      "files": {
+        "run_spf_npo_smoke_import_recovery_queue.py": null,
+        "spf_npo_training_args_api_r2.py": null,
+        "r4-snapshot-import-recovery-1257.private.json": null
+      },
+      "launch": null,
+      "new_run_exists": false,
+      "checkpoint_exists": false
+    },
+    "only_unfinished_train_and_fresh_reload": true,
+    "completed_hydra_cache_cpu_api_cpu_not_repeated": true
+  },
+  "new_source_preparation": {
+    "status": "BOUND_IMPORT_RECOVERY_SOURCES_PREPARED_NOT_RUNTIME_VERIFIED",
+    "trace_capture_sha256": "55e417fcb14e26f3093bfbdedcb5a2f048dadccf77458258191ff49eb050726a",
+    "trace_actual_returncode": 0,
+    "source_files": {
+      "scripts\\reproduction\\safety\\gb200\\spf_npo_training_args_api_r2.py": "bba745ba98304b4edb90037c1d24f776b277c00e42df5ac90e5f07ed3d7a90a7",
+      "scripts\\reproduction\\safety\\gb200\\run_spf_npo_smoke_import_recovery_queue.py": "e28f44764c0c9fc3b67005f0c6dcf7132bef67af6c6cc415f3ea770c33a5e60b"
+    },
+    "original_mapping_function_ast_unchanged": true,
+    "unchanged_queue_functions": [
+      "digest",
+      "exited",
+      "recovered_environment",
+      "verify_cache_diagnostic"
+    ],
+    "completed_cpu_api_diagnostic_reused": true,
+    "model_weights_read": false,
+    "subprocesses_launched": 0,
+    "npo_training_executed": false
+  },
+  "new_failure_guard_schema": {
+    "status": "NEW_IMPORT_RECOVERY_FAILURE_GUARD_SCHEMA_ONLY",
+    "negative_cases": [
+      "wrong-pid",
+      "wrong-completion",
+      "wrong-mode",
+      "nonfailed",
+      "checkpoint-exists"
+    ],
+    "subprocesses_launched": 0,
+    "cuda_initialized": false,
+    "weights_read": false,
+    "npo_training_executed": false
+  },
+  "post_submission_result_checked": false,
+  "actual_new_import_preflight_verified": false,
+  "actual_npo_training_verified": false,
+  "fresh_reload_verified": false,
+  "pilot_frozen": false,
+  "target_gate": "insufficient_evidence",
+  "limits": "Import context/zero tensor allocation is engineering evidence. It does not establish NPO, gradient scaling, reference invariance, reload or target safety gate acceptance.",
+  "capture_limitation": "The exported train/API diagnostic raw files are original remote bytes. CLI and import diagnostic subprocess output were captured as native text/UTF-8, not original stdout/stderr stream bytes.",
+  "publication_scope": "Source, derived engineering metadata and necessary raw failure bytes only; no QA/prompts/responses/weights/contracts/frozen/prepared manifests or membership."
+}
