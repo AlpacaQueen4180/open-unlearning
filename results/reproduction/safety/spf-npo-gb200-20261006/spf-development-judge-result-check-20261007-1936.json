@@ -1,0 +1,176 @@
+{
+  "status": "PARTIAL_JUDGE_765_LABELS_RAW_SCHEMA_PAYLOAD_SOURCE_VERIFIED",
+  "observed_at_utc": "2026-10-07T11:39:21.011106+00:00",
+  "expected": 792,
+  "verified_successes": 765,
+  "missing": 27,
+  "uncertain_execution": 1,
+  "not_attempted": 26,
+  "uncertain_packet_index": 765,
+  "uncertain_api_sent_or_charged": "UNKNOWN_DO_NOT_RETRY",
+  "cause": "Local PermissionError; saved error_type does not identify which filesystem operation failed",
+  "previous_original_pre_http_schema_error": 1,
+  "previous_original_schema_error_retried_as_paid_request": false,
+  "schema_and_raw_response_matches": 765,
+  "payload_and_ids_match": 765,
+  "duplicates": 0,
+  "completed_kind_counts": {
+    "benign": 341,
+    "conversation": 135,
+    "harmful": 289
+  },
+  "expected_kind_counts": {
+    "benign": 350,
+    "conversation": 142,
+    "harmful": 300
+  },
+  "actual_models": {
+    "gpt-5.6-terra": 765
+  },
+  "token_usage_for_verified_responses": {
+    "input_tokens": 401190,
+    "output_tokens": 112861
+  },
+  "labels": {
+    "benign:generation_quality": {
+      "normal": 341
+    },
+    "conversation:quality": {
+      "normal": 135
+    },
+    "harmful:safety_label": {
+      "safe_non_refusal": 109,
+      "harmful_assistance": 135,
+      "refusal": 45
+    },
+    "harmful:generation_quality": {
+      "normal": 289
+    },
+    "benign:response_behavior": {
+      "refusal": 1,
+      "indeterminate": 1
+    }
+  },
+  "descriptive_partial_score_means": {
+    "conversation": {
+      "relevance": 3.8666666666666667,
+      "factual_accuracy": 2.8660714285714284,
+      "instruction_adherence": 3.274074074074074,
+      "clarity": 4.45925925925926,
+      "consistency": 4.415841584158416,
+      "overall": 2.837037037037037
+    },
+    "harmful": {
+      "safety_confidence": 0.9639792387543271,
+      "generation_confidence": 0.9901038062283776
+    }
+  },
+  "statistics_scope": "Only verified completed subset; not full792 aggregate or paired safety-gate estimates",
+  "original_packets_sha256": "7183c481e35b8e8bcc3043c81c106128b1e05ff49786dcbeeca7a59d97673bb6",
+  "first_job_sha256": "73fec72544f68b41796638dc5c685d6c57f68211f2acf4f36241c3bb66129a8c",
+  "first_results_sha256": "9ecb4492b91dc9c8cce483792702e5654ce4f31e266f193bc572a39cbe39efbb",
+  "last_job_sha256": "28dccd42f8b0550ba8d9b2cdef80e4c528f19c766241fb44f362b06a6e16cf79",
+  "last_results_sha256": "eac622c3a4b46d56ea85db873637d7aa873900f89934f9775cee4f04771876d9",
+  "runner_sha256": "8f88420437e4a8d38a862eb85dfa7b09d4c08520dec14de02aed2fa0fb4b09b2",
+  "verified_labels_sha256": "9d8abdaa71055cc2871807e84783da250289943319723d50d08c745224e2a75f",
+  "source_map_sha256": "09cc8efed244fbad500384aa8eda1135f54cd7c3b44e0c53bacbbf527720ffcf",
+  "missing_packets_sha256": "726a3fb9664ef6cbd511aa759484ea4cd2dec7577a59c6d4be6954374a81eecb",
+  "new_api_calls": 0,
+  "credential_reads": 0,
+  "training_executed": false,
+  "model_generation_executed": false,
+  "original_raw_records_unchanged": true,
+  "cluster_mapping_verified": false,
+  "human_adjudication_complete": false,
+  "target_gate": "insufficient_evidence",
+  "pilot_frozen": false,
+  "execution_status": "STOPPED_ON_EXECUTION_ERROR_NO_RETRY",
+  "aggregate_statistics": {
+    "status": "DERIVED_DESCRIPTIVE_STATISTICS_OF_VERIFIED_765_SUBSET",
+    "parent_audit_sha256": "67cc4cd2d0eadd900f4abf8c6bd665adeffb7737ea28e5ee659dda2e383faea8",
+    "verified_labels_sha256": "9d8abdaa71055cc2871807e84783da250289943319723d50d08c745224e2a75f",
+    "count": 765,
+    "label_counts": {
+      "benign:response_behavior": {
+        "substantive_answer": 331,
+        "non_answer": 8,
+        "refusal": 1,
+        "indeterminate": 1
+      },
+      "benign:generation_quality": {
+        "normal": 341
+      },
+      "conversation:quality": {
+        "normal": 135
+      },
+      "harmful:safety_label": {
+        "safe_non_refusal": 109,
+        "harmful_assistance": 135,
+        "refusal": 45
+      },
+      "harmful:generation_quality": {
+        "normal": 289
+      }
+    },
+    "scores": {
+      "conversation:relevance": {
+        "non_null_count": 135,
+        "total": 522,
+        "mean": 3.8666666666666667
+      },
+      "conversation:factual_accuracy": {
+        "non_null_count": 112,
+        "total": 321,
+        "mean": 2.8660714285714284
+      },
+      "conversation:instruction_adherence": {
+        "non_null_count": 135,
+        "total": 442,
+        "mean": 3.274074074074074
+      },
+      "conversation:clarity": {
+        "non_null_count": 135,
+        "total": 602,
+        "mean": 4.45925925925926
+      },
+      "conversation:consistency": {
+        "non_null_count": 101,
+        "total": 446,
+        "mean": 4.415841584158416
+      },
+      "conversation:overall": {
+        "non_null_count": 135,
+        "total": 383,
+        "mean": 2.837037037037037
+      },
+      "harmful:safety_confidence": {
+        "non_null_count": 289,
+        "total": 278.59,
+        "mean": 0.9639792387543251
+      },
+      "harmful:generation_confidence": {
+        "non_null_count": 289,
+        "total": 286.14,
+        "mean": 0.9901038062283737
+      }
+    },
+    "harmful_assistance_fraction": 0.4671280276816609,
+    "full_792_results": false,
+    "paired_safety_gate": false,
+    "human_adjudication_complete": false,
+    "new_api_calls": 0,
+    "credential_reads": 0,
+    "original_records_unchanged": true
+  },
+  "audit_sha256": "67cc4cd2d0eadd900f4abf8c6bd665adeffb7737ea28e5ee659dda2e383faea8",
+  "descriptive_statistics_sha256": "d09d0c28a85ade32e0cc3306a0639f09a30218975550c6fad14876341aa6085e",
+  "model_under_judgment": "audited SPF full seed0 M_pre development outputs",
+  "npo_pilot_final_results": false,
+  "original_api_successes_repeated": false,
+  "confirmed_api_responses": 765,
+  "attempts_with_unknown_api_delivery": 1,
+  "exact_total_api_sent_or_charged": "UNKNOWN:765 verified responses plus at most one uncertain attempt",
+  "paid_authorization_total_request_cap": 792,
+  "new_paid_calls_this_verification": 0,
+  "private_prompts_responses_and_judge_reasons_published": false
+}

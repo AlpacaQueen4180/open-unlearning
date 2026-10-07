@@ -1,0 +1,162 @@
+{
+  "status": "FAILED_TORCHRUN_ARGUMENT_PARSING_BEFORE_NATIVE_VERIFIER",
+  "observed_at_utc": "2026-10-07T11:36:49.598815+00:00",
+  "snapshot_sha256": "b28304cd187e3130936ec857e89da5f60b3b9186b5015a108e97429a7d22f2d0",
+  "logical_progress_snapshots": 1,
+  "outer_snapshot_retries": 0,
+  "queue_pid": 3889,
+  "process_pid": 3896,
+  "run_id": "reload-native-1312",
+  "completed_stages": [],
+  "returncode": 2,
+  "exact_command": [
+    "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc_per_node=1",
+    "/data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload.py",
+    "--source-sha256",
+    "5364672a92d23fdc13b25809ae2364973ab8d81195729880988732b06ca2d2e0",
+    "--run",
+    "/data/spf-npo-smoke-20261007-r1/runs/reload-native-1312"
+  ],
+  "original_error": "ambiguous option: --run could match --run-path, --run_path",
+  "failed_status_sha256": "2f247e8e538c6fd4a7b412317fb599112c76ff126b974070f960f7ec4fbac828",
+  "raw_log_sha256": "20b207faabc703d074421d0fee2891b8edd389406c9c96e187e44557920ff9c1",
+  "immutable_archive_sha256": "d55e89242969009427a06c50f7e868c5c29bea209b0b7438b6a4be63c8d88348",
+  "preserved_files": [
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/reload-native-1312/fresh-reload.raw.log",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/reload-native-1312/fresh-reload.raw.log",
+      "size": 813,
+      "sha256": "20b207faabc703d074421d0fee2891b8edd389406c9c96e187e44557920ff9c1"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/reload-native-1312/status.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/reload-native-1312/status.json",
+      "size": 2726,
+      "sha256": "2f247e8e538c6fd4a7b412317fb599112c76ff126b974070f960f7ec4fbac828"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/run_spf_npo_smoke_reload_only_queue.py",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/run_spf_npo_smoke_reload_only_queue.py",
+      "size": 10373,
+      "sha256": "9ee71c00d28fba2c998c68e94bf59584587be56a68da9abcb097c4ad20299ab3"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/smoke-native-reload-launch-1312.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-native-reload-launch-1312.json",
+      "size": 1013,
+      "sha256": "cf9061d429e2d8ed1a27f295a13b00c64dac328b04804e5b26f2b3568c3b3396"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/smoke-native-reload-launch-1312.raw.log",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-native-reload-launch-1312.raw.log",
+      "size": 639,
+      "sha256": "fee7a5a590bb1f891c081cc2c8e873e731f17792b5228c056c6b37984f940731"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload.py",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload.py",
+      "size": 11737,
+      "sha256": "5364672a92d23fdc13b25809ae2364973ab8d81195729880988732b06ca2d2e0"
+    },
+    {
+      "name": "usr/local/lib/python3.12/dist-packages/torch/distributed/argparse_util.py",
+      "remote_path": "/usr/local/lib/python3.12/dist-packages/torch/distributed/argparse_util.py",
+      "size": 3903,
+      "sha256": "345c63c366ac62dd3a6857df72eeab849a42dc516d87028bbbdc2f5849bfa905"
+    },
+    {
+      "name": "usr/local/lib/python3.12/dist-packages/torch/distributed/run.py",
+      "remote_path": "/usr/local/lib/python3.12/dist-packages/torch/distributed/run.py",
+      "size": 34300,
+      "sha256": "0dce0257f4c6fe4809b95981f98add58dd3ee6a888847385329f0fff977e0699"
+    }
+  ],
+  "verifier_executed": false,
+  "new_model_reload_executed": false,
+  "new_reload_audit_exists": false,
+  "queue_exited_at_snapshot": true,
+  "gpu_at_snapshot": {
+    "used_mib": 47,
+    "utilization_percent": 0,
+    "compute_processes": []
+  },
+  "completed_npo_train_preserved": true,
+  "original_plain_hf_failure_preserved": true,
+  "training_repeated": false,
+  "checkpoint_byte_audit_repeated": false,
+  "threshold": {
+    "atol": 0.05,
+    "rtol": 0.01
+  },
+  "cpu_parser_diagnostic": {
+    "status": "READONLY_CPU_PARSER_DIAGNOSTIC",
+    "result": {
+      "status": "ACTUAL_REMOTE_SOURCE_BOUND_CPU_ARGPARSE_REPRODUCTION_AND_SEPARATOR_PASS_ONLY",
+      "python": "3.12.3 (main, Jan 17 2025, 18:03:48) [GCC 13.3.0]",
+      "interpreter": "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "argparse_source_sha256": "29395feb61bc376ca4ff9d44069af8d914ec2a1f25a4bd7978f6e2afef5bc07f",
+      "torchrun_source_sha256": "0dce0257f4c6fe4809b95981f98add58dd3ee6a888847385329f0fff977e0699",
+      "argparse_util_source_sha256": "345c63c366ac62dd3a6857df72eeab849a42dc516d87028bbbdc2f5849bfa905",
+      "original_arguments": [
+        "--standalone",
+        "--nproc_per_node=1",
+        "/data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload.py",
+        "--source-sha256",
+        "5364672a92d23fdc13b25809ae2364973ab8d81195729880988732b06ca2d2e0",
+        "--run",
+        "/data/spf-npo-smoke-20261007-r1/runs/reload-native-1312"
+      ],
+      "original_parser_exit_code": 2,
+      "original_parser_stderr_text": "usage: -c [-h] [--nnodes NNODES] [--nproc-per-node NPROC_PER_NODE]\n          [--rdzv-backend RDZV_BACKEND] [--rdzv-endpoint RDZV_ENDPOINT]\n          [--rdzv-id RDZV_ID] [--rdzv-conf RDZV_CONF] [--standalone]\n          [--max-restarts MAX_RESTARTS] [--monitor-interval MONITOR_INTERVAL]\n          [--start-method {spawn,fork,forkserver}] [--role ROLE] [-m]\n          [--no-python] [--run-path] [--log-dir LOG_DIR] [-r REDIRECTS]\n          [-t TEE] [--local-ranks-filter LOCAL_RANKS_FILTER]\n          [--node-rank NODE_RANK] [--master-addr MASTER_ADDR]\n          [--master-port MASTER_PORT] [--local-addr LOCAL_ADDR]\n          [--logs-specs LOGS_SPECS]\n          training_script ...\n-c: error: ambiguous option: --run could match --run-path, --run_path\n",
+      "proposed_arguments": [
+        "--standalone",
+        "--nproc_per_node=1",
+        "--",
+        "/data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload.py",
+        "--source-sha256",
+        "5364672a92d23fdc13b25809ae2364973ab8d81195729880988732b06ca2d2e0",
+        "--run",
+        "/data/spf-npo-smoke-20261007-r1/runs/reload-native-1312"
+      ],
+      "parsed_script": "/data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload.py",
+      "parsed_script_arguments": [
+        "--source-sha256",
+        "5364672a92d23fdc13b25809ae2364973ab8d81195729880988732b06ca2d2e0",
+        "--run",
+        "/data/spf-npo-smoke-20261007-r1/runs/reload-native-1312"
+      ],
+      "separator_only": true,
+      "script_arguments_unchanged": true,
+      "torch_imported": false,
+      "workers_started": 0,
+      "cuda_used": false,
+      "weights_read": false,
+      "model_reload_executed": false,
+      "new_api_calls": 0,
+      "deployed": false,
+      "actual_remote_model_reload_pass": false
+    },
+    "child_returncode": 0,
+    "stderr_text": "",
+    "progress_snapshot": false,
+    "remote_mutations": 0,
+    "gpu_submissions": 0,
+    "credential_reads": 0
+  },
+  "local_diagnostic_failure": {
+    "python": "3.12.14",
+    "error": "AssertionError: saved failure did not reproduce in local parser",
+    "remote_commands": 0,
+    "source_preserved": true,
+    "original_stdout_stderr_stream_bytes": false
+  },
+  "recovery_command_separator_verified_only": true,
+  "new_remote_mutations": 0,
+  "new_gpu_submissions": 0,
+  "pilot_frozen": false,
+  "target_gate": "insufficient_evidence"
+}
