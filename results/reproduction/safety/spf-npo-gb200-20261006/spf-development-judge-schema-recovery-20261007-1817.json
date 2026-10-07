@@ -1,0 +1,97 @@
+{
+  "status": "RUNNING",
+  "observed_at_utc": "2026-10-07T10:17:40.281989+00:00",
+  "original_local_judge_status": "STOPPED_ON_ERROR_NO_RETRY",
+  "original_intents": 4,
+  "original_api_successes": 3,
+  "original_pre_http_pydantic_error_intents": 1,
+  "original_token_usage": {
+    "input_tokens": 1742,
+    "output_tokens": 549
+  },
+  "original_actual_models": {
+    "gpt-5.6-terra": 3
+  },
+  "original_records_preserved": true,
+  "schema_failure": {
+    "status": "LEGACY_HARMFUL_SCHEMA_FAILURE_REPRODUCED_BEFORE_HTTP_FIXED_BY_STANDARD_MODULE_REGISTRATION",
+    "legacy_error": {
+      "error_type": "PydanticUserError",
+      "error_code": "class-not-fully-defined"
+    },
+    "mock_transport_http_requests": 0,
+    "real_api_calls": 0,
+    "credential_reads": 0,
+    "rubric_source_sha256": "ddfd529d84ab10b4b3cc8054cecfac8fa8abcc4ef718b77a3b5e5d584eec153a",
+    "installed_sdk_parse_source_sha256": "8e8d87dfe30790ef905c09d905db9f01c81e74c97656ba5c520b77cf76c6c88c",
+    "registered_original_schema_sha256": "696956bb8d2a2bf0e04bb3febe930afc97f1b845014b57bd100164f0fc47a682",
+    "classification_enums_and_confidence_bounds_unchanged": true,
+    "actual_fourth_result": "PydanticUserError before serialization/HTTP, based on bound SDK and exact legacy module reproduction",
+    "actual_successful_judge_rows_preserved": 3
+  },
+  "schema_recovery": {
+    "status": "LOCAL_SCHEMA_RECOVERY_SOURCE_AND_PREFLIGHT_PASS_PENDING_MEMORY_KEY",
+    "old_status": "STOPPED_ON_ERROR_NO_RETRY",
+    "old_api_successes": 3,
+    "old_pre_http_schema_failure_intents": 1,
+    "remaining_api_requests": 789,
+    "total_paid_request_limit": 792,
+    "paid_requests_repeated": 0,
+    "rubric_bytes_unchanged": true,
+    "runner_sha256": "8f88420437e4a8d38a862eb85dfa7b09d4c08520dec14de02aed2fa0fb4b09b2",
+    "plan_sha256": "d3c24a9afeda8b438e3b6d561517a549d9fe81d23b96aba7f4e54b54fd5a215c",
+    "dialog_sha256": "940f44f41f59351147fa31fd3f689d0dd16cba12892e78177d1347fb0c54dc9f",
+    "prior_job_sha256": "73fec72544f68b41796638dc5c685d6c57f68211f2acf4f36241c3bb66129a8c",
+    "prior_results_sha256": "9ecb4492b91dc9c8cce483792702e5654ce4f31e266f193bc572a39cbe39efbb",
+    "schema_diagnostic_sha256": "f07a84acd99dd333e284ebed7f57eef798882fbd23e21df7921971b95e5b0947",
+    "new_api_calls": 0
+  },
+  "new_checks": {
+    "status": "THREE_ORIGINAL_SCHEMAS_MOCK_SDK_PARSE_PASS_REMAINING789_BOUND",
+    "mock_http_requests": 3,
+    "real_api_calls": 0,
+    "credential_reads": 0,
+    "three_schemas": [
+      "harmful",
+      "benign",
+      "conversation"
+    ],
+    "remaining789_verified": true,
+    "completed_spf3_not_replayed": true,
+    "negative_profiles_rejected": [
+      "new_calls",
+      "reused_response_labels"
+    ],
+    "rubric_prompt_hashes_unchanged": {
+      "harmful": "2847ea07bc69b611ba63950a3dcb11970905b8b1f57754c73067e41675a568fa",
+      "benign": "e800dfa717051d573b5c0b6fcf72544e8e22c8171dbf3652b3563ab1907fc02e",
+      "conversation": "eb3b38410a545e4e9a683e5687a38fe325dc53ea6a1a4885aa1402faa79fa8d0"
+    }
+  },
+  "recovery_pid": 23980,
+  "credential_input_status": "NEW_KEY_SUPPLIED_TO_CHILD_MEMORY_ONLY",
+  "new_attempted": 16,
+  "new_completed": 15,
+  "new_statuses": {
+    "success": 15
+  },
+  "source_registration_fixed": true,
+  "rubric_bytes_and_profile_unchanged": true,
+  "successful_three_not_repeated": true,
+  "new_request_limit": 789,
+  "total_paid_request_limit": 792,
+  "key_persisted": false,
+  "credential_values_read_by_agent": false,
+  "old_h100_env_read": false,
+  "native_reload_pid": 3889,
+  "native_reload_result": "UNKNOWN",
+  "gpu_snapshot_logical_queries": 1,
+  "gpu_snapshot_internal_attempts": 2,
+  "gpu_snapshot_outer_retries": 0,
+  "new_remote_mutations": 0,
+  "new_gpu_submissions": 0,
+  "human_adjudication_complete": false,
+  "cluster_mapping_verified": false,
+  "target_gate": "insufficient_evidence",
+  "pilot_frozen": false
+}

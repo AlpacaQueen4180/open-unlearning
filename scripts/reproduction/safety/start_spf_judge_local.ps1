@@ -23,6 +23,8 @@ $form.Size = New-Object System.Drawing.Size(610, 310)
 $form.StartPosition = 'CenterScreen'
 $form.FormBorderStyle = 'FixedDialog'
 $form.MaximizeBox = $false
+$form.ShowInTaskbar = $true
+$form.TopMost = $true
 $label = New-Object System.Windows.Forms.Label
 $label.Location = New-Object System.Drawing.Point(20, 20)
 $label.Size = New-Object System.Drawing.Size(560, 125)
@@ -42,7 +44,14 @@ $button.Add_Click({
 })
 $form.Controls.AddRange(@($label, $box, $button))
 $form.AcceptButton = $button
-[System.IO.File]::WriteAllText((Join-Path $RunDirectory 'credential-input-status.private.json'), '{"status":"WAITING_FOR_NEW_KEY_LOCAL_MASKED_DIALOG","api_calls_executed":0}', [System.Text.UTF8Encoding]::new($false))
+[System.IO.File]::WriteAllText((Join-Path $RunDirectory 'credential-input-status.private.json'), '{"status":"CREATING_LOCAL_MASKED_DIALOG","api_calls_executed":0}', [System.Text.UTF8Encoding]::new($false))
+$form.Add_Shown({
+    $form.Activate()
+    $form.BringToFront()
+    $box.Focus()
+    $taskVisible = @{status='WAITING_FOR_NEW_KEY_LOCAL_MASKED_DIALOG';api_calls_executed=0;shown_event_received=$true;form_visible=$form.Visible;show_in_taskbar=$form.ShowInTaskbar;topmost=$form.TopMost}
+    [System.IO.File]::WriteAllText((Join-Path $RunDirectory 'credential-input-status.private.json'), ($taskVisible | ConvertTo-Json), [System.Text.UTF8Encoding]::new($false))
+})
 try {
     $result = $form.ShowDialog()
     if ($result -ne [System.Windows.Forms.DialogResult]::OK) {
