@@ -1,0 +1,14 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]Loading weights: 100%|██████████| 291/291 [00:00<00:00, 10278.60it/s]
+Traceback (most recent call last):
+  File "/data/spf-npo-smoke-20261007-r1/code/verify_spf_npo_smoke_reload.py", line 93, in <module>
+    main()
+  File "/data/spf-npo-smoke-20261007-r1/code/verify_spf_npo_smoke_reload.py", line 82, in main
+    torch.testing.assert_close(logits,probe['logits'],atol=0.05,rtol=0.01)
+  File "/usr/local/lib/python3.12/dist-packages/torch/testing/_comparison.py", line 1530, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 17023 / 128256 (13.3%)
+Greatest absolute difference: 0.1875 at index (19561,) (up to 0.05 allowed)
+Greatest relative difference: 2503.347900390625 at index (107000,) (up to 0.01 allowed)

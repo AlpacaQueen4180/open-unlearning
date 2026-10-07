@@ -1,0 +1,407 @@
+{
+  "status": "ACTUAL_SMOKE_TRAIN_COMPLETE_FRESH_RELOAD_FAILED",
+  "snapshot_utc": "2026-10-07T05:13:01.273004+00:00",
+  "snapshot_sha256": "3fcf2ddd5f14f56b692e6fd9c767f0523411433fa1ef7dcf1bf2e25a8a60a365",
+  "snapshot_source_sha256": "e65ed1a8abcaadd03a14e62258aee15948bb943306a6657228f2d9576506f540",
+  "next_snapshot_source_sha256": "64cf902be2895f006829b1335a39e3494c58df3891fc2402536fd0200eec3085",
+  "queue_pid": 2953,
+  "queue_exited": true,
+  "gpu": {
+    "returncode": 0,
+    "stdout": "47 MiB, 0 %\n",
+    "stderr": ""
+  },
+  "compute_processes": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "actual_command_stages": [
+    {
+      "name": "train",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=1",
+        "/data/spf-npo-smoke-20261007-r1/validation-code/spf_npo_training_args_api_r2.py",
+        "--config-path",
+        "/data/spf-npo-smoke-20261007-r1/configs",
+        "--config-name",
+        "spf_npo_smoke"
+      ],
+      "cwd": "/data/spf-development-20261007-r1/repo",
+      "environment_overrides": {
+        "SPF_NPO_SMOKE_CONTRACT": "/data/spf-npo-smoke-20261007-r1/contract.private.json",
+        "SPF_NPO_SMOKE_CONTRACT_SHA256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7",
+        "HF_HUB_OFFLINE": "1",
+        "HF_DATASETS_OFFLINE": "1",
+        "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+        "TOKENIZERS_PARALLELISM": "false",
+        "WANDB_MODE": "disabled",
+        "HYDRA_FULL_ERROR": "1",
+        "HF_HUB_CACHE": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+        "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1",
+        "PYTHONPATH": "/data/spf-development-20261007-r1/repo/src",
+        "SPF_NPO_TRAINING_ARGS_API_SHA256": "bba745ba98304b4edb90037c1d24f776b277c00e42df5ac90e5f07ed3d7a90a7",
+        "SPF_NPO_TRAINING_ARGS_API_RECEIPT": "/data/spf-npo-smoke-20261007-r1/runs/import-recovery-1257/training-args-binding.private.json"
+      },
+      "log": "/data/spf-npo-smoke-20261007-r1/runs/import-recovery-1257/train.raw.log",
+      "started_at": 1791349569.4717684,
+      "gpu_before_stage": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "process_pid": 2961,
+      "returncode": 0,
+      "finished_at": 1791349662.0146122,
+      "raw_log_sha256": "3f6e7601d131e6abce6236080e07abdd8d72b8dc11afc4a7c2315a952b18141e"
+    },
+    {
+      "name": "fresh-reload",
+      "command": [
+        "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+        "/data/spf-npo-smoke-20261007-r1/code/verify_spf_npo_smoke_reload.py",
+        "--contract",
+        "/data/spf-npo-smoke-20261007-r1/contract.private.json",
+        "--contract-sha256",
+        "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7"
+      ],
+      "cwd": "/data/spf-development-20261007-r1/repo",
+      "environment_overrides": {
+        "SPF_NPO_SMOKE_CONTRACT": "/data/spf-npo-smoke-20261007-r1/contract.private.json",
+        "SPF_NPO_SMOKE_CONTRACT_SHA256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7",
+        "HF_HUB_OFFLINE": "1",
+        "HF_DATASETS_OFFLINE": "1",
+        "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+        "TOKENIZERS_PARALLELISM": "false",
+        "WANDB_MODE": "disabled",
+        "HYDRA_FULL_ERROR": "1",
+        "HF_HUB_CACHE": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+        "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1",
+        "PYTHONPATH": "/data/spf-development-20261007-r1/repo/src",
+        "SPF_NPO_TRAINING_ARGS_API_SHA256": "bba745ba98304b4edb90037c1d24f776b277c00e42df5ac90e5f07ed3d7a90a7",
+        "SPF_NPO_TRAINING_ARGS_API_RECEIPT": "/data/spf-npo-smoke-20261007-r1/runs/import-recovery-1257/training-args-binding.private.json"
+      },
+      "log": "/data/spf-npo-smoke-20261007-r1/runs/import-recovery-1257/fresh-reload.raw.log",
+      "started_at": 1791349662.0218792,
+      "gpu_before_stage": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      "process_pid": 3501,
+      "returncode": 1,
+      "finished_at": 1791349681.5195045,
+      "raw_log_sha256": "cddad0b89dfae148b4632130c7ac75c180134131182a731b6eee11be4ac9d8ae"
+    }
+  ],
+  "failed_status_sha256": "0c361bd91dc9819f80be3013bf832262bb3bd93149e2c9d7dccaa12a603c9565",
+  "completed": [
+    "train"
+  ],
+  "train_wrapper_pid": 2961,
+  "native_train_pid": 3029,
+  "train_returncode": 0,
+  "actual_native_import_preflight": {
+    "status": "ACTUAL_BOUND_GPU_IMPORT_CONTEXT_PASS",
+    "pid": 3029,
+    "cuda_initialized_before": false,
+    "cuda_initialized_after": true,
+    "peak_allocated_bytes": 0,
+    "precision_unchanged": true,
+    "weights_read": false,
+    "training_arguments_instantiated": false,
+    "npo_training_executed": false,
+    "independent_trace_capture_sha256": "55e417fcb14e26f3093bfbdedcb5a2f048dadccf77458258191ff49eb050726a"
+  },
+  "actual_api_binding_sha256": "070bb3e91402f983c6a680df31407062e989e01497699c54ac7c7fb001ebcac1",
+  "actual_train_runtime": {
+    "trainer_global_step": 2,
+    "engine_global_steps": 2,
+    "microsteps": 10,
+    "epoch": 1.0,
+    "world_size": 1,
+    "micro_batch": 4,
+    "configured_gas": 8,
+    "alpha": 0.0,
+    "gamma": 1.0,
+    "beta": 0.1,
+    "retain_loss_type": "NLL",
+    "learning_rate": 1e-07,
+    "dataset_examples": 40,
+    "retain_pool_examples": 3800,
+    "forget_exposures": 40,
+    "attention": "flash_attention_2",
+    "optimizer": "paged_adamw_32bit",
+    "zero_stage": 3,
+    "retain_exposures": 40,
+    "unique_forget_examples": 40,
+    "initial_target_reference_equal": true,
+    "reference_fingerprint_unchanged": true,
+    "initial_parameter_fingerprint": "5003ed1a5f22eeaa55add066e7d90c3566bbe4b8f170a53a63a9cf0f8ffc75ea",
+    "final_reference_fingerprint": "5003ed1a5f22eeaa55add066e7d90c3566bbe4b8f170a53a63a9cf0f8ffc75ea",
+    "loss_scaling_trace": [
+      {
+        "microstep": 1,
+        "raw_npo_loss": 13.8125,
+        "loss_entering_ds_backward": 1.7265625,
+        "actual_window_microbatches": 8,
+        "boundary": false,
+        "kwargs": {
+          "scale_wrt_gas": false
+        },
+        "mask_valid": true
+      },
+      {
+        "microstep": 2,
+        "raw_npo_loss": 13.8125,
+        "loss_entering_ds_backward": 1.7265625,
+        "actual_window_microbatches": 8,
+        "boundary": false,
+        "kwargs": {
+          "scale_wrt_gas": false
+        },
+        "mask_valid": true
+      },
+      {
+        "microstep": 3,
+        "raw_npo_loss": 13.8125,
+        "loss_entering_ds_backward": 1.7265625,
+        "actual_window_microbatches": 8,
+        "boundary": false,
+        "kwargs": {
+          "scale_wrt_gas": false
+        },
+        "mask_valid": true
+      },
+      {
+        "microstep": 4,
+        "raw_npo_loss": 13.8125,
+        "loss_entering_ds_backward": 1.7265625,
+        "actual_window_microbatches": 8,
+        "boundary": false,
+        "kwargs": {
+          "scale_wrt_gas": false
+        },
+        "mask_valid": true
+      },
+      {
+        "microstep": 5,
+        "raw_npo_loss": 13.8125,
+        "loss_entering_ds_backward": 1.7265625,
+        "actual_window_microbatches": 8,
+        "boundary": false,
+        "kwargs": {
+          "scale_wrt_gas": false
+        },
+        "mask_valid": true
+      },
+      {
+        "microstep": 6,
+        "raw_npo_loss": 13.8125,
+        "loss_entering_ds_backward": 1.7265625,
+        "actual_window_microbatches": 8,
+        "boundary": false,
+        "kwargs": {
+          "scale_wrt_gas": false
+        },
+        "mask_valid": true
+      },
+      {
+        "microstep": 7,
+        "raw_npo_loss": 13.8125,
+        "loss_entering_ds_backward": 1.7265625,
+        "actual_window_microbatches": 8,
+        "boundary": false,
+        "kwargs": {
+          "scale_wrt_gas": false
+        },
+        "mask_valid": true
+      },
+      {
+        "microstep": 8,
+        "raw_npo_loss": 13.8125,
+        "loss_entering_ds_backward": 1.7265625,
+        "actual_window_microbatches": 8,
+        "boundary": true,
+        "kwargs": {
+          "scale_wrt_gas": false
+        },
+        "mask_valid": true
+      },
+      {
+        "microstep": 9,
+        "raw_npo_loss": 13.8125,
+        "loss_entering_ds_backward": 6.90625,
+        "actual_window_microbatches": 2,
+        "boundary": false,
+        "kwargs": {
+          "scale_wrt_gas": false
+        },
+        "mask_valid": true
+      },
+      {
+        "microstep": 10,
+        "raw_npo_loss": 13.8125,
+        "loss_entering_ds_backward": 6.90625,
+        "actual_window_microbatches": 2,
+        "boundary": true,
+        "kwargs": {
+          "scale_wrt_gas": false
+        },
+        "mask_valid": true
+      }
+    ],
+    "contract_sha256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7",
+    "observer_policy": "Native original loss/training_step/backward return values unchanged; no boundary mutation.",
+    "fresh_process_reload_verified": false,
+    "pilot_candidates_frozen": false
+  },
+  "train_trace_audit": {
+    "status": "NATIVE_SCALING_MASK_REFERENCE_PASS_PENDING_FRESH_RELOAD",
+    "fresh_process_reload_verified": false,
+    "pilot_candidates_frozen": false
+  },
+  "original_fresh_reload": {
+    "status": "FAILED_RELOAD",
+    "contract_sha256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7",
+    "fresh_reload_pid": 3501,
+    "capture_process_pid": 3029,
+    "final_checkpoint": {
+      "parameter_tensors": 291,
+      "layers": 32,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size": 16060556616,
+          "sha256": "84f3bbaa85abeaf0214d2a9cfe89f407c6a5954072e07b9de99475db47b32f69",
+          "tensors": 291
+        }
+      ],
+      "weights_bytes": 16060556616
+    },
+    "comparison": {
+      "atol": 0.05,
+      "rtol": 0.01
+    },
+    "numerical_context": {
+      "torch_version": "2.7.0a0+ecf3bae40a.nv25.02",
+      "transformers_version": "5.5.4",
+      "float32_matmul_precision": "high",
+      "allow_tf32": true,
+      "tf32_override": "1"
+    },
+    "buffer_metadata_matches": false,
+    "numerical_settings_or_rotary_buffers_modified": false,
+    "pilot_candidates_frozen": false,
+    "target_gate_evaluated": false,
+    "max_logit_error": 0.1875,
+    "error": "AssertionError('Tensor-likes are not close!\\n\\nMismatched elements: 17023 / 128256 (13.3%)\\nGreatest absolute difference: 0.1875 at index (19561,) (up to 0.05 allowed)\\nGreatest relative difference: 2503.347900390625 at index (107000,) (up to 0.01 allowed)')",
+    "fresh_process_reload_verified": false
+  },
+  "capture_buffer_metadata": {
+    "model.rotary_emb.inv_freq": {
+      "shape": [
+        64
+      ],
+      "dtype": "torch.bfloat16"
+    },
+    "model.rotary_emb.original_inv_freq": {
+      "shape": [
+        64
+      ],
+      "dtype": "torch.bfloat16"
+    }
+  },
+  "capture_sha256": "a7eea385d0f9fd455ccbd911952f430ad2aff8529054a08d3782e06bd94fd045",
+  "preserved_probe_sha256": "fca2cbb38de8f2481fa852199bdd4c01ba9529c8fef3dc5a715c10c5e6741193",
+  "preserved_comparison_sha256": "01eaaeeb72bb53cbb12bb543efecf1474432d2043f86875e846030707389c242",
+  "immutable_archive_sha256": "ff297694692c6264115a45b0cef59f4079a98d37432636d09e409f2940b225d9",
+  "export_scope": {
+    "files": 27,
+    "weights_read": false,
+    "progress_snapshot": false,
+    "completed_historical_artifacts_redownloaded": false
+  },
+  "prepared_native_reload_only": {
+    "status": "SOURCE_BOUND_NATIVE_RELOAD_ONLY_PREPARATION",
+    "sources": {
+      "scripts/reproduction/safety/gb200/verify_spf_npo_smoke_native_reload.py": "5364672a92d23fdc13b25809ae2364973ab8d81195729880988732b06ca2d2e0",
+      "scripts/reproduction/safety/gb200/run_spf_npo_smoke_reload_only_queue.py": "9ee71c00d28fba2c998c68e94bf59584587be56a68da9abcb097c4ad20299ab3"
+    },
+    "actual_completed_train_trace": {
+      "status": "NATIVE_SCALING_MASK_REFERENCE_PASS_PENDING_FRESH_RELOAD",
+      "fresh_process_reload_verified": false,
+      "pilot_candidates_frozen": false
+    },
+    "original_capture_buffers": {
+      "model.rotary_emb.inv_freq": {
+        "shape": [
+          64
+        ],
+        "dtype": "torch.bfloat16"
+      },
+      "model.rotary_emb.original_inv_freq": {
+        "shape": [
+          64
+        ],
+        "dtype": "torch.bfloat16"
+      }
+    },
+    "original_plain_hf_reload_status": "FAILED_RELOAD",
+    "original_max_logit_error": 0.1875,
+    "original_threshold": {
+      "atol": 0.05,
+      "rtol": 0.01
+    },
+    "full_hf_export_audit_already_completed": {
+      "parameter_tensors": 291,
+      "layers": 32,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size": 16060556616,
+          "sha256": "84f3bbaa85abeaf0214d2a9cfe89f407c6a5954072e07b9de99475db47b32f69",
+          "tensors": 291
+        }
+      ],
+      "weights_bytes": 16060556616
+    },
+    "source_evidence": {
+      "deepspeed_engine_sha256": "b4853189c5c5f5b3669a482778a2f44864cab7c0e863cf91e158ec4d9a955b9d",
+      "engine_bf16_setup_calls_module_bfloat16": true,
+      "llama_source_sha256": "46d313ec0f1116bcc1bb7f2379467ab249c140415c64fb758e2d5915cd8b89a5",
+      "rotary_buffers_nonpersistent": true
+    },
+    "root_cause_inference": "Native engine BF16 buffer setup differs from plain HF reload. This is a source-backed difference; no repaired numerical equivalence is established.",
+    "new_schema_negatives": [
+      "wrong-pid",
+      "train-incomplete",
+      "train-failed",
+      "microsteps-incomplete",
+      "successful-reload",
+      "wrong-threshold",
+      "train-returncode",
+      "changed-npo-binding"
+    ],
+    "negative_scope": "CPU schema against actual preserved metadata only; no Torch import/weights/CUDA/model subprocess.",
+    "completed_diagnostics_repeated": false,
+    "training_repeated": false,
+    "reload_source_ready": true,
+    "reload_deployed": false,
+    "reload_submitted": false,
+    "actual_native_reload_verified": false,
+    "pilot_frozen": false,
+    "next_snapshot_source_sha256": "64cf902be2895f006829b1335a39e3494c58df3891fc2402536fd0200eec3085"
+  },
+  "new_remote_deployment": false,
+  "new_gpu_submission": false,
+  "full_smoke_acceptance": false,
+  "pilot_frozen": false,
+  "target_gate": "insufficient_evidence",
+  "publication_scope": "Sources, necessary raw train/reload logs, small trace/binding proof and derived metadata only. No QA, probe/comparison tensors, weights, contract or frozen/prepared membership.",
+  "limits": "The successful train is actual CUDA evidence. The original plain-HF reload failed at the unchanged tolerance. Native DeepSpeed buffer setup is a source-backed difference, not a repaired-runtime pass. New reload code is source-ready only; all results must go in a new journal, with no retraining."
+}
