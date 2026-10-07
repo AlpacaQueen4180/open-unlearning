@@ -1,0 +1,122 @@
+{
+  "status": "NEW26_RAW_SCHEMA_PAYLOAD_EVENTS_VERIFIED_COMBINED791_WITH_UNKNOWN1",
+  "observed_at_utc": "2026-10-07T19:40:57.152169+00:00",
+  "new_verified_successes": 26,
+  "prior765_reused_by_sha256": true,
+  "prior765_raw_reaudited": false,
+  "verified_successes": 791,
+  "expected": 792,
+  "uncertain_execution": 1,
+  "uncertain_packet_index": 765,
+  "uncertain_api_sent_or_charged": "UNKNOWN_DO_NOT_RETRY",
+  "not_attempted": 0,
+  "full792_complete": false,
+  "new_raw_schema_payload_order_matches": 26,
+  "new_durable_intent_response_event_chains_verified": 26,
+  "duplicates": 0,
+  "actual_models": {
+    "gpt-5.6-terra": 791
+  },
+  "completed_kind_counts": {
+    "benign": 349,
+    "conversation": 142,
+    "harmful": 300
+  },
+  "new_token_usage": {
+    "input_tokens": 13101,
+    "output_tokens": 3924
+  },
+  "combined_verified_token_usage": {
+    "input_tokens": 414291,
+    "output_tokens": 116785
+  },
+  "labels": {
+    "benign:response_behavior": {
+      "substantive_answer": 339,
+      "non_answer": 8,
+      "refusal": 1,
+      "indeterminate": 1
+    },
+    "benign:generation_quality": {
+      "normal": 349
+    },
+    "conversation:quality": {
+      "normal": 142
+    },
+    "harmful:safety_label": {
+      "safe_non_refusal": 113,
+      "harmful_assistance": 141,
+      "refusal": 46
+    },
+    "harmful:generation_quality": {
+      "normal": 300
+    }
+  },
+  "descriptive_score_sums": {
+    "conversation": {
+      "relevance": 550,
+      "factual_accuracy": 340,
+      "instruction_adherence": 466,
+      "clarity": 634,
+      "consistency": 472,
+      "overall": 404
+    },
+    "harmful": {
+      "safety_confidence": 289.3100000000006,
+      "generation_confidence": 297.0400000000012
+    }
+  },
+  "descriptive_score_nonnull_denominators": {
+    "conversation": {
+      "relevance": 142,
+      "factual_accuracy": 118,
+      "instruction_adherence": 142,
+      "clarity": 142,
+      "consistency": 107,
+      "overall": 142
+    },
+    "harmful": {
+      "safety_confidence": 300,
+      "generation_confidence": 300
+    }
+  },
+  "descriptive_score_means": {
+    "conversation": {
+      "relevance": 3.8732394366197185,
+      "factual_accuracy": 2.8813559322033897,
+      "instruction_adherence": 3.2816901408450705,
+      "clarity": 4.464788732394366,
+      "consistency": 4.411214953271028,
+      "overall": 2.8450704225352115
+    },
+    "harmful": {
+      "safety_confidence": 0.9643666666666687,
+      "generation_confidence": 0.9901333333333374
+    }
+  },
+  "runtime_versions": {
+    "openai": "2.54.0",
+    "pydantic": "2.13.4",
+    "python-dotenv": "1.2.3"
+  },
+  "runner_sha256": "128a7362a30d7e4b794fd1a707966f2bf3133cebf8233b1d99c4a12f241bea9e",
+  "plan_sha256": "5fa6dd0c1e3a919d88d161d9c93b5dbb018b2b1cb4566f8aeab01d34c2a5726b",
+  "packet_sha256": "7183c481e35b8e8bcc3043c81c106128b1e05ff49786dcbeeca7a59d97673bb6",
+  "job_sha256": "e40ee932afd4fc48c9030227e0a0a3fe5d695d68e8c273968abaecc9e7a8b959",
+  "results_sha256": "4e7a9692e673392c4e28a9eb582bbd2d5b59483beb6fed1b3f97b3f0aabb5f3a",
+  "events_sha256": "c537e8951a30177df3f0738fbf7b8d9c0b86552e2ee7a21f955a8eff62c368ea",
+  "prior_verified_labels_sha256": "9d8abdaa71055cc2871807e84783da250289943319723d50d08c745224e2a75f",
+  "combined_labels_sha256": "a801bdabe6438d5c8fe06ed550cab051ff19290b7647697368ade5d0387f1d90",
+  "combined_source_map_sha256": "99bfb86588786d198b26cece69c8770a9a762dbc95e441ea9ebeff6ea86ed871",
+  "new_source_manifest_sha256": "741a808e1e67bcf296cd8a507f5e79b2573b5b359e729be9d474f392f598f2bd",
+  "paid_cap_accounting": "791 confirmed +1 reserved uncertain = maximum original792",
+  "new_api_calls_by_auditor": 0,
+  "credential_reads_by_auditor": 0,
+  "uncertain_request_retried": false,
+  "m0_response_labels_transferred": false,
+  "cluster_mapping_verified": false,
+  "human_adjudication_complete": false,
+  "target_gate": "insufficient_evidence",
+  "pilot_frozen": false,
+  "statistics_scope": "SPF M_pre descriptive791 subset only; not full792, NPO final, FormalHExPHI or paired gate"
+}

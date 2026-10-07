@@ -1,0 +1,192 @@
+{
+  "status": "NATIVE_CONFIG_RELOAD_ONLY_SUBMITTED_RESULT_NOT_CHECKED",
+  "observed_at_utc": "2026-10-07T19:43:37.688876+00:00",
+  "snapshot_utc": "2026-10-07T19:37:47.039902+00:00",
+  "snapshot_sha256": "b6e233a31f6a8283d098e427a4b20cfc17e8c11e46a405fcbc68af8fdd893d6c",
+  "snapshot_source_sha256": "e0399188c09f45039fb2ead096353bf613d60b8722247fbc06ea6dd12cd9ab04",
+  "launch": {
+    "status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "pid": 4577,
+    "command": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-npo-smoke-20261007-r1/validation-code/run_spf_npo_smoke_reload_config_r3_queue.py",
+      "--controller-sha256",
+      "6f10b69ef02297ebadb2a2d8b93bb857c04ff16b0d6e4a39ae29e1bfa1830d53",
+      "--snapshot",
+      "/data/spf-npo-smoke-20261007-r1/validation-code/r4-snapshot-native-reload-config-0340.private.json",
+      "--snapshot-sha256",
+      "b6e233a31f6a8283d098e427a4b20cfc17e8c11e46a405fcbc68af8fdd893d6c",
+      "--run-id",
+      "reload-native-config-2025"
+    ],
+    "cwd": "/data/spf-development-20261007-r1/repo",
+    "snapshot_sha256": "b6e233a31f6a8283d098e427a4b20cfc17e8c11e46a405fcbc68af8fdd893d6c",
+    "started_at": 1791401971.0755627,
+    "log": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-native-reload-config-launch-2025.raw.log",
+    "original_checkpoint_modified": false,
+    "training_repeated": false,
+    "completed_diagnostics_repeated": false,
+    "pilot_frozen": false
+  },
+  "submission_utc": "2026-10-07T19:39:31.075563+00:00",
+  "snapshot_age_at_submission_seconds": 104.03566074371338,
+  "bundle_sha256": "9196a60d500d8bc9bb751ebd402af531ad987c710b4c6563d67cb327da7b7a56",
+  "sealed_files": {
+    "run_spf_npo_smoke_reload_config_r3_queue.py": {
+      "size": 13850,
+      "sha256": "6f10b69ef02297ebadb2a2d8b93bb857c04ff16b0d6e4a39ae29e1bfa1830d53"
+    },
+    "verify_spf_npo_smoke_native_reload_config_r3.py": {
+      "size": 12531,
+      "sha256": "a2cb389d8bceec0e00008af46ddae0ce77e06f853c5f0e976c1017849f47482b"
+    },
+    "r4-snapshot-native-reload-config-0340.private.json": {
+      "size": 57519,
+      "sha256": "b6e233a31f6a8283d098e427a4b20cfc17e8c11e46a405fcbc68af8fdd893d6c"
+    }
+  },
+  "stages": [
+    {
+      "stage": "preflight",
+      "returncode": 0,
+      "as_run_source_sha256": "9a79cb14d030546020b4eae1444029c5bb9dba2bc0643d879f798fbc795d40ab",
+      "result_sha256": "509e43f2f602ba3a8bbebd28f83178dd68e0cdd98a9194b642e4002a3cbf9fe0",
+      "native_joined_utf8_cli_sha256": "8d8ce9cbc97266dc43e48298b6685da8cb2942c4d8cd3b37465a004017b304ac"
+    },
+    {
+      "stage": "chunk-0",
+      "returncode": 0,
+      "as_run_source_sha256": "eac973ed7e6f4e27d9d3f537321b2c9572382e234e12226fe30fb5197566c309",
+      "result_sha256": "97630094e264684c2e39e9652086557baccee1d49ee53ac342c87615998d519f",
+      "native_joined_utf8_cli_sha256": "7a55449fecd6249c67a33c19a2d62790cc7976a4bf3ae42d3655cee202364011"
+    },
+    {
+      "stage": "chunk-1",
+      "returncode": 0,
+      "as_run_source_sha256": "4d25c87e9013b18727945116e7c4945da92209254c77f2c9595b679b7cda588b",
+      "result_sha256": "06cde1e72fc49efe66ff0351645ebde201ad7e11af041e2dc80b51e62240f20a",
+      "native_joined_utf8_cli_sha256": "87f169cd02fea5fa625929091bd1ad2386a1623636649a7f98db3382bca69bab"
+    },
+    {
+      "stage": "chunk-2",
+      "returncode": 0,
+      "as_run_source_sha256": "103484a1214d9f9a3a20cb2b79b8ac490f4457dea0516d37fc7f530c2062708f",
+      "result_sha256": "15e6913ad1873ce45a901d972f3ff1ccaae99cd1b8bdefaa957791c1d4f69412",
+      "native_joined_utf8_cli_sha256": "7affbb1703fd4fcb5bfa6ff2ed9b757c374b2565127b0d52b0520b3ed57972c4"
+    },
+    {
+      "stage": "chunk-3",
+      "returncode": 0,
+      "as_run_source_sha256": "78442faa7ad36d00d29847e9468975d86c674761344c91c0aba24e06c444a22d",
+      "result_sha256": "ff24d87dee1b1a63c9f8af18499862bb87b8d8f748ce1ade4f9a37a84d1f0170",
+      "native_joined_utf8_cli_sha256": "d99056d47eda8dd13a06088c1d1dea1b760983418ecaf148ea233a10010b631f"
+    },
+    {
+      "stage": "chunk-4",
+      "returncode": 0,
+      "as_run_source_sha256": "921cdd2d1220dc8c987e486c114bf441f6b8c9a7a6927da4459a453ec8e2de3f",
+      "result_sha256": "2173e96816683f0d0e89a26ce4302f53ab1c88c669beb4ebd13a6ed33d6316dd",
+      "native_joined_utf8_cli_sha256": "0eb12d4a07ae965424d9c3d233bbe68fe0601183de049596ee62dd63225aec10"
+    },
+    {
+      "stage": "chunk-5",
+      "returncode": 0,
+      "as_run_source_sha256": "47a1f9c2490614cab0f5e5b40b0a3af2f17874f7699b38195a2aa1a1b2c2111f",
+      "result_sha256": "629c862912a5455dd8b7ff362b1c8d4afe9837aed1521a503d3f5a56fb2998c7",
+      "native_joined_utf8_cli_sha256": "d32ae89ffae1e2637194008978e3544a83c3cf105af084af08787c11e634efb0"
+    },
+    {
+      "stage": "chunk-6",
+      "returncode": 0,
+      "as_run_source_sha256": "68dd8bb524b3090f11a7657f3186a1ec571a98c1b734b7d74be2ba7994959ca1",
+      "result_sha256": "f0256ab7e7d8baec70d6466e6f210fef2b049762bfe17b7be465333c30240179",
+      "native_joined_utf8_cli_sha256": "248d7e2e935340053c95223cafc6f657bf50e0e4768906b7b29cbc24012cceab"
+    },
+    {
+      "stage": "seal",
+      "returncode": 0,
+      "as_run_source_sha256": "f419e62bfdb26932899f2ecbab73e3452e7295e69ab6a88c30f8e9b3f29d87d3",
+      "result_sha256": "fdb98ed23839c9f42f98c7270ff97fd5cc8cb3b0442ebe17b9bfcb041183ac25",
+      "native_joined_utf8_cli_sha256": "ae8ad859f7df6ed670b83f7b991c5e9ba4a8faea92b6bc5a28de0a0231d699d9"
+    },
+    {
+      "stage": "launch-once",
+      "returncode": 0,
+      "as_run_source_sha256": "9f6b8690ae421a2d800dce7c12056dea5b155a3c0b4e9bd006f64091a0b3c343",
+      "result_sha256": "1b7836b00009edbc34bcb5ff396e399fc035e4e9efec7f3bd667fcb6fad0caf9",
+      "native_joined_utf8_cli_sha256": "e873f419a09db19c96ff5100ac8b4f7a8f85708b174b8ea16a18a8b01bc134ba"
+    }
+  ],
+  "partial_transport_failure": {
+    "stage": "chunk-1",
+    "native_joined_utf8_cli_sha256": "2cb72adf0523e67abf31a9d7f2cc4f131c97b97b397ce6b20d882662ba83126f",
+    "raw_stream_bytes_captured": false,
+    "original_stage_not_rerun": true
+  },
+  "artifact_check": {
+    "purpose": "readonly_partial_deployment_artifact_check_not_gpu_progress",
+    "chunks": {
+      "0": {
+        "size": 3500,
+        "sha256": "5def84873adf75835fbc9e80e2ccad9a6eca8d16cae1d1b49d780c3d638fe4f7"
+      },
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null
+    },
+    "files": {
+      "run_spf_npo_smoke_reload_config_r3_queue.py": null,
+      "verify_spf_npo_smoke_native_reload_config_r3.py": null,
+      "r4-snapshot-native-reload-config-0340.private.json": null
+    },
+    "launch": null,
+    "early_log": null,
+    "run_exists": false
+  },
+  "artifact_check_sha256": "ed9eeb4de0c72b2f3a23ee7844d984be2c2a6a565e2b88f0d562f6afe996158d",
+  "explicit_only_missing_stage_recovery": {
+    "original_bundle_sha256": "9196a60d500d8bc9bb751ebd402af531ad987c710b4c6563d67cb327da7b7a56",
+    "original_commands_sha256": "606c85a80783f3e30187fb21c9caf6c5609976912cda97f380764ee195865676",
+    "artifact_check_sha256": "ed9eeb4de0c72b2f3a23ee7844d984be2c2a6a565e2b88f0d562f6afe996158d",
+    "reused_successful_stages": [
+      "preflight",
+      "chunk-0"
+    ],
+    "remaining_stages": [
+      "chunk-1",
+      "chunk-2",
+      "chunk-3",
+      "chunk-4",
+      "chunk-5",
+      "chunk-6",
+      "seal",
+      "launch-once"
+    ],
+    "failed_chunk1_cli_sha256": "2cb72adf0523e67abf31a9d7f2cc4f131c97b97b397ce6b20d882662ba83126f",
+    "capture": "native strings joined with LF, encoded UTF8; not original stream bytes",
+    "new_bundle_created": false,
+    "blind_retry": false,
+    "route_changed": false
+  },
+  "post_submission_progress_queries": 0,
+  "logical_gpu_progress_snapshots": 1,
+  "outer_snapshot_retries": 0,
+  "new_gpu_submissions": 1,
+  "original_checkpoint_retrained": false,
+  "completed_diagnostics_repeated": false,
+  "checkpoint_full_byte_audit_repeated": false,
+  "original_plain_hf_failure_preserved": true,
+  "manual_rotary_cast": false,
+  "tf32_changed": false,
+  "threshold": {
+    "atol": 0.05,
+    "rtol": 0.01
+  },
+  "native_logits_equivalence_verified": false,
+  "pilot_frozen": false,
+  "target_gate": "insufficient_evidence",
+  "private_payloads_or_keys_in_publication": false
+}
