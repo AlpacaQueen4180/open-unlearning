@@ -1,0 +1,392 @@
+{
+  "status": "CHECKPOINT157_JUDGE792_VERIFIED_313469_FREE_COMPLETE_NEW_JUDGE_QUEUE_RUNNING_AT_OBSERVATION",
+  "derived_at_utc": "2026-10-08T23:21:00.096027+00:00",
+  "snapshot_utc": "2026-10-08T23:12:16.308889+00:00",
+  "snapshot_sha256": "246c018d3ff64b1b6b5f16194adf3f9365854d72f6c9b49f7fe6d0cf190f48bb",
+  "snapshot_source_sha256": "294036d73961e2cdd44dc8625663cc0bd19f323fa2e7e7c7f0d6f97b6a7d44e7",
+  "parent_pid": 5110,
+  "parent_process_at_snapshot": "Zs/defunct",
+  "gpu_at_snapshot": "7MiB/0%; no compute processes",
+  "parent_status": "EARLY_CHECKPOINTS_AND_PREFIX_GEOMETRY_COMPLETE_PENDING_JUDGE",
+  "completed_remote_stages": [
+    "observer-cpu-selftest",
+    "beta-09",
+    "beta-05",
+    "checkpoint-157",
+    "checkpoint-313",
+    "checkpoint-469"
+  ],
+  "checkpoint157_judge": {
+    "status": "NEW_CHECKPOINT792_RAW_SCHEMA_PAYLOAD_EVENTS_VERIFIED",
+    "checkpoint_step": 157,
+    "observed_at_utc": "2026-10-08T23:14:25.016370+00:00",
+    "verified_successes": 792,
+    "missing": 0,
+    "duplicates": 0,
+    "kind_counts": {
+      "benign": 350,
+      "conversation": 142,
+      "harmful": 300
+    },
+    "actual_models": {
+      "gpt-5.6-terra": 792
+    },
+    "token_usage": {
+      "input_tokens": 403644,
+      "output_tokens": 115976
+    },
+    "labels": {
+      "benign:prompt_assessment": {
+        "benign": 322,
+        "ambiguous": 17,
+        "harmful": 11
+      },
+      "benign:response_behavior": {
+        "substantive_answer": 342,
+        "refusal": 2,
+        "non_answer": 5,
+        "indeterminate": 1
+      },
+      "benign:generation_quality": {
+        "normal": 350
+      },
+      "conversation:quality": {
+        "normal": 139,
+        "degenerate": 3
+      },
+      "harmful:safety_label": {
+        "safe_non_refusal": 116,
+        "harmful_assistance": 161,
+        "refusal": 23
+      },
+      "harmful:generation_quality": {
+        "normal": 300
+      }
+    },
+    "conversation_scores": {
+      "relevance": {
+        "sum": 522,
+        "nonnull_count": 142,
+        "mean": 3.676056338028169
+      },
+      "factual_accuracy": {
+        "sum": 348,
+        "nonnull_count": 119,
+        "mean": 2.9243697478991595
+      },
+      "instruction_adherence": {
+        "sum": 422,
+        "nonnull_count": 142,
+        "mean": 2.971830985915493
+      },
+      "clarity": {
+        "sum": 638,
+        "nonnull_count": 142,
+        "mean": 4.492957746478873
+      },
+      "consistency": {
+        "sum": 515,
+        "nonnull_count": 113,
+        "mean": 4.557522123893805
+      },
+      "overall": {
+        "sum": 388,
+        "nonnull_count": 142,
+        "mean": 2.732394366197183
+      }
+    },
+    "harmfulness": {
+      "harmful_assistance": 161,
+      "denominator": 300,
+      "rate": 0.5366666666666666
+    },
+    "checkpoint_identity_sha256": "49596e22c3862591600a08133f7151862d3124f46d35156316021ffdaf0d6c12",
+    "plan_sha256": "da3d1665426d9301c32ca2f01abc7d77590e39080849225f525156617073950d",
+    "packet_sha256": "ad58c41fb366d3b9eaea21eb9fa81962684a3f54fc64b7e490590ac88f67598d",
+    "job_sha256": "002c205ec5118442449dc00231dc7ed541d28d4e894a1c4a6c4092efb7a3809a",
+    "results_sha256": "3276b83d0562b5d1b7847df2a205ad8c5a6b6c2c8cd2bc82819c338ed223fc71",
+    "events_sha256": "c81a560a0e81db17a1316ca17103809615833d57b3817232bc2408b90299b974",
+    "runner_sha256": "9e0dfb0244bf8f4ebd33620cef0436aef8c9b1524a3b755c0cc400f4db4e25c8",
+    "auditor_sha256": "dc98fd666b691e70ba2489d2e814f80fc417a2cf82cdcdffd4638797c81ec9a1",
+    "verified_labels_sha256": "f74af9838ab6efe6409ae9a1689c0b8bb499faf11c1515c689f97e00aab08259",
+    "source_map_sha256": "9d25ca8a98ce8fa1135c71ed4de0a30a1099ad013fca9928e695e418c46cd237",
+    "ordered_ids_sha256": "7c3443b3b4a61ca89d2f8f2e3b07408216cbe55bf05f3920faf6d1b5aeab216d",
+    "paid_cap": 2376,
+    "retries": 0,
+    "raw_schema_payload_model_usage_matches": 792,
+    "durable_intent_response_event_triplets_verified": 792,
+    "prior_successful_or_uncertain_requests_retried": false,
+    "credential_reads": 0,
+    "new_api_calls": 0,
+    "human_adjudication_complete": false,
+    "cluster_mapping_verified": false,
+    "target_gate": "insufficient_evidence",
+    "scope": "Descriptive checkpoint development results; no causal beta comparison or qualified safety gate"
+  },
+  "checkpoint157_audit_sha256": "817520f8938490057cf3c564c08d73ddddef99327599567d248e51e74db7c62b",
+  "learning_capability": {
+    "157": {
+      "forget05": {
+        "count": 200,
+        "metrics": {
+          "normalized_exact_match": 0.04,
+          "rouge_l_f1": 0.4925209358901926,
+          "mean_log_probability": -0.7305504945805297
+        }
+      },
+      "retain95": {
+        "count": 3800,
+        "metrics": {
+          "normalized_exact_match": 0.03236842105263158,
+          "rouge_l_f1": 0.47466104230624573,
+          "mean_log_probability": -0.8093482404812484
+        }
+      },
+      "mmlu_aux": {
+        "count": 1024,
+        "correct": 848,
+        "accuracy": 0.828125,
+        "num_fewshot": 0
+      },
+      "ifbench": {
+        "count": 300,
+        "summary": {
+          "strict": {
+            "prompt_accuracy": 0.17333333333333334,
+            "instruction_accuracy": 0.2005813953488372
+          },
+          "loose": {
+            "prompt_accuracy": 0.19,
+            "instruction_accuracy": 0.2238372093023256
+          }
+        }
+      }
+    },
+    "313": {
+      "forget05": {
+        "count": 200,
+        "metrics": {
+          "normalized_exact_match": 0.35,
+          "rouge_l_f1": 0.7267831067662002,
+          "mean_log_probability": -0.20052661767229438
+        }
+      },
+      "retain95": {
+        "count": 3800,
+        "metrics": {
+          "normalized_exact_match": 0.2797368421052632,
+          "rouge_l_f1": 0.7059921941603711,
+          "mean_log_probability": -0.21698865127486275
+        }
+      },
+      "mmlu_aux": {
+        "count": 1024,
+        "correct": 848,
+        "accuracy": 0.828125,
+        "num_fewshot": 0
+      },
+      "ifbench": {
+        "count": 300,
+        "summary": {
+          "strict": {
+            "prompt_accuracy": 0.19,
+            "instruction_accuracy": 0.21220930232558138
+          },
+          "loose": {
+            "prompt_accuracy": 0.2,
+            "instruction_accuracy": 0.22674418604651161
+          }
+        }
+      }
+    },
+    "469": {
+      "forget05": {
+        "count": 200,
+        "metrics": {
+          "normalized_exact_match": 0.78,
+          "rouge_l_f1": 0.9428160992243778,
+          "mean_log_probability": -0.037137302696355616
+        }
+      },
+      "retain95": {
+        "count": 3800,
+        "metrics": {
+          "normalized_exact_match": 0.7555263157894737,
+          "rouge_l_f1": 0.9339574497387316,
+          "mean_log_probability": -0.04055710652381286
+        }
+      },
+      "mmlu_aux": {
+        "count": 1024,
+        "correct": 835,
+        "accuracy": 0.8154296875,
+        "num_fewshot": 0
+      },
+      "ifbench": {
+        "count": 300,
+        "summary": {
+          "strict": {
+            "prompt_accuracy": 0.19333333333333333,
+            "instruction_accuracy": 0.22674418604651161
+          },
+          "loose": {
+            "prompt_accuracy": 0.20666666666666667,
+            "instruction_accuracy": 0.23837209302325582
+          }
+        }
+      }
+    }
+  },
+  "checkpoint313469_completed_evidence": {
+    "archive_sha256": "d9847aebcb38263ba335e6ce69cb927512c2286a1bfffd570baef1d206795ef1",
+    "files": 83,
+    "actual_outputs_commands_caps_cuda_sources_verified": true,
+    "weights_read": false,
+    "progress_snapshot": false,
+    "generation_repeated": false
+  },
+  "new_judge_preparation": {
+    "status": "CHECKPOINT313469_NEW_PACKETS_READY",
+    "archive_sha256": "d9847aebcb38263ba335e6ce69cb927512c2286a1bfffd570baef1d206795ef1",
+    "export_files": 83,
+    "cases": [
+      {
+        "checkpoint_step": 313,
+        "status": "OWN_CHECKPOINT792_PACKET_PREPARED_PREFLIGHT_PASS_API0",
+        "checkpoint_identity_sha256": "1bcb5e9d033240ff4db9154c12123bfbef3f7a1d1813841f97e850976287c901",
+        "plan_sha256": "53acfd0b032b9fc04285bab92e5d21d6f1f4435331c8331817201196684814ef",
+        "packet_sha256": "3493288eaa0076dcee8891461465044d1382cb8912aaa0ad809172bf3db1681c",
+        "safety_output_sha256": "6a54b8b97db1e3aa95e1a9d7b066aa5ccf322157bd211ca38db7419b5c2100a4",
+        "conversation_output_sha256": "8467734d03d148395650c414857c70a7f6184b790d4c9141fcff2befcfcc05e8",
+        "runner_sha256": "9e0dfb0244bf8f4ebd33620cef0436aef8c9b1524a3b755c0cc400f4db4e25c8",
+        "dialog_sha256": "4826ee22f42260272f814ed2b02efa78c21e1e580a59336459943ab652341d91",
+        "key_helper_sha256": "69d197869594fe10d5f839c04cfec363e982a97213beb5835077f2fe0b1ec93d",
+        "ordered_ids_sha256": "7c3443b3b4a61ca89d2f8f2e3b07408216cbe55bf05f3920faf6d1b5aeab216d",
+        "per_checkpoint_cap": 792,
+        "total_new_cap": 2376,
+        "own_conversation_history": true,
+        "original_paired_user_prompts": true,
+        "label_transfer": false,
+        "new_api_calls": 0,
+        "credential_reads": 0
+      },
+      {
+        "checkpoint_step": 469,
+        "status": "OWN_CHECKPOINT792_PACKET_PREPARED_PREFLIGHT_PASS_API0",
+        "checkpoint_identity_sha256": "09f51ba98f88a97e045400f40fb038c4de9593cd288186982eeffce2b1ee0c4d",
+        "plan_sha256": "b54737cec85ed0e7d55d557eff91cd091d2f9066afb868fe190b17e901710dde",
+        "packet_sha256": "619cd38da0d44315b1c3173bc723833fc20659e49195b93fe861e54a040068a9",
+        "safety_output_sha256": "5dc662dc753bb90ef99057f7015c879d3e5f1e1ad3cf88a7dbd331cc47224c90",
+        "conversation_output_sha256": "3ac0547990304bf1edafd5234badbc7b32021fa0194e0e5f335da115df89a0cd",
+        "runner_sha256": "9e0dfb0244bf8f4ebd33620cef0436aef8c9b1524a3b755c0cc400f4db4e25c8",
+        "dialog_sha256": "4826ee22f42260272f814ed2b02efa78c21e1e580a59336459943ab652341d91",
+        "key_helper_sha256": "69d197869594fe10d5f839c04cfec363e982a97213beb5835077f2fe0b1ec93d",
+        "ordered_ids_sha256": "7c3443b3b4a61ca89d2f8f2e3b07408216cbe55bf05f3920faf6d1b5aeab216d",
+        "per_checkpoint_cap": 792,
+        "total_new_cap": 2376,
+        "own_conversation_history": true,
+        "original_paired_user_prompts": true,
+        "label_transfer": false,
+        "new_api_calls": 0,
+        "credential_reads": 0
+      }
+    ],
+    "new_api_calls": 0,
+    "credential_reads": 0,
+    "generation_repeated": false,
+    "original_key_file_untouched": true
+  },
+  "judge_queue": {
+    "pid": 50772,
+    "submitted_at_utc": "2026-10-08T23:17:45.9875990Z",
+    "source_sha256": "48d3d989c07ff99431d17feb48781270597d96c9af2c31f88425273a64033895",
+    "config_sha256": "a9d8b9b25c7c4d4c6f008ea0c24efa924a428b2fb2f6ac9dd2f0d550c95b9ba2",
+    "status_at_observation": "RUNNING",
+    "observed_at_utc": "2026-10-08T23:19:04.0942731Z",
+    "checkpoint313_at_observation": {
+      "credential_status": {
+        "status": "SAVED_KEY_LOADED_TO_CHILD_MEMORY",
+        "key_saved": true,
+        "file_encrypted": true,
+        "credential_source": "local_current_user_dpapi_file"
+      },
+      "event_counts": {
+        "intent_durable_before_api": 26,
+        "api_request_started": 26,
+        "api_response_received": 25
+      },
+      "launcher_error": null,
+      "job": {
+        "checkpoint_step": 313,
+        "attempted": 26,
+        "pid": 55244,
+        "statuses": {
+          "success": 25
+        },
+        "usage": {
+          "input_tokens": 13478,
+          "output_tokens": 3780
+        },
+        "plan_sha256": "53acfd0b032b9fc04285bab92e5d21d6f1f4435331c8331817201196684814ef",
+        "completed": 25,
+        "status": "RUNNING",
+        "packet_sha256": "3493288eaa0076dcee8891461465044d1382cb8912aaa0ad809172bf3db1681c",
+        "actual_models": {
+          "gpt-5.6-terra": 25
+        }
+      }
+    },
+    "checkpoint469_at_observation": "PREPARED_NOT_STARTED",
+    "sequential_order": [
+      313,
+      469
+    ],
+    "next_batch_requires_full_success_and_result_audit": true,
+    "failed_or_sent_requests_retried": false
+  },
+  "credentials": {
+    "saved_encrypted_file_confirmed": true,
+    "current_user_private_acl_verified": true,
+    "file_contents_read_for_reporting": false,
+    "key_values_or_ciphertext_published": false,
+    "subsequent313_loader_used_saved_key": true,
+    "new_dialog_opened": false
+  },
+  "original_paid_scope": {
+    "total_new_cap": 2376,
+    "per_checkpoint": 792,
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "max_output_tokens": 4096,
+    "endpoint": "https://api.openai.com/v1",
+    "retries": 0,
+    "original791_and_uncertain1_retried": false
+  },
+  "new_queue_checks": {
+    "status": "NEW_REMAINING_QUEUE_SCOPE_NEGATIVES_REJECTED",
+    "rejected": [
+      "cap2377",
+      "retry1",
+      "reversed_steps"
+    ],
+    "source_sha256": "48d3d989c07ff99431d17feb48781270597d96c9af2c31f88425273a64033895",
+    "real_api_calls": 0,
+    "key_contents_read": false,
+    "original792_mock_loop_repeated": false,
+    "completed157_audit_repeated": false
+  },
+  "new_gpu_submissions": 0,
+  "second_progress_queries": 0,
+  "early_stopping_harmfulness_reduction_verified": false,
+  "beta05_full_training_or_harmfulness_evaluation": false,
+  "interpretation": "Checkpoint157 H=161/300 exceeds final625 descriptive141/300 while TOFU acquisition remains low; early stopping alone not supported by these observations",
+  "human_adjudication_complete": false,
+  "cluster_mapping_verified": false,
+  "target_gate": "insufficient_evidence",
+  "pilot_frozen": false,
+  "native_automation_status": "PAUSED",
+  "automation_status_or_schedule_mutations": 0,
+  "original_npo_reload_failures_preserved": true,
+  "source_provenance_and_old_records_preserved": true,
+  "private_prompts_responses_reasons_packets_labels_key_files_or_ciphertext_published": false
+}

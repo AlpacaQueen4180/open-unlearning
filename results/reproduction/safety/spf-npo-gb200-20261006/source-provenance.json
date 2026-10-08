@@ -626,5 +626,26 @@
     "credential_values_or_ciphertext_published": false,
     "new_api_calls_at_observation": 0,
     "paid_cap_changed": false
+  },
+  "checkpoint_judge_results_20261009": {
+    "evidence": "results/reproduction/safety/spf-npo-gb200-20261006/spf-checkpoint-judge-results-and-continuation-20261009.json",
+    "status": "CHECKPOINT157_JUDGE792_VERIFIED_313469_FREE_COMPLETE_NEW_JUDGE_QUEUE_RUNNING_AT_OBSERVATION",
+    "checkpoint157_audit_sha256": "817520f8938490057cf3c564c08d73ddddef99327599567d248e51e74db7c62b",
+    "verified157_results": 792,
+    "harmful157": 161,
+    "harmful157_denominator": 300,
+    "archive313469_sha256": "d9847aebcb38263ba335e6ce69cb927512c2286a1bfffd570baef1d206795ef1",
+    "snapshot_sha256": "246c018d3ff64b1b6b5f16194adf3f9365854d72f6c9b49f7fe6d0cf190f48bb",
+    "queue_source_sha256": "48d3d989c07ff99431d17feb48781270597d96c9af2c31f88425273a64033895",
+    "queue_config_sha256": "a9d8b9b25c7c4d4c6f008ea0c24efa924a428b2fb2f6ac9dd2f0d550c95b9ba2",
+    "queue_pid": 50772,
+    "key_saved_encrypted_and_acl_verified": true,
+    "actual313_completed_at_observation": 25,
+    "actual313_attempted_at_observation": 26,
+    "checkpoint469_not_started_at_observation": true,
+    "original_cap": 2376,
+    "credential_values_or_ciphertext_published": false,
+    "target_gate": "insufficient_evidence",
+    "automation_status_changed": false
   }
 }

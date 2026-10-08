@@ -1,0 +1,13 @@
+{
+  "status": "NEW_REMAINING_QUEUE_SCOPE_NEGATIVES_REJECTED",
+  "rejected": [
+    "cap2377",
+    "retry1",
+    "reversed_steps"
+  ],
+  "source_sha256": "48d3d989c07ff99431d17feb48781270597d96c9af2c31f88425273a64033895",
+  "real_api_calls": 0,
+  "key_contents_read": false,
+  "original792_mock_loop_repeated": false,
+  "completed157_audit_repeated": false
+}
