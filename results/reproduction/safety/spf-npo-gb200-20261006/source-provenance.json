@@ -525,5 +525,57 @@
     "spf_paid_judge_unsent26_key_ui_status": "WAITING_FOR_NEW_KEY_LOCAL_MASKED_DIALOG",
     "spf_paid_judge_unsent26_current_counters": null,
     "spf_paid_judge_unsent26_evidence": "spf-development-judge-unsent26-prepared-20261007-2000.json"
+  },
+  "native_optimizer_failure_observed_20261008": {
+    "evidence": "results/reproduction/safety/spf-npo-gb200-20261006/spf-npo-native-optimizer-failure-20261008-1750.json",
+    "snapshot_sha256": "11ababbbe920199eb5592291219ed3474a146262dfdba169c2fc03deb441d0e0",
+    "immutable_archive_sha256": "ef96aced2c2e249d849be2eb739b4e32807759244b702a46726bdf92f4073ea4",
+    "status": "NATIVE_RELOAD_FAILED_OPTIMIZER_GUARD_BEFORE_LOGITS_COMPARISON",
+    "source_sha256": "e0399188c09f45039fb2ead096353bf613d60b8722247fbc06ea6dd12cd9ab04",
+    "pilot_frozen": false,
+    "target_gate": "insufficient_evidence",
+    "additional_training_or_paid_judge_calls": 0
+  },
+  "spf_harmfulness_analysis_20261008": {
+    "scope": "SPF M_pre development, before NPO; descriptive seed 0 cross-platform comparison",
+    "counts": {
+      "m0": [
+        7,
+        300
+      ],
+      "mixing": [
+        13,
+        300
+      ],
+      "spf": [
+        141,
+        300
+      ]
+    },
+    "spf_minus_mixing_percentage_points": 42.66666666666667,
+    "harmful_coverage_complete": true,
+    "remaining_unknown_packet_kind": "benign",
+    "shared_safety_anchor": true,
+    "mixing_coefficient": 1.0,
+    "spf_adds_anchor_gradient": false,
+    "spf_conflicting_updates": 297,
+    "spf_total_updates": 625,
+    "actual_adamw_beta1": 0.9,
+    "paper_adamw_beta1": 0.5,
+    "paper": "https://arxiv.org/html/2601.10141v1",
+    "configuration_sha256": "d3aeba5342e5102124d7a12096cb4190c56c9617dabb75ed1df5a3b155bc354d",
+    "causal_root_cause_verified": false,
+    "optimizer_actual_step_safety_dot_not_recorded": true,
+    "anchor_loss_trajectory_not_recorded": true,
+    "recommendations_only": true,
+    "new_training_recipe_executed": false,
+    "priority": [
+      "Evaluate existing earlier checkpoints with learning and safety criteria",
+      "Bounded optimizer geometry diagnostic and beta1 ablation before attributing cause",
+      "Prefer Mixing as the current evidence-backed safety candidate; gate gaps remain",
+      "Consider separately named SPF plus safety-loss mixing only as a new recipe"
+    ],
+    "no_formal_hexphi_parameter_selection": true,
+    "additional_paid_judge_budget_not_authorized_by_recommendation_request": true
   }
 }

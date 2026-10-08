@@ -1,0 +1,211 @@
+{
+  "status": "NATIVE_RELOAD_FAILED_OPTIMIZER_GUARD_BEFORE_LOGITS_COMPARISON",
+  "observed_at_utc": "2026-10-08T10:02:09.603681+00:00",
+  "snapshot_utc": "2026-10-08T09:50:44.227676+00:00",
+  "snapshot_sha256": "11ababbbe920199eb5592291219ed3474a146262dfdba169c2fc03deb441d0e0",
+  "snapshot_source_sha256": "e0399188c09f45039fb2ead096353bf613d60b8722247fbc06ea6dd12cd9ab04",
+  "failure_status": {
+    "status": "FAILED",
+    "mode": "completed-train-native-context-reload-only",
+    "pid": 4577,
+    "completed": [],
+    "stages": [
+      {
+        "name": "fresh-reload",
+        "command": [
+          "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+          "-m",
+          "torch.distributed.run",
+          "--standalone",
+          "--nproc_per_node=1",
+          "--",
+          "/data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload_config_r3.py",
+          "--source-sha256",
+          "a2cb389d8bceec0e00008af46ddae0ce77e06f853c5f0e976c1017849f47482b",
+          "--run",
+          "/data/spf-npo-smoke-20261007-r1/runs/reload-native-config-2025"
+        ],
+        "cwd": "/data/spf-development-20261007-r1/repo",
+        "environment_overrides": {
+          "SPF_NPO_SMOKE_CONTRACT": "/data/spf-npo-smoke-20261007-r1/contract.private.json",
+          "SPF_NPO_SMOKE_CONTRACT_SHA256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7",
+          "HF_HUB_OFFLINE": "1",
+          "HF_DATASETS_OFFLINE": "1",
+          "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "TOKENIZERS_PARALLELISM": "false",
+          "WANDB_MODE": "disabled",
+          "HYDRA_FULL_ERROR": "1",
+          "HF_HUB_CACHE": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1",
+          "PYTHONPATH": "/data/spf-development-20261007-r1/repo/src"
+        },
+        "log": "/data/spf-npo-smoke-20261007-r1/runs/reload-native-config-2025/fresh-reload.raw.log",
+        "started_at": 1791401971.1874852,
+        "gpu_before_stage": {
+          "returncode": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        "process_pid": 4584,
+        "returncode": 1,
+        "finished_at": 1791401996.97607,
+        "raw_log_sha256": "9b06a9088e03084f0fc53263bfed3c8c4bda526e32c9cea8cf1b3c1cfe746f71"
+      }
+    ],
+    "started_at": 1791401971.1848776,
+    "controller_sha256": "6f10b69ef02297ebadb2a2d8b93bb857c04ff16b0d6e4a39ae29e1bfa1830d53",
+    "verifier_sha256": "a2cb389d8bceec0e00008af46ddae0ce77e06f853c5f0e976c1017849f47482b",
+    "snapshot_sha256": "b6e233a31f6a8283d098e427a4b20cfc17e8c11e46a405fcbc68af8fdd893d6c",
+    "preserved_original_status_sha256": "0c361bd91dc9819f80be3013bf832262bb3bd93149e2c9d7dccaa12a603c9565",
+    "original_run": "import-recovery-1257",
+    "preserved_native_launcher_failure_sha256": "2f247e8e538c6fd4a7b412317fb599112c76ff126b974070f960f7ec4fbac828",
+    "command_separator_recovery": true,
+    "training_repeated": false,
+    "completed_diagnostics_repeated": false,
+    "pilot_candidates_frozen": false,
+    "contract_sha256": "958d8ae4a54b1c355443f67b731cdf04b65aec0f7128b723297746187c0353a7",
+    "target_gate_evaluated": false,
+    "stage": "fresh-reload",
+    "error": "RuntimeError('fresh-reload failed; preserve evidence and do not retry training')",
+    "finished_at": 1791401996.9790316,
+    "recovery": "Preserve new reload journal; never train this completed checkpoint again"
+  },
+  "failure_status_sha256": "e9aef6d910a8f60dc2081683678c0ae67cd76c0ef69e5700858820fa6fea7866",
+  "failure_raw_sha256": "9b06a9088e03084f0fc53263bfed3c8c4bda526e32c9cea8cf1b3c1cfe746f71",
+  "audit_sha256": "f78d8208591969b3ee53735de7725e8702aa9417369bbef7242994b4e2e7b40d",
+  "immutable_archive_sha256": "ef96aced2c2e249d849be2eb739b4e32807759244b702a46726bdf92f4073ea4",
+  "immutable_export_files": [
+    {
+      "name": "data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/deepspeed/runtime/engine.py",
+      "remote_path": "/data/npo-gb200-20261004/validation-20261006/venv/lib/python3.12/site-packages/deepspeed/runtime/engine.py",
+      "size": 175183,
+      "sha256": "b4853189c5c5f5b3669a482778a2f44864cab7c0e863cf91e158ec4d9a955b9d",
+      "local_name": "00-engine.py"
+    },
+    {
+      "name": "data/spf-development-20261007-r1/repo/src/trainer/unlearn/base.py",
+      "remote_path": "/data/spf-development-20261007-r1/repo/src/trainer/unlearn/base.py",
+      "size": 7626,
+      "sha256": "fbd938156f4bd86a33582d18e2363de0fb53a72788904a6c6a4bc803486a07a6",
+      "local_name": "01-base.py"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/reload-native-config-2025/fresh-reload.raw.log",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/reload-native-config-2025/fresh-reload.raw.log",
+      "size": 18279,
+      "sha256": "9b06a9088e03084f0fc53263bfed3c8c4bda526e32c9cea8cf1b3c1cfe746f71",
+      "local_name": "02-fresh-reload.raw.log"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/reload-native-config-2025/reload-audit.private.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/reload-native-config-2025/reload-audit.private.json",
+      "size": 2447,
+      "sha256": "f78d8208591969b3ee53735de7725e8702aa9417369bbef7242994b4e2e7b40d",
+      "local_name": "03-reload-audit.private.json"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/runs/reload-native-config-2025/status.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/runs/reload-native-config-2025/status.json",
+      "size": 2916,
+      "sha256": "e9aef6d910a8f60dc2081683678c0ae67cd76c0ef69e5700858820fa6fea7866",
+      "local_name": "04-status.json"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/r4-snapshot-native-reload-config-0340.private.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/r4-snapshot-native-reload-config-0340.private.json",
+      "size": 57519,
+      "sha256": "b6e233a31f6a8283d098e427a4b20cfc17e8c11e46a405fcbc68af8fdd893d6c",
+      "local_name": "05-r4-snapshot-native-reload-config-0340.private.json"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/run_spf_npo_smoke_reload_config_r3_queue.py",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/run_spf_npo_smoke_reload_config_r3_queue.py",
+      "size": 13850,
+      "sha256": "6f10b69ef02297ebadb2a2d8b93bb857c04ff16b0d6e4a39ae29e1bfa1830d53",
+      "local_name": "06-run_spf_npo_smoke_reload_config_r3_queue.py"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/smoke-native-reload-config-launch-2025.json",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-native-reload-config-launch-2025.json",
+      "size": 1039,
+      "sha256": "2740294d90a2db823fab42251758aaaa6602616d6543a19d525c0f42748fc0fc",
+      "local_name": "07-smoke-native-reload-config-launch-2025.json"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/smoke-native-reload-config-launch-2025.raw.log",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/smoke-native-reload-config-launch-2025.raw.log",
+      "size": 649,
+      "sha256": "e9bca1a80d669366fa2cb9cc9fd91132e60c71ac02f1c7ed03d322da4e693ba4",
+      "local_name": "08-smoke-native-reload-config-launch-2025.raw.log"
+    },
+    {
+      "name": "data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload_config_r3.py",
+      "remote_path": "/data/spf-npo-smoke-20261007-r1/validation-code/verify_spf_npo_smoke_native_reload_config_r3.py",
+      "size": 12531,
+      "sha256": "a2cb389d8bceec0e00008af46ddae0ce77e06f853c5f0e976c1017849f47482b",
+      "local_name": "09-verify_spf_npo_smoke_native_reload_config_r3.py"
+    }
+  ],
+  "native_engine_initialized": true,
+  "optimizer_created": true,
+  "training_steps_executed": 0,
+  "backward_calls": 0,
+  "logits_comparison_executed": false,
+  "comparison_file_exists": false,
+  "verifier_pid": 4652,
+  "completed_checkpoint_retrained": false,
+  "checkpoint_byte_audit_repeated": false,
+  "export_weights_read": false,
+  "export_model_evaluation_executed": false,
+  "logical_progress_snapshots_this_turn": 1,
+  "outer_snapshot_retry_count": 0,
+  "new_gpu_submissions": 0,
+  "new_paid_judge_calls": 0,
+  "new_credential_reads": 0,
+  "original_plain_hf_threshold_failure_preserved": true,
+  "pilot_frozen": false,
+  "target_gate": "insufficient_evidence",
+  "automation_status_changed": false,
+  "harmfulness_analysis": {
+    "scope": "SPF M_pre development, before NPO; descriptive seed 0 cross-platform comparison",
+    "counts": {
+      "m0": [
+        7,
+        300
+      ],
+      "mixing": [
+        13,
+        300
+      ],
+      "spf": [
+        141,
+        300
+      ]
+    },
+    "spf_minus_mixing_percentage_points": 42.66666666666667,
+    "harmful_coverage_complete": true,
+    "remaining_unknown_packet_kind": "benign",
+    "shared_safety_anchor": true,
+    "mixing_coefficient": 1.0,
+    "spf_adds_anchor_gradient": false,
+    "spf_conflicting_updates": 297,
+    "spf_total_updates": 625,
+    "actual_adamw_beta1": 0.9,
+    "paper_adamw_beta1": 0.5,
+    "paper": "https://arxiv.org/html/2601.10141v1",
+    "configuration_sha256": "d3aeba5342e5102124d7a12096cb4190c56c9617dabb75ed1df5a3b155bc354d",
+    "causal_root_cause_verified": false,
+    "optimizer_actual_step_safety_dot_not_recorded": true,
+    "anchor_loss_trajectory_not_recorded": true,
+    "recommendations_only": true,
+    "new_training_recipe_executed": false,
+    "priority": [
+      "Evaluate existing earlier checkpoints with learning and safety criteria",
+      "Bounded optimizer geometry diagnostic and beta1 ablation before attributing cause",
+      "Prefer Mixing as the current evidence-backed safety candidate; gate gaps remain",
+      "Consider separately named SPF plus safety-loss mixing only as a new recipe"
+    ],
+    "no_formal_hexphi_parameter_selection": true,
+    "additional_paid_judge_budget_not_authorized_by_recommendation_request": true
+  }
+}
