@@ -1,0 +1,136 @@
+{
+  "status": "USER_AUTHORIZED_PERSISTENT_JUDGE_KEY_CONFIGURED_NEW_MASKED_SAVE_UI_WAITING_AT_OBSERVATION",
+  "human_request": "把key存在檔案裡面，我不想要每次都要貼key",
+  "previous_memory_only_storage_policy_overridden": true,
+  "storage": {
+    "format": "Windows DPAPI CurrentUser encrypted text file",
+    "path": "work/spf-npo-gb200-20261006/private/local-judge-credentials/openai-judge-key.dpapi",
+    "git_ignored": true,
+    "tracked": false,
+    "current_authorized_windows_user_bound": true,
+    "folder_and_file_acl": "Protected; only bound current Windows user FullControl",
+    "same_windows_user_future_judge_reads_without_reentry": true,
+    "key_file_contents_not_inspected_for_reporting": true,
+    "key_saved_at_observation": false,
+    "key_values_or_ciphertext_logged": false,
+    "key_copied_to_gb200_or_h100": false,
+    "old_h100_key_read": false
+  },
+  "original_ui": {
+    "pid": 63928,
+    "status": "INPUT_CLOSED_WITHOUT_KEY",
+    "api_calls": 0,
+    "retirement_sha256": "e4b19aa5e3a39ee0caac123db7448c84bb7c9760700cbab3374930a6bddbc99a"
+  },
+  "new_ui": {
+    "pid": 41604,
+    "submitted_at_utc": "2026-10-08T15:38:12.5609653Z",
+    "status_at_observation": "WAITING_FOR_KEY_TO_SAVE_ENCRYPTED_FILE",
+    "observed_at_utc": "2026-10-08T15:38:43.514843+00:00",
+    "shown_event_received": true,
+    "form_visible": true,
+    "topmost": true,
+    "show_in_taskbar": true,
+    "new_api_calls_at_observation": 0,
+    "new_job_at_observation": false,
+    "plan_sha256": "da3d1665426d9301c32ca2f01abc7d77590e39080849225f525156617073950d",
+    "launcher_sha256": "a670a036257f9e6d573489a4d17e7aff22ce73dd2410e2233670021eac06d34d"
+  },
+  "original_paid_scope": {
+    "authorized_new_cap": 2376,
+    "per_checkpoint_cap": 792,
+    "steps": [
+      157,
+      313,
+      469
+    ],
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "max_output_tokens": 4096,
+    "endpoint": "https://api.openai.com/v1",
+    "max_retries": 0,
+    "original791_or_unknown1_retried": false,
+    "shared_checkpoint_allocations_guard_preserved": true
+  },
+  "source_sha256": {
+    "local_spf_judge_key.ps1": "69d197869594fe10d5f839c04cfec363e982a97213beb5835077f2fe0b1ec93d",
+    "start_spf_checkpoint_judge_saved_key.ps1": "4826ee22f42260272f814ed2b02efa78c21e1e580a59336459943ab652341d91",
+    "run_spf_checkpoint_development_judge_saved_key.py": "9e0dfb0244bf8f4ebd33620cef0436aef8c9b1524a3b755c0cc400f4db4e25c8"
+  },
+  "unchanged_function_ast": [
+    "digest",
+    "bound",
+    "atomic",
+    "safe_error",
+    "event",
+    "module",
+    "judge_rows"
+  ],
+  "actual_storage_checks": {
+    "initial_broad_acl_fixture_failure_preserved": true,
+    "engine": "7.6.6",
+    "negative_acl_test_file_permission_changes": 0,
+    "status": "WINDOWS_CURRENTUSER_DPAPI_AND_PRIVATE_ACL_TEST_PASS",
+    "parser_error_count": 0,
+    "real_credentials_saved": 0,
+    "path_rejected": true,
+    "synthetic_roundtrip_pass": true,
+    "real_credential_reads": 0,
+    "permissive_acl_descriptor_rejected": true,
+    "helper_sha256": "69d197869594fe10d5f839c04cfec363e982a97213beb5835077f2fe0b1ec93d",
+    "plaintext_saved": false,
+    "existing_key_overwrite_rejected": true,
+    "completed_actual_user_roundtrip_repeated": false,
+    "api_calls": 0,
+    "actual_authorized_user": true
+  },
+  "new_profile_and_budget_checks": {
+    "status": "SAVED_KEY_NEW_PROFILE_AND_EXISTING_BUDGET_GUARDS_PASS",
+    "rejected": [
+      "credential_policy",
+      "total_paid_api_request_limit",
+      "retries",
+      "allocated_checkpoint"
+    ],
+    "unchanged_function_ast": [
+      "digest",
+      "bound",
+      "atomic",
+      "safe_error",
+      "event",
+      "module",
+      "judge_rows"
+    ],
+    "key_file_content_read": false,
+    "credential_reads": 0,
+    "api_calls": 0,
+    "original_completed792_loop_repeated": false,
+    "source_sha256": "9e0dfb0244bf8f4ebd33620cef0436aef8c9b1524a3b755c0cc400f4db4e25c8"
+  },
+  "storage_test_limits": {
+    "real_key_saved_or_read_in_tests": false,
+    "synthetic_actual_user_roundtrip": true,
+    "broader_acl_descriptor_negative_in_memory": true,
+    "original_physical_broad_acl_fixture_SeSecurityPrivilege_failure_preserved": true,
+    "sandbox_and_normal_windows_accounts_different": true,
+    "original_completed_loop_not_repeated": true
+  },
+  "initial_launch_failure": {
+    "operation": "CPU-only preflight before new Start-Process",
+    "source_environment_binding_missing": true,
+    "new_api_calls": 0,
+    "new_processes": 0,
+    "original_failure_metadata_preserved": true,
+    "explicit_r2_adds_empty_cuda_environment": true,
+    "original_retirement_reused": true,
+    "actual_r2_preflight_pass": true
+  },
+  "new_gpu_queries": 0,
+  "new_gpu_submissions": 0,
+  "new_paid_results_verified": false,
+  "target_gate": "insufficient_evidence",
+  "pilot_frozen": false,
+  "automation_actual_status": "PAUSED",
+  "automation_status_or_schedule_mutations": 0,
+  "private_keys_packets_prompts_or_responses_published": false
+}

@@ -1,0 +1,23 @@
+{
+  "status": "SAVED_KEY_NEW_PROFILE_AND_EXISTING_BUDGET_GUARDS_PASS",
+  "rejected": [
+    "credential_policy",
+    "total_paid_api_request_limit",
+    "retries",
+    "allocated_checkpoint"
+  ],
+  "unchanged_function_ast": [
+    "digest",
+    "bound",
+    "atomic",
+    "safe_error",
+    "event",
+    "module",
+    "judge_rows"
+  ],
+  "key_file_content_read": false,
+  "credential_reads": 0,
+  "api_calls": 0,
+  "original_completed792_loop_repeated": false,
+  "source_sha256": "9e0dfb0244bf8f4ebd33620cef0436aef8c9b1524a3b755c0cc400f4db4e25c8"
+}

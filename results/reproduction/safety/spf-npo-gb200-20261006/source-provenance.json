@@ -609,5 +609,22 @@
     "old_success_or_uncertain_repeated": false,
     "gate": "insufficient_evidence",
     "automation_status_changed": false
+  },
+  "local_judge_persistent_key_20261008": {
+    "evidence": "results/reproduction/safety/spf-npo-gb200-20261006/spf-local-judge-persistent-key-20261008.json",
+    "status": "USER_AUTHORIZED_PERSISTENT_JUDGE_KEY_CONFIGURED_NEW_MASKED_SAVE_UI_WAITING_AT_OBSERVATION",
+    "source_sha256": {
+      "local_spf_judge_key.ps1": "69d197869594fe10d5f839c04cfec363e982a97213beb5835077f2fe0b1ec93d",
+      "start_spf_checkpoint_judge_saved_key.ps1": "4826ee22f42260272f814ed2b02efa78c21e1e580a59336459943ab652341d91",
+      "run_spf_checkpoint_development_judge_saved_key.py": "9e0dfb0244bf8f4ebd33620cef0436aef8c9b1524a3b755c0cc400f4db4e25c8"
+    },
+    "plan_sha256": "da3d1665426d9301c32ca2f01abc7d77590e39080849225f525156617073950d",
+    "new_ui_pid": 41604,
+    "old_ui_retired_api0": true,
+    "encrypted_file_user_authorized": true,
+    "current_user_bound": true,
+    "credential_values_or_ciphertext_published": false,
+    "new_api_calls_at_observation": 0,
+    "paid_cap_changed": false
   }
 }
