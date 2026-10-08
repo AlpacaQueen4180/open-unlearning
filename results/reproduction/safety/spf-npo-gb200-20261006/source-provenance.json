@@ -577,5 +577,21 @@
     ],
     "no_formal_hexphi_parameter_selection": true,
     "additional_paid_judge_budget_not_authorized_by_recommendation_request": true
+  },
+  "checkpoint_beta_diagnostic_launch_20261008": {
+    "evidence": "results/reproduction/safety/spf-npo-gb200-20261006/spf-checkpoint-beta-diagnostic-launch-20261008.json",
+    "status": "EARLY_CHECKPOINT_AND_BETA_DIAGNOSTIC_SUBMITTED_RESULT_NOT_CHECKED",
+    "snapshot_sha256": "8566cd24b26f815ea1d7d5cf08f93e133830b728f91c652ac18e41fd765a73da",
+    "plan_sha256": "d047168aefa7e8ceb1b98de8299fbc2e79b14da1a79812be9f6218d24cca26b6",
+    "launch_pid": 5110,
+    "source_sha256": {
+      "run_spf_checkpoint_beta_queue.py": "ff9644e56ae589b234d18fa221ffe50f8ce41dc843c643753e99cfe9ccba43da",
+      "spf_checkpoint_executor.py": "95a28d74b00ad51423da541656007ff2e9d9d85f5d31039a9f5286325ae92609",
+      "spf_beta_geometry_diagnostic.py": "c2b8576f6b4a558a767a95f2a2c8652783761f6e2afef68352d9f59b8150cf0d"
+    },
+    "proposed_judge_cap": 2376,
+    "new_paid_api_calls": 0,
+    "actual_result_not_checked": true,
+    "gate": "insufficient_evidence"
   }
 }
