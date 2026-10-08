@@ -1,0 +1,31 @@
+{
+  "status": "BOUNDED_PREFIX_GEOMETRY_COMPLETE",
+  "beta1": 0.5,
+  "actual_updates": 32,
+  "actual_examples": 1024,
+  "warmup_steps": 125,
+  "all_updates_within_warmup": true,
+  "positive_actual_safety_dot_steps": 3,
+  "increased_anchor_loss_steps": 8,
+  "geometry_sha256": "5650b9a3e2b62bcc7bd556d68e037f78d354d6032e6b32d7816eaf1c16a9e84d",
+  "optimizer": {
+    "class": "AdamW",
+    "defaults": {
+      "lr": 1e-05,
+      "betas": [
+        0.5,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0.01,
+      "alpha": 0.0,
+      "t_alpha": null,
+      "t_beta3": null
+    }
+  },
+  "harmfulness_labels_produced": false,
+  "causal_safety_root_cause_proven": false,
+  "source_sha256": "c2b8576f6b4a558a767a95f2a2c8652783761f6e2afef68352d9f59b8150cf0d",
+  "pid": 5785,
+  "finished_at": 1791466665.7428503
+}

@@ -1,0 +1,26 @@
+{
+  "status": "NEW_CHECKPOINT_792_LOOP_AND_POST_RESPONSE_FILESYSTEM_FAILSTOP_MOCK_PASS",
+  "source_sha256": "5cfb8bed466fd0794a6d89c0176330295caf106e5cfc8a93222b1799294dfe03",
+  "mock_http_requests": {
+    "complete": 792,
+    "save_failure": 1
+  },
+  "real_api_calls": 0,
+  "credential_reads": 0,
+  "profile_and_allocation_negatives_rejected": [
+    "total_paid_api_request_limit",
+    "new_calls",
+    "retries",
+    "checkpoint_step",
+    "reused_response_labels",
+    "previous_uncertain_request_retried",
+    "complete_duplicate_allocation",
+    "complete_full_budget",
+    "save_failure_duplicate_allocation",
+    "save_failure_full_budget"
+  ],
+  "original_api_call_ast_identical": true,
+  "durable_event_order_verified": true,
+  "original_completed_cases_repeated": false,
+  "checkpoint_labels_generated": false
+}

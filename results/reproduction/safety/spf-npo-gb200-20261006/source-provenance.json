@@ -593,5 +593,21 @@
     "new_paid_api_calls": 0,
     "actual_result_not_checked": true,
     "gate": "insufficient_evidence"
+  },
+  "checkpoint157_beta_results_and_judge_20261008": {
+    "evidence": "results/reproduction/safety/spf-npo-gb200-20261006/spf-checkpoint157-beta-results-and-judge-20261008.json",
+    "status": "CHECKPOINT157_EVALUATION_AND_TWO_BETA_PREFIXES_COMPLETE_NEW_JUDGE_UI_WAITING_AT_LOCAL_OBSERVATION",
+    "snapshot_sha256": "7e87c3e478f93978663ddfc6a54dd543f3a596944240bf2c80f568c48a00c07d",
+    "archive_sha256": "af7ed240def969058f69abcdaf8c97e193db5480966d5d4a1f4c412d9beea493",
+    "new_judge_source_sha256": "5cfb8bed466fd0794a6d89c0176330295caf106e5cfc8a93222b1799294dfe03",
+    "new_judge_plan_sha256": "89a8aac61e31b59bdc4b6204701b832366ca18dad3fd412ae387f7b9997a9e90",
+    "explicit_new_paid_cap": 2376,
+    "checkpoint157_new_call_cap": 792,
+    "dialog_pid": 63928,
+    "local_observed_api_requests": 0,
+    "request_call_ast_unchanged": true,
+    "old_success_or_uncertain_repeated": false,
+    "gate": "insufficient_evidence",
+    "automation_status_changed": false
   }
 }

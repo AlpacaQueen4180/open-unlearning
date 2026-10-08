@@ -1,0 +1,242 @@
+{
+  "status": "CHECKPOINT157_EVALUATION_AND_TWO_BETA_PREFIXES_COMPLETE_NEW_JUDGE_UI_WAITING_AT_LOCAL_OBSERVATION",
+  "snapshot_utc": "2026-10-08T15:01:21.900258+00:00",
+  "snapshot_sha256": "7e87c3e478f93978663ddfc6a54dd543f3a596944240bf2c80f568c48a00c07d",
+  "snapshot_source_sha256": "294036d73961e2cdd44dc8625663cc0bd19f323fa2e7e7c7f0d6f97b6a7d44e7",
+  "completed_remote_stages": [
+    "observer-cpu-selftest",
+    "beta-09",
+    "beta-05",
+    "checkpoint-157"
+  ],
+  "parent_pid": 5110,
+  "parent_status_at_snapshot": "RUNNING",
+  "current_stage_at_snapshot": "checkpoint-313/tofu",
+  "checkpoint469_at_snapshot": "NOT_STARTED",
+  "checkpoint157_status": "CHECKPOINT_EVALUATION_COMPLETE_PENDING_NEW_JUDGE",
+  "completed157_gpu_and_cpu_stages": [
+    "tofu",
+    "knowledge",
+    "ifbench",
+    "safety",
+    "conversation",
+    "ifbench-score"
+  ],
+  "completed_results": {
+    "status": "COMPLETED157_AND_BOUNDED_BETA_RESULTS_AGGREGATED",
+    "derived_at_utc": "2026-10-08T15:16:21.823166+00:00",
+    "archive_sha256": "af7ed240def969058f69abcdaf8c97e193db5480966d5d4a1f4c412d9beea493",
+    "immutable_export_file_count": 62,
+    "source_sha256": "48d0714f661f516752a6af20a325ee6a9c56e134d9efd38454941d78902f48c6",
+    "paired_beta": {
+      "beta-09": {
+        "beta1": 0.9,
+        "actual_updates": 32,
+        "nonzero_updates": 31,
+        "actual_examples": 1024,
+        "positive_actual_update_safety_dot_steps": 11,
+        "increased_anchor_loss_steps": 12,
+        "negative_raw_gradient_dot_steps": 10,
+        "negative_projected_gradient_dot_steps": 7,
+        "positive_update_dot_despite_nonnegative_projected_gradient_dot_steps": 7,
+        "projected_gradient_dot_min": -1.782121082153602,
+        "anchor_loss_at_start": 3.3435211181640625,
+        "anchor_loss_at_end": 1.9272412061691284,
+        "observed_anchor_loss_change_sum": -1.416279911994934,
+        "actual_update_safety_cosine_min": -0.09748424500815321,
+        "actual_update_safety_cosine_max": 0.010120023613388473,
+        "geometry_sha256": "53464bb88c21cef8d274afddb12ee3f56897e4b54e8abe1bcd9ff015b3849655",
+        "summary_sha256": "d0a9b9acfe552530e509c7c907a00042caccd0b54d76f291e4a7260d89394f4f",
+        "source_sha256": "c2b8576f6b4a558a767a95f2a2c8652783761f6e2afef68352d9f59b8150cf0d",
+        "optimizer": {
+          "class": "AdamW",
+          "defaults": {
+            "lr": 1e-05,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 0.01,
+            "alpha": 0.0,
+            "t_alpha": null,
+            "t_beta3": null
+          }
+        }
+      },
+      "beta-05": {
+        "beta1": 0.5,
+        "actual_updates": 32,
+        "nonzero_updates": 31,
+        "actual_examples": 1024,
+        "positive_actual_update_safety_dot_steps": 3,
+        "increased_anchor_loss_steps": 8,
+        "negative_raw_gradient_dot_steps": 9,
+        "negative_projected_gradient_dot_steps": 5,
+        "positive_update_dot_despite_nonnegative_projected_gradient_dot_steps": 2,
+        "projected_gradient_dot_min": -4.188933841234045,
+        "anchor_loss_at_start": 3.3435211181640625,
+        "anchor_loss_at_end": 1.6411710977554321,
+        "observed_anchor_loss_change_sum": -1.7023500204086304,
+        "actual_update_safety_cosine_min": -0.08925224912811067,
+        "actual_update_safety_cosine_max": 0.00434435079252863,
+        "geometry_sha256": "5650b9a3e2b62bcc7bd556d68e037f78d354d6032e6b32d7816eaf1c16a9e84d",
+        "summary_sha256": "86ddececaf482c6fe385901e63185acbe1e40ce6fd0cf98319fa998a9eff9178",
+        "source_sha256": "c2b8576f6b4a558a767a95f2a2c8652783761f6e2afef68352d9f59b8150cf0d",
+        "optimizer": {
+          "class": "AdamW",
+          "defaults": {
+            "lr": 1e-05,
+            "betas": [
+              0.5,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 0.01,
+            "alpha": 0.0,
+            "t_alpha": null,
+            "t_beta3": null
+          }
+        }
+      }
+    },
+    "checkpoint157_learning_capability": {
+      "forget05": {
+        "count": 200,
+        "metrics": {
+          "normalized_exact_match": 0.04,
+          "rouge_l_f1": 0.4925209358901926,
+          "mean_log_probability": -0.7305504945805297
+        }
+      },
+      "retain95": {
+        "count": 3800,
+        "metrics": {
+          "normalized_exact_match": 0.03236842105263158,
+          "rouge_l_f1": 0.47466104230624573,
+          "mean_log_probability": -0.8093482404812484
+        }
+      },
+      "mmlu_aux": {
+        "count": 1024,
+        "correct": 848,
+        "accuracy": 0.828125,
+        "num_fewshot": 0
+      },
+      "ifbench": {
+        "count": 300,
+        "summary": {
+          "strict": {
+            "prompt_accuracy": 0.17333333333333334,
+            "instruction_accuracy": 0.2005813953488372
+          },
+          "loose": {
+            "prompt_accuracy": 0.19,
+            "instruction_accuracy": 0.2238372093023256
+          }
+        }
+      }
+    },
+    "exact_row_outputs_kept_private": true,
+    "all32_steps_inside_original125_warmup": true,
+    "first_update_zero_learning_rate": true,
+    "per_step_dot_definition": "actual parameter delta theta_after-theta_before dotted with original safety gradient",
+    "positive_dot_interpretation": "positive first-order anchor-loss change; empirical post-step anchor loss recorded separately",
+    "harmfulness_reduction_verified": false,
+    "full_training_beta05_evaluated": false,
+    "causal_root_cause_verified": false,
+    "checkpoint157_harmfulness": "NEW_JUDGE_PENDING",
+    "target_gate": "insufficient_evidence",
+    "limitations": [
+      "32-step prefix only, original125-step warmup",
+      "same fixed anchor, no new anchors or task tuning",
+      "scalar anchor-loss geometry does not replace safety benchmark labels",
+      "no repeated final checkpoint evaluations or16GB hashes"
+    ]
+  },
+  "paid_judge": {
+    "user_authorization": "可以進行Judge",
+    "authorized_new_cap": 2376,
+    "checkpoints": [
+      157,
+      313,
+      469
+    ],
+    "per_checkpoint_cap": 792,
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "max_output_tokens": 4096,
+    "endpoint": "https://api.openai.com/v1",
+    "max_retries": 0,
+    "checkpoint157_packet_sha256": "ad58c41fb366d3b9eaea21eb9fa81962684a3f54fc64b7e490590ac88f67598d",
+    "checkpoint157_plan_sha256": "89a8aac61e31b59bdc4b6204701b832366ca18dad3fd412ae387f7b9997a9e90",
+    "checkpoint157_identity_sha256": "49596e22c3862591600a08133f7151862d3124f46d35156316021ffdaf0d6c12",
+    "authorization_sha256": "40c913b98bc7539d7a2e3e79b3759a6b44cf303f91d7a475805bfc6f2a80909e",
+    "rubric_sha256": null,
+    "original_prompt_hashes": {
+      "harmful": "2847ea07bc69b611ba63950a3dcb11970905b8b1f57754c73067e41675a568fa",
+      "benign": "e800dfa717051d573b5c0b6fcf72544e8e22c8171dbf3652b3563ab1907fc02e",
+      "conversation": "eb3b38410a545e4e9a683e5687a38fe325dc53ea6a1a4885aa1402faa79fa8d0"
+    },
+    "source_sha256": "5cfb8bed466fd0794a6d89c0176330295caf106e5cfc8a93222b1799294dfe03",
+    "original_api_call_ast_identical": true,
+    "mock_checks": {
+      "status": "NEW_CHECKPOINT_792_LOOP_AND_POST_RESPONSE_FILESYSTEM_FAILSTOP_MOCK_PASS",
+      "source_sha256": "5cfb8bed466fd0794a6d89c0176330295caf106e5cfc8a93222b1799294dfe03",
+      "mock_http_requests": {
+        "complete": 792,
+        "save_failure": 1
+      },
+      "real_api_calls": 0,
+      "credential_reads": 0,
+      "profile_and_allocation_negatives_rejected": [
+        "total_paid_api_request_limit",
+        "new_calls",
+        "retries",
+        "checkpoint_step",
+        "reused_response_labels",
+        "previous_uncertain_request_retried",
+        "complete_duplicate_allocation",
+        "complete_full_budget",
+        "save_failure_duplicate_allocation",
+        "save_failure_full_budget"
+      ],
+      "original_api_call_ast_identical": true,
+      "durable_event_order_verified": true,
+      "original_completed_cases_repeated": false,
+      "checkpoint_labels_generated": false
+    },
+    "local_observed_at_utc": "2026-10-08T15:14:46.251329+00:00",
+    "status_at_local_observation": "WAITING_FOR_NEW_KEY_LOCAL_MASKED_DIALOG",
+    "dialog_pid": 63928,
+    "dialog_submitted_at_utc": "2026-10-08T15:14:20.5247761Z",
+    "dialog_launcher_sha256": "fab9778c67315928d65696590d413525d33e8f5039d8671f38b371cec631d1b8",
+    "dialog_visible_at_observation": true,
+    "actual_powershell7_parser_pass": true,
+    "new_api_requests_at_local_observation": 0,
+    "new_success_results_at_local_observation": 0,
+    "old791_success_results_repeated": false,
+    "old_uncertain1_retried": false,
+    "key_policy": "New dedicated key in local masked native dialog; process memory only",
+    "old_h100_key_read": false,
+    "key_saved": false,
+    "paid_completion_verified": false,
+    "human_adjudication_complete": false,
+    "cluster_mapping_verified": false
+  },
+  "logical_progress_snapshots": 1,
+  "outer_progress_retry_count": 0,
+  "second_gpu_progress_query": false,
+  "completed_immutable_export_not_progress_poll": true,
+  "new_gpu_queue_submissions": 0,
+  "weights_rehashed": false,
+  "full625_or_retain595_retrained": false,
+  "completed_final_development_repeated": false,
+  "native_reload_optimizer_guard_failure_preserved": true,
+  "plain_hf_threshold_failure_preserved": true,
+  "pilot_frozen": false,
+  "target_gate": "insufficient_evidence",
+  "automation_actual_status": "PAUSED",
+  "automation_status_or_schedule_changed": false,
+  "private_payloads_labels_and_keys_published": false
+}
