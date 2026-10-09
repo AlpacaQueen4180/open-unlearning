@@ -647,5 +647,27 @@
     "credential_values_or_ciphertext_published": false,
     "target_gate": "insufficient_evidence",
     "automation_status_changed": false
+  },
+  "checkpoint313_judge_failure_unsent_continuation_20261009": {
+    "aggregate": "spf-checkpoint313-judge-failure-and-unsent-continuation-20261009.json",
+    "aggregate_sha256": "bf76700fed87435eb05476271a450694f04aee38c450b8d109f26dd8c59b5972",
+    "prior313_verified": 219,
+    "new313_limit": 573,
+    "new469_limit": 792,
+    "observed_new313_runtime_successes": 30,
+    "observed_new313_fully_audited": false,
+    "source_bindings": {
+      "runner_sha256": "d2f09e9709578a9dfdd51d1de3efa1be0d092f6c47d2a9ed1baca6b6d7775570",
+      "loader_sha256": "6c9c181f0d71a88de8f25530a9ba867e4893df4c2b3cfab76e1df67f6fb62f4a",
+      "auditor_sha256": "5bda774636e3c7f94a57473cee823f96d43897f9e563c9fd129b75f117c44c9d",
+      "queue_sha256": "6464c9b3aa5869463151a7d20c9cd0b39b89835438015efd8b3502d9343ebd78",
+      "config_sha256": "2ebc98f14e3e36ec04db46416724f1b67d1d56d228535d470c93c481e856351f",
+      "plan313_sha256": "4458f6ba792304c44a0e80776fe0a4596d1c5843cc93c22c505c42492b5c7a06",
+      "plan469_sha256": "85a3e6dda08cf985d22ce39236647e35231ef9e2e396debdd1da7ea771f52be8"
+    },
+    "target_gate": "insufficient_evidence",
+    "native_automation_status": "PAUSED",
+    "credential_policy": "Windows DPAPI CurrentUser file",
+    "raw_prompts_responses_labels_and_keys_private": true
   }
 }

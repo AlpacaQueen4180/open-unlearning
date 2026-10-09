@@ -1,0 +1,54 @@
+{
+  "loop": {
+    "status": "NEW573_LOOP_IMMUTABLE_STATE_AND_FAILSTOP_MOCK_PASS",
+    "source_sha256": "d2f09e9709578a9dfdd51d1de3efa1be0d092f6c47d2a9ed1baca6b6d7775570",
+    "unchanged_function_ast": [
+      "digest",
+      "bound",
+      "safe_error",
+      "event",
+      "module",
+      "judge_rows"
+    ],
+    "mocked_http": {
+      "complete573": 573,
+      "postresponse_failure": 1
+    },
+    "actual_windows_synthetic_deny_delete_replacement_rejected": true,
+    "immutable_state_updates_with_held_reader_pass": true,
+    "original_failure_cause_proven_to_be_reader_lock": false,
+    "scope_negatives_rejected": [
+      "selected_packet_indices",
+      "new_calls",
+      "total_paid_api_request_limit",
+      "retries",
+      "checkpoint_step"
+    ],
+    "real_api_calls": 0,
+    "credential_reads": 0,
+    "original792_loop_repeated": false,
+    "prior219_or157_audit_repeated": false
+  },
+  "combined_auditor_and_queue": {
+    "status": "NEW573_SYNTHETIC_COMBINED_AUDIT_AND_QUEUE_GUARDS_PASS",
+    "auditor_sha256": "5bda774636e3c7f94a57473cee823f96d43897f9e563c9fd129b75f117c44c9d",
+    "queue_sha256": "6464c9b3aa5869463151a7d20c9cd0b39b89835438015efd8b3502d9343ebd78",
+    "new_synthetic_raw_verified": 573,
+    "prior219_verified_labels_sha256": "080383e2bc736cfda87bb3705356165ad5953b8b6190b49e82ad46f0555bed69",
+    "prior_raw_reaudited": false,
+    "state_negative_rejected": true,
+    "queue_negatives_rejected": [
+      "cap2377",
+      "remaining1366",
+      "wrong313count",
+      "retry1",
+      "reversed_steps"
+    ],
+    "powershell_parser_error_count": 0,
+    "new_api_calls": 0,
+    "credential_reads": 0,
+    "completed573_mock_http_loop_repeated": false,
+    "actual_paid_completion": false,
+    "synthetic_report_not_an_experiment_result": true
+  }
+}
