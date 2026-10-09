@@ -1,0 +1,51 @@
+# SPF safety search：每小時續行，新增最多50套模型Judge
+
+2026-10-10人類授權：訓練完接著評估；harmfulness未低於Mixing時，提出可能改進並實作；新增50次完整模型development Judge；使用每小時排程，禁止輪詢；找到低於Mixing的方法或用完50次即停止。本文件取代舊heartbeat中「新beta05 Judge未授權」及「排程維持PAUSED」的現行限制，舊檔與失敗仍保留。
+
+## 判準、額度與持久狀態
+
+- 固定同一development harmful300題，Mixing為13/300=4.3333%；嚴格低於即最多12/300=4.00%。13/300相等不能停止。缺harmful標籤不得補值或改分母。若harmful300已完整驗證且達標，即停止新增訓練/Judge；benign或conversation的缺口另報，不把部分結果稱完整792。這是使用者指定的描述性停止條件，非統計顯著性或正式安全gate通過。
+- 一次額度是一個獨立checkpoint/model identity的完整development評估：免費六stage及固定792 Judge請求（harmful300、benign350、conversation142），不是一個API call。**新增**最多50個模型配額，最大39,600個新request intents；舊157/313/469/625付費結果不計入、也不重跑。每個模型launch前保留792額度；partial/uncertain也占原配額，與complete分開記錄，不能用失敗重置50。
+- 唯一private campaign：`work/spf-npo-gb200-20261006/private/spf-safety-search-20261010/`。人類原授權保存在`authorization.private.json`；SQLite `budget.sqlite3`保存model reservations、每筆intent/receipt、結果audit SHA與hourly observation claims。另保存每輪exclusive私有receipt，不覆寫原raw。不要把SQLite、key、packet、QA、response、reason或完整labels放Git。
+- 預算工具：`scripts/reproduction/safety/spf_safety_search_budget.py`。`--root <campaign> status`讀取權威狀態；`claim-check`在任何routine RunAI或Judge進度查詢前執行。距上次claimed observation不足3600秒會拒絕，直接結束這輪，不sleep/retry。初始last observation綁06:32 RunAI snapshot，第一個新查詢不得早於07:32 Taipei。
+- 使用Campaign的`reserve`在key讀取/API之前綁candidate identity、packet、plan與newrun。plan必須含`judge_profile`、`model_identity_sha256`、`packet_sha256`、`new_campaign_model_limit=50`及actual `development_outputs_and_candidate_audit_verified=true`。不接受synthetic當actual。新runner直接import同SHA-bound Campaign，**每次**API前`intent(slot,index,payload_sha)`，durable raw及result fsync後`receipt(...)`。intent失敗不得送API，receipt失敗立即stop、已intent項目不重試。
+- 完成後用source-bound私有auditor逐核新增raw/schema/payload/order/rubric/model/tokenusage，audit須連model/packet/plan與全部ledger receipts；`finish(slot,audit_path)`記錄result及停止條件。`close-incomplete`只在原failure/source/raw/events保存後使用；若確有未送出項，原slot的`resume_unsent`只接受exit及精確boundary proof，explicit新run，不重送sent/uncertain/成功項。50配額已耗尽則停止，不新增替代模型。status `STOP_FOUND_LOWER_H`或`STOP_BUDGET_EXHAUSTED`時，用原生automation工具PAUSE本heartbeat、寫最終報告。不能把搜尋停止誤稱整個NPO研究完成。
+
+## 每輪只有一次必要觀測
+
+1. 先讀本文件、最新private campaign state與人類steering。若已stop，只核並PAUSE本排程；其他舊`gb200-npo`/`spf-checkpoint`仍PAUSED。先`claim-check`，再做一次必要完整logical snapshot與一份必要local Judge receipt，沒有外層retry/poll/睡眠循環。沒有新結果時等下個一小時排程。
+2. 原RunAI CLI、project smart-mfg、workspace machine-unlearning-pvc，正常`require_escalated`審查；`invoke_readonly_json.ps1`內建MaxAttempts2只用唯讀transport。不可改VPN/DNS/MTU/TLS/route、換SSH繞審查或補查queued heartbeats。查詢失敗先保存private capture/metadata，不把transport或登入失敗說成模型訓練失敗。
+3. Actual completion/failure後，有限immutable evidence export屬必要結果保存，不是再做progress snapshot。逐bytes核source/exactcommand/status/raw/binding/audit/完整outputs；不再下載或評估completed evidence，不重hash舊16GB。不停止其他workload，不覆寫失敗。不重訓已完整checkpoint；若reload/eval失敗，只explicit newtag恢復已證明未完成stage。
+4. 要提交下一GPU候選，必须≤10min完整fresh snapshot、old relevant PID已退出、GPUidle與recipe/source/data guards核完。上次snapshot stale就等下一小時，不額外查第二次。每次單一有限train→reload→candidateaudit→六stage queue，拒已有run/target。process wait屬有限stage完成等待，不能套status polling。
+
+## 第一個候選與Judge接續
+
+目前模型為`/data/spf-beta05-full-20261010-r2`；唯一queue9069，torchrun9072/native9140，launch `validation-code/beta05-full-launch-20261009.json`及同名raw.log。最後完整snapshot UTC2026-10-09T22:32:30.116690+00:00，SHA`d824e7bc37b4872e1769a64e9a5af3376e976d7542bfb026d8b32cca873ce180`。當時train RUNNING/completed[]、actual AdamW(.5,.999)/LR1e-5/WD.01其餘TrainingArguments match；469是保存點非actual current update。新harmfulness尚無結果，勿重送9069或重啟舊helper。
+
+Snapshot source `work/spf-npo-gb200-20261006/snapshot_r4.py` SHA`9565282356648bb713c5f9deeb9ccb812c2d78aab040415e98e9c00ec4bf70e3`。Current queue source `run_spf_beta05_full_serialization_r2_queue.py` SHA`9d734587cb49590f275b906405117640e6e1a472f43ac742a9a196dbe787c937`；wrapper SHA`33127eee907d343e18daf29fd064f8551048544ef03f7943dadb8339fd219e32`；development executor SHA`76c5fd9c0a6228643d3c9a11621cfa90db52fed65efde1f403d86a7f23c14191`；plan SHA`e5782f588434ba8b1ecb799882a1f6cef3a1c8347b48b47497b2c8304ebc7ecb`。先依此branch必要query，不rerun完成baseline。train完成並不等於development已完成，queue原本就會接freshreload、完整新candidate byteaudit及六development stages。
+
+Recipe只beta1 .9→.5，beta2 .999/LR1e-5/WD.01/seed0/5epochs625updates20k/原4000及anchor/order/world1 micro4acc8/global32/warmup125/rank20/max512/BF16/FA2；original training loop及SPF projection保持。原report_to guard/setup0steps failure及transport failure全保存。
+
+完成六stage後，以新模型輸出製作新的private792 packet，逐題綁固定dataset/prompt/order、actual full model audit與response SHA。六stage為TOFU4000 teacher512/gen200batch8、MMLUaux1024 zero-shotABCD、IFBench300 cap2048、safety650 cap512、WildChat71兩輪142 cap1024、isolated CPU IFBench scorer。不用舊模型responses或M0 labels替新模型。
+
+第一筆paid call前，明確new source/tag改造已驗`run_spf_checkpoint_judge_append_state.py`與`start_spf_checkpoint_judge_append_state.ps1`，接上述新ledger；不要直接執行舊2376cap/checkpoint-specific helper。保留原三rubric SHA、prompt SHA、`client.responses.parse` AST與schema、SDK openai2.54.0/Pydantic2.13.4/dotenv1.2.3、gpt-5.6-terra medium4096、https://api.openai.com/v1、max_retries0。只驗新增budget/identity hooks及必要mock integration，原完成schemas/765raw/audits不重跑。將runner/launcher/plan/packet/API0 CPUpreflight及newbudget sources全部SHA綁定後reserve一次，單次launch有限sequential792，不逐case查poll。
+
+人類已准許保存key，仍用同Windows帳戶DPAPI CurrentUser的private `local-judge-credentials/openai-judge-key.dpapi`。CPU/profile/source/packet/budget preflight通過才同帳戶runtime解密到child memory；不印值/不讀H100 safety.env/不傳GB200/不貼chat或clipboard，不重開masked UI。key不存在或DPAPI不能解密，保存safe metadata並提出具體人類所需操作。APIerror/unparsed/unexpectedmodel/filesystemerror立即stop，unknown不auto retry；原durable intent保留。PermissionError只記實際operation/type/errno/winerror/frames，不猜原因、不記secret message/locals。
+
+## 未達標時的可執行候選順序
+
+每次先用剛完成result提出1個具體假說、列出改變欄位與預期副作用，寫exclusive candidate plan後實作。first wave優先單因素對照；依新結果調整，禁止盲目跑50組或以development題目作訓練資料。
+
+1. **Optimizer momentum**：先完整評估正在跑的beta1=.5；比較原.9 SPF與Mixing固定300結果。若仍高，不聲稱已驗修復。
+2. **降低更新幅度**：以beta1=.5 LR5e-6及3e-6新full候選逐一比較，其他原recipe不變；也可對新beta05已保存且完整audit的early checkpoint做新評估，每個獨立模型占一個50配額。舊.9的157/313/469結果已顯示early stopping alone未大幅改善，不重跑它們。降低LR可能犧牲TOFU學習，必須同報。
+3. **SPF加安全loss的hybrid**：從原Meta M0獨立construction，使用既有training-only安全anchor，新增安全loss coefficient .1→.3→1的有限候選，一次一個，保留SPF投影。明確標為hybrid，分別記task/safety/投影貢獻，不冒稱純SPF。訓練資料須原授權、與development完全分離，禁止650 benchmark或FormalHEx-PHI回灌。安全loss定義/mean reduction/optimizer update/serialize reload須用source與actual runtime驗證後才大規模跑。
+4. **投影覆蓋與實際更新方向**：評估rank32/64及AdamW經momentum/preconditioning後實際delta的安全方向是否仍受保護；只在新有限工程驗證bitwise/RNG/precision/梯度與實際update geometry後，實作獨立候選。不能把synthetic或CPU pass抹成原大型autograd5%fail已解決。若source/actual診斷不支持此假說，選其他候選。
+5. 上述不達標時，用既有獨立training-only anchor探討更廣安全方向或hybrid係數/LR組合，每次以既有結果縮小下一選擇；資料不足就先選可實作家族，不能造label或擴scope去付費新資料。
+
+這些是待驗假說。原SPF final47%、31344%、46944.67～45%的描述性結果支持需要改配方；不能保證會低於Mixing。SPF使用安全梯度投影與Mixing的loss組合不同，原論文也討論utility/safety tradeoff及beta1=.5，但本機recipe、平台與原未過autograd限制不同。[原始研究](https://arxiv.org/html/2601.10141v1)。每個候選同步保存TOFU forget/retain NLL/ROUGE/EM/extraction、MMLUaux、IFBench、benign refusal及conversation quality，避免只報harmfulness而藏utility代價。
+
+## 報告與排程
+
+Native heartbeat `spf-full-npo-seed0`改為ACTIVE每小時，保留failed_runs_only；其他原PAUSED排程不啟動。原長prompt/TOML已保存campaign private history備份，排程prompt只指向此文件。排程每次讀本文件與private權威ledger，不能把旧prompt的未授權/15min/PAUSED內容當current。若人類之後改scope，保存新授權並具體更新runbook/ledger，不擅自重置額度。
+
+必要source/aggregate/result更新`results/reproduction/safety/spf-npo-gb200-20261006`、主report/tracking/provenance；依既有授權exact public scope nonforce push AlpacaQueen4180/open-unlearning `repro/npo-h100-ada-5seed`，Git blob SHA/credential patterns/diffcheck與GitHub GETref核完。原7untracked/private bytes不可混stage。Humanadjudication/pairedclusters、matching-reference metrics、單seed/跨平台與原NPO reload/pilot缺口繼續保留；campaign達停止條件即停止搜尋，後續其他研究要另依原scope，不宣稱總研究complete。

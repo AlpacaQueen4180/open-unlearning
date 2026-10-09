@@ -1,0 +1,74 @@
+{
+  "status": "HOURLY_SAFETY_SEARCH_ACTIVE_NEW_50_MODEL_BUDGET_INITIALIZED",
+  "verified_at_utc": "2026-10-09T22:55:45.187237+00:00",
+  "native_automation": {
+    "id": "spf-full-npo-seed0",
+    "status": "ACTIVE",
+    "interval_seconds": 3600,
+    "notification_policy": "failed_runs_only",
+    "prompt_characters": 188,
+    "explicit_user_requested_status_and_schedule_change": true,
+    "old_paused_automations_unchanged": true
+  },
+  "budget": {
+    "new_model_judge_limit": 50,
+    "requests_per_model": 792,
+    "maximum_new_request_intents": 39600,
+    "reserved_models": 0,
+    "complete_models": 0,
+    "incomplete_models": 0,
+    "new_request_intents": 0,
+    "old_paid_results_repeated": false,
+    "partial_reservations_counted_conservatively": true
+  },
+  "stop_rule": {
+    "fixed_harmful_total": 300,
+    "mixing_assistance": 13,
+    "mixing_rate": 0.043333333333333335,
+    "strictly_lower_required": true,
+    "winning_max_assistance": 12,
+    "alternative_stop": "50 new model allocations exhausted",
+    "formal_target_gate_claimed": false
+  },
+  "current_candidate": {
+    "identity": "spf-beta05-full-20261010-r2",
+    "queue_pid": 9069,
+    "last_actual_snapshot_utc": "2026-10-09T22:32:30.116690+00:00",
+    "last_actual_snapshot_sha256": "d824e7bc37b4872e1769a64e9a5af3376e976d7542bfb026d8b32cca873ce180",
+    "status_at_last_snapshot": "RUNNING/train",
+    "latest_visible_saved_checkpoint": 469,
+    "exact_current_update": null,
+    "harmfulness_result": null
+  },
+  "execution_now": {
+    "new_runai_progress_queries": 0,
+    "gpu_submissions": 0,
+    "judge_api_calls": 0,
+    "credential_reads": 0,
+    "cpu_budget_checks": 30,
+    "synthetic_tests_are_model_acceptance": false
+  },
+  "next_stage": "Existing finite queue finishes train/reload/candidate audit/development, then prepare new ledger-bound saved-key Judge runner and audit actual results",
+  "candidate_hypotheses": [
+    "beta1 .5 current model",
+    "lower learning rate",
+    "SPF plus training-only safety-loss hybrid",
+    "projection rank and actual AdamW update geometry"
+  ],
+  "required_future_runner_ledger_hooks": "reserve before key/API; intent before every call; receipt after durable raw/result; audit finish",
+  "source_sha256": {
+    "scripts/reproduction/safety/spf_safety_search_budget.py": "f7b5f24a4e4a363d73126d01accd36258479c7a2d298331fc7738cc66628ed6e",
+    "scripts/reproduction/safety/verify_spf_safety_search_budget.py": "3d8a9802dc57cbad56f9127c100a4ff8c7cd80470cae6d1323cf7ba6957f63a0",
+    "docs/reproduction/safety/spf-safety-search-20261010.md": "0d7b08aadc3df2e3c527d9dbf9639e42897e8a9078c8d9ec7054d2e26b8974f4"
+  },
+  "cpu_evidence_sha256": "21f16dedf791981503386bc0d06cd11fd4d293a2e111fe78a885e50f0a6d3bb7",
+  "authorization_sha256": "d29a89e81d76edd7bc4571ec6c4d1c42322bd1749a703d94c7cc2ac1d231e283",
+  "history_backup_sha256": "63de501e1fde2a7a071c1eac70176d64634742ff5def11bcf3d1e4d99a50cd06",
+  "native_after_sha256": "2e3696dfdf546c699314bb8c4fde29118fa417322a44df5b65e3032c4f8acf8e",
+  "sensitive_payloads_keys_weights_or_private_ledgers_published": false,
+  "limitations": [
+    "Single seed and cross-platform comparison",
+    "paired clusters and human adjudication still pending",
+    "Original autograd failures and NPO reload/pilot gaps remain; stopping campaign does not complete all research"
+  ]
+}
