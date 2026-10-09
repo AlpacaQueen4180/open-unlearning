@@ -704,5 +704,43 @@
     "uncertain469_auto_retries": 0,
     "native_automation_status": "PAUSED",
     "status_or_schedule_changed": false
+  },
+  "checkpoint469791_beta05_pre_step_failure_serialization_repair_20261010": {
+    "aggregate": "spf-checkpoint469-results-and-beta05-repair-20261010.json",
+    "aggregate_sha256": "88e605e41872c0ddd72b47332b649522138ff57901f75d271c27b8414046e67f",
+    "audit469_sha256": "095dba7ee7c4570a52e242582a91d37d02461287a31f3c5678d08c9c65029e63",
+    "confirmed469": 791,
+    "harmful134_of299": true,
+    "uncertain_harmful1_preserved": true,
+    "beta05_failure_archive_sha256": "ead29b5631fb05fa4a550bb04339761045e620871b93d8b031f093886d9a01f7",
+    "beta05_actual_updates": 0,
+    "repaired_sources": {
+      "run_spf_beta05_full_serialization_r2.py": {
+        "size": 6456,
+        "sha256": "33127eee907d343e18daf29fd064f8551048544ef03f7943dadb8339fd219e32"
+      },
+      "run_spf_beta05_full_serialization_r2_queue.py": {
+        "size": 14400,
+        "sha256": "9d734587cb49590f275b906405117640e6e1a472f43ac742a9a196dbe787c937"
+      },
+      "spf_beta05_serialization_r2_development_executor.py": {
+        "size": 16329,
+        "sha256": "76c5fd9c0a6228643d3c9a11621cfa90db52fed65efde1f403d86a7f23c14191"
+      }
+    },
+    "beta05_recovery_status": "PARTIAL_UPLOAD_NO_LAUNCH",
+    "received_chunks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "new_gpu_submissions": 0,
+    "new_paid_calls": 0,
+    "private_payloads_and_credentials_not_published": true,
+    "native_automation_status": "PAUSED",
+    "native_changed": false
   }
 }

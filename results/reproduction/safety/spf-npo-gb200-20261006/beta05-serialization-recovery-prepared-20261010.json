@@ -1,0 +1,40 @@
+{
+  "status": "NEW_SERIALIZATION_AND_RECOVERY_METADATA_CPU_ONLY_PASS",
+  "sources": {
+    "run_spf_beta05_full_serialization_r2.py": {
+      "size": 6456,
+      "sha256": "33127eee907d343e18daf29fd064f8551048544ef03f7943dadb8339fd219e32"
+    },
+    "run_spf_beta05_full_serialization_r2_queue.py": {
+      "size": 14400,
+      "sha256": "9d734587cb49590f275b906405117640e6e1a472f43ac742a9a196dbe787c937"
+    },
+    "spf_beta05_serialization_r2_development_executor.py": {
+      "size": 16329,
+      "sha256": "76c5fd9c0a6228643d3c9a11621cfa90db52fed65efde1f403d86a7f23c14191"
+    }
+  },
+  "original_failure_archive_sha256": "ead29b5631fb05fa4a550bb04339761045e620871b93d8b031f093886d9a01f7",
+  "unchanged_original_queue_functions": [
+    "sha",
+    "bound",
+    "write",
+    "module",
+    "validate_plan",
+    "metadata_check",
+    "prepare_case",
+    "stage"
+  ],
+  "executor_reverse_bytes_identical": true,
+  "recovery_negative_cases_rejected": 9,
+  "serialization_positive_and_numeric_negatives_pass": true,
+  "subprocesses_launched": 0,
+  "CUDA_initialized": false,
+  "weights_read": false,
+  "training_steps": 0,
+  "real_api_calls": 0,
+  "reporting_config_changed": false,
+  "comparison_uses_original_saved_json_serialization": true,
+  "original_training_loop_or_recipe_scalar_changes": false,
+  "new_root": "/data/spf-beta05-full-20261010-r2"
+}
