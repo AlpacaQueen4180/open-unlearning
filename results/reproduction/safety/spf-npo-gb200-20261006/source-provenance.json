@@ -760,5 +760,28 @@
     "private_payloads_and_credentials_not_published": true,
     "native_status": "PAUSED",
     "native_changed": false
+  },
+  "beta05_training_actual_optimizer_progress_20261010_0632": {
+    "aggregate": "spf-beta05-training-progress-20261010-0632.json",
+    "aggregate_sha256": "f4c2c0f4469ba98c1beac67870fb3cc715b7a01d47160b012db0e6d8cba04631",
+    "snapshot_sha256": "d824e7bc37b4872e1769a64e9a5af3376e976d7542bfb026d8b32cca873ce180",
+    "queue_pid": 9069,
+    "native_train_pid": 9140,
+    "status": "RUNNING_AT_0632_TAIPEI_SNAPSHOT",
+    "actual_beta1": 0.5,
+    "actual_beta2": 0.999,
+    "actual_nonbeta_training_args_match": true,
+    "observed_saved_checkpoints": [
+      157,
+      313,
+      469
+    ],
+    "exact_current_update": null,
+    "full_training_reload_audit_development_harmfulness_complete": false,
+    "new_gpu_submissions": 0,
+    "new_paid_calls": 0,
+    "additional_progress_queries": 0,
+    "native_status": "PAUSED",
+    "native_changed": false
   }
 }

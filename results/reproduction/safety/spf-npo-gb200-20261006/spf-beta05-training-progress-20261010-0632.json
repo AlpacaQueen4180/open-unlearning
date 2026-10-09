@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "status": "RUNNING_AT_0632_TAIPEI_SNAPSHOT",
+  "root": "/data/spf-beta05-full-20261010-r2",
+  "queue_pid": 9069,
+  "torchrun_pid": 9072,
+  "native_train_pid": 9140,
+  "snapshot_utc": "2026-10-09T22:32:30.116690+00:00",
+  "snapshot_sha256": "d824e7bc37b4872e1769a64e9a5af3376e976d7542bfb026d8b32cca873ce180",
+  "snapshot_source_sha256": "9565282356648bb713c5f9deeb9ccb812c2d78aab040415e98e9c00ec4bf70e3",
+  "logical_snapshots": 1,
+  "max_inner_transport_attempts": 2,
+  "outer_retry": 0,
+  "additional_progress_queries": 0,
+  "remote_mutation": 0,
+  "actual_stage": "train",
+  "completed_stages": [],
+  "train_returncode_not_yet_available": true,
+  "actual_optimizer_binding_observed": {
+    "status": "ACTUAL_BETA05_FULL_OPTIMIZER_BOUND",
+    "beta1": 0.5,
+    "beta2": 0.999,
+    "optimizer": {
+      "class": "AdamW",
+      "defaults": {
+        "lr": 1e-05,
+        "betas": [
+          0.5,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.01,
+        "alpha": 0.0,
+        "t_alpha": null,
+        "t_beta3": null
+      }
+    },
+    "baseline_resolved_sha256": "d3aeba5342e5102124d7a12096cb4190c56c9617dabb75ed1df5a3b155bc354d",
+    "plan_sha256": "e5782f588434ba8b1ecb799882a1f6cef3a1c8347b48b47497b2c8304ebc7ecb",
+    "wrapper_sha256": "33127eee907d343e18daf29fd064f8551048544ef03f7943dadb8339fd219e32",
+    "frozen_cli_sha256": "f2fc3ef632ba284d206b372177a14abe4d0b2410499af5ca7c435afc10ca02cc",
+    "original_setup_delegated": true,
+    "original_training_loop_delegated": true,
+    "actual_nonbeta_training_args_match": true,
+    "comparison_serialization": "same json.dumps(default=str) as original resolved_training",
+    "pid": 9140
+  },
+  "optimizer_binding_provenance": "parsed field in saved logical snapshot; no claim of separately exported original binding file bytes",
+  "source_plan_and_fresh_bound_snapshot_hashes_match": true,
+  "checkpoint_saves_observed_in_original_log": [
+    157,
+    313,
+    469
+  ],
+  "latest_visible_saved_checkpoint": 469,
+  "latest_visible_save_utc": "2026-10-09T22:17:25.744+00:00",
+  "checkpoint_save_provenance": "snapshot log tail records checkpoint ready and HF shard save; no independent weight byte audit yet",
+  "exact_current_update": null,
+  "exact_current_epoch": null,
+  "planned_final_updates": 625,
+  "planned_epochs": 5,
+  "planned_exposures": 20000,
+  "gpu": {
+    "returncode": 0,
+    "stdout": "141979 MiB, 37 %\n",
+    "stderr": ""
+  },
+  "compute_processes": {
+    "returncode": 0,
+    "stdout": "9140, 80642 MiB\n",
+    "stderr": ""
+  },
+  "current_log_tail_snapshot_sha256": "18aec9737ffb4b5bad1919556509f56821388c05c3b1522d66aba1494054e43f",
+  "candidate_audit": null,
+  "fresh_reload_executed": false,
+  "development_evaluation_started": false,
+  "new_harmfulness_result": null,
+  "original_setup_and_loop_delegated": true,
+  "only_recipe_delta": {
+    "adam_beta1": {
+      "baseline": 0.9,
+      "candidate": 0.5
+    }
+  },
+  "original_report_to_guard_failure_preserved": true,
+  "original_failure_archive_sha256": "ead29b5631fb05fa4a550bb04339761045e620871b93d8b031f093886d9a01f7",
+  "original_full_retain_completed_diagnostics_or_evaluations_repeated": false,
+  "new_gpu_submissions": 0,
+  "new_paid_judge_calls": 0,
+  "credential_reads": 0,
+  "weights_rehashed": false,
+  "beta05_new_paid_judge_budget_authorized": false,
+  "target_gate": "insufficient_evidence",
+  "paired_cluster_mapping_verified": false,
+  "human_adjudication_complete": false,
+  "original_NPO_reload_pilot_and_matching_reference_metrics_pending": true,
+  "single_seed_cross_platform_and_four_autograd_failure_limits_preserved": true,
+  "native_automation": {
+    "status": "PAUSED",
+    "rrule": "FREQ=MINUTELY;INTERVAL=15",
+    "notification_policy": "failed_runs_only"
+  },
+  "native_status_or_schedule_changed": false,
+  "private_prompts_responses_keys_labels_or_weights_published": false
+}
