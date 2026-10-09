@@ -742,5 +742,23 @@
     "private_payloads_and_credentials_not_published": true,
     "native_automation_status": "PAUSED",
     "native_changed": false
+  },
+  "beta05_serialization_recovery_launch_20261010_0230": {
+    "aggregate": "spf-beta05-serialization-recovery-launch-20261010-0230.json",
+    "aggregate_sha256": "3ce17fd57e99905ddce336c468215380a64597a06392be917d29f4b3e1954ad3",
+    "launch_source": "beta05-serialization-launch-20261010-0230/launch.as-run.py",
+    "launch_source_sha256": "9792376494d85cae97172e3160308555b596182d6b5f3d53402bff0df9fe21fa",
+    "queue_pid": 9069,
+    "status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "snapshot_sha256": "a49f89401a7bd89ddd772d5a135f06d18f7f3089784b9f0cfad14f2cd1aca512",
+    "plan_sha256": "e5782f588434ba8b1ecb799882a1f6cef3a1c8347b48b47497b2c8304ebc7ecb",
+    "new_snapshot_source_sha256": "9565282356648bb713c5f9deeb9ccb812c2d78aab040415e98e9c00ec4bf70e3",
+    "new_gpu_submissions": 1,
+    "post_submission_queries": 0,
+    "new_paid_calls": 0,
+    "original_failure_and_transport_failures_preserved": true,
+    "private_payloads_and_credentials_not_published": true,
+    "native_status": "PAUSED",
+    "native_changed": false
   }
 }

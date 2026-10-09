@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "status": "SUBMITTED_RESULT_NOT_CHECKED",
+  "human_request": "再試一次Runai",
+  "snapshot": {
+    "utc": "2026-10-09T18:27:13.801444+00:00",
+    "sha256": "a49f89401a7bd89ddd772d5a135f06d18f7f3089784b9f0cfad14f2cd1aca512",
+    "as_run_source_sha256": "f7d432f7bd2b3f7fd2ac14660dcffc2cc2096e3c40e81b6571dc100826433a0f",
+    "logical_snapshots": 1,
+    "max_inner_transport_attempts": 2,
+    "outer_retry": 0,
+    "gpu_idle_at_snapshot": true,
+    "old_failed_queue_exited": true
+  },
+  "deployment": {
+    "original_chunks0to5_verified_reused": true,
+    "only_original_missing_chunks_uploaded": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "reused_bundle_sha256": "3cfeaab67901850c26c13a17343bd964bced05bcc108de0dfde819714d0043a0",
+    "original_bundle_files_verified": {
+      "run_spf_beta05_full_serialization_r2_queue.py": {
+        "size": 14400,
+        "sha256": "9d734587cb49590f275b906405117640e6e1a472f43ac742a9a196dbe787c937"
+      },
+      "run_spf_beta05_full_serialization_r2.py": {
+        "size": 6456,
+        "sha256": "33127eee907d343e18daf29fd064f8551048544ef03f7943dadb8339fd219e32"
+      },
+      "spf_beta05_serialization_r2_development_executor.py": {
+        "size": 16329,
+        "sha256": "76c5fd9c0a6228643d3c9a11621cfa90db52fed65efde1f403d86a7f23c14191"
+      },
+      "audit_spf_target.py": {
+        "size": 5809,
+        "sha256": "6fc5ba538b5b6ee1a8ffd003de62abb6f65a6ddf9b1df590afe20fec7769c283"
+      },
+      "plan.private.json": {
+        "size": 2504,
+        "sha256": "e5782f588434ba8b1ecb799882a1f6cef3a1c8347b48b47497b2c8304ebc7ecb"
+      },
+      "bound-snapshot.private.json": {
+        "size": 69300,
+        "sha256": "f75d42fc08f49d35a5ff4035358366369c0c74b66039663ee121784fc5c20cd7"
+      }
+    },
+    "stale_snapshot_retained_for_original_bundle_integrity_but_not_used_for_launch": true,
+    "fresh_snapshot_remote": "/data/spf-beta05-full-20261010-r2/validation-code/bound-snapshot-20261010-0226.private.json",
+    "fresh_snapshot_sha256": "a49f89401a7bd89ddd772d5a135f06d18f7f3089784b9f0cfad14f2cd1aca512",
+    "successful_unique_stages": {
+      "chunk-6": {
+        "tag": "beta05-serialization-deployment-20261010-0226",
+        "result_sha256": "f0256ab7e7d8baec70d6466e6f210fef2b049762bfe17b7be465333c30240179",
+        "as_run_source_sha256": "51b4ed9b38a05149650825a8fd7e34aec334fea314a8bc0be84f3f8610e1cd3f",
+        "receipt_sha256": "79c9ca440baf84b57b8f73ab1470e684a2915da31c8a25a33677bbec9e7ebcb8"
+      },
+      "chunk-7": {
+        "tag": "beta05-serialization-deployment-20261010-0226",
+        "result_sha256": "e8f9615fc5fadc3b5de9431c5e9c8e199f3aabc7147e8bcd6df77d85fcf76c01",
+        "as_run_source_sha256": "67a9e67f9e95b1d8066893786d6746628d14b969b2cd14993cd503a6f79a452e",
+        "receipt_sha256": "663909c727b795eb3be32acad0b53248997d6f6b5b6731f78e8691b887f5ded1"
+      },
+      "chunk-8": {
+        "tag": "beta05-serialization-deployment-20261010-0226",
+        "result_sha256": "800f5ece3855ec3dc766e105c5035d87abe06728c9c1adcec37d26f543d88db0",
+        "as_run_source_sha256": "897b0e6edde3c6dc611618fee245eba9ce3c5bce832a13cd9aa161afe1dd20bd",
+        "receipt_sha256": "1a37f344511f20d6abfde5a4f9974c937e5c8b2a044cdea500e21ff809ff378c"
+      },
+      "chunk-9": {
+        "tag": "beta05-serialization-deployment-20261010-0226",
+        "result_sha256": "5e1360ba34c1049fcf90089aa80664be5a10114441d8ac4eb4685c70ff5453b1",
+        "as_run_source_sha256": "383d3c0d924d0f94f2f1cca0dbcf19ec41db977a1bee036920b00fdcf78699fc",
+        "receipt_sha256": "a6bfd5aa5538240768aea86f56e9e88ffa14be45adcfb9a960c0203833688fbd"
+      },
+      "fresh-snapshot-chunk-0": {
+        "tag": "beta05-serialization-deployment-20261010-0226",
+        "result_sha256": "74d6043796e04bfa1ddc9d4da04cef7b715d5d6c50df58387b0c3dc22e2f02a2",
+        "as_run_source_sha256": "66f3744ebc1abfe7f15d64623285742c1ff712b1c081e1018886d047c67527db",
+        "receipt_sha256": "5db746fead4976aed888481d90fde508f7074654e07a5476a5da2cf8cd39326a"
+      },
+      "fresh-snapshot-chunk-1": {
+        "tag": "beta05-serialization-deployment-20261010-0226",
+        "result_sha256": "10a8a0a151b67822a51ebc10875c034aa7fe8f9cfaf02d711862e9e557e1e958",
+        "as_run_source_sha256": "dba805ef235ea6b58ffc8b15e28a0bc66e3d16562d2975e93b04385d7d34a6e3",
+        "receipt_sha256": "47bf10986744e4d112b4edb7105fd888c5d34538bc637398c6c8da8575cc5c67"
+      },
+      "fresh-snapshot-chunk-2": {
+        "tag": "beta05-serialization-deployment-20261010-0226",
+        "result_sha256": "008005e30ed03b8712148d03ba52ebe655a38667ae456b69c18ef89912f74870",
+        "as_run_source_sha256": "7d0b472e2ae462bd92f4e17001c8eee91f05e3b577d173fa6a5c6df9c883a3f9",
+        "receipt_sha256": "220147f1bb493d0855bd993a83a5bbc94388f577b9c8e0d3109d18e6c1fd540a"
+      },
+      "fresh-snapshot-chunk-3": {
+        "tag": "beta05-serialization-deployment-20261010-0226",
+        "result_sha256": "0d471e68dd184dbd79557af4c53842a830c0c5aba15a9f6c263f739381bdf0d3",
+        "as_run_source_sha256": "94fd8fc92427b917645a1ed71a06cc5129ec7307a5e03bce1fc96c0e536a0305",
+        "receipt_sha256": "e2d0f7a82c53ab33e7024216bc2911c80c7c9dbe30fdf05c3f5251ca101d34b0"
+      },
+      "seal": {
+        "tag": "beta05-serialization-deployment-20261010-0226",
+        "result_sha256": "ad1c5be82b2953e3cf52a8aba624f8b0f0c58c00fac2bd8dfdfee279a20c7e7b",
+        "as_run_source_sha256": "614ba863339556599378096cd2eac4a36000e6458db1ae9031db75c17b0dea34",
+        "receipt_sha256": "aef9b987db806623d0808c2c301020e166765168d9cb19e95fedaa29402803c3"
+      },
+      "fresh-snapshot-chunk-4": {
+        "tag": "beta05-serialization-deployment-20261010-0226-r2",
+        "result_sha256": "375cc8b39b922033470564db57426a84fb30bb0bfbd7d6c30741698a425e28b0",
+        "as_run_source_sha256": "f16c6617512f914a5513f27f239e3d88bd0dcbea520888658f037cc7803047a8",
+        "receipt_sha256": "dcac95e6c6647c1ef9cb6f88bfda02053597399e20bbd8ccc85cd47a49c7e34d"
+      },
+      "launch-once": {
+        "tag": "beta05-serialization-deployment-20261010-0226-r2",
+        "result_sha256": "ceff51f08c1f9d3d31fcefa3ccca217746531972f1be9eae5ef82ec1cf41516b",
+        "as_run_source_sha256": "9792376494d85cae97172e3160308555b596182d6b5f3d53402bff0df9fe21fa",
+        "receipt_sha256": "e0f4108b0233c6df0f2d07f2395ac8e322d3e783115a8a09fb90fd4e2186b029"
+      },
+      "seal-fresh-snapshot": {
+        "tag": "beta05-serialization-deployment-20261010-0226-r2",
+        "result_sha256": "b440d4d8eb50e4f8a7eedd0d6c9d267ffef3f256123d8ab1ce2ca84037a623f8",
+        "as_run_source_sha256": "b8b0eac431ea8150f77ba79bc4cc4287131225a234bd58ecfe9fe5d3b64e806e",
+        "receipt_sha256": "12ff6b4c521b820dce0eb86947acb18e247ab90681386ef35d3b1381ae5e6f0c"
+      }
+    },
+    "preserved_transport_failure": {
+      "stage": "fresh-snapshot-chunk-4",
+      "type": "WebSocket handshake EOF",
+      "cli_utf8_sha256": "318a41536b0963ab164b44fc8a65a6a87779024728cde25583e95e7acc22b682",
+      "receipt_sha256": "75713e9190c010069eb9add2a79f5b171d3e3d8b0c82cc3964f300750fbe540d",
+      "capture": "native output strings joined LF and encoded UTF8; not original stdout/stderr bytes"
+    },
+    "artifact_check_sha256": "5692ce314fb34656efb57f66812a1029d8eb2feacb1daf789e0c718bfb337189",
+    "artifact_check_not_second_progress_snapshot": true,
+    "verified_missing_stages_only": [
+      "fresh-snapshot-chunk-4",
+      "seal-fresh-snapshot",
+      "launch-once"
+    ],
+    "all_previous_source_plan_and_failure_bytes_preserved": true,
+    "route_network_or_timeout_changed": false
+  },
+  "launch": {
+    "status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "pid": 9069,
+    "command": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-beta05-full-20261010-r2/validation-code/run_spf_beta05_full_serialization_r2_queue.py",
+      "--source-sha256",
+      "9d734587cb49590f275b906405117640e6e1a472f43ac742a9a196dbe787c937",
+      "--plan",
+      "/data/spf-beta05-full-20261010-r2/validation-code/plan.private.json",
+      "--plan-sha256",
+      "e5782f588434ba8b1ecb799882a1f6cef3a1c8347b48b47497b2c8304ebc7ecb",
+      "--snapshot",
+      "/data/spf-beta05-full-20261010-r2/validation-code/bound-snapshot-20261010-0226.private.json",
+      "--snapshot-sha256",
+      "a49f89401a7bd89ddd772d5a135f06d18f7f3089784b9f0cfad14f2cd1aca512"
+    ],
+    "log": "/data/spf-beta05-full-20261010-r2/validation-code/beta05-full-launch-20261009.raw.log",
+    "submitted_utc": "2026-10-09T18:30:29.687424+00:00",
+    "snapshot_sha256": "a49f89401a7bd89ddd772d5a135f06d18f7f3089784b9f0cfad14f2cd1aca512",
+    "plan_sha256": "e5782f588434ba8b1ecb799882a1f6cef3a1c8347b48b47497b2c8304ebc7ecb",
+    "new_paid_api_calls": 0,
+    "existing_final_training_repeated": false,
+    "existing_evaluations_repeated": false
+  },
+  "elapsed_seconds_from_full_snapshot": 195.88598,
+  "launch_source": "beta05-serialization-launch-20261010-0230/launch.as-run.py",
+  "launch_source_sha256": "9792376494d85cae97172e3160308555b596182d6b5f3d53402bff0df9fe21fa",
+  "live_gpu_idle_and_original_old_pid_exit_guards_before_launch": true,
+  "new_gpu_queue_submissions": 1,
+  "post_submission_progress_queries": 0,
+  "recipe": {
+    "parameter_delta": {
+      "adam_beta1": {
+        "baseline": 0.9,
+        "candidate": 0.5
+      }
+    },
+    "beta2": 0.999,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.01,
+    "seed": 0,
+    "epochs_planned": 5,
+    "updates_planned": 625,
+    "exposures_planned": 20000,
+    "unique_examples": 4000,
+    "microbatch": 4,
+    "accumulation": 8,
+    "global_batch": 32,
+    "warmup_steps": 125,
+    "rank": 20,
+    "max_length": 512,
+    "original_model_anchor_data_order_precision_loop_backward_scalars_unchanged": true,
+    "comparison_serialization_matches_original_resolved_training": true
+  },
+  "finite_queue": [
+    "train",
+    "fresh-reload",
+    "full-byte-audit",
+    "candidate-development: six fixed stages"
+  ],
+  "new_train_optimizer_binding_reload_audit_and_harmfulness_actual_results": "NOT_CHECKED_AFTER_SUBMISSION",
+  "original_failed_run_preserved": {
+    "pid": 8483,
+    "status": "FAILED_NO_RETRY",
+    "actual_training_updates": 0,
+    "loaded291_weights": true,
+    "optimizer_created": true,
+    "archive_sha256": "ead29b5631fb05fa4a550bb04339761045e620871b93d8b031f093886d9a01f7",
+    "original_raw_sha256": "9a37e105ef111e565fea1bd13ba800c76bcfe93d58fadb9ae9015d2404e967f8"
+  },
+  "completed_original_full_retain_diagnostics_or_evaluations_repeated": false,
+  "original16GB_weights_rehashed": false,
+  "new_paid_judge_calls": 0,
+  "credential_reads": 0,
+  "beta05_new_paid_judge_budget_authorized": false,
+  "gate": "insufficient_evidence",
+  "paired_cluster_mapping_verified": false,
+  "human_adjudication_complete": false,
+  "original_NPO_reload_and_pilot_pending": true,
+  "matched_reference_metrics_pending": true,
+  "original_single_seed_cross_platform_and_four_autograd_failure_limits_preserved": true,
+  "next_snapshot_source_sha256": "9565282356648bb713c5f9deeb9ccb812c2d78aab040415e98e9c00ec4bf70e3",
+  "next_snapshot_new_fresh_binding_field_not_yet_remote_executed": true,
+  "native_automation": {
+    "observed_utc": "2026-10-09T18:33:36.073592+00:00",
+    "fields": {
+      "status": "PAUSED",
+      "rrule": "FREQ=MINUTELY;INTERVAL=15",
+      "notification_policy": "failed_runs_only"
+    },
+    "read_only": true,
+    "status_changed": false,
+    "schedule_changed": false
+  },
+  "private_keys_payloads_labels_weights_and_contracts_published": false
+}
