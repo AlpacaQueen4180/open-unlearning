@@ -669,5 +669,25 @@
     "native_automation_status": "PAUSED",
     "credential_policy": "Windows DPAPI CurrentUser file",
     "raw_prompts_responses_labels_and_keys_private": true
+  },
+  "checkpoint313_full469_partial_beta05_prepared_20261009": {
+    "aggregate": "results/reproduction/safety/spf-npo-gb200-20261006/spf-checkpoint313-full469-partial-beta05-prepared-20261009.json",
+    "sha256": "0df3da4b497c1902f8b68a8359a8dac7cbbcdf324ff468dce2415c46055ac8b2",
+    "sources": {
+      "scripts/reproduction/safety/audit_spf_checkpoint469_partial396.py": "42adc845ee847b2faad424595190f807471715915f5927026d7d10c8be171ff1",
+      "scripts/reproduction/safety/run_spf_checkpoint469_unsent395.py": "0096ebf620510074f4a38f398137a785521364b83adfcb74ea53b83b3f52e13e",
+      "scripts/reproduction/safety/start_spf_checkpoint469_unsent395.ps1": "e47fb8dee86fb0e6ee109d1fe5aa45cdeebe0740f6e38c0804be044d2bf4c803",
+      "scripts/reproduction/safety/audit_spf_checkpoint469_unsent395.py": "0ea4add90afb48343bce696acf45b84dc05f0feb89e17fc3c60baba8a0a32aa1",
+      "scripts/reproduction/safety/gb200/run_spf_beta05_full.py": "0abffe63440a2fef5e3cbb05386431e1ab6cd54684f96bab6a3b3b423984a08e",
+      "scripts/reproduction/safety/gb200/run_spf_beta05_full_queue.py": "176087bc5248c04f04acf17792348a7f12c26a02bdd59fe9796af97b992a9aaa",
+      "scripts/reproduction/safety/gb200/spf_beta05_development_executor.py": "301acf5c3b84ff0b2756e4c1481e89cb7b5bafc63eba58aa7fc704c88db68e94"
+    },
+    "raw313_audit_sha256": "785ba8fd4a47200ebeb186ac2f88d7466ab6982f383f7d8421c64019a72f1633",
+    "raw469396_audit_sha256": "56fc11c3ffd3d987db8a999db5acb2d3c3804083e965d909ab827dc823c2d08b",
+    "private_payloads_labels_and_raw_responses_not_published": true,
+    "beta05_source_only_no_launch": true,
+    "failed_cli_text_sha256": "7833f4dcbcaf6cd3502526760e4b9be27baeac56cabe466dc6334178365cdc95",
+    "automation_status": "PAUSED",
+    "automation_changed": false
   }
 }

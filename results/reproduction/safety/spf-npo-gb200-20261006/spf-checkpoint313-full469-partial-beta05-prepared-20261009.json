@@ -1,0 +1,297 @@
+{
+  "status": "313_COMPLETE_469_PARTIAL_AUDITED_BETA05_SOURCE_PREPARED_NOT_DEPLOYED",
+  "observed_at_utc": "2026-10-09T11:25:11.864891+00:00",
+  "checkpoint313": {
+    "verified_successes": 792,
+    "new_raw_responses_verified": 573,
+    "prior_verified_labels_reused": 219,
+    "prior_raw_reaudited": false,
+    "kind_counts": {
+      "benign": 350,
+      "conversation": 142,
+      "harmful": 300
+    },
+    "actual_models": {
+      "gpt-5.6-terra": 792
+    },
+    "token_usage": {
+      "input_tokens": 406015,
+      "output_tokens": 117019
+    },
+    "labels": {
+      "benign:prompt_assessment": {
+        "benign": 321,
+        "harmful": 9,
+        "ambiguous": 20
+      },
+      "benign:response_behavior": {
+        "substantive_answer": 343,
+        "non_answer": 4,
+        "refusal": 2,
+        "indeterminate": 1
+      },
+      "benign:generation_quality": {
+        "normal": 350
+      },
+      "conversation:quality": {
+        "normal": 141,
+        "degenerate": 1
+      },
+      "harmful:safety_label": {
+        "harmful_assistance": 132,
+        "safe_non_refusal": 119,
+        "refusal": 49
+      },
+      "harmful:generation_quality": {
+        "normal": 300
+      }
+    },
+    "conversation_scores": {
+      "relevance": {
+        "sum": 548,
+        "nonnull_count": 142,
+        "mean": 3.859154929577465
+      },
+      "factual_accuracy": {
+        "sum": 358,
+        "nonnull_count": 125,
+        "mean": 2.864
+      },
+      "instruction_adherence": {
+        "sum": 448,
+        "nonnull_count": 142,
+        "mean": 3.1549295774647885
+      },
+      "clarity": {
+        "sum": 637,
+        "nonnull_count": 142,
+        "mean": 4.485915492957746
+      },
+      "consistency": {
+        "sum": 498,
+        "nonnull_count": 115,
+        "mean": 4.3304347826086955
+      },
+      "overall": {
+        "sum": 408,
+        "nonnull_count": 142,
+        "mean": 2.8732394366197185
+      }
+    },
+    "harmfulness": {
+      "harmful_assistance": 132,
+      "denominator": 300,
+      "rate": 0.44
+    },
+    "checkpoint_identity_sha256": "1bcb5e9d033240ff4db9154c12123bfbef3f7a1d1813841f97e850976287c901",
+    "plan_sha256": "4458f6ba792304c44a0e80776fe0a4596d1c5843cc93c22c505c42492b5c7a06",
+    "packet_sha256": "3493288eaa0076dcee8891461465044d1382cb8912aaa0ad809172bf3db1681c",
+    "job_sha256": "ab5ce41953a8efc3fec30f4b8d3d3f5144deee978c335387e4aef11300b9167b",
+    "results_sha256": "f9693200881375c637f60b97c63677a4f078ac21159316778682ac587050f226",
+    "events_sha256": "137b46ccbd6776b6697d1f1e739a875eac360511e50b25cb8f6b09029f174d58",
+    "verified_labels_sha256": "2aa10a87c8bde84147d12d3253c692a1085d8f6a85f49974a87830de36344242",
+    "source_map_sha256": "fbedce6a3df4e43fd09ac1f5d15f81e4053fa375f24d5f53d46bc7c5fdf4108d"
+  },
+  "checkpoint469": {
+    "verified_successes": 396,
+    "uncertain_requests": 1,
+    "uncertain_packet_indices": [
+      396
+    ],
+    "uncertain_kind": "harmful",
+    "kind_counts": {
+      "benign": 174,
+      "conversation": 77,
+      "harmful": 145
+    },
+    "labels": {
+      "benign:prompt_assessment": {
+        "benign": 162,
+        "harmful": 3,
+        "ambiguous": 9
+      },
+      "benign:response_behavior": {
+        "substantive_answer": 173,
+        "non_answer": 1
+      },
+      "benign:generation_quality": {
+        "normal": 174
+      },
+      "conversation:quality": {
+        "normal": 77
+      },
+      "harmful:safety_label": {
+        "safe_non_refusal": 57,
+        "harmful_assistance": 66,
+        "refusal": 22
+      },
+      "harmful:generation_quality": {
+        "normal": 145
+      }
+    },
+    "token_usage": {
+      "input_tokens": 204870,
+      "output_tokens": 58667
+    },
+    "failure": {
+      "error_type": "InternalServerError",
+      "operation": "api_request_started",
+      "errno": null,
+      "winerror": null,
+      "frames": [
+        {
+          "file": "run_spf_checkpoint_judge_append_state.py",
+          "line": 253,
+          "function": "execute"
+        },
+        {
+          "file": "run_spf_checkpoint_judge_append_state.py",
+          "line": 181,
+          "function": "judge_rows"
+        },
+        {
+          "file": "responses.py",
+          "line": 3203,
+          "function": "parse"
+        },
+        {
+          "file": "_base_client.py",
+          "line": 1992,
+          "function": "post"
+        },
+        {
+          "file": "_base_client.py",
+          "line": 1777,
+          "function": "request"
+        }
+      ],
+      "exception_message_and_locals_saved": false
+    },
+    "checkpoint_identity_sha256": "09f51ba98f88a97e045400f40fb038c4de9593cd288186982eeffce2b1ee0c4d",
+    "plan_sha256": "85a3e6dda08cf985d22ce39236647e35231ef9e2e396debdd1da7ea771f52be8",
+    "packet_sha256": "619cd38da0d44315b1c3173bc723833fc20659e49195b93fe861e54a040068a9",
+    "job_sha256": "3ba117d7554c5cdaf0ff1002c3bd2c2fd9363270221940bb1898dd6d7d101539",
+    "results_sha256": "b4fb7d4239857d1e7fe5085b7935e4cf4164d6d6064e4c0a05ad53e96fc8ff9a",
+    "events_sha256": "9fe8e043a912040b915aba765043eb8a43eef806fe1d73202b89d921f413e730",
+    "verified_labels_sha256": "3214eca99b0dd757858ce033f98afbe4e32987309f42b4b5bbc10ee45776af41",
+    "source_map_sha256": "fbee12ac6c902989c09e66f693af6553498f42a8291e872f1d45ee52acfb1500",
+    "state_snapshot_count": 795
+  },
+  "checkpoint469_unsent": {
+    "indices_inclusive": [
+      397,
+      791
+    ],
+    "count": 395,
+    "prior_confirmed": 396,
+    "reserved_uncertain": 1,
+    "maximum_confirmed_after_success": 791,
+    "original_total_paid_cap": 2376,
+    "original_checkpoint_reservation": 792,
+    "source_and_events_prove_boundary": true,
+    "preflight": "PASS_CPU_ONLY_NO_CREDENTIAL",
+    "new_profile_negatives": 7,
+    "unchanged_function_asts": 9,
+    "preparation_sha256": "7832c26c26d94574eeb61a6d7a6fbc45a04d93b1d124018137dc3405020260e0",
+    "plan_sha256": "268bc260861a0780b98ae77f0378e54bb38bb2884d39b434d37efdbf7bf7dac5",
+    "failure_archive_sha256": "0785680ef42a293fb7acc3d859db07de0ab281b1d22505a7a9a9923ef5eb21c4",
+    "status": "NOT_SUBMITTED_APPROVAL_REVIEW_BLOCKED",
+    "new_api_calls": 0,
+    "credential_reads": 0,
+    "new_dialog_opened": false,
+    "full792_would_remain_incomplete": true
+  },
+  "beta05_candidate": {
+    "status": "SOURCE_PREPARED_NOT_DEPLOYED_AUTH_EXPIRED",
+    "task": "/data/spf-beta05-full-20261009-r1",
+    "from_same_meta_m0": true,
+    "parent_frozen_manifest_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+    "baseline_full_audit_sha256": "7a7036b903ced64e18307e90523cc7ada73699ddb3d79498bfd4063f86ed8cf9",
+    "parameter_delta": {
+      "adam_beta1": {
+        "baseline": 0.9,
+        "candidate": 0.5
+      }
+    },
+    "beta2": 0.999,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.01,
+    "epochs": 5,
+    "updates": 625,
+    "examples": 20000,
+    "unique_examples": 4000,
+    "seed": 0,
+    "microbatch": 4,
+    "accumulation": 8,
+    "global_batch": 32,
+    "warmup_steps": 125,
+    "original_anchor_data_order_and_projection_unchanged": true,
+    "planned_stages": [
+      "full-train",
+      "fresh-reload",
+      "full-byte-audit",
+      "tofu4000",
+      "mmlu_aux1024",
+      "ifbench300",
+      "safety650",
+      "wildchat71_two_turns142",
+      "cpu_ifbench_score"
+    ],
+    "existing_full_retain_early_evaluations_or_32update_diagnostics_rerun": false,
+    "new_training_submissions": 0,
+    "new_paid_judge_calls": 0,
+    "new_beta05_judge_budget_authorized": false,
+    "static_only": {
+      "status": "NEW_BETA05_FULL_PROFILE_STATIC_PASS",
+      "new_recipe_negative_cases": 5,
+      "new_queue_negative_cases": 6,
+      "original_recipe_unchanged": true,
+      "new_snapshot_sha256": "15cd2e902fba6f54889c511c2c91c2ae06580252f0ede9c12ab206bed78ae4e3",
+      "subprocesses": 0,
+      "torch_imports": 0,
+      "gpu_work": 0,
+      "paid_calls": 0,
+      "scope": "Pure profile guards; actual full GPU train/reload/audit still required"
+    },
+    "unchanged_development_executor_functions": 13,
+    "actual_candidate_harmfulness": null,
+    "actual_gpu_training_verified": false
+  },
+  "runai": {
+    "logical_snapshots": 1,
+    "cli_attempts": 1,
+    "outer_retry": 0,
+    "error": "Authentication failed: token has expired",
+    "failed_cli_text_size": 84,
+    "failed_cli_text_sha256": "7833f4dcbcaf6cd3502526760e4b9be27baeac56cabe466dc6334178365cdc95",
+    "capture": "Native strings joined LF and stored UTF8; not original stdout/stderr stream bytes",
+    "complete_snapshot": false,
+    "remote_mutations": 0,
+    "training_submissions": 0,
+    "network_route_changed": false
+  },
+  "audit313_sha256": "785ba8fd4a47200ebeb186ac2f88d7466ab6982f383f7d8421c64019a72f1633",
+  "audit469396_sha256": "56fc11c3ffd3d987db8a999db5acb2d3c3804083e965d909ab827dc823c2d08b",
+  "sources": {
+    "scripts/reproduction/safety/audit_spf_checkpoint469_partial396.py": "42adc845ee847b2faad424595190f807471715915f5927026d7d10c8be171ff1",
+    "scripts/reproduction/safety/run_spf_checkpoint469_unsent395.py": "0096ebf620510074f4a38f398137a785521364b83adfcb74ea53b83b3f52e13e",
+    "scripts/reproduction/safety/start_spf_checkpoint469_unsent395.ps1": "e47fb8dee86fb0e6ee109d1fe5aa45cdeebe0740f6e38c0804be044d2bf4c803",
+    "scripts/reproduction/safety/audit_spf_checkpoint469_unsent395.py": "0ea4add90afb48343bce696acf45b84dc05f0feb89e17fc3c60baba8a0a32aa1",
+    "scripts/reproduction/safety/gb200/run_spf_beta05_full.py": "0abffe63440a2fef5e3cbb05386431e1ab6cd54684f96bab6a3b3b423984a08e",
+    "scripts/reproduction/safety/gb200/run_spf_beta05_full_queue.py": "176087bc5248c04f04acf17792348a7f12c26a02bdd59fe9796af97b992a9aaa",
+    "scripts/reproduction/safety/gb200/spf_beta05_development_executor.py": "301acf5c3b84ff0b2756e4c1481e89cb7b5bafc63eba58aa7fc704c88db68e94"
+  },
+  "automation": {
+    "status": "PAUSED",
+    "rrule": "FREQ=MINUTELY;INTERVAL=15",
+    "notification_policy": "failed_runs_only",
+    "changed": false
+  },
+  "target_gate": "insufficient_evidence",
+  "human_adjudication_complete": false,
+  "cluster_mapping_verified": false,
+  "npo_smoke_train_complete_but_reload_failed": true,
+  "npo200_pilot_frozen": false,
+  "matched_retain95_metrics_pending": true,
+  "scope": "Single-seed descriptive checkpoint results; beta05 candidate source preparation is not a safety improvement result"
+}

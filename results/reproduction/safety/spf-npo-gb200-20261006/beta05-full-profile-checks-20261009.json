@@ -1,0 +1,12 @@
+{
+  "status": "NEW_BETA05_FULL_PROFILE_STATIC_PASS",
+  "new_recipe_negative_cases": 5,
+  "new_queue_negative_cases": 6,
+  "original_recipe_unchanged": true,
+  "new_snapshot_sha256": "15cd2e902fba6f54889c511c2c91c2ae06580252f0ede9c12ab206bed78ae4e3",
+  "subprocesses": 0,
+  "torch_imports": 0,
+  "gpu_work": 0,
+  "paid_calls": 0,
+  "scope": "Pure profile guards; actual full GPU train/reload/audit still required"
+}
