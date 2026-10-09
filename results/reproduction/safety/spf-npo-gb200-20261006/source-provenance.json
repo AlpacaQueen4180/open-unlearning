@@ -689,5 +689,20 @@
     "failed_cli_text_sha256": "7833f4dcbcaf6cd3502526760e4b9be27baeac56cabe466dc6334178365cdc95",
     "automation_status": "PAUSED",
     "automation_changed": false
+  },
+  "beta05_full_launch_and_checkpoint469395_continuation_20261009": {
+    "aggregate": "spf-beta05-full-launch-and469-judge-continuation-20261009.json",
+    "aggregate_sha256": "70e7eb18f1913313a6638ec5085410f97d1b55c105cd9e2733c3eb3b2d45bc36",
+    "beta05_queue_pid": 8483,
+    "beta05_status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "judge469_loader_pid": 61220,
+    "judge469_status_at_observation": "RUNNING",
+    "judge395_runtime_successes_at_observation": 68,
+    "judge395_new_raw_audit_complete": false,
+    "audit_wait_helper_pid": 21776,
+    "maximum469_confirmed": 791,
+    "uncertain469_auto_retries": 0,
+    "native_automation_status": "PAUSED",
+    "status_or_schedule_changed": false
   }
 }

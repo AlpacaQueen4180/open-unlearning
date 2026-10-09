@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-10-09T11:57:47.631845+00:00",
+  "classification": "Controlled full SPF beta1=.5 candidate submitted; checkpoint469395 Judge running at recorded observation; all new results pending",
+  "explicit_human_confirmation": "確認可以Judge，已登入",
+  "confirmation_sha256": "8b50157a6d5129e938b1527a7c2269965ed7c0f792354bdd6c0b98fa4c568e37",
+  "judge": {
+    "checkpoint": 469,
+    "run_tag": "checkpoint-469-saved-key-r3-unsent395",
+    "loader_pid": 61220,
+    "python_pid_at_observation": 49844,
+    "submitted_utc": "2026-10-09T11:43:15.9233179Z",
+    "launch_receipt_sha256": "199def795843d6e61687d582a39739a0080487783bffd08b50aff775b90bd063",
+    "runner_sha256": "0096ebf620510074f4a38f398137a785521364b83adfcb74ea53b83b3f52e13e",
+    "plan_sha256": "268bc260861a0780b98ae77f0378e54bb38bb2884d39b434d37efdbf7bf7dac5",
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "max_output_tokens": 4096,
+    "api_base_url": "https://api.openai.com/v1",
+    "max_retries": 0,
+    "original_total_paid_cap": 2376,
+    "checkpoint_reservation": 792,
+    "prior_verified_successes": 396,
+    "reserved_uncertain": 1,
+    "selected_new_indices": [
+      397,
+      791
+    ],
+    "selected_new_count": 395,
+    "uncertain_original_index": 396,
+    "uncertain_kind": "harmful",
+    "uncertain_auto_retries": 0,
+    "maximum_combined_confirmed": 791,
+    "full792_complete": false,
+    "credential_policy": "existing local Windows DPAPI CurrentUser encrypted file; loaded only to child memory",
+    "new_key_dialog": false,
+    "credential_values_or_ciphertext_published": false,
+    "observation_utc": "2026-10-09T11:46:43.7484476Z",
+    "observation_sha256": "c33d8312cb36685bad9f5f7e171c8ded9de73bae0e9e71080912f6ef830d220e",
+    "status_at_observation": "RUNNING",
+    "new_attempted": 69,
+    "new_runtime_successes": 68,
+    "new_in_flight": 1,
+    "actual_models_at_observation": {
+      "gpt-5.6-terra": 68
+    },
+    "new395_raw_audit_complete_at_observation": false,
+    "combined_verified_count_at_observation": 396,
+    "followup": {
+      "status": "SUBMITTED_AUDIT_WAIT_ONLY",
+      "pid": 21776,
+      "submitted_utc": "2026-10-09T11:51:03.2124755Z",
+      "source_sha256": "06544876469313622fb035d9237056f0971046a7a64d92aabb0ac54f2e253ade",
+      "launch_receipt_sha256": "64aaa3b4fb259e40a67d8cd147abc084fc4a4efb195bce0a1ab756e84b6abe87",
+      "api_calls": 0,
+      "credential_reads": 0,
+      "runai_queries": 0,
+      "waits_original_loader_exit": true,
+      "runs_new395_audit_only_if395_complete": true,
+      "prior396_raw_reaudited": false,
+      "prior396_verified_labels_reused_by_sha": true,
+      "failstop": true,
+      "audit_completed_at_submission": false
+    }
+  },
+  "beta05": {
+    "new_root": "/data/spf-beta05-full-20261009-r1",
+    "queue_pid": 8483,
+    "status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "submitted_utc": "2026-10-09T11:49:46.828579+00:00",
+    "launch_receipt_sha256": "c4666460d4064a953fbd6419414e4ca7b06b86df038ca5161a29f9989da10223",
+    "unique_remote_launch": "/data/spf-beta05-full-20261009-r1/validation-code/beta05-full-launch-20261009.json",
+    "launch_command": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-beta05-full-20261009-r1/validation-code/run_spf_beta05_full_queue.py",
+      "--source-sha256",
+      "176087bc5248c04f04acf17792348a7f12c26a02bdd59fe9796af97b992a9aaa",
+      "--plan",
+      "/data/spf-beta05-full-20261009-r1/validation-code/plan.private.json",
+      "--plan-sha256",
+      "d495b5b1b6ed1126fdf7938ccc79f612760bc7dffc15685e4f4f4e338709762e",
+      "--snapshot",
+      "/data/spf-beta05-full-20261009-r1/validation-code/bound-snapshot.private.json",
+      "--snapshot-sha256",
+      "92174ab04e2f4935012da2418665ca1349f4ebd5320d55c1f74e1e4aae786863"
+    ],
+    "snapshot_utc": "2026-10-09T11:43:33.248433+00:00",
+    "snapshot_sha256": "92174ab04e2f4935012da2418665ca1349f4ebd5320d55c1f74e1e4aae786863",
+    "seconds_after_snapshot": 373.580146,
+    "plan_sha256": "d495b5b1b6ed1126fdf7938ccc79f612760bc7dffc15685e4f4f4e338709762e",
+    "bundle_sha256": "c46a38ed058d601194a2e2e7b7cc6c477dd155d3a696d74e2dbde5e041aeac52",
+    "destination_bytes_verified": {
+      "run_spf_beta05_full_queue.py": {
+        "size": 12335,
+        "sha256": "176087bc5248c04f04acf17792348a7f12c26a02bdd59fe9796af97b992a9aaa"
+      },
+      "run_spf_beta05_full.py": {
+        "size": 6317,
+        "sha256": "0abffe63440a2fef5e3cbb05386431e1ab6cd54684f96bab6a3b3b423984a08e"
+      },
+      "spf_beta05_development_executor.py": {
+        "size": 16329,
+        "sha256": "301acf5c3b84ff0b2756e4c1481e89cb7b5bafc63eba58aa7fc704c88db68e94"
+      },
+      "audit_spf_target.py": {
+        "size": 5809,
+        "sha256": "6fc5ba538b5b6ee1a8ffd003de62abb6f65a6ddf9b1df590afe20fec7769c283"
+      },
+      "plan.private.json": {
+        "size": 2425,
+        "sha256": "d495b5b1b6ed1126fdf7938ccc79f612760bc7dffc15685e4f4f4e338709762e"
+      },
+      "bound-snapshot.private.json": {
+        "size": 66058,
+        "sha256": "92174ab04e2f4935012da2418665ca1349f4ebd5320d55c1f74e1e4aae786863"
+      }
+    },
+    "successful_unique_stages": [
+      {
+        "tag": "beta05-full-deployment-20261009-r2",
+        "stage": "preflight",
+        "returncode": 0,
+        "receipt_sha256": "57434805b383b11b5d5a3589ff169fff6d91e650d25de8ae8a1d6e2c8d357187",
+        "result_sha256": "85fdcb07d4bf470ca8560b875f56c1d6f7a384453f62a5038ddd40f1860985d2"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r2",
+        "stage": "chunk-0",
+        "returncode": 0,
+        "receipt_sha256": "9508734b9b6d504fc824f1805714397049351b636e3b13da910e967327166a0a",
+        "result_sha256": "97630094e264684c2e39e9652086557baccee1d49ee53ac342c87615998d519f"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r2",
+        "stage": "chunk-1",
+        "returncode": 0,
+        "receipt_sha256": "f7a896a7af0bc798a916fb4c6b3d7ba468b4ba3f3456538092b19928a2c43f65",
+        "result_sha256": "06cde1e72fc49efe66ff0351645ebde201ad7e11af041e2dc80b51e62240f20a"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r2",
+        "stage": "chunk-2",
+        "returncode": 0,
+        "receipt_sha256": "4999e6449b884ede018b51259d941ecfc423288e4caf82f290bbfc1d03d819c3",
+        "result_sha256": "15e6913ad1873ce45a901d972f3ff1ccaae99cd1b8bdefaa957791c1d4f69412"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r2",
+        "stage": "chunk-3",
+        "returncode": 0,
+        "receipt_sha256": "0bf73b11b335ec3160861557bf0c7bc27945e90981ed0d98b73959a75682d64c",
+        "result_sha256": "ff24d87dee1b1a63c9f8af18499862bb87b8d8f748ce1ade4f9a37a84d1f0170"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r3",
+        "stage": "chunk-4",
+        "returncode": 0,
+        "receipt_sha256": "edded5f692490852ce6c6983169820223c9b3b66202b944949379e9d9e018d98",
+        "result_sha256": "2173e96816683f0d0e89a26ce4302f53ab1c88c669beb4ebd13a6ed33d6316dd"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r3",
+        "stage": "chunk-5",
+        "returncode": 0,
+        "receipt_sha256": "328cbacad6ef85edbea8b967c817765a7668246e2abee7700a1635dbae3e666c",
+        "result_sha256": "629c862912a5455dd8b7ff362b1c8d4afe9837aed1521a503d3f5a56fb2998c7"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r3",
+        "stage": "chunk-6",
+        "returncode": 0,
+        "receipt_sha256": "58ddcd3138f077ef4895b67a14cd1e5cfc7e6fa40e8bce94a18291c50770924d",
+        "result_sha256": "f0256ab7e7d8baec70d6466e6f210fef2b049762bfe17b7be465333c30240179"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r3",
+        "stage": "chunk-7",
+        "returncode": 0,
+        "receipt_sha256": "fb863e04b7282a4c62ab188e842d4c2a711e3fc332c92862f3a7c8d95676682d",
+        "result_sha256": "e8f9615fc5fadc3b5de9431c5e9c8e199f3aabc7147e8bcd6df77d85fcf76c01"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r3",
+        "stage": "chunk-8",
+        "returncode": 0,
+        "receipt_sha256": "c42211a6e2f45726b5ead02fda3bf98a4c68e94b9693017a7ab372542f92f668",
+        "result_sha256": "800f5ece3855ec3dc766e105c5035d87abe06728c9c1adcec37d26f543d88db0"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r3",
+        "stage": "chunk-9",
+        "returncode": 0,
+        "receipt_sha256": "3cd2ee27f3684751b5d1f7c08f0127c9bc473f9c59074ba4996916a70c0bfe1b",
+        "result_sha256": "5e1360ba34c1049fcf90089aa80664be5a10114441d8ac4eb4685c70ff5453b1"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r3",
+        "stage": "seal",
+        "returncode": 0,
+        "receipt_sha256": "df74f3aff296c8fd025e7a857d3ec8f9374578f9aca8333c4245b751a5273dbc",
+        "result_sha256": "ca85ec2bf400372cf2b068c2b71031066ccc27e44432ba7e1cf8c5217d933bb7"
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r4",
+        "stage": "launch-once",
+        "returncode": 0,
+        "receipt_sha256": "ce5d0b8018263841a5a74001237ff30b76840178da9f622fed097e541ee8abcf",
+        "result_sha256": "c4666460d4064a953fbd6419414e4ca7b06b86df038ca5161a29f9989da10223"
+      }
+    ],
+    "preserved_transport_failures": [
+      {
+        "tag": "beta05-full-deployment-20261009",
+        "stage": "preflight",
+        "returncode": 1,
+        "reason": "TLS handshake timeout",
+        "cli_size": 243,
+        "cli_sha256": "9113793971c55a5a799abdba4a1025d9b7b4de0d09bede3ec833b93083dc4c7d",
+        "capture_type": "native output strings joined with LF and encoded UTF8; not original stream bytes",
+        "original_source_commands_and_captures_preserved": true
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r2",
+        "stage": "chunk-4",
+        "returncode": 1,
+        "reason": "cluster-status EOF",
+        "cli_size": 86,
+        "cli_sha256": "2cb72adf0523e67abf31a9d7f2cc4f131c97b97b397ce6b20d882662ba83126f",
+        "capture_type": "native output strings joined with LF and encoded UTF8; not original stream bytes",
+        "original_source_commands_and_captures_preserved": true
+      },
+      {
+        "tag": "beta05-full-deployment-20261009-r3",
+        "stage": "launch-once",
+        "returncode": 1,
+        "reason": "no route to host",
+        "cli_size": 3240,
+        "cli_sha256": "8290e1af44a3461b43f0020e6f349cd04b0fbf57e2f54d38cafa1f27a4997df7",
+        "capture_type": "native output strings joined with LF and encoded UTF8; not original stream bytes",
+        "original_source_commands_and_captures_preserved": true
+      }
+    ],
+    "artifact_checks": [
+      {
+        "name": "artifact-check-after-preflight.private.json",
+        "sha256": "034504c73cea538f39f6fcd78d1ab9b052a27e7346c11ed3bbc0921a9886bfc8"
+      },
+      {
+        "name": "artifact-check-after-chunk4.private.json",
+        "sha256": "6b83b5454a353e3b56bc043fdac377ffee086420880648c7eca939b09e479026"
+      },
+      {
+        "name": "artifact-check-after-launch.private.json",
+        "sha256": "2ffc24305d2dba0cd233022d09875c7c48d7b03b6c086259dde89df6b9320cf5"
+      }
+    ],
+    "artifact_checks_are_not_progress_queries": true,
+    "full_logical_progress_snapshots": 1,
+    "post_submission_progress_queries": 0,
+    "blind_relaunches": 0,
+    "new_queue_submissions": 1,
+    "recipe_change": {
+      "parameter": "AdamW beta1",
+      "original": 0.9,
+      "candidate": 0.5
+    },
+    "unchanged_recipe": {
+      "beta2": 0.999,
+      "learning_rate": 1e-05,
+      "weight_decay": 0.01,
+      "epochs": 5,
+      "expected_updates": 625,
+      "expected_exposures": 20000,
+      "unique_full_rows": 4000,
+      "seed": 0,
+      "micro_batch": 4,
+      "gradient_accumulation": 8,
+      "world_size": 1,
+      "global_batch": 32,
+      "warmup_updates": 125,
+      "max_length": 512,
+      "projection_rank": 20,
+      "initial_model": "original fixed Meta M0",
+      "anchor_and_data_order": "original fixed bytes",
+      "precision": "original BF16/FA2 and strict FP32 projection"
+    },
+    "finite_stage_order": [
+      "fulltrain",
+      "freshreload",
+      "new_candidate_full_byte_audit",
+      "TOFU4000",
+      "MMLUaux1024-zero-shot",
+      "IFBench300",
+      "safety650",
+      "WildChat71-two-turns142",
+      "isolated-CPU-IFBench-score"
+    ],
+    "new_training_reload_audit_development_results_known": false,
+    "new_beta05_harmfulness_known": false,
+    "new_paid_judge_calls": 0,
+    "new_beta05_paid_judge_budget_authorized": false,
+    "completed_baseline_full_or_retain_retrained": false,
+    "completed_32update_diagnostics_repeated": false,
+    "completed_evaluations_repeated": false,
+    "original16GB_checkpoint_rehashed": false,
+    "assets352_retransferred": false,
+    "network_route_settings_changed": false
+  },
+  "gate": {
+    "status": "insufficient_evidence",
+    "human_adjudication_complete": false,
+    "paired_cluster_mapping_verified": false,
+    "matched_reference_metrics_pending": true,
+    "original_NPO_reload_failures_preserved": true,
+    "NPO200_pilot_frozen": false,
+    "single_seed_cross_platform_and_prior_autograd_limits_preserved": true
+  },
+  "native_automation": {
+    "observed_at_utc": "2026-10-09T11:57:47.631845+00:00",
+    "native_fields": {
+      "status": "PAUSED",
+      "rrule": "FREQ=MINUTELY;INTERVAL=15",
+      "notification_policy": "failed_runs_only"
+    },
+    "read_only": true,
+    "schedule_changed": false,
+    "status_changed": false
+  },
+  "private_packet_prompts_responses_reasons_labels_rowmaps_weights_contracts_keys_published": false,
+  "source_only_auth_expired_and_prior_approval_rejections_preserved_as_history": true
+}
