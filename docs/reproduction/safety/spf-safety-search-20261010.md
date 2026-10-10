@@ -1,5 +1,14 @@
 # SPF safety search：每小時續行，新增最多50套模型Judge
 
+2026-10-10 09:57最新：β1=.5候選已完成train/reload/newaudit及六development stages，queue9069已退出、GPUidle。唯一snapshot UTC2026-10-10T01:57:26.424367+00:00，SHA8a8f7e0083af310dc4ea540d6d30458bee5ac9c86f3453c250fc8fa0852dea2e。41完成source/commands/raw/outputs逐SHA immutable保存，archive85371621181b714bb36ad2d1ee04a043797314a8806e5fba8822aa8eaa389350；沒有重跑評估或讀舊權重。
+
+免費描述性結果：TOFU f05/r95 exactmatch98.50%/97.76%、ROUGE-L F1 .993093/.994719；MMLUaux831/1024=81.15%（zero-shot，非formal5shot）；IFBench strictprompt20.67%/instruction22.97%、looseprompt22.00%/instruction24.71%。Harmfulness仍未知。
+
+新的private792 packet已按fixed prompts/order、candidate own responses/context與actual六stage proof驗證；CPU preflight pass、originalsavedDPAPI/SDK/rubrics/profile不變，50row盲審表已準備但未人工判讀。兩次normalrequire_escalated launch均被automatic review在CreateProcess前拒絕，要求拒絕後人類明確確認本批650 safety＋142 conversation prompts/responses送至OpenAI https://api.openai.com/v1、gpt-5.6-terra medium4096零重試。已提出精確確認；目前run/source/plan全可review、沒有launch/任何keyread/API/reservation，額度0/50。勿以其他路徑繞審查或未答即重送。
+
+新actual-result auditor `scripts/reproduction/safety/audit_spf_safety_search_judge.py`已compile，尚未有新paidraw可審；完成後逐核792raw/schema/payload/order/events/model/usage及ledger receipts，才Campaign.finish。Native ACTIVE/hourly/failed_runs_only及短prompt保持；stop規則H≤12/300或50模型額度用盡，gate/人工adjudication/pairedclusters/matchingmetrics/NPO及原autograd限制保留。詳細[完成評估與Judge準備證據](../../../results/reproduction/safety/spf-npo-gb200-20261006/spf-beta05-development-complete-20261010-0957.json)。以下進度是歷史。
+
+
 2026-10-10 07:56最新必要snapshot：β1=.5 full訓練完成625updates/5epochs/20k/4000unique，reload error0及new candidate完整byteaudit pass；queue9069仍存活，stage candidate-development/tofu，六stage尚未完成、harmfulness未知。Snapshot SHA f516af1dd542b47891f80113203b65b1b8e8c772a0700156d3b7440361af8ccd，UTC2026-10-09T23:56:24.159097+00:00；completed24files immutable archive59c73f01eff386fdaf0d56cd2f9bf5bcac1c1725d74d528091dd9cae97505122；new model identity9f8b68d4f657d2021c63b2aebe8ae76020b1c2d18e779c35451bd4b6d01c79c9。詳細private continuation-20261010-0755.private.json保存，原06:32進度是歷史。
 
 新production runner `scripts/reproduction/safety/run_spf_safety_search_judge.py`與`start_spf_safety_search_judge.ps1`已準備；直接使用SHA-bound原Judge parse loop，只加ledger intent/receipt hooks，兩新增API-after-response/state-after-receipt fail-stop mocks pass、realAPI0/keyread0/reserved0。先完成actual六stage才製新packet與development-proof，CPU preflight通過後loader只一次preflight --reserve在key讀取之前記帳；不要直接啟舊2376cap來源。Prepared completed-only export是`work/spf-npo-gb200-20261006/export_beta05_completed_development_20261010.py`，本輪未執行；下一小時snapshot確認完成才使用，不查本輪進度第二次。

@@ -1,0 +1,132 @@
+{
+  "status": "BETA05_DEVELOPMENT_COMPLETE_JUDGE_PREPARED_AUTO_REVIEW_APPROVAL_PENDING",
+  "observed_at_utc": "2026-10-10T02:05:52.930947+00:00",
+  "snapshot_utc": "2026-10-10T01:57:26.424367+00:00",
+  "snapshot_sha256": "8a8f7e0083af310dc4ea540d6d30458bee5ac9c86f3453c250fc8fa0852dea2e",
+  "snapshot_source_sha256": "9565282356648bb713c5f9deeb9ccb812c2d78aab040415e98e9c00ec4bf70e3",
+  "queue_pid": 9069,
+  "queue_exited_at_snapshot": true,
+  "gpu_idle_at_snapshot": true,
+  "model_identity_sha256": "9f8b68d4f657d2021c63b2aebe8ae76020b1c2d18e779c35451bd4b6d01c79c9",
+  "candidate_audit": {
+    "size": 2393,
+    "sha256": "63e72cb101b8056c938021e9518361280ed0df9f9238df04034342bf71d4110b"
+  },
+  "completed_stages": [
+    "tofu",
+    "knowledge",
+    "ifbench",
+    "safety",
+    "conversation",
+    "ifbench-score"
+  ],
+  "completed_stage_returncodes": {
+    "tofu": 0,
+    "knowledge": 0,
+    "ifbench": 0,
+    "safety": 0,
+    "conversation": 0,
+    "ifbench-score": 0
+  },
+  "free_development_complete": true,
+  "actual_outputs_commands_caps_cuda_sources_verified": true,
+  "immutable_completed_export_files": 41,
+  "immutable_completed_export_archive_sha256": "85371621181b714bb36ad2d1ee04a043797314a8806e5fba8822aa8eaa389350",
+  "immutable_export_is_progress_snapshot": false,
+  "immutable_export_weights_read": false,
+  "free_metrics": {
+    "tofu": {
+      "forget05": {
+        "count": 200,
+        "normalized_exact_match": 0.985,
+        "rouge_l_f1": 0.9930934343434343,
+        "mean_log_probability": -0.004467620960567729
+      },
+      "retain95": {
+        "count": 3800,
+        "normalized_exact_match": 0.9776315789473684,
+        "rouge_l_f1": 0.9947193233122131,
+        "mean_log_probability": -0.005003482738984052
+      }
+    },
+    "mmlu_auxiliary": {
+      "count": 1024,
+      "correct": 831,
+      "accuracy": 0.8115234375,
+      "protocol": "auxiliary-zero-shot-ABCD-summed-continuation-logprob-v1",
+      "num_fewshot": 0
+    },
+    "ifbench": {
+      "count": 300,
+      "summary": {
+        "strict": {
+          "prompt_accuracy": 0.20666666666666667,
+          "instruction_accuracy": 0.22965116279069767
+        },
+        "loose": {
+          "prompt_accuracy": 0.22,
+          "instruction_accuracy": 0.24709302325581395
+        }
+      }
+    }
+  },
+  "candidate_harmfulness": null,
+  "harmfulness_judge_complete": false,
+  "judge_preparation": {
+    "status": "BETA05_CAMPAIGN_MODEL_PACKET_PREFLIGHT_PASS_NO_API_NO_KEY",
+    "model_identity_sha256": "9f8b68d4f657d2021c63b2aebe8ae76020b1c2d18e779c35451bd4b6d01c79c9",
+    "packet_sha256": "22d74c82fd5a585a2e9b6cea04a8c8c4335583be53786c3f264a2f0e3a8cbdb1",
+    "plan_sha256": "ca96e04dbc79880848055547b3a03a0951d8b03f9f72696c669bf657d2b6ba7f",
+    "development_proof_sha256": "1df78e8f87ca75214516f53c6a5c72c46172ea13bceb5d3282073f1d6fa506d3",
+    "runner_sha256": "9d7203d95db3a828b4e42ead96a0b1a178f711254a2cd5cac5df43d1fc3dee2e",
+    "loader_sha256": "8d5cca098f33740397b345f64804903297178689f5e206e7e6fc5d9bf8e558ad",
+    "completed_export_archive_sha256": "85371621181b714bb36ad2d1ee04a043797314a8806e5fba8822aa8eaa389350",
+    "completed_export_files": 41,
+    "paid_request_limit": 792,
+    "new_campaign_model_limit": 50,
+    "paired_user_prompts_verified": true,
+    "actual_completed_development_verified": true,
+    "actual_candidate_audit_verified": true,
+    "previous_labels_reused": false,
+    "new_api_calls": 0,
+    "credential_reads": 0,
+    "new_model_reservations": 0
+  },
+  "human_blind_review_rows": 50,
+  "human_review_completed": false,
+  "prepared_auditor_sha256": "5913c335f9503c093d916bd033d4f9737b071c456ff6e6dbabfc58d7ea7cacb0",
+  "prepared_auditor_compilation_pass": true,
+  "prepared_auditor_actual_results_audited": 0,
+  "automatic_review_rejections": 2,
+  "rejections_before_createprocess": true,
+  "workaround_used": false,
+  "explicit_payload_to_endpoint_user_confirmation_requested": true,
+  "judge_launch_submitted": false,
+  "new_model_reservations": 0,
+  "model_limit": 50,
+  "credential_reads": 0,
+  "paid_api_calls": 0,
+  "logical_progress_snapshots": 1,
+  "additional_progress_queries": 0,
+  "outer_retries": 0,
+  "new_gpu_submissions": 0,
+  "completed_training_reload_audit_evaluation_or_paid_successes_repeated": false,
+  "native_automation": {
+    "status": "ACTIVE",
+    "interval_seconds": 3600,
+    "notification_policy": "failed_runs_only",
+    "prompt_characters": 188,
+    "changed_this_turn": false
+  },
+  "stop_threshold": {
+    "mixing_harmful": 13,
+    "fixed_total": 300,
+    "winning_max_count": 12,
+    "new_model_limit": 50
+  },
+  "target_gate": "insufficient_evidence",
+  "cluster_mapping_verified": false,
+  "human_adjudication_complete": false,
+  "scope": "Descriptive beta05 pre-unlearning model development metrics; not NPO final or qualified safety gate",
+  "private_prompts_responses_keys_row_maps_or_weights_published": false
+}
