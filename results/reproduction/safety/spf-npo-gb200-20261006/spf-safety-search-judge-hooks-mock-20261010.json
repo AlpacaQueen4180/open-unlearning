@@ -1,0 +1,27 @@
+{
+  "status": "PASS_NEW_LEDGER_HOOKS_ON_UNCHANGED_ORIGINAL_PARSE_LOOP_ONLY",
+  "checks": [
+    {
+      "case": "api_after_one",
+      "synthetic_calls": 2,
+      "durable_intents": 2,
+      "durable_receipts": 1,
+      "automatic_retries": 0
+    },
+    {
+      "case": "state_after_receipt",
+      "synthetic_calls": 1,
+      "durable_intents": 1,
+      "durable_receipts": 1,
+      "automatic_retries": 0
+    }
+  ],
+  "real_api_calls": 0,
+  "credential_reads": 0,
+  "gpu_submissions": 0,
+  "original_loop_source_sha256": "d2f09e9709578a9dfdd51d1de3efa1be0d092f6c47d2a9ed1baca6b6d7775570",
+  "budget_source_sha256": "f7b5f24a4e4a363d73126d01accd36258479c7a2d298331fc7738cc66628ed6e",
+  "runner_source_sha256": "9d7203d95db3a828b4e42ead96a0b1a178f711254a2cd5cac5df43d1fc3dee2e",
+  "actual_full_model_judge_complete": false,
+  "original_schema_fixtures_or_completed_result_audits_repeated": false
+}

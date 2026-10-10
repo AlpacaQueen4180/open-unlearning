@@ -1,0 +1,91 @@
+{
+  "status": "pass",
+  "method": "spf",
+  "split": "full",
+  "construction_seed": 0,
+  "actual_epochs": 5.0,
+  "actual_updates": 625,
+  "actual_examples": 20000,
+  "actual_assistant_tokens": 696525,
+  "unique_examples": 4000,
+  "conflicting_updates": 298,
+  "safety_tokens_computed": 10625,
+  "fresh_reload": {
+    "status": "pass",
+    "max_logit_error": 0.0
+  },
+  "final_checkpoint": {
+    "parameter_tensors": 291,
+    "layers": 32,
+    "files": [
+      {
+        "name": "model.safetensors",
+        "size": 16060556616,
+        "sha256": "91e5e58b86485c75c68c218f3b07060835a94d72df45f8025dd56fc944df410c",
+        "tensors": 291
+      }
+    ],
+    "weights_bytes": 16060556616
+  },
+  "trajectory_checkpoints": [
+    {
+      "step": 157,
+      "parameter_tensors": 291,
+      "layers": 32,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size": 16060556616,
+          "sha256": "97877b3771d36a65df04b8583b66bf09ff6b6576810f0cdf33c5464d4d7ec5e2",
+          "tensors": 291
+        }
+      ],
+      "weights_bytes": 16060556616
+    },
+    {
+      "step": 313,
+      "parameter_tensors": 291,
+      "layers": 32,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size": 16060556616,
+          "sha256": "7ce3b3ba375d8587a8794dbac377440ea6f02768781c77a2303f1c90c75f379d",
+          "tensors": 291
+        }
+      ],
+      "weights_bytes": 16060556616
+    },
+    {
+      "step": 469,
+      "parameter_tensors": 291,
+      "layers": 32,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size": 16060556616,
+          "sha256": "d838406f573b1a1276c537c846cc46ee9d427f0f8124479f50fef9e6c44c5990",
+          "tensors": 291
+        }
+      ],
+      "weights_bytes": 16060556616
+    },
+    {
+      "step": 625,
+      "parameter_tensors": 291,
+      "layers": 32,
+      "files": [
+        {
+          "name": "model.safetensors",
+          "size": 16060556616,
+          "sha256": "91e5e58b86485c75c68c218f3b07060835a94d72df45f8025dd56fc944df410c",
+          "tensors": 291
+        }
+      ],
+      "weights_bytes": 16060556616
+    }
+  ],
+  "manifest_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+  "trajectory_sha256": "538e88fd2ad3e0f0e56727505ff328e4df4d6d83e89a18e81bf618f166dfe444",
+  "resolved_training_sha256": "da625be1f204aaf31dc523cd82f7bc36ea5f78fddff72c8d0bbc370cd84d76f2"
+}

@@ -857,5 +857,86 @@
       "paired clusters and human adjudication still pending",
       "Original autograd failures and NPO reload/pilot gaps remain; stopping campaign does not complete all research"
     ]
+  },
+  "beta05_completed_training_judge_prepared_20261010_0755": {
+    "status": "BETA05_FULL_TRAIN_RELOAD_AUDIT_COMPLETE_DEVELOPMENT_RUNNING_AT_HOURLY_SNAPSHOT",
+    "snapshot_utc": "2026-10-09T23:56:24.159097+00:00",
+    "snapshot_sha256": "f516af1dd542b47891f80113203b65b1b8e8c772a0700156d3b7440361af8ccd",
+    "snapshot_source_sha256": "9565282356648bb713c5f9deeb9ccb812c2d78aab040415e98e9c00ec4bf70e3",
+    "queue_pid": 9069,
+    "completed_stages": [
+      "train",
+      "fresh-reload",
+      "full-byte-audit"
+    ],
+    "stage_at_snapshot": "candidate-development/tofu",
+    "completed_stage_returncodes": {
+      "train": 0,
+      "fresh-reload": 0,
+      "full-byte-audit": 0
+    },
+    "train_finished_at_epoch": 1791588963.991875,
+    "actual_epochs": 5.0,
+    "actual_updates": 625,
+    "actual_examples": 20000,
+    "unique_examples": 4000,
+    "assistant_tokens": 696525,
+    "safety_tokens_computed": 10625,
+    "conflicting_updates": 298,
+    "fresh_reload": {
+      "status": "pass",
+      "max_logit_error": 0.0
+    },
+    "new_weights_sha256": "91e5e58b86485c75c68c218f3b07060835a94d72df45f8025dd56fc944df410c",
+    "new_weights_bytes": 16060556616,
+    "parameter_tensors": 291,
+    "layers": 32,
+    "trajectory_checkpoints": [
+      157,
+      313,
+      469,
+      625
+    ],
+    "completed_audit_sha256": "63e72cb101b8056c938021e9518361280ed0df9f9238df04034342bf71d4110b",
+    "model_identity_sha256": "9f8b68d4f657d2021c63b2aebe8ae76020b1c2d18e779c35451bd4b6d01c79c9",
+    "immutable_export_files": 24,
+    "immutable_export_archive_sha256": "59c73f01eff386fdaf0d56cd2f9bf5bcac1c1725d74d528091dd9cae97505122",
+    "immutable_export_is_progress_snapshot": false,
+    "export_weights_read": false,
+    "new_judge_runner_sha256": "9d7203d95db3a828b4e42ead96a0b1a178f711254a2cd5cac5df43d1fc3dee2e",
+    "new_judge_loader_sha256": "8d5cca098f33740397b345f64804903297178689f5e206e7e6fc5d9bf8e558ad",
+    "judge_original_parse_loop_sha256": "d2f09e9709578a9dfdd51d1de3efa1be0d092f6c47d2a9ed1baca6b6d7775570",
+    "judge_new_budget_sha256": "f7b5f24a4e4a363d73126d01accd36258479c7a2d298331fc7738cc66628ed6e",
+    "new_hook_mock_cases": 2,
+    "real_api_calls": 0,
+    "credential_reads": 0,
+    "new_model_reservations": 0,
+    "new_judge_is_prepared_source_only": true,
+    "actual_beta05_development_complete": false,
+    "beta05_harmfulness": null,
+    "logical_progress_snapshots": 1,
+    "outer_retries": 0,
+    "additional_progress_queries": 0,
+    "new_gpu_submissions": 0,
+    "old_completed_training_evaluations_judge_or_16gb_audit_repeated": false,
+    "native_automation": {
+      "status": "ACTIVE",
+      "interval_seconds": 3600,
+      "prompt_characters": 188,
+      "notification_policy": "failed_runs_only",
+      "changed_this_turn": false
+    },
+    "stop_threshold": {
+      "mixing": 13,
+      "fixed_harmful_total": 300,
+      "winning_max": 12,
+      "new_model_limit": 50
+    },
+    "target_gate": "insufficient_evidence",
+    "human_adjudication_complete": false,
+    "cluster_mapping_verified": false,
+    "export_initial_scope_guard_failure_preserved": true,
+    "export_scope_only_repaired_with_explicit_new_source": true,
+    "private_prompts_responses_credentials_ledgers_or_model_weights_published": false
   }
 }

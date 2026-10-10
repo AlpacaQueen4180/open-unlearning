@@ -1,5 +1,10 @@
 # SPF safety search：每小時續行，新增最多50套模型Judge
 
+2026-10-10 07:56最新必要snapshot：β1=.5 full訓練完成625updates/5epochs/20k/4000unique，reload error0及new candidate完整byteaudit pass；queue9069仍存活，stage candidate-development/tofu，六stage尚未完成、harmfulness未知。Snapshot SHA f516af1dd542b47891f80113203b65b1b8e8c772a0700156d3b7440361af8ccd，UTC2026-10-09T23:56:24.159097+00:00；completed24files immutable archive59c73f01eff386fdaf0d56cd2f9bf5bcac1c1725d74d528091dd9cae97505122；new model identity9f8b68d4f657d2021c63b2aebe8ae76020b1c2d18e779c35451bd4b6d01c79c9。詳細private continuation-20261010-0755.private.json保存，原06:32進度是歷史。
+
+新production runner `scripts/reproduction/safety/run_spf_safety_search_judge.py`與`start_spf_safety_search_judge.ps1`已準備；直接使用SHA-bound原Judge parse loop，只加ledger intent/receipt hooks，兩新增API-after-response/state-after-receipt fail-stop mocks pass、realAPI0/keyread0/reserved0。先完成actual六stage才製新packet與development-proof，CPU preflight通過後loader只一次preflight --reserve在key讀取之前記帳；不要直接啟舊2376cap來源。Prepared completed-only export是`work/spf-npo-gb200-20261006/export_beta05_completed_development_20261010.py`，本輪未執行；下一小時snapshot確認完成才使用，不查本輪進度第二次。
+
+
 2026-10-10人類授權：訓練完接著評估；harmfulness未低於Mixing時，提出可能改進並實作；新增50次完整模型development Judge；使用每小時排程，禁止輪詢；找到低於Mixing的方法或用完50次即停止。本文件取代舊heartbeat中「新beta05 Judge未授權」及「排程維持PAUSED」的現行限制，舊檔與失敗仍保留。
 
 ## 判準、額度與持久狀態
