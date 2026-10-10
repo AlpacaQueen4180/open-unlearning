@@ -1,5 +1,16 @@
 # SPF safety search：每小時續行，新增最多50套模型Judge
 
+2026-10-10 17:04 heartbeat最新：β1=.5／LR1e-5候選的792 Judge全部成功，唯一local觀測UTC09:05:36.416221。實際新增792 raw/schema/payload/order/rubric/model/tokenusage、2376events與792ledger intents/receipts逐核通過，duplicates0／zero retry，Campaign.finish記為COMPLETE；audit SHA4bfc0861f35106f3ff1b07a636153daf116935cd627e85ca7095fbc6441ff5c2。新增額度1/50 complete、49尚可保留，沒有重送舊成功。
+
+Harmfulness93/300=31.00%，safe_non_refusal91、refusal116；原SPF141/300=47.00%，下降16個百分點，但仍高於Mixing13/300=4.33%，停止條件尚未達到。Benign substantive345/non_answer2/refusal3（350）；conversation overall403/142=2.838，relevance545/142=3.838，factualaccuracy349/122=2.861，consistency471/111=4.243，nullable分母保留。Actualmodel792筆均gpt-5.6-terra，usage input418388/output113488。這是seed0固定development描述性比較，非pairedcluster顯著性或合格gate；完整labels/source-map/reasons皆private。
+
+下一個單因素候選保留β1=.5，僅把LR1e-5降為5e-6，從原MetaM0獨立full625/5epochs20k，其他資料／training-only anchor／原loop／SPF投影rank20／micro4acc8global32／warmup125／precision／六development stages皆保持。假說是較小更新幅度可能減少安全能力侵蝕，同報TOFU、MMLUaux、IFBench、benign拒答與conversation代價，不因development結果回灌題目。3new production sources及deployment producer來源已準備；新recipe/decision/plan12 negatives與predecessor/newrun boundary8 negatives只CPU通過，executor inversebytes一致、7原queue functions AST同。這不是actual新train/CUDA验收，新candidate2尚未reserve Judge。
+
+本輪唯一RunAI完整logical snapshot的內建兩次transport嘗試均EOF（WebSocket stream／cluster-status），failed captures279/86bytes私有保存；未取得完整snapshot，因此沒有deploy、remote mutation或新GPU submission。不是新auth或training failure；不外層retry／第二progress／改route／盲目relaunch。下一小時由已prepared `work/spf-npo-gb200-20261006/snapshot_spf_search_lr5e6_20261010.py`只查前一候選完成退出/GPUidle及newROOT不存在；fresh≤10min後才有限傳3newsource＋newplan＋bound snapshot、單次queue，原auditor/352assets/16GB完成weights不重傳重hash。
+
+Native ACTIVE/hourly/failed_runs_only與短prompt未改；最後claim UTC09:05:36.401221，下一routine不得早於UTC10:05:36.401221（Taipei18:05:36），提早觸發直接skip。H≤12/300或50配額用盡即PAUSE搜尋；人類adjudication、pairedclusters、matching-reference metrics、原NPO reload/pilot與autograd限制仍保留。詳見[完整Judge與下一候選證據](../../../results/reproduction/safety/spf-npo-gb200-20261006/spf-beta05-judge-complete-and-lr5e6-ready-20261010-1704.json)。以下pending與舊進度是歷史。
+
+
 2026-10-10 15:51最新：人類已明確「確認可以送出」，涵蓋前述β1=.5候選650 safety＋142 conversation prompts、candidate own responses與history送至OpenAI https://api.openai.com/v1。確認SHA8f02288e90476522be30ed625bb1830b1f063b234744b5025190f3f2a040a647；原兩次automatic review拒絕保留為歷史。同一prepared source經正常require_escalated審查接受，UTC07:49:58.4133434單次提交loader PID49552，額度先reserve為1/50，再於原程序內解密本機DPAPI savedkey；沒有新key視窗。
 
 唯一啟動觀測UTC07:51:19.758138：runner35156／RUNNING，attempted27、success26/792、1項in-flight intent，actual model26筆均gpt-5.6-terra；medium4096、zero retry與originalrubrics/profile不變。這是啟動時的進度，並非完整792 Judge結果；candidate harmfulness仍未知，不能稱安全改善或合格gate。先前claim帳務16 intents/15 receipts與其後此27/26 job觀測各保存原時點，沒有把in-flight當success。

@@ -1,0 +1,72 @@
+{
+  "status": "NEW_LOWER_LR_SOURCE_AND_DECISION_CPU_ONLY_VERIFIED",
+  "sources": {
+    "run_spf_beta05_lr5e6_full.py": {
+      "sha256": "8a362f7cbdf4a82b38ef4fc010833a6e1bda2c352a81d51e0a048d5019ec3f75",
+      "size": 6873
+    },
+    "run_spf_beta05_lr5e6_full_queue.py": {
+      "sha256": "eb6ca91386852591299d95e3f54e6309d1c5ba6b78064a8a8d726de3fc28cf08",
+      "size": 15630
+    },
+    "spf_beta05_lr5e6_development_executor.py": {
+      "sha256": "535f7fe622ae6da568ce8a4f090b84410dacafa5dd6e8335782832b26cb9da27",
+      "size": 16335
+    }
+  },
+  "search_decision": {
+    "previous_model_identity_sha256": "9f8b68d4f657d2021c63b2aebe8ae76020b1c2d18e779c35451bd4b6d01c79c9",
+    "previous_judge_audit_sha256": "4bfc0861f35106f3ff1b07a636153daf116935cd627e85ca7095fbc6441ff5c2",
+    "previous_harmful_assistance": 93,
+    "harmful_denominator": 300,
+    "mixing_harmful": 13,
+    "campaign_authorization_sha256": "d29a89e81d76edd7bc4571ec6c4d1c42322bd1749a703d94c7cc2ac1d231e283",
+    "previous_complete_model_count": 1,
+    "model_limit": 50,
+    "development_used_as_training": false,
+    "controlled_delta_from_previous": {
+      "learning_rate": {
+        "baseline": 1e-05,
+        "candidate": 5e-06
+      }
+    }
+  },
+  "recipe_negative_cases": 4,
+  "decision_negative_cases": 5,
+  "plan_negative_cases": 3,
+  "unchanged_original_queue_functions": [
+    "sha",
+    "bound",
+    "write",
+    "module",
+    "metadata_check",
+    "prepare_case",
+    "stage"
+  ],
+  "executor_inverse_bytes_equal": true,
+  "actual_prior_result_is_792_verified": true,
+  "hypothesis": "Lower update magnitude may reduce safety erosion after beta1=.5 reduced harmfulness to31%; verify utility cost.",
+  "actual_training_steps": 0,
+  "new_gpu_submissions": 0,
+  "new_api_calls": 0,
+  "credential_reads": 0,
+  "existing_successful_cases_repeated": false,
+  "predecessor_boundary_evidence": {
+    "status": "NEW_PREDECESSOR_AND_EXCLUSIVE_NEW_RUN_BOUNDARY_CPU_ONLY_PASS",
+    "negatives_rejected": 8,
+    "queue_sha256": "eb6ca91386852591299d95e3f54e6309d1c5ba6b78064a8a8d726de3fc28cf08",
+    "positive_predecessor_from_previous_complete_snapshot": true,
+    "new_root_absence_metadata_in_this_test_is_synthetic": true,
+    "new_complete_idle_snapshot_still_required_before_deployment": true,
+    "subprocesses_launched": 0,
+    "CUDA_initialized": false,
+    "weights_read": false,
+    "real_training_steps": 0,
+    "new_api_calls": 0,
+    "credential_reads": 0,
+    "previous_successful_guard_cases_repeated": false
+  },
+  "local_positive_original_recipe_is_synthetic": true,
+  "candidate_deployment_training_not_executed": true,
+  "transport_failed_snapshot_obtained": false
+}
