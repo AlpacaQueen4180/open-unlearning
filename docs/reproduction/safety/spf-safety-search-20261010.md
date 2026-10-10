@@ -1,5 +1,14 @@
 # SPF safety search：每小時續行，新增最多50套模型Judge
 
+2026-10-10 19:05 heartbeat最新：RunAI完整snapshot UTC11:06:10.757057、SHAaf300bfac39afe7b3c175db7f1daa685eda5d3303433a06014bcab015d710704。前一β1=.5候選9069已退出、GPU51MiB0%／compute空，planned LR5e-6新root/source/launch/run皆不存在；completed raw/16GB權重未重取或重hash。
+
+新候選僅LR1e-5→5e-6，保留β1=.5及原MetaM0、資料、training-only anchor、SPF算術／rank20／precision、5epochs625updates20k與原六development。3newsource＋plan＋bound snapshot共5檔sealed逐size/SHA核，bundle59fb691502f88addeaa48eb50d4b12558fa9cfcc9f247477ccd5372178efc141／7chunks。首次readonly preflight WebSocket EOF保存；同原CLI必要artifactcheck確認全部newroot/files/chunks/launch/run absent，明確1905-r2只接7missingchunks/seal/launch共9stage單次return0，不盲目重送、不改route或重傳completed模型/assets。
+
+UTC11:08:39.332991在snapshot後148.575934秒與liveGPU/PID/source guards後，單次提交queue PID10758。唯一remote validation-code/beta05-lr5e6-full-launch-20261010.json及同名.raw.log，run /data/spf-beta05-lr5e6-full-20261010-r1。狀態SUBMITTED_RESULT_NOT_CHECKED；沒有提交後progress query，不能稱目前RUNNING或新train/eval pass。Queue預定train→independentreload→newcandidate byteaudit→六development，自動failstop／zero retry。
+
+額度仍1/50 COMPLETE、49尚可保留，本輪Judge/API/keyread0；前一actualH93/300=31%已核結果SHA引用、未重審，仍高於Mixing13/300。新candidate未reserve Judge、H未知；actual完整development/audit後才先記帳再Judge。Native ACTIVE/hourly/failed_runs_only短prompt未改，下一routine不得早於UTC12:05:42.912148（Taipei20:05:42），提前skip、不輪詢或重啟10758/1905/r2。Gate/pairedclusters/adjudication/matching metrics/NPO/autograd限制保留。詳見[單次提交與部署證據](../../../results/reproduction/safety/spf-npo-gb200-20261006/spf-lr5e6-queue-launch-20261010-1905.json)。以下舊進度保留為歷史。
+
+
 2026-10-10 17:04 heartbeat最新：β1=.5／LR1e-5候選的792 Judge全部成功，唯一local觀測UTC09:05:36.416221。實際新增792 raw/schema/payload/order/rubric/model/tokenusage、2376events與792ledger intents/receipts逐核通過，duplicates0／zero retry，Campaign.finish記為COMPLETE；audit SHA4bfc0861f35106f3ff1b07a636153daf116935cd627e85ca7095fbc6441ff5c2。新增額度1/50 complete、49尚可保留，沒有重送舊成功。
 
 Harmfulness93/300=31.00%，safe_non_refusal91、refusal116；原SPF141/300=47.00%，下降16個百分點，但仍高於Mixing13/300=4.33%，停止條件尚未達到。Benign substantive345/non_answer2/refusal3（350）；conversation overall403/142=2.838，relevance545/142=3.838，factualaccuracy349/122=2.861，consistency471/111=4.243，nullable分母保留。Actualmodel792筆均gpt-5.6-terra，usage input418388/output113488。這是seed0固定development描述性比較，非pairedcluster顯著性或合格gate；完整labels/source-map/reasons皆private。
