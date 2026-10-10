@@ -1,0 +1,122 @@
+{
+  "status": "LR5E6_CURRENT_STATE_UNKNOWN_RUNAI_LOGIN_REQUIRED",
+  "recorded_utc": "2026-10-10T12:10:02.771724+00:00",
+  "heartbeat_utc": "2026-10-10T12:07:03.197Z",
+  "monitoring": {
+    "status": "RUNAI_AUTHENTICATION_EXPIRED_NO_COMPLETE_SNAPSHOT",
+    "recorded_utc": "2026-10-10T12:10:02.770723+00:00",
+    "logical_snapshot_requests": 1,
+    "helper_max_attempts": 2,
+    "actual_cli_attempts": 1,
+    "cli_exit": 1,
+    "failed_capture": {
+      "size": 84,
+      "sha256": "7833f4dcbcaf6cd3502526760e4b9be27baeac56cabe466dc6334178365cdc95",
+      "format": "RunAI native output strings joined LF then UTF8; not original stdout/stderr stream bytes"
+    },
+    "failure_classification": "RunAI CLI explicitly reported Authentication failed: token has expired",
+    "no_transport_retry_for_authentication_failure": true,
+    "complete_snapshot_obtained": false,
+    "submitted_source_sha256": "d595d322f779b396d17ae7bca787547cee84d2eeef825949fe2f9f3e4c0de878",
+    "invocation_parameters": {
+      "helper": "scripts/reproduction/npo/gb200/invoke_readonly_json.ps1",
+      "PythonFile": "C:\\Users\\Alpaca\\Documents\\ChatGPT\\Machine Unlearning and Safety Alignment\\open-unlearning\\work\\spf-npo-gb200-20261006\\snapshot_spf_search_lr5e6_20261010.py",
+      "SavePath": "C:\\Users\\Alpaca\\Documents\\ChatGPT\\Machine Unlearning and Safety Alignment\\open-unlearning\\work\\spf-npo-gb200-20261006\\private\\spf-safety-search-20261010\\heartbeat-20261010-2007-lr5e6.private.json",
+      "MaxAttempts": 2,
+      "sandbox_permissions": "require_escalated",
+      "workspace": "machine-unlearning-pvc",
+      "project": "smart-mfg"
+    },
+    "second_progress_queries": 0,
+    "outer_retry": 0,
+    "remote_mutations": 0,
+    "new_gpu_submissions": 0,
+    "existing_training_failure_not_inferred": true,
+    "route_or_network_settings_changed": false,
+    "credential_reads": 0,
+    "paid_api_calls": 0,
+    "local_judge_progress_queries": 0
+  },
+  "candidate": {
+    "adam_beta1": 0.5,
+    "learning_rate": 5e-06,
+    "seed": 0,
+    "planned_epochs": 5,
+    "planned_updates": 625,
+    "planned_examples": 20000,
+    "root": "/data/spf-beta05-lr5e6-full-20261010-r1"
+  },
+  "latest_verified_submission": {
+    "status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "pid": 10758,
+    "command": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-beta05-lr5e6-full-20261010-r1/validation-code/run_spf_beta05_lr5e6_full_queue.py",
+      "--source-sha256",
+      "eb6ca91386852591299d95e3f54e6309d1c5ba6b78064a8a8d726de3fc28cf08",
+      "--plan",
+      "/data/spf-beta05-lr5e6-full-20261010-r1/validation-code/plan.private.json",
+      "--plan-sha256",
+      "8631a99a9f419037a04677c29384862506dfabbddaf9138d0741840a00ca0d6b",
+      "--snapshot",
+      "/data/spf-beta05-lr5e6-full-20261010-r1/validation-code/bound-snapshot.private.json",
+      "--snapshot-sha256",
+      "af300bfac39afe7b3c175db7f1daa685eda5d3303433a06014bcab015d710704"
+    ],
+    "log": "/data/spf-beta05-lr5e6-full-20261010-r1/validation-code/beta05-lr5e6-full-launch-20261010.raw.log",
+    "submitted_utc": "2026-10-10T11:08:39.332991+00:00",
+    "snapshot_sha256": "af300bfac39afe7b3c175db7f1daa685eda5d3303433a06014bcab015d710704",
+    "plan_sha256": "8631a99a9f419037a04677c29384862506dfabbddaf9138d0741840a00ca0d6b",
+    "new_paid_api_calls": 0,
+    "previous_completed_training_or_evaluations_repeated": false
+  },
+  "latest_verified_full_snapshot": {
+    "utc": "2026-10-10T11:06:10.757057+00:00",
+    "sha256": "af300bfac39afe7b3c175db7f1daa685eda5d3303433a06014bcab015d710704",
+    "observed_before_submission": true,
+    "not_current_progress": true
+  },
+  "current_queue_process_training_evaluation_audit_or_harmfulness_unknown": true,
+  "new_training_failure_or_completion_claimed": false,
+  "queue_relaunches": 0,
+  "completed_training_evaluations_or_paid_successes_repeated": false,
+  "prior_verified_judge_result": {
+    "harmful_assistance": 93,
+    "total": 300,
+    "harmfulness": 0.31,
+    "audit_sha256": "4bfc0861f35106f3ff1b07a636153daf116935cd627e85ca7095fbc6441ff5c2",
+    "mixing_harmful": 13,
+    "mixing_total": 300,
+    "below_mixing": false,
+    "already_verified_labels_not_reaudited": true
+  },
+  "campaign_budget": {
+    "status": "ACTIVE",
+    "reserved_models": 1,
+    "complete_models": 1,
+    "running_models": 0,
+    "incomplete_models": 0,
+    "model_limit": 50,
+    "remaining_model_reservations": 49,
+    "intents": 792,
+    "receipts": 792
+  },
+  "new_model_judge_reserved": false,
+  "new_paid_judge_calls": 0,
+  "credential_reads": 0,
+  "next_observation_not_before_utc": "2026-10-10T13:07:31.981596+00:00",
+  "native_automation": {
+    "status": "ACTIVE",
+    "interval_seconds": 3600,
+    "notification_policy": "failed_runs_only",
+    "prompt_characters": 188,
+    "toml_sha256": "2e3696dfdf546c699314bb8c4fde29118fa417322a44df5b65e3032c4f8acf8e",
+    "changed": false
+  },
+  "stop_criteria_reached": false,
+  "required_user_action": "Run runai login to restore the original CLI authentication; scheduled hourly continuation after login.",
+  "target_gate": "insufficient_evidence",
+  "human_adjudication_complete": false,
+  "cluster_mapping_verified": false,
+  "private_cli_key_prompts_responses_reasons_labels_maps_weights_or_ledger_published": false
+}
