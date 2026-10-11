@@ -1,0 +1,66 @@
+{
+  "status": "LAMBDA03_SOURCES_COMPILE_EXACT_RECIPE_DECISION_PREDECESSOR_SCHEMA_ONLY",
+  "sources": {
+    "run_spf_hybrid03_lr5e6_full.py": {
+      "sha256": "e30e9e059d96cc841030df47b9f16b94450388068857a2084819f4593ad4aa37",
+      "size": 8753
+    },
+    "run_spf_hybrid03_lr5e6_full_queue.py": {
+      "sha256": "65305a2ba389818797b708a48db75d2dd1fa7a56d64b87de8e1d4d06069bdb47",
+      "size": 18854
+    },
+    "spf_hybrid03_lr5e6_development_executor.py": {
+      "sha256": "2bd673f0bca4d5e0ca85f4bb8e08a7003e4350d8fd8cef95c8a652e51119ce62",
+      "size": 16337
+    },
+    "verify_spf_anchor_hybrid03.py": {
+      "sha256": "44da15a0287817ab4f20759890eee0f07fc5100d5258e2f301726c766bf2edd4",
+      "size": 8546
+    }
+  },
+  "reused_helper_sha256": "fdb2e1254dcae25c33ee788123eb2a0ca29e2d23edae0db7971c72d8c15b45cc",
+  "previous_sources": {
+    "run_spf_hybrid01_lr5e6_full.py": "a3402bfc2bc0d31173e71e3f9240802f6e5cbdc62528e62644507e7676f4a2c8",
+    "run_spf_hybrid01_lr5e6_full_queue.py": "7b5f82e1f285233288845c7dcdaf15a6612a53633764ec8f8360dbde28315fc9",
+    "spf_hybrid01_lr5e6_development_executor.py": "27ed16eda408ede0dd5401a29fbf7bc861fc2d4e57c3fa3fc4b7e0010c290da3",
+    "verify_spf_anchor_hybrid.py": "d57d8ff1309c15a77beeb72ecbe0fe33a215c9b13fc8fb6f86c57ce1fffb8a73"
+  },
+  "unchanged_queue_functions_ast": [
+    "sha",
+    "bound",
+    "write",
+    "module",
+    "stage"
+  ],
+  "candidate_recipe_ast_unchanged": true,
+  "executor_identity_path_only": true,
+  "verifier_loader_and_main_ast_unchanged": true,
+  "new_schema_negatives_rejected": [
+    "safety_loss_coefficient",
+    "learning_rate",
+    "method_family",
+    "epochs",
+    "previous_judge_audit_sha256",
+    "previous_harmful_assistance",
+    "development_used_as_training",
+    "previous_complete_model_count",
+    "predecessor_pid",
+    "predecessor_completed",
+    "new_root_exists"
+  ],
+  "controlled_delta": {
+    "safety_loss_coefficient": {
+      "baseline": 0.1,
+      "candidate": 0.3
+    }
+  },
+  "previous_judge_audit_sha256": "a6ca483d3e4dd34944d93be18460596c8c944c206a13244ade5ef52c6e38cf89",
+  "original_auditor_route_unchanged": true,
+  "original_thresholds_unchanged": true,
+  "subprocesses": 0,
+  "cuda": 0,
+  "model_evaluations": 0,
+  "api_calls": 0,
+  "credential_reads": 0,
+  "old_completed_cases_repeated": false
+}
