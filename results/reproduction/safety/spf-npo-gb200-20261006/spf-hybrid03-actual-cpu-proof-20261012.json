@@ -1,0 +1,19 @@
+{
+  "status": "HYBRID_CPU_DIRECT_AUTOGRAD_TOKEN_MEAN_TWO_ADAM_UPDATES_RELOAD_PASS",
+  "safety_loss_coefficient": 0.3,
+  "actual_cpu_updates": 2,
+  "unequal_microbatch_assistant_tokens": [
+    5,
+    1
+  ],
+  "safety_assistant_tokens": 2,
+  "maximum_gradient_error": 2.9802322387695312e-08,
+  "maximum_update_error": 0.0,
+  "invalid_coefficients_rejected": 3,
+  "cuda_model_work": 0,
+  "actual8b_equivalence_claimed": false,
+  "verifier_sha256": "44da15a0287817ab4f20759890eee0f07fc5100d5258e2f301726c766bf2edd4",
+  "helper_sha256": "fdb2e1254dcae25c33ee788123eb2a0ca29e2d23edae0db7971c72d8c15b45cc",
+  "new_api_calls": 0,
+  "credential_reads": 0
+}

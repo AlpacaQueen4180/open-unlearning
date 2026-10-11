@@ -1,5 +1,12 @@
 # SPF safety search：每小時續行，新增最多50套模型Judge
 
+2026-10-12 04:28 heartbeat最新：唯一原RunAI snapshot UTC2026-10-11T20:28:59.555864+00:00、SHA439aaaa764ef2ddcc4216e4178daff27917bdbe91a0a3d1c2bfa245dbc9f6f6c確認hybridλ.3 queue16733存活，stage train、GPU compute [17834]；四個新工程stage均return0且completed。CPU直接autograd／assistant-token mean／兩次AdamW更新／serialization比對PASS，最大gradient error2.9802322387695312e-08、update error0.0。Actual8B／ZeRO3工程40examples、2updates、windows32+8／micro8+2，原SPF投影後加入.3×原training-only anchor梯度、再原clip/step；獨立freshreload原atol.05/rtol.01通過、maxlogiterror0。這是新係數工程驗收，原四大型autograd歷史限制仍未解除。
+
+23新source／exactcommands／四原raw／binding／resolved／trajectory／兩actualproof逐bytes SHA immutable保存，archive612d2f656c483b518fab1e101ea672cbea4852b997ff3020ab9e2d2e50be926b；CPUproofa30986ee9fd7ccdecdbf85af09d10f2dfeba987b1b2366e3b2378ec3fb8be7e6、8Bproofe2117ce5f8b045b5a21f45d6438a35745e88edbb14021f794542f6a912c11ace。Export只取新completed工程檔，不是第二progress、不讀weights或重跑任何工程／舊模型／評估／paidJudge。完整625訓練／audit／六development／新H尚未完成；queue已自動接完整訓練，全部驗收後才第5套own792且先記帳。
+
+額度仍4/50 COMPLETE、46可保留，3168intents=receipts，本輪API/keyread/GPUsubmission0；目前最佳已驗hybridλ.1 H27/300＝9.00%，Mixing13/300＝4.33%，尚未達H≤12/300停止條件。Native ACTIVE/hourly/failed_runs_only與188字元短prompt不變，下一routine不得早於UTC2026-10-11T21:28:44.850823+00:00；禁止輪詢／重送16733／重取completedraw／重hash16GB。Gate insufficient_evidence，人工adjudication／pairedclusters／matchingmetrics／原NPO與單seed跨平台限制保持。詳見[新係數工程完成與訓練進度證據](../../../results/reproduction/safety/spf-npo-gb200-20261006/spf-hybrid03-engineering-complete-train-running-20261012-0428.json)。以下舊進度保留為歷史。
+
+
 2026-10-12 03:27 heartbeat最新：第四套SPF＋安全loss hybrid λ.1／LR5e-6／β1=.5的792 Judge全部成功，新增raw/schema/payload/order/model/usage／2376events與792 ledger intents/receipts逐核，duplicates0、zero retry；Campaign.finish COMPLETE。Harmfulness **27/300＝9.00%**，safe_non_refusal68／refusal205，是目前已驗最低；同LR純SPF41/300＝13.67%，Mixing13/300＝4.33%，尚未達H≤12/300停止條件。Benign substantive340/non_answer2/refusal8（同LR純SPFrefusal6）；conversation overall439/142＝3.092，quality全部normal，nullable分母見aggregate。Actualmodel792全部gpt-5.6-terra，input432468/output110155。Audit SHAa6ca483d3e4dd34944d93be18460596c8c944c206a13244ade5ef52c6e38cf89；完整labels/reasons/source-map private，前3套只SHA引用、不重審。
 
 免費描述性utility只重用已完成aggregate：TOFU f05/r95 EM96.00%/96.63%、MMLUaux848/1024＝82.81%（zero-shot非formal5shot），IFBench原結果保留。下一候選**只把training-only安全anchor loss係數.1提高到.3**，保留LR5e-6／β1=.5與原MetaM0獨立construction、原資料／rank20／5epochs625／六development；不回灌development650或FormalHExPHI。假說是更強原安全anchor目標可能進一步降低H，同報benign拒答、TOFU與conversation代價。明確family hybrid，不能冒稱純SPF或合格安全gate。
