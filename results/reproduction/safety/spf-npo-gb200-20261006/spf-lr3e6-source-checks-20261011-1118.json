@@ -1,0 +1,68 @@
+{
+  "status": "NEW_LR3E6_SOURCE_PREDECESSOR_DECISION_CPU_ONLY_VERIFIED",
+  "sources": {
+    "run_spf_beta05_lr3e6_full.py": {
+      "sha256": "9e3fd1c8c14bb3771c33d6679af36639f0f78007a1a29308479ae433f5f720c2",
+      "size": 6873
+    },
+    "run_spf_beta05_lr3e6_full_queue.py": {
+      "sha256": "caba122d48d89e3fc40d9d7327300910fb614883f28a60ef50ea64d2d8e31a14",
+      "size": 15658
+    },
+    "spf_beta05_lr3e6_development_executor.py": {
+      "sha256": "74fb508d71d667ef0de08fee3e471b85ba377bc00298a026bf1106a6dbecb643",
+      "size": 16335
+    }
+  },
+  "search_decision": {
+    "previous_model_identity_sha256": "9b83962184922d53dd122aa65394aed92fd6c4a121eff293595229b239946ab7",
+    "previous_judge_audit_sha256": "2e65b09481c974b4c03fbded6faf5a4271c95f3c136286e669452ba446ace7ac",
+    "previous_harmful_assistance": 41,
+    "harmful_denominator": 300,
+    "mixing_harmful": 13,
+    "campaign_authorization_sha256": "d29a89e81d76edd7bc4571ec6c4d1c42322bd1749a703d94c7cc2ac1d231e283",
+    "previous_complete_model_count": 2,
+    "model_limit": 50,
+    "development_used_as_training": false,
+    "controlled_delta_from_previous": {
+      "learning_rate": {
+        "baseline": 5e-06,
+        "candidate": 3e-06
+      }
+    }
+  },
+  "negative_cases": [
+    "new_decision_previous_model_identity_sha256",
+    "new_decision_previous_judge_audit_sha256",
+    "new_decision_previous_harmful_assistance",
+    "new_decision_previous_complete_model_count",
+    "new_decision_controlled_delta_from_previous",
+    "previous_learning_rate_rejected",
+    "new_boundary_prior",
+    "new_boundary_new",
+    "new_boundary_pid"
+  ],
+  "negative_count": 9,
+  "wrapper_and_executor_inverse_bytes_equal": true,
+  "unchanged_controller_function_asts_after_identity_rate_inverse": [
+    "sha",
+    "bound",
+    "write",
+    "module",
+    "validate_plan",
+    "metadata_check",
+    "prepare_case",
+    "stage",
+    "main"
+  ],
+  "hypothesis": "LR5e-6 reduced H from93 to41/300; lower only LR to3e-6 to test further safety retention with reported utility cost.",
+  "positive_recipe_is_synthetic": true,
+  "new_root_absence_in_local_test_is_synthetic": true,
+  "previous_completed_snapshot_used_only_for_local_metadata_binding": true,
+  "fresh_idle_snapshot_still_required": true,
+  "actual_training_steps": 0,
+  "new_gpu_submissions": 0,
+  "new_api_calls": 0,
+  "credential_reads": 0,
+  "completed_cases_or_old_paid_results_repeated": false
+}
