@@ -3797,5 +3797,235 @@
       "Single seed/crossplatform; engineering pass is not safety evaluation"
     ],
     "private_prompts_responses_credentials_labels_ledgers_or_model_weights_published": false
+  },
+  "hybrid_train_complete_development_running_20261012_0023": {
+    "status": "HYBRID_FULL_TRAIN_RELOAD_AUDIT_COMPLETE_DEVELOPMENT_RUNNING_AT_SINGLE_SNAPSHOT",
+    "recorded_utc": "2026-10-11T16:29:33.389799+00:00",
+    "heartbeat_utc": "2026-10-11T16:23:29.279Z",
+    "snapshot_utc": "2026-10-11T16:24:19.600263+00:00",
+    "snapshot_original_timestamp": "2026-10-11T16:24:19.600263+00:00",
+    "snapshot_sha256": "9f7e0e8e7b5a6b9626e96219bc7bbb8a49f400f523109e7547349620a276b00f",
+    "snapshot_source_sha256": "7eff5c2d674ab63f9e17412bb71c6bb990aafd217952a9f0d88364d41e4c057d",
+    "queue_pid": 14033,
+    "stage_at_snapshot": "candidate-development/tofu",
+    "gpu_compute_pids": [
+      15918
+    ],
+    "completed_stages": [
+      "hybrid-cpu-verification",
+      "hybrid-engineering-train",
+      "hybrid-engineering-reload",
+      "hybrid-engineering-verify",
+      "train",
+      "fresh-reload",
+      "full-byte-audit"
+    ],
+    "newly_completed_stages": [
+      "train",
+      "fresh-reload",
+      "full-byte-audit"
+    ],
+    "newly_completed_stage_records": [
+      {
+        "name": "train",
+        "command": [
+          "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+          "-m",
+          "torch.distributed.run",
+          "--standalone",
+          "--nproc_per_node=1",
+          "--",
+          "/data/spf-hybrid01-lr5e6-full-20261011-r1/validation-code/run_spf_hybrid01_lr5e6_full.py",
+          "--source-sha256",
+          "a3402bfc2bc0d31173e71e3f9240802f6e5cbdc62528e62644507e7676f4a2c8",
+          "--plan-sha256",
+          "4f60bd23f61c70dfcf06e909b347c07a27420ec60cecc8e9c71dc3b35a5580b5"
+        ],
+        "cwd": "/data/spf-npo-20261006-r4/repo",
+        "environment_overrides": {
+          "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_CACHE": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_OFFLINE": "1",
+          "HF_DATASETS_OFFLINE": "1",
+          "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1",
+          "PYTHONPATH": "/data/spf-npo-20261006-r4/repo/src",
+          "TOKENIZERS_PARALLELISM": "false",
+          "WANDB_MODE": "disabled"
+        },
+        "log": "/data/spf-hybrid01-lr5e6-full-20261011-r1/train.raw.log",
+        "started_at": 1791718737.4806259,
+        "process_pid": 15066,
+        "returncode": 0,
+        "finished_at": 1791735388.473338,
+        "raw_log_sha256": "93540027107e4556b03f5d6ac4460172dd770defbf98b460f097b69fdb1f7834"
+      },
+      {
+        "name": "fresh-reload",
+        "command": [
+          "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+          "-m",
+          "construction.cli",
+          "verify",
+          "--checkpoint",
+          "/data/spf-hybrid01-lr5e6-full-20261011-r1/spf-hybrid01-lr5e6-full-s0"
+        ],
+        "cwd": "/data/spf-npo-20261006-r4/repo",
+        "environment_overrides": {
+          "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_CACHE": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_OFFLINE": "1",
+          "HF_DATASETS_OFFLINE": "1",
+          "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1",
+          "PYTHONPATH": "/data/spf-npo-20261006-r4/repo/src",
+          "TOKENIZERS_PARALLELISM": "false",
+          "WANDB_MODE": "disabled"
+        },
+        "log": "/data/spf-hybrid01-lr5e6-full-20261011-r1/fresh-reload.raw.log",
+        "started_at": 1791735388.4929104,
+        "process_pid": 15635,
+        "returncode": 0,
+        "finished_at": 1791735402.2080467,
+        "raw_log_sha256": "24acf68572703ad3c2ab3da40d42a98cd942c87444520653db69d335b26ccaa1"
+      },
+      {
+        "name": "full-byte-audit",
+        "command": [
+          "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+          "/data/spf-beta05-full-20261010-r2/validation-code/audit_spf_target.py",
+          "--target",
+          "/data/spf-hybrid01-lr5e6-full-20261011-r1/spf-hybrid01-lr5e6-full-s0",
+          "--output",
+          "/data/spf-hybrid01-lr5e6-full-20261011-r1/spf-hybrid01-lr5e6-full-s0-audit.json"
+        ],
+        "cwd": "/data/spf-npo-20261006-r4/repo",
+        "environment_overrides": {
+          "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_CACHE": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_OFFLINE": "1",
+          "HF_DATASETS_OFFLINE": "1",
+          "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1",
+          "PYTHONPATH": "/data/spf-npo-20261006-r4/repo/src",
+          "TOKENIZERS_PARALLELISM": "false",
+          "WANDB_MODE": "disabled",
+          "CUDA_VISIBLE_DEVICES": ""
+        },
+        "log": "/data/spf-hybrid01-lr5e6-full-20261011-r1/full-byte-audit.raw.log",
+        "started_at": 1791735402.2270505,
+        "process_pid": 15915,
+        "returncode": 0,
+        "finished_at": 1791735449.5598161,
+        "raw_log_sha256": "843d7a46b818dc03558e22651822cb7d0b5efe2a9cd4dac5ac7f2ace11bade29"
+      }
+    ],
+    "actual_epochs": 5,
+    "actual_updates": 625,
+    "actual_examples": 20000,
+    "unique_examples": 4000,
+    "assistant_tokens": 696525,
+    "safety_tokens_computed": 10625,
+    "conflicting_updates": 279,
+    "fresh_reload": {
+      "status": "pass",
+      "max_logit_error": 0.0
+    },
+    "parameter_tensors": 291,
+    "layers": 32,
+    "new_weights_bytes": 16060556616,
+    "new_weights_sha256": "44ba59cfbc5933e9173353ff4f940fc522312dfa653accbd04b84a72defb864e",
+    "trajectory_checkpoints": [
+      157,
+      313,
+      469,
+      625
+    ],
+    "candidate_audit_sha256": "6ce8057e3d60ea705794c6c308b6a0563555caad05362fe7864a7db1d75c0931",
+    "model_identity_sha256": "7c3636e230dc3c53ee824572488191ae103f5c5fa4f85af28eb7b79a4ef14962",
+    "full_hybrid_acceptance_sha256": "5457809bceb7539fb13618ee3e3b8c736a2224d02fa838a0fe59a90e68621c6c",
+    "full_hybrid_acceptance": {
+      "status": "HYBRID_ALL625_UPDATES_ANCHOR_ADDITION_RELOAD_AUDIT_PASS",
+      "updates": 625,
+      "method_family": "spf_anchor_loss_hybrid",
+      "safety_loss_coefficient": 0.1,
+      "engineering_proof_sha256": "a0a7bd95f69d6f14ce40115ce281c6c7effc9e0550195cafbea3a7c9228e8fae",
+      "candidate_audit_sha256": "6ce8057e3d60ea705794c6c308b6a0563555caad05362fe7864a7db1d75c0931",
+      "original_large_autograd_failures_resolved": false
+    },
+    "all625_hybrid_anchor_additions_verified": true,
+    "method_family": "spf_anchor_loss_hybrid",
+    "legacy_frozen_auditor_method_field": "spf",
+    "legacy_method_field_explanation": "Original frozen CLI/auditor records SPF projection; new binding, all625 trajectory updates and acceptance separately verify explicit anchor-loss hybrid. Not pure SPF.",
+    "optimizer_profile": {
+      "beta1": 0.5,
+      "beta2": 0.999,
+      "learning_rate": 5e-06,
+      "weight_decay": 0.01
+    },
+    "safety_loss_coefficient": 0.1,
+    "gradient_formula": "original_SPF(g_task,g_training_anchor)+.1*g_training_anchor before original clip/AdamW",
+    "original_training_loop_loss_projection_backward_delegated": true,
+    "actual_nonprofile_training_args_match": true,
+    "original_atol05_rtol01_unchanged": true,
+    "development_or_formal_hexphi_used_as_training": false,
+    "engineering_proof_sha256": "a0a7bd95f69d6f14ce40115ce281c6c7effc9e0550195cafbea3a7c9228e8fae",
+    "cpu_proof_sha256": "82038714b8837eb716bf17e80402b775007db532eb8acd61f7c020f255eda42a",
+    "reused_engineering_archive_sha256": "dd29d5295eb064ac74d55f3e5bbd743299b12241a8cf4adcbd57a6ccdab756fe",
+    "immutable_new_export_files": 19,
+    "immutable_new_export_archive_sha256": "6572796b6d18d71814eb4be9f49998428df492885d1bbf3255d2f6c4ce163baa",
+    "immutable_export_is_progress_snapshot": false,
+    "export_weights_read": false,
+    "engineering_raw_sources_or_weights_reexported": false,
+    "source_plan_bound_snapshot_pins": {
+      "run_spf_hybrid01_lr5e6_full.py": "a3402bfc2bc0d31173e71e3f9240802f6e5cbdc62528e62644507e7676f4a2c8",
+      "run_spf_hybrid01_lr5e6_full_queue.py": "7b5f82e1f285233288845c7dcdaf15a6612a53633764ec8f8360dbde28315fc9",
+      "spf_hybrid01_lr5e6_development_executor.py": "27ed16eda408ede0dd5401a29fbf7bc861fc2d4e57c3fa3fc4b7e0010c290da3",
+      "spf_anchor_hybrid.py": "fdb2e1254dcae25c33ee788123eb2a0ca29e2d23edae0db7971c72d8c15b45cc",
+      "verify_spf_anchor_hybrid.py": "d57d8ff1309c15a77beeb72ecbe0fe33a215c9b13fc8fb6f86c57ce1fffb8a73",
+      "plan.private.json": "4f60bd23f61c70dfcf06e909b347c07a27420ec60cecc8e9c71dc3b35a5580b5",
+      "bound-snapshot.private.json": "752384e32ec448c38c4dc87e7e65242bc979976ff383d75553467c17759275b4"
+    },
+    "full_train_complete": true,
+    "full_audit_complete": true,
+    "development_complete_at_snapshot": false,
+    "candidate_harmfulness": null,
+    "new_model_judge_reserved": false,
+    "new_api_calls": 0,
+    "credential_reads": 0,
+    "reserved_models": 3,
+    "complete_models": 3,
+    "running_judge_models": 0,
+    "remaining_model_reservations": 47,
+    "model_limit": 50,
+    "request_intents": 2376,
+    "durable_receipts": 2376,
+    "best_verified_harmful_assistance": 38,
+    "harmful_denominator": 300,
+    "mixing_harmful_assistance": 13,
+    "winning_max_harmful_assistance": 12,
+    "logical_progress_snapshots": 1,
+    "routine_local_judge_queries": 0,
+    "additional_progress_queries": 0,
+    "outer_retries": 0,
+    "new_gpu_submissions": 0,
+    "completed_training_evaluations_paid_audits_or_engineering_repeated": false,
+    "native_automation": {
+      "status": "ACTIVE",
+      "interval_seconds": 3600,
+      "notification_policy": "failed_runs_only",
+      "prompt_characters": 188,
+      "toml_sha256": "2e3696dfdf546c699314bb8c4fde29118fa417322a44df5b65e3032c4f8acf8e",
+      "changed": false
+    },
+    "stop_criteria_reached": false,
+    "next_routine_observation_not_before_utc": "2026-10-11T17:24:06.160719+00:00",
+    "target_gate": "insufficient_evidence",
+    "human_adjudication_complete": false,
+    "cluster_mapping_verified": false,
+    "original_four_large_autograd_failures_resolved": false,
+    "research_limits": [
+      "Matching reference metrics pending",
+      "Original NPO reload/pilot limitations",
+      "Single seed/crossplatform; construction and engineering pass are not a safety gate"
+    ],
+    "private_prompts_responses_credentials_labels_ledgers_or_model_weights_published": false
   }
 }

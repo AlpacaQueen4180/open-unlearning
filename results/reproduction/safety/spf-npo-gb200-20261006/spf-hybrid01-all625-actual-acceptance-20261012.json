@@ -1,0 +1,9 @@
+{
+  "status": "HYBRID_ALL625_UPDATES_ANCHOR_ADDITION_RELOAD_AUDIT_PASS",
+  "updates": 625,
+  "method_family": "spf_anchor_loss_hybrid",
+  "safety_loss_coefficient": 0.1,
+  "engineering_proof_sha256": "a0a7bd95f69d6f14ce40115ce281c6c7effc9e0550195cafbea3a7c9228e8fae",
+  "candidate_audit_sha256": "6ce8057e3d60ea705794c6c308b6a0563555caad05362fe7864a7db1d75c0931",
+  "original_large_autograd_failures_resolved": false
+}
