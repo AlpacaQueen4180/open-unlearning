@@ -2614,5 +2614,186 @@
       "Single seed and cross-platform comparison limitations"
     ],
     "private_prompts_responses_keys_judge_reasons_labels_row_maps_or_weights_published": false
+  },
+  "lr3e6_train_complete_development_running_20261011_1719": {
+    "status": "LR3E6_FULL_TRAIN_RELOAD_AUDIT_COMPLETE_DEVELOPMENT_RUNNING_AT_SINGLE_SNAPSHOT",
+    "recorded_utc": "2026-10-11T09:24:47.284048+00:00",
+    "heartbeat_utc": "2026-10-11T09:19:52.710Z",
+    "snapshot_utc": "2026-10-11T09:20:31.850722+00:00",
+    "snapshot_sha256": "7a96db9e7cb474ef0f5e2848b684f3764547556c03b496851f5b92b0fc4b6d9b",
+    "snapshot_source_sha256": "5f7f7452816c5542c1aada36f329a5e2ce998b2d8eb10781afad66635632f6d5",
+    "queue_pid": 12367,
+    "stage_at_snapshot": "candidate-development/safety",
+    "gpu_compute_pids": [
+      13628
+    ],
+    "completed_stages": [
+      "train",
+      "fresh-reload",
+      "full-byte-audit"
+    ],
+    "completed_stage_records": [
+      {
+        "name": "train",
+        "command": [
+          "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+          "-m",
+          "torch.distributed.run",
+          "--standalone",
+          "--nproc_per_node=1",
+          "--",
+          "/data/spf-beta05-lr3e6-full-20261011-r1/validation-code/run_spf_beta05_lr3e6_full.py",
+          "--source-sha256",
+          "9e3fd1c8c14bb3771c33d6679af36639f0f78007a1a29308479ae433f5f720c2",
+          "--plan-sha256",
+          "0ef32eae9962ffa418e4d6d9f672dc2e67aeb51fa3b43cdc4905cd4086fec3c8"
+        ],
+        "cwd": "/data/spf-npo-20261006-r4/repo",
+        "environment_overrides": {
+          "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_CACHE": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_OFFLINE": "1",
+          "HF_DATASETS_OFFLINE": "1",
+          "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1",
+          "PYTHONPATH": "/data/spf-npo-20261006-r4/repo/src",
+          "TOKENIZERS_PARALLELISM": "false",
+          "WANDB_MODE": "disabled"
+        },
+        "log": "/data/spf-beta05-lr3e6-full-20261011-r1/train.raw.log",
+        "started_at": 1791689210.632386,
+        "process_pid": 12370,
+        "returncode": 0,
+        "finished_at": 1791705813.214158,
+        "raw_log_sha256": "c05340da332adfb0ae7191c88a0170358666a6629696af1f1eeef470e3e9f003"
+      },
+      {
+        "name": "fresh-reload",
+        "command": [
+          "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+          "-m",
+          "construction.cli",
+          "verify",
+          "--checkpoint",
+          "/data/spf-beta05-lr3e6-full-20261011-r1/spf-beta05-lr3e6-full-s0"
+        ],
+        "cwd": "/data/spf-npo-20261006-r4/repo",
+        "environment_overrides": {
+          "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_CACHE": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_OFFLINE": "1",
+          "HF_DATASETS_OFFLINE": "1",
+          "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1",
+          "PYTHONPATH": "/data/spf-npo-20261006-r4/repo/src",
+          "TOKENIZERS_PARALLELISM": "false",
+          "WANDB_MODE": "disabled"
+        },
+        "log": "/data/spf-beta05-lr3e6-full-20261011-r1/fresh-reload.raw.log",
+        "started_at": 1791705813.2331424,
+        "process_pid": 12934,
+        "returncode": 0,
+        "finished_at": 1791705827.7237442,
+        "raw_log_sha256": "d6350057ce9fb833e9f82ab5c2d2bf94ed209f50f29f06dd833289046a914a91"
+      },
+      {
+        "name": "full-byte-audit",
+        "command": [
+          "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+          "/data/spf-beta05-full-20261010-r2/validation-code/audit_spf_target.py",
+          "--target",
+          "/data/spf-beta05-lr3e6-full-20261011-r1/spf-beta05-lr3e6-full-s0",
+          "--output",
+          "/data/spf-beta05-lr3e6-full-20261011-r1/spf-beta05-lr3e6-full-s0-audit.json"
+        ],
+        "cwd": "/data/spf-npo-20261006-r4/repo",
+        "environment_overrides": {
+          "HF_HOME": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_CACHE": "/data/smart-mfg/jimmy-lin/hf_cache/hub",
+          "HF_HUB_OFFLINE": "1",
+          "HF_DATASETS_OFFLINE": "1",
+          "HF_HUB_DISABLE_IMPLICIT_TOKEN": "1",
+          "PYTHONPATH": "/data/spf-npo-20261006-r4/repo/src",
+          "TOKENIZERS_PARALLELISM": "false",
+          "WANDB_MODE": "disabled",
+          "CUDA_VISIBLE_DEVICES": ""
+        },
+        "log": "/data/spf-beta05-lr3e6-full-20261011-r1/full-byte-audit.raw.log",
+        "started_at": 1791705827.742353,
+        "process_pid": 13214,
+        "returncode": 0,
+        "finished_at": 1791705876.746367,
+        "raw_log_sha256": "978be14dbe027ac3ad4b076e0ffdc3d6d9b679a5a47616595ad1160319e8bea2"
+      }
+    ],
+    "actual_epochs": 5.0,
+    "actual_updates": 625,
+    "actual_examples": 20000,
+    "unique_examples": 4000,
+    "assistant_tokens": 696525,
+    "safety_tokens_computed": 10625,
+    "conflicting_updates": 280,
+    "fresh_reload": {
+      "status": "pass",
+      "max_logit_error": 0.0
+    },
+    "parameter_tensors": 291,
+    "layers": 32,
+    "new_weights_bytes": 16060556616,
+    "new_weights_sha256": "497693f388013e6afc3e3e75670ee8bc88455f567cb29978b0ebcef59f3c2062",
+    "trajectory_checkpoints": [
+      157,
+      313,
+      469,
+      625
+    ],
+    "candidate_audit_sha256": "839156fd5c6d0e28847991188a95061d513727cf012ec912465697ca9450c181",
+    "model_identity_sha256": "f7afea12f1363a9fea3b4062fde32ae53c40fadd14978a85f387d0f408087b92",
+    "optimizer_profile": {
+      "beta1": 0.5,
+      "beta2": 0.999,
+      "learning_rate": 3e-06,
+      "weight_decay": 0.01
+    },
+    "original_training_loop_delegated": true,
+    "actual_nonprofile_training_args_match": true,
+    "immutable_export_files": 23,
+    "immutable_export_archive_sha256": "1310647eca2d4e5ad4064d8efac839809261056ad09f6ed80efb65b857baa3f2",
+    "immutable_export_is_progress_snapshot": false,
+    "export_weights_read": false,
+    "source_plan_bound_snapshot_pins": {
+      "run_spf_beta05_lr3e6_full.py": "9e3fd1c8c14bb3771c33d6679af36639f0f78007a1a29308479ae433f5f720c2",
+      "run_spf_beta05_lr3e6_full_queue.py": "caba122d48d89e3fc40d9d7327300910fb614883f28a60ef50ea64d2d8e31a14",
+      "spf_beta05_lr3e6_development_executor.py": "74fb508d71d667ef0de08fee3e471b85ba377bc00298a026bf1106a6dbecb643",
+      "plan.private.json": "0ef32eae9962ffa418e4d6d9f672dc2e67aeb51fa3b43cdc4905cd4086fec3c8",
+      "bound-snapshot.private.json": "b482ab8261a6e793722bc22f4af32d6ba0ad62a6b31e1f69aabde725ffc0671b"
+    },
+    "actual_development_complete_at_snapshot": false,
+    "candidate_harmfulness": null,
+    "new_model_judge_reserved": false,
+    "new_api_calls": 0,
+    "credential_reads": 0,
+    "reserved_models": 2,
+    "complete_models": 2,
+    "remaining_model_reservations": 48,
+    "model_limit": 50,
+    "logical_progress_snapshots": 1,
+    "routine_local_judge_queries": 0,
+    "additional_progress_queries": 0,
+    "outer_retries": 0,
+    "new_gpu_submissions": 0,
+    "completed_old_training_evaluations_or_paid_audits_repeated": false,
+    "native_automation": {
+      "status": "ACTIVE",
+      "interval_seconds": 3600,
+      "notification_policy": "failed_runs_only",
+      "prompt_characters": 188,
+      "toml_sha256": "2e3696dfdf546c699314bb8c4fde29118fa417322a44df5b65e3032c4f8acf8e",
+      "changed": false
+    },
+    "stop_criteria_reached": false,
+    "next_routine_observation_not_before_utc": "2026-10-11T10:20:11.656050+00:00",
+    "target_gate": "insufficient_evidence",
+    "human_adjudication_complete": false,
+    "cluster_mapping_verified": false,
+    "private_prompts_responses_credentials_labels_ledgers_or_model_weights_published": false
   }
 }
