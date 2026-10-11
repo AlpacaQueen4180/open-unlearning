@@ -1,5 +1,16 @@
 # SPF safety search：每小時續行，新增最多50套模型Judge
 
+2026-10-11 19:21 heartbeat最新：第三套β1=.5／LR3e-6的792 Judge全部成功且完成新增raw/schema/payload/order/model/usage／2376events與792 ledger intents/receipts逐核；duplicates0、zero retry，Campaign.finish COMPLETE。Harmfulness **38/300＝12.67%**，safe_non_refusal74／refusal188；前一LR5e-6為41/300＝13.67%，Mixing13/300＝4.33%。只下降1個百分點，仍未達H≤12/300停止條件。Benign substantive341/non_answer4/refusal5；conversation overall451/142＝3.176、quality degenerate1/142，nullable分母見aggregate。Actualmodel792均gpt-5.6-terra、input428836/output109500。Audit SHA5969b6411a91c643d7e8cf6317d5c1bb20d69fafb87a97c3e179ae707850e556、完整labels/reasons/source-map保持private；前兩套只SHA引用。
+
+LR3e-6免費TOFU f05/r95 EM86.00%/84.74%（LR5e-6為96.50%/96.39%），MMLUaux846/1024、IFBench300原結果只SHA重用。安全改善小而學習代價明顯，因此下一候選回到LR5e-6／β1=.5控制組，僅新增training-only anchor loss係數.1。明確標為 **SPF＋安全loss hybrid**：原SPF投影後加.1×原安全anchor梯度，再原clip/AdamW；loss均為原assistant-token mean，沒有多一次模型forward/backward，也沒有650 development或FormalHExPHI回灌。原MetaM0獨立construction、rank20／5epochs625／原数据與完整六development保持。
+
+新CPU arithmetic verifier與actual8B40examples兩步32+8／micro8+2／serialization+原atol.05rtol.01 reload驗收在新有限queue前四stage，全部通過才自動接完整625train→reload→newaudit→六development。五新source compile與5新schema negatives完成，僅準備證據，不能稱actual工程或train pass。初始本機predecessor branch/status replacement ValueError、partialsource保存；明確r2修identity，r3只審查還原原auditor path，沒有重跑completedcases。
+
+唯一新RunAI snapshot UTC2026-10-11T11:35:21.715202+00:00、SHA752384e32ec448c38c4dc87e7e65242bc979976ff383d75553467c17759275b4確認原12367退出／GPUidle／newroot不存在；9chunks＋preflight/seal/launch共12有限stage各單次return0，7目的檔逐size/SHA。UTC2026-10-11T11:36:18.467342+00:00（snapshot後56.752秒）單次提交hybrid queue **PID14033**，root `/data/spf-hybrid01-lr5e6-full-20261011-r1`。SUBMITTED_RESULT_NOT_CHECKED，沒有提交後progress query，actualCPU/工程/fulltrain/eval/H未知；不得重送14033或本輪1921/oldhelpers。
+
+新增額度3/50 COMPLETE、47可保留（2376intents/receipts）；hybrid尚未reserve第4套，完整actualdevelopment後才Judge。下一routine不得早於UTC2026-10-11T12:25:20.887831+00:00，先claim後僅原路徑一snapshot、禁止輪詢／補查／重取完成raw／重hash16GB。Native ACTIVE/hourly/failed_runs_only、188字元短prompt不變；H≤12/300或50耗盡才停止並PAUSE。此是單seed描述性搜尋，gate insufficient_evidence、humanadjudication／pairedclusters／matchingmetrics／原NPO及四大型autograd限制仍保留。詳見[完整Judge與hybrid提交證據](../../../results/reproduction/safety/spf-npo-gb200-20261006/spf-lr3e6-judge-complete-hybrid01-launch-20261011-1921.json)。以下舊進度保留為歷史。
+
+
 2026-10-11 18:20 heartbeat最新：LR3e-6／β1=.5候選完整train625/5epochs20k、independentreload error0、新291BF16/32layers byteaudit及六development全部完成。唯一RunAI snapshot UTC2026-10-11T10:21:06.271976+00:00、SHA3944b3e878184431c3e1e7967398c2fe4ebb43d63fcb16a282656b9a0033dda2，queue12367已退出／GPUidle。41新development source/commands/raw/outputs逐bytes SHA保存，archive25dfa3573740b65c5f315c9b9eac2597747a1913e1f9e39561b22faa68e15841；17:20原23訓練檔只重用local manifest／audit SHA，不重取完成raw、不重hash16GB或重跑評估。
 
 免費描述性結果：TOFU f05/r95 EM 86.00%/84.74%，ROUGE-L F1 0.952805/0.958017；MMLUaux 846/1024＝82.62%（zero-shot，非formal5shot）；IFBench300完整score摘要見aggregate。這些結果不代安全gate。

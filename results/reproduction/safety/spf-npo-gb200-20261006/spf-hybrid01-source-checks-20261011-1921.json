@@ -1,0 +1,77 @@
+{
+  "status": "HYBRID_SOURCES_SCHEMA_PASS_PENDING_ACTUAL_CPU_AND_REAL8B_ENGINEERING",
+  "sources": {
+    "run_spf_hybrid01_lr5e6_full.py": {
+      "sha256": "a3402bfc2bc0d31173e71e3f9240802f6e5cbdc62528e62644507e7676f4a2c8",
+      "size": 8713
+    },
+    "run_spf_hybrid01_lr5e6_full_queue.py": {
+      "sha256": "7b5f82e1f285233288845c7dcdaf15a6612a53633764ec8f8360dbde28315fc9",
+      "size": 18327
+    },
+    "spf_hybrid01_lr5e6_development_executor.py": {
+      "sha256": "27ed16eda408ede0dd5401a29fbf7bc861fc2d4e57c3fa3fc4b7e0010c290da3",
+      "size": 16337
+    },
+    "spf_anchor_hybrid.py": {
+      "sha256": "fdb2e1254dcae25c33ee788123eb2a0ca29e2d23edae0db7971c72d8c15b45cc",
+      "size": 4864
+    },
+    "verify_spf_anchor_hybrid.py": {
+      "sha256": "d57d8ff1309c15a77beeb72ecbe0fe33a215c9b13fc8fb6f86c57ce1fffb8a73",
+      "size": 8518
+    }
+  },
+  "family": "spf_anchor_loss_hybrid",
+  "search_decision": {
+    "previous_model_identity_sha256": "f7afea12f1363a9fea3b4062fde32ae53c40fadd14978a85f387d0f408087b92",
+    "previous_judge_audit_sha256": "5969b6411a91c643d7e8cf6317d5c1bb20d69fafb87a97c3e179ae707850e556",
+    "previous_harmful_assistance": 38,
+    "harmful_denominator": 300,
+    "mixing_harmful": 13,
+    "campaign_authorization_sha256": "d29a89e81d76edd7bc4571ec6c4d1c42322bd1749a703d94c7cc2ac1d231e283",
+    "previous_complete_model_count": 3,
+    "model_limit": 50,
+    "development_used_as_training": false,
+    "selected_control_identity_sha256": "9b83962184922d53dd122aa65394aed92fd6c4a121eff293595229b239946ab7",
+    "selected_control_judge_audit_sha256": "2e65b09481c974b4c03fbded6faf5a4271c95f3c136286e669452ba446ace7ac",
+    "selected_control_learning_rate": 5e-06,
+    "controlled_delta_from_selected_control": {
+      "safety_loss_coefficient": {
+        "baseline": 0.0,
+        "candidate": 0.1
+      }
+    }
+  },
+  "negative_cases": [
+    "safety_loss_coefficient",
+    "method_family",
+    "learning_rate",
+    "epochs",
+    "benchmark_training"
+  ],
+  "gradient_formula": "original_SPF(g_task,g_training_anchor) + .1*g_training_anchor; before original clipping/AdamW step",
+  "original_training_loop_loss_projection_backward_delegated": true,
+  "engineering_expected_updates": 2,
+  "engineering_expected_windows": [
+    32,
+    8
+  ],
+  "engineering_expected_microbatches": [
+    8,
+    2
+  ],
+  "actual_cpu_check_and_real8b_engineering_required_before_full": true,
+  "actual_engineering_updates": 0,
+  "new_gpu_submissions": 0,
+  "new_api_calls": 0,
+  "credential_reads": 0,
+  "completed_cases_not_repeated": true,
+  "baseline_selection": "LR3e-6 H41to38 but retainEM .963947to.847368; preserve LR5e-6 utility and change only anchor coefficient0to.1.",
+  "original_atol05_rtol01_unchanged": true,
+  "old_large_autograd_failures_resolved": false,
+  "fresh_idle_snapshot_still_required": true,
+  "auditor_original_path_preserved": true,
+  "r2_completed_schema_negatives_reused": true,
+  "review_changed_only_auditor_path_literal": true
+}
