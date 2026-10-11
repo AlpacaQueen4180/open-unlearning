@@ -2795,5 +2795,261 @@
     "human_adjudication_complete": false,
     "cluster_mapping_verified": false,
     "private_prompts_responses_credentials_labels_ledgers_or_model_weights_published": false
+  },
+  "lr3e6_completed_and_judge_started_20261011_1820": {
+    "status": "LR3E6_TRAIN_RELOAD_AUDIT_DEVELOPMENT_COMPLETE_NEW_MODEL_JUDGE_STARTED",
+    "recorded_utc": "2026-10-11T10:26:35.623728+00:00",
+    "heartbeat_utc": "2026-10-11T10:20:23.691Z",
+    "snapshot_utc": "2026-10-11T10:21:06.271976+00:00",
+    "snapshot_sha256": "3944b3e878184431c3e1e7967398c2fe4ebb43d63fcb16a282656b9a0033dda2",
+    "snapshot_source_sha256": "5f7f7452816c5542c1aada36f329a5e2ce998b2d8eb10781afad66635632f6d5",
+    "initial_compact_display_used_missing_utc_key": false,
+    "original_complete_snapshot_timestamp_preserved": true,
+    "runai_snapshot_success": true,
+    "queue_pid": 12367,
+    "queue_exited_at_snapshot": true,
+    "gpu_idle_at_snapshot": true,
+    "actual_epochs": 5.0,
+    "actual_updates": 625,
+    "actual_examples": 20000,
+    "unique_examples": 4000,
+    "assistant_tokens": 696525,
+    "safety_tokens_computed": 10625,
+    "conflicting_updates": 280,
+    "fresh_reload": {
+      "status": "pass",
+      "max_logit_error": 0.0
+    },
+    "weights_bytes": 16060556616,
+    "weights_sha256": "497693f388013e6afc3e3e75670ee8bc88455f567cb29978b0ebcef59f3c2062",
+    "parameter_tensors": 291,
+    "layers": 32,
+    "trajectory_steps": [
+      157,
+      313,
+      469,
+      625
+    ],
+    "candidate_audit_sha256": "839156fd5c6d0e28847991188a95061d513727cf012ec912465697ca9450c181",
+    "model_identity_sha256": "f7afea12f1363a9fea3b4062fde32ae53c40fadd14978a85f387d0f408087b92",
+    "actual_optimizer_binding": {
+      "status": "ACTUAL_BETA05_LR3E6_FULL_OPTIMIZER_BOUND",
+      "beta1": 0.5,
+      "beta2": 0.999,
+      "learning_rate": 3e-06,
+      "optimizer": {
+        "class": "AdamW",
+        "defaults": {
+          "lr": 3e-06,
+          "betas": [
+            0.5,
+            0.999
+          ],
+          "eps": 1e-08,
+          "weight_decay": 0.01,
+          "alpha": 0.0,
+          "t_alpha": null,
+          "t_beta3": null
+        }
+      },
+      "baseline_resolved_sha256": "d3aeba5342e5102124d7a12096cb4190c56c9617dabb75ed1df5a3b155bc354d",
+      "plan_sha256": "0ef32eae9962ffa418e4d6d9f672dc2e67aeb51fa3b43cdc4905cd4086fec3c8",
+      "wrapper_sha256": "9e3fd1c8c14bb3771c33d6679af36639f0f78007a1a29308479ae433f5f720c2",
+      "frozen_cli_sha256": "f2fc3ef632ba284d206b372177a14abe4d0b2410499af5ca7c435afc10ca02cc",
+      "original_setup_delegated": true,
+      "original_training_loop_delegated": true,
+      "actual_nonprofile_training_args_match": true,
+      "comparison_serialization": "same json.dumps(default=str) as original resolved_training",
+      "pid": 12438
+    },
+    "completed_development_stages": [
+      "tofu",
+      "knowledge",
+      "ifbench",
+      "safety",
+      "conversation",
+      "ifbench-score"
+    ],
+    "completed_development_returncodes": {
+      "tofu": 0,
+      "knowledge": 0,
+      "ifbench": 0,
+      "safety": 0,
+      "conversation": 0,
+      "ifbench-score": 0
+    },
+    "actual_outputs_commands_caps_cuda_sources_verified": true,
+    "free_metrics": {
+      "tofu": {
+        "forget05": {
+          "count": 200,
+          "normalized_exact_match": 0.86,
+          "rouge_l_f1": 0.9528047722223508,
+          "mean_log_probability": -0.026610750279505737
+        },
+        "retain95": {
+          "count": 3800,
+          "normalized_exact_match": 0.8473684210526315,
+          "rouge_l_f1": 0.9580173119807944,
+          "mean_log_probability": -0.031077914727335922
+        }
+      },
+      "mmlu_auxiliary": {
+        "count": 1024,
+        "correct": 846,
+        "accuracy": 0.826171875,
+        "protocol": "auxiliary-zero-shot-ABCD-summed-continuation-logprob-v1",
+        "num_fewshot": 0
+      },
+      "ifbench": {
+        "count": 300,
+        "summary": {
+          "strict": {
+            "prompt_accuracy": 0.21,
+            "instruction_accuracy": 0.23255813953488372
+          },
+          "loose": {
+            "prompt_accuracy": 0.22666666666666666,
+            "instruction_accuracy": 0.25872093023255816
+          }
+        }
+      }
+    },
+    "reused_training_file_references": 23,
+    "reused_training_archive_sha256": "1310647eca2d4e5ad4064d8efac839809261056ad09f6ed80efb65b857baa3f2",
+    "completed_training_raw_reexported": false,
+    "immutable_export_files": 41,
+    "immutable_export_archive_sha256": "25dfa3573740b65c5f315c9b9eac2597747a1913e1f9e39561b22faa68e15841",
+    "immutable_export_is_progress_snapshot": false,
+    "export_weights_read": false,
+    "old_weights_rehashed": false,
+    "candidate_harmfulness": null,
+    "harmfulness_judge_complete": false,
+    "judge_preparation": {
+      "status": "LR3E6_CAMPAIGN_MODEL_PACKET_PREFLIGHT_PASS_NO_API_NO_KEY",
+      "model_identity_sha256": "f7afea12f1363a9fea3b4062fde32ae53c40fadd14978a85f387d0f408087b92",
+      "packet_sha256": "5b2464fb1b246f98ca104d3af03e53bf32500925f15435f38d1b733cb332ea5f",
+      "plan_sha256": "41d997c25244a3e716cbde78800a73c90b702bc2af57c4e0e13ea93bc5e18fe8",
+      "development_proof_sha256": "ce21721e73e05eb4efd6a2c19e404720d629c530da3c3bdfbbe364ca61a83856",
+      "runner_sha256": "9d7203d95db3a828b4e42ead96a0b1a178f711254a2cd5cac5df43d1fc3dee2e",
+      "loader_sha256": "8d5cca098f33740397b345f64804903297178689f5e206e7e6fc5d9bf8e558ad",
+      "completed_export_archive_sha256": "25dfa3573740b65c5f315c9b9eac2597747a1913e1f9e39561b22faa68e15841",
+      "completed_export_files": 43,
+      "new_development_export_files": 41,
+      "reused_training_file_references": 23,
+      "reused_audit_and_identity_files": 2,
+      "completed_training_raw_reexported": false,
+      "paid_request_limit": 792,
+      "new_campaign_model_limit": 50,
+      "paired_user_prompts_verified": true,
+      "actual_completed_development_verified": true,
+      "actual_candidate_audit_verified": true,
+      "previous_labels_reused": false,
+      "new_api_calls": 0,
+      "credential_reads": 0,
+      "new_model_reservations": 0
+    },
+    "launch": {
+      "status": "SUBMITTED_RESULT_NOT_CHECKED",
+      "new_campaign_model_limit": 50,
+      "reserve_before_key": true,
+      "actual_parser_errors": 0,
+      "this_model_request_limit": 792,
+      "api_endpoint": "https://api.openai.com/v1",
+      "plan_sha256": "41d997c25244a3e716cbde78800a73c90b702bc2af57c4e0e13ea93bc5e18fe8",
+      "max_retries": 0,
+      "model": "gpt-5.6-terra",
+      "submitted_utc": "2026-10-11T10:24:01.6696497Z",
+      "source_sha256": "9d7203d95db3a828b4e42ead96a0b1a178f711254a2cd5cac5df43d1fc3dee2e",
+      "new_key_dialog": false,
+      "pid": 63640
+    },
+    "reservation": {
+      "slot": 3,
+      "plan_sha256": "41d997c25244a3e716cbde78800a73c90b702bc2af57c4e0e13ea93bc5e18fe8",
+      "model_identity_sha256": "f7afea12f1363a9fea3b4062fde32ae53c40fadd14978a85f387d0f408087b92"
+    },
+    "startup_observation_utc": "2026-10-11T10:24:37.690280+00:00",
+    "startup_observation_sha256": "32fac7081179934aa31d73132af9daa821795ecc167c95a1b575a6f4f2e13406",
+    "startup_judge_state": {
+      "status": "RUNNING",
+      "pid": 61532,
+      "total": 792,
+      "new_call_limit": 792,
+      "attempted": 11,
+      "completed": 10,
+      "retries": 0,
+      "statuses": {
+        "success": 10
+      },
+      "usage": {
+        "input_tokens": 6780,
+        "output_tokens": 1613
+      },
+      "actual_models": {
+        "gpt-5.6-terra": 10
+      },
+      "last_operation": "persist_intent_before_request",
+      "current_packet_index": 10,
+      "source_sha256": "9d7203d95db3a828b4e42ead96a0b1a178f711254a2cd5cac5df43d1fc3dee2e",
+      "plan_sha256": "41d997c25244a3e716cbde78800a73c90b702bc2af57c4e0e13ea93bc5e18fe8",
+      "packet_sha256": "5b2464fb1b246f98ca104d3af03e53bf32500925f15435f38d1b733cb332ea5f",
+      "model_identity_sha256": "f7afea12f1363a9fea3b4062fde32ae53c40fadd14978a85f387d0f408087b92",
+      "campaign_slot": 3,
+      "failure": null
+    },
+    "startup_inflight_intents": 1,
+    "startup_observation_is_not_current_completion": true,
+    "campaign_budget_at_startup": {
+      "status": "ACTIVE",
+      "reserved_models": 3,
+      "complete_models": 2,
+      "running_models": 1,
+      "request_intents": 1595,
+      "durable_receipts": 1594,
+      "remaining_model_reservations": 47
+    },
+    "original_new50_authorization_sha256": "d29a89e81d76edd7bc4571ec6c4d1c42322bd1749a703d94c7cc2ac1d231e283",
+    "original_explicit_egress_confirmation_sha256": "8f02288e90476522be30ed625bb1830b1f063b234744b5025190f3f2a040a647",
+    "same_endpoint_model_full792_scope_normal_escalated_review_accepted": true,
+    "saved_credential_encryption": "Windows DPAPI CurrentUser",
+    "saved_key_loaded_by_child_after_reservation": true,
+    "new_key_dialog_opened": false,
+    "credential_value_recorded_or_published": false,
+    "credential_value_read_by_observer": false,
+    "judge_profile": {
+      "model": "gpt-5.6-terra",
+      "reasoning": "medium",
+      "max_output_tokens": 4096,
+      "max_retries": 0,
+      "api_base_url": "https://api.openai.com/v1"
+    },
+    "human_blind_review_rows": 50,
+    "human_adjudication_complete": false,
+    "cluster_mapping_verified": false,
+    "target_gate": "insufficient_evidence",
+    "fixed_harmful_total": 300,
+    "mixing_harmful": 13,
+    "winning_max_count": 12,
+    "logical_runai_progress_queries": 1,
+    "routine_local_judge_observations": 1,
+    "additional_progress_queries": 0,
+    "outer_retries": 0,
+    "new_gpu_submissions": 0,
+    "launch_submissions": 1,
+    "new_model_reservations": 1,
+    "completed_training_evaluation_judge_successes_or_old_audits_repeated": false,
+    "native_automation": {
+      "status": "ACTIVE",
+      "rrule": "FREQ=HOURLY;INTERVAL=1",
+      "notification_policy": "failed_runs_only",
+      "prompt_characters": 188,
+      "toml_sha256": "2e3696dfdf546c699314bb8c4fde29118fa417322a44df5b65e3032c4f8acf8e",
+      "changed": false
+    },
+    "native_automation_changed": false,
+    "next_routine_observation_not_before_utc": "2026-10-11T11:20:49.393483+00:00",
+    "private_prompts_responses_keys_labels_row_maps_or_weights_published": false,
+    "scope": "Descriptive seed0 SPF candidate development; not NPO final, paired significance, or qualified safety gate"
   }
 }
