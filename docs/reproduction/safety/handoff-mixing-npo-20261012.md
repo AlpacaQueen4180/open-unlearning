@@ -1,6 +1,6 @@
 # Handoff：收尾最後一個 SPF 候選，從 Mixing checkpoint 執行 NPO
 
-2026-10-13收尾補充：GPU／六development已完成；本機Judge改讀 `private/spf-safety-search-20261010/model-06-hybrid01-rank40-unsent788-r2`。原r1失敗bytes／三successaudit／unknownH1保留，新source與preflight只續已驗未送出。完成剩餘subset後合併最多791並明確報unknown1，finalreport／GitHub後PAUSE，仍不新增SPF。
+2026-10-13最終收尾：rank40訓練／六development／Judge新增788與combined791 audit完成。有害協助30/299＝10.03%，固定300題界限10.00%～10.33%，未低於Mixing4.33%；原unknownH1保留且不重送。SPF搜尋結束，本輪結果發布GETref核驗後PAUSE；Mixing NPO交下一session直接接第3–8節，不再查完成RunAI或Judge。
 
 
 交接日期：2026-10-12（Asia/Taipei）。使用者已明確指定：檢查、評估並發布最後一個 SPF 結果；完成目前 rank40 評估與 GitHub 發布後，**結束 SPF 參數搜尋，轉以既有 Mixing checkpoint 的 NPO 為主要實驗**。本文件取代舊 handoff 的「SPF 優先起點」與舊搜尋 prompt 的「H 未低於 Mixing 就繼續產生新 SPF 候選」。歷史失敗、原始紀錄及原 Judge 帳務保留。
@@ -12,9 +12,9 @@
 3. [研究規劃 v2](safety_preserving_finetuning_unlearning_plan_v2.md)、[結果追蹤](實驗規劃與結果追蹤.md)。舊「Mixing gate 通過才可啟動」的操作限制由本次使用者指定起點覆蓋；**科學上的 gate 判定仍保留 insufficient_evidence**。
 4. [新版大型模型驗證](../npo/large-model-native-validation-20261006.md)、[loss scaling](../npo/loss-scaling-20261006.md)、[update-count 分類](../npo/update-count-mismatch-20261006.md)。
 
-最新唯一RunAI快照UTC **2026-10-12T16:52:27.574810+00:00**（台北2026-10-13 00:52）核rank40 full625／reload0／audit／六development全部完成，20435退出、GPUidle。RunAI完成，不再查。Judge原slot6在首3成功後originalindex3 harmful BadRequestError停止，未知1不重送；explicitr2 unsent788 loader3772／runner26632在01:14為RUNNING、16newsuccess＋1in-flight，加原3共19confirmed。下一routine不得早於UTC **2026-10-12T17:52:19.728814+00:00**，只讀此本機newrun一次；不輪詢、重送或新增SPF候選。
+最後RunAI快照UTC2026-10-12T16:52:27.574810+00:00已核20435退出／GPUidle與全部GPU完成；本輪只一次localJudge例行觀測，788success終態audit通過，加原3verifiedlabels共791。3772／26632均已退出。原index3 harmful未知1不重送；不再查完成RunAI／Judge，不新增SPF候選。
 
-原生排程 `spf-full-npo-seed0` 起初 fresh read 是 **PAUSED**，原TOML已保存。使用者其後明確回答「恢復收尾排程，完成後自動暫停（建議）」；已經原生工具恢復，更新後 fresh TOML核 **ACTIVE／每小時／failed_runs_only**。短prompt只允許目前rank40收尾與GitHub發布，禁止新增SPF候選，完成後PAUSE。Mixing NPO由下一session執行；不能把收尾排程擴成新的Mixing實驗排程。
+原生排程 `spf-full-npo-seed0` 曾依人類授權恢復ACTIVE／每小時／failed_runs_only，只為rank40收尾；現在結果與handoff完成，發布核驗後依授權PAUSE。實際native狀態與commit／GETref保存在最新private continuation／publication receipt。不得由下一session自行resume SPF搜尋；Mixing NPO須另按其授權規劃。
 
 ## 2. 最後一個 SPF 候選如何收尾
 
@@ -127,24 +127,24 @@ NPO階段不繼續Mixing的安全anchor loss，也不套SPF projection；α1僅�
 
 Judge既有固定profile：gpt-5.6-terra／medium／4096／zero retry／三原rubric／https://api.openai.com/v1。每個模型own792（harmful300／benign350／conversation142），API前durable intent，raw/result fsync後receipt，unparsed／unexpectedmodel／API/filesystemerror立即stop。sent／uncertain不auto retry；成功labels不重跑。新run先驗source/profile/packet/actualoutputs再reserve，才由sameuser DPAPI CurrentUser loader在child memory解密既有專用key；不重新問貼key、不讀H100 safety.env、不存plaintext或送GB200。
 
-最新帳務 **6/50 reserved、5COMPLETE／1RUNNING、44remaining**，第6套是同一rank40模型，unsent788續行不增加slot。Originalindex3 harmful sent/uncertain永不auto retry，最多791confirmed。未解析錯誤保留，originalcap／SDK／endpoint不變，先原slotresume再DPAPI。Mixing NPO沿既有總授權須共享剩餘額度，不重設另一個50套。
+最新帳務 **6/50 reserved、5COMPLETE／1INCOMPLETE／0RUNNING、44remaining**，第6套是同一rank40模型，已以combined791 audit SHA關閉INCOMPLETE；4752intents／4751receipts、unknownH1保留。Mixing NPO共享既有總額度，不重設另一個50套。
 
 GitHub既有明確授權：`AlpacaQueen4180/open-unlearning`，目的branch `repro/npo-h100-ada-5seed`，本機`codex/npo-gb200-deepspeed`，non-force push並GETref核。Public只sources／aggregate／audit/proof／asrun／docs／非敏感SHA；全部rawCLI／QA／anchor／prompts／responses／judge reasons／labels／membership／weights／SQLite private。舊handoff及六GB200 untracked不混stage。失敗原bytes保留；Gitblob逐bytes或Markdown原newline normalization核／credentialpatterns0／strictdiffcheck。
 
 ## 9. 下一個 session 可直接貼上的起始訊息
 
-> 請先讀 docs/reproduction/safety/handoff-mixing-npo-20261012.md 與最新private continuation。使用者已確認目前rank40 SPF做最後一次評估／Judge／GitHub發布後停止SPF搜尋，不再開新候選；若尚未收尾，接unique20435的新journal，每小時只一次必要query，使用者已授權並恢復ACTIVE每小時收尾排程，完成目前候選Judge／audit／發布後用原生工具PAUSE，不再開SPF候選。接著從H100既有mixing-full-v1/target做Mixing→NPO主實驗，先核source/destination模型身份與原QA、Mixing專屬smoke、seed0 pureNPO／NPO+retain有限pilot及matchingMixingretain95 reference，再凍結UL0/1/2比較。reference model必須初始Mixing；不套SPF或額外安全anchor loss。保持原loss、512mask、完整÷8尾÷2、actual7updates50micro、291fingerprint/referenceunchanged與原freshreload門檻。原gateinsuff／autograd／單seed跨平台限制如實保留，Judge先記帳／savedDPAPI／zero retry，全部raw/key/weights private，完成source/aggregate/report nonforcepush原branch。
+> 請先讀本handoff與最新private continuation。rank40 SPF收尾已完成：H30/299＝10.03%，unknownH1保留，完整300題界限10.00%～10.33%；SPF搜尋已結束，收尾排程發布後PAUSE，不resume、不再查GPU或Judge。接下來執行Mixing→NPO主要實驗，從H100既有mixing-full-v1/target核source／destination完整模型與QA身份，做Mixing專屬smoke、seed0 pureNPO／NPO+retain有限pilot及matchingMixingretain95 reference，再凍結UL0/1/2比較。Reference必須初始Mixing，不套SPFprojection或額外安全anchor loss；保持512mask、完整÷8尾÷2、actual7updates50micro、291fingerprint/referenceunchanged与原freshreload門檻。固定Judgeprofile／zero retry／savedDPAPI、先记帳，共享餘44模型額度；unknown／successful不重送。Gateinsuff／人工／pairedclusters／matchingmetrics／autograd／seed平台限制保留，raw/key/weights private，公開source／aggregate／報告nonforcepush原branch。
 
-## 10. SPF 最終結果欄：收尾後補入
+## 10. SPF 最終結果：已驗收的791子集與unknownH1
 
 | 欄位 | 本輪狀態 |
 |---|---|
 | rank40 full625／reload／audit／all625 acceptance | 已完成：625／epoch5／20k4000unique，reloaderror0、291BF16／32layers byteaudit及all625 rank40+anchor PASS |
 | 固定六development | 全部完成；f05/r95EM96.50%/96.32%、MMLUaux849/1024、IFBenchstrictprompt21.67% |
-| own792 Judge／H300／benign／conversation／usage | 原slot6首3success後index3 harmful未知1；unsent788 r2續行，01:14共19confirmed。即使全部成功最大791／H299；須合併audit與固定300題上下界，不稱完整792/H300 |
-| 最終模型identity／weights digest／archive／audit SHA | identity`64d3fd783130bc4936a97cbc31da044dfd5e20487b35f2e71a21f6e20ad30c78`；weights`2e993e10c27c3f7758f88d052b9fe2680df5f70dfa85ce60c719bb6eca8caa1f`；19新完成archive`b1412f757709d9ffe53e37d790966b2be61a33d4d1d4167f50bad55bfc424ada`；audit`071102b49e0112660df85907e892700cf5a7c479c36ce45cc6d2abd1627b839a`；全部actual來源，Judge待完整 |
-| 最終GitHub commit／GETref | 本輪會先發布handoff與已核現況；最終評估完成再補 |
-| 收尾排程 | 人類明確授權恢復；native fresh核ACTIVE／hourly／failed_runs_only，只收尾rank40，最終發布後PAUSE |
+| own792 Judge／H300／benign／conversation／usage | 原792 allocation；791confirmed：H299/B350/C142。有害30/299＝10.03%，固定300界限10.00%～10.33%；B拒答9/350、Coverall445/142、usage input432933/output110557；unknownH1不重送，無full792 claim |
+| 最終模型identity／weights digest／archive／audit SHA | identity`64d3fd783130bc4936a97cbc31da044dfd5e20487b35f2e71a21f6e20ad30c78`；weights`2e993e10c27c3f7758f88d052b9fe2680df5f70dfa85ce60c719bb6eca8caa1f`；19新完成archive`b1412f757709d9ffe53e37d790966b2be61a33d4d1d4167f50bad55bfc424ada`；audit`071102b49e0112660df85907e892700cf5a7c479c36ce45cc6d2abd1627b839a`；combined791 audit `133ec48d35fd7cdda1857bea56742d40558f7e07949a03771f21da515a432f52`／new788 archive `1fa5309e2125f069c1ca0c5bde30f8ecfef6d0e8a41f8bd043d11fe3eadfde44`，unknownH1保留 |
+| 最終GitHub commit／GETref | 本次[最終aggregate](../../../results/reproduction/safety/spf-npo-gb200-20261006/spf-final-rank40-results-20261013-0251.json)與audit as-run／報告／handoff發布；immutable commit及官方GETref保存於latest private publication receipt，排程暫停後補native closure證據 |
+| 收尾排程 | 使用者已授權final結果發布GETref通過後PAUSE；不新增SPF，native實際狀態見最新private continuation |
 | Mixing NPO開始 | 本輪僅交接；未transfer／launch／建立matching reference |
 
-下一個session完成收尾後要更新上述欄位、finetune結果報告與最新private continuation；不能讓本文件的pending永久充當最終結果。
+下一個session直接接Mixing NPO工作；本候選已完成可驗證791 subset與公開結果收尾，原unknownH1及Gate缺口仍保留。不得為補full792自行重送未知request或重跑成功Judge。
