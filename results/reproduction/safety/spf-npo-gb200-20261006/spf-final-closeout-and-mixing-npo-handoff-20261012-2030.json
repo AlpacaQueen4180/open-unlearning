@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-12T12:53:21.060859+00:00",
+  "classification": "FINAL_SPF_CANDIDATE_TRAINING_PENDING_EVALUATION; MIXING_NPO_HANDOFF_PREPARED",
+  "user_scope": {
+    "finish_current_rank40_evaluation_judge_audit_and_github_publication": true,
+    "end_spf_search_after_current_candidate": true,
+    "no_new_spf_candidates": true,
+    "mixing_npo_primary_for_next_session": true,
+    "mixing_npo_launch_in_this_turn": false,
+    "user_authorization_sha256": "9b4bf9bb798e47395a52ba55815b7eb01767d7fe7edfed9f39b21be40fe23c0e"
+  },
+  "sole_snapshot": {
+    "utc": "2026-10-12T12:30:39.195278+00:00",
+    "sha256": "850facf9e298e0d227cbd2efa706251c50274de978f4371518ba674a57393d40",
+    "source_sha256": "e2f09d699134220b9fca432c73b2280a60e84c510bae9cca56ab16d17f5daff1",
+    "queue_pid": 20435,
+    "authoritative_journal": "/data/spf-hybrid01-rank40-full-20261012-r1/runs/cpu-fixture-recovery-1539/status.json",
+    "status": "RUNNING_AT_SINGLE_SNAPSHOT",
+    "stage": "train",
+    "completed": [
+      "hybrid-cpu-verification-reused",
+      "hybrid-engineering-train",
+      "hybrid-engineering-reload",
+      "hybrid-engineering-verify"
+    ],
+    "checkpoint_directory_exists": true,
+    "checkpoint_directory_is_not_completion": true,
+    "candidate_audit": null,
+    "full_acceptance": null,
+    "full625_and_six_development_and_own792_judge_pending": true,
+    "new_harmfulness": null,
+    "primary19460_failure_is_immutable_history": true
+  },
+  "completed_evidence_reused": {
+    "cpu_proof_sha256": "5397aabbfcaa4d70b1b3f51004721d6d6f389212301ced815472c890bbfb6c4d",
+    "engineering_proof_sha256": "a68b9782be482c1b6c160a1c88beafb747f8805492a6d6e70cf3b9d7de64844c",
+    "engineering_updates": 2,
+    "engineering_task_examples": 40,
+    "engineering_reload_max_error": 0.0,
+    "engineering_archive_sha256": "c65793ec7a88a2e537d415c3d37d53b0ed6d286759281f40ebb02e7496759862",
+    "failed_cpu_archive_sha256": "3f5c58114b262673e8f54d93b14eec2adcff57d75186908eb0ef26fc9a0d346d",
+    "completed_evidence_not_rerun_or_reexported": true
+  },
+  "campaign_budget": {
+    "model_limit": 50,
+    "reserved_models": 5,
+    "complete_models": 5,
+    "running_judge_models": 0,
+    "remaining_model_reservations": 45,
+    "request_intents": 3960,
+    "durable_receipts": 3960,
+    "current_rank40_slot6_not_reserved": true,
+    "no_budget_reset": true
+  },
+  "prior_results_sha_reuse": {
+    "best_hybrid_rank20_harmful": 27,
+    "denominator": 300,
+    "mixing_harmful": 13,
+    "best_hybrid_audit_sha256": "a6ca483d3e4dd34944d93be18460596c8c944c206a13244ade5ef52c6e38cf89",
+    "latest_lambda03_harmful": 33,
+    "latest_lambda03_audit_sha256": "7c1a87cefbec6e1e65e30154c4a81d9642311a9182d311934fc02f30e9184d30",
+    "prior_paid_results_not_reaudited": true
+  },
+  "mixing_checkpoint_metadata": {
+    "checkpoint": "/home/ai/alpaca/work/spf-p0p1-20260916/artifacts/mixing-full-v1/target",
+    "checkpoint_exists": true,
+    "global_step": 625,
+    "epoch": 5.0,
+    "method": "mixing",
+    "total_updates": 625,
+    "effective_batch": 32,
+    "world_size": null,
+    "learning_rate": 1e-05,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "weight_decay": 0.01,
+    "num_train_epochs": 5,
+    "loss_reduction": "global_effective_batch_assistant_token_mean",
+    "reload": {
+      "status": "pass",
+      "max_logit_error": 0.0
+    },
+    "base_model": null,
+    "shards": [
+      {
+        "name": "model-00001-of-00004.safetensors",
+        "size": 4976698672
+      },
+      {
+        "name": "model-00002-of-00004.safetensors",
+        "size": 4999802720
+      },
+      {
+        "name": "model-00003-of-00004.safetensors",
+        "size": 4915916176
+      },
+      {
+        "name": "model-00004-of-00004.safetensors",
+        "size": 1168138808
+      }
+    ],
+    "metadata_only": true,
+    "weight_tensor_bytes_read": false,
+    "full_weight_sha_recomputed": false,
+    "checkpoint_training_or_evaluation_repeated": false,
+    "api_calls": 0,
+    "credential_file_reads": 0,
+    "metadata_files": [
+      {
+        "path": "/home/ai/alpaca/work/spf-p0p1-20260916/artifacts/mixing-full-v1/target/target.json",
+        "size": 1451,
+        "sha256": "b8b313567de70ce5f52076403379ebb77467b43c48106212e255f0550d699a6d",
+        "local_name": "00-target.json"
+      },
+      {
+        "path": "/home/ai/alpaca/work/spf-p0p1-20260916/artifacts/mixing-full-v1/target/resolved_training.json",
+        "size": 5884,
+        "sha256": "bab7ea59bf05b5c2d8214d1a1e9c11cefe9b4820fab75ea3652b1207f45fb407",
+        "local_name": "01-resolved_training.json"
+      },
+      {
+        "path": "/home/ai/alpaca/work/spf-p0p1-20260916/artifacts/mixing-full-v1/target/trainer_state.json",
+        "size": 506,
+        "sha256": "f8120e377923ba219fdf00bb98574eb409716792f72410a9f78f022ab7f417bb",
+        "local_name": "02-trainer_state.json"
+      },
+      {
+        "path": "/home/ai/alpaca/work/spf-p0p1-20260916/artifacts/mixing-full-v1/target/config.json",
+        "size": 875,
+        "sha256": "4fe544dc6144e75ee177447b2d1e57a4d8c560f1ef51b6c079104eefee0ffd95",
+        "local_name": "03-config.json"
+      },
+      {
+        "path": "/home/ai/alpaca/work/spf-p0p1-20260916/artifacts/mixing-full-v1/target/generation_config.json",
+        "size": 184,
+        "sha256": "f62859b817ec0ad72540dfb2e2ae64fb70b3a8ffd7fad503193fa76e64b80227",
+        "local_name": "04-generation_config.json"
+      },
+      {
+        "path": "/home/ai/alpaca/work/spf-p0p1-20260916/artifacts/mixing-full-v1/target/tokenizer_config.json",
+        "size": 55406,
+        "sha256": "cf9caa6e3956c24f5787bff455fccb25532afa5091d6b8cbee01a5b7235a1362",
+        "local_name": "05-tokenizer_config.json"
+      }
+    ],
+    "receipt_sha256": "bb2a8176315a56cc95e24576fa20ba6eb8601de17c08029b7b440254cdb62512",
+    "summary_sha256": "d4b28fea95c33d51158382e4dabf22839e75d0f42be4f51b1ad87d24b8cc953a",
+    "shard_stat_total_bytes": 16060556376,
+    "full_index_tensor_header_and_weight_byte_audit_not_established_by_this_check": true,
+    "mixing_retain95_matching_reference_pending": true,
+    "new_smoke_and_npo_not_launched": true
+  },
+  "native_automation": {
+    "before_status": "PAUSED",
+    "current_status": "ACTIVE",
+    "resume_explicitly_authorized_by_human": true,
+    "interval_seconds": 3600,
+    "notification_policy": "failed_runs_only",
+    "prompt": "依 open-unlearning/docs/reproduction/safety/handoff-mixing-npo-20261012.md 與private額度紀錄，只收尾rank40 PID20435：訓練、六development、own792 Judge、audit及GitHub發布。每小時只查一次，不輪詢；不變安靜。不得新增SPF候選。完成結果與handoff更新後PAUSE本排程。Mixing NPO交下一session執行。",
+    "native_file_sha256": "b26b2e90276933f69fb6bd49992fb4632540add76fc1618d7fa4b046a40b0165",
+    "closeout_only": true,
+    "pause_after_final_publication": true
+  },
+  "next_routine_observation_not_before_utc": "2026-10-12T13:30:16.643932+00:00",
+  "operations": {
+    "logical_runai_progress_snapshots": 1,
+    "second_progress_queries": 0,
+    "outer_retries": 0,
+    "new_gpu_submissions": 0,
+    "new_api_calls": 0,
+    "credential_reads": 0,
+    "mixing_npo_transfers": 0,
+    "completed_weight_audits_not_rehashed": true,
+    "raw_logs_private_only": true
+  },
+  "target_gate": "insufficient_evidence",
+  "human_adjudication_complete": false,
+  "cluster_mapping_verified": false,
+  "research_limits": [
+    "single construction seed and crossplatform comparison",
+    "four original large-autograd5percent failures unresolved",
+    "matched reference metrics pending",
+    "development search is descriptive; no formal holdout validation"
+  ],
+  "final_spf_evaluation_not_complete": true,
+  "handoff_document": "docs/reproduction/safety/handoff-mixing-npo-20261012.md"
+}
