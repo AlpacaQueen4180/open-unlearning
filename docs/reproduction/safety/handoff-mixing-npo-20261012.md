@@ -9,7 +9,7 @@
 3. [研究規劃 v2](safety_preserving_finetuning_unlearning_plan_v2.md)、[結果追蹤](實驗規劃與結果追蹤.md)。舊「Mixing gate 通過才可啟動」的操作限制由本次使用者指定起點覆蓋；**科學上的 gate 判定仍保留 insufficient_evidence**。
 4. [新版大型模型驗證](../npo/large-model-native-validation-20261006.md)、[loss scaling](../npo/loss-scaling-20261006.md)、[update-count 分類](../npo/update-count-mismatch-20261006.md)。
 
-本輪只有一次 RunAI 必要快照：UTC **2026-10-12T12:30:39.195278+00:00**（台北20:30）。rank40 queue **20435** 在該快照為 RUNNING／stage train；三個 8B 工程 stage 已完成，full audit、full625 acceptance 尚無結果。不可把 checkpoint 目錄存在當作完整訓練完成。下一 routine observation 不得早於 UTC **2026-10-12T13:30:16.643932+00:00**（台北21:30:16）。本輪沒有追加進度查詢或提交 Mixing NPO。
+最新收尾唯一RunAI快照：UTC **2026-10-12T13:47:31.441657+00:00**（台北21:47）。rank40 queue **20435** 在該快照為RUNNING／candidate-development/ifbench；full625／5epochs20k、freshreload error0、新完整audit與all625 rank40／anchoraddition已完成。六development／own792 Judge／newharmfulness尚待完整，不重訓或重跑成功stage。下一routine observation不得早於UTC **2026-10-12T14:47:10.162089+00:00**。沒有第二progress查詢或Mixing NPO提交。
 
 原生排程 `spf-full-npo-seed0` 起初 fresh read 是 **PAUSED**，原TOML已保存。使用者其後明確回答「恢復收尾排程，完成後自動暫停（建議）」；已經原生工具恢復，更新後 fresh TOML核 **ACTIVE／每小時／failed_runs_only**。短prompt只允許目前rank40收尾與GitHub發布，禁止新增SPF候選，完成後PAUSE。Mixing NPO由下一session執行；不能把收尾排程擴成新的Mixing實驗排程。
 
@@ -136,10 +136,10 @@ GitHub既有明確授權：`AlpacaQueen4180/open-unlearning`，目的branch `rep
 
 | 欄位 | 本輪狀態 |
 |---|---|
-| rank40 full625／reload／audit／all625 acceptance | 待完成；20:30 snapshot仍train |
-| 固定六development | 待完成 |
+| rank40 full625／reload／audit／all625 acceptance | 已完成：625／epoch5／20k4000unique，reloaderror0、291BF16／32layers byteaudit及all625 rank40+anchor PASS |
+| 固定六development | 21:47 snapshot正在IFBench；完整六stage仍待完成 |
 | own792 Judge／H300／benign／conversation／usage | 待完成；不得填入rank20的結果 |
-| 最終模型identity／weights digest／archive／audit SHA | 待actual結果 |
+| 最終模型identity／weights digest／archive／audit SHA | identity`64d3fd783130bc4936a97cbc31da044dfd5e20487b35f2e71a21f6e20ad30c78`；weights`2e993e10c27c3f7758f88d052b9fe2680df5f70dfa85ce60c719bb6eca8caa1f`；19新完成archive`b1412f757709d9ffe53e37d790966b2be61a33d4d1d4167f50bad55bfc424ada`；audit`071102b49e0112660df85907e892700cf5a7c479c36ce45cc6d2abd1627b839a`；全部actual來源，Judge待完整 |
 | 最終GitHub commit／GETref | 本輪會先發布handoff與已核現況；最終評估完成再補 |
 | 收尾排程 | 人類明確授權恢復；native fresh核ACTIVE／hourly／failed_runs_only，只收尾rank40，最終發布後PAUSE |
 | Mixing NPO開始 | 本輪僅交接；未transfer／launch／建立matching reference |

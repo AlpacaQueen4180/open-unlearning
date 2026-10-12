@@ -1,0 +1,11 @@
+{
+  "status": "HYBRID_ALL625_UPDATES_ANCHOR_ADDITION_RELOAD_AUDIT_PASS",
+  "updates": 625,
+  "spf_projection_rank": 40,
+  "all625_rank_boundaries_verified": true,
+  "method_family": "spf_anchor_loss_hybrid",
+  "safety_loss_coefficient": 0.1,
+  "engineering_proof_sha256": "a68b9782be482c1b6c160a1c88beafb747f8805492a6d6e70cf3b9d7de64844c",
+  "candidate_audit_sha256": "071102b49e0112660df85907e892700cf5a7c479c36ce45cc6d2abd1627b839a",
+  "original_large_autograd_failures_resolved": false
+}
