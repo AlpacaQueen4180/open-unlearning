@@ -1,0 +1,15 @@
+{
+  "status": "NEW_UNSENT788_BOUNDARY_ACCOUNTING_FAILSTOP_AND_SAFE400_METADATA_MOCK_PASS",
+  "runner_sha256": "557159f211ca4aa73f088816f785f60bf534c3dfad49693b05f6bcf4d622e0df",
+  "original_core_sha256": "d2f09e9709578a9dfdd51d1de3efa1be0d092f6c47d2a9ed1baca6b6d7775570",
+  "new_success_mock_parse_calls": 788,
+  "new_error_mock_parse_calls": 1,
+  "new_guard_negatives": 7,
+  "prior_or_uncertain_indices_retried": false,
+  "original_schema_fixtures_not_rerun": true,
+  "scope": "new subset/accounting/failstop integration only; mock parsed objects, no actual SDK response equivalence or paid result",
+  "real_api_calls": 0,
+  "credential_reads": 0,
+  "actual_budget_mutations": 0,
+  "new_gpu_submissions": 0
+}

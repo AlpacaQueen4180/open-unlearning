@@ -6,7 +6,7 @@
 2026-10-12 20:30收尾更新：使用者指定rank40為最後SPF候選，完成评估／Judge／發布後停搜；目前仍訓練，不能稱最終成效已完成。已核現況與Mixing來源見[本輪aggregate](../../../results/reproduction/safety/spf-npo-gb200-20261006/spf-final-closeout-and-mixing-npo-handoff-20261012-2030.json)。
 
 
-整理日期：2026-10-12（Asia/Taipei）。結果範圍為本次 Standard、Mixing、SPF 與 SPF 安全 loss hybrid 的 **finetune／target construction development 評估**。最新候選狀態更新至台北2026-10-12 21:47的唯一RunAI快照；此前已完成的評估與Judge沿用原審核摘要，本輪未新增Judge或重跑評估。
+整理日期：2026-10-12（Asia/Taipei）。結果範圍為本次 Standard、Mixing、SPF 與 SPF 安全 loss hybrid 的 **finetune／target construction development 評估**。最新候選狀態更新至台北2026-10-13 00:52的唯一RunAI快照與01:14新Judge啟動驗證；此前已完成的評估與Judge沿用原審核摘要，本輪完成免費評估驗收並啟動原slot6 Judge，未重跑完成评估或舊paid成功。
 
 ## 結果摘要
 
@@ -29,14 +29,14 @@
 | S3 | SPF（β₁=.5，LR=3e-6） | 792/792 | 38/300 | 12.67% | 86.00% | 84.74% | 0.952805 | 0.958017 | 82.62% | 21.00% | 22.67% | 3.176 | 5/350 | 1/142 |
 | S4 | SPF＋安全 loss（λ=.1） | 792/792 | 27/300 | 9.00% | 96.00% | 96.63% | 0.989940 | 0.991739 | 82.81% | 23.00% | 24.67% | 3.092 | 8/350 | 0/142 |
 | S5 | SPF＋安全 loss（λ=.3） | 792/792 | 33/300 | 11.00% | 96.00% | 96.63% | 0.990522 | 0.991355 | 82.71% | 21.00% | 22.67% | 3.155 | 7/350 | 2/142 |
-| S6 | SPF＋安全 loss（λ=.1，rank40） | 待完成 | 待驗 | 待驗 | 待驗 | 待驗 | 待驗 | 待驗 | 待驗 | 待驗 | 待驗 | 待驗 | 待驗 | 待驗 |
+| S6 | SPF＋安全 loss（λ=.1，rank40） | 19 confirmed；1 unknown＋續行中 | 待完整audit | 待驗 | 96.50% | 96.32% | 0.990518 | 0.990155 | 82.91% | 21.67% | 23.33% | 待驗 | 待驗 | 待驗 |
 
 C0/C1/C2 數值取自 [既有 development 追蹤表](https://github.com/AlpacaQueen4180/open-unlearning/blob/0340429086b8e16ce65bcf4655db31c1d204f1a1/docs/reproduction/safety/%E5%AF%A6%E9%A9%97%E8%A6%8F%E5%8A%83%E8%88%87%E7%B5%90%E6%9E%9C%E8%BF%BD%E8%B9%A4.md)；F0/S1–S5 取自已完成的 aggregate 與審核摘要，詳見來源表。
 
 - **C1：** 155/299＝51.84% 為成功標籤子集；固定 300 題完整 rate 的界限為 **155/300～156/300＝51.67%～52.00%**，1 個 policy-blocked 不當作 refusal。
 - **F0：** Judge 791/792；缺的是 benign 1 題。Harmful 300/300、conversation 142/142 已完整，故 141/300 的 harmfulness 分母成立；benign refusal 使用 **349** 分母，不補值。
 - **S1–S5：** 各 792/792，包含 harmful300、benign350、conversation142；固定 gpt-5.6-terra、medium、max output4096、zero retry 與原 rubric。
-- **S6：** 21:47唯一快照確認full625／5epochs／20k、獨立reload error0、新291BF16／32layers audit及all625 rank40／anchoraddition已完成；PID20435仍在IFBench評估，六development／own792 Judge／harmfulness待完整。訓練驗收不能代安全改善。
+- **S6：** full625／reload0／audit／all625 rank40及六development已完整；Judge首3成功、第4 harmful BadRequestError未知，另788已驗未送出以原slot6續行。01:14有19confirmed＋1新in-flight＋1原unknown；最多791confirmed／H299，不能當成full792／H300或正式pairedgate。
 - **MMLU aux** 是 1,024 題 zero-shot development protocol，不是正式 MMLU 5-shot；**WildChat** 不是正式 MT-Bench；本表 H 不是歷史正式 HEx-PHI。
 
 ## 二、配方與完成狀態
@@ -54,7 +54,7 @@ C0/C1/C2 數值取自 [既有 development 追蹤表](https://github.com/AlpacaQu
 | S3 | 純 SPF 投影 | .5 | 0.000003 | 0 | 20 | 625／5 | GB200、world1 | train/reload/audit/dev/Judge792 完成 |
 | S4 | SPF＋anchor loss hybrid | .5 | 0.000005 | .1 | 20 | 625／5 | GB200、world1 | train/reload/audit/dev/Judge792 完成 |
 | S5 | SPF＋anchor loss hybrid | .5 | 0.000005 | .3 | 20 | 625／5 | GB200、world1 | train/reload/audit/dev/Judge792 完成 |
-| S6 | SPF＋anchor loss hybrid | .5 | 5e-6 | .1 | 40 | 625／5 | GB200、world1 | train／reload0／audit／all625驗收完成；六development與Judge待完整 |
+| S6 | SPF＋anchor loss hybrid | .5 | 5e-6 | .1 | 40 | 625／5 | GB200、world1 | train／reload0／audit／六development完成；slot6 Judge unsent788續行／原H未知1保留 |
 | R1 | 匹配 SPF retain95 reference | .9 | 1e-5 | 0 | 20 | 595／5 | GB200、world1 | train/reload/audit 完成；比較指標待補 |
 
 SPF 系列 WD=.01、β₂=.999、effective batch32、micro4×accumulation8、full warmup125；C1/C2 為 micro4×accumulation4×world2。原始 projection、clip、AdamW 的執行驗證與大型 autograd 等價驗收為不同問題。Hybrid 明確在原 SPF 投影後加入 λ×anchor gradient，再交給原 clip／optimizer；它是新訓練家族，不能寫成純 SPF。
@@ -159,7 +159,7 @@ F0 的另1個未知 benign 結果不在349份 confirmed benign 中，不能當�
 1. **觀察到的改善：** β₁=.5 的 S1 相對 F0，H從47%降到31%；在 β₁=.5 下 LR5e-6／3e-6分別為13.67%／12.67%。這支持繼續研究 optimizer／更新幅度，但不是完整根因或跨平台因果證明。
 2. **目前最佳 SPF 系列：** S4 的9.00%及R95 EM96.63%為目前有完成792 Judge的最佳安全／學習折衷。與相同 LR 的 S2 相比，H下降4.67pp、R95 EM上升約0.24pp，但 benign benchmark拒答從6/350變為8/350。
 3. **較大λ未改善：** S5 的11.00%比 S4 高2.00pp，R95 EM同為96.63%。不能假定增加安全 loss 係數必然降低H。
-4. **最後候選：** S6保留最佳λ=.1／LR5e-6／β₁=.5，只改rank20→40；21:47快照已full625／reload0／audit／all625驗收完成，正在IFBench。六development與Judge尚待完整，不能填入既有rank20結果；完成評估與發布後不再開SPF候選。
+4. **最後候選：** S6保留λ=.1／LR5e-6／β₁=.5，只改rank20→40；full625／reload0／audit／六development均完成，免費效用已填。原第4筆harmful Judge未知，未送出788以同slot6續行；最終H需299confirmed與300題上下界，不能宣稱完整H300。此候選收尾發布後不再開SPF候選。
 5. **最新研究路線：** 使用者已指定目前S6收尾後結束SPF搜尋，轉Mixing checkpoint NPO；原H≤12/300或50套耗盡的搜尋停止規則保留為歷史，不再要求繼續開新SPF候選。帳務仍5/50 COMPLETE、45剩餘、S6尚未reserve，不重設額度。只收尾S6的每小時排程已依人類確認恢復，最終發布後PAUSE；新NPO交[下一session handoff](handoff-mixing-npo-20261012.md)。
 
 既有 Mixing gate 的數值與缺口：
@@ -208,3 +208,8 @@ F0 的另1個未知 benign 結果不在349份 confirmed benign 中，不能當�
 | 16 | [spf-retain95-s0-audit.json](https://github.com/AlpacaQueen4180/open-unlearning/blob/0340429086b8e16ce65bcf4655db31c1d204f1a1/results/reproduction/safety/spf-npo-gb200-20261006/r4-reference-completed/spf-retain95-s0-audit.json) | 758ed12ebcc6ce5d7e65eae689e475b9ce92bbbff34445279c39b7282aa6652e |
 
 原始 Mixing統計摘要及gate的既有上游SHA256：mixing-complete-statistics.json＝a7088587b544edc31afba6d25bb69e263f237d2d3d2d277bc4afd1c26497f1e3；mixing-development-gate-v2.json＝ea74957628f5035b967081114853071cd5ee1cf6dd8887527c4a6ecaeb9d0976。它們由既有追蹤表引用，本次未重新取得／執行原來源。
+
+
+2026-10-13 01:14：S6六development完成，免費數值已更新；Judge原1 harmful未知保留，原slot6未送出788續行，最大791confirmed，newH尚無完整audit。
+
+S6新增已驗免費數值：F05/R95 EM96.50%/96.32%、F1 0.990518/0.990155、mean logP -0.008839646/-0.009933202；MMLUaux849/1024；IFBench strictprompt/instruction21.67%/25.29%、loose23.33%/27.62%。來源為[本輪aggregate](../../../results/reproduction/safety/spf-npo-gb200-20261006/spf-final-rank40-development-complete-judge-failure-unsent-recovery-20261013-0051.json)，原19train／42development SHA核，不新增生成。

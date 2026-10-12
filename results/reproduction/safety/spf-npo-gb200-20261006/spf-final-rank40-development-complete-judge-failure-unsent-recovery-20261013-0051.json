@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "status": "FINAL_RANK40_DEVELOPMENT_COMPLETE_INITIAL_JUDGE_FAILED_VERIFIED_UNSENT788_CONTINUATION_STARTED",
+  "recorded_utc": "2026-10-12T17:20:42.850249+00:00",
+  "heartbeat_utc": "2026-10-12T16:51:22.870Z",
+  "snapshot_utc": "2026-10-12T16:52:27.574810+00:00",
+  "snapshot_sha256": "862dc2a054e80c0213cf347162021a8235ae789570fb678e685bb7428149ce7c",
+  "snapshot_source_sha256": "e2f09d699134220b9fca432c73b2280a60e84c510bae9cca56ab16d17f5daff1",
+  "queue_pid": 20435,
+  "queue_exited": true,
+  "gpu_idle_at_snapshot": true,
+  "full625_reload0_audit_all625_rank40_acceptance_complete": true,
+  "all_six_development_complete": true,
+  "method_family": "spf_anchor_loss_hybrid",
+  "safety_loss_coefficient": 0.1,
+  "projection_rank": 40,
+  "model_identity_sha256": "64d3fd783130bc4936a97cbc31da044dfd5e20487b35f2e71a21f6e20ad30c78",
+  "candidate_audit_sha256": "071102b49e0112660df85907e892700cf5a7c479c36ce45cc6d2abd1627b839a",
+  "all625_acceptance_sha256": "3050b474dee9f3e5ace7458ecd0590dd3ba38b392537acc6547b36dadf0dd19f",
+  "free_metrics": {
+    "tofu": {
+      "forget05": {
+        "count": 200,
+        "normalized_exact_match": 0.965,
+        "rouge_l_f1": 0.9905177564987347,
+        "mean_log_probability": -0.008839645664338605
+      },
+      "retain95": {
+        "count": 3800,
+        "normalized_exact_match": 0.9631578947368421,
+        "rouge_l_f1": 0.9901550389843525,
+        "mean_log_probability": -0.009933202147438255
+      }
+    },
+    "mmlu_auxiliary": {
+      "count": 1024,
+      "correct": 849,
+      "accuracy": 0.8291015625,
+      "protocol": "auxiliary-zero-shot-ABCD-summed-continuation-logprob-v1"
+    },
+    "ifbench": {
+      "count": 300,
+      "summary": {
+        "strict": {
+          "prompt_accuracy": 0.21666666666666667,
+          "instruction_accuracy": 0.25290697674418605
+        },
+        "loose": {
+          "prompt_accuracy": 0.23333333333333334,
+          "instruction_accuracy": 0.2761627906976744
+        }
+      }
+    }
+  },
+  "immutable_new_development_files": 42,
+  "immutable_development_archive_sha256": "f36bb09f58a267cbb26b8e54bcbd92d538db652dd6ddac3ea1f42206fa4cf5e1",
+  "train19_archive_sha_reused": "b1412f757709d9ffe53e37d790966b2be61a33d4d1d4167f50bad55bfc424ada",
+  "engineering20_archive_sha_reused": "c65793ec7a88a2e537d415c3d37d53b0ed6d286759281f40ebb02e7496759862",
+  "initial_judge_failure": {
+    "status": "STOPPED_ON_EXECUTION_ERROR_NO_RETRY",
+    "loader_pid": 65544,
+    "runner_pid": 59696,
+    "attempted": 4,
+    "completed_success": 3,
+    "error_type": "BadRequestError",
+    "operation": "api_request_started",
+    "failed_original_zero_based_index": 3,
+    "failed_kind": "harmful",
+    "actual_original_error_detail_not_recorded": true,
+    "original_failure_root_cause_not_inferred": true,
+    "failure_audit_sha256": "c145b6756e184d73e1fedd53b5b2536848310d1bea7531fb3ed562e8fd7e1cd2",
+    "failure_archive_sha256": "a40b57538d47adefbd7532a9a442a6ebdd15a729b6a3954b5a14a734f6de3e83",
+    "job_sha256": "4d8b711e887ca695041aa4b33cdea90d8662db86ca1ebf54adb52800b859b77c",
+    "results_sha256": "c8cef154a6e449748463defc8a61ba429fac0e90ea11c94a3d3a68fcabcaa6f5",
+    "events_sha256": "05afaeed3228578a21a870ff936b3e4bb7ee321c67f6086f16aa72b3acb14813",
+    "successful3_raw_schema_payload_model_usage_events_ledger_verified": true,
+    "token_usage": {
+      "input_tokens": 1728,
+      "output_tokens": 527
+    },
+    "uncertain1_not_retried": true,
+    "verified_unsent_count": 788,
+    "original_processes_exited": true
+  },
+  "recovery": {
+    "original_campaign_slot": 6,
+    "new_model_reservations": 0,
+    "new_request_limit": 788,
+    "original_model_allocation": 792,
+    "prior_same_model_successes_reused": 3,
+    "reserved_uncertain": 1,
+    "maximum_confirmed_labels_if_all788_succeed": 791,
+    "selected_original_indices_span": "4..791",
+    "initial_failed_index3_never_retried": true,
+    "new_run_name": "model-06-hybrid01-rank40-unsent788-r2",
+    "runner_sha256": "557159f211ca4aa73f088816f785f60bf534c3dfad49693b05f6bcf4d622e0df",
+    "plan_sha256": "494832e9c379351b2ed0a04bf99a5bd5e7922e93a339d372fef1f7572d5b00aa",
+    "original_plan_sha256": "a6b33c4b0c0c58ccc298902b798eb30a33ac19dc7cb2ea895cd73efb55fab66c",
+    "packet_sha256": "d757a2450319c8802c8f06fb8e897b66e27a5b8ff58f9485cdfcd80752e3f33d",
+    "loader_pid": 3772,
+    "runner_pid": 26632,
+    "submitted_utc": "2026-10-12T17:13:08.2966996Z",
+    "original_core_sha256": "d2f09e9709578a9dfdd51d1de3efa1be0d092f6c47d2a9ed1baca6b6d7775570",
+    "original_accounting_hook_and_client_parse_call_unchanged": true,
+    "new_error_metadata_only": "HTTP status and bounded code/type; no headers/body/message/key",
+    "new_mock_parse_calls": 789,
+    "new_guard_negatives": 7,
+    "new_mock_evidence_sha256": "57514777987472599d1f74f7731cad86e39657784d72f61e735543fe9ba033dd",
+    "actual_preflight_api_calls": 0,
+    "actual_preflight_credential_reads": 0
+  },
+  "startup_observation_utc": "2026-10-12T17:14:03.439783+00:00",
+  "startup_observation_sha256": "2b81f9a5c4897972e308a598e415b20c9ef3b81013dc33b73cf0db980c869b83",
+  "startup_state": {
+    "status": "RUNNING",
+    "pid": 26632,
+    "total": 792,
+    "new_call_limit": 788,
+    "attempted": 17,
+    "completed": 16,
+    "retries": 0,
+    "statuses": {
+      "success": 16
+    },
+    "usage": {
+      "input_tokens": 10321,
+      "output_tokens": 2249
+    },
+    "actual_models": {
+      "gpt-5.6-terra": 16
+    },
+    "last_operation": "persist_intent_before_request",
+    "current_packet_index": 20,
+    "prior_verified_successes": 3,
+    "reserved_uncertain": 1,
+    "source_sha256": "557159f211ca4aa73f088816f785f60bf534c3dfad49693b05f6bcf4d622e0df",
+    "plan_sha256": "494832e9c379351b2ed0a04bf99a5bd5e7922e93a339d372fef1f7572d5b00aa",
+    "packet_sha256": "d757a2450319c8802c8f06fb8e897b66e27a5b8ff58f9485cdfcd80752e3f33d",
+    "model_identity_sha256": "64d3fd783130bc4936a97cbc31da044dfd5e20487b35f2e71a21f6e20ad30c78",
+    "campaign_slot": 6,
+    "failure": null
+  },
+  "combined_confirmed_at_startup": 19,
+  "new_inflight_at_startup": 1,
+  "old_uncertain": 1,
+  "current_complete_harmfulness_not_available": true,
+  "candidate_harmfulness": null,
+  "full792_judge_not_complete": true,
+  "campaign_budget_at_startup": {
+    "status": "ACTIVE",
+    "reserved_models": 6,
+    "complete_models": 5,
+    "running_models": 1,
+    "request_intents": 3981,
+    "durable_receipts": 3979,
+    "remaining_model_reservations": 44
+  },
+  "new_key_dialog": false,
+  "saved_key_loaded_after_original_slot_resume": true,
+  "only_current_rank40_closeout": true,
+  "no_further_spf_candidates": true,
+  "mixing_npo_next_session_only": true,
+  "pause_after_final_combined_judge_audit_and_publication": true,
+  "logical_runai_progress_snapshots": 1,
+  "second_runai_progress_queries": 0,
+  "routine_local_judge_observations": 0,
+  "new_launch_startup_verifications": 2,
+  "completed_gpu_train_reload_audit_evaluation_or_old_paid_results_repeated": false,
+  "native_automation": {
+    "status": "ACTIVE",
+    "interval_seconds": 3600,
+    "notification_policy": "failed_runs_only",
+    "native_file_sha256": "b26b2e90276933f69fb6bd49992fb4632540add76fc1618d7fa4b046a40b0165",
+    "changed": false,
+    "closeout_only": true
+  },
+  "next_routine_observation_not_before_utc": "2026-10-12T17:52:19.728814+00:00",
+  "target_gate": "insufficient_evidence",
+  "human_adjudication_complete": false,
+  "cluster_mapping_verified": false,
+  "raw_logs_private_only": true,
+  "private_prompts_responses_keys_reasons_labels_row_maps_weights_or_ledger_published": false
+}
