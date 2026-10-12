@@ -1,5 +1,16 @@
 # SPF safety search：每小時續行，新增最多50套模型Judge
 
+2026-10-12 13:36 heartbeat最新：第五套hybridλ.3／LR5e-6／β1=.5／rank20的792 Judge全部成功，新raw/schema/payload/order/model/usage／2376events與792ledger intents/receipts逐核，duplicates0／zero retry；Campaign.finish COMPLETE。Harmfulness **33/300＝11.00%**，safe_non_refusal67／refusal200；最佳λ.1為27/300＝9.00%，Mixing13/300＝4.33%，尚未達H≤12/300停止條件。Benign substantive339/non_answer4/refusal7；conversation overall448/142＝3.155，normal140/degenerate2，nullable分母見aggregate。Actualmodel792均gpt-5.6-terra，input429787/output111469。Audit SHA7c1a87cefbec6e1e65e30154c4a81d9642311a9182d311934fc02f30e9184d30；完整labels/reasons/source-map private，前4套只SHA引用、不重審。
+
+λ.3的描述性結果未優於λ.1，不能假定加大安全loss係數必然降低H。免費utility重用已完成aggregate：TOFU f05/r95 EM96.00%/96.63%、MMLUaux847/1024＝82.71%（zero-shot非formal5shot），IFBenchstrictprompt21%。下一候選以最佳λ.1／LR5e-6／β1=.5為控制，**只改SPF投影rank20→40**，保留MetaM0獨立construction、原training-only anchor／5epochs625／六development，不回灌development650或FormalHExPHI。假說是更大的anchor-gradient子空間上限可能減少安全能力侵蝕，同報TOFU／benign拒答／conversation與其他utility代價；明確family hybrid。
+
+4newsource compile、14新recipe/decision/predecessor/absence negatives拒絕，5原queue functions AST與verifierloader/main保持，原generic helper／auditor／precision／reloadthreshold不變。新rank40 CPU直接autograd72task/56anchor tokens／兩次AdamW／reloadfixture與actual8B40examples2steps32+8／micro8+2／原atol.05rtol.01獨立reload，全部通過才full625→newaudit→all625rank40/addition→六development；目前新actual結果未知。
+
+唯一RunAI snapshot UTC2026-10-12T05:52:12.051399+00:00、SHA52f57a0bb9238ad9ca7ccedab117cdefeef77b28e3e445e095b426073730483e確認16733完成退出／GPUidle／newroot不存在。9chunks＋preflight/seal/launch共12stage單次return0，7目的檔逐size/SHA核，無transportfailure／retry／artifactcheck。UTC2026-10-12T05:53:03.801241+00:00（snapshot後51.750秒）單次提交rank40 queue **PID19460**，root `/data/spf-hybrid01-rank40-full-20261012-r1`，SUBMITTED_RESULT_NOT_CHECKED；沒有提交後progress，不稱目前RUNNING／新工程驗收pass，不重送19460／1336／oldhelpers。
+
+額度**5/50 COMPLETE、45可保留**，3960intents=receipts；候選6尚未reserve Judge，全部actualdevelopment完成後才own792且先記帳。下一routine不得早於UTC2026-10-12T06:38:19.104888+00:00，先claim後一次必要snapshot，禁止輪詢／重取completedraw／重hash16GB。Native ACTIVE/hourly/failed_runs_only與188字元短prompt不變；H≤12/300或50用盡才停止並PAUSE本搜尋。Gate insufficient_evidence、humanadjudication／pairedclusters／matchingmetrics／原NPO／四大型autograd／單seed跨平台限制保持。詳見[完整Judge與rank40提交證據](../../../results/reproduction/safety/spf-npo-gb200-20261006/spf-hybrid03-judge-complete-rank40-launch-20261012-1336.json)。以下舊進度保留為歷史。
+
+
 2026-10-12 11:42 人類續行最新：SPF＋安全loss hybrid λ.3／LR5e-6／β1=.5完整625updates/5epochs20k、independent reload error0、新權重audit與六development全部完成。唯一RunAI snapshot UTC2026-10-12T03:43:42.288707+00:00、SHAa4927226b959af5d7c3f370a4bb6d159f185f3b948ff16afb23d483612315263確認queue16733退出／GPUidle。41新development source／commands／raw／outputs逐bytes SHA immutable保存，archive908071fea442bc94ed1d147dd15060b80d1d17e35a67769df008f5f29fd47e5c；原19train與23engineering只manifest/SHA重用，不重取完成raw、不重hash16GB或重跑模型評估。
 
 免費描述性結果：TOFU f05/r95 EM 96.00%/96.63%、ROUGE-L F1 0.990522/0.991355；MMLUaux 847/1024＝82.71%，zero-shot非formal5shot；IFBench300完整summary見aggregate。全625update anchor addition與original thresholds保持，明確family hybrid，legacy frozen audit methodspf原bytes保留，不能冒稱純SPF。

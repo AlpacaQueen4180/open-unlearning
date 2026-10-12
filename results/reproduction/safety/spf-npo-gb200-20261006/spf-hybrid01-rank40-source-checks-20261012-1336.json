@@ -1,0 +1,76 @@
+{
+  "status": "RANK40_SOURCE_RECIPE_DECISION_PREDECESSOR_SCHEMA_ONLY",
+  "sources": {
+    "run_spf_hybrid01_rank40_full.py": {
+      "size": 10172,
+      "sha256": "755345d730e4f2d3cb2aecb225c38b545bc230be342a6132483801dc103b8727"
+    },
+    "run_spf_hybrid01_rank40_full_queue.py": {
+      "size": 19358,
+      "sha256": "36f0c3d74b7e5f9bb4bd9a03fcfc0e5d991f26b903998742aa492602d53f488e"
+    },
+    "spf_hybrid01_rank40_development_executor.py": {
+      "size": 16338,
+      "sha256": "851c57fd60fd36280dc84fcdbdb9631df1124d73326999b906afe8348b346c40"
+    },
+    "verify_spf_anchor_hybrid_rank40.py": {
+      "size": 8630,
+      "sha256": "548814b7d849fc9e58f40441f176ad463f1aa71854c235fed1daf998d5884be1"
+    }
+  },
+  "reused_helper_sha256": "fdb2e1254dcae25c33ee788123eb2a0ca29e2d23edae0db7971c72d8c15b45cc",
+  "previous_sources": {
+    "run_spf_hybrid03_lr5e6_full.py": "e30e9e059d96cc841030df47b9f16b94450388068857a2084819f4593ad4aa37",
+    "run_spf_hybrid03_lr5e6_full_queue.py": "65305a2ba389818797b708a48db75d2dd1fa7a56d64b87de8e1d4d06069bdb47",
+    "spf_hybrid03_lr5e6_development_executor.py": "2bd673f0bca4d5e0ca85f4bb8e08a7003e4350d8fd8cef95c8a652e51119ce62"
+  },
+  "best_control_wrapper_sha256": "a3402bfc2bc0d31173e71e3f9240802f6e5cbdc62528e62644507e7676f4a2c8",
+  "controlled_delta_from_best_control": {
+    "projection_rank": {
+      "baseline": 20,
+      "candidate": 40
+    }
+  },
+  "best_control_lambda": 0.1,
+  "best_control_harmful": 27,
+  "best_control_judge_audit_sha256": "a6ca483d3e4dd34944d93be18460596c8c944c206a13244ade5ef52c6e38cf89",
+  "immediate_previous_judge_audit_sha256": "7c1a87cefbec6e1e65e30154c4a81d9642311a9182d311934fc02f30e9184d30",
+  "immediate_previous_harmful": 33,
+  "unchanged_queue_functions_ast": [
+    "sha",
+    "bound",
+    "write",
+    "module",
+    "stage"
+  ],
+  "verifier_loader_and_main_ast_unchanged": true,
+  "executor_identity_path_only": true,
+  "original_generic_anchor_helper_unchanged": true,
+  "original_auditor_route_unchanged": true,
+  "original_thresholds_unchanged": true,
+  "new_schema_negatives_rejected": [
+    "projection_rank",
+    "safety_loss_coefficient",
+    "learning_rate",
+    "method_family",
+    "selected_control_projection_rank",
+    "selected_control_safety_loss_coefficient",
+    "selected_control_judge_audit_sha256",
+    "previous_judge_audit_sha256",
+    "previous_harmful_assistance",
+    "previous_complete_model_count",
+    "development_used_as_training",
+    "predecessor_pid",
+    "predecessor_completed",
+    "new_root_exists"
+  ],
+  "new_cpu_rank40_72task56anchor_token_fixture_not_yet_run": true,
+  "new_actual8b_rank40_engineering_not_yet_run": true,
+  "subprocesses": 0,
+  "cuda": 0,
+  "model_evaluations": 0,
+  "api_calls": 0,
+  "credential_reads": 0,
+  "old_completed_cases_repeated": false,
+  "original_large_autograd_failures_resolved": false
+}
