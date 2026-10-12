@@ -1,0 +1,222 @@
+{
+  "status": "RANK40_CPU_FAILURE_PRESERVED_NEW_CPU_ORACLE_PASS_UNFINISHED_STAGE_RECOVERY_PREPARED_NOT_DEPLOYED",
+  "recorded_utc": "2026-10-12T08:42:44.543088+00:00",
+  "heartbeat_utc": "2026-10-12T07:39:43.775Z",
+  "snapshot_utc": "2026-10-12T07:42:17.724962+00:00",
+  "snapshot_sha256": "0fd4e72ed4b0e68942fa4fb573b49080fe32a71647fa15bc0eb471e014a50d66",
+  "snapshot_source_sha256": "12b62978734524cde90bf68638529bb5d2a87b9f52d1f63bc85aa5d30721db40",
+  "original_run": {
+    "queue_pid": 19460,
+    "child_pid": 19463,
+    "status": "FAILED_NO_RETRY",
+    "stage": "hybrid-cpu-verification",
+    "completed": [],
+    "child_returncode": 1,
+    "exact_command": [
+      "/data/npo-gb200-20261004/validation-20261006/venv/bin/python",
+      "/data/spf-hybrid01-rank40-full-20261012-r1/validation-code/verify_spf_anchor_hybrid_rank40.py",
+      "--helper",
+      "/data/spf-hybrid01-rank40-full-20261012-r1/validation-code/spf_anchor_hybrid.py",
+      "--helper-sha256",
+      "fdb2e1254dcae25c33ee788123eb2a0ca29e2d23edae0db7971c72d8c15b45cc",
+      "--output",
+      "/data/spf-hybrid01-rank40-full-20261012-r1/hybrid-cpu-proof.private.json"
+    ],
+    "raw_log_sha256": "b833452612cefcf2fd97b1f6fec007c058db761e41eae63f5f61f7f08d5cb263",
+    "failed_status_sha256": "2e27ea9dcdfda80e5a14e8b85802a8b1bc3687569279707e0de50ea530620d25",
+    "failure_archive_sha256": "3f5c58114b262673e8f54d93b14eec2adcff57d75186908eb0ef26fc9a0d346d",
+    "immutable_export_files": 11,
+    "original_status_sources_logs_preserved": true,
+    "actual8b_engineering_or_full_training_started": false,
+    "checkpoint_exists": false,
+    "gpu_idle_at_snapshot": true,
+    "queue_exited_at_snapshot": true
+  },
+  "numeric_diagnostic": {
+    "status": "FINITE_READONLY_NUMERIC_OBSERVATION",
+    "source_sha256": "3c397e71ba9a4bab5bdb92446edbd96dd76c12820e478f69c4498d0b9e2eb695",
+    "stdout_sha256": "174879e55f15776f256787e68e3eeb1cf662098d8dec46d35a731834d70dd855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "diagnostic": {
+      "step": 1,
+      "staged_loss": 4.290201723575592,
+      "direct_loss": 4.290201187133789,
+      "absolute_loss_error": 5.364418029785156e-07,
+      "original_loss_tolerance": 5e-07,
+      "task_gradient_max_abs_error": 1.4901161193847656e-08,
+      "anchor_gradient_max_abs_error": 4.656612873077393e-10,
+      "global_dot": -0.0021853800863027573,
+      "loss_dtype": "torch.float32",
+      "parameter_dtype": "torch.float32"
+    },
+    "diagnostic_receipt_sha256": "001ca4935acb0607bf172686142f4d6f60672f5114c314cf78b4fdd0049b0ea5",
+    "original_loss_tolerance": 5e-07,
+    "inference": "Observed FP32 loss reduction-order discrepancy slightly exceeds the scalar fixture tolerance; this diagnoses the CPU fixture, not actual 8B training."
+  },
+  "corrected_cpu_proof": {
+    "status": "HYBRID_CPU_DIRECT_AUTOGRAD_TOKEN_MEAN_TWO_ADAM_UPDATES_RELOAD_PASS",
+    "loss_oracle_dtype": "torch.float64",
+    "parameter_gradient_projection_dtype": "torch.float32",
+    "original_tolerances_unchanged": true,
+    "spf_projection_rank": 40,
+    "safety_loss_coefficient": 0.1,
+    "actual_cpu_updates": 2,
+    "unequal_microbatch_assistant_tokens": [
+      56,
+      16
+    ],
+    "safety_assistant_tokens": 56,
+    "maximum_gradient_error": 1.4901161193847656e-08,
+    "maximum_update_error": 7.450580596923828e-09,
+    "old_coefficient_negative_cases_not_repeated": true,
+    "cuda_model_work": 0,
+    "actual8b_equivalence_claimed": false,
+    "verifier_sha256": "a998a42a44109da78c1789478881f1da8fc5753b53788844141b4bc5e65b447b",
+    "helper_sha256": "fdb2e1254dcae25c33ee788123eb2a0ca29e2d23edae0db7971c72d8c15b45cc",
+    "frozen_dependency_sha256": {
+      "src/construction/backend.py": "c3d009890289f94f10a8d795d1ed035046e290cb10378f426a43d93738b59e74",
+      "src/construction/projection.py": "7776c68373ef7edc19bc2f9b7d4a6900f154c97be0c215517b71202c98ea643a",
+      "src/construction/numerics.py": "6fdbb14da03eddc0371203003cef24e2c2c29b873c27827f9677bf1dae9cd164"
+    },
+    "torch_version": "2.7.0a0+ecf3bae40a.nv25.02",
+    "execution_mode": "in_memory_exact_source_bound_cpu_function_only",
+    "verifier_file_deployed": false,
+    "cuda_initialized": false,
+    "hf_weights_read": false,
+    "actual8b_training": 0,
+    "api_calls": 0,
+    "credential_reads": 0,
+    "bytecode_writes_disabled": true
+  },
+  "corrected_cpu_proof_sha256": "5397aabbfcaa4d70b1b3f51004721d6d6f389212301ced815472c890bbfb6c4d",
+  "correction": "Only CPU fixture CE scalar oracle uses FP64; parameters/gradients/projection/AdamW remain FP32. All original numeric tolerances and real8B training/reload arithmetic unchanged.",
+  "new_recovery": {
+    "status": "SOURCE_READY_NOT_DEPLOYED",
+    "root": "/data/spf-hybrid01-rank40-full-20261012-r1",
+    "journal": "/data/spf-hybrid01-rank40-full-20261012-r1/runs/cpu-fixture-recovery-1539",
+    "launch": "/data/spf-hybrid01-rank40-full-20261012-r1/validation-code/hybrid01-rank40-cpu-recovery-launch-1539.json",
+    "sources": {
+      "run_spf_hybrid01_rank40_cpu_recovery.py": {
+        "size": 10303,
+        "sha256": "4cc6b969be7a3fb52714a5e20c4c54c53b2f4b6f843d8549738d06685c05ca01"
+      },
+      "run_spf_hybrid01_rank40_cpu_recovery_queue.py": {
+        "size": 25049,
+        "sha256": "dfb0f633424201e63abf98ed107f7f1c59ab41d8528e42ff34f725882b1f9b9a"
+      },
+      "verify_spf_anchor_hybrid_rank40_cpu_oracle_r2.py": {
+        "size": 8760,
+        "sha256": "a998a42a44109da78c1789478881f1da8fc5753b53788844141b4bc5e65b447b"
+      }
+    },
+    "plan_sha256": "49ce276792f785c05e102f0c82355ea20e4f7806d86459448ff3e3c9359cee6b",
+    "monitor_sha256": "e2f09d699134220b9fca432c73b2280a60e84c510bae9cca56ab16d17f5daff1",
+    "deployment_producer_sha256": "78d0e07d0e626ef36bde8265b35739c2f7d6f8edb6f2fe25a3c2fbad98562a1c",
+    "completed_cpu_proof_reused_without_rerun": true,
+    "engineering_and_full_checkpoint_absence_required": true,
+    "old_failed_status_and_all_original_sources_bound": true,
+    "old_queue_and_child_exit_required": true,
+    "fresh_snapshot_max_age_seconds": 600,
+    "actual8b_engineering_then_reload_then_full625_then_six_development": true,
+    "actual8b_acceptance_not_claimed": true,
+    "new_deployment_not_prepared_from_stale_snapshot": true,
+    "original_model06_judge_not_reserved": true
+  },
+  "new_source_schema_checks": {
+    "negative_cases_rejected": [
+      "cpu_loss_oracle_dtype",
+      "cpu_verifier_sha256",
+      "cpu_actual_cpu_updates",
+      "cpu_spf_projection_rank",
+      "cpu_cuda_initialized",
+      "cpu_maximum_gradient_error",
+      "recovery_journal_exists",
+      "recovery_launch",
+      "recovery_status",
+      "completed_train"
+    ],
+    "unchanged_wrapper_functions_ast": [
+      "candidate_recipe",
+      "load_recipe",
+      "load_trainer",
+      "setup",
+      "rank_bound_combine"
+    ],
+    "unchanged_queue_functions_ast": [
+      "sha",
+      "bound",
+      "write",
+      "module",
+      "validate_plan",
+      "validate_search_decision",
+      "validate_predecessor_runtime",
+      "metadata_check"
+    ],
+    "new_monitor_short_command_length": 2559,
+    "short_command_limit": 6000,
+    "local_schema_subprocesses": 0,
+    "local_schema_cuda": 0,
+    "deployment_producer_compile_pass": true
+  },
+  "local_preparation_failures_preserved": [
+    "generated child quote SyntaxError before CLI",
+    "missing relay Resolve-Path before CLI",
+    "ScriptPath parameter binding before CLI"
+  ],
+  "previous_numeric_observer_failure_preserved": {
+    "original_nested_streams_preserved": true,
+    "unreported_original_cpu_check_result_and_update_count": "unknown"
+  },
+  "campaign_budget": {
+    "status": "ACTIVE",
+    "reserved_models": 5,
+    "complete_models": 5,
+    "running_models": 0,
+    "model_limit": 50,
+    "remaining_model_reservations": 45,
+    "request_intents": 3960,
+    "durable_receipts": 3960
+  },
+  "comparison": {
+    "best_verified_harmful": 27,
+    "best_denominator": 300,
+    "best_control_lambda": 0.1,
+    "best_control_rank": 20,
+    "latest_verified_lambda03_harmful": 33,
+    "mixing_harmful": 13,
+    "winning_max_harmful": 12,
+    "best_judge_audit_sha256": "a6ca483d3e4dd34944d93be18460596c8c944c206a13244ade5ef52c6e38cf89",
+    "latest_judge_audit_sha256": "7c1a87cefbec6e1e65e30154c4a81d9642311a9182d311934fc02f30e9184d30",
+    "prior_complete_models_sha_reused_no_reaudit": true,
+    "new_rank40_harmfulness_unknown": true
+  },
+  "sole_logical_progress_snapshot": 1,
+  "second_progress_queries": 0,
+  "outer_snapshot_retries": 0,
+  "new_gpu_submissions": 0,
+  "new_api_calls": 0,
+  "credential_reads": 0,
+  "completed_models_evaluations_paid_results_or_cpu_cases_repeated": false,
+  "completed16gb_weights_rehashed": false,
+  "next_routine_observation_not_before_utc": "2026-10-12T08:41:57.211061+00:00",
+  "stop_criteria_reached": false,
+  "native_automation": {
+    "status": "ACTIVE",
+    "interval_seconds": 3600,
+    "notification_policy": "failed_runs_only",
+    "prompt_characters": 188,
+    "native_file_sha256": "2e3696dfdf546c699314bb8c4fde29118fa417322a44df5b65e3032c4f8acf8e",
+    "changed_by_this_turn": false
+  },
+  "target_gate": "insufficient_evidence",
+  "human_adjudication_complete": false,
+  "cluster_mapping_verified": false,
+  "research_limits": [
+    "Matching reference metrics pending",
+    "Original NPO reload/pilot limitations",
+    "Four original large-autograd5percent failures unresolved",
+    "Single seed and crossplatform; descriptive development search, not independent formal validation"
+  ],
+  "raw_logs_private_only": true,
+  "private_prompts_responses_keys_labels_row_maps_weights_or_ledger_published": false
+}
