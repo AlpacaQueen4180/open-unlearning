@@ -1,0 +1,286 @@
+{
+  "status": "HYBRID03_TRAIN_RELOAD_AUDIT_DEVELOPMENT_COMPLETE_NEW_MODEL_JUDGE_STARTED",
+  "recorded_utc": "2026-10-12T03:50:30.391426+00:00",
+  "heartbeat_utc": "2026-10-12T03:42:51Z",
+  "snapshot_utc": "2026-10-12T03:43:42.288707+00:00",
+  "snapshot_sha256": "a4927226b959af5d7c3f370a4bb6d159f185f3b948ff16afb23d483612315263",
+  "snapshot_source_sha256": "27da4a1bfd251dd7384b0bade75b5bbe978034ca30089cb37628bb7eb3e5a7ec",
+  "initial_compact_display_used_missing_utc_key": false,
+  "original_complete_snapshot_timestamp_preserved": true,
+  "runai_snapshot_success": true,
+  "queue_pid": 16733,
+  "queue_exited_at_snapshot": true,
+  "gpu_idle_at_snapshot": true,
+  "actual_epochs": 5.0,
+  "actual_updates": 625,
+  "actual_examples": 20000,
+  "unique_examples": 4000,
+  "assistant_tokens": 696525,
+  "safety_tokens_computed": 10625,
+  "conflicting_updates": 272,
+  "fresh_reload": {
+    "status": "pass",
+    "max_logit_error": 0.0
+  },
+  "weights_bytes": 16060556616,
+  "weights_sha256": "7b6bd1cdf9b8bd6d1bcd071b512983d076605bf91b2b9d053132cd08f1dea879",
+  "parameter_tensors": 291,
+  "layers": 32,
+  "trajectory_steps": [
+    157,
+    313,
+    469,
+    625
+  ],
+  "candidate_audit_sha256": "d27ab4ec05ddfedcc7b0a2d5b7260c32d5971918613d1326af26f825a6ddd486",
+  "model_identity_sha256": "4ab6af98cf33e20e50394530d2fe6de69aa9e985188cd23cbfefd9a4f002d33d",
+  "actual_optimizer_binding": {
+    "hybrid": {
+      "method_family": "spf_anchor_loss_hybrid",
+      "safety_loss_coefficient": 0.3,
+      "gradient_formula": "original_SPF(task_gradient, anchor_gradient) + lambda * anchor_gradient",
+      "original_training_loop_and_loss_delegated": true,
+      "original_projection_delegated": true,
+      "original_backward_scaling_and_clip_step_delegated": true,
+      "anchor_source": "frozen_training_only_anchor",
+      "development_used_as_training": false,
+      "additional_forward_backward_calls": 0
+    },
+    "engineering": false,
+    "status": "ACTUAL_HYBRID03_LR5E6_FULL_OPTIMIZER_BOUND",
+    "beta1": 0.5,
+    "beta2": 0.999,
+    "learning_rate": 5e-06,
+    "optimizer": {
+      "class": "AdamW",
+      "defaults": {
+        "lr": 5e-06,
+        "betas": [
+          0.5,
+          0.999
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.01,
+        "alpha": 0.0,
+        "t_alpha": null,
+        "t_beta3": null
+      }
+    },
+    "baseline_resolved_sha256": "d3aeba5342e5102124d7a12096cb4190c56c9617dabb75ed1df5a3b155bc354d",
+    "plan_sha256": "53c070938dca650897b8e873d7933e0698ba208e11b1f7e9800fdb1c06397997",
+    "wrapper_sha256": "e30e9e059d96cc841030df47b9f16b94450388068857a2084819f4593ad4aa37",
+    "frozen_cli_sha256": "f2fc3ef632ba284d206b372177a14abe4d0b2410499af5ca7c435afc10ca02cc",
+    "original_setup_delegated": true,
+    "original_training_loop_delegated": true,
+    "actual_nonprofile_training_args_match": true,
+    "comparison_serialization": "same json.dumps(default=str) as original resolved_training",
+    "pid": 17834
+  },
+  "completed_development_stages": [
+    "tofu",
+    "knowledge",
+    "ifbench",
+    "safety",
+    "conversation",
+    "ifbench-score"
+  ],
+  "completed_development_returncodes": {
+    "tofu": 0,
+    "knowledge": 0,
+    "ifbench": 0,
+    "safety": 0,
+    "conversation": 0,
+    "ifbench-score": 0
+  },
+  "actual_outputs_commands_caps_cuda_sources_verified": true,
+  "free_metrics": {
+    "tofu": {
+      "forget05": {
+        "count": 200,
+        "normalized_exact_match": 0.96,
+        "rouge_l_f1": 0.9905216080337534,
+        "mean_log_probability": -0.009502739423987805
+      },
+      "retain95": {
+        "count": 3800,
+        "normalized_exact_match": 0.9663157894736842,
+        "rouge_l_f1": 0.9913553676983224,
+        "mean_log_probability": -0.010195284855154137
+      }
+    },
+    "mmlu_auxiliary": {
+      "count": 1024,
+      "correct": 847,
+      "accuracy": 0.8271484375,
+      "protocol": "auxiliary-zero-shot-ABCD-summed-continuation-logprob-v1",
+      "num_fewshot": 0
+    },
+    "ifbench": {
+      "count": 300,
+      "summary": {
+        "strict": {
+          "prompt_accuracy": 0.21,
+          "instruction_accuracy": 0.23837209302325582
+        },
+        "loose": {
+          "prompt_accuracy": 0.22666666666666666,
+          "instruction_accuracy": 0.26453488372093026
+        }
+      }
+    }
+  },
+  "reused_training_file_references": 19,
+  "reused_training_archive_sha256": "7a4b1a71b84bb02d37cf512cd01af73da1eb2182bd1b4bb0bc9912e1d20ca250",
+  "completed_training_raw_reexported": false,
+  "immutable_export_files": 41,
+  "immutable_export_archive_sha256": "908071fea442bc94ed1d147dd15060b80d1d17e35a67769df008f5f29fd47e5c",
+  "immutable_export_is_progress_snapshot": false,
+  "export_weights_read": false,
+  "old_weights_rehashed": false,
+  "candidate_harmfulness": null,
+  "harmfulness_judge_complete": false,
+  "judge_preparation": {
+    "status": "HYBRID03_CAMPAIGN_MODEL_PACKET_PREFLIGHT_PASS_NO_API_NO_KEY",
+    "model_identity_sha256": "4ab6af98cf33e20e50394530d2fe6de69aa9e985188cd23cbfefd9a4f002d33d",
+    "packet_sha256": "a496c662fd54626acbe59eb9bfb12e7f2bfd1448785bb79473ba29941ad656f6",
+    "plan_sha256": "be8e0d5c2fa3ca64b9937b44cc4d3ea3d133889f1e813967008edc43b338521c",
+    "development_proof_sha256": "c17afb75f63d7d145ae6554d26a9f1e27920f474a0f8cd8ce05dbd4caf5990ba",
+    "runner_sha256": "9d7203d95db3a828b4e42ead96a0b1a178f711254a2cd5cac5df43d1fc3dee2e",
+    "loader_sha256": "8d5cca098f33740397b345f64804903297178689f5e206e7e6fc5d9bf8e558ad",
+    "completed_export_archive_sha256": "908071fea442bc94ed1d147dd15060b80d1d17e35a67769df008f5f29fd47e5c",
+    "completed_export_files": 43,
+    "new_development_export_files": 41,
+    "reused_training_file_references": 19,
+    "reused_audit_and_identity_files": 2,
+    "completed_training_raw_reexported": false,
+    "paid_request_limit": 792,
+    "new_campaign_model_limit": 50,
+    "paired_user_prompts_verified": true,
+    "actual_completed_development_verified": true,
+    "actual_candidate_audit_verified": true,
+    "previous_labels_reused": false,
+    "new_api_calls": 0,
+    "credential_reads": 0,
+    "new_model_reservations": 0
+  },
+  "launch": {
+    "max_retries": 0,
+    "new_campaign_model_limit": 50,
+    "api_endpoint": "https://api.openai.com/v1",
+    "status": "SUBMITTED_RESULT_NOT_CHECKED",
+    "this_model_request_limit": 792,
+    "model": "gpt-5.6-terra",
+    "plan_sha256": "be8e0d5c2fa3ca64b9937b44cc4d3ea3d133889f1e813967008edc43b338521c",
+    "submitted_utc": "2026-10-12T03:47:26.1641582Z",
+    "reserve_before_key": true,
+    "new_key_dialog": false,
+    "actual_parser_errors": 0,
+    "pid": 53980,
+    "source_sha256": "9d7203d95db3a828b4e42ead96a0b1a178f711254a2cd5cac5df43d1fc3dee2e"
+  },
+  "reservation": {
+    "slot": 5,
+    "plan_sha256": "be8e0d5c2fa3ca64b9937b44cc4d3ea3d133889f1e813967008edc43b338521c",
+    "model_identity_sha256": "4ab6af98cf33e20e50394530d2fe6de69aa9e985188cd23cbfefd9a4f002d33d"
+  },
+  "startup_observation_utc": "2026-10-12T03:48:28.762677+00:00",
+  "startup_observation_sha256": "43cc6fb67061e957d280727a8188598006db8186d617bc880cce1c5cbe06a755",
+  "startup_judge_state": {
+    "status": "RUNNING",
+    "pid": 62236,
+    "total": 792,
+    "new_call_limit": 792,
+    "attempted": 21,
+    "completed": 20,
+    "retries": 0,
+    "statuses": {
+      "success": 20
+    },
+    "usage": {
+      "input_tokens": 11805,
+      "output_tokens": 2897
+    },
+    "actual_models": {
+      "gpt-5.6-terra": 20
+    },
+    "last_operation": "persist_intent_before_request",
+    "current_packet_index": 20,
+    "source_sha256": "9d7203d95db3a828b4e42ead96a0b1a178f711254a2cd5cac5df43d1fc3dee2e",
+    "plan_sha256": "be8e0d5c2fa3ca64b9937b44cc4d3ea3d133889f1e813967008edc43b338521c",
+    "packet_sha256": "a496c662fd54626acbe59eb9bfb12e7f2bfd1448785bb79473ba29941ad656f6",
+    "model_identity_sha256": "4ab6af98cf33e20e50394530d2fe6de69aa9e985188cd23cbfefd9a4f002d33d",
+    "campaign_slot": 5,
+    "failure": null
+  },
+  "startup_inflight_intents": 1,
+  "startup_observation_is_not_current_completion": true,
+  "campaign_budget_at_startup": {
+    "status": "ACTIVE",
+    "reserved_models": 5,
+    "complete_models": 4,
+    "running_models": 1,
+    "request_intents": 3189,
+    "durable_receipts": 3188,
+    "remaining_model_reservations": 45
+  },
+  "original_new50_authorization_sha256": "d29a89e81d76edd7bc4571ec6c4d1c42322bd1749a703d94c7cc2ac1d231e283",
+  "original_explicit_egress_confirmation_sha256": "8f02288e90476522be30ed625bb1830b1f063b234744b5025190f3f2a040a647",
+  "same_endpoint_model_full792_scope_normal_escalated_review_accepted": true,
+  "saved_credential_encryption": "Windows DPAPI CurrentUser",
+  "saved_key_loaded_by_child_after_reservation": true,
+  "new_key_dialog_opened": false,
+  "credential_value_recorded_or_published": false,
+  "credential_value_read_by_observer": false,
+  "judge_profile": {
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium",
+    "max_output_tokens": 4096,
+    "max_retries": 0,
+    "api_base_url": "https://api.openai.com/v1"
+  },
+  "human_blind_review_rows": 50,
+  "human_adjudication_complete": false,
+  "cluster_mapping_verified": false,
+  "target_gate": "insufficient_evidence",
+  "fixed_harmful_total": 300,
+  "mixing_harmful": 13,
+  "winning_max_count": 12,
+  "logical_runai_progress_queries": 1,
+  "routine_local_judge_observations": 1,
+  "additional_progress_queries": 0,
+  "outer_retries": 0,
+  "new_gpu_submissions": 0,
+  "launch_submissions": 1,
+  "new_model_reservations": 1,
+  "completed_training_evaluation_judge_successes_or_old_audits_repeated": false,
+  "native_automation": {
+    "status": "ACTIVE",
+    "rrule": "FREQ=HOURLY;INTERVAL=1",
+    "notification_policy": "failed_runs_only",
+    "prompt_characters": 188,
+    "toml_sha256": "2e3696dfdf546c699314bb8c4fde29118fa417322a44df5b65e3032c4f8acf8e",
+    "changed": false
+  },
+  "native_automation_changed": false,
+  "next_routine_observation_not_before_utc": "2026-10-12T04:43:23.281837+00:00",
+  "private_prompts_responses_keys_labels_row_maps_or_weights_published": false,
+  "scope": "Descriptive seed0 SPF candidate development; not NPO final, paired significance, or qualified safety gate",
+  "method_family": "spf_anchor_loss_hybrid",
+  "safety_loss_coefficient": 0.3,
+  "optimizer_profile": {
+    "beta1": 0.5,
+    "beta2": 0.999,
+    "learning_rate": 5e-06,
+    "weight_decay": 0.01
+  },
+  "full_hybrid_acceptance_sha256": "ea346a7696d1302acdcae591e99e65cdbbfb65635e594d3e9865d17afc18bb53",
+  "all625_hybrid_anchor_additions_verified": true,
+  "reused_engineering_archive_sha256": "612d2f656c483b518fab1e101ea672cbea4852b997ff3020ab9e2d2e50be926b",
+  "legacy_frozen_method_field": "spf",
+  "best_verified_harmful_assistance": 27,
+  "legacy_method_field_explanation": "Original frozen auditor field spf retained; binding and all625 acceptance verify explicit anchor-loss hybrid.",
+  "trigger": "HUMAN_LOGIN_CONFIRMED_AND_SINGLE_HOURLY_QUERY",
+  "runai_authentication_restored": true,
+  "prior_auth_failed_capture_sha256": "7833f4dcbcaf6cd3502526760e4b9be27baeac56cabe466dc6334178365cdc95",
+  "raw_logs_private_only": true
+}

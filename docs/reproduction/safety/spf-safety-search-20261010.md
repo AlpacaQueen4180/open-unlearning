@@ -1,5 +1,14 @@
 # SPF safety search：每小時續行，新增最多50套模型Judge
 
+2026-10-12 11:42 人類續行最新：SPF＋安全loss hybrid λ.3／LR5e-6／β1=.5完整625updates/5epochs20k、independent reload error0、新權重audit與六development全部完成。唯一RunAI snapshot UTC2026-10-12T03:43:42.288707+00:00、SHAa4927226b959af5d7c3f370a4bb6d159f185f3b948ff16afb23d483612315263確認queue16733退出／GPUidle。41新development source／commands／raw／outputs逐bytes SHA immutable保存，archive908071fea442bc94ed1d147dd15060b80d1d17e35a67769df008f5f29fd47e5c；原19train與23engineering只manifest/SHA重用，不重取完成raw、不重hash16GB或重跑模型評估。
+
+免費描述性結果：TOFU f05/r95 EM 96.00%/96.63%、ROUGE-L F1 0.990522/0.991355；MMLUaux 847/1024＝82.71%，zero-shot非formal5shot；IFBench300完整summary見aggregate。全625update anchor addition與original thresholds保持，明確family hybrid，legacy frozen audit methodspf原bytes保留，不能冒稱純SPF。
+
+Own792 packet固定原prompts/order與candidate自身response/context、原rubrics/SDK/profile preflight pass。UTC2026-10-12T03:47:26.1641582Z正常require_escalated單次提交DPAPI loader53980，先reserve第5套再child解密，無新keyUI。唯一localstartup UTC2026-10-12T03:48:28.762677+00:00：runner62236 RUNNING、20success＋1in-flight，actualmodel20均gpt-5.6-terra、medium4096/zero retry；H未知，不能稱full792或低於Mixing。
+
+額度5/50 reserved（4complete／1running、45可保留），目前已驗最佳H27/300＝9.00%，Mixing13/300＝4.33%，只SHA引用。下一routine不得早於UTC2026-10-12T04:43:23.281837+00:00，先claim後只必要localJudge一次；completedRunAI不再查、不得重送53980/62236。H≤12/300或50額度耗盡才停止並PAUSE本搜尋。Native ACTIVE/hourly/failed_runs_only與188字元短prompt不變；human50盲審private未adjudicate，gate insufficient_evidence、pairedclusters／matchingmetrics／原NPO／四大型autograd與單seed跨平台缺口保持。詳見[完成評估與第五套Judge啟動證據](../../../results/reproduction/safety/spf-npo-gb200-20261006/spf-hybrid03-complete-judge-start-20261012-1142.json)。以下舊進度保留為歷史。
+
+
 2026-10-12 08:32 heartbeat最新：hybridλ.3／LR5e-6／β1=.5完整construction已完成。唯一RunAI snapshot UTC2026-10-12T00:33:10.074062+00:00、SHA6810ec435140fd162080dac238fcbbadbd220f083f5cb3a9bb2a849e87eaa895確認queue16733仍存活，stage candidate-development/tofu／GPU[18645]。Actual5epochs625updates20k4000unique、696525 assistant／10625 training-only anchor tokens computed、272 conflicting updates；獨立freshreload原atol.05/rtol.01通過、maxlogiterror0，新291BF16／32layers／16,060,556,616bytes及157/313/469/625 trajectory audit pass。
 
 全部625actualupdate逐核原SPF投影後加入.3×原training-only anchor梯度，再原clip/AdamW，沒有額外forward/backward，明確family SPF＋安全loss hybrid；original frozen CLI/auditor methodspf原bytes保留。全625acceptance SHAea346a7696d1302acdcae591e99e65cdbbfb65635e594d3e9865d17afc18bb53、audit SHAd27ab4ec05ddfedcc7b0a2d5b7260c32d5971918613d1326af26f825a6ddd486、identity4ab6af98cf33e20e50394530d2fe6de69aa9e985188cd23cbfefd9a4f002d33d。19新完成binding／resolved／trajectory／audit／commands／原raw逐bytes SHA私有保存，archive7a4b1a71b84bb02d37cf512cd01af73da1eb2182bd1b4bb0bc9912e1d20ca250；前23工程檔只SHA重用，不重取完成raw／重hash16GB或重跑工程。公開scope僅aggregate／audit／acceptance／asrun來源／報告與provenance，全部原raw logs維持private。
