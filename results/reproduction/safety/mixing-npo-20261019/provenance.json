@@ -1,0 +1,47 @@
+{
+  "schema": "mixing_reports_publication_provenance_v1",
+  "date": "2026-10-19",
+  "source_final_forget05_sha256": "ecde483293a6e3827d7c7f8a8a0ef988d0fd1f3e8f658737644d8eda096933ba",
+  "source_final_performance_sha256": "6c0563761e729ab64e9895495e3bd0a435f376224aaccc331c7a953a29a09562",
+  "training_freeze_sha256": "e59b9ca738574ead8fcdc265503a4be46bb3e4ab9a18a785000ee9679c3fa102",
+  "evaluation_freeze_sha256": "6457d3a68b76b59239298b783213c702cf626565b4ec6ff5ad66fa677536e90e",
+  "accepted_performance_audits": {
+    "sampled": "944a8f8f2d872dd7fe6c81af9f33a3e44c2948c91a335d9aa451ca3dc6bc7b1d",
+    "all291": "45469ee816106758315bea97200a4a199518705dcd8365a4f993fe52f7637d50",
+    "kernel": "7a490ea7ac23e9fa8cb23bc6f8f0e920631a69dd1f62aebdcb11ffc39d879b92",
+    "mmlu228": "83b290ff802a3ca444feab4a3d7a4f7ab5b82c00f2c73f9f60c268154c9f0f4f",
+    "generation": "d1760bc8c6b7f879ec01fae95626373d05956f5b8e56ce0a7148f83018180e42",
+    "training": "e1ddf305587d814b47abce34b93f58a517a2fdcd6e0ed75df87e0887f1ccefa2"
+  },
+  "all_original_metric_tables_preserved": true,
+  "publication_authorized_date": "2026-10-19",
+  "public_scope": "aggregate metrics, bounded performance observations, future experiment specification",
+  "raw_QA_response_label_reason_key_weight_CLI_trace_included": false,
+  "files": {
+    "docs/reproduction/safety/mixing-npo-forget05-final-20261019.md": {
+      "bytes": 11540,
+      "sha256": "a827cdc0c90a72e43f908f86aee881c424442b5254d3fc25b14a77bfd8f2b2b6"
+    },
+    "docs/reproduction/safety/gb200-performance-diagnosis-20261019.md": {
+      "bytes": 6929,
+      "sha256": "db71bcad287178b186261c7939c7e5cc84b5cbd84fab5d95851b4a2295b3a5eb"
+    },
+    "docs/reproduction/safety/handoff-mixing-forget01-forget10-20261019.md": {
+      "bytes": 9451,
+      "sha256": "a2e2577ca912e5aa16515e5f25292b1369b4d8f9fa5932111781f068d8e82da3"
+    },
+    "docs/reproduction/safety/mixing-npo-reports-20261019.md": {
+      "bytes": 1238,
+      "sha256": "0f77def58b9d4705c5a73bebbbbfe82a952a6ecbd6e5bc035b6a7efa04b10633"
+    },
+    "results/reproduction/safety/mixing-npo-20261019/forget05-aggregate-tables.json": {
+      "bytes": 11101,
+      "sha256": "0854fa94a804d4e7741de45711d5a6387431209f96426a8dd6962e17d3a7aa49"
+    },
+    "results/reproduction/safety/mixing-npo-20261019/next-campaign-plan.json": {
+      "bytes": 3667,
+      "sha256": "3bc111e83f9b7f1c8de37ccd922b230ffc51e289783d98d4606166fcc282fada"
+    }
+  },
+  "public_text_encoding": "UTF-8 with LF; file SHA256 values describe published Git blob bytes"
+}

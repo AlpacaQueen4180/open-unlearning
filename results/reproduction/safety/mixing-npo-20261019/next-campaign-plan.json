@@ -1,0 +1,123 @@
+{
+  "schema": "mixing_forget01_forget10_accelerated_plan_v1",
+  "status": "HANDOFF_PLAN_NOT_LAUNCHED",
+  "date": "2026-10-19",
+  "human_scope": "Next session Mixing-to-forget01 and forget10 using discovered acceleration settings",
+  "design_basis": "Carry over forget05 two methods x UL seeds0/1/2 as explicit handoff default",
+  "initial_Mixing_identity_sha256": "695e5170d6ff6a9c66581a332b98e82c3e4376296f20367e28eff7a73610cf7b",
+  "construction_seed": 0,
+  "UL_seeds": [
+    0,
+    1,
+    2
+  ],
+  "methods": [
+    {
+      "name": "pure",
+      "alpha": 0,
+      "skip_zero_weight_retain_compute": true,
+      "retain_data_sampling_consumed": true
+    },
+    {
+      "name": "retain",
+      "alpha": 1,
+      "skip_zero_weight_retain_compute": false
+    }
+  ],
+  "NPO_runs": 12,
+  "training": {
+    "epochs": 10,
+    "LR": 1e-05,
+    "weight_decay": 0.01,
+    "beta": 0.1,
+    "gamma": 1,
+    "retain_loss": "NLL",
+    "optimizer": "paged_adamw_32bit",
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_eps": 1e-08,
+    "clip": 1,
+    "warmup_steps": 6,
+    "warmup_ratio": 0,
+    "scheduler": "linear",
+    "micro": 4,
+    "GAS": 8,
+    "world_size": 1,
+    "global_batch": 32,
+    "precision": "bf16",
+    "attention": "flash_attention_2",
+    "zero_stage": 3,
+    "gradient_checkpointing": true,
+    "offload_param": "none",
+    "offload_optimizer": "none",
+    "max_length": 512,
+    "assistant_only": true
+  },
+  "splits": [
+    {
+      "forget": "forget01",
+      "forget_examples": 40,
+      "retain": "retain99",
+      "retain_examples": 3960,
+      "source_bytes_sha256": null,
+      "official_split_identity_verified": false,
+      "microsteps_per_epoch": 10,
+      "updates_per_epoch": 2,
+      "total_microsteps": 100,
+      "total_updates": 20,
+      "tail_microsteps": 2,
+      "tail_loss_divisor": 2,
+      "forget_exposures": 400,
+      "retain_sampling_exposures": 400,
+      "matching_construction_expected_updates": 620,
+      "matching_construction_tail_examples": 24
+    },
+    {
+      "forget": "forget10",
+      "forget_examples": 400,
+      "retain": "retain90",
+      "retain_examples": 3600,
+      "source_bytes_sha256": null,
+      "official_split_identity_verified": false,
+      "microsteps_per_epoch": 100,
+      "updates_per_epoch": 13,
+      "total_microsteps": 1000,
+      "total_updates": 130,
+      "tail_microsteps": 4,
+      "tail_loss_divisor": 4,
+      "forget_exposures": 4000,
+      "retain_sampling_exposures": 4000,
+      "matching_construction_expected_updates": 565,
+      "matching_construction_tail_examples": 16
+    }
+  ],
+  "evaluation": {
+    "formal_metrics": [
+      "TOFU",
+      "MMLU_57subjects_14042_5shot",
+      "MT_Bench_80QA_160turn",
+      "HEx_PHI_300"
+    ],
+    "MMLU_effective_HFLM_batch_size": 8,
+    "Mixing_full_MMLU_batch8_baseline_needed": true,
+    "old_batch1_formal_results_immutable": true,
+    "MT_sampling_batching_enabled": false,
+    "HEx_TOFU_generation_batch8_status": "DEFERRED_UNTIL_PROTOCOL_SPECIFIC_VALIDATION",
+    "native_retain_TR_and_corrected_diagnostic_separate": true
+  },
+  "new_paid_scope": {
+    "status": "NOT_ALLOCATED_NOT_LAUNCHED_REQUIRES_NEW_BOUND_SCOPE",
+    "NPO_first_attempt_packets_if_all12": 5520,
+    "matching_reference_packets_if_both": 920,
+    "max_planned_distinct_first_attempts": 6440,
+    "existing_paid_scopes_closed": true,
+    "new_manual_retry_policy_inferred": false
+  },
+  "split_specific_skipretain_nonzero_LR_tail_validation_required": true,
+  "old_smoke40_not_assumed_official_forget01": true,
+  "read_only_connection_max_total_attempts": 10,
+  "mutation_automatic_retries": 0,
+  "no_GPU_work_executed_by_this_publication": true
+}

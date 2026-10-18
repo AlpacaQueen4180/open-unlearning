@@ -192,6 +192,8 @@ If you are interested in contributing to our work, please have a look at [`contr
 
 ## 📚 Further Documentation
 
+**Research reports in this fork (2026-10-19):** [Mixing→NPO forget05 results and GB200 performance diagnosis](docs/reproduction/safety/mixing-npo-reports-20261019.md), with the [next-session handoff for forget01／forget10](docs/reproduction/safety/handoff-mixing-forget01-forget10-20261019.md). Published results are aggregates; the new split experiments are planned and have not been launched.
+
 For more in-depth information on specific aspects of the framework, refer to the following documents:
 
 | **Documentation**                              | **Contains**                                                                                                       |

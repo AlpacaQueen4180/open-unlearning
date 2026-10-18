@@ -1,5 +1,7 @@
 # Handoff：收尾最後一個 SPF 候選，從 Mixing checkpoint 執行 NPO
 
+> **2026-10-19 新交接入口：** Mixing→forget05 正式比較與 GB200 效能診斷均已完成。下一 session 請讀 [Mixing→forget01／forget10 handoff](handoff-mixing-forget01-forget10-20261019.md) 與[最新報告索引](mixing-npo-reports-20261019.md)。本頁的舊 smoke／pilot／pending 操作只保留作歷史，不重新啟動 SPF 或已完成 Mixing 工作。
+
 2026-10-13最終收尾已完成：rank40 full625／reload0／audit／六development與combined791 Judge audit已發布，官方GETref核對commit `8a29078780f205f1f914c03afd436c5a280db6ad`。有害30/299＝10.03%，固定300界限10.00%～10.33%，unknownH1保留且不重送。SPF停搜，native收尾排程已 **PAUSED**；下一session直接接第3–8節Mixing NPO，不再觀測或啟動SPF工作。
 
 
