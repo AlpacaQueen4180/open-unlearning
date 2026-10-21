@@ -1,0 +1,1183 @@
+{
+  "schema": "mixing_forget01_05_10_frozen_aggregate_comparison_v1",
+  "published_date": "2026-10-21",
+  "Standard_definition": "historical original instruct M0",
+  "Mixing_definition": "One shared initial Mixing checkpoint; FQ evaluated separately against matching retain99/95/90. forget01/10 share one new MMLU and Judge baseline evaluation; forget05 retains its historical evaluation.",
+  "complete_metric_table": [
+    {
+      "split": "歷史參照",
+      "model": "Standard（M0 instruct）",
+      "FQ": null,
+      "MU_native": null,
+      "MU_corrected_diagnostic": null,
+      "MMLU_percent": 68.3,
+      "MTBench": 5.77,
+      "Harmfulness_bounds_percent": [
+        9.666666666666666,
+        10.0
+      ],
+      "Degeneration_bounds_percent": [
+        0.33333333333333337,
+        0.6666666666666667
+      ],
+      "MMLU_profile": "歷史formal；平台／版本不同",
+      "historical": true,
+      "precision": "MMLU與MT沿用歷史報告顯示精度"
+    },
+    {
+      "split": "forget01",
+      "model": "Mixing",
+      "FQ": 0.0012708143485281624,
+      "MU_native": 3.3752037860976174e-08,
+      "MU_corrected_diagnostic": 0.6456508027987168,
+      "MMLU_percent": 65.67440535536248,
+      "MTBench": 5.15625,
+      "Harmfulness_bounds_percent": [
+        9.666666666666666,
+        10.666666666666668
+      ],
+      "Degeneration_bounds_percent": [
+        0.0,
+        1.0
+      ],
+      "MMLU_profile": "完整batch8",
+      "historical": false
+    },
+    {
+      "split": "forget01",
+      "model": "PureNPO",
+      "FQ_by_UL_seed": [
+        0.01430154804770646,
+        0.0012708143485281624,
+        0.003018184077228396
+      ],
+      "MU_native": {
+        "n": 3,
+        "mean": 3.8597429037627406e-07,
+        "sample_SD": 4.0039893608004626e-08
+      },
+      "MU_corrected_diagnostic": {
+        "n": 3,
+        "mean": 0.5118725520607814,
+        "sample_SD": 0.03050928814363664
+      },
+      "MMLU_percent": {
+        "n": 3,
+        "mean": 65.63642406114988,
+        "sample_SD": 0.14530870192093537
+      },
+      "MTBench": {
+        "n": 3,
+        "mean": 4.814583333333333,
+        "sample_SD": 0.31214563241111215
+      },
+      "Harmfulness_bounds_percent": [
+        8.666666666666668,
+        9.666666666666666
+      ],
+      "Degeneration_bounds_percent": [
+        0.1111111111111111,
+        1.1111111111111112
+      ],
+      "MMLU_profile": "完整batch8"
+    },
+    {
+      "split": "forget01",
+      "model": "NPO+retain",
+      "FQ_by_UL_seed": [
+        0.09707484379785862,
+        0.003018184077228396,
+        0.054141077480362725
+      ],
+      "MU_native": {
+        "n": 3,
+        "mean": 9.92983965432872e-08,
+        "sample_SD": 1.9463961336098318e-08
+      },
+      "MU_corrected_diagnostic": {
+        "n": 3,
+        "mean": 0.5967348259873367,
+        "sample_SD": 0.025895326532160375
+      },
+      "MMLU_percent": {
+        "n": 3,
+        "mean": 65.78122774533543,
+        "sample_SD": 0.08923204733044718
+      },
+      "MTBench": {
+        "n": 3,
+        "mean": 4.8125,
+        "sample_SD": 0.27775607554111215
+      },
+      "Harmfulness_bounds_percent": [
+        8.0,
+        8.88888888888889
+      ],
+      "Degeneration_bounds_percent": [
+        0.0,
+        0.8888888888888888
+      ],
+      "MMLU_profile": "完整batch8"
+    },
+    {
+      "split": "forget05",
+      "model": "Mixing",
+      "FQ": 5.867302e-14,
+      "MU_native": 3.375203786e-08,
+      "MU_corrected_diagnostic": 0.645650803,
+      "MMLU_percent": 65.65,
+      "MTBench": 5.16875,
+      "Harmfulness_bounds_percent": [
+        9.0,
+        9.0
+      ],
+      "Degeneration_bounds_percent": [
+        0.0,
+        0.0
+      ],
+      "MMLU_profile": "完整batch1",
+      "historical": false,
+      "precision": "沿用已發布forget05報告顯示精度"
+    },
+    {
+      "split": "forget05",
+      "model": "PureNPO",
+      "FQ_by_UL_seed": [
+        0.7933622419382523,
+        0.39352743357720954,
+        0.1420746514551761
+      ],
+      "MU_native": {
+        "n": 3,
+        "mean": 1.9575995917010057e-06,
+        "sample_SD": 2.154561969711024e-06
+      },
+      "MU_corrected_diagnostic": {
+        "n": 3,
+        "mean": 0.01884818400353301,
+        "sample_SD": 0.016377159670274893
+      },
+      "MMLU_percent": {
+        "n": 3,
+        "mean": 59.97246356169587,
+        "sample_SD": 1.657493314293738
+      },
+      "MTBench": {
+        "n": 3,
+        "mean": 1.0229166666666667,
+        "sample_SD": 0.003608439182435084
+      },
+      "Harmfulness_bounds_percent": [
+        5.333333333333334,
+        6.0
+      ],
+      "Degeneration_bounds_percent": [
+        99.33333333333333,
+        100.0
+      ],
+      "MMLU_profile": "完整batch1"
+    },
+    {
+      "split": "forget05",
+      "model": "NPO+retain",
+      "FQ_by_UL_seed": [
+        0.6284308022715471,
+        0.39352743357720954,
+        0.7933622419382523
+      ],
+      "MU_native": {
+        "n": 3,
+        "mean": 1.2302725030666075e-08,
+        "sample_SD": 8.337938704271727e-10
+      },
+      "MU_corrected_diagnostic": {
+        "n": 3,
+        "mean": 0.6507534935942217,
+        "sample_SD": 0.011403539062388786
+      },
+      "MMLU_percent": {
+        "n": 3,
+        "mean": 64.31182642548545,
+        "sample_SD": 0.9846306004077763
+      },
+      "MTBench": {
+        "n": 3,
+        "mean": 3.29375,
+        "sample_SD": 0.7359889180551565
+      },
+      "Harmfulness_bounds_percent": [
+        46.111111111111114,
+        46.77777777777777
+      ],
+      "Degeneration_bounds_percent": [
+        45.55555555555556,
+        46.22222222222223
+      ],
+      "MMLU_profile": "完整batch1"
+    },
+    {
+      "split": "forget10",
+      "model": "Mixing",
+      "FQ": 1.6623182901932567e-21,
+      "MU_native": 3.3752037860976174e-08,
+      "MU_corrected_diagnostic": 0.6456508027987168,
+      "MMLU_percent": 65.67440535536248,
+      "MTBench": 5.15625,
+      "Harmfulness_bounds_percent": [
+        9.666666666666666,
+        10.666666666666668
+      ],
+      "Degeneration_bounds_percent": [
+        0.0,
+        1.0
+      ],
+      "MMLU_profile": "完整batch8",
+      "historical": false
+    },
+    {
+      "split": "forget10",
+      "model": "PureNPO",
+      "FQ_by_UL_seed": [
+        4.2606809322061477e-10,
+        5.0026003627463854e-05,
+        1.0655053900451827e-08
+      ],
+      "MU_native": {
+        "n": 3,
+        "mean": 0.00018438712352692658,
+        "sample_SD": 0.0003193678662101155
+      },
+      "MU_corrected_diagnostic": {
+        "n": 3,
+        "mean": 0.00027365053378017534,
+        "sample_SD": 0.000473976628025607
+      },
+      "MMLU_percent": {
+        "n": 3,
+        "mean": 58.94459478706737,
+        "sample_SD": 2.232710046053005
+      },
+      "MTBench": {
+        "n": 3,
+        "mean": 1.0020833333333334,
+        "sample_SD": 0.0036084391824352125
+      },
+      "Harmfulness_bounds_percent": [
+        0.33333333333333337,
+        5.777777777777778
+      ],
+      "Degeneration_bounds_percent": [
+        98.88888888888889,
+        100.0
+      ],
+      "MMLU_profile": "完整batch8"
+    },
+    {
+      "split": "forget10",
+      "model": "NPO+retain",
+      "FQ_by_UL_seed": [
+        0.00794521285574355,
+        0.0007748993373290397,
+        5.0026003627463854e-05
+      ],
+      "MU_native": {
+        "n": 3,
+        "mean": 2.453499606972025e-08,
+        "sample_SD": 2.3142381348210475e-09
+      },
+      "MU_corrected_diagnostic": {
+        "n": 3,
+        "mean": 0.6768126617678213,
+        "sample_SD": 0.019958346298329065
+      },
+      "MMLU_percent": {
+        "n": 3,
+        "mean": 65.4441437591986,
+        "sample_SD": 0.5958410103786911
+      },
+      "MTBench": {
+        "n": 3,
+        "mean": 3.0833333333333335,
+        "sample_SD": 0.11045596784842983
+      },
+      "Harmfulness_bounds_percent": [
+        39.44444444444444,
+        40.44444444444444
+      ],
+      "Degeneration_bounds_percent": [
+        35.11111111111111,
+        36.11111111111111
+      ],
+      "MMLU_profile": "完整batch8"
+    }
+  ],
+  "groups": {
+    "forget01-pure": {
+      "MMLU": {
+        "n": 3,
+        "mean": 0.6563642406114988,
+        "sample_SD": 0.0014530870192093536
+      },
+      "MT": {
+        "n": 3,
+        "mean": 4.814583333333333,
+        "sample_SD": 0.31214563241111215
+      },
+      "forget_ROUGE": {
+        "n": 3,
+        "mean": 0.29326546269536413,
+        "sample_SD": 0.07562961896908323
+      },
+      "retain_ROUGE": {
+        "n": 3,
+        "mean": 0.5974266924588127,
+        "sample_SD": 0.045666366868817934
+      },
+      "forget_EM": {
+        "n": 3,
+        "mean": 0.0,
+        "sample_SD": 0.0
+      },
+      "retain_EM": {
+        "n": 3,
+        "mean": 0.031228956228956228,
+        "sample_SD": 0.029462602182909126
+      },
+      "corrected_MU": {
+        "n": 3,
+        "mean": 0.5118725520607814,
+        "sample_SD": 0.03050928814363664
+      },
+      "native_MU": {
+        "n": 3,
+        "mean": 3.8597429037627406e-07,
+        "sample_SD": 4.0039893608004626e-08
+      },
+      "H_bounds": [
+        0.08666666666666667,
+        0.09666666666666666
+      ],
+      "D_bounds": [
+        0.0011111111111111111,
+        0.011111111111111112
+      ],
+      "FQ_p_by_seed": [
+        0.01430154804770646,
+        0.0012708143485281624,
+        0.003018184077228396
+      ],
+      "missing": 9,
+      "indeterminate": 0
+    },
+    "forget01-retain": {
+      "MMLU": {
+        "n": 3,
+        "mean": 0.6578122774533542,
+        "sample_SD": 0.0008923204733044717
+      },
+      "MT": {
+        "n": 3,
+        "mean": 4.8125,
+        "sample_SD": 0.27775607554111215
+      },
+      "forget_ROUGE": {
+        "n": 3,
+        "mean": 0.3061394504476429,
+        "sample_SD": 0.05563668386443981
+      },
+      "retain_ROUGE": {
+        "n": 3,
+        "mean": 0.7318410393662992,
+        "sample_SD": 0.035907621561529976
+      },
+      "forget_EM": {
+        "n": 3,
+        "mean": 0.0,
+        "sample_SD": 0.0
+      },
+      "retain_EM": {
+        "n": 3,
+        "mean": 0.21927609427609426,
+        "sample_SD": 0.05914286616176216
+      },
+      "corrected_MU": {
+        "n": 3,
+        "mean": 0.5967348259873367,
+        "sample_SD": 0.025895326532160375
+      },
+      "native_MU": {
+        "n": 3,
+        "mean": 9.92983965432872e-08,
+        "sample_SD": 1.9463961336098318e-08
+      },
+      "H_bounds": [
+        0.08,
+        0.08888888888888889
+      ],
+      "D_bounds": [
+        0.0,
+        0.008888888888888889
+      ],
+      "FQ_p_by_seed": [
+        0.09707484379785862,
+        0.003018184077228396,
+        0.054141077480362725
+      ],
+      "missing": 8,
+      "indeterminate": 0
+    },
+    "forget05-pure": {
+      "MMLU": {
+        "n": 3,
+        "mean": 0.5997246356169587,
+        "sample_SD": 0.01657493314293738
+      },
+      "MT": {
+        "n": 3,
+        "mean": 1.0229166666666667,
+        "sample_SD": 0.003608439182435084
+      },
+      "forget_ROUGE": {
+        "n": 3,
+        "mean": 0.09574825495052722,
+        "sample_SD": 0.062294810502825065
+      },
+      "retain_ROUGE": {
+        "n": 3,
+        "mean": 0.1100909367802899,
+        "sample_SD": 0.0695590251183031
+      },
+      "forget_EM": {
+        "n": 3,
+        "mean": 0.0,
+        "sample_SD": 0.0
+      },
+      "retain_EM": {
+        "n": 3,
+        "mean": 0.0,
+        "sample_SD": 0.0
+      },
+      "corrected_MU": {
+        "n": 3,
+        "mean": 0.01884818400353301,
+        "sample_SD": 0.016377159670274893
+      },
+      "native_MU": {
+        "n": 3,
+        "mean": 1.9575995917010057e-06,
+        "sample_SD": 2.154561969711024e-06
+      },
+      "H_bounds": [
+        0.05333333333333334,
+        0.06
+      ],
+      "D_bounds": [
+        0.9933333333333333,
+        1.0
+      ],
+      "FQ_p_by_seed": [
+        0.7933622419382523,
+        0.39352743357720954,
+        0.1420746514551761
+      ],
+      "missing": 6,
+      "indeterminate": 0
+    },
+    "forget05-retain": {
+      "MMLU": {
+        "n": 3,
+        "mean": 0.6431182642548545,
+        "sample_SD": 0.009846306004077763
+      },
+      "MT": {
+        "n": 3,
+        "mean": 3.29375,
+        "sample_SD": 0.7359889180551565
+      },
+      "forget_ROUGE": {
+        "n": 3,
+        "mean": 0.282527936499238,
+        "sample_SD": 0.025318305105319953
+      },
+      "retain_ROUGE": {
+        "n": 3,
+        "mean": 0.6573951435824703,
+        "sample_SD": 0.030512079495337453
+      },
+      "forget_EM": {
+        "n": 3,
+        "mean": 0.0,
+        "sample_SD": 0.0
+      },
+      "retain_EM": {
+        "n": 3,
+        "mean": 0.16394736842105262,
+        "sample_SD": 0.03261141142490852
+      },
+      "corrected_MU": {
+        "n": 3,
+        "mean": 0.6507534935942217,
+        "sample_SD": 0.011403539062388786
+      },
+      "native_MU": {
+        "n": 3,
+        "mean": 1.2302725030666075e-08,
+        "sample_SD": 8.337938704271727e-10
+      },
+      "H_bounds": [
+        0.46111111111111114,
+        0.46777777777777774
+      ],
+      "D_bounds": [
+        0.45555555555555555,
+        0.46222222222222226
+      ],
+      "FQ_p_by_seed": [
+        0.6284308022715471,
+        0.39352743357720954,
+        0.7933622419382523
+      ],
+      "missing": 6,
+      "indeterminate": 0
+    },
+    "forget10-pure": {
+      "MMLU": {
+        "n": 3,
+        "mean": 0.5894459478706737,
+        "sample_SD": 0.02232710046053005
+      },
+      "MT": {
+        "n": 3,
+        "mean": 1.0020833333333334,
+        "sample_SD": 0.0036084391824352125
+      },
+      "forget_ROUGE": {
+        "n": 3,
+        "mean": 0.053576430722532334,
+        "sample_SD": 0.0517369105494515
+      },
+      "retain_ROUGE": {
+        "n": 3,
+        "mean": 0.05852627186153162,
+        "sample_SD": 0.054631445201489
+      },
+      "forget_EM": {
+        "n": 3,
+        "mean": 0.0,
+        "sample_SD": 0.0
+      },
+      "retain_EM": {
+        "n": 3,
+        "mean": 0.0,
+        "sample_SD": 0.0
+      },
+      "corrected_MU": {
+        "n": 3,
+        "mean": 0.00027365053378017534,
+        "sample_SD": 0.000473976628025607
+      },
+      "native_MU": {
+        "n": 3,
+        "mean": 0.00018438712352692658,
+        "sample_SD": 0.0003193678662101155
+      },
+      "H_bounds": [
+        0.0033333333333333335,
+        0.057777777777777775
+      ],
+      "D_bounds": [
+        0.9888888888888889,
+        1.0
+      ],
+      "FQ_p_by_seed": [
+        4.2606809322061477e-10,
+        5.0026003627463854e-05,
+        1.0655053900451827e-08
+      ],
+      "missing": 10,
+      "indeterminate": 39
+    },
+    "forget10-retain": {
+      "MMLU": {
+        "n": 3,
+        "mean": 0.6544414375919859,
+        "sample_SD": 0.00595841010378691
+      },
+      "MT": {
+        "n": 3,
+        "mean": 3.0833333333333335,
+        "sample_SD": 0.11045596784842983
+      },
+      "forget_ROUGE": {
+        "n": 3,
+        "mean": 0.3160421259258329,
+        "sample_SD": 0.020462918393279905
+      },
+      "retain_ROUGE": {
+        "n": 3,
+        "mean": 0.8942132434341399,
+        "sample_SD": 0.014136661332403678
+      },
+      "forget_EM": {
+        "n": 3,
+        "mean": 0.0,
+        "sample_SD": 0.0
+      },
+      "retain_EM": {
+        "n": 3,
+        "mean": 0.6399074074074074,
+        "sample_SD": 0.05049319515738376
+      },
+      "corrected_MU": {
+        "n": 3,
+        "mean": 0.6768126617678213,
+        "sample_SD": 0.019958346298329065
+      },
+      "native_MU": {
+        "n": 3,
+        "mean": 2.453499606972025e-08,
+        "sample_SD": 2.3142381348210475e-09
+      },
+      "H_bounds": [
+        0.39444444444444443,
+        0.40444444444444444
+      ],
+      "D_bounds": [
+        0.3511111111111111,
+        0.3611111111111111
+      ],
+      "FQ_p_by_seed": [
+        0.00794521285574355,
+        0.0007748993373290397,
+        5.0026003627463854e-05
+      ],
+      "missing": 9,
+      "indeterminate": 0
+    }
+  },
+  "paired": {
+    "forget01": {
+      "MMLU": {
+        "n": 3,
+        "mean": 0.001448036841855423,
+        "sample_SD": 0.0006382913003726974
+      },
+      "MT": {
+        "n": 3,
+        "mean": -0.002083333333333215,
+        "sample_SD": 0.4368000352945649
+      },
+      "forget_ROUGE": {
+        "n": 3,
+        "mean": 0.012873987752278807,
+        "sample_SD": 0.04177878535455446
+      },
+      "retain_ROUGE": {
+        "n": 3,
+        "mean": 0.13441434690748644,
+        "sample_SD": 0.03074543647214489
+      },
+      "corrected_MU": {
+        "n": 3,
+        "mean": 0.08486227392655539,
+        "sample_SD": 0.022941640492589906
+      }
+    },
+    "forget05": {
+      "MMLU": {
+        "n": 3,
+        "mean": 0.04339362863789583,
+        "sample_SD": 0.008693570252736203
+      },
+      "MT": {
+        "n": 3,
+        "mean": 2.2708333333333335,
+        "sample_SD": 0.7335789124786326
+      },
+      "forget_ROUGE": {
+        "n": 3,
+        "mean": 0.1867796815487108,
+        "sample_SD": 0.08761311141344498
+      },
+      "retain_ROUGE": {
+        "n": 3,
+        "mean": 0.5473042068021804,
+        "sample_SD": 0.06245333165138298
+      },
+      "corrected_MU": {
+        "n": 3,
+        "mean": 0.6319053095906887,
+        "sample_SD": 0.014241305794703086
+      }
+    },
+    "forget10": {
+      "MMLU": {
+        "n": 3,
+        "mean": 0.06499548972131226,
+        "sample_SD": 0.019062778433804103
+      },
+      "MT": {
+        "n": 3,
+        "mean": 2.08125,
+        "sample_SD": 0.10843344733060932
+      },
+      "forget_ROUGE": {
+        "n": 3,
+        "mean": 0.2624656952033006,
+        "sample_SD": 0.03478613887336191
+      },
+      "retain_ROUGE": {
+        "n": 3,
+        "mean": 0.8356869715726082,
+        "sample_SD": 0.054851875903819625
+      },
+      "corrected_MU": {
+        "n": 3,
+        "mean": 0.676539011234041,
+        "sample_SD": 0.019760543822056408
+      }
+    }
+  },
+  "per_UL_seed_aggregate": {
+    "forget01-pure-s0": {
+      "seed": 0,
+      "MMLU": 0.6560319042871385,
+      "MT": 4.8625,
+      "forget_ROUGE": 0.3363740910944908,
+      "retain_ROUGE": 0.6425482967365593,
+      "forget_EM": 0.0,
+      "retain_EM": 0.06439393939393939,
+      "corrected_MU": 0.5349630086931106,
+      "native_MU": 3.602282243979132e-07,
+      "FQ_p": 0.01430154804770646,
+      "KS_D": 0.35,
+      "H_bounds": [
+        0.08666666666666667,
+        0.09666666666666666
+      ],
+      "D_bounds": [
+        0.0,
+        0.01
+      ],
+      "missing": 3,
+      "indeterminate": 0
+    },
+    "forget01-pure-s1": {
+      "seed": 1,
+      "MMLU": 0.6579547073066515,
+      "MT": 5.1,
+      "forget_ROUGE": 0.2059382522271384,
+      "retain_ROUGE": 0.5984973880200284,
+      "forget_EM": 0.0,
+      "retain_EM": 0.021212121212121213,
+      "corrected_MU": 0.5233694541238664,
+      "native_MU": 4.321046254977494e-07,
+      "FQ_p": 0.0012708143485281624,
+      "KS_D": 0.425,
+      "H_bounds": [
+        0.10333333333333333,
+        0.11333333333333333
+      ],
+      "D_bounds": [
+        0.0033333333333333335,
+        0.013333333333333334
+      ],
+      "missing": 3,
+      "indeterminate": 0
+    },
+    "forget01-pure-s2": {
+      "seed": 2,
+      "MMLU": 0.6551061102407064,
+      "MT": 4.48125,
+      "forget_ROUGE": 0.33748404476446314,
+      "retain_ROUGE": 0.5512343926198506,
+      "forget_EM": 0.0,
+      "retain_EM": 0.00808080808080808,
+      "corrected_MU": 0.4772851933653671,
+      "native_MU": 3.655900212331596e-07,
+      "FQ_p": 0.003018184077228396,
+      "KS_D": 0.4,
+      "H_bounds": [
+        0.07,
+        0.08
+      ],
+      "D_bounds": [
+        0.0,
+        0.01
+      ],
+      "missing": 3,
+      "indeterminate": 0
+    },
+    "forget01-retain-s0": {
+      "seed": 0,
+      "MMLU": 0.6578834923800029,
+      "MT": 5.125,
+      "forget_ROUGE": 0.3630881052502509,
+      "retain_ROUGE": 0.7437116218314913,
+      "forget_EM": 0.0,
+      "retain_EM": 0.255050505050505,
+      "corrected_MU": 0.5935190699362627,
+      "native_MU": 1.182772514030862e-07,
+      "FQ_p": 0.09707484379785862,
+      "KS_D": 0.275,
+      "H_bounds": [
+        0.09333333333333334,
+        0.10333333333333333
+      ],
+      "D_bounds": [
+        0.0,
+        0.01
+      ],
+      "missing": 3,
+      "indeterminate": 0
+    },
+    "forget01-retain-s1": {
+      "seed": 1,
+      "MMLU": 0.6586668565731377,
+      "MT": 4.59375,
+      "forget_ROUGE": 0.25191480987228876,
+      "retain_ROUGE": 0.7603103152746927,
+      "forget_EM": 0.0,
+      "retain_EM": 0.25176767676767675,
+      "corrected_MU": 0.6240878418251325,
+      "native_MU": 7.938313139878927e-08,
+      "FQ_p": 0.003018184077228396,
+      "KS_D": 0.4,
+      "H_bounds": [
+        0.09333333333333334,
+        0.1
+      ],
+      "D_bounds": [
+        0.0,
+        0.006666666666666667
+      ],
+      "missing": 2,
+      "indeterminate": 0
+    },
+    "forget01-retain-s2": {
+      "seed": 2,
+      "MMLU": 0.6568864834069221,
+      "MT": 4.71875,
+      "forget_ROUGE": 0.3034154362203891,
+      "retain_ROUGE": 0.6915011809927136,
+      "forget_EM": 0.0,
+      "retain_EM": 0.151010101010101,
+      "corrected_MU": 0.5725975662006151,
+      "native_MU": 1.0023480682798611e-07,
+      "FQ_p": 0.054141077480362725,
+      "KS_D": 0.3,
+      "H_bounds": [
+        0.05333333333333334,
+        0.06333333333333334
+      ],
+      "D_bounds": [
+        0.0,
+        0.01
+      ],
+      "missing": 3,
+      "indeterminate": 0
+    },
+    "forget05-pure-s0": {
+      "seed": 0,
+      "MMLU": 0.6065375302663438,
+      "MT": 1.025,
+      "forget_ROUGE": 0.14871119719338594,
+      "retain_ROUGE": 0.16255742070052526,
+      "forget_EM": 0.0,
+      "retain_EM": 0.0,
+      "corrected_MU": 0.029603000880095272,
+      "native_MU": 1.6067414765630883e-06,
+      "FQ_p": 0.7933622419382523,
+      "KS_D": 0.065,
+      "H_bounds": [
+        0.043333333333333335,
+        0.043333333333333335
+      ],
+      "D_bounds": [
+        1.0,
+        1.0
+      ],
+      "missing": 0,
+      "indeterminate": 0
+    },
+    "forget05-pure-s1": {
+      "seed": 1,
+      "MMLU": 0.58082894174619,
+      "MT": 1.025,
+      "forget_ROUGE": 0.02711422189844419,
+      "retain_ROUGE": 0.031189782157959332,
+      "forget_EM": 0.0,
+      "retain_EM": 0.0,
+      "corrected_MU": 0.0,
+      "native_MU": 0.0,
+      "FQ_p": 0.39352743357720954,
+      "KS_D": 0.09,
+      "H_bounds": [
+        0.05333333333333334,
+        0.06
+      ],
+      "D_bounds": [
+        0.9933333333333333,
+        1.0
+      ],
+      "missing": 2,
+      "indeterminate": 0
+    },
+    "forget05-pure-s2": {
+      "seed": 2,
+      "MMLU": 0.6118074348383421,
+      "MT": 1.01875,
+      "forget_ROUGE": 0.11141934575975151,
+      "retain_ROUGE": 0.13652560748238513,
+      "forget_EM": 0.0,
+      "retain_EM": 0.0,
+      "corrected_MU": 0.02694155113050376,
+      "native_MU": 4.266057298539929e-06,
+      "FQ_p": 0.1420746514551761,
+      "KS_D": 0.115,
+      "H_bounds": [
+        0.06333333333333334,
+        0.07666666666666666
+      ],
+      "D_bounds": [
+        0.9866666666666667,
+        1.0
+      ],
+      "missing": 4,
+      "indeterminate": 0
+    },
+    "forget05-retain-s0": {
+      "seed": 0,
+      "MMLU": 0.6512605042016807,
+      "MT": 4.125,
+      "forget_ROUGE": 0.2609888568175249,
+      "retain_ROUGE": 0.6435770298808872,
+      "forget_EM": 0.0,
+      "retain_EM": 0.14394736842105263,
+      "corrected_MU": 0.6454419270294957,
+      "native_MU": 1.1757109642507391e-08,
+      "FQ_p": 0.6284308022715471,
+      "KS_D": 0.075,
+      "H_bounds": [
+        0.36666666666666664,
+        0.37
+      ],
+      "D_bounds": [
+        0.5466666666666666,
+        0.55
+      ],
+      "missing": 1,
+      "indeterminate": 0
+    },
+    "forget05-retain-s1": {
+      "seed": 1,
+      "MMLU": 0.632174903859849,
+      "MT": 3.03125,
+      "forget_ROUGE": 0.31041669385301496,
+      "retain_ROUGE": 0.6362367496151454,
+      "forget_EM": 0.0,
+      "retain_EM": 0.1463157894736842,
+      "corrected_MU": 0.6429746638689648,
+      "native_MU": 1.1888553755259986e-08,
+      "FQ_p": 0.39352743357720954,
+      "KS_D": 0.09,
+      "H_bounds": [
+        0.6033333333333334,
+        0.6133333333333333
+      ],
+      "D_bounds": [
+        0.30666666666666664,
+        0.31666666666666665
+      ],
+      "missing": 3,
+      "indeterminate": 0
+    },
+    "forget05-retain-s2": {
+      "seed": 2,
+      "MMLU": 0.6459193847030338,
+      "MT": 2.725,
+      "forget_ROUGE": 0.27617825882717423,
+      "retain_ROUGE": 0.6923716512513782,
+      "forget_EM": 0.0,
+      "retain_EM": 0.20157894736842105,
+      "corrected_MU": 0.6638438898842046,
+      "native_MU": 1.3262511694230845e-08,
+      "FQ_p": 0.7933622419382523,
+      "KS_D": 0.065,
+      "H_bounds": [
+        0.41333333333333333,
+        0.42
+      ],
+      "D_bounds": [
+        0.5133333333333333,
+        0.52
+      ],
+      "missing": 2,
+      "indeterminate": 0
+    },
+    "forget10-pure-s0": {
+      "seed": 0,
+      "MMLU": 0.5782652043868395,
+      "MT": 1.0,
+      "forget_ROUGE": 0.1076574042381432,
+      "retain_ROUGE": 0.11307757936629366,
+      "forget_EM": 0.0,
+      "retain_EM": 0.0,
+      "corrected_MU": 0.0,
+      "native_MU": 0.0,
+      "FQ_p": 4.2606809322061477e-10,
+      "KS_D": 0.235,
+      "H_bounds": [
+        0.0,
+        0.03666666666666667
+      ],
+      "D_bounds": [
+        0.9866666666666667,
+        1.0
+      ],
+      "missing": 4,
+      "indeterminate": 7
+    },
+    "forget10-pure-s1": {
+      "seed": 1,
+      "MMLU": 0.5749181028343541,
+      "MT": 1.0,
+      "forget_ROUGE": 0.004555403914382516,
+      "retain_ROUGE": 0.003815040077259871,
+      "forget_EM": 0.0,
+      "retain_EM": 0.0,
+      "corrected_MU": 0.0,
+      "native_MU": 0.0,
+      "FQ_p": 5.0026003627463854e-05,
+      "KS_D": 0.1625,
+      "H_bounds": [
+        0.0033333333333333335,
+        0.10333333333333333
+      ],
+      "D_bounds": [
+        0.9933333333333333,
+        1.0
+      ],
+      "missing": 2,
+      "indeterminate": 28
+    },
+    "forget10-pure-s2": {
+      "seed": 2,
+      "MMLU": 0.6151545363908275,
+      "MT": 1.00625,
+      "forget_ROUGE": 0.04851648401507129,
+      "retain_ROUGE": 0.05868619614104134,
+      "forget_EM": 0.0,
+      "retain_EM": 0.0,
+      "corrected_MU": 0.000820951601340526,
+      "native_MU": 0.0005531613705807798,
+      "FQ_p": 1.0655053900451827e-08,
+      "KS_D": 0.2175,
+      "H_bounds": [
+        0.006666666666666667,
+        0.03333333333333333
+      ],
+      "D_bounds": [
+        0.9866666666666667,
+        1.0
+      ],
+      "missing": 4,
+      "indeterminate": 4
+    },
+    "forget10-retain-s0": {
+      "seed": 0,
+      "MMLU": 0.647770972795898,
+      "MT": 2.95625,
+      "forget_ROUGE": 0.3305194398262952,
+      "retain_ROUGE": 0.8876746371603578,
+      "forget_EM": 0.0,
+      "retain_EM": 0.6288888888888889,
+      "corrected_MU": 0.6538447164991192,
+      "native_MU": 2.2330563201777773e-08,
+      "FQ_p": 0.00794521285574355,
+      "KS_D": 0.1175,
+      "H_bounds": [
+        0.3466666666666667,
+        0.3566666666666667
+      ],
+      "D_bounds": [
+        0.5066666666666667,
+        0.5166666666666667
+      ],
+      "missing": 3,
+      "indeterminate": 0
+    },
+    "forget10-retain-s1": {
+      "seed": 1,
+      "MMLU": 0.6563167639937331,
+      "MT": 3.1375,
+      "forget_ROUGE": 0.29263137678440265,
+      "retain_ROUGE": 0.884529548283977,
+      "forget_EM": 0.0,
+      "retain_EM": 0.5958333333333333,
+      "corrected_MU": 0.6899369711250609,
+      "native_MU": 2.4329139515394895e-08,
+      "FQ_p": 0.0007748993373290397,
+      "KS_D": 0.14,
+      "H_bounds": [
+        0.44,
+        0.45
+      ],
+      "D_bounds": [
+        0.2733333333333333,
+        0.2833333333333333
+      ],
+      "missing": 3,
+      "indeterminate": 0
+    },
+    "forget10-retain-s2": {
+      "seed": 2,
+      "MMLU": 0.6592365759863268,
+      "MT": 3.15625,
+      "forget_ROUGE": 0.32497556116680093,
+      "retain_ROUGE": 0.9104355448580848,
+      "forget_EM": 0.0,
+      "retain_EM": 0.695,
+      "corrected_MU": 0.6866562976792836,
+      "native_MU": 2.694528549198808e-08,
+      "FQ_p": 5.0026003627463854e-05,
+      "KS_D": 0.1625,
+      "H_bounds": [
+        0.39666666666666667,
+        0.4066666666666667
+      ],
+      "D_bounds": [
+        0.2733333333333333,
+        0.2833333333333333
+      ],
+      "missing": 3,
+      "indeterminate": 0
+    }
+  },
+  "MMLU_batch_protocols": {
+    "forget01": 8,
+    "forget05": 1,
+    "forget10": 8
+  },
+  "updates": {
+    "forget01": 20,
+    "forget05": 70,
+    "forget10": 130
+  },
+  "same_update_budget": false,
+  "H_D_denominator": 300,
+  "bounds_are_confidence_intervals": false,
+  "FQ_p_averaged": false,
+  "corrected_MU_diagnostic_only": true,
+  "original_native_MU_defect_preserved": true,
+  "raw_or_per_question_data_included": false,
+  "new_training": 0,
+  "new_inference": 0,
+  "new_Judge_calls": 0,
+  "source_summary_sha256": {
+    "accepted_comparison_aggregate": "164dbada4c79f29e4d4669eff17b72b7007e99f2433cab934b539b2563844c1a",
+    "accepted_f0110_result": "4c1104765009e679a17d91a19c1be44a1360e4e5e4940ee975509c40de779108",
+    "accepted_f0110_final_audit": "7cdd8708703caf1f6095c67725fd023d241ba9d1551afd44d42ddbca78bdcb86",
+    "frozen_forget05_report": "a827cdc0c90a72e43f908f86aee881c424442b5254d3fc25b14a77bfd8f2b2b6"
+  }
+}
