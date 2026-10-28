@@ -1,0 +1,33 @@
+{
+  "kind": "authorized_report_publication_manifest",
+  "date": "2026-10-28",
+  "timezone": "Asia/Taipei",
+  "repository": "AlpacaQueen4180/open-unlearning",
+  "branch": "codex/finetune-results-report-20261012",
+  "parent_commit": "364d16394bb0109732c1aeb3f8b3db2430f8c740",
+  "scope": "Integrate completed HEx-PHI evaluation into the original report branch",
+  "models_evaluated": 13,
+  "Standard_C1_pending": true,
+  "all_original_development_numbers_preserved": true,
+  "new_Judge_calls": 0,
+  "key_reads": 0,
+  "RunAI_queries": 0,
+  "original_final_aggregate_sha256": "9d95e9d8420d966ab28eec72399ce9d8b2d0a356ef52db2fb52a3c83830e6bf3",
+  "files": {
+    "docs/reproduction/safety/finetune-results-report-20261012.md": {
+      "bytes": 27286,
+      "sha256": "eca8f824bd9e7062f9358e2173e6f0dd92e8e5c2a5ff5a159ecffc32da6e2bac",
+      "git_blob_sha1": "02ef291577265ffde4f3b064b8b2723ed2541a4f"
+    },
+    "docs/reproduction/safety/finetune-hexphi-supplement-20261028.md": {
+      "bytes": 5415,
+      "sha256": "140376352b6d36392a94ea1b61b7e077adacefc596d10f95b952af21701c6f92",
+      "git_blob_sha1": "446a164705b9170fb126e06af64ac133bc25525f"
+    },
+    "results/reproduction/safety/finetune-hexphi-20261028/final-audited.json": {
+      "bytes": 30241,
+      "sha256": "9d95e9d8420d966ab28eec72399ce9d8b2d0a356ef52db2fb52a3c83830e6bf3",
+      "git_blob_sha1": "fbce35a88f00e20f45d3493ebd741f4013753aa3"
+    }
+  }
+}

@@ -1,14 +1,53 @@
 # Llama-3.1-8B Finetune 實驗獨立報告
 
+更新日期：2026-10-28（Asia/Taipei）。本次已完成 **13個可用 checkpoint 的固定 HEx-PHI300 推論、有限 Judge 與原始收據稽核**，共3900題、3787題有效、113題未知。**Standard SFT（C1）因原H100連線不可用仍未補評，不能宣稱14個模型全部完成。**
+
+本報告並列兩套評估：原 development H 使用 XSTest unsafe200＋JailbreakBench harmful100；本次補評使用另一份固定 HEx-PHI300。兩者題目、用途不同，數值不可互換。下方保留原development報告的2026-10-12截點，原數值不覆寫。
+
+## 2026-10-28：HEx-PHI 補評結果
+
+Harmfulness＝有害協助數／有效標籤數。完整300題界限把未知題分別視為全部非有害或全部有害；這是缺失標籤界限，不是信賴區間。退化獨立分類，不把低有害率直接解讀為安全改善。
+
+| ID | 模型 | 有害協助／有效 | HEx-PHI Harmfulness ↓ | 未知 | 完整300題界限 | 退化／有效 |
+|---|---|---|---|---|---|---|
+| C0 | M0 原始 instruct | 32/297 | 10.77% | 3 | 10.67%～11.67% | 0/297 |
+| C1 | Standard SFT（原H100，未補評） | — | — | — | 未取得原checkpoint的可用連線 | — |
+| C2 | Mixing（原H100 checkpoint） | 26/298 | 8.72% | 2 | 8.67%～9.33% | 1/298 |
+| F0 | 原始 SPF（β₁=.9） | 228/296 | 77.03% | 4 | 76.00%～77.33% | 0/296 |
+| S1 | SPF（β₁=.5，LR1e-5） | 122/297 | 41.08% | 3 | 40.67%～41.67% | 0/297 |
+| S2 | SPF（β₁=.5，LR5e-6） | 91/296 | 30.74% | 4 | 30.33%～31.67% | 0/296 |
+| S3 | SPF（β₁=.5，LR3e-6） | 75/296 | 25.34% | 4 | 25.00%～26.33% | 0/296 |
+| S4 | SPF hybrid（λ=.1，rank20） | 64/297 | 21.55% | 3 | 21.33%～22.33% | 0/297 |
+| S5 | SPF hybrid（λ=.3，rank20） | 55/298 | 18.46% | 2 | 18.33%～19.00% | 0/298 |
+| S6 | SPF hybrid（λ=.1，rank40） | 59/297 | 19.87% | 3 | 19.67%～20.67% | 0/297 |
+| R1 | SPF retain95 reference | 208/274 | 75.91% | 26 | 69.33%～78.00% | 0/274 |
+| F0-157 | 原始 SPF update157 | 215/295 | 72.88% | 5 | 71.67%～73.33% | 0/295 |
+| F0-313 | 原始 SPF update313 | 191/271 | 70.48% | 29 | 63.67%～73.33% | 0/271 |
+| F0-469 | 原始 SPF update469 | 215/275 | 78.18% | 25 | 71.67%～80.00% | 0/275 |
+
+**主要觀察：** Mixing為26/298＝8.72%，原始M0為32/297＝10.77%，原始SPF為228/296＝77.03%。SPF系列中，λ=.3／rank20 hybrid（S5）的55/298＝18.46%最低；rank40 hybrid（S6）為59/297＝19.87%。這是單construction seed的描述性結果，尚無多seed或paired差異驗證，也不代表正式安全gate通過。
+
+**未知與拒答：** 113題均有Judge API 400 policy-blocked證據（bio_policy42、cyber_policy71），未重送、不當作模型refusal或safe。R1、update313、update469分別有26、29、25題未知，判讀須同看完整300題界限。
+
+**固定protocol：** 資料SHA256 `f72785518afa1dde3c1324987e123ef307a6e2ee2b69a8646c738c06e051db2e`；formal-300、greedy、seed0、max_new_tokens512、batch1。Judge為gpt-5.6-terra／medium／4096 cap／SDK retry0，原rubric SHA256 `ddfd529d84ab10b4b3cc8054cecfac8fa8abcc4ef718b77a3b5e5d584eec153a`。C2使用原H100 checkpoint的保存副本，沒有用後續GB200重新訓練的Mixing替代。
+
+本次新增3335個不同payload的first attempts，重用563個相同profile與完整payload的成功結果，另2個既有未知映射保留；成功與未知均未重送。完整原始題目、回答、理由、逐題labels、key及ledger保留private。
+
+完整方法、帳務與結果判讀見 [HEx-PHI補評明細](finetune-hexphi-supplement-20261028.md)；可核對的aggregate與audit SHA256見 [final-audited.json](../../../results/reproduction/safety/finetune-hexphi-20261028/final-audited.json)，本次檔案清單見 [publication-manifest.json](../../../results/reproduction/safety/finetune-hexphi-20261028/publication-manifest.json)。
+
+## 2026-10-12：Development 歷史報告
+
+以下原文保留2026-10-12的觀測截點；其中「S6待驗」「正式HEx-PHI待補」及搜尋剩餘額度等敘述均屬當時歷史狀態。2026-10-28的HEx-PHI完成狀態與數值以上方補評表為準；development欄位仍使用原benchmark。
+
 整理日期：2026-10-12（Asia/Taipei）。結果範圍為本次 Standard、Mixing、SPF 與 SPF 安全 loss hybrid 的 **finetune／target construction development 評估**。最新候選狀態取自台北 2026-10-12 16:52 的提交紀錄；本報告沒有查詢遠端新進度或新增 Judge。
 
-## 結果摘要
+### 結果摘要
 
 已完成結果中，Mixing 的有害協助率為 **13/300＝4.33%**。原始 SPF 為 **141/300＝47.00%**；調參後最佳 SPF 系列結果是 **SPF＋安全 loss λ=.1、β₁=.5、LR=5e-6、rank20：27/300＝9.00%**，相對原始 SPF 下降 38.00 個百分點，但仍高於 Mixing 4.67 個百分點。
 
 最佳 hybrid 的 retain QA exact match 為 **96.63%**、MMLU auxiliary 為 **848/1024＝82.81%**。純 SPF LR=3e-6 的 harmfulness 降至 12.67%，但 retain QA exact match 為 84.74%；λ=.3 hybrid 則回升至 11.00%，未優於 λ=.1。上述均為單 seed 的觀察，尚不能宣稱多 seed、跨平台因果對照或正式安全 gate 通過。
 
-## 一、實驗 × 主要評估指標總表
+### 一、實驗 × 主要評估指標總表
 
 每列是一個實驗／對照模型，每欄是一個評估指標。百分比保留兩位小數、ROUGE-L F1 保留六位小數；「—」表示本報告未取得相同口徑的完整數值，**不代表 0 或該評估未執行**。「待驗」表示候選尚無已驗收結果。分數↑、錯誤／有害率↓；FT 階段的 F/R exact match 均用於觀察學習，不是 unlearning 後的遺忘指標。
 
@@ -33,7 +72,7 @@ C0/C1/C2 數值取自 [既有 development 追蹤表](https://github.com/AlpacaQu
 - **S6：** rank40 recovery 已提交 PID20435，提交後結果未確認；不能把 CPU 通過或提交收據填成模型效能結果。
 - **MMLU aux** 是 1,024 題 zero-shot development protocol，不是正式 MMLU 5-shot；**WildChat** 不是正式 MT-Bench；本表 H 不是歷史正式 HEx-PHI。
 
-## 二、配方與完成狀態
+### 二、配方與完成狀態
 
 所有完整 target 為 construction seed0、TOFU full4000、5 epochs／625 updates／20,000 task exposures。固定 Meta Llama-3.1-8B-Instruct 與 tokenizer revision 為 0e9e39f249a16976918f6564b8830bc894c89659。安全資料使用既有 training-only anchor，沒有將 development benchmark 回灌訓練。
 
@@ -55,7 +94,7 @@ SPF 系列 WD=.01、β₂=.999、effective batch32、micro4×accumulation8、ful
 
 R1 使用 retain3800，19,000 task exposures、warmup119；其獨立 reload max error=0、audit pass，但 TOFU FQ／KS D／MU／TR 等 matching-reference 比較仍待補。C1/C2 與 SPF 平台不同，不視為完全 matched 的因果對照。
 
-## 三、TOFU 學習指標明細
+### 三、TOFU 學習指標明細
 
 F05＝200 題、R95＝3,800 題，兩者均在 full4000 的 finetune 訓練資料內。Teacher forcing max length512、generation cap200、batch8。EM 以百分比呈現；ROUGE-L recall 與 F1 使用原始 0–1 單位，**不可互換**；log probability 是來源的 mean_log_probability，越高／越接近0代表對目標答案的 likelihood 較高。本報告未另外推算 NLL 或填入正式 TOFU MU。
 
@@ -73,7 +112,7 @@ F05＝200 題、R95＝3,800 題，兩者均在 full4000 的 finetune 訓練資�
 
 S1–S5 的既有公開 aggregate 僅彙整 F1、EM、mean logP，因此 recall 保留「—」；C1/C2 的歷史追蹤表提供 recall，未用 recall 冒填 F1。每列自己的 F/R 分母固定，不使用 row membership 或原始 QA 內容填表。
 
-## 四、一般能力与指令遵循明細
+### 四、一般能力与指令遵循明細
 
 MMLU auxiliary 的 protocol 為 zero-shot ABCD continuation log-probability。IFBench 評分使用 fixed300 的同一 scorer；prompt accuracy 與 instruction accuracy 的分母／統計單位不同，不能互換。
 
@@ -91,7 +130,7 @@ MMLU auxiliary 的 protocol 為 zero-shot ABCD continuation log-probability。IF
 
 C0/C1/C2 的 MMLU percent 是既有報表的已四捨五入值；未由百分比反推原始 correct count。未取得的 IFBench instruction／loose 欄位保留空缺，避免讓總表看似有未核對的完整資料。
 
-## 五、安全、拒答與生成品質明細
+### 五、安全、拒答與生成品質明細
 
 Harmfulness＝harmful_assistance／已驗證 harmful 數。Benign benchmark refusal 為該資料池的描述性拒答比例；它不同於在 prompt 適用性已裁決之共同子集上計算的 paired over-refusal，不能直接替代安全 gate。
 
@@ -119,7 +158,7 @@ F0 的另1個未知 benign 結果不在349份 confirmed benign 中，不能當�
 | S4 | 320 | 13 | 17 | 350 |
 | S5 | 319 | 12 | 19 | 350 |
 
-## 六、WildChat 對話分數明細
+### 六、WildChat 對話分數明細
 
 固定71 conversations／142 turns。表中為 mean（n＝非 null 筆數）；factual accuracy 與 consistency 使用各自的非 null 分母。不同模型的 n 可能不同，直接比較 mean 不等於完成 paired 或缺失值敏感度分析。
 
@@ -135,7 +174,7 @@ F0 的另1個未知 benign 結果不在349份 confirmed benign 中，不能當�
 | S4 | 3.091549（n=142） | 4.056338（n=142） | 3.015873（n=126） | 3.654930（n=142） | 4.436620（n=142） | 4.444444（n=117） |
 | S5 | 3.154930（n=142） | 4.176056（n=142） | 2.934426（n=122） | 3.669014（n=142） | 4.471831（n=142） | 4.433628（n=113） |
 
-## 七、原始 SPF trajectory：早停是否有幫助
+### 七、原始 SPF trajectory：早停是否有幫助
 
 下列是 **同一 F0 訓練的中途 checkpoints**，不是三次獨立完整訓練，也不計入新增50套搜尋配額。已保存的模型之評估結果沿用原紀錄。
 
@@ -148,7 +187,7 @@ F0 的另1個未知 benign 結果不在349份 confirmed benign 中，不能當�
 
 157 的53.67%、313 的44.00%、469 的44.67%～45.00%及625的47.00%均高於 Mixing。早停降低 TOFU 學習量，未在這批原始 SPF checkpoints 中形成低於 Mixing 的安全起點。469 的134/299只代表成功標籤子集，保留未知1題；不補值。469 摘要依 [既有完整報告的2026-10-10 01:30紀錄](https://github.com/AlpacaQueen4180/open-unlearning/blob/0340429086b8e16ce65bcf4655db31c1d204f1a1/docs/reproduction/safety/spf-npo-gb200-20261006.md)，未重新讀取／重審 raw Judge。
 
-## 八、判讀與尚待完成的工作
+### 八、判讀與尚待完成的工作
 
 1. **觀察到的改善：** β₁=.5 的 S1 相對 F0，H從47%降到31%；在 β₁=.5 下 LR5e-6／3e-6分別為13.67%／12.67%。這支持繼續研究 optimizer／更新幅度，但不是完整根因或跨平台因果證明。
 2. **目前最佳 SPF 系列：** S4 的9.00%及R95 EM96.63%為目前有完成792 Judge的最佳安全／學習折衷。與相同 LR 的 S2 相比，H下降4.67pp、R95 EM上升約0.24pp，但 benign benchmark拒答從6/350變為8/350。
@@ -178,7 +217,7 @@ F0 的另1個未知 benign 結果不在349份 confirmed benign 中，不能當�
 | SPF原四個大型autograd5%等價驗收失敗 | 限制保留；CPU／smoke通過沒有解除 |
 | NPO smoke／fresh reload／200題pilot／unlearning最終結果 | 不納入這份finetune成效表；原工程與研究缺口保留 |
 
-## 九、資料來源與可追溯性
+### 九、資料來源與可追溯性
 
 本報告只彙整已有的數值與審核摘要，沒有新增訓練、重算評估或重審Judge。來源SHA256記錄的是本次讀取檔案的bytes；M0／Standard／Mixing的部分欄位來自既有追蹤表，未取得相同口徑的完整aggregate時留白。Private來源僅讀取aggregate／summary欄位，不複製QA、prompt、response、reason、完整labels、membership、key或weights。
 
@@ -202,4 +241,5 @@ F0 的另1個未知 benign 結果不在349份 confirmed benign 中，不能當�
 | 16 | [spf-retain95-s0-audit.json](https://github.com/AlpacaQueen4180/open-unlearning/blob/0340429086b8e16ce65bcf4655db31c1d204f1a1/results/reproduction/safety/spf-npo-gb200-20261006/r4-reference-completed/spf-retain95-s0-audit.json) | 758ed12ebcc6ce5d7e65eae689e475b9ce92bbbff34445279c39b7282aa6652e |
 
 原始 Mixing統計摘要及gate的既有上游SHA256：mixing-complete-statistics.json＝a7088587b544edc31afba6d25bb69e263f237d2d3d2d277bc4afd1c26497f1e3；mixing-development-gate-v2.json＝ea74957628f5035b967081114853071cd5ee1cf6dd8887527c4a6ecaeb9d0976。它們由既有追蹤表引用，本次未重新取得／執行原來源。
+
 
