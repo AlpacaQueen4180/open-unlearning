@@ -1,0 +1,61 @@
+{
+  "schema": "curated_publication_manifest_v1",
+  "batch": "01-paired",
+  "client_date": "2026-10-30",
+  "repository": "AlpacaQueen4180/open-unlearning",
+  "target_branch": "repro/npo-h100-ada-5seed",
+  "scope": "User approved first three completed-result groups only",
+  "private_artifacts_excluded": true,
+  "OLMo_and_future_clipping_matrix_excluded": true,
+  "local_frozen_sources_modified": false,
+  "files": [
+    {
+      "path": "docs/reproduction/safety/mixing-npo-paired-analysis-20261029.md",
+      "source_sha256": "b1343735ccbbcbb667658f18d7c11189e01f52b96e63e488ac86f2093d5344ff",
+      "published_sha256": "b1343735ccbbcbb667658f18d7c11189e01f52b96e63e488ac86f2093d5344ff",
+      "git_blob_sha1": "f000f12280629d911995f72f3062b178f393942b",
+      "bytes": 6016,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/mixing-npo-paired-20261029/category-exploratory.csv",
+      "source_sha256": "e6a3befc3f0846905353b0515d8413869722d603571e01a6a37f6c35c666b759",
+      "published_sha256": "e6a3befc3f0846905353b0515d8413869722d603571e01a6a37f6c35c666b759",
+      "git_blob_sha1": "b4739339d8cd2bd423b17cb4cfe3ef15e592ff41",
+      "bytes": 5636,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/mixing-npo-paired-20261029/completion.json",
+      "source_sha256": "516aef0cb87469875fd65b0f0be78e1bec80aa464ff79a4fde3fea38b8550771",
+      "published_sha256": "516aef0cb87469875fd65b0f0be78e1bec80aa464ff79a4fde3fea38b8550771",
+      "git_blob_sha1": "ef4aeb1fede3dd651ff5974fdc949422006ba0fe",
+      "bytes": 910,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/mixing-npo-paired-20261029/per-seed.csv",
+      "source_sha256": "82db09ad16c31f42effeac2ed8136ab2163a8c54ebca8f4e3979a7c2bc4c57e1",
+      "published_sha256": "82db09ad16c31f42effeac2ed8136ab2163a8c54ebca8f4e3979a7c2bc4c57e1",
+      "git_blob_sha1": "d059de15eef4bb20d2a846687705751881907c53",
+      "bytes": 4888,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/mixing-npo-paired-20261029/summary.json",
+      "source_sha256": "97a70afa86926ec3278153b569607ea908cb29e32295ee14dd5b7cd88cf3c326",
+      "published_sha256": "97a70afa86926ec3278153b569607ea908cb29e32295ee14dd5b7cd88cf3c326",
+      "git_blob_sha1": "725b8a68144e60fc079b24ebf9b4a5f61379f83e",
+      "bytes": 105858,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/mixing-npo-paired-20261029/validation.json",
+      "source_sha256": "2088079ddba31fe722ceecca9d8d8fa466cc5e5c187ed41b970a42ed197d6715",
+      "published_sha256": "2088079ddba31fe722ceecca9d8d8fa466cc5e5c187ed41b970a42ed197d6715",
+      "git_blob_sha1": "eed44408eb522bcc2138b03d51b3fb9a727d8006",
+      "bytes": 287,
+      "publication_copy_changed": false
+    }
+  ]
+}

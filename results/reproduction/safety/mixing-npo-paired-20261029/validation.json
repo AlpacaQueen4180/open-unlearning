@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "independent_model_pair_reconstructions": 27,
+  "independent_binary_metric_reconstructions": 54,
+  "all_transitions_partition300": true,
+  "all_full_denominator_bounds_reconciled": true,
+  "original_source_hashes_rechecked": 4881,
+  "new_API_calls": 0
+}
