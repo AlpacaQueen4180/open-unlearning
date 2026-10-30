@@ -1,0 +1,66 @@
+{
+  "matched-benign-sft-s0": {
+    "KS_D": 0.325,
+    "KS_pvalue": 9.594235055800515e-10,
+    "checkpoint_identity": "626c168031e37893d9a7f5f8fc76b29c21fa0681f2675f92ae6bfc97f4d2b4dc",
+    "counts": {
+      "forget05": 200,
+      "real_authors": 100,
+      "retain": 400,
+      "world_facts": 117
+    },
+    "diagnostic_corrected_MU": 0.6191178617989627,
+    "diagnostic_corrected_retain_TR": 0.4821079621133358,
+    "forget_Truth_Ratio": 0.5171416093478612,
+    "forget_quality_pvalue": 9.594235055800515e-10,
+    "native_config_MU": 3.1855255289801194e-08,
+    "native_config_MU_components": {
+      "ra_Q_A_Prob_normalised": 0.42672803809329013,
+      "ra_Q_A_ROUGE": 0.7995,
+      "ra_Truth_Ratio": 0.543783049462514,
+      "retain_Q_A_Prob": 0.94255859375,
+      "retain_Q_A_ROUGE": 0.8840947267613308,
+      "retain_Truth_Ratio": 3.5394729661075707e-09,
+      "wf_Q_A_Prob_normalised": 0.47908391099167363,
+      "wf_Q_A_ROUGE": 0.8307692307692308,
+      "wf_Truth_Ratio": 0.6466794102672372
+    },
+    "native_config_defect": "retain_Truth_Ratio wrong references PARA, same as correct; unchanged source/config preserved",
+    "new_generations": 217,
+    "reference_identity": "48f37d223fd5866ab70ddc692ebf8b5e9ffc63c59214e80833a8471dc600e5c7",
+    "reference_self_check": false,
+    "reused_successful_generations": 400
+  },
+  "retain-continued-s0": {
+    "KS_D": 0.36,
+    "KS_pvalue": 6.5689645859369454e-12,
+    "checkpoint_identity": "aab2f2c1f31314671f333054713a9a0081b47d6dbb4bd412a08395f5e372a929",
+    "counts": {
+      "forget05": 200,
+      "real_authors": 100,
+      "retain": 400,
+      "world_facts": 117
+    },
+    "diagnostic_corrected_MU": 0.6566368565202638,
+    "diagnostic_corrected_retain_TR": 0.49664125663690023,
+    "forget_Truth_Ratio": 0.5061152714050664,
+    "forget_quality_pvalue": 6.5689645859369454e-12,
+    "native_config_MU": 2.8198003043699306e-08,
+    "native_config_MU_components": {
+      "ra_Q_A_Prob_normalised": 0.45656046110123993,
+      "ra_Q_A_ROUGE": 0.8845000000000001,
+      "ra_Truth_Ratio": 0.6035913199803891,
+      "retain_Q_A_Prob": 0.96365234375,
+      "retain_Q_A_ROUGE": 0.9268399529682233,
+      "retain_Truth_Ratio": 3.1331115640798046e-09,
+      "wf_Q_A_Prob_normalised": 0.5032182803217506,
+      "wf_Q_A_ROUGE": 0.8948717948717949,
+      "wf_Truth_Ratio": 0.6694712827710044
+    },
+    "native_config_defect": "retain_Truth_Ratio wrong references PARA, same as correct; unchanged source/config preserved",
+    "new_generations": 217,
+    "reference_identity": "48f37d223fd5866ab70ddc692ebf8b5e9ffc63c59214e80833a8471dc600e5c7",
+    "reference_self_check": false,
+    "reused_successful_generations": 400
+  }
+}

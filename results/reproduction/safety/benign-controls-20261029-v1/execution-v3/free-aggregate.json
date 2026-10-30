@@ -1,0 +1,682 @@
+{
+  "clipping_protocol_choice_pending": true,
+  "effective_gradient_clipping": 0.0,
+  "models": {
+    "matched-benign-sft-s0": {
+      "hexphi": {
+        "any_within_response_repeated_4gram": 18,
+        "distinct_exact_response_texts": 233,
+        "empty": 0,
+        "ended_with_EOS": 299,
+        "exact_hit_cap": 1,
+        "exact_mean_generation_tokens": 44.29,
+        "generation_rows_sha256": "aa7ea1100ebb67e05a25edc12065c40e26b6337fb8b2df1aca99443423b7e0c4",
+        "mean_characters": 199.88333333333333,
+        "mean_within_response_repeated_whitespace_4gram_fraction": 0.004799891589887571,
+        "model_identity": "626c168031e37893d9a7f5f8fc76b29c21fa0681f2675f92ae6bfc97f4d2b4dc",
+        "most_common_exact_response_count": 60,
+        "new_Judge_labels": false,
+        "rows": 300,
+        "status": "ORIGINAL_FULL_FIXED_GENERATION_EXACT_TOKEN_DIAGNOSTICS_PASS",
+        "token_diagnostics_sha256": "fe51cff8cc7c8ee1f0f81b462b5764f8290d5f1574d362f2f1bf90688f11bc62"
+      },
+      "mmlu": {
+        "accuracy": 0.6505483549351944,
+        "correct": 9135,
+        "model_identity": "626c168031e37893d9a7f5f8fc76b29c21fa0681f2675f92ae6bfc97f4d2b4dc",
+        "ordered_request_digest": "6416ef1f68a3cd0b2edbbbc69c6fa56282b9def8edbde1ab78bf57c519fc98b5",
+        "per_subject": {
+          "mmlu_abstract_algebra": {
+            "correct": 36,
+            "rows": 100
+          },
+          "mmlu_anatomy": {
+            "correct": 83,
+            "rows": 135
+          },
+          "mmlu_astronomy": {
+            "correct": 102,
+            "rows": 152
+          },
+          "mmlu_business_ethics": {
+            "correct": 64,
+            "rows": 100
+          },
+          "mmlu_clinical_knowledge": {
+            "correct": 192,
+            "rows": 265
+          },
+          "mmlu_college_biology": {
+            "correct": 107,
+            "rows": 144
+          },
+          "mmlu_college_chemistry": {
+            "correct": 51,
+            "rows": 100
+          },
+          "mmlu_college_computer_science": {
+            "correct": 58,
+            "rows": 100
+          },
+          "mmlu_college_mathematics": {
+            "correct": 38,
+            "rows": 100
+          },
+          "mmlu_college_medicine": {
+            "correct": 117,
+            "rows": 173
+          },
+          "mmlu_college_physics": {
+            "correct": 42,
+            "rows": 102
+          },
+          "mmlu_computer_security": {
+            "correct": 78,
+            "rows": 100
+          },
+          "mmlu_conceptual_physics": {
+            "correct": 135,
+            "rows": 235
+          },
+          "mmlu_econometrics": {
+            "correct": 50,
+            "rows": 114
+          },
+          "mmlu_electrical_engineering": {
+            "correct": 99,
+            "rows": 145
+          },
+          "mmlu_elementary_mathematics": {
+            "correct": 174,
+            "rows": 378
+          },
+          "mmlu_formal_logic": {
+            "correct": 64,
+            "rows": 126
+          },
+          "mmlu_global_facts": {
+            "correct": 43,
+            "rows": 100
+          },
+          "mmlu_high_school_biology": {
+            "correct": 244,
+            "rows": 310
+          },
+          "mmlu_high_school_chemistry": {
+            "correct": 121,
+            "rows": 203
+          },
+          "mmlu_high_school_computer_science": {
+            "correct": 72,
+            "rows": 100
+          },
+          "mmlu_high_school_european_history": {
+            "correct": 127,
+            "rows": 165
+          },
+          "mmlu_high_school_geography": {
+            "correct": 160,
+            "rows": 198
+          },
+          "mmlu_high_school_government_and_politics": {
+            "correct": 170,
+            "rows": 193
+          },
+          "mmlu_high_school_macroeconomics": {
+            "correct": 259,
+            "rows": 390
+          },
+          "mmlu_high_school_mathematics": {
+            "correct": 115,
+            "rows": 270
+          },
+          "mmlu_high_school_microeconomics": {
+            "correct": 180,
+            "rows": 238
+          },
+          "mmlu_high_school_physics": {
+            "correct": 68,
+            "rows": 151
+          },
+          "mmlu_high_school_psychology": {
+            "correct": 448,
+            "rows": 545
+          },
+          "mmlu_high_school_statistics": {
+            "correct": 113,
+            "rows": 216
+          },
+          "mmlu_high_school_us_history": {
+            "correct": 162,
+            "rows": 204
+          },
+          "mmlu_high_school_world_history": {
+            "correct": 200,
+            "rows": 237
+          },
+          "mmlu_human_aging": {
+            "correct": 150,
+            "rows": 223
+          },
+          "mmlu_human_sexuality": {
+            "correct": 100,
+            "rows": 131
+          },
+          "mmlu_international_law": {
+            "correct": 97,
+            "rows": 121
+          },
+          "mmlu_jurisprudence": {
+            "correct": 81,
+            "rows": 108
+          },
+          "mmlu_logical_fallacies": {
+            "correct": 130,
+            "rows": 163
+          },
+          "mmlu_machine_learning": {
+            "correct": 61,
+            "rows": 112
+          },
+          "mmlu_management": {
+            "correct": 86,
+            "rows": 103
+          },
+          "mmlu_marketing": {
+            "correct": 210,
+            "rows": 234
+          },
+          "mmlu_medical_genetics": {
+            "correct": 79,
+            "rows": 100
+          },
+          "mmlu_miscellaneous": {
+            "correct": 628,
+            "rows": 783
+          },
+          "mmlu_moral_disputes": {
+            "correct": 246,
+            "rows": 346
+          },
+          "mmlu_moral_scenarios": {
+            "correct": 420,
+            "rows": 895
+          },
+          "mmlu_nutrition": {
+            "correct": 235,
+            "rows": 306
+          },
+          "mmlu_philosophy": {
+            "correct": 209,
+            "rows": 311
+          },
+          "mmlu_prehistory": {
+            "correct": 223,
+            "rows": 324
+          },
+          "mmlu_professional_accounting": {
+            "correct": 138,
+            "rows": 282
+          },
+          "mmlu_professional_law": {
+            "correct": 745,
+            "rows": 1534
+          },
+          "mmlu_professional_medicine": {
+            "correct": 194,
+            "rows": 272
+          },
+          "mmlu_professional_psychology": {
+            "correct": 395,
+            "rows": 612
+          },
+          "mmlu_public_relations": {
+            "correct": 71,
+            "rows": 110
+          },
+          "mmlu_security_studies": {
+            "correct": 178,
+            "rows": 245
+          },
+          "mmlu_sociology": {
+            "correct": 172,
+            "rows": 201
+          },
+          "mmlu_us_foreign_policy": {
+            "correct": 85,
+            "rows": 100
+          },
+          "mmlu_virology": {
+            "correct": 91,
+            "rows": 166
+          },
+          "mmlu_world_religions": {
+            "correct": 139,
+            "rows": 171
+          }
+        },
+        "raw_EVAL_sha256": "6613cdfabf0f1e2c68c19c26fa3ba14dc02698abac4b6cefb3ba8988cb361735",
+        "receipt_sha256": "25c6f036b162e8f7325ea6a4b77789955efc91844d5031c3f10fa7e91289e7bf",
+        "rows": 14042,
+        "status": "ALL57_14042_RAW_LL_CHOICES_5SHOT_BATCH1_CPU_PASS",
+        "subjects": 57
+      },
+      "mtbench": {
+        "any_within_response_repeated_4gram": 25,
+        "distinct_exact_response_texts": 160,
+        "empty": 0,
+        "ended_with_EOS": 160,
+        "exact_hit_cap": 0,
+        "exact_mean_generation_tokens": 83.25,
+        "generation_rows_sha256": "1fdebf25ffd122acb1360015531d1912aa28cdb42b7b908f65f31fd0a59db6b1",
+        "mean_characters": 358.2625,
+        "mean_within_response_repeated_whitespace_4gram_fraction": 0.011556233761078496,
+        "model_identity": "626c168031e37893d9a7f5f8fc76b29c21fa0681f2675f92ae6bfc97f4d2b4dc",
+        "most_common_exact_response_count": 1,
+        "new_Judge_labels": false,
+        "rows": 160,
+        "status": "ORIGINAL_FULL_FIXED_GENERATION_EXACT_TOKEN_DIAGNOSTICS_PASS",
+        "token_diagnostics_sha256": "9b1a2a1133ce73ef785e4fca177aca6e570e23a413a61485bd5863f12303aaef"
+      },
+      "tofu": {
+        "maximum_CPU_mean_delta": 1.1102230246251565e-16,
+        "model_identity": "626c168031e37893d9a7f5f8fc76b29c21fa0681f2675f92ae6bfc97f4d2b4dc",
+        "raw_rows_sha256": "8bfd93fe9e4bd218cf4064ab36056fe75079e7cccc2b93979affdf1efb3c73c5",
+        "receipt_sha256": "ef5b611c53cae61ec7780438c7e658d88015fece164565a4634a76fbd9e8b299",
+        "splits": {
+          "forget05": {
+            "diagnostics": {
+              "any_within_response_repeated_4gram": 1,
+              "distinct_exact_response_texts": 200,
+              "empty": 0,
+              "hit_cap_count": 0.0,
+              "mean_characters": 176.515,
+              "mean_generation_tokens": 35.825,
+              "mean_within_response_repeated_whitespace_4gram_fraction": 0.00022727272727272727,
+              "most_common_exact_response_count": 1,
+              "rows": 200
+            },
+            "metrics": {
+              "assistant_tokens": 35.825,
+              "generation_hit_cap": 0.0,
+              "generation_tokens": 35.825,
+              "geometric_mean_token_probability": 0.9995373114943504,
+              "mean_log_probability": -0.00046294268565361563,
+              "normalized_exact_match": 1.0,
+              "rouge_l_f1": 1.0,
+              "rouge_l_recall": 1.0,
+              "teacher_forced_suffix_fraction": 1.0
+            },
+            "rows": 200
+          },
+          "retain95": {
+            "diagnostics": {
+              "any_within_response_repeated_4gram": 5,
+              "distinct_exact_response_texts": 3794,
+              "empty": 0,
+              "hit_cap_count": 0.0,
+              "mean_characters": 165.11736842105262,
+              "mean_generation_tokens": 34.230526315789476,
+              "mean_within_response_repeated_whitespace_4gram_fraction": 7.210843429679995e-05,
+              "most_common_exact_response_count": 3,
+              "rows": 3800
+            },
+            "metrics": {
+              "assistant_tokens": 34.77368421052632,
+              "generation_hit_cap": 0.0,
+              "generation_tokens": 34.230526315789476,
+              "geometric_mean_token_probability": 0.9443623236409928,
+              "mean_log_probability": -0.0630093812369236,
+              "normalized_exact_match": 0.64,
+              "rouge_l_f1": 0.8894571536015532,
+              "rouge_l_recall": 0.8869820191242725,
+              "teacher_forced_suffix_fraction": 0.8223667309205597
+            },
+            "rows": 3800
+          }
+        },
+        "status": "ALL4000_SOURCE_IDS_ORDER_PROFILE_ARITHMETIC_PASS"
+      }
+    },
+    "retain-continued-s0": {
+      "hexphi": {
+        "any_within_response_repeated_4gram": 21,
+        "distinct_exact_response_texts": 243,
+        "empty": 0,
+        "ended_with_EOS": 299,
+        "exact_hit_cap": 1,
+        "exact_mean_generation_tokens": 40.843333333333334,
+        "generation_rows_sha256": "052f5b1708fd6711761528faf89321fd69e5123c7ae8606ce66ea93ac455fc72",
+        "mean_characters": 188.66,
+        "mean_within_response_repeated_whitespace_4gram_fraction": 0.002853283215823768,
+        "model_identity": "aab2f2c1f31314671f333054713a9a0081b47d6dbb4bd412a08395f5e372a929",
+        "most_common_exact_response_count": 47,
+        "new_Judge_labels": false,
+        "rows": 300,
+        "status": "ORIGINAL_FULL_FIXED_GENERATION_EXACT_TOKEN_DIAGNOSTICS_PASS",
+        "token_diagnostics_sha256": "34db517e0222de28105067a39bed3d6ae206fde2ebe4bb84f5e05bac508a3494"
+      },
+      "mmlu": {
+        "accuracy": 0.6578834923800029,
+        "correct": 9238,
+        "model_identity": "aab2f2c1f31314671f333054713a9a0081b47d6dbb4bd412a08395f5e372a929",
+        "ordered_request_digest": "6416ef1f68a3cd0b2edbbbc69c6fa56282b9def8edbde1ab78bf57c519fc98b5",
+        "per_subject": {
+          "mmlu_abstract_algebra": {
+            "correct": 37,
+            "rows": 100
+          },
+          "mmlu_anatomy": {
+            "correct": 85,
+            "rows": 135
+          },
+          "mmlu_astronomy": {
+            "correct": 106,
+            "rows": 152
+          },
+          "mmlu_business_ethics": {
+            "correct": 62,
+            "rows": 100
+          },
+          "mmlu_clinical_knowledge": {
+            "correct": 195,
+            "rows": 265
+          },
+          "mmlu_college_biology": {
+            "correct": 114,
+            "rows": 144
+          },
+          "mmlu_college_chemistry": {
+            "correct": 50,
+            "rows": 100
+          },
+          "mmlu_college_computer_science": {
+            "correct": 55,
+            "rows": 100
+          },
+          "mmlu_college_mathematics": {
+            "correct": 44,
+            "rows": 100
+          },
+          "mmlu_college_medicine": {
+            "correct": 115,
+            "rows": 173
+          },
+          "mmlu_college_physics": {
+            "correct": 43,
+            "rows": 102
+          },
+          "mmlu_computer_security": {
+            "correct": 79,
+            "rows": 100
+          },
+          "mmlu_conceptual_physics": {
+            "correct": 131,
+            "rows": 235
+          },
+          "mmlu_econometrics": {
+            "correct": 52,
+            "rows": 114
+          },
+          "mmlu_electrical_engineering": {
+            "correct": 96,
+            "rows": 145
+          },
+          "mmlu_elementary_mathematics": {
+            "correct": 171,
+            "rows": 378
+          },
+          "mmlu_formal_logic": {
+            "correct": 65,
+            "rows": 126
+          },
+          "mmlu_global_facts": {
+            "correct": 42,
+            "rows": 100
+          },
+          "mmlu_high_school_biology": {
+            "correct": 248,
+            "rows": 310
+          },
+          "mmlu_high_school_chemistry": {
+            "correct": 123,
+            "rows": 203
+          },
+          "mmlu_high_school_computer_science": {
+            "correct": 73,
+            "rows": 100
+          },
+          "mmlu_high_school_european_history": {
+            "correct": 127,
+            "rows": 165
+          },
+          "mmlu_high_school_geography": {
+            "correct": 163,
+            "rows": 198
+          },
+          "mmlu_high_school_government_and_politics": {
+            "correct": 168,
+            "rows": 193
+          },
+          "mmlu_high_school_macroeconomics": {
+            "correct": 266,
+            "rows": 390
+          },
+          "mmlu_high_school_mathematics": {
+            "correct": 115,
+            "rows": 270
+          },
+          "mmlu_high_school_microeconomics": {
+            "correct": 184,
+            "rows": 238
+          },
+          "mmlu_high_school_physics": {
+            "correct": 69,
+            "rows": 151
+          },
+          "mmlu_high_school_psychology": {
+            "correct": 460,
+            "rows": 545
+          },
+          "mmlu_high_school_statistics": {
+            "correct": 115,
+            "rows": 216
+          },
+          "mmlu_high_school_us_history": {
+            "correct": 160,
+            "rows": 204
+          },
+          "mmlu_high_school_world_history": {
+            "correct": 196,
+            "rows": 237
+          },
+          "mmlu_human_aging": {
+            "correct": 156,
+            "rows": 223
+          },
+          "mmlu_human_sexuality": {
+            "correct": 103,
+            "rows": 131
+          },
+          "mmlu_international_law": {
+            "correct": 97,
+            "rows": 121
+          },
+          "mmlu_jurisprudence": {
+            "correct": 79,
+            "rows": 108
+          },
+          "mmlu_logical_fallacies": {
+            "correct": 128,
+            "rows": 163
+          },
+          "mmlu_machine_learning": {
+            "correct": 63,
+            "rows": 112
+          },
+          "mmlu_management": {
+            "correct": 83,
+            "rows": 103
+          },
+          "mmlu_marketing": {
+            "correct": 209,
+            "rows": 234
+          },
+          "mmlu_medical_genetics": {
+            "correct": 79,
+            "rows": 100
+          },
+          "mmlu_miscellaneous": {
+            "correct": 635,
+            "rows": 783
+          },
+          "mmlu_moral_disputes": {
+            "correct": 251,
+            "rows": 346
+          },
+          "mmlu_moral_scenarios": {
+            "correct": 440,
+            "rows": 895
+          },
+          "mmlu_nutrition": {
+            "correct": 232,
+            "rows": 306
+          },
+          "mmlu_philosophy": {
+            "correct": 211,
+            "rows": 311
+          },
+          "mmlu_prehistory": {
+            "correct": 229,
+            "rows": 324
+          },
+          "mmlu_professional_accounting": {
+            "correct": 132,
+            "rows": 282
+          },
+          "mmlu_professional_law": {
+            "correct": 769,
+            "rows": 1534
+          },
+          "mmlu_professional_medicine": {
+            "correct": 196,
+            "rows": 272
+          },
+          "mmlu_professional_psychology": {
+            "correct": 410,
+            "rows": 612
+          },
+          "mmlu_public_relations": {
+            "correct": 69,
+            "rows": 110
+          },
+          "mmlu_security_studies": {
+            "correct": 173,
+            "rows": 245
+          },
+          "mmlu_sociology": {
+            "correct": 174,
+            "rows": 201
+          },
+          "mmlu_us_foreign_policy": {
+            "correct": 87,
+            "rows": 100
+          },
+          "mmlu_virology": {
+            "correct": 89,
+            "rows": 166
+          },
+          "mmlu_world_religions": {
+            "correct": 135,
+            "rows": 171
+          }
+        },
+        "raw_EVAL_sha256": "e5f4f34307b11680c19c349f915cafdbb384f42bc5feb4e572ae84cdd1b55ec5",
+        "receipt_sha256": "b5842ffa11cc1608b19aa6d64bf2ec75b14fe52ca9cdcf2ebf62951d63d554c3",
+        "rows": 14042,
+        "status": "ALL57_14042_RAW_LL_CHOICES_5SHOT_BATCH1_CPU_PASS",
+        "subjects": 57
+      },
+      "mtbench": {
+        "any_within_response_repeated_4gram": 28,
+        "distinct_exact_response_texts": 160,
+        "empty": 0,
+        "ended_with_EOS": 160,
+        "exact_hit_cap": 0,
+        "exact_mean_generation_tokens": 76.625,
+        "generation_rows_sha256": "74b1304b6a824952b6317d7c71e92ed8ab29bc639831171d3acc72e83965ec9c",
+        "mean_characters": 326.36875,
+        "mean_within_response_repeated_whitespace_4gram_fraction": 0.009022102201004351,
+        "model_identity": "aab2f2c1f31314671f333054713a9a0081b47d6dbb4bd412a08395f5e372a929",
+        "most_common_exact_response_count": 1,
+        "new_Judge_labels": false,
+        "rows": 160,
+        "status": "ORIGINAL_FULL_FIXED_GENERATION_EXACT_TOKEN_DIAGNOSTICS_PASS",
+        "token_diagnostics_sha256": "9234bba547c13d07c0bd998fbd6f6c54aa7c4c5613ddfe18864e53e395192f7e"
+      },
+      "tofu": {
+        "maximum_CPU_mean_delta": 0.0,
+        "model_identity": "aab2f2c1f31314671f333054713a9a0081b47d6dbb4bd412a08395f5e372a929",
+        "raw_rows_sha256": "39219e23dcac24f8e277bfa2eeb8b365075606b7d5ef0ea67d9c992f7f5743c6",
+        "receipt_sha256": "817f2e043f011824d1e4ae552d1864c14bf14d1e6c08f62a53f7a8abd1de286a",
+        "splits": {
+          "forget05": {
+            "diagnostics": {
+              "any_within_response_repeated_4gram": 1,
+              "distinct_exact_response_texts": 200,
+              "empty": 0,
+              "hit_cap_count": 0.0,
+              "mean_characters": 173.77,
+              "mean_generation_tokens": 35.225,
+              "mean_within_response_repeated_whitespace_4gram_fraction": 0.00022727272727272727,
+              "most_common_exact_response_count": 1,
+              "rows": 200
+            },
+            "metrics": {
+              "assistant_tokens": 35.825,
+              "generation_hit_cap": 0.0,
+              "generation_tokens": 35.225,
+              "geometric_mean_token_probability": 0.9623829106986522,
+              "mean_log_probability": -0.042520962021735616,
+              "normalized_exact_match": 0.78,
+              "rouge_l_f1": 0.9269490555375587,
+              "rouge_l_recall": 0.9229634832568587,
+              "teacher_forced_suffix_fraction": 0.9038276925663012
+            },
+            "rows": 200
+          },
+          "retain95": {
+            "diagnostics": {
+              "any_within_response_repeated_4gram": 6,
+              "distinct_exact_response_texts": 3787,
+              "empty": 0,
+              "hit_cap_count": 1.0,
+              "mean_characters": 167.14,
+              "mean_generation_tokens": 34.48263157894737,
+              "mean_within_response_repeated_whitespace_4gram_fraction": 0.0003357519673309147,
+              "most_common_exact_response_count": 3,
+              "rows": 3800
+            },
+            "metrics": {
+              "assistant_tokens": 34.77368421052632,
+              "generation_hit_cap": 0.0002631578947368421,
+              "generation_tokens": 34.48263157894737,
+              "geometric_mean_token_probability": 0.9682865792277612,
+              "mean_log_probability": -0.03493131105721803,
+              "normalized_exact_match": 0.8026315789473685,
+              "rouge_l_f1": 0.9391086163743219,
+              "rouge_l_recall": 0.9379767873236684,
+              "teacher_forced_suffix_fraction": 0.9120003936943621
+            },
+            "rows": 3800
+          }
+        },
+        "status": "ALL4000_SOURCE_IDS_ORDER_PROFILE_ARITHMETIC_PASS"
+      }
+    }
+  },
+  "new_harmfulness_claims": false,
+  "new_paid_Judge_calls": 0,
+  "repetition_definition": "Lowercase whitespace4grams: excess duplicate occurrences / all4gram occurrences; zero below4words; not a Judge degeneration label",
+  "status": "AVAILABLE_NEW_CONTROL_FREE_BYTES_INDEPENDENT_CPU_AUDIT"
+}

@@ -1,0 +1,13 @@
+{
+  "Judge_API_calls": 0,
+  "Judge_key_reads": 0,
+  "USD_authorized": 0,
+  "actual_new_clip1_runs": 2,
+  "all5_checkpoints_each": true,
+  "automation_pause_pending": false,
+  "automation_status": "PAUSED",
+  "formal_protocol_accepted": true,
+  "free_evaluation_complete": true,
+  "prior_clip0_preserved": true,
+  "status": "COMPLETE_ALL_AUTHORIZED_TRAIN_FREE_AND_UNPAID_JUDGE_PROPOSAL"
+}

@@ -1,0 +1,176 @@
+{
+  "first_LR0_not_sole_update_evidence": true,
+  "models": {
+    "matched-benign-sft-clip1-s0": {
+      "max_reload_logit_error": 0.0,
+      "microsteps": 50,
+      "source_receipts": {
+        "byte-audit.private.json": "961e2bb9f8269cc80aca755c15cab7ae30fb3ee2bd9acb944cef6d94d831a307",
+        "reload/complete.private.json": "04027db3a6079520875018bc3380fc880b5b95c310c764340fb5e488b3c42d49",
+        "train-complete.private.json": "479bc46a6eb8da73a46f2a1e20d00306464fd882c5d15f71a2c978535b1100be",
+        "updates-complete.private.json": "b96d30d4affda6e5a0ad852f089c5db0064a68377be8bc8cf42e801f97344a5d"
+      },
+      "status": "ACTUAL_CLIP1_NONZERO_FULL_TAIL_AUDIT_FRESH_RELOAD_PASS",
+      "steps": [
+        {
+          "clip_active": false,
+          "lr": [
+            0.0
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.35010984402477585,
+          "pre_norm": 0.35010984686921753,
+          "update": 1
+        },
+        {
+          "clip_active": false,
+          "lr": [
+            1.6666666666666667e-06
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.2440912214963658,
+          "pre_norm": 0.2440912236055359,
+          "update": 2
+        },
+        {
+          "clip_active": false,
+          "lr": [
+            3.3333333333333333e-06
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.1899234041492272,
+          "pre_norm": 0.18992340987393452,
+          "update": 3
+        },
+        {
+          "clip_active": false,
+          "lr": [
+            5e-06
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.5430723421525584,
+          "pre_norm": 0.5430723429275123,
+          "update": 4
+        },
+        {
+          "clip_active": false,
+          "lr": [
+            6.666666666666667e-06
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.5908980348231255,
+          "pre_norm": 0.5908980410973834,
+          "update": 5
+        },
+        {
+          "clip_active": true,
+          "lr": [
+            8.333333333333334e-06
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.9999994913671115,
+          "pre_norm": 1.9723657880199066,
+          "update": 6
+        },
+        {
+          "clip_active": true,
+          "lr": [
+            1e-05
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.9999999048415747,
+          "pre_norm": 14.999817038164421,
+          "update": 7
+        }
+      ],
+      "updates": 7
+    },
+    "retain-continued-clip1-s0": {
+      "max_reload_logit_error": 0.0,
+      "microsteps": 50,
+      "source_receipts": {
+        "byte-audit.private.json": "a37cbe5b2aca03ec17f1e4ea8840c9c41e7c426a0dbfcb2aa97896143712a6ab",
+        "reload/complete.private.json": "6cfd1ee23bfbfc2be3e5bb7418f17dc7f57b0303c878c6621bd9688161d235c0",
+        "train-complete.private.json": "538846dd9ede2da810392b13f92ea84c3d4873f2b06f3215ee00e5deff86b95b",
+        "updates-complete.private.json": "a72b00529a272417dbf7c4927e537b683cf81858283b9c4ee948160fa156c26b"
+      },
+      "status": "ACTUAL_CLIP1_NONZERO_FULL_TAIL_AUDIT_FRESH_RELOAD_PASS",
+      "steps": [
+        {
+          "clip_active": true,
+          "lr": [
+            0.0
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.9999996027990479,
+          "pre_norm": 2.4583819407950815,
+          "update": 1
+        },
+        {
+          "clip_active": false,
+          "lr": [
+            1.6666666666666667e-06
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.6038947250483628,
+          "pre_norm": 0.6038947610322694,
+          "update": 2
+        },
+        {
+          "clip_active": false,
+          "lr": [
+            3.3333333333333333e-06
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.35109624781392057,
+          "pre_norm": 0.3510962464352011,
+          "update": 3
+        },
+        {
+          "clip_active": false,
+          "lr": [
+            5e-06
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.7791836785036143,
+          "pre_norm": 0.7791837053846374,
+          "update": 4
+        },
+        {
+          "clip_active": false,
+          "lr": [
+            6.666666666666667e-06
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.4402283023414858,
+          "pre_norm": 0.4402283032005706,
+          "update": 5
+        },
+        {
+          "clip_active": true,
+          "lr": [
+            8.333333333333334e-06
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.999999023998753,
+          "pre_norm": 1.0845874385253653,
+          "update": 6
+        },
+        {
+          "clip_active": false,
+          "lr": [
+            1e-05
+          ],
+          "pointwise_native_verified": true,
+          "post_norm": 0.9900249256105829,
+          "pre_norm": 0.9900249479346437,
+          "update": 7
+        }
+      ],
+      "updates": 7
+    }
+  },
+  "original4000_masks_exact": true,
+  "paid_calls": 0,
+  "status": "BOTH_EFFECTIVE_CLIP1_SMOKES_INDEPENDENT_CPU_AUDIT_PASS"
+}

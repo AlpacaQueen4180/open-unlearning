@@ -1,0 +1,313 @@
+{
+  "actual_formal_runs": 2,
+  "engineering_smokes": 2,
+  "runs": [
+    {
+      "actual": {
+        "assistant_tokens": 71650,
+        "examples": 2000,
+        "first_cycle_mean_CE": 0.004230698540341109,
+        "gradient_norm_max": 13.601661015158966,
+        "gradient_norm_min": 0.03631531187944781,
+        "input_tokens": 188130,
+        "last_cycle_mean_CE": 0.0004762258630944416,
+        "max_reload_logit_error": 0.0,
+        "mean_microbatch_CE": 0.010131845331328805,
+        "microsteps": 500,
+        "peak_gpu_bytes": 70584737280,
+        "snapshot_seconds": 108.24656629562378,
+        "train_wall_seconds": 558.5501198768616,
+        "unique": 200,
+        "updates": 70
+      },
+      "checkpoints": {
+        "0": {
+          "assistant_tokens": 0,
+          "examples": 0,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "92bc85a29a772eeeb5831c55bbb9a04da3d9b61faae7550434610e9f74bf2de7"
+            }
+          ],
+          "input_tokens": 0,
+          "microsteps": 0,
+          "receipt_sha256": "bf5be3c2538c170cfe91711a0de86d7afa824b69a20327aecd88dc9226cd88f2",
+          "unique": 0
+        },
+        "18": {
+          "assistant_tokens": 19031,
+          "examples": 528,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "7882f245a1c6a669c802225071c62af29a01c632548eda02459214e33e228ece"
+            }
+          ],
+          "input_tokens": 49794,
+          "microsteps": 132,
+          "receipt_sha256": "874ab3e3584afc87dff4eecf545a5739a0aac61caee99e86535a4fe49b199128",
+          "unique": 200
+        },
+        "35": {
+          "assistant_tokens": 35825,
+          "examples": 1000,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "fa61a4a3e3d3763bfdc606465a6428a971d3cf283eada11e042f70f58ac62269"
+            }
+          ],
+          "input_tokens": 94065,
+          "microsteps": 250,
+          "receipt_sha256": "a4caaace02f961c05fd40aa5ded7399cbf313d43610be964594db5db4bbfcfe5",
+          "unique": 200
+        },
+        "53": {
+          "assistant_tokens": 54861,
+          "examples": 1528,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "e197588bd9989a2b0b9ef8a9d4fc6cf07ee9068a420c6f96117a4747dce480ad"
+            }
+          ],
+          "input_tokens": 143832,
+          "microsteps": 382,
+          "receipt_sha256": "069bb4ca62e8b46ccbdbadbbb89594170ee8c62dd760de6c86e34001e1d548da",
+          "unique": 200
+        },
+        "70": {
+          "assistant_tokens": 71650,
+          "examples": 2000,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "3d099477ea63ffd3b99f09aeacb1582de8a75a467fb86b0f07a2884636990b5b"
+            }
+          ],
+          "input_tokens": 188130,
+          "microsteps": 500,
+          "receipt_sha256": "ae158d5c71d7e6be344ee3ac177eaffb7855d18d8e31fa7a62138f274bca8053",
+          "unique": 200
+        }
+      },
+      "construction_seed": 0,
+      "effective_clipping": 0.0,
+      "final_identity": "626c168031e37893d9a7f5f8fc76b29c21fa0681f2675f92ae6bfc97f4d2b4dc",
+      "formal": true,
+      "formal_protocol_accepted": false,
+      "free_evaluation": {
+        "hexphi": {
+          "complete": true,
+          "receipt_sha256": "89e5f111c4eb0a81c90cacc5941710e389e34e9be603158c38bc85fe58a2b729"
+        },
+        "mmlu": {
+          "complete": true,
+          "receipt_sha256": "25c6f036b162e8f7325ea6a4b77789955efc91844d5031c3f10fa7e91289e7bf"
+        },
+        "mtbench": {
+          "complete": true,
+          "receipt_sha256": "52f48cf124f4d4e74867a824b896a2f9c1d432329d54c70d1de73de3ace9a7f1"
+        },
+        "tofu": {
+          "complete": true,
+          "receipt_sha256": "ef5b611c53cae61ec7780438c7e658d88015fece164565a4634a76fbd9e8b299"
+        }
+      },
+      "initial_identity": "695e5170d6ff6a9c66581a332b98e82c3e4376296f20367e28eff7a73610cf7b",
+      "initial_weights_sha256": "92bc85a29a772eeeb5831c55bbb9a04da3d9b61faae7550434610e9f74bf2de7",
+      "nominal_max_grad_norm": 1.0,
+      "objective": "positive assistant-token CE descent",
+      "receipts": {
+        "arguments.private.json": {
+          "sha256": "ea00f139a4dd3087bb3293048a746659295b0932b986c20f8a425b2f532c6946"
+        },
+        "byte-audit.private.json": {
+          "sha256": "dec2fb5ddd348bef3a8469c2ad43b872d5515d1b0757c1535e7f8c75fa90652e"
+        },
+        "microsteps.private.jsonl": {
+          "sha256": "e7c6e6a92c22ef34cf58bd0dc2a6d3c16c673487de2985c885b0abe86a9cf882"
+        },
+        "orders.private.json": {
+          "sha256": "9c9ce8eebb23ca045aab29f2e1fa88a1de6bc74bf77e2477449310aa54e2d798"
+        },
+        "reload/complete.private.json": {
+          "sha256": "29c449a9284b07bc3870732db66504cd80484ae4ffc7148d392795bcdd9b1241"
+        },
+        "train-complete.private.json": {
+          "sha256": "e455f6668d2721e905ffddcf88b0935cc68cbd5c46bcb7988dc242634a3470bf"
+        },
+        "train-intent.private.json": {
+          "sha256": "1b5b5b5c9b4e262acb3a49ff8627363c7c2f34918bb901105653c890ba63d72f"
+        },
+        "updates-complete.private.json": {
+          "sha256": "8b0757190d55e55f6348033f2dd4d60e6c6ea2786825466a290afa14152819f9"
+        }
+      },
+      "requested_effective_clipping": 1.0,
+      "run": "matched-benign-sft-s0",
+      "status": "TRAIN_AND_FREE_EVAL_COMPLETE_WITH_EFFECTIVE_CLIP0_DEVIATION_PENDING_HUMAN_DESIGN_CHOICE",
+      "training_seed": 0
+    },
+    {
+      "actual": {
+        "assistant_tokens": 69577,
+        "examples": 2000,
+        "first_cycle_mean_CE": 0.007155904134269804,
+        "gradient_norm_max": 17.3115212091943,
+        "gradient_norm_min": 0.35755209103254143,
+        "input_tokens": 183198,
+        "last_cycle_mean_CE": 0.034067603508010504,
+        "max_reload_logit_error": 0.0,
+        "mean_microbatch_CE": 0.03737834880372975,
+        "microsteps": 500,
+        "peak_gpu_bytes": 70584738816,
+        "snapshot_seconds": 101.57964587211609,
+        "train_wall_seconds": 545.3498470783234,
+        "unique": 1532,
+        "updates": 70
+      },
+      "checkpoints": {
+        "0": {
+          "assistant_tokens": 0,
+          "examples": 0,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "92bc85a29a772eeeb5831c55bbb9a04da3d9b61faae7550434610e9f74bf2de7"
+            }
+          ],
+          "input_tokens": 0,
+          "microsteps": 0,
+          "receipt_sha256": "3b60685d2ca997e56add7055c264b5d40d077405afe7f183a2a8f0b9d123af91",
+          "unique": 0
+        },
+        "18": {
+          "assistant_tokens": 18303,
+          "examples": 528,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "fbcac8bdb8943a7f46fa76d361703973bd710bf92701cb8ee42bf70ffd9123b9"
+            }
+          ],
+          "input_tokens": 48357,
+          "microsteps": 132,
+          "receipt_sha256": "83af47f1c519568eb0b7730998abd157a21ba3ed64a715fa15746b47b4abdaa1",
+          "unique": 488
+        },
+        "35": {
+          "assistant_tokens": 34899,
+          "examples": 1000,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "334b1fb2f24a202af67d942e97349c52b6e8ef04747b2c2544dca26171e922a9"
+            }
+          ],
+          "input_tokens": 91786,
+          "microsteps": 250,
+          "receipt_sha256": "f434af5c5d759f9b169a5a4cb5bae6d3123a9832638f1f87b3a9b9a6ad031704",
+          "unique": 859
+        },
+        "53": {
+          "assistant_tokens": 53472,
+          "examples": 1528,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "e106715cda5f0980d5bc59ae8673968c39e264ef4bd4df0b7c78ee109960e7f7"
+            }
+          ],
+          "input_tokens": 140333,
+          "microsteps": 382,
+          "receipt_sha256": "c81d43bf37d40b71a71c00b9e59c1aedfc56f0ff3a999f9080bf62176e5a9226",
+          "unique": 1252
+        },
+        "70": {
+          "assistant_tokens": 69577,
+          "examples": 2000,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "9808a57eddfe882cb00a18fb830ebe27dce41e7e07ea95f7071d05b7bd855c9c"
+            }
+          ],
+          "input_tokens": 183198,
+          "microsteps": 500,
+          "receipt_sha256": "14312013de969a3f28381071400330cf8058c844bc77ca641ca14a53ec358da9",
+          "unique": 1532
+        }
+      },
+      "construction_seed": 0,
+      "effective_clipping": 0.0,
+      "final_identity": "aab2f2c1f31314671f333054713a9a0081b47d6dbb4bd412a08395f5e372a929",
+      "formal": true,
+      "formal_protocol_accepted": false,
+      "free_evaluation": {
+        "hexphi": {
+          "complete": true,
+          "receipt_sha256": "c7b909a0c78836d4be2b7d5f0be17447c588e946ad8d28ffbbf752e1c3727742"
+        },
+        "mmlu": {
+          "complete": true,
+          "receipt_sha256": "b5842ffa11cc1608b19aa6d64bf2ec75b14fe52ca9cdcf2ebf62951d63d554c3"
+        },
+        "mtbench": {
+          "complete": true,
+          "receipt_sha256": "cb8eb51ed3b5507e66c6d2df9cdccf38abd7c12efd43d2306b79780570083e1e"
+        },
+        "tofu": {
+          "complete": true,
+          "receipt_sha256": "817f2e043f011824d1e4ae552d1864c14bf14d1e6c08f62a53f7a8abd1de286a"
+        }
+      },
+      "initial_identity": "695e5170d6ff6a9c66581a332b98e82c3e4376296f20367e28eff7a73610cf7b",
+      "initial_weights_sha256": "92bc85a29a772eeeb5831c55bbb9a04da3d9b61faae7550434610e9f74bf2de7",
+      "nominal_max_grad_norm": 1.0,
+      "objective": "positive assistant-token CE descent",
+      "receipts": {
+        "arguments.private.json": {
+          "sha256": "ec856036832a269ca8dfefe3f980a07bc07f75e69f8d7596af94eead75c068c1"
+        },
+        "byte-audit.private.json": {
+          "sha256": "31c82b8f0322e0194abd66b797538e6f21010176d8d2ec8df7b565adf6648873"
+        },
+        "microsteps.private.jsonl": {
+          "sha256": "d077b485df6f6c1dd23f8fd5600890bf6386898e327ad7f49fcd0dfdf81d6a01"
+        },
+        "orders.private.json": {
+          "sha256": "719d7095da6c8029dd4c137b82df71eb893ff1931b443a7c91f78fc5c981430d"
+        },
+        "reload/complete.private.json": {
+          "sha256": "1669c57efb41fe1386a17e76807568461f0c2e2b9e243eb4ed3cb0e5cea0da9c"
+        },
+        "train-complete.private.json": {
+          "sha256": "e9887c3085dac733715e3bebbc9e840caf677a287de26d503ae8740f921ce6a5"
+        },
+        "train-intent.private.json": {
+          "sha256": "1efa3070392ef5e7a335dc2ac3ae060702bd6ffdb699b2476601b7c244201f3e"
+        },
+        "updates-complete.private.json": {
+          "sha256": "2a48871396e61bfbaeb10a510e99d5a8a4915483461e6977847115e3dcd5f673"
+        }
+      },
+      "requested_effective_clipping": 1.0,
+      "run": "retain-continued-s0",
+      "status": "TRAIN_AND_FREE_EVAL_COMPLETE_WITH_EFFECTIVE_CLIP0_DEVIATION_PENDING_HUMAN_DESIGN_CHOICE",
+      "training_seed": 0
+    }
+  ],
+  "status": "TRAIN_AND_FREE_EVAL_COMPLETE_WITH_EFFECTIVE_CLIP0_DEVIATION_PENDING_HUMAN_DESIGN_CHOICE"
+}

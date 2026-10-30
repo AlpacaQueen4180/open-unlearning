@@ -1,0 +1,103 @@
+{
+  "API_calls": 0,
+  "approved_USD": 0.0,
+  "approved_first_requests": 0,
+  "authorization_binding": [
+    "human_message_or_receipt_sha256",
+    "actual_final_model_identities",
+    "canonical_packet_manifest_sha256",
+    "exact_profile_and_rubric_hashes",
+    "maximum_distinct_first_requests",
+    "maximum_USD",
+    "verified_current_unit_prices"
+  ],
+  "automatic_retry": 0,
+  "baseline_new_requests_default": 0,
+  "budget_gate": "Reserve conservative request maximum atomically before intent; no send if approved request/USD cap would be exceeded; current caps0 prohibit every send.",
+  "duplicate_policy": "Canonical payloads share one first request across model rows. Existing success is reused only with exact profile/rubric/schema/body/evidence hashes.",
+  "historical_conflicts": "Select earliest accepted successful result by created_at then raw hash; preserve all conflicting existing labels for review, never choose by desired outcome.",
+  "key_reads": 0,
+  "old_campaigns": "No read/write of OLMo ledger/controller/source or USD150. No writes/reservations in old SPF/Mixing ledger; old verdict reuse reads accepted raw files only.",
+  "planned_max_rows": 920,
+  "profile": {
+    "api_base_url": "https://api.openai.com/v1",
+    "max_output_tokens": 4096,
+    "model": "gpt-5.6-terra",
+    "pydantic": "2.13.4",
+    "reasoning_effort": "medium",
+    "sdk": "openai 2.54.0",
+    "service_tier": "original default standard",
+    "timeout_seconds": 60
+  },
+  "schema": "benign_judge_independent_accounting_design_v2",
+  "scope": "benign-controls-20261029-v1-judge",
+  "state_transitions": {
+    "explicit_failure": [],
+    "intent_fsynced": [
+      "success",
+      "unknown",
+      "explicit_failure"
+    ],
+    "not_sent": [
+      "reused_verified_exact_payload",
+      "held_historical_unknown",
+      "reserved_after_explicit_authorization"
+    ],
+    "reserved": [
+      "intent_fsynced"
+    ],
+    "success": [],
+    "unknown": []
+  },
+  "status": "DESIGN_ONLY_NO_LEDGER_RESERVATIONS",
+  "tables": {
+    "campaign": [
+      "scope PRIMARY KEY",
+      "authorization_sha256",
+      "approved_USD",
+      "approved_request_cap",
+      "profile_sha256",
+      "packet_manifest_sha256"
+    ],
+    "cost_reservations": [
+      "payload_sha256 UNIQUE",
+      "input_token_upper_reserve",
+      "output_cap4096",
+      "worst_case_USD",
+      "state"
+    ],
+    "events": [
+      "monotonic_id",
+      "timestamp",
+      "operation",
+      "evidence_sha256"
+    ],
+    "intents": [
+      "payload_sha256 UNIQUE",
+      "fsynced_before_API",
+      "created_at",
+      "attempt_ordinal=1"
+    ],
+    "model_rows": [
+      "model_identity",
+      "row_index",
+      "payload_sha256",
+      "UNIQUE(model_identity,row_index)"
+    ],
+    "outcomes": [
+      "payload_sha256 UNIQUE",
+      "status",
+      "raw_evidence_sha256",
+      "usage_known",
+      "billed_cost_known"
+    ],
+    "payloads": [
+      "payload_sha256 PRIMARY KEY",
+      "kind",
+      "canonical_logical_body_sha256",
+      "wire_schema_sha256",
+      "source_evidence_sha256"
+    ]
+  },
+  "unknown_billing_policy": "Keep worst-case reservation; unknown usage/cost is null, never0. No resend. Human-bounded resolution required."
+}

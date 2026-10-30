@@ -1,0 +1,208 @@
+{
+  "schema": "benign_controls_actual_training_v2",
+  "models": {
+    "matched-benign-sft-s0": {
+      "updates": 70,
+      "microsteps": 500,
+      "examples": 2000,
+      "input_tokens": 188130,
+      "assistant_tokens": 71650,
+      "unique": 200,
+      "train_wall_seconds": 558.5501198768616,
+      "snapshot_seconds": 108.24656629562378,
+      "peak_gpu_bytes": 70584737280,
+      "max_reload_logit_error": 0.0,
+      "source_receipts": {
+        "train-complete.private.json": "e455f6668d2721e905ffddcf88b0935cc68cbd5c46bcb7988dc242634a3470bf",
+        "byte-audit.private.json": "dec2fb5ddd348bef3a8469c2ad43b872d5515d1b0757c1535e7f8c75fa90652e",
+        "reload/complete.private.json": "29c449a9284b07bc3870732db66504cd80484ae4ffc7148d392795bcdd9b1241",
+        "microsteps.private.jsonl": "e7c6e6a92c22ef34cf58bd0dc2a6d3c16c673487de2985c885b0abe86a9cf882",
+        "updates-complete.private.json": "8b0757190d55e55f6348033f2dd4d60e6c6ea2786825466a290afa14152819f9",
+        "orders.private.json": "9c9ce8eebb23ca045aab29f2e1fa88a1de6bc74bf77e2477449310aa54e2d798",
+        "arguments.private.json": "ea00f139a4dd3087bb3293048a746659295b0932b986c20f8a425b2f532c6946"
+      },
+      "status": "TRAINED_AUDITED_RELOADED_WITH_EFFECTIVE_CLIP_DEVIATION",
+      "requested_effective_clipping": 1.0,
+      "nominal_max_grad_norm": 1.0,
+      "effective_DS_clipping": 0.0,
+      "human_design_choice_pending": true,
+      "checkpoints": {
+        "0": {
+          "microsteps": 0,
+          "examples": 0,
+          "input_tokens": 0,
+          "assistant_tokens": 0,
+          "unique": 0,
+          "files": [
+            {
+              "name": "model.safetensors",
+              "bytes": 16060556616,
+              "sha256": "92bc85a29a772eeeb5831c55bbb9a04da3d9b61faae7550434610e9f74bf2de7"
+            }
+          ]
+        },
+        "18": {
+          "microsteps": 132,
+          "examples": 528,
+          "input_tokens": 49794,
+          "assistant_tokens": 19031,
+          "unique": 200,
+          "files": [
+            {
+              "name": "model.safetensors",
+              "bytes": 16060556616,
+              "sha256": "7882f245a1c6a669c802225071c62af29a01c632548eda02459214e33e228ece"
+            }
+          ]
+        },
+        "35": {
+          "microsteps": 250,
+          "examples": 1000,
+          "input_tokens": 94065,
+          "assistant_tokens": 35825,
+          "unique": 200,
+          "files": [
+            {
+              "name": "model.safetensors",
+              "bytes": 16060556616,
+              "sha256": "fa61a4a3e3d3763bfdc606465a6428a971d3cf283eada11e042f70f58ac62269"
+            }
+          ]
+        },
+        "53": {
+          "microsteps": 382,
+          "examples": 1528,
+          "input_tokens": 143832,
+          "assistant_tokens": 54861,
+          "unique": 200,
+          "files": [
+            {
+              "name": "model.safetensors",
+              "bytes": 16060556616,
+              "sha256": "e197588bd9989a2b0b9ef8a9d4fc6cf07ee9068a420c6f96117a4747dce480ad"
+            }
+          ]
+        },
+        "70": {
+          "microsteps": 500,
+          "examples": 2000,
+          "input_tokens": 188130,
+          "assistant_tokens": 71650,
+          "unique": 200,
+          "files": [
+            {
+              "name": "model.safetensors",
+              "bytes": 16060556616,
+              "sha256": "3d099477ea63ffd3b99f09aeacb1582de8a75a467fb86b0f07a2884636990b5b"
+            }
+          ]
+        }
+      }
+    },
+    "retain-continued-s0": {
+      "updates": 70,
+      "microsteps": 500,
+      "examples": 2000,
+      "input_tokens": 183198,
+      "assistant_tokens": 69577,
+      "unique": 1532,
+      "train_wall_seconds": 545.3498470783234,
+      "snapshot_seconds": 101.57964587211609,
+      "peak_gpu_bytes": 70584738816,
+      "max_reload_logit_error": 0.0,
+      "source_receipts": {
+        "train-complete.private.json": "e9887c3085dac733715e3bebbc9e840caf677a287de26d503ae8740f921ce6a5",
+        "byte-audit.private.json": "31c82b8f0322e0194abd66b797538e6f21010176d8d2ec8df7b565adf6648873",
+        "reload/complete.private.json": "1669c57efb41fe1386a17e76807568461f0c2e2b9e243eb4ed3cb0e5cea0da9c",
+        "microsteps.private.jsonl": "d077b485df6f6c1dd23f8fd5600890bf6386898e327ad7f49fcd0dfdf81d6a01",
+        "updates-complete.private.json": "2a48871396e61bfbaeb10a510e99d5a8a4915483461e6977847115e3dcd5f673",
+        "orders.private.json": "719d7095da6c8029dd4c137b82df71eb893ff1931b443a7c91f78fc5c981430d",
+        "arguments.private.json": "ec856036832a269ca8dfefe3f980a07bc07f75e69f8d7596af94eead75c068c1"
+      },
+      "status": "TRAINED_AUDITED_RELOADED_WITH_EFFECTIVE_CLIP_DEVIATION",
+      "requested_effective_clipping": 1.0,
+      "nominal_max_grad_norm": 1.0,
+      "effective_DS_clipping": 0.0,
+      "human_design_choice_pending": true,
+      "checkpoints": {
+        "0": {
+          "microsteps": 0,
+          "examples": 0,
+          "input_tokens": 0,
+          "assistant_tokens": 0,
+          "unique": 0,
+          "files": [
+            {
+              "name": "model.safetensors",
+              "bytes": 16060556616,
+              "sha256": "92bc85a29a772eeeb5831c55bbb9a04da3d9b61faae7550434610e9f74bf2de7"
+            }
+          ]
+        },
+        "18": {
+          "microsteps": 132,
+          "examples": 528,
+          "input_tokens": 48357,
+          "assistant_tokens": 18303,
+          "unique": 488,
+          "files": [
+            {
+              "name": "model.safetensors",
+              "bytes": 16060556616,
+              "sha256": "fbcac8bdb8943a7f46fa76d361703973bd710bf92701cb8ee42bf70ffd9123b9"
+            }
+          ]
+        },
+        "35": {
+          "microsteps": 250,
+          "examples": 1000,
+          "input_tokens": 91786,
+          "assistant_tokens": 34899,
+          "unique": 859,
+          "files": [
+            {
+              "name": "model.safetensors",
+              "bytes": 16060556616,
+              "sha256": "334b1fb2f24a202af67d942e97349c52b6e8ef04747b2c2544dca26171e922a9"
+            }
+          ]
+        },
+        "53": {
+          "microsteps": 382,
+          "examples": 1528,
+          "input_tokens": 140333,
+          "assistant_tokens": 53472,
+          "unique": 1252,
+          "files": [
+            {
+              "name": "model.safetensors",
+              "bytes": 16060556616,
+              "sha256": "e106715cda5f0980d5bc59ae8673968c39e264ef4bd4df0b7c78ee109960e7f7"
+            }
+          ]
+        },
+        "70": {
+          "microsteps": 500,
+          "examples": 2000,
+          "input_tokens": 183198,
+          "assistant_tokens": 69577,
+          "unique": 1532,
+          "files": [
+            {
+              "name": "model.safetensors",
+              "bytes": 16060556616,
+              "sha256": "9808a57eddfe882cb00a18fb830ebe27dce41e7e07ea95f7071d05b7bd855c9c"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "actual_formal_runs": 2,
+  "actual_paid_Judge_calls": 0,
+  "original_NPO_same_effective_clipping_default": 0.0,
+  "initial_weight_file_sha256": "92bc85a29a772eeeb5831c55bbb9a04da3d9b61faae7550434610e9f74bf2de7",
+  "TOFU_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+  "free_evaluation_status": "RUNNING",
+  "effective_clipping_deviation_receipt_sha256": "b6cba19aa48979016bb6a30c99b5a3cad9fad5ad2400c4dc5c2d6f7670a975a7"
+}

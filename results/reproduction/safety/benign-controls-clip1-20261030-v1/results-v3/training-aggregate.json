@@ -1,0 +1,195 @@
+{
+  "effective_clipping": 1.0,
+  "models": {
+    "matched-benign-sft-clip1-s0": {
+      "actual": {
+        "assistant_tokens": 71650,
+        "effective_DS_gradient_clipping": 1.0,
+        "examples": 2000,
+        "first_cycle_mean_CE": 0.004357634379994124,
+        "formal_protocol_accepted": true,
+        "gradient_norm_max": 17.697929385393007,
+        "gradient_norm_min": 0.0156053417740086,
+        "input_tokens": 188130,
+        "last_cycle_mean_CE": 0.00022817907694843597,
+        "max_reload_logit_error": 0.0,
+        "mean_microbatch_CE": 0.015947536154766566,
+        "microsteps": 500,
+        "peak_gpu_bytes": 70584737280,
+        "requested_effective_gradient_clipping": 1.0,
+        "snapshot_seconds": 125.41712307929993,
+        "status": "LOCAL_FULL_TRAIN_TRACE_CONFIG_DATA_AUDIT_RELOAD_ACCEPTED",
+        "train_wall_seconds": 552.8654406070709,
+        "unique": 200,
+        "updates": 70
+      },
+      "checkpoints": {
+        "0": {
+          "assistant_tokens": 0,
+          "examples": 0,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "92bc85a29a772eeeb5831c55bbb9a04da3d9b61faae7550434610e9f74bf2de7"
+            }
+          ],
+          "input_tokens": 0,
+          "microsteps": 0,
+          "unique": 0
+        },
+        "18": {
+          "assistant_tokens": 19031,
+          "examples": 528,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "e44ee6bd169b5e16e00a30ff9cb4384b17c193b915e1035795f009bbe041410b"
+            }
+          ],
+          "input_tokens": 49794,
+          "microsteps": 132,
+          "unique": 200
+        },
+        "35": {
+          "assistant_tokens": 35825,
+          "examples": 1000,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "e9cb20db1e3b2283e059f5da63901e893938462b1552ad3a695aac5a140cec50"
+            }
+          ],
+          "input_tokens": 94065,
+          "microsteps": 250,
+          "unique": 200
+        },
+        "53": {
+          "assistant_tokens": 54861,
+          "examples": 1528,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "42a1012fac6507660f62e4eb1bb691714c465e2fe896a0bac78b366d7de48115"
+            }
+          ],
+          "input_tokens": 143832,
+          "microsteps": 382,
+          "unique": 200
+        },
+        "70": {
+          "assistant_tokens": 71650,
+          "examples": 2000,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "d032b39bc65a59aae3904185226e35422a334c2101c75ebfb2f568a9af84337d"
+            }
+          ],
+          "input_tokens": 188130,
+          "microsteps": 500,
+          "unique": 200
+        }
+      }
+    },
+    "retain-continued-clip1-s0": {
+      "actual": {
+        "assistant_tokens": 69577,
+        "effective_DS_gradient_clipping": 1.0,
+        "examples": 2000,
+        "first_cycle_mean_CE": 0.007553110618609935,
+        "formal_protocol_accepted": true,
+        "gradient_norm_max": 13.004826189606968,
+        "gradient_norm_min": 0.3510962464352011,
+        "input_tokens": 183198,
+        "last_cycle_mean_CE": 0.028777163247577845,
+        "max_reload_logit_error": 0.0,
+        "mean_microbatch_CE": 0.037196880449308085,
+        "microsteps": 500,
+        "peak_gpu_bytes": 70584738816,
+        "requested_effective_gradient_clipping": 1.0,
+        "snapshot_seconds": 124.00428295135498,
+        "status": "LOCAL_FULL_TRAIN_TRACE_CONFIG_DATA_AUDIT_RELOAD_ACCEPTED",
+        "train_wall_seconds": 563.09694647789,
+        "unique": 1532,
+        "updates": 70
+      },
+      "checkpoints": {
+        "0": {
+          "assistant_tokens": 0,
+          "examples": 0,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "92bc85a29a772eeeb5831c55bbb9a04da3d9b61faae7550434610e9f74bf2de7"
+            }
+          ],
+          "input_tokens": 0,
+          "microsteps": 0,
+          "unique": 0
+        },
+        "18": {
+          "assistant_tokens": 18303,
+          "examples": 528,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "237a2fed72d377684e3b37435e799fa4d1ff465a8b1f481b6087d8fa1f244458"
+            }
+          ],
+          "input_tokens": 48357,
+          "microsteps": 132,
+          "unique": 488
+        },
+        "35": {
+          "assistant_tokens": 34899,
+          "examples": 1000,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "7bb58d58b70b340eba4f1d01ef307aa833e191eff50c15ca6fe7b00faa253841"
+            }
+          ],
+          "input_tokens": 91786,
+          "microsteps": 250,
+          "unique": 859
+        },
+        "53": {
+          "assistant_tokens": 53472,
+          "examples": 1528,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "ac17708852c9fe8d53f1a2ba7374b83cfb60b503f3b9896f36ba00181916376b"
+            }
+          ],
+          "input_tokens": 140333,
+          "microsteps": 382,
+          "unique": 1252
+        },
+        "70": {
+          "assistant_tokens": 69577,
+          "examples": 2000,
+          "files": [
+            {
+              "bytes": 16060556616,
+              "name": "model.safetensors",
+              "sha256": "d1fed388f815aacbaed18f7aadadbeb5df5441e8d48f099e6fbbe8335f893b6f"
+            }
+          ],
+          "input_tokens": 183198,
+          "microsteps": 500,
+          "unique": 1532
+        }
+      }
+    }
+  }
+}

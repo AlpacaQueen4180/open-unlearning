@@ -1,0 +1,293 @@
+{
+  "schema": "curated_publication_manifest_v1",
+  "batch": "02-controls-free",
+  "client_date": "2026-10-30",
+  "repository": "AlpacaQueen4180/open-unlearning",
+  "target_branch": "repro/npo-h100-ada-5seed",
+  "scope": "User approved first three completed-result groups only",
+  "private_artifacts_excluded": true,
+  "OLMo_and_future_clipping_matrix_excluded": true,
+  "local_frozen_sources_modified": false,
+  "files": [
+    {
+      "path": "docs/reproduction/safety/benign-controls-clip1-execution-20261030-v2.md",
+      "source_sha256": "de1ddb63b0cfbd1aac105f742f8b7c8700e3a38dba94422b1021f68c89b3e420",
+      "published_sha256": "de1ddb63b0cfbd1aac105f742f8b7c8700e3a38dba94422b1021f68c89b3e420",
+      "git_blob_sha1": "443dcee1996f2907a51aa0d21a0580bc1bd53a6a",
+      "bytes": 3698,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "docs/reproduction/safety/benign-controls-clip1-final-20261030-v3.md",
+      "source_sha256": "8711b2b4953b65eedf734a9e18ad9aa10b10c90942ee427ef7b7142a7269f7d9",
+      "published_sha256": "8711b2b4953b65eedf734a9e18ad9aa10b10c90942ee427ef7b7142a7269f7d9",
+      "git_blob_sha1": "e906f71c84788f33d379070e927a9d0d66907516",
+      "bytes": 12026,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "docs/reproduction/safety/benign-controls-execution-20261029-v2.md",
+      "source_sha256": "59329a85bd23f59ec084dcda3800c742d9d23c6b103cbc8b8ba68a87f2f4c418",
+      "published_sha256": "59329a85bd23f59ec084dcda3800c742d9d23c6b103cbc8b8ba68a87f2f4c418",
+      "git_blob_sha1": "6174e1cd833ce8f906607db7201bfe59fe5c04b5",
+      "bytes": 6327,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "docs/reproduction/safety/benign-controls-free-results-20261030-v3.md",
+      "source_sha256": "524f4cdfba4fe141c21e7f802c8011a44dae3da7044ee147b396f7765749d19a",
+      "published_sha256": "524f4cdfba4fe141c21e7f802c8011a44dae3da7044ee147b396f7765749d19a",
+      "git_blob_sha1": "5c16bc1598311ddd2cccd7a097af57e76a02e2a6",
+      "bytes": 12226,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "docs/reproduction/safety/benign-controls-publication-20261030-v1.md",
+      "source_sha256": null,
+      "published_sha256": "99867747584c72803e737492c075c96f67b969e1ae1124bab5949a5db174181e",
+      "git_blob_sha1": "c825afc171ba63e86dedd6ccd1eecabd92e4b91a",
+      "bytes": 2801,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v2/training-aggregate.json",
+      "source_sha256": "c13b5b1fb42b0bb3504c6c4cc84faf4d6b550c326eea3cf10d5bf0f29041a4da",
+      "published_sha256": "c13b5b1fb42b0bb3504c6c4cc84faf4d6b550c326eea3cf10d5bf0f29041a4da",
+      "git_blob_sha1": "a69560870f5b3fa617706bc72e1da6039e56f0f0",
+      "bytes": 7559,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/comparison.json",
+      "source_sha256": "586c8fbb288b99389e0bad75ef3e35fb23583d8782e4addb8f161df2c06ca1d0",
+      "published_sha256": "586c8fbb288b99389e0bad75ef3e35fb23583d8782e4addb8f161df2c06ca1d0",
+      "git_blob_sha1": "1fb6a8052d45f245a0ee9c085e4e687a18c2d977",
+      "bytes": 5775,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/design.json",
+      "source_sha256": "3ca0b8fa491ee9c71faa8fb72bd38cc88a0f0b5e2ca9858849bf5766c6b39211",
+      "published_sha256": "3ca0b8fa491ee9c71faa8fb72bd38cc88a0f0b5e2ca9858849bf5766c6b39211",
+      "git_blob_sha1": "5fb1cf60e9782484713e5010fd501bf5dd9b3c11",
+      "bytes": 2313,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/evaluation-profile-proof.json",
+      "source_sha256": "6c94ea9d3d7318a2e0d7d1abb24ade260c13044df220f9bc389bff9133b95b41",
+      "published_sha256": "6c94ea9d3d7318a2e0d7d1abb24ade260c13044df220f9bc389bff9133b95b41",
+      "git_blob_sha1": "ff49eedfdd4643800500111b85f07266b5fe4f0a",
+      "bytes": 2578,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/fixed-probe-aggregate.json",
+      "source_sha256": "a437cb519dfaafcd9d70af5d5a5219c6401c4670dbc0b70ac1b9f5ff0b29dcef",
+      "published_sha256": "a437cb519dfaafcd9d70af5d5a5219c6401c4670dbc0b70ac1b9f5ff0b29dcef",
+      "git_blob_sha1": "b57194fb452625d926b29d089156326a3b73f802",
+      "bytes": 6380,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/free-aggregate.json",
+      "source_sha256": "b27eae895a837ac400354fa5005f00bf219ba83b8ef726051bd34ee70497a1d4",
+      "published_sha256": "b27eae895a837ac400354fa5005f00bf219ba83b8ef726051bd34ee70497a1d4",
+      "git_blob_sha1": "056708205b27e9089e418b53e5f2e3315bdfc7b1",
+      "bytes": 22083,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/judge-accounting-design.json",
+      "source_sha256": "17363ba8029fd839d1fb4ac02e2dacc1540731cbef908fa0f6f91454758c9608",
+      "published_sha256": "17363ba8029fd839d1fb4ac02e2dacc1540731cbef908fa0f6f91454758c9608",
+      "git_blob_sha1": "5b3318e88180092baed45077e87746cc3170ebb3",
+      "bytes": 3311,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/judge-proposal.json",
+      "source_sha256": "7deba09761322c530ccd321ba8355ca2406a2d2e8f0f659e81616d51e3d20818",
+      "published_sha256": "7deba09761322c530ccd321ba8355ca2406a2d2e8f0f659e81616d51e3d20818",
+      "git_blob_sha1": "3d27a15b811babe991496a2c51644fc978215a1e",
+      "bytes": 3625,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/matching-aggregate.json",
+      "source_sha256": "e237dd00e307932f08ce21118a022953bb3875c8c66beae50fb49f224064a205",
+      "published_sha256": "e237dd00e307932f08ce21118a022953bb3875c8c66beae50fb49f224064a205",
+      "git_blob_sha1": "5e7c84a8329493382240b7df65fd47e8563a9407",
+      "bytes": 2675,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/provenance.json",
+      "source_sha256": "2fbf8a2764d9ca46b8be387f13e1cb019d1ccdd1106c3d0789c2ce1e1e0cc626",
+      "published_sha256": "2fbf8a2764d9ca46b8be387f13e1cb019d1ccdd1106c3d0789c2ce1e1e0cc626",
+      "git_blob_sha1": "1bc29697e63b22a23239f89d2426c2453b09df01",
+      "bytes": 7472,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/run-registry.json",
+      "source_sha256": "d7480a4e43ef63262f9a15539ad168514103777a06e8a3d730e8e1e63f765380",
+      "published_sha256": "d7480a4e43ef63262f9a15539ad168514103777a06e8a3d730e8e1e63f765380",
+      "git_blob_sha1": "d8fe7508deeb4b9351ef71f335dd2c5126830fd2",
+      "bytes": 11515,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/runtime-source-identities.json",
+      "source_sha256": "c9107754085d348c4bdfffac498b306a16d3a6638805fab2370e8fd5dc0cd241",
+      "published_sha256": "c9107754085d348c4bdfffac498b306a16d3a6638805fab2370e8fd5dc0cd241",
+      "git_blob_sha1": "5578cf6288f832a6acbc6889ca86c950eabfad41",
+      "bytes": 2090,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-20261029-v1/execution-v3/status.json",
+      "source_sha256": "f441701806dff0f19cebf7156a871d9b09bc92e04f68f32cf4b051ac8416dc5f",
+      "published_sha256": "f441701806dff0f19cebf7156a871d9b09bc92e04f68f32cf4b051ac8416dc5f",
+      "git_blob_sha1": "fa9c83e89f35afaa204c0defd63585d1ed4baa46",
+      "bytes": 924,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/execution-v2/provenance.json",
+      "source_sha256": "3211240f9b876e412bbe6f45ab1698566546c0b3750f785083afdc9859266149",
+      "published_sha256": "3211240f9b876e412bbe6f45ab1698566546c0b3750f785083afdc9859266149",
+      "git_blob_sha1": "fe2e03edea756a0fcc0008d66cc1089e427f7849",
+      "bytes": 946,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/execution-v2/run-registry.json",
+      "source_sha256": "80ae06cf550769df4e55f26696296c5f292d3a24454d1bcd5c10b613ba68d068",
+      "published_sha256": "80ae06cf550769df4e55f26696296c5f292d3a24454d1bcd5c10b613ba68d068",
+      "git_blob_sha1": "cbe3961dedf1e1cc6e593b58c96b5fad65022e68",
+      "bytes": 8404,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/execution-v2/runtime-and-source-identities.json",
+      "source_sha256": "b48c394eea1aafba2b276a79de778cb1ce8530402241a199cee193520056396a",
+      "published_sha256": "b48c394eea1aafba2b276a79de778cb1ce8530402241a199cee193520056396a",
+      "git_blob_sha1": "565d6fc596582bcd68a36e6a2c86acf3ad5e932a",
+      "bytes": 1908,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/execution-v2/smoke-aggregate.json",
+      "source_sha256": "37930f3575fc71afdb6f755fd3def0b6991d684e358220f3687fb48381e0f360",
+      "published_sha256": "37930f3575fc71afdb6f755fd3def0b6991d684e358220f3687fb48381e0f360",
+      "git_blob_sha1": "54fa1a68fa5e9f8559701a248fff00a48b2c5e20",
+      "bytes": 5417,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/execution-v2/status.json",
+      "source_sha256": "c0210f2eff6a6b87229a14d37456eed61a35d6a51ddf12f582a2a277073c61c8",
+      "published_sha256": "c0210f2eff6a6b87229a14d37456eed61a35d6a51ddf12f582a2a277073c61c8",
+      "git_blob_sha1": "07148dcd0a11e0753e79c98fed1cdef548e94c56",
+      "bytes": 301,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/execution-v2/training-aggregate.json",
+      "source_sha256": "0bf46c455917c767fbdeee26fa5e7a9da89d07f0dab80308a22f3613c67b8886",
+      "published_sha256": "0bf46c455917c767fbdeee26fa5e7a9da89d07f0dab80308a22f3613c67b8886",
+      "git_blob_sha1": "3f0973724921fd170f511e134871ffca7f6f5f36",
+      "bytes": 6148,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/results-v3/comparison.json",
+      "source_sha256": "8da12928c99b29c8306c84a607ac7e124f35a18c74f57cdbc8648aada60446c2",
+      "published_sha256": "8da12928c99b29c8306c84a607ac7e124f35a18c74f57cdbc8648aada60446c2",
+      "git_blob_sha1": "582c4aaafa5c422b9db4af600178ebc46d5cbe6f",
+      "bytes": 8062,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/results-v3/evaluation-profile-proof.json",
+      "source_sha256": "79b0e095eeee984bd02ed6225d4d37fbdb2df2adfa13d712b3a8c14f727092a0",
+      "published_sha256": "79b0e095eeee984bd02ed6225d4d37fbdb2df2adfa13d712b3a8c14f727092a0",
+      "git_blob_sha1": "abb29272c67e077bbd444061ce1d34a06243454f",
+      "bytes": 2932,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/results-v3/fixed-probe-aggregate.json",
+      "source_sha256": "1571b8661e2ce9c9d158747b9364ccee25beb6e19e81e334b456a35a734cd5d0",
+      "published_sha256": "1571b8661e2ce9c9d158747b9364ccee25beb6e19e81e334b456a35a734cd5d0",
+      "git_blob_sha1": "9f2ac018730a95ca4ddca17e782baf44f0e79672",
+      "bytes": 5175,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/results-v3/free-aggregate.json",
+      "source_sha256": "5e5531dde2ff30e7d9b488c0eb14f8afe9717794e1d1e1b47c75c729d502f80d",
+      "published_sha256": "5e5531dde2ff30e7d9b488c0eb14f8afe9717794e1d1e1b47c75c729d502f80d",
+      "git_blob_sha1": "be511986ea78b116f41f961453276803a034dec2",
+      "bytes": 22834,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/results-v3/judge-accounting-design.json",
+      "source_sha256": "58a6e6430ec9585093e2acf72c17fc1aaec62e6d7ac4ad5d09568e65af95e6a6",
+      "published_sha256": "58a6e6430ec9585093e2acf72c17fc1aaec62e6d7ac4ad5d09568e65af95e6a6",
+      "git_blob_sha1": "3b847f7f6a8d3e7f2d4f65c4912faa6776835165",
+      "bytes": 3433,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/results-v3/judge-proposal.json",
+      "source_sha256": "c9670c2afdf43208a08999560d3969726f53d24164f51718d0ddfa2c1cf6ecdd",
+      "published_sha256": "c9670c2afdf43208a08999560d3969726f53d24164f51718d0ddfa2c1cf6ecdd",
+      "git_blob_sha1": "6b474af2fedca6200ed5a96d784541d5ff99518d",
+      "bytes": 3659,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/results-v3/matching-aggregate.json",
+      "source_sha256": "37ae5fea4511608dcba3e064d048ade5f8dd8d2925c3c6077d1c809828c7b640",
+      "published_sha256": "37ae5fea4511608dcba3e064d048ade5f8dd8d2925c3c6077d1c809828c7b640",
+      "git_blob_sha1": "67c998492145d40c5592e8d399c37f0b875b8439",
+      "bytes": 2737,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/results-v3/provenance.json",
+      "source_sha256": "ca3c689e9680f8d8da94cf63debc178fef1fed577f60a145e77e1263eb25d60a",
+      "published_sha256": "ca3c689e9680f8d8da94cf63debc178fef1fed577f60a145e77e1263eb25d60a",
+      "git_blob_sha1": "472c2745e262f2f87e113b1e3ec7eee52e745902",
+      "bytes": 4888,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/results-v3/run-registry.json",
+      "source_sha256": "89d6e3c7e7617a07fee6cf577136b06244976ba274180f2012c13df00d891e69",
+      "published_sha256": "89d6e3c7e7617a07fee6cf577136b06244976ba274180f2012c13df00d891e69",
+      "git_blob_sha1": "5c65a7407851b255cfcff0b47d46726d18c7e258",
+      "bytes": 9670,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/results-v3/status.json",
+      "source_sha256": "4a1e1ae9f3d961327502e297cfc0a4ec1a2e0b370317ad91e1fb3a2ddf86ae0b",
+      "published_sha256": "4a1e1ae9f3d961327502e297cfc0a4ec1a2e0b370317ad91e1fb3a2ddf86ae0b",
+      "git_blob_sha1": "d337dcfb86b6bb18a3e03224488d03dd5fd2b48e",
+      "bytes": 401,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/results-v3/training-aggregate.json",
+      "source_sha256": "8420b6a0a6ee07d924d204e4cd7d557bc7147d091df365bf92e68da9f6e96eb0",
+      "published_sha256": "8420b6a0a6ee07d924d204e4cd7d557bc7147d091df365bf92e68da9f6e96eb0",
+      "git_blob_sha1": "cd1f758cf7183f72ee3ba2891f38b6452c8cad0f",
+      "bytes": 6150,
+      "publication_copy_changed": false
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "CPU_smoke_audit_sha256": "af4459526e3c6e991c02440bb492d46bae5da746eca447da1dc913564137dabd",
+  "artifact_hashes": {
+    "run-registry.json": "80ae06cf550769df4e55f26696296c5f292d3a24454d1bcd5c10b613ba68d068",
+    "runtime-and-source-identities.json": "b48c394eea1aafba2b276a79de778cb1ce8530402241a199cee193520056396a",
+    "smoke-aggregate.json": "37930f3575fc71afdb6f755fd3def0b6991d684e358220f3687fb48381e0f360",
+    "status.json": "c0210f2eff6a6b87229a14d37456eed61a35d6a51ddf12f582a2a277073c61c8",
+    "training-aggregate.json": "0bf46c455917c767fbdeee26fa5e7a9da89d07f0dab80308a22f3613c67b8886"
+  },
+  "new_formal_runs": 2,
+  "paid_calls": 0,
+  "private_registry_sha256": "f678f19aaaf26ab483f6ee5ac89f83e9995a210f8a2040eed1fe794a86f59c5a",
+  "report_sha256": "de1ddb63b0cfbd1aac105f742f8b7c8700e3a38dba94422b1021f68c89b3e420",
+  "training_audit_sha256": "96ab0af51ab77bf6d7a9ad60ba34b6aac5591225f732b2d63fe82b3a2cfde9eb"
+}

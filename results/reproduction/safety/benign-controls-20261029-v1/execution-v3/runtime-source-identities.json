@@ -1,0 +1,34 @@
+{
+  "GPU": "NVIDIA GB200",
+  "ID_receipt_sha256": "082593b116df28641250ea15e285334460d160f8fb2f6c36c11999d140a42f29",
+  "TOFU_revision": "324592d84ae4f482ac7249b9285c2ecdb53e3a68",
+  "capacity": "Approximately185GiB; shared /data free approximately24TB at preflight; exclusive quota not verified",
+  "exact_ID_order_partition_verified": true,
+  "forget200_sha256": "bb54599aa3668435a34f238ebbbbd812b26b38d9520151b11fcc28fb99327ba7",
+  "full4000_sha256": "cf6f9c9bd844b60661f1c923e6b188628f00b92c1834efb8f9f7c552274a9a33",
+  "metadata_receipt_sha256": "62f9ba48206652b7753e57be49f50a74d3c39b27e471837c56df9fceee334d2f",
+  "original_contract_sha256": "9b532ec92e92ac4c67bc2d441aed490dd090721a5c8e1870447b5a486b1a13da",
+  "original_freeze_sha256": "e59b9ca738574ead8fcdc265503a4be46bb3e4ab9a18a785000ee9679c3fa102",
+  "original_manifest_sha256": "122edbe2c09fcd2903e5b8949657f3dcaf3bf5cbc527e05b4cce91a29fb04d9e",
+  "original_training_repository_commit": "17cbbc87192e6934deb92875c359c91bbd837fb4",
+  "retain3800_sha256": "e1bfcea25c3237064c11676e9d8f52145032ccb45a0e7f858e7f8446475e8a3e",
+  "source_archive_sha256": "12c1b44ba892e08ca85743ccbce8e82fcf591f17845f77fa006296f49f93f251",
+  "status": "ORIGINAL_PINNED_RUNTIME_SOURCE_AND_DATA_IDENTITIES_VERIFIED",
+  "tokenizer_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+  "training_sources": {
+    "control_contract.py": "a01123744318101bbf8cd57e72a112576cb8900fea35d8d964150ea689279c1e",
+    "mixing_npo_runtime.py": "becbeab3bd0bd54c05825511bcc85ac54273ca4cbd8b27b88f81154b6cb575ec",
+    "native_control.py": "edbc910d218e01368b6f4c7e9457c12ce3724544e54ca41a434a4a68a199552a",
+    "native_queue.py": "53e97afbde64dffdbb455a45b8d48fb7cc3c98efdc79e34a14c4f608469f18d8",
+    "native_reload_state.py": "8f9d9f6a8b0d5e6384960e51d62e8ca3e5b8e0a5d4efb5ebfda33fa7629fed43"
+  },
+  "versions": {
+    "accelerate": "1.13.0",
+    "bitsandbytes": "0.50.2",
+    "datasets": "3.0.1",
+    "deepspeed": "0.15.4",
+    "flash_attn": "2.7.3",
+    "torch": "2.7.0a0+ecf3bae40a.nv25.2",
+    "transformers": "5.5.4"
+  }
+}

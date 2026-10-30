@@ -1,0 +1,91 @@
+{
+  "API_calls": 0,
+  "USD_approved": 0,
+  "USD_proposed_cap": 35,
+  "baseline_new_requests": 0,
+  "clipping_choice_pending": true,
+  "conflict_handling": "Preserve all alternatives; deterministic earliest accepted selection fixed before new generation; manual review, no automatic new request",
+  "conservative_model_cost_USD": 34.737335,
+  "counts_by_kind": {
+    "new": {
+      "hexphi": 227,
+      "mtbench": 298
+    },
+    "reuse": {
+      "hexphi": 354,
+      "mtbench": 21
+    }
+  },
+  "effective_clipping": 0.0,
+  "exact_reusable_rows": 375,
+  "existing_budget_reallocation": false,
+  "full_historical_judgment_variants_rows": 270,
+  "historical_discrete_conflict_distinct_payloads": 2,
+  "historical_discrete_label_or_score_conflict_rows": 4,
+  "historical_unknown_rows_held": 0,
+  "independent_ledger_required": true,
+  "input_payload_UTF8_bytes": 1422614,
+  "input_planning_reserve_tokens": 3573014,
+  "input_server_exact_tokens": null,
+  "internal_duplicate_rows": 20,
+  "judge_aggregate_for_controls": null,
+  "key_reads": 0,
+  "max_output_tokens_total": 2150400,
+  "models": {
+    "matched-benign-sft-s0": {
+      "counts": {
+        "new_rows": 273,
+        "reused": 187
+      },
+      "model_identity": "626c168031e37893d9a7f5f8fc76b29c21fa0681f2675f92ae6bfc97f4d2b4dc",
+      "packet_sha256": "df5763e8c9e3689f7b91c7eaa7cbbb664ce52a226143035f738de2329643365c",
+      "rows": 460
+    },
+    "retain-continued-s0": {
+      "counts": {
+        "internal_duplicate": 20,
+        "new_rows": 272,
+        "reused": 188
+      },
+      "model_identity": "aab2f2c1f31314671f333054713a9a0081b47d6dbb4bd412a08395f5e372a929",
+      "packet_sha256": "59855a09799403c44d799bb97f0baf8220489a9fef44934446e4ccec44813668",
+      "rows": 460
+    }
+  },
+  "new_distinct_first_requests": 525,
+  "no_caching_discount_assumed": true,
+  "payload_and_packet_hashes": {
+    "all-rows.private.json": "896768ee7e1122fb13f6f0cb4c62ab454066d55341dc9410bd6d5569811de5d4",
+    "historical-unknown-hold.private.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "matched-benign-sft-s0.packet.private.json": "df5763e8c9e3689f7b91c7eaa7cbbb664ce52a226143035f738de2329643365c",
+    "new-unique-requests.private.json": "67981a0625964d118c6cf02506d44f45bc80e3eb73701002611a7a2e9c37af96",
+    "retain-continued-s0.packet.private.json": "59855a09799403c44d799bb97f0baf8220489a9fef44934446e4ccec44813668",
+    "reuse-exact.private.json": "9076a9cdbf20e6f0674fd06768d032cca77d1c3d9c44c44dcd23f197c3c9171f",
+    "summary.private.json": "f8d2577520df8fb28c967b35f575f89a641297a9a0bef895fdf35828acc24f02"
+  },
+  "payment_gate": "Requires explicit human USD/request authorization plus verified token reservation and current pricing; no client instantiated",
+  "pricing": {
+    "cache_write_per_million": 2.5,
+    "cached_input_per_million": 0.2,
+    "date_checked": "2026-10-29",
+    "input_per_million": 2.0,
+    "model": "gpt-5.6-terra",
+    "output_per_million": 12.0,
+    "sources": [
+      "https://developers.openai.com/api/docs/models/gpt-5.6-terra",
+      "https://developers.openai.com/api/docs/pricing"
+    ]
+  },
+  "profile": {
+    "api_base_url": "https://api.openai.com/v1",
+    "max_output_tokens": 4096,
+    "max_retries": 0,
+    "model": "gpt-5.6-terra",
+    "reasoning": "medium"
+  },
+  "rows": 920,
+  "service_tier": "original default standard; no Fast/Batch/Flex switch",
+  "status": "REVIEW_ONLY_NO_PAYMENT_AUTHORIZATION",
+  "success_unknown_no_resend": true,
+  "token_reserve_method": "UTF8 payload/schema bytes plus4096/request framing reserve; planning estimate, not exact model/server token count"
+}

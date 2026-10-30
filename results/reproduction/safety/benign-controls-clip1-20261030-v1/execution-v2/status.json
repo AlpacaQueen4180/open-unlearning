@@ -1,0 +1,10 @@
+{
+  "USD_authorized": 0,
+  "clipping_choice_pending": false,
+  "failed_engineering_smoke_attempts_preserved": 1,
+  "formal_protocol_accepted": true,
+  "new_formal_runs": 2,
+  "paid_calls": 0,
+  "status": "TWO_CLIP1_TRAIN_AUDIT_RELOAD_AND_FREE_COMPLETE",
+  "successful_engineering_smokes": 2
+}

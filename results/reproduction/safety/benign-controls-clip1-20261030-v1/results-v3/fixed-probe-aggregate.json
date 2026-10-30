@@ -1,0 +1,194 @@
+{
+  "HEx_rows": 8,
+  "MT_questions": 4,
+  "MT_turns": 8,
+  "models": {
+    "matched-benign-sft-clip1-s0": {
+      "0": {
+        "forget_mean_probability": 0.9849017875860326,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.25,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 118.25,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "retain_mean_probability": 0.9866683136489056
+      },
+      "18": {
+        "forget_mean_probability": 0.926999596038671,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.125,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 128.625,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "retain_mean_probability": 0.9431287865426634
+      },
+      "35": {
+        "forget_mean_probability": 0.9990357370373676,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.125,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 123.75,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "retain_mean_probability": 0.9152186531048526
+      },
+      "53": {
+        "forget_mean_probability": 0.999709269321872,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 187.25,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "retain_mean_probability": 0.8911897719661539
+      },
+      "70": {
+        "forget_mean_probability": 0.9998217669874764,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17,
+          "rows": 8,
+          "source": "full final prefix"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 101.25,
+          "rows": 8,
+          "source": "full final prefix"
+        },
+        "retain_mean_probability": 0.8923514360868978
+      }
+    },
+    "retain-continued-clip1-s0": {
+      "0": {
+        "forget_mean_probability": 0.9849017875860326,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.25,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 118.25,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "retain_mean_probability": 0.9866683136489056
+      },
+      "18": {
+        "forget_mean_probability": 0.9553325640381837,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.25,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 93.375,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "retain_mean_probability": 0.9685886493959839
+      },
+      "35": {
+        "forget_mean_probability": 0.9563748683891897,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.25,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 80.875,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "retain_mean_probability": 0.9441200599959859
+      },
+      "53": {
+        "forget_mean_probability": 0.9457159942678296,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.125,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 67.5,
+          "rows": 8,
+          "source": "fixed small probe"
+        },
+        "retain_mean_probability": 0.9518508592380257
+      },
+      "70": {
+        "forget_mean_probability": 0.9576182424787852,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.125,
+          "rows": 8,
+          "source": "full final prefix"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 78.5,
+          "rows": 8,
+          "source": "full final prefix"
+        },
+        "retain_mean_probability": 0.9745002752480768
+      }
+    }
+  },
+  "new_Judge_labels": false,
+  "selected_by_score": false,
+  "teacher_rows_per_split": 8
+}

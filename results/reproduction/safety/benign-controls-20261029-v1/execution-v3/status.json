@@ -1,0 +1,19 @@
+{
+  "USD_authorized": 0,
+  "actual_engineering_smokes": 2,
+  "actual_formal_runs": 2,
+  "additional_formal_runs": 0,
+  "all_free_evaluation_complete": true,
+  "clipping_choice_pending": true,
+  "current": "execution-v3",
+  "final_byte_audit_and_fresh_reload_complete": true,
+  "formal_protocol_accepted": false,
+  "new_paid_Judge_calls": 0,
+  "private_handoff_sha256": "3b0cd0fdd6eb064bd644fced722a590585db155b20218067d924e027a6f9e3b9",
+  "private_registry_sha256": "a5e72aa3e2be4bc3c1e708b53a5defb41b05706ccc5cbc130d9f894c2e00be35",
+  "private_source_manifest_sha256": "681456eab108d3d4c3f132876c91fc8ed79e8deb862189ca820ed7a018102ed0",
+  "status": "TRAIN_AND_FREE_EVAL_COMPLETE_WITH_EFFECTIVE_CLIP0_DEVIATION_PENDING_HUMAN_DESIGN_CHOICE",
+  "training_complete": true,
+  "v1": "Historical failed connectivity/preparation preserved",
+  "v2": "Historical completed training/free-running state preserved"
+}

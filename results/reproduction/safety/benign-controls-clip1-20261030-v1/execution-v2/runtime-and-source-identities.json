@@ -1,0 +1,34 @@
+{
+  "CPU_function_AST_unchanged": true,
+  "CPU_receipt_reused_sha256": "f155c79f6c6199da0e9d959470914349a4df7059cbea0c3a5a23b97998007178",
+  "failed_smoke_v1_preserved": true,
+  "library_sources": {
+    "accelerate/accelerator.py": "85fe1ad1f0061598313f8566868e9f53434ac9c1d5e24089c3d03da772d40f23",
+    "accelerate/utils/deepspeed.py": "82dfa3c0ea4eb51b3a378b2886e48ed88df1d6a2e83bab986239cfacaa7a664e",
+    "deepspeed/runtime/config.py": "99a196b5067ec8275eb5ce1f721c2ab5fe8fe93ecb52e20351a63f60a82a5003",
+    "deepspeed/runtime/engine.py": "b4853189c5c5f5b3669a482778a2f44864cab7c0e863cf91e158ec4d9a955b9d",
+    "deepspeed/runtime/zero/stage3.py": "ca48f69f2698386d6f939c3e4d6fd5e6c70bbc33ed99baf572989f1407053485"
+  },
+  "original4000_masks_exact": true,
+  "original_contract_sha256": "9b532ec92e92ac4c67bc2d441aed490dd090721a5c8e1870447b5a486b1a13da",
+  "original_freeze_sha256": "e59b9ca738574ead8fcdc265503a4be46bb3e4ab9a18a785000ee9679c3fa102",
+  "paid_calls": 0,
+  "repair": "Observer integer positions only, source DS clipping1 unchanged",
+  "source_archive_sha256": "1de4dfbfc2bfa13f631021c75c53c314b1a3e5200cdf09c1ca265a4ef02d2bdb",
+  "training_sources": {
+    "control_contract.py": "78e8ca2b8c6d86d0325d7e7eb1241f5bfdb2bb64a21bdf1b176a0268af631c05",
+    "mixing_npo_runtime.py": "becbeab3bd0bd54c05825511bcc85ac54273ca4cbd8b27b88f81154b6cb575ec",
+    "native_control.py": "42ea9dba7ce0a8ef3b4816b1a69a904d87605827216b5f9793534e0a531f17c8",
+    "native_queue.py": "24b26f722a1dcb89fdcea7481b84761a0ae0633d80201d62882d6df2fe897c5b",
+    "native_reload_state.py": "8f9d9f6a8b0d5e6384960e51d62e8ca3e5b8e0a5d4efb5ebfda33fa7629fed43"
+  },
+  "versions": {
+    "accelerate": "1.13.0",
+    "bitsandbytes": "0.50.2",
+    "datasets": "3.0.1",
+    "deepspeed": "0.15.4",
+    "flash_attn": "2.7.3",
+    "torch": "2.7.0a0+ecf3bae40a.nv25.2",
+    "transformers": "5.5.4"
+  }
+}

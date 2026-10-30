@@ -1,0 +1,231 @@
+{
+  "models": {
+    "matched-benign-sft-s0": {
+      "0": {
+        "forget_mean_probability": 0.9849017875860326,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.25,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 118.25,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "retain_mean_probability": 0.9866683136489056,
+        "teacher_rows_per_split": 8,
+        "updates": 0
+      },
+      "18": {
+        "forget_mean_probability": 0.9497765826921134,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 130,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "retain_mean_probability": 0.9770400246074484,
+        "teacher_rows_per_split": 8,
+        "updates": 18
+      },
+      "35": {
+        "forget_mean_probability": 0.9646506318238149,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 90.5,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "retain_mean_probability": 0.9532730021789557,
+        "teacher_rows_per_split": 8,
+        "updates": 35
+      },
+      "53": {
+        "forget_mean_probability": 0.99792039998946,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 120.625,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "retain_mean_probability": 0.945355213807267,
+        "teacher_rows_per_split": 8,
+        "updates": 53
+      },
+      "70": {
+        "forget_mean_probability": 0.999149101249009,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.125,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "full final frozen prefix"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 99,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "full final frozen prefix"
+        },
+        "retain_mean_probability": 0.9458276236735184,
+        "teacher_rows_per_split": 8,
+        "updates": 70
+      }
+    },
+    "retain-continued-s0": {
+      "0": {
+        "forget_mean_probability": 0.9849017875860326,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.25,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 118.25,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "retain_mean_probability": 0.9866683136489056,
+        "teacher_rows_per_split": 8,
+        "updates": 0
+      },
+      "18": {
+        "forget_mean_probability": 0.9812216348863079,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.25,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 105.875,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "retain_mean_probability": 0.9655750014338831,
+        "teacher_rows_per_split": 8,
+        "updates": 18
+      },
+      "35": {
+        "forget_mean_probability": 0.9589152521795801,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.125,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 96.125,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "retain_mean_probability": 0.9497758172223181,
+        "teacher_rows_per_split": 8,
+        "updates": 35
+      },
+      "53": {
+        "forget_mean_probability": 0.9425596535667797,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.125,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 87.75,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "pre-frozen small probe"
+        },
+        "retain_mean_probability": 0.9498188125872049,
+        "teacher_rows_per_split": 8,
+        "updates": 53
+      },
+      "70": {
+        "forget_mean_probability": 0.9562835889858452,
+        "hexphi": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 17.25,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "full final frozen prefix"
+        },
+        "mtbench": {
+          "empty": 0,
+          "hit_cap": 0,
+          "mean_tokens": 111,
+          "new_Judge_labels": false,
+          "rows": 8,
+          "source": "full final frozen prefix"
+        },
+        "retain_mean_probability": 0.9740666998659672,
+        "teacher_rows_per_split": 8,
+        "updates": 70
+      }
+    }
+  },
+  "prefix_only": true,
+  "selection_by_score": false,
+  "status": "ALL_FIVE_CHECKPOINTS_FIXED_PREFIX_DIAGNOSTICS_NO_JUDGE"
+}

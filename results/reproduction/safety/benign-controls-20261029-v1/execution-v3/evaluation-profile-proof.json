@@ -1,0 +1,61 @@
+{
+  "models": {
+    "matched-benign-sft-s0": {
+      "accuracy": 0.6505483549351944,
+      "correct": 9135,
+      "ordered_request_digest": "6416ef1f68a3cd0b2edbbbc69c6fa56282b9def8edbde1ab78bf57c519fc98b5",
+      "paired_vs_Mixing": {
+        "changed_choice": 781,
+        "gained": 250,
+        "lost": 334
+      },
+      "profile_matches_all_five": true,
+      "raw_sha256": "6613cdfabf0f1e2c68c19c26fa3ba14dc02698abac4b6cefb3ba8988cb361735",
+      "rows": 14042,
+      "runtime_sha256": "fd0174ae138114cc517f41d1a8e937002f53e383ff7f584ccc1d78f19b419b43"
+    },
+    "mixing-baseline": {
+      "accuracy": 0.656530408773679,
+      "correct": 9219,
+      "ordered_request_digest": "6416ef1f68a3cd0b2edbbbc69c6fa56282b9def8edbde1ab78bf57c519fc98b5",
+      "profile_matches_all_five": true,
+      "raw_sha256": "7d5c98f4eabaca3a11431b4ad6624d35f6c15d84ee2cfad6a415df21235cf350",
+      "rows": 14042,
+      "runtime_sha256": "bc09b742c9107bd455b08761805e5237e6debc010ef3eeabdcaec9f690788ebc"
+    },
+    "pure-s0": {
+      "accuracy": 0.6065375302663438,
+      "correct": 8517,
+      "ordered_request_digest": "6416ef1f68a3cd0b2edbbbc69c6fa56282b9def8edbde1ab78bf57c519fc98b5",
+      "profile_matches_all_five": true,
+      "raw_sha256": "43e08d1cbdd6e73b6be6045fd9e15f5d5c147b37b7f88c8d8d6697bfcec422de",
+      "rows": 14042,
+      "runtime_sha256": "64ad149405fb816d027f16d09469bea436490f097f2e514b0a4af87f4f98f90f"
+    },
+    "retain-continued-s0": {
+      "accuracy": 0.6578834923800029,
+      "correct": 9238,
+      "ordered_request_digest": "6416ef1f68a3cd0b2edbbbc69c6fa56282b9def8edbde1ab78bf57c519fc98b5",
+      "paired_vs_Mixing": {
+        "changed_choice": 789,
+        "gained": 292,
+        "lost": 273
+      },
+      "profile_matches_all_five": true,
+      "raw_sha256": "e5f4f34307b11680c19c349f915cafdbb384f42bc5feb4e572ae84cdd1b55ec5",
+      "rows": 14042,
+      "runtime_sha256": "07940a8fc672d5ea920977d37ecf0009883c698fe6f2fe232db152100337186f"
+    },
+    "retain-s0": {
+      "accuracy": 0.6512605042016807,
+      "correct": 9145,
+      "ordered_request_digest": "6416ef1f68a3cd0b2edbbbc69c6fa56282b9def8edbde1ab78bf57c519fc98b5",
+      "profile_matches_all_five": true,
+      "raw_sha256": "aaac1d51d246b117abdcb4b2332f7ba0350d0f2cd0a0f1b8f4c08c931586759b",
+      "rows": 14042,
+      "runtime_sha256": "d13e2216bd78b4e7d53cdfcda020e851783352afaa7d8ebb75b9a132acdee8ba"
+    }
+  },
+  "ordered_request_digest": "6416ef1f68a3cd0b2edbbbc69c6fa56282b9def8edbde1ab78bf57c519fc98b5",
+  "status": "ALL_FIVE_EXACT_REQUEST_DIGEST_AND_EFFECTIVE_BATCH1_PROFILE_PASS"
+}
