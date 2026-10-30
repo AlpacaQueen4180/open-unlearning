@@ -1,0 +1,29 @@
+{
+  "report_sha256": "a959c9b63e969937e991bd2669c11ae496b3953a747407b1c538b3926c61a0e2",
+  "audit_sha256": "3fd2f8af68f57d98a88ebbec43e497068350d81f166760cd7e9328a83727d4d1",
+  "closed_v1_partial_audit_sha256": "575bbb31a13b498dcffa332b84fd83b44fb025557caa3e3eebb868d5c9f88cff",
+  "continuation_plan_sha256": "c579b5f0f49802281079c13f099ab8601f28de032cc24aa917a0757c869a66a6",
+  "continuation_status_sha256": "e5d9c85b6df4e2b768ff5dd4cd98311e18bc4b1c2d20b302b88da1ba923cf37d",
+  "frozen_free_report_sha256": "8711b2b4953b65eedf734a9e18ad9aa10b10c90942ee427ef7b7142a7269f7d9",
+  "artifacts": {
+    "aggregate.json": "c3bef55e736a581b4405e1562c4ec766ad0c4486a2ca69763dd73149826f8497",
+    "comparison.json": "24b8868f836c8a5fbf9aa2df3631c4489917df49f7526d8f7001b3fc77e702e2"
+  },
+  "paid_first_attempts": 527,
+  "unknown_never_resent": true,
+  "source_hashes": {
+    "judge_paid_v1.py": "cf21b7ce7003705620c6d3a0e8d9940b7dc5ed1700e033b5a1a78a2302beb5a4",
+    "judge_remaining_v2.py": "1cbbfd467f8b56e1c27a35d6e8d14b715984ad4dd0d3a69c7ca08141c8f1d37e",
+    "audit_judge_paid_v1.py": "27e883689b7e803331a44bd19f97f7505d09c7793ce98aaa2203cbe335d63033",
+    "start_judge_remaining_v2.ps1": "a3048e334c17c125576103c790e79bc277de704e3836a6c3d59145b308940552",
+    "launch_judge_remaining_v2.ps1": "760135a502f5b8d3cd95a3b8223978274eec3b5557b50b632daf9400a0c0d525"
+  },
+  "original_frozen_report_sha256": "9f2a5dd6e089b72568c13f0e033b602f6ac016e6357c61ee8817571e33638ca5",
+  "original_frozen_provenance_sha256": "d2b8798df1fc15a1618cb54bfd3b00c34745a5ed80bc27dbdf04eacd20ee379a",
+  "publication_only_changes": [
+    "Added publication-context note",
+    "Removed link to excluded future clipping-matrix design",
+    "Normalized report line endings to LF"
+  ],
+  "numerical_results_changed": false
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "curated_publication_manifest_v1",
+  "batch": "03-clip1-judge-final",
+  "client_date": "2026-10-30",
+  "repository": "AlpacaQueen4180/open-unlearning",
+  "target_branch": "repro/npo-h100-ada-5seed",
+  "scope": "User approved first three completed-result groups only",
+  "private_artifacts_excluded": true,
+  "OLMo_and_future_clipping_matrix_excluded": true,
+  "local_frozen_sources_modified": false,
+  "files": [
+    {
+      "path": "docs/reproduction/safety/benign-controls-clip1-judge-20261030-v1.md",
+      "source_sha256": "32ad907bf7ef3b7e563db5c1fed45552afb09a80b830342adf0942cb021e5bb9",
+      "published_sha256": "32ad907bf7ef3b7e563db5c1fed45552afb09a80b830342adf0942cb021e5bb9",
+      "git_blob_sha1": "3cb4894b0fa7decc46d463fde59849ab4bb3b816",
+      "bytes": 2953,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "docs/reproduction/safety/benign-controls-clip1-judge-final-20261030-v2.md",
+      "source_sha256": "9f2a5dd6e089b72568c13f0e033b602f6ac016e6357c61ee8817571e33638ca5",
+      "published_sha256": "a959c9b63e969937e991bd2669c11ae496b3953a747407b1c538b3926c61a0e2",
+      "git_blob_sha1": "fc3b3adbed711f35f90af907381d4d5203027c83",
+      "bytes": 4693,
+      "publication_copy_changed": true
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/judge-v2/aggregate.json",
+      "source_sha256": "c3bef55e736a581b4405e1562c4ec766ad0c4486a2ca69763dd73149826f8497",
+      "published_sha256": "c3bef55e736a581b4405e1562c4ec766ad0c4486a2ca69763dd73149826f8497",
+      "git_blob_sha1": "457cfa9abc4cdcf918a5584c1bc298571643563c",
+      "bytes": 8025,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/judge-v2/comparison.json",
+      "source_sha256": "24b8868f836c8a5fbf9aa2df3631c4489917df49f7526d8f7001b3fc77e702e2",
+      "published_sha256": "24b8868f836c8a5fbf9aa2df3631c4489917df49f7526d8f7001b3fc77e702e2",
+      "git_blob_sha1": "cd9608ee0618db8bb7e1122658518cc7b86b8469",
+      "bytes": 15290,
+      "publication_copy_changed": false
+    },
+    {
+      "path": "results/reproduction/safety/benign-controls-clip1-20261030-v1/judge-v2/provenance.json",
+      "source_sha256": "d2b8798df1fc15a1618cb54bfd3b00c34745a5ed80bc27dbdf04eacd20ee379a",
+      "published_sha256": "2331afa5bfca41226cb6e74ae5852217c79acfbcf1cc37269b27d9148fea8c8d",
+      "git_blob_sha1": "006c365fbbe925029e09e5df79a90e5b3506abeb",
+      "bytes": 1790,
+      "publication_copy_changed": true
+    }
+  ]
+}

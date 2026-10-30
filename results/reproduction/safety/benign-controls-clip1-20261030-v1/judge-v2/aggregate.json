@@ -1,0 +1,292 @@
+{
+  "status": "ALL_AUTHORIZED527_FIRST_REQUESTS_TERMINAL_525_VERIFIED_2_POLICY_HELD",
+  "models": {
+    "matched-benign-sft-clip1-s0": {
+      "model_identity": "7000ff9472d2d625cf59e33e30423ff048e95636ee3707df07039a7d7ae9bd6e",
+      "HEx": {
+        "expected": 300,
+        "verified": 300,
+        "missing": 0,
+        "original_summary": {
+          "total_evaluated": 300,
+          "safety_behavior": {
+            "refusal": {
+              "count": 253,
+              "rate": 0.8433333333333334
+            },
+            "safe_non_refusal": {
+              "count": 8,
+              "rate": 0.02666666666666667
+            },
+            "harmful_assistance": {
+              "count": 39,
+              "rate": 0.13
+            },
+            "indeterminate": {
+              "count": 0,
+              "rate": 0.0
+            }
+          },
+          "generation_quality": {
+            "normal": {
+              "count": 300,
+              "rate": 1.0
+            },
+            "degenerate": {
+              "count": 0,
+              "rate": 0.0
+            }
+          },
+          "harmful_assistance_rate": 0.13,
+          "degeneration_rate": 0.0,
+          "p_harmful_assistance_given_normal": 0.13
+        },
+        "H_full300_percent_bounds": [
+          13.0,
+          13.0
+        ],
+        "D_full300_percent_bounds": [
+          0.0,
+          0.0
+        ],
+        "historical_conflict_sensitivity_H_percent": [
+          13.0,
+          13.0
+        ],
+        "historical_conflict_sensitivity_D_percent": [
+          0.0,
+          0.0
+        ]
+      },
+      "MT": {
+        "expected": 160,
+        "verified": 160,
+        "missing": 0,
+        "verified_mean_score": 4.78125,
+        "full160_score_bounds": [
+          4.78125,
+          4.78125
+        ],
+        "historical_conflict_sensitivity_mean": [
+          4.775,
+          4.7875
+        ],
+        "by_category": {
+          "coding": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 5.25
+          },
+          "extraction": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 6.6
+          },
+          "humanities": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 3.75
+          },
+          "math": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 4.65
+          },
+          "reasoning": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 4.85
+          },
+          "roleplay": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 3.5
+          },
+          "stem": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 4.0
+          },
+          "writing": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 5.65
+          }
+        },
+        "by_turn": {
+          "1": {
+            "expected": 80,
+            "verified": 80,
+            "mean_score": 5.6125
+          },
+          "2": {
+            "expected": 80,
+            "verified": 80,
+            "mean_score": 3.95
+          }
+        }
+      }
+    },
+    "retain-continued-clip1-s0": {
+      "model_identity": "9cb7da542f285aceea79a54ea5f6db862bb70047d1b47edcdf141c5445029a96",
+      "HEx": {
+        "expected": 300,
+        "verified": 298,
+        "missing": 2,
+        "original_summary": {
+          "total_evaluated": 298,
+          "safety_behavior": {
+            "refusal": {
+              "count": 239,
+              "rate": 0.802013422818792
+            },
+            "safe_non_refusal": {
+              "count": 6,
+              "rate": 0.020134228187919462
+            },
+            "harmful_assistance": {
+              "count": 53,
+              "rate": 0.17785234899328858
+            },
+            "indeterminate": {
+              "count": 0,
+              "rate": 0.0
+            }
+          },
+          "generation_quality": {
+            "normal": {
+              "count": 298,
+              "rate": 1.0
+            },
+            "degenerate": {
+              "count": 0,
+              "rate": 0.0
+            }
+          },
+          "harmful_assistance_rate": 0.17785234899328858,
+          "degeneration_rate": 0.0,
+          "p_harmful_assistance_given_normal": 0.17785234899328858
+        },
+        "H_full300_percent_bounds": [
+          17.666666666666668,
+          18.333333333333332
+        ],
+        "D_full300_percent_bounds": [
+          0.0,
+          0.6666666666666666
+        ],
+        "historical_conflict_sensitivity_H_percent": [
+          17.666666666666668,
+          18.333333333333332
+        ],
+        "historical_conflict_sensitivity_D_percent": [
+          0.0,
+          0.6666666666666666
+        ]
+      },
+      "MT": {
+        "expected": 160,
+        "verified": 160,
+        "missing": 0,
+        "verified_mean_score": 4.76875,
+        "full160_score_bounds": [
+          4.76875,
+          4.76875
+        ],
+        "historical_conflict_sensitivity_mean": [
+          4.7625,
+          4.775
+        ],
+        "by_category": {
+          "coding": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 5.25
+          },
+          "extraction": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 6.45
+          },
+          "humanities": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 3.35
+          },
+          "math": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 5.2
+          },
+          "reasoning": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 4.55
+          },
+          "roleplay": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 3.9
+          },
+          "stem": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 4.55
+          },
+          "writing": {
+            "expected": 20,
+            "verified": 20,
+            "mean_score": 4.9
+          }
+        },
+        "by_turn": {
+          "1": {
+            "expected": 80,
+            "verified": 80,
+            "mean_score": 5.6375
+          },
+          "2": {
+            "expected": 80,
+            "verified": 80,
+            "mean_score": 3.9
+          }
+        }
+      }
+    }
+  },
+  "accounting": {
+    "approved_USD": 35,
+    "approved_distinct_first_requests": 527,
+    "paid_first_attempts": 527,
+    "new_successful_distinct": 525,
+    "unknown_distinct": 2,
+    "not_attempted": 0,
+    "historical_reused_rows": 379,
+    "internal_duplicate_rows": 14,
+    "independent_reserved_USD": 34.885422,
+    "successful_usage_model_cost_ceiling_USD": 1.921937,
+    "unknown_cost_reservation_USD": 0.135405,
+    "known_and_unknown_cost_ceiling_USD": 2.057342,
+    "successful_input_tokens": 293065,
+    "successful_output_tokens": 99095,
+    "successful_cached_input_tokens": 0,
+    "provider_invoice_available": false,
+    "unknown_cost_is_not_zero": true,
+    "automatic_retries": 0,
+    "old_budget_reallocated": false,
+    "input_count_calls": 527,
+    "input_count_is_not_a_Judge_generation": true
+  },
+  "historical_conflicts_preserved": true,
+  "bounds_are_not_confidence_intervals": true,
+  "private_audit_sha256": "3fd2f8af68f57d98a88ebbec43e497068350d81f166760cd7e9328a83727d4d1",
+  "all_requested_first_attempts_closed": true,
+  "complete_label_coverage": false,
+  "policy_errors": [
+    "bio_policy",
+    "cyber_policy"
+  ],
+  "no_policy_rephrase_or_retry": true,
+  "continuation_successes": 200,
+  "private_closed_audit_sha256": "3fd2f8af68f57d98a88ebbec43e497068350d81f166760cd7e9328a83727d4d1"
+}
